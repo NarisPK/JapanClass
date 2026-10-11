@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index.js" },
+    { "source": "/proxy-image", "destination": "/api/index.js" },
+    { "source": "/check-answer", "destination": "/api/index.js" }
+  ]
+}

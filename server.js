@@ -131,7 +131,11 @@ app.delete('/api/suggest-word/:id', (req, res) => {
     }
 });
 
-// สั่งให้ Server ทำงานและเปิดช่องทางการรับส่งข้อมูลที่พอร์ต 3000
-app.listen(PORT, () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
-});
+// ส่งออก app สำหรับ Vercel Serverless Function และสั่งเปิดเซิร์ฟเวอร์เมื่อรันโดยตรง
+module.exports = app;
+
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Server is running at http://localhost:${PORT}`);
+    });
+}

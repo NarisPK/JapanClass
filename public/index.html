@@ -406,6 +406,24 @@
                         </button>
                     </div>
 
+                    <!-- แบนเนอร์แจ้งเตือนคำศัพท์รออนุมัติแบบด่วน (Pending Alert Banner) -->
+                    <div id="admin-pending-alert-banner"
+                        class="hidden p-3 bg-gradient-to-r from-amber-50 via-orange-50 to-pink-50 border-2 border-amber-300 rounded-2xl shadow-sm flex items-center justify-between gap-2.5 animate-pulse">
+                        <div class="flex items-center gap-2.5">
+                            <span class="text-2xl p-1 bg-amber-100 rounded-xl">🔔</span>
+                            <div>
+                                <h4 class="font-black text-amber-950 text-xs flex items-center gap-1.5">
+                                    มีคำศัพท์ใหม่รอการอนุมัติ <span id="admin-pending-banner-count" class="bg-rose-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow-sm">0</span> รายการ!
+                                </h4>
+                                <p class="text-[9px] text-amber-800 font-bold mt-0.5">กดตรวจสอบและอนุมัติเพื่อให้ทุกคนมองเห็นและเข้าเล่นข้อสอบได้ทันที</p>
+                            </div>
+                        </div>
+                        <button onclick="switchAdminTab('suggest')"
+                            class="bg-gradient-to-r from-amber-500 to-rose-500 hover:from-amber-600 hover:to-rose-600 text-white font-black text-[11px] px-3.5 py-2 rounded-xl shadow-md transition active:scale-95 flex items-center gap-1 shrink-0">
+                            <i class="fa-solid fa-circle-check"></i> อนุมัติทันที
+                        </button>
+                    </div>
+
                     <div
                         class="grid grid-cols-2 md:grid-cols-4 gap-2 bg-pink-50 p-1 rounded-xl text-xs font-bold border border-rose-100">
                         <button id="tab-add-btn" onclick="switchAdminTab('add')"
@@ -418,7 +436,7 @@
                         </button>
                         <button id="tab-suggest-btn" onclick="switchAdminTab('suggest')"
                             class="py-2 rounded-lg text-center transition-all text-pink-400/70 hover:text-pink-500 flex items-center justify-center gap-1">
-                            <i class="fa-solid fa-inbox text-amber-500"></i> แจ้งเพิ่มคำ (<span id="admin-suggest-count">0</span>)
+                            <i class="fa-solid fa-inbox text-amber-500"></i> รออนุมัติ (<span id="admin-suggest-count">0</span>)
                         </button>
                         <button id="tab-google-btn" onclick="switchAdminTab('google')"
                             class="py-2 rounded-lg text-center transition-all text-pink-400/70 hover:text-pink-500 flex items-center justify-center gap-1">
@@ -428,6 +446,22 @@
 
                     <!-- แท็บสร้างข้อมูลใหม่ (Add Tab) -->
                     <div id="admin-add-tab" class="space-y-3 max-h-[340px] overflow-y-auto pr-1 text-[11px]">
+
+                        <!-- 0. ส่วนด่วน: รายการคำศัพท์รออนุมัติเร่งด่วนในหน้าแรกของแอดมิน -->
+                        <div id="admin-quick-suggest-box" class="hidden p-3 bg-gradient-to-r from-amber-50 to-rose-50 rounded-xl border-2 border-amber-300 space-y-2 shadow-sm">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-black text-xs text-amber-900 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bell text-amber-600 animate-bounce"></i>
+                                    คำศัพท์รอการอนุมัติ (<span id="quick-suggest-count" class="text-rose-600 font-black">0</span> คำ)
+                                </h3>
+                                <button onclick="switchAdminTab('suggest')" class="text-[10px] text-amber-800 hover:text-amber-950 font-bold underline">
+                                    ดูทั้งหมดในแท็บรออนุมัติ ➜
+                                </button>
+                            </div>
+                            <div id="quick-suggest-list" class="space-y-1.5 max-h-[160px] overflow-y-auto pr-1">
+                                <!-- populated dynamically -->
+                            </div>
+                        </div>
 
                         <!-- 1. สร้างหมวดใหม่ -->
                         <div class="p-3 bg-white/80 rounded-xl border border-rose-100 space-y-2">
@@ -722,10 +756,16 @@ function doGet(e) {
                                     สามารถตรวจสอบความถูกต้อง และกด "อนุมัติ" เพื่อเพิ่มเข้าสู่เควสต์ของบทนั้นได้ทันที
                                 </p>
                             </div>
-                            <button onclick="loadWordSuggestions()"
-                                class="bg-white hover:bg-amber-100 text-amber-800 font-bold px-2.5 py-1.5 rounded-lg border border-amber-200 text-[10px] transition flex items-center gap-1 active:scale-95 shadow-sm">
-                                <i class="fa-solid fa-rotate"></i> รีเฟรช
-                            </button>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <button id="admin-approve-all-btn" onclick="approveAllPendingSuggestions()"
+                                    class="hidden bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-extrabold px-2.5 py-1.5 rounded-lg text-[10px] shadow-sm transition flex items-center gap-1 active:scale-95">
+                                    <i class="fa-solid fa-check-double"></i> อนุมัติทั้งหมด
+                                </button>
+                                <button onclick="loadWordSuggestions()"
+                                    class="bg-white hover:bg-amber-100 text-amber-800 font-bold px-2.5 py-1.5 rounded-lg border border-amber-200 text-[10px] transition flex items-center gap-1 active:scale-95 shadow-sm">
+                                    <i class="fa-solid fa-rotate"></i> รีเฟรช
+                                </button>
+                            </div>
                         </div>
 
                         <!-- รายการข้อความที่แจ้ง -->
