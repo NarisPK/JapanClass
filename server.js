@@ -76,9 +76,15 @@ app.post('/api/suggest-word', (req, res) => {
     }
 });
 
-// เส้นทางดึงรายการคำศัพท์ที่แจ้งเพิ่มทั้งหมด (GET)
+// เส้นทางดึงรายการคำศัพท์ที่แจ้งเพิ่มทั้งหมด (สำหรับ Admin หรือเช็คสถานะ)
 app.get('/api/suggest-words', (req, res) => {
     try {
+        const status = req.query.status;
+        if (status === 'pending') {
+            return res.json(db.getPendingSuggestions());
+        } else if (status === 'approved') {
+            return res.json(db.getApprovedSuggestions());
+        }
         const list = db.getAllSuggestions();
         res.json(list);
     } catch (err) {
@@ -87,7 +93,33 @@ app.get('/api/suggest-words', (req, res) => {
     }
 });
 
-// เส้นทางลบรายการคำศัพท์ที่แจ้งเพิ่ม (DELETE)
+// เส้นทางดึงคำศัพท์ที่ Admin อนุมัติแล้วเท่านั้น (สาธารณะสำหรับผู้เรียนทุกคน)
+app.get('/api/approved-words', (req, res) => {
+    try {
+        const list = db.getApprovedSuggestions();
+        res.json(list);
+    } catch (err) {
+        console.error('Error fetching approved words:', err);
+        res.status(500).json({ error: 'เกิดข้อผิดพลาดในการดึงข้อมูลคำศัพท์ที่อนุมัติแล้ว' });
+    }
+});
+
+// เส้นทางสำหรับแอดมินกดยอมรับ / อนุมัติคำศัพท์ (POST / Approve)
+app.post('/api/suggest-word/:id/approve', (req, res) => {
+    const { id } = req.params;
+    try {
+        const item = db.approveSuggestion(id);
+        if (!item) {
+            return res.status(404).json({ error: 'ไม่พบรายการคำศัพท์ที่ระบุ' });
+        }
+        res.json({ success: true, item });
+    } catch (err) {
+        console.error('Error approving suggestion:', err);
+        res.status(500).json({ error: 'เกิดข้อผิดพลาดในการอนุมัติคำศัพท์' });
+    }
+});
+
+// เส้นทางลบ / ปฏิเสธรายการคำศัพท์ที่แจ้งเพิ่ม (DELETE)
 app.delete('/api/suggest-word/:id', (req, res) => {
     const { id } = req.params;
     try {

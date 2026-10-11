@@ -181,8 +181,56 @@ function syncToJsonBackup() {
     }
 }
 
+/**
+ * ดึงรายการคำศัพท์ที่ได้รับอนุมัติแล้วทั้งหมด (สำหรับผู้เรียนทุกคน)
+ */
+function getApprovedSuggestions() {
+    if (useSQLite) {
+        const query = db.prepare(`SELECT * FROM suggestions WHERE status = 'approved' ORDER BY createdAt ASC`);
+        return query.all();
+    } else {
+        const all = getAllSuggestions();
+        return all.filter(item => item.status === 'approved');
+    }
+}
+
+/**
+ * ดึงรายการคำศัพท์ที่รอการตรวจสอบอนุมัติ (สำหรับ Admin)
+ */
+function getPendingSuggestions() {
+    if (useSQLite) {
+        const query = db.prepare(`SELECT * FROM suggestions WHERE status = 'pending' ORDER BY createdAt DESC`);
+        return query.all();
+    } else {
+        const all = getAllSuggestions();
+        return all.filter(item => item.status !== 'approved');
+    }
+}
+
+/**
+ * แอดมินอนุมัติคำศัพท์
+ */
+function approveSuggestion(id) {
+    if (useSQLite) {
+        const stmt = db.prepare(`UPDATE suggestions SET status = 'approved' WHERE id = ?`);
+        stmt.run(id);
+        const getStmt = db.prepare(`SELECT * FROM suggestions WHERE id = ?`);
+        const item = getStmt.get(id);
+        syncToJsonBackup();
+        return item;
+    } else {
+        updateSuggestionStatus(id, 'approved');
+        const all = getAllSuggestions();
+        syncToJsonBackup();
+        return all.find(item => item.id === id);
+    }
+}
+
 module.exports = {
     getAllSuggestions,
+    getApprovedSuggestions,
+    getPendingSuggestions,
+    approveSuggestion,
     addSuggestion,
     deleteSuggestion,
     updateSuggestionStatus,

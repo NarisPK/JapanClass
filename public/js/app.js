@@ -577,6 +577,7 @@ function initHomepage() {
     }
 
     switchBook(currentBook || 1);
+    syncApprovedWords();
 }
 
 function renderModesList() {
@@ -1210,6 +1211,92 @@ function switchAdminTab(tabName) {
     }
 }
 
+// ===== 🌸 ระบบคำศัพท์ที่ผ่านการอนุมัติ (Approved Words System - ทุกคนมองเห็นได้) =====
+function findModeKeyByLesson(lessonNum) {
+    const keyMap = {
+        1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
+        7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve",
+        13: "thirteen", 14: "fourteen", 15: "fifteen", 16: "sixteen", 17: "seventeen",
+        18: "eighteen", 19: "nineteen", 20: "twenty", 21: "twentyone", 22: "twentytwo",
+        23: "twentythree", 24: "twentyfour", 25: "twentyfive"
+    };
+    if (keyMap[lessonNum]) return keyMap[lessonNum];
+    const foundKey = Object.keys(allQuizModes).find(k => allQuizModes[k].lessonNum === lessonNum && !allQuizModes[k].isGrammar);
+    return foundKey || `lesson_${lessonNum}`;
+}
+
+function injectApprovedQuestionIntoMode(targetKey, item) {
+    if (!allQuizModes[targetKey]) return;
+    const qList = allQuizModes[targetKey].questions;
+    if (!Array.isArray(qList)) return;
+
+    // ตรวจสอบว่ามีคำนี้อยู่แล้วหรือยังเพื่อไม่ให้ซ้ำซ้อน
+    const alreadyExists = qList.some(q => q.kanji === item.kanji && (q.japaneseText === item.reading || (q.choices && q.choices[q.correct] === item.reading)));
+    if (alreadyExists) return;
+
+    const otherReadings = qList.map(q => q.choices ? q.choices[q.correct] : q.japaneseText).filter(r => r && r !== item.reading);
+    const fallbackPool = ["いきます", "たべます", "みます", "ききます", "あそびます", "べんきょう", "せんせい", "がっこう"];
+    const pool = [...new Set([...otherReadings, ...fallbackPool])].filter(r => r !== item.reading);
+    pool.sort(() => Math.random() - 0.5);
+    const distractors = pool.slice(0, 3);
+    const choices = [item.reading, ...distractors].sort(() => Math.random() - 0.5);
+    const correctIdx = choices.indexOf(item.reading);
+
+    const newQ = {
+        kanji: item.kanji,
+        character: item.kanji,
+        hint: item.meaning || "คำศัพท์แจ้งเพิ่มที่ได้รับอนุมัติ",
+        choices: choices,
+        correct: correctIdx,
+        japaneseText: item.reading,
+        isApprovedUserWord: true,
+        img: `https://placehold.co/600x600/ffe4e6/be123c?text=${encodeURIComponent(item.kanji)}`
+    };
+
+    qList.push(newQ);
+    if (defaultQuizModes && defaultQuizModes[targetKey] && Array.isArray(defaultQuizModes[targetKey].questions)) {
+        const defExists = defaultQuizModes[targetKey].questions.some(q => q.kanji === item.kanji && q.japaneseText === item.reading);
+        if (!defExists) {
+            defaultQuizModes[targetKey].questions.push(newQ);
+        }
+    }
+}
+
+// ฟังก์ชันซิงค์คำศัพท์ที่แอดมินอนุมัติแล้วมาแสดงให้ทุกคนเห็นในบทนั้นๆ
+async function syncApprovedWords() {
+    let approvedList = [];
+    try {
+        const res = await fetch('/api/approved-words');
+        if (res.ok) {
+            approvedList = await res.json();
+        } else {
+            approvedList = JSON.parse(localStorage.getItem('global_approved_words') || '[]');
+        }
+    } catch (e) {
+        approvedList = JSON.parse(localStorage.getItem('global_approved_words') || '[]');
+    }
+
+    if (!Array.isArray(approvedList) || approvedList.length === 0) return;
+
+    // บันทึกสำรองลง LocalStorage
+    localStorage.setItem('global_approved_words', JSON.stringify(approvedList));
+
+    let addedCount = 0;
+    approvedList.forEach(item => {
+        if (!item.kanji || !item.reading || !item.lesson) return;
+        const lessonNum = parseInt(item.lesson, 10);
+        const targetKey = findModeKeyByLesson(lessonNum);
+        if (targetKey && allQuizModes[targetKey]) {
+            injectApprovedQuestionIntoMode(targetKey, item);
+            addedCount++;
+        }
+    });
+
+    if (addedCount > 0) {
+        renderModesList();
+    }
+}
+
 // ===== ระบบแจ้งเพิ่มคำศัพท์ (Word Suggestions System) =====
 let cachedSuggestions = [];
 
@@ -1409,43 +1496,9 @@ async function submitWordSuggestion() {
     localList.unshift(savedItem);
     localStorage.setItem('user_word_suggestions', JSON.stringify(localList));
 
-    // นำคำศัพท์เข้าสู่คลังคำถามของบทนั้นทันทีในเซสชันปัจจุบันเพื่อให้ผู้เรียนเล่นได้เลย!
-    const keyMap = {
-        1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
-        7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve",
-        13: "thirteen", 14: "fourteen", 15: "fifteen", 16: "sixteen", 17: "seventeen",
-        18: "eighteen", 19: "nineteen", 20: "twenty", 21: "twentyone", 22: "twentytwo",
-        23: "twentythree", 24: "twentyfour", 25: "twentyfive"
-    };
-    const targetKey = keyMap[lesson] || `lesson_${lesson}`;
-    if (allQuizModes[targetKey] && Array.isArray(allQuizModes[targetKey].questions)) {
-        const qList = allQuizModes[targetKey].questions;
-        const otherReadings = qList.map(q => q.choices ? q.choices[q.correct] : q.japaneseText).filter(r => r && r !== reading);
-        const fallbackPool = ["いきます", "たべます", "みます", "ききます", "あそびます", "べんきょう", "せんせい", "がっこう"];
-        const pool = [...new Set([...otherReadings, ...fallbackPool])].filter(r => r !== reading);
-        pool.sort(() => Math.random() - 0.5);
-        const distractors = pool.slice(0, 3);
-        const choices = [reading, ...distractors].sort(() => Math.random() - 0.5);
-        const correctIdx = choices.indexOf(reading);
-
-        qList.push({
-            kanji: kanji,
-            character: kanji,
-            hint: meaning || "คำศัพท์แจ้งเพิ่ม",
-            choices: choices,
-            correct: correctIdx,
-            japaneseText: reading,
-            img: `https://placehold.co/600x600/ffe4e6/be123c?text=${encodeURIComponent(kanji)}`
-        });
-        if (defaultQuizModes && defaultQuizModes[targetKey]) {
-            defaultQuizModes[targetKey].questions.push(qList[qList.length - 1]);
-        }
-        renderModesList();
-    }
-
     playUnlockSound();
-    mascotTalk(`ยูกิจังบันทึกคำศัพท์ "${kanji}" (${reading}) บทที่ ${lesson} เข้าสู่คลังเรียบร้อยแล้วค่ะ! ขอบคุณมากนะค๊า! 🎉🌸`, 'happy');
-    showCustomMessage(`🌸 แจ้งเพิ่มคำศัพท์ "${kanji}" (${reading}) สำหรับบทที่ ${lesson} สำเร็จและพร้อมใช้งานในคลังแล้วค่ะ!`, "ส่งข้อมูลสำเร็จ ✨");
+    mascotTalk(`ยูกิจังได้รับคำศัพท์ "${kanji}" (${reading}) บทที่ ${lesson} แล้วค่ะ! รอผู้ดูแลระบบ (Admin) ตรวจสอบและกดยอมรับก่อน จากนั้นทุกคนจะสามารถเรียนรู้คำนี้ได้ค่ะ 🌸📝`, 'happy');
+    showCustomMessage(`🌸 แจ้งเพิ่มคำศัพท์ "${kanji}" (${reading}) เรียบร้อยแล้วค่ะ!\n\n⏳ สถานะ: รอผู้ดูแลระบบ (Admin) ตรวจสอบและกดยอมรับก่อน คำศัพท์จึงจะปรากฏในคลังให้ทุกคนใช้งานค่ะ`, "ส่งคำศัพท์สำเร็จ (รอการอนุมัติ) ✨");
 
     // เคลียร์ฟอร์ม
     kanjiInput.value = "";
@@ -1497,13 +1550,19 @@ function renderUserSuggestionsList() {
 
     listContainer.innerHTML = cachedSuggestions.map((item) => {
         const dateStr = item.createdAt ? new Date(item.createdAt).toLocaleDateString('th-TH', { hour: '2-digit', minute: '2-digit' }) : '';
+        const isApproved = item.status === 'approved';
+        const statusBadge = isApproved
+            ? `<span class="text-[9px] bg-emerald-100 text-emerald-700 font-extrabold px-2 py-0.5 rounded-full border border-emerald-200">✅ อนุมัติแล้ว (ทุกคนมองเห็น)</span>`
+            : `<span class="text-[9px] bg-amber-100 text-amber-800 font-extrabold px-2 py-0.5 rounded-full border border-amber-200 animate-pulse">⏳ รอ Admin อนุมัติ</span>`;
+
         return `
-            <div class="p-3 bg-white rounded-2xl border border-pink-100 shadow-sm flex items-center justify-between gap-3 hover:border-pink-300 transition">
+            <div class="p-3 bg-white rounded-2xl border ${isApproved ? 'border-emerald-200 bg-emerald-50/20' : 'border-pink-100'} shadow-sm flex items-center justify-between gap-3 hover:border-pink-300 transition">
                 <div class="space-y-0.5">
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 flex-wrap">
                         <span class="text-base font-black text-rose-950">${item.kanji}</span>
                         <span class="text-xs font-bold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-lg border border-pink-200/50">${item.reading}</span>
                         <span class="text-[9px] bg-purple-100 text-purple-700 font-extrabold px-1.5 py-0.5 rounded">第 ${item.lesson} 課</span>
+                        ${statusBadge}
                     </div>
                     ${item.meaning ? `<div class="text-[11px] text-slate-600 font-medium">แปลว่า: ${item.meaning}</div>` : ''}
                     ${item.note ? `<div class="text-[9px] text-slate-400">หมายเหตุ: ${item.note}</div>` : ''}
@@ -1534,13 +1593,16 @@ function renderAdminSuggestionsList() {
 
     adminListContainer.innerHTML = cachedSuggestions.map(item => {
         const dateStr = item.createdAt ? new Date(item.createdAt).toLocaleDateString('th-TH', { hour: '2-digit', minute: '2-digit' }) : '';
+        const isApproved = item.status === 'approved';
+
         return `
-            <div class="p-3 bg-white rounded-xl border border-rose-100 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-2.5 hover:border-pink-300 transition">
+            <div class="p-3 bg-white rounded-xl border ${isApproved ? 'border-emerald-200 bg-emerald-50/10' : 'border-rose-100'} shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-2.5 hover:border-pink-300 transition">
                 <div class="space-y-1">
                     <div class="flex items-center gap-2 flex-wrap">
                         <span class="text-base font-black text-rose-950">${item.kanji}</span>
                         <span class="text-xs font-bold text-pink-600 bg-pink-50 px-2 py-0.5 rounded border border-pink-200/50">${item.reading}</span>
                         <span class="text-[10px] bg-indigo-100 text-indigo-700 font-extrabold px-2 py-0.5 rounded-full">第 ${item.lesson} 課</span>
+                        ${isApproved ? `<span class="text-[10px] bg-emerald-100 text-emerald-800 font-extrabold px-2 py-0.5 rounded-full">✅ อนุมัติแล้ว (ทุกคนมองเห็น)</span>` : `<span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full">⏳ รอแอดมินอนุมัติ</span>`}
                         <button type="button" onclick="speakJapanese('${item.reading || item.kanji}')" class="text-pink-600 hover:text-pink-700 text-xs">
                             <i class="fa-solid fa-volume-high"></i>
                         </button>
@@ -1551,10 +1613,12 @@ function renderAdminSuggestionsList() {
                 </div>
 
                 <div class="flex items-center gap-1.5 shrink-0">
+                    ${!isApproved ? `
                     <button onclick="approveAndAddSuggestion('${item.id}')"
                         class="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-black text-[10px] px-3 py-1.5 rounded-lg shadow-sm transition active:scale-95 flex items-center gap-1">
-                        <i class="fa-solid fa-check"></i> อนุมัติ & เพิ่มทันที
+                        <i class="fa-solid fa-check"></i> ยอมรับ & เพิ่มให้ทุกคน
                     </button>
+                    ` : ''}
                     <button onclick="deleteSuggestion('${item.id}')"
                         class="bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold text-[10px] px-2.5 py-1.5 rounded-lg border border-rose-200 transition active:scale-95">
                         <i class="fa-solid fa-trash-can"></i>
@@ -1565,59 +1629,50 @@ function renderAdminSuggestionsList() {
     }).join('');
 }
 
-// อนุมัติและเพิ่มคำที่แจ้งเข้าสู่โจทย์ของบทนั้นทันที!
+// อนุมัติและเพิ่มคำที่แจ้งเข้าสู่โจทย์ของบทนั้นเพื่อให้ทุกคนมองเห็นได้!
 async function approveAndAddSuggestion(id) {
     const item = cachedSuggestions.find(s => s.id === id);
     if (!item) return;
 
-    // หา key ของบทนั้น
-    const lessonNum = parseInt(item.lesson, 10);
-    const keyMap = {
-        1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
-        7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve",
-        13: "thirteen", 14: "fourteen", 15: "fifteen", 16: "sixteen", 17: "seventeen",
-        18: "eighteen", 19: "nineteen", 20: "twenty", 21: "twentyone", 22: "twentytwo",
-        23: "twentythree", 24: "twentyfour", 25: "twentyfive"
-    };
-    const targetKey = keyMap[lessonNum] || `lesson_${lessonNum}`;
-
-    if (!allQuizModes[targetKey]) {
-        showCustomMessage(`ไม่พบโหมดบทที่ ${lessonNum} ในระบบค่ะ`, "ข้อผิดพลาด");
-        return;
+    // ส่งคำขออนุมัติไปยังเซิร์ฟเวอร์
+    try {
+        await fetch(`/api/suggest-word/${id}/approve`, { method: 'POST' });
+    } catch (e) {
+        console.warn('API approve offline/failed, using local approval:', e);
     }
 
-    const currentModeQuestions = allQuizModes[targetKey].questions || [];
+    item.status = 'approved';
 
-    // สร้างตัวลวง 3 ตัว
-    const otherReadings = currentModeQuestions.map(q => q.choices ? q.choices[q.correct] : q.japaneseText).filter(r => r && r !== item.reading);
-    const fallbackPool = ["いきます", "たべます", "みます", "ききます", "あそびます", "べんきょう", "せんせい", "がっこう"];
-    const combinedPool = [...new Set([...otherReadings, ...fallbackPool])].filter(r => r !== item.reading);
-    combinedPool.sort(() => Math.random() - 0.5);
-    const distractors = combinedPool.slice(0, 3);
+    // เพิ่มเข้าคลัง global_approved_words
+    const approvedList = JSON.parse(localStorage.getItem('global_approved_words') || '[]');
+    if (!approvedList.some(a => a.id === id || (a.kanji === item.kanji && a.reading === item.reading))) {
+        approvedList.push(item);
+        localStorage.setItem('global_approved_words', JSON.stringify(approvedList));
+    }
 
-    const choices = [item.reading, ...distractors].sort(() => Math.random() - 0.5);
-    const correctIdx = choices.indexOf(item.reading);
+    // อัปเดตสถานะใน user_word_suggestions
+    const userList = JSON.parse(localStorage.getItem('user_word_suggestions') || '[]');
+    const userIdx = userList.findIndex(u => u.id === id || (u.kanji === item.kanji && u.reading === item.reading));
+    if (userIdx !== -1) {
+        userList[userIdx].status = 'approved';
+        localStorage.setItem('user_word_suggestions', JSON.stringify(userList));
+    }
 
-    const newQuestion = {
-        kanji: item.kanji,
-        character: item.kanji,
-        hint: item.meaning || "คำศัพท์แจ้งเพิ่ม",
-        choices: choices,
-        correct: correctIdx,
-        japaneseText: item.reading,
-        img: `https://placehold.co/600x600/ffe4e6/be123c?text=${encodeURIComponent(item.kanji)}`
-    };
-
-    allQuizModes[targetKey].questions.push(newQuestion);
-    if (defaultQuizModes[targetKey]) {
-        defaultQuizModes[targetKey].questions.push(newQuestion);
+    // นำเข้าสู่ Quiz Mode ทันที
+    const lessonNum = parseInt(item.lesson, 10);
+    const targetKey = findModeKeyByLesson(lessonNum);
+    if (targetKey && allQuizModes[targetKey]) {
+        injectApprovedQuestionIntoMode(targetKey, item);
     }
 
     playUnlockSound();
-    showCustomMessage(`เพิ่มคำศัพท์ "${item.kanji}" (${item.reading}) เข้าสู่ 第 ${lessonNum} 課 เรียบร้อยแล้วค่ะ! (ตอนนี้มี ${allQuizModes[targetKey].questions.length} ข้อ)`, "อนุมัติสำเร็จ 🎉");
+    showCustomMessage(
+        `🎉 อนุมัติคำศัพท์ "${item.kanji}" (${item.reading}) เรียบร้อยแล้วค่ะ!\n\nตอนนี้คำศัพท์นี้ถูกเพิ่มเข้าสู่บทที่ ${lessonNum} และเปิดให้ทุกคนมองเห็นแล้วค่ะ ✨`,
+        "อนุมัติสำเร็จ!"
+    );
 
-    // ลบออกจากรายการแจ้งเมื่ออนุมัติแล้ว
-    await deleteSuggestion(id, false);
+    await loadWordSuggestions();
+    renderModesList();
     renderQuestionList();
 }
 
