@@ -1,0 +1,34 @@
+Created At: 2026-07-04T06:57:25Z
+Completed At: 2026-07-04T06:57:25Z
+File Path: `file:///c:/Users/heart/OneDrive/Desktop/voice-quiz-web/public/index.html`
+Total Lines: 675
+Total Bytes: 52332
+Showing lines 650 to 675
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+650:                     </div>
+651:                 </div>
+652: 
+653:             </div>
+654: 
+655:         </div>
+656: 
+657:     </div>
+658: 
+659:     <!-- โหลดข้อมูลบทเรียนแต่ละบทเรียน -->
+660:     <script src="js/data/katakana.js"></script>
+661:     <script src="js/data/hiragana.js"></script>
+662:     <script src="js/data/one.js"></script>
+663:     <script src="js/data/two.js"></script>
+664:     <script src="js/data/three.js"></script>
+665:     <script src="js/data/four.js"></script>
+666:     <script src="js/data/six.js"></script>
+667: 
+668:     <script src="js/data/five.js"></script>
+669:     <!-- โหลดตัวประกอบข้อมูลควิซหลัก -->
+670:     <script src="js/quizData.js"></script>
+671:     <!-- โหลดตัวรันเกม Logic หลัก -->
+672:     <script src="js/app.js"></script>
+673: </body>
+674: 
+675: </html>
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

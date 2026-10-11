@@ -1,0 +1,152 @@
+body {
+    font-family: 'Prompt', 'Kosugi Maru', sans-serif;
+    background-color: #fce7f3;
+    background-image: 
+        radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.4) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(255, 192, 203, 0.25) 0%, transparent 40%),
+        linear-gradient(rgba(255, 245, 247, 0.25), rgba(255, 235, 242, 0.35)),
+        url('../images/anime_japan_bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    color: #4a2830;
+    min-height: 100vh;
+}
+
+.font-kawaii {
+    font-family: 'Fredoka', 'Kosugi Maru', 'Prompt', sans-serif;
+}
+
+/* แอนิเมชันกลีบซากุระร่วงหล่นสำหรับธีมสว่าง */
+.sakura {
+    position: absolute;
+    background-color: #ffb7c5;
+    border-radius: 100% 0 100% 100%;
+    pointer-events: none;
+    opacity: 0.85;
+    z-index: 1;
+    transform-origin: center;
+    animation: fall linear infinite;
+    box-shadow: 0 2px 5px rgba(244, 63, 94, 0.15);
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) translateX(0) rotate(0deg);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(105vh) translateX(150px) rotate(360deg);
+        opacity: 0.3;
+    }
+}
+
+/* แอนิเมชันการลอยไหวเบาๆ ขององค์ประกอบมาสคอต */
+@keyframes float-gentle {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-7px) rotate(1.5deg); }
+}
+
+.float-anime {
+    animation: float-gentle 4s ease-in-out infinite;
+}
+
+/* แอนิเมชันพิเศษสำหรับมาสคอตจิบิ ยูกิจัง */
+@keyframes mascot-happy-bounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    30% { transform: translateY(-12px) scale(1.08); }
+    60% { transform: translateY(-4px) scale(1.04); }
+}
+
+@keyframes mascot-sad-wobble {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(-5deg); }
+    75% { transform: translateX(5px) rotate(5deg); }
+}
+
+.mascot-bounce-happy {
+    animation: mascot-happy-bounce 0.65s ease-in-out !important;
+}
+
+.mascot-wobble-sad {
+    animation: mascot-sad-wobble 0.65s ease-in-out !important;
+}
+
+/* แถบเลื่อนน่ารักสีชมพู */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(244, 63, 94, 0.3);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(244, 63, 94, 0.5);
+}
+
+/* เอฟเฟกต์กล่องกระจกพาสเทลเรืองแสง */
+.anime-glow-box {
+    box-shadow: 0 10px 30px rgba(244, 63, 94, 0.08), 
+                inset 0 0 20px rgba(255, 255, 255, 0.7);
+    border: 2px solid rgba(244, 63, 94, 0.12);
+}
+
+/* ปุ่มกดที่ตอบสนองเมื่อเมาส์ชี้สไตล์ญี่ปุ่น */
+.arcade-btn-glow {
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.arcade-btn-glow:hover {
+    box-shadow: 0 8px 20px rgba(244, 63, 94, 0.15), inset 0 0 5px rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px) scale(1.02);
+    border-color: rgba(244, 63, 94, 0.4);
+}
+
+@keyframes shake-error {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+.shake-anime {
+    animation: shake-error 0.35s ease-in-out;
+}
+
+@keyframes pulse-soft-fire {
+    0%, 100% { filter: drop-shadow(0 0 2px rgba(244, 63, 94, 0.4)); }
+    50% { filter: drop-shadow(0 0 8px rgba(244, 63, 94, 0.8)); }
+}
+.combo-fire-glow {
+    animation: pulse-soft-fire 1.5s infinite;
+}
+
+/* สไตล์ช่องว่างเติมคำช่วยไวยากรณ์ */
+.grammar-blank-slot {
+    display: inline-block;
+    padding: 2px 14px;
+    margin: 0 4px;
+    border-bottom: 3.5px dashed #f43f5e;
+    color: #e11d48;
+    min-width: 65px;
+    text-align: center;
+    background: rgba(254, 226, 226, 0.45);
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: inset 0 1px 3px rgba(244, 63, 94, 0.1);
+}
+.grammar-blank-slot.filled {
+    border-bottom: 3.5px solid #10b981;
+    color: #047857;
+    background: rgba(209, 250, 229, 0.7);
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+}
+.grammar-blank-slot.error {
+    border-bottom: 3.5px solid #ef4444;
+    color: #b91c1c;
+    background: rgba(254, 202, 202, 0.7);
+}
