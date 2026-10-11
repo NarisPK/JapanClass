@@ -58,35 +58,8 @@ app.get('/proxy-image', async (req, res) => {
     }
 });
 
-// ===== ระบบจัดการคำศัพท์ที่ผู้ใช้แจ้งเพิ่ม (Word Suggestion APIs) =====
-const fs = require('fs');
-const SUGGESTIONS_FILE = path.join(__dirname, 'data', 'word_suggestions.json');
-
-function getSuggestions() {
-    try {
-        if (!fs.existsSync(SUGGESTIONS_FILE)) {
-            const dir = path.dirname(SUGGESTIONS_FILE);
-            if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-            fs.writeFileSync(SUGGESTIONS_FILE, '[]', 'utf-8');
-            return [];
-        }
-        const data = fs.readFileSync(SUGGESTIONS_FILE, 'utf-8');
-        return JSON.parse(data || '[]');
-    } catch (e) {
-        console.error('Error reading suggestions:', e);
-        return [];
-    }
-}
-
-function saveSuggestions(list) {
-    try {
-        const dir = path.dirname(SUGGESTIONS_FILE);
-        if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-        fs.writeFileSync(SUGGESTIONS_FILE, JSON.stringify(list, null, 2), 'utf-8');
-    } catch (e) {
-        console.error('Error saving suggestions:', e);
-    }
-}
+// ===== 🗄️ ระบบฐานข้อมูลคำศัพท์ที่ผู้ใช้แจ้งเพิ่ม (Word Suggestion Database) =====
+const db = require('./database');
 
 // เส้นทางบันทึกคำศัพท์แจ้งเพิ่ม (POST)
 app.post('/api/suggest-word', (req, res) => {
@@ -94,35 +67,36 @@ app.post('/api/suggest-word', (req, res) => {
     if (!kanji || !reading || !lesson) {
         return res.status(400).json({ error: 'กรุณากรอกคันจิ คำอ่าน และบทที่ต้องการแจ้งให้ครบถ้วน' });
     }
-    const suggestions = getSuggestions();
-    const newEntry = {
-        id: 'sug_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5),
-        kanji: kanji.trim(),
-        reading: reading.trim(),
-        lesson: parseInt(lesson, 10) || lesson,
-        meaning: (meaning || '').trim(),
-        note: (note || '').trim(),
-        createdAt: new Date().toISOString(),
-        status: 'pending'
-    };
-    suggestions.unshift(newEntry);
-    saveSuggestions(suggestions);
-    res.json({ success: true, item: newEntry });
+    try {
+        const newEntry = db.addSuggestion({ kanji, reading, lesson, meaning, note });
+        res.json({ success: true, item: newEntry });
+    } catch (err) {
+        console.error('Error adding suggestion to database:', err);
+        res.status(500).json({ error: 'เกิดข้อผิดพลาดในการบันทึกข้อมูลลงฐานข้อมูล' });
+    }
 });
 
 // เส้นทางดึงรายการคำศัพท์ที่แจ้งเพิ่มทั้งหมด (GET)
 app.get('/api/suggest-words', (req, res) => {
-    const list = getSuggestions();
-    res.json(list);
+    try {
+        const list = db.getAllSuggestions();
+        res.json(list);
+    } catch (err) {
+        console.error('Error fetching suggestions from database:', err);
+        res.status(500).json({ error: 'เกิดข้อผิดพลาดในการดึงข้อมูลจากฐานข้อมูล' });
+    }
 });
 
 // เส้นทางลบรายการคำศัพท์ที่แจ้งเพิ่ม (DELETE)
 app.delete('/api/suggest-word/:id', (req, res) => {
     const { id } = req.params;
-    let list = getSuggestions();
-    list = list.filter(item => item.id !== id);
-    saveSuggestions(list);
-    res.json({ success: true });
+    try {
+        db.deleteSuggestion(id);
+        res.json({ success: true });
+    } catch (err) {
+        console.error('Error deleting suggestion from database:', err);
+        res.status(500).json({ error: 'เกิดข้อผิดพลาดในการลบข้อมูลจากฐานข้อมูล' });
+    }
 });
 
 // สั่งให้ Server ทำงานและเปิดช่องทางการรับส่งข้อมูลที่พอร์ต 3000

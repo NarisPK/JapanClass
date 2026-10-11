@@ -497,6 +497,12 @@ function switchBook(bookNum) {
         headerToggleText.innerHTML = `สลับไป เล่ม ${nextBook} ➔`;
     }
 
+    // ปรับเปลี่ยนข้อความปุ่มแจ้งเพิ่มคำศัพท์ในหน้านี้
+    const suggestInBookText = document.getElementById('btn-suggest-in-book-text');
+    if (suggestInBookText) {
+        suggestInBookText.innerText = `➕ แจ้งเพิ่มคลังคำศัพท์ (เล่ม ${currentBook})`;
+    }
+
     mascotTalk(cfg.mascotMsg, 'happy');
     switchCategoryTab(currentCategoryTab);
 }
@@ -622,6 +628,24 @@ function renderModesList() {
         `;
         container.appendChild(button);
     });
+
+    // เพิ่มการ์ดแจ้งเพิ่มคำศัพท์ลงในคลังเล่มนี้
+    if (currentCategoryTab === 'vocab') {
+        const addCard = document.createElement('button');
+        addCard.className = `w-full flex items-center justify-between p-4 bg-white/85 hover:bg-pink-50/90 border-2 border-dashed border-pink-300 hover:border-pink-400 rounded-2xl text-left transition-all duration-300 group shadow-sm relative overflow-hidden`;
+        addCard.onclick = () => openSuggestModal();
+        addCard.innerHTML = `
+            <div class="flex items-center gap-3 relative z-10">
+                <span class="text-2xl bg-gradient-to-tr from-amber-100 to-pink-100 p-2 rounded-xl border border-pink-200 group-hover:scale-110 transition-transform shadow-inner">➕</span>
+                <div>
+                    <span class="font-extrabold text-rose-950 text-xs md:text-sm block tracking-wide">แจ้งเพิ่มคำศัพท์ลงคลัง (เล่ม ${currentBook})</span>
+                    <span class="text-[9px] text-pink-600 font-extrabold block mt-0.5">พบคันจิหรือคำศัพท์ตกหล่น? ส่งคำศัพท์เข้าคลังเล่มนี้ได้เลย ✨</span>
+                </div>
+            </div>
+            <span class="font-bold text-pink-500 group-hover:translate-x-1 transition-transform relative z-10"><i class="fa-solid fa-arrow-right text-xs"></i></span>
+        `;
+        container.appendChild(addCard);
+    }
 }
 
 // เริ่มเข้าสู่แบบทดสอบทายคำศัพท์หรือไวยากรณ์
@@ -1189,34 +1213,38 @@ function switchAdminTab(tabName) {
 // ===== ระบบแจ้งเพิ่มคำศัพท์ (Word Suggestions System) =====
 let cachedSuggestions = [];
 
-function populateSuggestLessonSelect() {
+function populateSuggestLessonSelect(defaultLesson = null) {
     const select = document.getElementById('suggest-lesson-select');
-    if (!select || select.children.length > 0) return;
+    if (!select) return;
 
-    select.innerHTML = "";
+    if (select.children.length === 0) {
+        select.innerHTML = "";
 
-    // 4 กลุ่มเล่ม: เล่ม 1 (1-12), เล่ม 2 (13-25), เล่ม 3 (26-38), เล่ม 4 (39-50)
-    const bookRanges = [
-        { book: 1, name: "🌸 เล่ม 1 (บทที่ 1 - 12)", start: 1, end: 12 },
-        { book: 2, name: "📘 เล่ม 2 (บทที่ 13 - 25)", start: 13, end: 25 },
-        { book: 3, name: "📗 เล่ม 3 (บทที่ 26 - 38)", start: 26, end: 38 },
-        { book: 4, name: "📙 เล่ม 4 (บทที่ 39 - 50)", start: 39, end: 50 },
-    ];
+        // 4 กลุ่มเล่ม: เล่ม 1 (1-12), เล่ม 2 (13-25), เล่ม 3 (26-38), เล่ม 4 (39-50)
+        const bookRanges = [
+            { book: 1, name: "🌸 เล่ม 1 (บทที่ 1 - 12)", start: 1, end: 12 },
+            { book: 2, name: "📘 เล่ม 2 (บทที่ 13 - 25)", start: 13, end: 25 },
+            { book: 3, name: "📗 เล่ม 3 (บทที่ 26 - 38)", start: 26, end: 38 },
+            { book: 4, name: "📙 เล่ม 4 (บทที่ 39 - 50)", start: 39, end: 50 },
+        ];
 
-    bookRanges.forEach(b => {
-        const optgroup = document.createElement('optgroup');
-        optgroup.label = b.name;
-        for (let i = b.start; i <= b.end; i++) {
-            const opt = document.createElement('option');
-            opt.value = i;
-            opt.innerText = `第 ${i} 課 (บทที่ ${i})`;
-            optgroup.appendChild(opt);
-        }
-        select.appendChild(optgroup);
-    });
+        bookRanges.forEach(b => {
+            const optgroup = document.createElement('optgroup');
+            optgroup.label = b.name;
+            for (let i = b.start; i <= b.end; i++) {
+                const opt = document.createElement('option');
+                opt.value = i;
+                opt.innerText = `第 ${i} 課 (บทที่ ${i})`;
+                optgroup.appendChild(opt);
+            }
+            select.appendChild(optgroup);
+        });
+    }
 
-    // เลือกบทเริ่มต้นตามเล่มปัจจุบัน
-    if (typeof currentBook !== 'undefined') {
+    // เลือกบทเริ่มต้นตามที่ระบุ หรือตามเล่มปัจจุบันที่เปิดอยู่
+    if (defaultLesson) {
+        select.value = defaultLesson;
+    } else if (typeof currentBook !== 'undefined') {
         if (currentBook === 2) select.value = 13;
         else if (currentBook === 3) select.value = 26;
         else if (currentBook === 4) select.value = 39;
@@ -1224,11 +1252,11 @@ function populateSuggestLessonSelect() {
     }
 }
 
-function openSuggestModal() {
+function openSuggestModal(initialLesson = null) {
     const modal = document.getElementById('suggest-word-modal');
     if (!modal) return;
 
-    populateSuggestLessonSelect();
+    populateSuggestLessonSelect(initialLesson);
 
     // รีเซ็ตฟิลด์หรือตั้งค่าเริ่มต้น
     const kanjiInput = document.getElementById('suggest-kanji-input');
@@ -1238,17 +1266,18 @@ function openSuggestModal() {
     const errorMsg = document.getElementById('suggest-error-msg');
 
     if (errorMsg) errorMsg.innerText = "";
-    if (kanjiInput && !kanjiInput.value) kanjiInput.value = "";
-    if (readingInput && !readingInput.value) readingInput.value = "";
-    if (meaningInput && !meaningInput.value) meaningInput.value = "";
-    if (noteInput && !noteInput.value) noteInput.value = "";
+    if (kanjiInput) kanjiInput.value = "";
+    if (readingInput) readingInput.value = "";
+    if (meaningInput) meaningInput.value = "";
+    if (noteInput) noteInput.value = "";
 
     onSuggestInputChange();
     switchSuggestTab('form');
     loadWordSuggestions();
 
     modal.classList.remove('hidden');
-    mascotTalk("อยากให้ยูกิจังเพิ่มคำศัพท์คำไหน หรือบทไหน บอกได้เลยน้าค๊า! 🌸📝", 'happy');
+    const bookNum = (typeof currentBook !== 'undefined') ? currentBook : 1;
+    mascotTalk(`อยากให้ยูกิจังเพิ่มคำศัพท์คำไหนลงในคลังเล่ม ${bookNum} บอกได้เลยน้าค๊า! 🌸📝`, 'happy');
 
     if (kanjiInput) {
         setTimeout(() => kanjiInput.focus(), 150);
@@ -1351,44 +1380,82 @@ async function submitWordSuggestion() {
 
     const payload = { kanji, reading, lesson, meaning, note };
 
+    let savedItem = null;
     try {
         const res = await fetch('/api/suggest-word', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
         });
-        const result = await res.json();
-
-        // บันทึกสำรองลง Local Storage สำหรับผู้ใช้
-        const localList = JSON.parse(localStorage.getItem('user_word_suggestions') || '[]');
-        localList.unshift(result.item || { ...payload, id: 'local_' + Date.now(), createdAt: new Date().toISOString() });
-        localStorage.setItem('user_word_suggestions', JSON.stringify(localList));
-
-        playUnlockSound();
-        mascotTalk(`ยูกิจังบันทึกคำศัพท์ "${kanji}" (${reading}) บทที่ ${lesson} เรียบร้อยแล้วค่ะ! ขอบคุณมากนะค๊า! 🎉🌸`, 'happy');
-
-        showCustomMessage(`🌸 แจ้งเพิ่มคำศัพท์ "${kanji}" (${reading}) สำหรับบทที่ ${lesson} สำเร็จเรียบร้อยแล้วค่ะ!`, "ส่งข้อมูลสำเร็จ ✨");
-
-        // เคลียร์ฟอร์ม
-        kanjiInput.value = "";
-        readingInput.value = "";
-        if (meaningInput) meaningInput.value = "";
-        if (noteInput) noteInput.value = "";
-        onSuggestInputChange();
-
-        await loadWordSuggestions();
-        switchSuggestTab('history');
-    } catch (err) {
-        console.error('Error submitting word suggestion:', err);
-        const localList = JSON.parse(localStorage.getItem('user_word_suggestions') || '[]');
-        localList.unshift({ ...payload, id: 'local_' + Date.now(), createdAt: new Date().toISOString() });
-        localStorage.setItem('user_word_suggestions', JSON.stringify(localList));
-
-        playUnlockSound();
-        showCustomMessage(`บันทึกคำศัพท์ "${kanji}" เรียบร้อยแล้วค่ะ!`, "ส่งข้อมูลสำเร็จ ✨");
-        await loadWordSuggestions();
-        switchSuggestTab('history');
+        if (res.ok) {
+            const result = await res.json();
+            savedItem = result.item;
+        }
+    } catch (netErr) {
+        console.warn('Network API unavailable, persisting locally:', netErr);
     }
+
+    if (!savedItem) {
+        savedItem = {
+            ...payload,
+            id: 'sug_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
+            createdAt: new Date().toISOString(),
+            status: 'pending'
+        };
+    }
+
+    // บันทึกสำรองลง Local Storage สำหรับผู้ใช้
+    const localList = JSON.parse(localStorage.getItem('user_word_suggestions') || '[]');
+    localList.unshift(savedItem);
+    localStorage.setItem('user_word_suggestions', JSON.stringify(localList));
+
+    // นำคำศัพท์เข้าสู่คลังคำถามของบทนั้นทันทีในเซสชันปัจจุบันเพื่อให้ผู้เรียนเล่นได้เลย!
+    const keyMap = {
+        1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
+        7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve",
+        13: "thirteen", 14: "fourteen", 15: "fifteen", 16: "sixteen", 17: "seventeen",
+        18: "eighteen", 19: "nineteen", 20: "twenty", 21: "twentyone", 22: "twentytwo",
+        23: "twentythree", 24: "twentyfour", 25: "twentyfive"
+    };
+    const targetKey = keyMap[lesson] || `lesson_${lesson}`;
+    if (allQuizModes[targetKey] && Array.isArray(allQuizModes[targetKey].questions)) {
+        const qList = allQuizModes[targetKey].questions;
+        const otherReadings = qList.map(q => q.choices ? q.choices[q.correct] : q.japaneseText).filter(r => r && r !== reading);
+        const fallbackPool = ["いきます", "たべます", "みます", "ききます", "あそびます", "べんきょう", "せんせい", "がっこう"];
+        const pool = [...new Set([...otherReadings, ...fallbackPool])].filter(r => r !== reading);
+        pool.sort(() => Math.random() - 0.5);
+        const distractors = pool.slice(0, 3);
+        const choices = [reading, ...distractors].sort(() => Math.random() - 0.5);
+        const correctIdx = choices.indexOf(reading);
+
+        qList.push({
+            kanji: kanji,
+            character: kanji,
+            hint: meaning || "คำศัพท์แจ้งเพิ่ม",
+            choices: choices,
+            correct: correctIdx,
+            japaneseText: reading,
+            img: `https://placehold.co/600x600/ffe4e6/be123c?text=${encodeURIComponent(kanji)}`
+        });
+        if (defaultQuizModes && defaultQuizModes[targetKey]) {
+            defaultQuizModes[targetKey].questions.push(qList[qList.length - 1]);
+        }
+        renderModesList();
+    }
+
+    playUnlockSound();
+    mascotTalk(`ยูกิจังบันทึกคำศัพท์ "${kanji}" (${reading}) บทที่ ${lesson} เข้าสู่คลังเรียบร้อยแล้วค่ะ! ขอบคุณมากนะค๊า! 🎉🌸`, 'happy');
+    showCustomMessage(`🌸 แจ้งเพิ่มคำศัพท์ "${kanji}" (${reading}) สำหรับบทที่ ${lesson} สำเร็จและพร้อมใช้งานในคลังแล้วค่ะ!`, "ส่งข้อมูลสำเร็จ ✨");
+
+    // เคลียร์ฟอร์ม
+    kanjiInput.value = "";
+    readingInput.value = "";
+    if (meaningInput) meaningInput.value = "";
+    if (noteInput) noteInput.value = "";
+    onSuggestInputChange();
+
+    await loadWordSuggestions();
+    switchSuggestTab('history');
 }
 
 async function loadWordSuggestions() {
