@@ -318,11 +318,11 @@
                             </div>
                         </div>
 
-                        <!-- คำใบ้ภาษาไทยสไตล์มินิมอลอยู่ด้านล่างรูปภาพ -->
-                        <div class="text-center px-4 max-w-xl">
-                            <p id="question-hint"
-                                class="text-[13px] text-rose-600/90 font-bold bg-white/80 py-2 px-6 rounded-2xl border border-rose-100 inline-block shadow-sm">
-                                คำใบ้: อาหารญี่ปุ่น</p>
+                        <!-- คำแปลประโยค / คำใบ้ภาษาไทย (จะซ่อนไว้ก่อนเสมอ และค่อยแสดงหลังตอบคำถามแล้ว) -->
+                        <div class="text-center px-4 max-w-xl min-h-[44px] flex flex-col items-center justify-center">
+                            <p id="question-hint" style="display: none;"
+                                class="hidden text-[13px] text-rose-700 font-bold bg-white/95 py-2 px-6 rounded-2xl border-2 border-pink-200 inline-block shadow-sm transition-all duration-300">
+                            </p>
                             <!-- กล่องแสดงคำอธิบายไวยากรณ์หลังตอบ -->
                             <p id="grammar-explanation-box"
                                 class="hidden text-xs text-emerald-700 font-extrabold bg-emerald-50 border border-emerald-200 p-2.5 rounded-xl shadow-sm mt-2 animate-fade-in">
@@ -954,8 +954,8 @@ function doGet(e) {
     <script src="js/data/grammarData.js"></script>
     <!-- โหลดตัวประกอบข้อมูลควิซหลัก -->
     <script src="js/quizData.js"></script>
-    <!-- โหลดตัวรันเกม Logic หลัก -->
-    <script src="js/app.js"></script>
+    <!-- โหลดตัวรันเกม Logic หลัก (เพิ่ม v=2.5 ป้องกันเบราว์เซอร์มือถือค้างแคช) -->
+    <script src="js/app.js?v=2.5"></script>
 </body>
 
 </html>

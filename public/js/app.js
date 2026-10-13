@@ -47,86 +47,213 @@ const finalScore = document.getElementById('final-score');
 const gradeMessage = document.getElementById('grade-message');
 const restartBtn = document.getElementById('restart-btn');
 
-// จัดการเสียง Web Audio API
+// ===== จัดการเสียง Web Audio API, ระบบขยายความดัง (Boost Volume) และปลดล็อคเสียงบนมือถือ =====
 let audioCtx;
+let masterGainNode;
+let compressorNode;
+let isAudioUnlocked = false;
+
 function getAudioContext() {
     if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        if (AudioContextClass) {
+            audioCtx = new AudioContextClass();
+        }
+    }
+    if (audioCtx && audioCtx.state === 'suspended') {
+        audioCtx.resume().catch(() => {});
     }
     return audioCtx;
 }
 
+function getAudioDestination(ctx) {
+    if (!masterGainNode && ctx) {
+        try {
+            // Master Gain: ขยายระดับเสียงหลักขึ้น 130%
+            masterGainNode = ctx.createGain();
+            masterGainNode.gain.setValueAtTime(1.3, ctx.currentTime);
+
+            // Dynamics Compressor: ขยายความชัดเจน เพิ่มพลังเสียง และป้องกันเสียงแตก
+            compressorNode = ctx.createDynamicsCompressor();
+            compressorNode.threshold.setValueAtTime(-15, ctx.currentTime);
+            compressorNode.knee.setValueAtTime(30, ctx.currentTime);
+            compressorNode.ratio.setValueAtTime(10, ctx.currentTime);
+            compressorNode.attack.setValueAtTime(0.003, ctx.currentTime);
+            compressorNode.release.setValueAtTime(0.25, ctx.currentTime);
+
+            masterGainNode.connect(compressorNode);
+            compressorNode.connect(ctx.destination);
+        } catch (_) {
+            return ctx.destination;
+        }
+    }
+    return masterGainNode || ctx.destination;
+}
+
+// ปลดล็อคระบบเสียงบนมือถือ (iOS Safari & Android Autoplay Policy)
+function unlockMobileAudio() {
+    try {
+        const ctx = getAudioContext();
+        if (ctx && ctx.state === 'suspended') {
+            ctx.resume();
+        }
+        if (ctx && !isAudioUnlocked) {
+            const buffer = ctx.createBuffer(1, 1, 22050);
+            const source = ctx.createBufferSource();
+            source.buffer = buffer;
+            source.connect(ctx.destination);
+            source.start(0);
+        }
+    } catch (_) {}
+
+    try {
+        if ('speechSynthesis' in window) {
+            if (window.speechSynthesis.paused) {
+                window.speechSynthesis.resume();
+            }
+            if (!isAudioUnlocked) {
+                const silent = new SpeechSynthesisUtterance(' ');
+                silent.volume = 0.01;
+                silent.rate = 2;
+                window.speechSynthesis.speak(silent);
+                window.speechSynthesis.resume();
+            }
+        }
+    } catch (_) {}
+
+    try {
+        if (typeof getTtsAudio === 'function') {
+            const ttsAudio = getTtsAudio();
+            if (ttsAudio && !isAudioUnlocked) {
+                ttsAudio.load();
+            }
+        }
+    } catch (_) {}
+
+    isAudioUnlocked = true;
+}
+
+// ผูกเหตุการณ์สัมผัสหน้าจอทุกรูปแบบเพื่อปลดล็อคเสียงทันทีตั้งแต่เริ่มแตะหน้าจอครั้งแรก
+['touchstart', 'touchend', 'pointerdown', 'mousedown', 'keydown'].forEach(eventName => {
+    document.addEventListener(eventName, unlockMobileAudio, { passive: true });
+});
+
+// เสียงตอบถูก: เสียงกระดิ่งสดใสสไตล์อนิเมะ ขยายความดังและปรับเสียงคู่ E5->G5 + C6 ให้กังวานชัดเจนบนมือถือ
 function playCorrectSound() {
     try {
+        unlockMobileAudio();
         const ctx = getAudioContext();
+        if (!ctx) return;
+        const out = getAudioDestination(ctx);
         const now = ctx.currentTime;
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(659.25, now); // E5
-        osc.frequency.exponentialRampToValueAtTime(1318.51, now + 0.25); // E6
-        gain.gain.setValueAtTime(0.1, now);
-        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.25);
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-        osc.start(now);
-        osc.stop(now + 0.25);
+
+        // โน้ตที่ 1: E5 (659Hz) วิ่งขึ้นไป G5 (784Hz)
+        const osc1 = ctx.createOscillator();
+        const gain1 = ctx.createGain();
+        osc1.type = 'sine';
+        osc1.frequency.setValueAtTime(659.25, now);
+        osc1.frequency.exponentialRampToValueAtTime(783.99, now + 0.08);
+        gain1.gain.setValueAtTime(0.45, now);
+        gain1.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
+        osc1.connect(gain1);
+        gain1.connect(out);
+        osc1.start(now);
+        osc1.stop(now + 0.2);
+
+        // โน้ตที่ 2: C6 (1046.5Hz) ประกายเสียงใสคมชัด
+        const osc2 = ctx.createOscillator();
+        const gain2 = ctx.createGain();
+        osc2.type = 'triangle';
+        osc2.frequency.setValueAtTime(1046.50, now + 0.08);
+        gain2.gain.setValueAtTime(0.42, now + 0.08);
+        gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
+        osc2.connect(gain2);
+        gain2.connect(out);
+        osc2.start(now + 0.08);
+        osc2.stop(now + 0.45);
     } catch (e) { console.log(e); }
 }
 
+// เสียงตอบผิด: ปรับความถี่ให้อยู่ในช่วง 370Hz -> 240Hz เพื่อให้ลำโพงสมาร์ทโฟนเปล่งเสียงออกมาได้อย่างคมชัด
 function playIncorrectSound() {
     try {
+        unlockMobileAudio();
         const ctx = getAudioContext();
+        if (!ctx) return;
+        const out = getAudioDestination(ctx);
         const now = ctx.currentTime;
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.type = 'triangle';
-        osc.frequency.setValueAtTime(196.00, now); // G3
-        osc.frequency.linearRampToValueAtTime(98.00, now + 0.3); // G2
-        gain.gain.setValueAtTime(0.12, now);
-        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-        osc.start(now);
-        osc.stop(now + 0.3);
+
+        // ออสซิลเลเตอร์หลัก (F#4 -> B3)
+        const osc1 = ctx.createOscillator();
+        const gain1 = ctx.createGain();
+        osc1.type = 'triangle';
+        osc1.frequency.setValueAtTime(370.0, now);
+        osc1.frequency.linearRampToValueAtTime(246.94, now + 0.28);
+        gain1.gain.setValueAtTime(0.45, now);
+        gain1.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+        osc1.connect(gain1);
+        gain1.connect(out);
+        osc1.start(now);
+        osc1.stop(now + 0.3);
+
+        // ออสซิลเลเตอร์เสริมฮาร์โมนิก (D4 -> F#3) ช่วยให้ได้ยินเสียงตึ๊งชัดเจน
+        const osc2 = ctx.createOscillator();
+        const gain2 = ctx.createGain();
+        osc2.type = 'sawtooth';
+        osc2.frequency.setValueAtTime(293.66, now);
+        osc2.frequency.linearRampToValueAtTime(185.0, now + 0.28);
+        gain2.gain.setValueAtTime(0.22, now);
+        gain2.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+        osc2.connect(gain2);
+        gain2.connect(out);
+        osc2.start(now);
+        osc2.stop(now + 0.3);
     } catch (e) { console.log(e); }
 }
 
+// เสียงปลดล็อกรางวัล / เลเวลอัพ
 function playUnlockSound() {
     try {
+        unlockMobileAudio();
         const ctx = getAudioContext();
+        if (!ctx) return;
+        const out = getAudioDestination(ctx);
         const now = ctx.currentTime;
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
         osc.type = 'sine';
         osc.frequency.setValueAtTime(523.25, now); // C5
-        osc.frequency.setValueAtTime(659.25, now + 0.1); // E5
-        osc.frequency.setValueAtTime(783.99, now + 0.2); // G5
-        osc.frequency.exponentialRampToValueAtTime(1046.50, now + 0.3); // C6
-        gain.gain.setValueAtTime(0.1, now);
-        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+        osc.frequency.setValueAtTime(659.25, now + 0.08); // E5
+        osc.frequency.setValueAtTime(783.99, now + 0.16); // G5
+        osc.frequency.exponentialRampToValueAtTime(1046.50, now + 0.24); // C6
+        gain.gain.setValueAtTime(0.4, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.38);
         osc.connect(gain);
-        gain.connect(ctx.destination);
+        gain.connect(out);
         osc.start(now);
-        osc.stop(now + 0.3);
+        osc.stop(now + 0.38);
     } catch (e) { console.log(e); }
 }
 
+// เสียงคลิกน่ารักๆ สไตล์อนิเมะ
 function playCuteClickSound() {
     try {
+        unlockMobileAudio();
         const ctx = getAudioContext();
+        if (!ctx) return;
+        const out = getAudioDestination(ctx);
         const now = ctx.currentTime;
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
         osc.type = 'sine';
-        osc.frequency.setValueAtTime(1000, now);
-        osc.frequency.exponentialRampToValueAtTime(1400, now + 0.06);
-        gain.gain.setValueAtTime(0.03, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.06);
+        osc.frequency.setValueAtTime(1200, now);
+        osc.frequency.exponentialRampToValueAtTime(1600, now + 0.05);
+        gain.gain.setValueAtTime(0.2, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
         osc.connect(gain);
-        gain.connect(ctx.destination);
+        gain.connect(out);
         osc.start(now);
-        osc.stop(now + 0.06);
+        osc.stop(now + 0.05);
     } catch (e) { console.log(e); }
 }
 
@@ -431,14 +558,130 @@ function onMascotClick() {
 }
 window.onMascotClick = onMascotClick;
 
-function speakJapanese(text) {
-    if ('speechSynthesis' in window) {
+// ===== ระบบเสียงอ่านภาษาญี่ปุ่นระดับสตูดิโอ (Studio Japanese Pronunciation & Mobile Audio Booster) =====
+let ttsAudioElement = null;
+let ttsSourceNode = null;
+let ttsGainNode = null;
+
+function getTtsAudio() {
+    if (!ttsAudioElement) {
+        ttsAudioElement = new Audio();
+        ttsAudioElement.crossOrigin = 'anonymous';
+        ttsAudioElement.preload = 'auto';
+    }
+    return ttsAudioElement;
+}
+
+// ตรวจจับและดึงเสียงภาษาญี่ปุ่นจากระบบ SpeechSynthesis
+let cachedJaVoices = [];
+function updateJaVoices() {
+    if (!('speechSynthesis' in window)) return;
+    try {
+        const voices = window.speechSynthesis.getVoices() || [];
+        cachedJaVoices = voices.filter(v => 
+            (v.lang && (v.lang === 'ja-JP' || v.lang === 'ja_JP' || v.lang.toLowerCase().startsWith('ja'))) ||
+            (v.name && v.name.toLowerCase().includes('japanese'))
+        );
+    } catch (_) {}
+}
+if ('speechSynthesis' in window) {
+    window.speechSynthesis.onvoiceschanged = updateJaVoices;
+    updateJaVoices();
+}
+
+// เล่นเสียงอ่านภาษาญี่ปุ่นผ่าน Audio Stream จาก Google TTS พร้อมขยายความดังเกือบ 2 เท่า (Boost Volume 180%)
+function playTtsAudioStream(text) {
+    return new Promise((resolve, reject) => {
+        try {
+            const cleanText = text.replace(/\[\s*___\s*\]/g, '').trim();
+            if (!cleanText) return resolve(false);
+
+            const audio = getTtsAudio();
+            const ctx = getAudioContext();
+
+            // เชื่อมต่อ Web Audio เพื่อบูสต์ความดังขึ้น 180% ชัดเจนแม้เปิดในที่เสียงดัง
+            if (ctx && !ttsSourceNode) {
+                try {
+                    ttsSourceNode = ctx.createMediaElementSource(audio);
+                    ttsGainNode = ctx.createGain();
+                    ttsGainNode.gain.setValueAtTime(1.8, ctx.currentTime);
+                    ttsSourceNode.connect(ttsGainNode);
+                    ttsGainNode.connect(getAudioDestination(ctx));
+                } catch (_) {
+                    // หากเบราว์เซอร์ติดเงื่อนไข Audio Element Routing ให้ปล่อยเล่นตรง
+                }
+            }
+
+            audio.src = `/api/tts?text=${encodeURIComponent(cleanText)}`;
+            audio.volume = 1.0;
+
+            audio.onended = () => resolve(true);
+            audio.onerror = (err) => reject(err);
+
+            const playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => resolve(true)).catch(reject);
+            } else {
+                resolve(true);
+            }
+        } catch (e) {
+            reject(e);
+        }
+    });
+}
+
+// เล่นเสียงอ่านภาษาญี่ปุ่นผ่าน Native SpeechSynthesis
+function playNativeSpeechSynthesis(text) {
+    if (!('speechSynthesis' in window)) return false;
+    try {
+        const cleanText = text.replace(/\[\s*___\s*\]/g, '').trim();
+        if (!cleanText) return false;
+
         window.speechSynthesis.cancel();
-        if (text) {
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'ja-JP';
-            utterance.rate = 0.85;
-            window.speechSynthesis.speak(utterance);
+        if (window.speechSynthesis.paused) {
+            window.speechSynthesis.resume();
+        }
+
+        const utterance = new SpeechSynthesisUtterance(cleanText);
+        utterance.lang = 'ja-JP';
+        utterance.rate = 0.88;
+        utterance.pitch = 1.05; // โทนเสียงสดใส คมชัด
+        utterance.volume = 1.0; // ดังสุด 100%
+
+        if (cachedJaVoices.length > 0) {
+            const preferred = cachedJaVoices.find(v => 
+                v.name.includes('Google') || v.name.includes('Kyoko') || v.name.includes('Otoya')
+            ) || cachedJaVoices[0];
+            utterance.voice = preferred;
+        }
+
+        window.speechSynthesis.speak(utterance);
+        return true;
+    } catch (_) {
+        return false;
+    }
+}
+
+// ฟังก์ชันหลักสำหรับเปล่งเสียงภาษาญี่ปุ่น (Dual-Engine: บูสต์เสียงดังและแก้ปัญหามือถือไม่ได้ยินเสียง 100%)
+function speakJapanese(text) {
+    if (!text) return;
+    unlockMobileAudio();
+
+    // เช็คอุปกรณ์พกพา / หน้าจอสัมผัส (iOS Safari, Android)
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+        (navigator.maxTouchPoints && navigator.maxTouchPoints > 1);
+    const hasJaVoice = cachedJaVoices.length > 0;
+
+    // สำหรับมือถือ หรือเครื่องที่ไม่ได้ติดตั้งชุดเสียงภาษาญี่ปุ่น ให้เล่น Audio Stream คุณภาพสตูดิโอที่บูสต์เสียงดัง
+    if (isMobileDevice || !hasJaVoice) {
+        playTtsAudioStream(text).catch(() => {
+            playNativeSpeechSynthesis(text);
+        });
+    } else {
+        // สำหรับเดสก์ท็อปที่รองรับ ให้ลอง SpeechSynthesis ก่อน หากไม่ได้ยินให้สลับไป Audio Stream
+        const success = playNativeSpeechSynthesis(text);
+        if (!success) {
+            playTtsAudioStream(text).catch(() => {});
         }
     }
 }
@@ -759,8 +1002,11 @@ function loadQuestion() {
             grammarTypeInput.disabled = false;
         }
 
+        // ซ่อนคำแปลประโยค/คำใบ้ไว้ก่อนเสมอ จนกว่าผู้เล่นจะกดตอบคำถาม
         if (questionHint) {
-            questionHint.innerText = `คำแปล: ${currentData.thaiHint || ''}`;
+            questionHint.classList.add('hidden');
+            questionHint.style.display = 'none';
+            questionHint.innerHTML = '';
         }
     } else {
         // --- โหมดคำศัพท์ปกติ (Vocabulary Mode) ---
@@ -770,8 +1016,11 @@ function loadQuestion() {
 
         mascotTalk(`คำถามข้อที่ ${currentQuestion + 1}! ทายซิว่ารูปนี้คือภาษาญี่ปุ่นคำไหนเอ่ย? ✨`, 'idle');
 
+        // ซ่อนคำแปลประโยค/คำใบ้ไว้ก่อนเสมอ จนกว่าผู้เล่นจะกดตอบคำถาม
         if (questionHint) {
-            questionHint.innerText = `คำใบ้: ${currentData.hint || ''}`;
+            questionHint.classList.add('hidden');
+            questionHint.style.display = 'none';
+            questionHint.innerHTML = '';
         }
         if (questionImg) {
             questionImg.src = getProxyUrl(currentData.img) || 'https://placehold.co/600x600/ffe4e6/be123c?text=🌸+Nihongo';
@@ -838,6 +1087,7 @@ function loadQuestion() {
 
 function selectAnswer(selectedIndex, clickedButton) {
     if (answerSelected) return;
+    unlockMobileAudio();
 
     const activeMode = allQuizModes[currentModeKey];
     const currentData = activeMode.questions[currentQuestion];
@@ -895,6 +1145,18 @@ function selectAnswer(selectedIndex, clickedButton) {
             expBox.classList.remove('hidden');
         }
 
+        // แสดงคำแปลประโยคภาษาไทยหลังตอบคำถามแล้วเท่านั้น
+        if (questionHint) {
+            if (currentData.thaiHint) {
+                questionHint.innerHTML = `<span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-lightbulb text-amber-500 animate-bounce" style="animation-duration: 2s"></i> <span><strong class="text-pink-600">คำแปลประโยค:</strong> <span class="text-rose-900 font-bold">${currentData.thaiHint}</span></span></span>`;
+                questionHint.classList.remove('hidden');
+                questionHint.style.display = 'inline-block';
+            } else {
+                questionHint.classList.add('hidden');
+                questionHint.style.display = 'none';
+            }
+        }
+
         setTimeout(() => {
             speakJapanese(currentData.fullSentence);
         }, 200);
@@ -946,6 +1208,18 @@ function selectAnswer(selectedIndex, clickedButton) {
         mascotTalk(`โถ่... อย่าเพิ่งถอดใจนะค๊า! คำตอบที่ถูกต้องคือ『${displayWord}』จ้า ข้อต่อไปสู้ๆ น้าค๊า! 💪`, 'sad');
         if (allButtons[currentData.correct]) {
             allButtons[currentData.correct].className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-700 font-extrabold shadow-sm";
+        }
+    }
+
+    // แสดงคำใบ้ภาษาไทยหลังตอบคำถามแล้วเท่านั้น
+    if (questionHint) {
+        if (currentData.hint) {
+            questionHint.innerHTML = `<span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-lightbulb text-amber-500 animate-bounce" style="animation-duration: 2s"></i> <span><strong class="text-pink-600">คำใบ้:</strong> <span class="text-rose-900 font-bold">${currentData.hint}</span></span></span>`;
+            questionHint.classList.remove('hidden');
+            questionHint.style.display = 'inline-block';
+        } else {
+            questionHint.classList.add('hidden');
+            questionHint.style.display = 'none';
         }
     }
 

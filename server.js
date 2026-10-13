@@ -6,11 +6,20 @@ const PORT = 3000;
 // ให้ Express สามารถแกะอ่านข้อมูลแบบ JSON จากหน้าบ้านได้
 app.use(express.json());
 
-// บอกให้เซิร์ฟเวอร์รู้ว่าไฟล์หน้าบ้าน (HTML/CSS) จะอยู่ในโฟลเดอร์ชื่อ public
-app.use(express.static(path.join(__dirname, 'public')));
+// บอกให้เซิร์ฟเวอร์รู้ว่าไฟล์หน้าบ้าน (HTML/CSS/JS) จะอยู่ในโฟลเดอร์ชื่อ public พร้อมตั้งค่าไม่ให้ค้างแคช
+app.use(express.static(path.join(__dirname, 'public'), {
+    setHeaders: (res, filePath) => {
+        if (filePath.endsWith('.js') || filePath.endsWith('.html') || filePath.endsWith('.css')) {
+            res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+            res.setHeader('Pragma', 'no-cache');
+            res.setHeader('Expires', '0');
+        }
+    }
+}));
 
 // เมื่อเปิดหน้าแรก (/) จะทำการดึงไฟล์ index.html ขึ้นมาส่งให้ผู้ใช้งาน
 app.get('/', (req, res) => {
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
@@ -54,6 +63,33 @@ app.get('/proxy-image', async (req, res) => {
         res.send(buffer);
     } catch (error) {
         console.error('Proxy image error:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+// Proxy เส้นทางเสียงอ่านภาษาญี่ปุ่น (Google TTS) ให้เล่นได้ชัดเจนและดังในมือถือทุกรุ่น
+app.get('/api/tts', async (req, res) => {
+    const text = req.query.text;
+    if (!text) {
+        return res.status(400).send('Missing text parameter');
+    }
+    try {
+        const ttsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&client=tw-ob&q=${encodeURIComponent(text)}`;
+        const response = await fetch(ttsUrl, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Referer': 'https://translate.google.com/'
+            }
+        });
+        if (!response.ok) {
+            return res.status(response.status).send(`TTS upstream failed: ${response.statusText}`);
+        }
+        res.setHeader('Content-Type', 'audio/mpeg');
+        res.setHeader('Cache-Control', 'public, max-age=86400, immutable');
+        const arrayBuffer = await response.arrayBuffer();
+        res.send(Buffer.from(arrayBuffer));
+    } catch (error) {
+        console.error('Proxy TTS error:', error);
         res.status(500).send('Internal Server Error');
     }
 });
