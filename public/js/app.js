@@ -23,6 +23,16 @@ let comboStreak = 0;
 let playerEXP = 0;
 let bondLevel = 1;
 
+// ===== โหมดการเล่นเกม (Play Styles) =====
+// 'choice' (ช้อยส์ 4 ตัวเลือก) | 'timer' (โหมดจับเวลา) | 'writing' (โหมดเขียนฮิราคานะ) | 'speaking' (โหมดพูดออกเสียง)
+let currentPlayStyle = 'choice';
+let timerDuration = 15; // วินาทีต่อข้อ
+let timerInterval = null;
+let timeLeft = 15;
+let romajiAutoConvertEnabled = true;
+let speechRecognitionInstance = null;
+let isVoiceListening = false;
+
 // ดึง Elements ที่เกี่ยวข้อง
 const companionSidebar = document.getElementById('companion-sidebar');
 const gameTerminalCol = document.getElementById('game-terminal-col');
@@ -61,7 +71,7 @@ function getAudioContext() {
         }
     }
     if (audioCtx && audioCtx.state === 'suspended') {
-        audioCtx.resume().catch(() => {});
+        audioCtx.resume().catch(() => { });
     }
     return audioCtx;
 }
@@ -104,7 +114,7 @@ function unlockMobileAudio() {
             source.connect(ctx.destination);
             source.start(0);
         }
-    } catch (_) {}
+    } catch (_) { }
 
     try {
         if ('speechSynthesis' in window) {
@@ -119,7 +129,7 @@ function unlockMobileAudio() {
                 window.speechSynthesis.resume();
             }
         }
-    } catch (_) {}
+    } catch (_) { }
 
     try {
         if (typeof getTtsAudio === 'function') {
@@ -128,7 +138,7 @@ function unlockMobileAudio() {
                 ttsAudio.load();
             }
         }
-    } catch (_) {}
+    } catch (_) { }
 
     isAudioUnlocked = true;
 }
@@ -255,6 +265,27 @@ function playCuteClickSound() {
         osc.start(now);
         osc.stop(now + 0.05);
     } catch (e) { console.log(e); }
+}
+
+// เสียงติ๊กเวลานับถอยหลังในโหมดจับเวลา (Timer Tick Sound)
+function playTimerTickSound(isUrgent = false) {
+    try {
+        unlockMobileAudio();
+        const ctx = getAudioContext();
+        if (!ctx) return;
+        const out = getAudioDestination(ctx);
+        const now = ctx.currentTime;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(isUrgent ? 1100 : 800, now);
+        gain.gain.setValueAtTime(isUrgent ? 0.22 : 0.1, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+        osc.connect(gain);
+        gain.connect(out);
+        osc.start(now);
+        osc.stop(now + 0.05);
+    } catch (_) { }
 }
 
 // เอฟเฟกต์ดอกซากุระร่วงหล่นบนฉากหลัง
@@ -578,11 +609,11 @@ function updateJaVoices() {
     if (!('speechSynthesis' in window)) return;
     try {
         const voices = window.speechSynthesis.getVoices() || [];
-        cachedJaVoices = voices.filter(v => 
+        cachedJaVoices = voices.filter(v =>
             (v.lang && (v.lang === 'ja-JP' || v.lang === 'ja_JP' || v.lang.toLowerCase().startsWith('ja'))) ||
             (v.name && v.name.toLowerCase().includes('japanese'))
         );
-    } catch (_) {}
+    } catch (_) { }
 }
 if ('speechSynthesis' in window) {
     window.speechSynthesis.onvoiceschanged = updateJaVoices;
@@ -649,7 +680,7 @@ function playNativeSpeechSynthesis(text) {
         utterance.volume = 1.0; // ดังสุด 100%
 
         if (cachedJaVoices.length > 0) {
-            const preferred = cachedJaVoices.find(v => 
+            const preferred = cachedJaVoices.find(v =>
                 v.name.includes('Google') || v.name.includes('Kyoko') || v.name.includes('Otoya')
             ) || cachedJaVoices[0];
             utterance.voice = preferred;
@@ -681,7 +712,7 @@ function speakJapanese(text) {
         // สำหรับเดสก์ท็อปที่รองรับ ให้ลอง SpeechSynthesis ก่อน หากไม่ได้ยินให้สลับไป Audio Stream
         const success = playNativeSpeechSynthesis(text);
         if (!success) {
-            playTtsAudioStream(text).catch(() => {});
+            playTtsAudioStream(text).catch(() => { });
         }
     }
 }
@@ -892,6 +923,731 @@ function renderModesList() {
     }
 }
 
+// =========================================================================
+// 🎮 ระบบจัดการโหมดการเล่น (Play Styles: Standard, Timer, Writing, Voice)
+// =========================================================================
+
+// ฟังก์ชันสลับรูปแบบการเล่น (Play Style)
+function setPlayStyle(style) {
+    currentPlayStyle = style;
+    playCuteClickSound();
+
+    const choiceBtn = document.getElementById('playstyle-choice-btn');
+    const timerBtn = document.getElementById('playstyle-timer-btn');
+    const writingBtn = document.getElementById('playstyle-writing-btn');
+    const speakingBtn = document.getElementById('playstyle-speaking-btn');
+    const descEl = document.getElementById('active-playstyle-desc');
+    const timerBar = document.getElementById('timer-settings-bar');
+
+    const activeCls = "py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r from-pink-400 to-rose-400 text-white shadow-pink-300/30";
+    const inactiveCls = "py-2.5 px-3 rounded-xl font-bold text-xs transition-all duration-200 flex items-center justify-center gap-1.5 text-rose-700 hover:bg-pink-50";
+
+    if (choiceBtn) choiceBtn.className = style === 'choice' ? activeCls : inactiveCls;
+    if (timerBtn) timerBtn.className = style === 'timer' ? activeCls : inactiveCls;
+    if (writingBtn) writingBtn.className = style === 'writing' ? activeCls : inactiveCls;
+    if (speakingBtn) speakingBtn.className = style === 'speaking' ? activeCls : inactiveCls;
+
+    if (timerBar) {
+        if (style === 'timer') {
+            timerBar.classList.remove('hidden');
+        } else {
+            timerBar.classList.add('hidden');
+        }
+    }
+
+    if (descEl) {
+        if (style === 'timer') {
+            descEl.innerText = `⏱️ โหมดจับเวลา (${timerDuration} วินาทีต่อข้อ)`;
+            mascotTalk(`เลือกโหมดจับเวลาแล้วค๊า! ⏱️🔥 ตอบให้ทันก่อนหมดเวลา ${timerDuration} วินาที รับแต้มความเร็วพิเศษนะคะ!`, 'happy');
+        } else if (style === 'writing') {
+            descEl.innerText = "✍️ โหมดเขียนคำศัพท์ฮิราคานะ";
+            mascotTalk("เลือกโหมดเขียนคำศัพท์แล้วค๊า! ✍️ ดูคำศัพท์แต่ละบทแล้วเขียนคำอ่านเป็นตัวฮิราคานะได้เลยนะคะ!", 'happy');
+        } else if (style === 'speaking') {
+            descEl.innerText = "🎙️ โหมดพูดออกเสียง (ไม่มีช้อยส์)";
+            mascotTalk("เลือกโหมดพูดออกเสียงแล้วค๊า! 🎙️ ดูคำศัพท์แล้วกดปุ่มไมค์พูดภาษาญี่ปุ่นให้ถูกต้องเพื่อผ่านไปข้อต่อไปค่ะ!", 'happy');
+        } else {
+            descEl.innerText = "🌸 ช้อยส์ 4 ตัวเลือก (มาตรฐาน)";
+            mascotTalk("เลือกโหมดช้อยส์ปกติแล้วค๊า! 🌸 มาสนุกกับการทายคำศัพท์กันเลยนะคะ!", 'happy');
+        }
+    }
+}
+window.setPlayStyle = setPlayStyle;
+
+// ตั้งค่าเวลานับถอยหลังต่อข้อในโหมดจับเวลา (10, 15, 20, 30 วินาที)
+function setTimerDuration(seconds) {
+    timerDuration = Math.max(5, Math.min(60, parseInt(seconds, 10) || 15));
+    [10, 15, 20, 30].forEach(sec => {
+        const btn = document.getElementById(`timer-opt-${sec}`);
+        if (btn) {
+            if (sec === timerDuration) {
+                btn.className = "px-2.5 py-1 rounded-lg text-[10px] font-black border transition bg-amber-400 text-white border-amber-400 shadow-sm";
+            } else {
+                btn.className = "px-2.5 py-1 rounded-lg text-[10px] font-bold border transition bg-white text-slate-700 border-slate-200 hover:bg-pink-50";
+            }
+        }
+    });
+    const desc = document.getElementById('active-playstyle-desc');
+    if (desc && currentPlayStyle === 'timer') {
+        desc.innerText = `⏱️ โหมดจับเวลา (${timerDuration} วินาทีต่อข้อ)`;
+    }
+    playCuteClickSound();
+}
+window.setTimerDuration = setTimerDuration;
+
+// ฟังก์ชันเริ่มตัวนับถอยหลัง
+function startQuestionTimer() {
+    stopQuestionTimer();
+    const timerContainer = document.getElementById('quiz-timer-container');
+    const timerText = document.getElementById('timer-countdown-text');
+    const timerBar = document.getElementById('timer-progress-bar');
+    const timerClockIcon = document.getElementById('timer-clock-icon');
+
+    if (!timerContainer || !timerText || !timerBar) return;
+    timerContainer.classList.remove('hidden');
+
+    timeLeft = timerDuration;
+    timerText.innerText = `${timeLeft.toFixed(1)}s`;
+    timerText.className = "text-base font-black font-kawaii text-rose-600 tracking-wider";
+    timerBar.style.width = '100%';
+    timerBar.className = "h-full bg-gradient-to-r from-emerald-400 via-amber-400 to-rose-500 rounded-full transition-all duration-100 ease-linear w-full";
+    if (timerClockIcon) timerClockIcon.className = "fa-solid fa-stopwatch text-rose-500 animate-pulse";
+
+    let lastTickWholeSec = Math.ceil(timeLeft);
+
+    timerInterval = setInterval(() => {
+        if (answerSelected) {
+            stopQuestionTimer();
+            return;
+        }
+
+        timeLeft -= 0.1;
+
+        if (timeLeft <= 0) {
+            timeLeft = 0;
+            timerText.innerText = "0.0s";
+            timerBar.style.width = "0%";
+            stopQuestionTimer();
+            onQuestionTimeUp();
+            return;
+        }
+
+        timerText.innerText = `${timeLeft.toFixed(1)}s`;
+        const percent = Math.max(0, Math.min(100, (timeLeft / timerDuration) * 100));
+        timerBar.style.width = `${percent}%`;
+
+        // สัญญาณเตือนเมื่อเวลาใกล้หมด (<= 4.0 วินาที)
+        const currentWholeSec = Math.ceil(timeLeft);
+        if (timeLeft <= 4.0) {
+            timerText.classList.add('timer-urgent-text');
+            timerBar.classList.add('timer-bar-urgent');
+            if (currentWholeSec !== lastTickWholeSec) {
+                lastTickWholeSec = currentWholeSec;
+                playTimerTickSound(true);
+            }
+        } else {
+            timerText.classList.remove('timer-urgent-text');
+            timerBar.classList.remove('timer-bar-urgent');
+            if (currentWholeSec !== lastTickWholeSec && currentWholeSec <= 8) {
+                lastTickWholeSec = currentWholeSec;
+                playTimerTickSound(false);
+            }
+        }
+    }, 100);
+}
+
+// หยุดตัวนับถอยหลัง
+function stopQuestionTimer() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+}
+
+// เมื่อหมดเวลาในโหมดจับเวลา (Time's Up)
+function onQuestionTimeUp() {
+    if (answerSelected) return;
+    answerSelected = true;
+    playIncorrectSound();
+
+    const activeMode = allQuizModes[currentModeKey];
+    if (!activeMode || !activeMode.questions) return;
+    const currentData = activeMode.questions[currentQuestion];
+    const allButtons = choicesContainer ? choicesContainer.querySelectorAll('button') : [];
+
+    // ไฮไลต์ข้อที่ถูกต้องด้วยสีเขียว
+    if (allButtons[currentData.correct]) {
+        allButtons[currentData.correct].className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-700 font-extrabold shadow-sm";
+    }
+
+    if (feedbackText) {
+        feedbackText.innerText = "⏰ หมดเวลาแล้วค๊าาา! (Time's Up)";
+        feedbackText.className = "text-rose-500 text-sm font-black animate-pulse";
+    }
+
+    comboStreak = 0;
+    updateComboUI();
+
+    const answerReading = currentData.japaneseText || currentData.character || (currentData.choices && currentData.choices[currentData.correct]);
+    mascotTalk(`หมดเวลาแล้วค๊าาา! ⏰ คำตอบที่ถูกต้องคือ『${answerReading || 'ข้อที่ถูกต้อง'}』ค่ะ เร่งสปีดในข้อถัดไปนะคะ! 💪`, 'sad');
+
+    // แสดงคำใบ้ภาษาไทย
+    if (questionHint) {
+        if (currentData.hint) {
+            questionHint.innerHTML = `<span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-lightbulb text-amber-500 animate-bounce" style="animation-duration: 2s"></i> <span><strong class="text-pink-600">คำใบ้:</strong> <span class="text-rose-900 font-bold">${currentData.hint}</span></span></span>`;
+            questionHint.classList.remove('hidden');
+            questionHint.style.display = 'inline-block';
+        }
+    }
+
+    if (answerReading) {
+        setTimeout(() => speakJapanese(answerReading), 200);
+    }
+    if (pronounceBtn) pronounceBtn.classList.remove('hidden');
+    if (nextBtn) {
+        nextBtn.classList.remove('hidden');
+        nextBtn.classList.add('flex');
+    }
+}
+
+// =========================================================================
+// ✍️ ตารางและฟังก์ชันแปลง Romaji เป็น Hiragana อัตโนมัติ (Romaji to Hiragana)
+// =========================================================================
+const romajiHiraganaMap = {
+    'nna': 'んな', 'nni': 'んに', 'nnu': 'んぬ', 'nne': 'んね', 'nno': 'んของ',
+    'kya': 'きゃ', 'kyu': 'きゅ', 'kyo': 'きょ',
+    'sha': 'しゃ', 'shu': 'しゅ', 'sho': 'しょ',
+    'cha': 'ちゃ', 'chu': 'ちゅ', 'cho': 'ちょ',
+    'nya': 'にゃ', 'nyu': 'にゅ', 'nyo': 'にょ',
+    'hya': 'ひゃ', 'hyu': 'ひゅ', 'hyo': 'ひょ',
+    'mya': 'みゃ', 'myu': 'みゅ', 'myo': 'みょ',
+    'rya': 'りゃ', 'ryu': 'りゅ', 'ryo': 'りょ',
+    'gya': 'ぎゃ', 'gyu': 'ぎゅ', 'gyo': 'ぎょ',
+    'ja': 'じゃ', 'ju': 'じゅ', 'jo': 'じょ',
+    'bya': 'びゃ', 'byu': 'びゅ', 'byo': 'びょ',
+    'pya': 'ぴゃ', 'pyu': 'ぴゅ', 'pyo': 'ぴょ',
+    'shi': 'し', 'chi': 'ち', 'tsu': 'つ', 'dzu': 'づ', 'dji': 'ぢ',
+    'ka': 'か', 'ki': 'き', 'ku': 'く', 'ke': 'け', 'ko': 'こ',
+    'sa': 'さ', 'si': 'し', 'su': 'す', 'se': 'せ', 'so': 'そ',
+    'ta': 'た', 'ti': 'ち', 'tu': 'つ', 'te': 'て', 'to': 'と',
+    'na': 'な', 'ni': 'に', 'nu': 'ぬ', 'ne': 'ね', 'no': 'の',
+    'ha': 'は', 'hi': 'ひ', 'fu': 'ふ', 'hu': 'ふ', 'he': 'へ', 'ho': 'ほ',
+    'ma': 'ま', 'mi': 'み', 'mu': 'む', 'me': 'め', 'mo': 'も',
+    'ya': 'や', 'yu': 'ゆ', 'yo': 'よ',
+    'ra': 'ら', 'ri': 'り', 'ru': 'る', 're': 'れ', 'ro': 'ろ',
+    'wa': 'わ', 'wo': 'を',
+    'ga': 'が', 'gi': 'ぎ', 'gu': 'ぐ', 'ge': 'げ', 'go': 'ご',
+    'za': 'ざ', 'zi': 'じ', 'zu': 'ず', 'ze': 'ぜ', 'zo': 'ぞ',
+    'da': 'だ', 'di': 'ぢ', 'du': 'づ', 'de': 'で', 'do': 'ど',
+    'ba': 'ば', 'bi': 'び', 'bu': 'ぶ', 'be': 'べ', 'bo': 'ぼ',
+    'pa': 'ぱ', 'pi': 'ぴ', 'pu': 'ぷ', 'pe': 'ぺ', 'po': 'ぽ',
+    'a': 'あ', 'i': 'い', 'u': 'う', 'e': 'え', 'o': 'お',
+    'nn': 'ん', 'n\'': 'ん', '-': 'ー',
+    'la': 'ぁ', 'li': 'ぃ', 'lu': 'ぅ', 'le': 'ぇ', 'lo': 'ぉ',
+    'xa': 'ぁ', 'xi': 'ぃ', 'xu': 'ぅ', 'xe': 'ぇ', 'xo': 'ぉ',
+    'xtsu': 'っ', 'ltsu': 'っ', 'xtu': 'っ'
+};
+
+function romajiToHiragana(text) {
+    if (!text) return '';
+    let result = '';
+    let i = 0;
+    const lower = text.toLowerCase();
+    while (i < lower.length) {
+        let chunk3 = lower.substr(i, 3);
+        if (romajiHiraganaMap[chunk3]) {
+            result += romajiHiraganaMap[chunk3];
+            i += 3;
+            continue;
+        }
+        let chunk2 = lower.substr(i, 2);
+        if (romajiHiraganaMap[chunk2]) {
+            result += romajiHiraganaMap[chunk2];
+            i += 2;
+            continue;
+        }
+        // ตรวจสอบพยัญชนะซ้ำ (促音 - sokuon) เช่น kk -> っk
+        if (i + 1 < lower.length && lower[i] === lower[i + 1] && /[bcdfghjklmpqrstvwxyz]/.test(lower[i]) && lower[i] !== 'n') {
+            result += 'っ';
+            i++;
+            continue;
+        }
+        // ตรวจสอบ n เดี่ยว
+        if (lower[i] === 'n') {
+            const next = lower[i + 1];
+            if (!next || !/[aiueoy]/.test(next)) {
+                result += 'ん';
+                i++;
+                continue;
+            }
+        }
+        let chunk1 = lower[i];
+        if (romajiHiraganaMap[chunk1]) {
+            result += romajiHiraganaMap[chunk1];
+            i++;
+            continue;
+        }
+        result += text[i];
+        i++;
+    }
+    return result;
+}
+
+// ฟังก์ชันปรับมาตรฐานข้อความภาษาญี่ปุ่นสำหรับตรวจคำตอบ
+function normalizeJp(str) {
+    if (!str) return '';
+    return str
+        .trim()
+        .toLowerCase()
+        .replace(/[\s\u3000。、！？!?,.\-_~～]/g, '')
+        // แปลงคาตาคานะเป็นฮิราคานะเพื่อความยืดหยุ่นในการตรวจคำตอบ
+        .replace(/[\u30A1-\u30F6]/g, ch => String.fromCharCode(ch.charCodeAt(0) - 0x60));
+}
+
+// ตรวจคำตอบในโหมดเขียนฮิราคานะ (Writing Mode)
+function submitWritingAnswer() {
+    if (answerSelected) return;
+    const inputEl = document.getElementById('writing-input');
+    if (!inputEl) return;
+    const rawVal = inputEl.value.trim();
+    if (!rawVal) {
+        showCustomMessage("กรุณาพิมพ์คำอ่านฮิราคานะก่อนกดตรวจคำตอบค่ะ 🌸", "ยังไม่ได้กรอกคำตอบ");
+        return;
+    }
+
+    const activeMode = allQuizModes[currentModeKey];
+    if (!activeMode || !activeMode.questions) return;
+    const currentData = activeMode.questions[currentQuestion];
+    answerSelected = true;
+    inputEl.disabled = true;
+
+    const targetReading = currentData.japaneseText || currentData.character || (currentData.choices && currentData.choices[currentData.correct]) || '';
+    const userNorm = normalizeJp(rawVal);
+    const targetNorm = normalizeJp(targetReading);
+
+    // ตรวจเทียบกับตัวเลือกหรือคำอ่าน
+    const altTargetNorm = normalizeJp(currentData.choices ? currentData.choices[currentData.correct] : '');
+    const isCorrect = (userNorm === targetNorm) || (altTargetNorm && userNorm === altTargetNorm);
+
+    if (isCorrect) {
+        playCorrectSound();
+        inputEl.className = "w-full text-center py-3.5 px-10 rounded-2xl border-2 border-emerald-500 bg-emerald-50 text-emerald-800 font-black text-xl sm:text-2xl shadow-[0_0_15px_rgba(52,211,153,0.3)] notranslate font-kawaii";
+        if (feedbackText) {
+            feedbackText.innerText = `🌸 正解! (เขียนฮิราคานะถูกต้องยอดเยี่ยม: ${targetReading})`;
+            feedbackText.className = "text-emerald-500 text-sm font-black animate-pulse";
+        }
+        score++;
+        if (scoreDisplay) scoreDisplay.innerText = score;
+        comboStreak++;
+        playerEXP += 25 + (comboStreak * 5);
+        calculateRPGBond();
+        updateComboUI();
+        mascotTalk(`เก่งมากๆ เลยค๊าาา! เขียนว่า『${targetReading}』ถูกต้องเป๊ะเลย! คอมโบสะสม x${comboStreak} แล้วน้า! 🎉`, 'happy');
+    } else {
+        playIncorrectSound();
+        inputEl.className = "w-full text-center py-3.5 px-10 rounded-2xl border-2 border-rose-500 bg-rose-50 text-rose-700 font-black text-xl sm:text-2xl shadow-[0_0_15px_rgba(244,63,94,0.3)] notranslate font-kawaii shake-anime";
+        if (feedbackText) {
+            feedbackText.innerText = `❌ ยังไม่ถูกต้องน้าค๊า (คำตอบคือ: ${targetReading})`;
+            feedbackText.className = "text-rose-500 text-sm font-black";
+        }
+        comboStreak = 0;
+        updateComboUI();
+        mascotTalk(`อย่าเพิ่งท้อนะค๊า! คำอ่านที่ถูกต้องคือ『${targetReading}』ค่ะ ข้อต่อไปสู้ๆ นะคะ! 💪`, 'sad');
+    }
+
+    // แสดงคำใบ้ภาษาไทย
+    if (questionHint) {
+        if (currentData.hint) {
+            questionHint.innerHTML = `<span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-lightbulb text-amber-500 animate-bounce" style="animation-duration: 2s"></i> <span><strong class="text-pink-600">คำใบ้:</strong> <span class="text-rose-900 font-bold">${currentData.hint}</span></span></span>`;
+            questionHint.classList.remove('hidden');
+            questionHint.style.display = 'inline-block';
+        }
+    }
+
+    setTimeout(() => {
+        speakJapanese(targetReading);
+    }, 250);
+
+    if (pronounceBtn) pronounceBtn.classList.remove('hidden');
+    if (nextBtn) {
+        nextBtn.classList.remove('hidden');
+        nextBtn.classList.add('flex');
+    }
+}
+window.submitWritingAnswer = submitWritingAnswer;
+
+// แสดงเฉลยในโหมดเขียน
+function revealWritingAnswer() {
+    if (answerSelected) return;
+    const inputEl = document.getElementById('writing-input');
+    const activeMode = allQuizModes[currentModeKey];
+    if (!activeMode || !activeMode.questions) return;
+    const currentData = activeMode.questions[currentQuestion];
+    const targetReading = currentData.japaneseText || currentData.character || (currentData.choices && currentData.choices[currentData.correct]) || '';
+
+    if (inputEl) {
+        inputEl.value = targetReading;
+        inputEl.className = "w-full text-center py-3.5 px-10 rounded-2xl border-2 border-amber-400 bg-amber-50 text-amber-800 font-black text-xl sm:text-2xl shadow-sm notranslate font-kawaii";
+        inputEl.disabled = true;
+    }
+    answerSelected = true;
+    comboStreak = 0;
+    updateComboUI();
+
+    if (feedbackText) {
+        feedbackText.innerText = `💡 เฉลยคำอ่านฮิราคานะ: ${targetReading}`;
+        feedbackText.className = "text-amber-600 text-sm font-black";
+    }
+    mascotTalk(`คำอ่านที่ถูกต้องคือ『${targetReading}』ค่ะ ลองสังเกตและจำไว้สู้ใหม่ข้อถัดไปน้า! 🌸`, 'idle');
+
+    // แสดงคำใบ้ภาษาไทยหลังเฉลย
+    if (questionHint) {
+        const hintText = currentData.hint || currentData.thaiHint;
+        if (hintText) {
+            questionHint.innerHTML = `<span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-lightbulb text-amber-500 animate-bounce" style="animation-duration: 2s"></i> <span><strong class="text-pink-600">คำใบ้:</strong> <span class="text-rose-900 font-bold">${hintText}</span></span></span>`;
+            questionHint.classList.remove('hidden');
+            questionHint.style.display = 'inline-block';
+        }
+    }
+
+    setTimeout(() => {
+        speakJapanese(targetReading);
+    }, 250);
+
+    if (pronounceBtn) pronounceBtn.classList.remove('hidden');
+    if (nextBtn) {
+        nextBtn.classList.remove('hidden');
+        nextBtn.classList.add('flex');
+    }
+}
+window.revealWritingAnswer = revealWritingAnswer;
+
+// ล้างข้อความในช่องเขียนคำศัพท์
+function clearWritingInput() {
+    const inputEl = document.getElementById('writing-input');
+    if (!inputEl || inputEl.disabled) return;
+    inputEl.value = '';
+    inputEl.focus();
+}
+window.clearWritingInput = clearWritingInput;
+
+// ใส่ตัวอักษรพิเศษฮิราคานะ
+function insertKanaChar(char) {
+    const inputEl = document.getElementById('writing-input');
+    if (!inputEl || inputEl.disabled) return;
+    const start = inputEl.selectionStart || inputEl.value.length;
+    const end = inputEl.selectionEnd || inputEl.value.length;
+    const text = inputEl.value;
+    inputEl.value = text.substring(0, start) + char + text.substring(end);
+    inputEl.selectionStart = inputEl.selectionEnd = start + char.length;
+    inputEl.focus();
+}
+window.insertKanaChar = insertKanaChar;
+
+// สลับเปิด/ปิดการแปลง Romaji เป็น Hiragana อัตโนมัติ
+function toggleRomajiAutoConvert() {
+    romajiAutoConvertEnabled = !romajiAutoConvertEnabled;
+    const statusEl = document.getElementById('romaji-status-text');
+    if (statusEl) {
+        statusEl.innerText = romajiAutoConvertEnabled ? 'เปิด' : 'ปิด';
+        statusEl.className = romajiAutoConvertEnabled ? 'text-emerald-600 font-black' : 'text-slate-400 font-black';
+    }
+    playCuteClickSound();
+}
+window.toggleRomajiAutoConvert = toggleRomajiAutoConvert;
+
+// =========================================================================
+// 🎙️ ระบบพูดออกเสียงและตรวจจับเสียงภาษาญี่ปุ่น (Voice Recognition)
+// =========================================================================
+
+// ตรวจสอบว่าคำที่พูดตรงกับเป้าหมายหรือไม่
+function isSpeechMatch(transcript, question) {
+    const normTrans = normalizeJp(transcript);
+    if (!normTrans) return false;
+
+    const targets = [
+        question.japaneseText,
+        question.kanji,
+        question.character,
+        question.choices ? question.choices[question.correct] : null
+    ].filter(Boolean);
+
+    for (const t of targets) {
+        const normTarget = normalizeJp(t);
+        if (!normTarget) continue;
+        if (normTrans === normTarget) return true;
+        // กรณีมีส่วนประกอบตรงกัน
+        if (normTrans.length >= 2 && normTarget.length >= 2) {
+            if (normTrans.includes(normTarget) || normTarget.includes(normTrans)) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+// เริ่มต้นใช้งาน SpeechRecognition
+function initSpeechRecognition() {
+    if (speechRecognitionInstance) return speechRecognitionInstance;
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+        return null;
+    }
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'ja-JP';
+    recognition.continuous = false;
+    recognition.interimResults = true;
+    recognition.maxAlternatives = 3;
+
+    recognition.onstart = () => {
+        isVoiceListening = true;
+        updateVoiceMicUI(true);
+        const transcriptEl = document.getElementById('voice-transcript-text');
+        if (transcriptEl) {
+            transcriptEl.innerHTML = `<span class="text-pink-600 font-black animate-pulse flex items-center justify-center gap-1.5"><i class="fa-solid fa-microphone-lines text-pink-500"></i> กำลังฟังเสียงของคุณ... กรุณาออกเสียงเป็นภาษาญี่ปุ่นค่ะ 🌸</span>`;
+        }
+        mascotTalk("กำลังฟังเสียงอยู่ค๊าาา ออกเสียงภาษาญี่ปุ่นได้เลยน้า! ✨", 'happy');
+    };
+
+    recognition.onresult = (event) => {
+        let interimTranscript = '';
+        let finalTranscript = '';
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+            const transcript = event.results[i][0].transcript;
+            if (event.results[i].isFinal) {
+                finalTranscript += transcript;
+            } else {
+                interimTranscript += transcript;
+            }
+        }
+        const currentSpoken = (finalTranscript || interimTranscript).trim();
+        const transcriptEl = document.getElementById('voice-transcript-text');
+        if (transcriptEl && currentSpoken) {
+            transcriptEl.innerHTML = `<span class="text-rose-900 font-bold">ได้ยินว่า: 「<strong class="text-pink-600 font-black">${currentSpoken}</strong>」</span>`;
+        }
+        if (finalTranscript) {
+            evaluateVoiceSpokenAnswer(finalTranscript.trim());
+        }
+    };
+
+    recognition.onerror = (event) => {
+        isVoiceListening = false;
+        updateVoiceMicUI(false);
+        const transcriptEl = document.getElementById('voice-transcript-text');
+        if (event.error === 'no-speech') {
+            if (transcriptEl) {
+                transcriptEl.innerHTML = `<span class="text-slate-500 font-bold italic"><i class="fa-solid fa-microphone-slash mr-1 text-slate-400"></i> ยังไม่ได้ยินเสียง กรุณากดปุ่มพูดแล้วลองใหม่อีกครั้งค่ะ</span>`;
+            }
+            mascotTalk("ยังไม่ได้ยินเสียงเลยค๊าบ กดปุ่มไมค์แล้วลองพูดใหม่อีกครั้งน้า! 🌸", 'idle');
+        } else if (event.error === 'not-allowed' || event.error === 'service-not-allowed') {
+            if (transcriptEl) {
+                transcriptEl.innerHTML = `<span class="text-rose-600 font-black"><i class="fa-solid fa-triangle-exclamation mr-1"></i> กรุณาอนุญาตให้เบราว์เซอร์เข้าถึงไมโครโฟน (กดไอคอนแม่กุญแจ 🔒 ด้านซ้าย URL)</span>`;
+            }
+            showCustomMessage(
+                "เบราว์เซอร์ไม่ได้รับอนุญาตให้ใช้ไมโครโฟนค่ะ 🎙️\n\nวิธีเปิดใช้งาน:\n1. กดที่ไอคอนแม่กุญแจ 🔒 ทางซ้ายของ URL บนแถบที่อยู่เว็บ\n2. เลือกการตั้งค่าไมโครโฟนเป็น 'อนุญาต (Allow)'\n3. รีเฟรชหน้าเว็บแล้วเริ่มพูดได้ทันทีค่ะ!",
+                "เปิดสิทธิ์การใช้งานไมโครโฟน"
+            );
+        } else {
+            if (transcriptEl) {
+                transcriptEl.innerHTML = `<span class="text-rose-500 font-bold">เกิดข้อผิดพลาดในการรับเสียง (${event.error}) กดพูดอีกครั้ง</span>`;
+            }
+        }
+    };
+
+    recognition.onend = () => {
+        isVoiceListening = false;
+        updateVoiceMicUI(false);
+    };
+
+    speechRecognitionInstance = recognition;
+    return speechRecognitionInstance;
+}
+
+// อัปเดตหน้าตาปุ่มไมค์
+function updateVoiceMicUI(listening) {
+    const micBtn = document.getElementById('voice-speak-btn');
+    const micIcon = document.getElementById('voice-speak-icon');
+    const micStatus = document.getElementById('voice-speak-status');
+    const ripple1 = document.getElementById('voice-ripple-1');
+    const ripple2 = document.getElementById('voice-ripple-2');
+
+    if (!micBtn) return;
+    if (listening) {
+        micBtn.classList.add('mic-recording-active');
+        if (micIcon) micIcon.className = "fa-solid fa-microphone-lines text-3xl sm:text-4xl animate-pulse";
+        if (micStatus) micStatus.innerText = "กำลังฟัง... 🌊";
+        if (ripple1) ripple1.classList.remove('hidden');
+        if (ripple2) ripple2.classList.remove('hidden');
+    } else {
+        micBtn.classList.remove('mic-recording-active');
+        if (micIcon) micIcon.className = "fa-solid fa-microphone text-3xl sm:text-4xl group-hover:scale-110 transition-transform";
+        if (micStatus) micStatus.innerText = "กดเพื่อพูด";
+        if (ripple1) ripple1.classList.add('hidden');
+        if (ripple2) ripple2.classList.add('hidden');
+    }
+}
+
+// รีเซ็ตปุ่มไมค์กลับเป็นสถานะเริ่มต้น
+function resetVoiceSpeakButton() {
+    isVoiceListening = false;
+    updateVoiceMicUI(false);
+    const transcriptEl = document.getElementById('voice-transcript-text');
+    if (transcriptEl) {
+        transcriptEl.innerHTML = `<span class="text-xs text-slate-500 font-bold italic"><i class="fa-solid fa-ear-listen mr-1 text-pink-400"></i> กดปุ่มไมค์แล้วพูดได้เลยค๊าบ...</span>`;
+    }
+}
+
+// กดปุ่มสลับการฟังเสียงไมค์
+function toggleVoiceSpeechRecognition() {
+    unlockMobileAudio();
+    const recognition = initSpeechRecognition();
+    if (!recognition) {
+        showCustomMessage(
+            "ขออภัยนะคะ เบราว์เซอร์ของคุณยังไม่รองรับ Web Speech API สำหรับตรวจจับเสียงค่ะ 🎙️\n\n💡 แนะนำให้เปิดใช้งานผ่าน Google Chrome หรือ Microsoft Edge เพื่อสัมผัสฟีเจอร์พูดตอบคำถามได้อย่างสมบูรณ์แบบที่สุดค่ะ!",
+            "ไม่รองรับระบบตรวจจับเสียง"
+        );
+        return;
+    }
+    if (answerSelected) return;
+
+    if (isVoiceListening) {
+        try { recognition.stop(); } catch (_) { }
+    } else {
+        try {
+            recognition.start();
+        } catch (e) {
+            try {
+                recognition.stop();
+                setTimeout(() => recognition.start(), 150);
+            } catch (_) { }
+        }
+    }
+}
+window.toggleVoiceSpeechRecognition = toggleVoiceSpeechRecognition;
+
+// หยุดการรับเสียงไมค์
+function stopVoiceRecognition() {
+    if (speechRecognitionInstance && isVoiceListening) {
+        try { speechRecognitionInstance.stop(); } catch (_) { }
+    }
+    isVoiceListening = false;
+    updateVoiceMicUI(false);
+}
+
+// ประเมินผลคำที่ผู้ใช้พูด
+function evaluateVoiceSpokenAnswer(transcript) {
+    if (answerSelected) return;
+    const activeMode = allQuizModes[currentModeKey];
+    if (!activeMode || !activeMode.questions) return;
+    const currentData = activeMode.questions[currentQuestion];
+    const isCorrect = isSpeechMatch(transcript, currentData);
+    const targetWord = currentData.japaneseText || currentData.character || (currentData.choices && currentData.choices[currentData.correct]) || '';
+
+    if (isCorrect) {
+        answerSelected = true;
+        stopVoiceRecognition();
+        playCorrectSound();
+
+        const transcriptEl = document.getElementById('voice-transcript-text');
+        if (transcriptEl) {
+            transcriptEl.innerHTML = `<span class="text-emerald-600 font-black text-sm animate-pulse"><i class="fa-solid fa-circle-check mr-1 text-emerald-500"></i> ออกเสียงถูกต้อง: 「${transcript}」 🎉</span>`;
+        }
+        if (feedbackText) {
+            feedbackText.innerText = "🌸 正解! (ออกเสียงถูกต้องยอดเยี่ยมค๊า!)";
+            feedbackText.className = "text-emerald-500 text-sm font-black animate-pulse";
+        }
+        score++;
+        if (scoreDisplay) scoreDisplay.innerText = score;
+        comboStreak++;
+        playerEXP += 30 + (comboStreak * 5);
+        calculateRPGBond();
+        updateComboUI();
+
+        mascotTalk(`เก่งมากๆ เลยค๊าาา! สำเนียงเป๊ะมาก ออกเสียงว่า『${targetWord}』ถูกต้องแล้วค่ะ! 🎉`, 'happy');
+
+        // แสดงคำแปล/คำใบ้ภาษาไทยหลังตอบคำถามถูกต้องแล้ว
+        if (questionHint) {
+            const hintText = currentData.hint || currentData.thaiHint;
+            if (hintText) {
+                questionHint.innerHTML = `<span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-lightbulb text-amber-500 animate-bounce" style="animation-duration: 2s"></i> <span><strong class="text-pink-600">คำแปล:</strong> <span class="text-rose-900 font-bold">${hintText}</span></span></span>`;
+                questionHint.classList.remove('hidden');
+                questionHint.style.display = 'inline-block';
+            }
+        }
+
+        if (pronounceBtn) pronounceBtn.classList.remove('hidden');
+
+        // ข้อกำหนดที่ 3: "หากพูดถูกก็จะผ่านไปข้อต่อไป โดยไม่มีช้อยให้เลือก ต้องกดพูดเพื่อตอบ"
+        setTimeout(() => {
+            advanceToNextQuestion();
+        }, 1200);
+    } else {
+        playIncorrectSound();
+        const transcriptEl = document.getElementById('voice-transcript-text');
+        if (transcriptEl) {
+            transcriptEl.innerHTML = `<span class="text-rose-600 font-bold"><i class="fa-solid fa-circle-xmark mr-1"></i> ได้ยินว่า: 「${transcript}」 ยังไม่ตรงน้าค๊า</span>`;
+        }
+        if (feedbackText) {
+            feedbackText.innerText = `❌ ยังไม่ตรงน้าค๊า กดปุ่มไมค์แล้วลองออกเสียงใหม่อีกครั้งค่ะ! 🌸`;
+            feedbackText.className = "text-rose-500 text-xs font-bold";
+        }
+        mascotTalk(`ได้ยินว่า「${transcript}」ยังไม่ตรงน้าค๊า ลองออกเสียงใหม่อีกรอบนะค๊า ยูกิจังเป็นกำลังใจให้ค่ะ! 🌸`, 'idle');
+    }
+}
+
+// ข้ามข้อในโหมดพูด
+function skipSpeakingQuestion() {
+    stopVoiceRecognition();
+    const activeMode = allQuizModes[currentModeKey];
+    if (!activeMode || !activeMode.questions) return;
+    const currentData = activeMode.questions[currentQuestion];
+    const targetWord = currentData.japaneseText || currentData.character || (currentData.choices && currentData.choices[currentData.correct]) || '';
+
+    comboStreak = 0;
+    updateComboUI();
+    mascotTalk(`ข้อนี้ข้ามไปก่อนนะคะ คำอ่านที่ถูกต้องคือ『${targetWord}』ค่ะ! 🌸`, 'idle');
+    speakJapanese(targetWord);
+
+    // แสดงคำใบ้/คำแปลภาษาไทยเมื่อข้ามข้อ
+    if (questionHint) {
+        const hintText = currentData.hint || currentData.thaiHint;
+        if (hintText) {
+            questionHint.innerHTML = `<span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-lightbulb text-amber-500 animate-bounce" style="animation-duration: 2s"></i> <span><strong class="text-pink-600">คำแปล:</strong> <span class="text-rose-900 font-bold">${hintText}</span></span></span>`;
+            questionHint.classList.remove('hidden');
+            questionHint.style.display = 'inline-block';
+        }
+    }
+
+    setTimeout(() => {
+        advanceToNextQuestion();
+    }, 1200);
+}
+window.skipSpeakingQuestion = skipSpeakingQuestion;
+
+// ฟังตัวอย่างเสียงอ่านของคำปัจจุบัน
+function playCurrentQuestionAudio() {
+    const activeMode = allQuizModes[currentModeKey];
+    if (!activeMode || !activeMode.questions) return;
+    const currentData = activeMode.questions[currentQuestion];
+    const targetWord = currentData.japaneseText || currentData.character || (currentData.choices && currentData.choices[currentData.correct]) || '';
+    if (targetWord) {
+        speakJapanese(targetWord);
+    }
+}
+window.playCurrentQuestionAudio = playCurrentQuestionAudio;
+
+// ฟังก์ชันช่วยเปลี่ยนข้อไปยังข้อถัดไป
+function advanceToNextQuestion() {
+    stopQuestionTimer();
+    stopVoiceRecognition();
+    currentQuestion++;
+    const activeMode = allQuizModes[currentModeKey];
+    if (activeMode && currentQuestion < activeMode.questions.length) {
+        loadQuestion();
+    } else {
+        showResults();
+    }
+}
+
 // เริ่มเข้าสู่แบบทดสอบทายคำศัพท์หรือไวยากรณ์
 function selectMode(modeKey) {
     const selectedMode = allQuizModes[modeKey];
@@ -962,6 +1718,9 @@ function updateComboUI() {
 // โหลดข้อมูลเควสต์คำศัพท์หรือไวยากรณ์ทีละข้อ
 function loadQuestion() {
     answerSelected = false;
+    stopQuestionTimer();
+    stopVoiceRecognition();
+
     if (nextBtn) {
         nextBtn.classList.add('hidden');
         nextBtn.classList.remove('flex');
@@ -977,11 +1736,65 @@ function loadQuestion() {
     const grammarExpBox = document.getElementById('grammar-explanation-box');
     const grammarTypeInput = document.getElementById('grammar-type-input');
 
+    const timerContainer = document.getElementById('quiz-timer-container');
+    const writingContainer = document.getElementById('writing-mode-container');
+    const speakingContainer = document.getElementById('speaking-mode-container');
+
     if (levelIndicator) {
         levelIndicator.innerHTML = `<i class="fa-solid fa-scroll text-pink-500 mr-1 animate-pulse"></i> ข้อทดสอบที่ ${currentQuestion + 1} / ${activeMode.questions.length}`;
     }
     if (currentModeBadge) {
         currentModeBadge.innerHTML = `${activeMode.emoji || '🌸'} ${activeMode.title}`;
+    }
+
+    // อัปเดตป้ายกำกับโหมดการเล่นที่กำลังเล่นอยู่
+    const playstyleBadge = document.getElementById('current-playstyle-badge');
+    if (playstyleBadge) {
+        if (currentPlayStyle === 'timer') {
+            playstyleBadge.className = 'text-[10px] bg-amber-100 text-amber-700 font-black px-2.5 py-0.5 rounded-full border border-amber-200 shadow-sm flex items-center gap-1';
+            playstyleBadge.innerHTML = `⏱️ จับเวลา (${timerDuration}s)`;
+        } else if (currentPlayStyle === 'writing') {
+            playstyleBadge.className = 'text-[10px] bg-purple-100 text-purple-700 font-black px-2.5 py-0.5 rounded-full border border-purple-200 shadow-sm flex items-center gap-1';
+            playstyleBadge.innerHTML = `✍️ เขียนฮิราคานะ`;
+        } else if (currentPlayStyle === 'speaking') {
+            playstyleBadge.className = 'text-[10px] bg-rose-100 text-rose-700 font-black px-2.5 py-0.5 rounded-full border border-rose-200 shadow-sm flex items-center gap-1';
+            playstyleBadge.innerHTML = `🎙️ พูดออกเสียง`;
+        } else {
+            playstyleBadge.className = 'text-[10px] bg-pink-100 text-pink-700 font-black px-2.5 py-0.5 rounded-full border border-pink-200 shadow-sm flex items-center gap-1';
+            playstyleBadge.innerHTML = `🌸 ช้อยส์ปกติ`;
+        }
+    }
+
+    // กำหนดการมองเห็นขององค์ประกอบอินเตอร์เฟสตามโหมดที่เล่น (คำใบ้จะซ่อนไว้เสมอจนกว่าจะตอบ)
+    if (currentPlayStyle === 'timer') {
+        if (timerContainer) timerContainer.classList.remove('hidden');
+        if (writingContainer) writingContainer.classList.add('hidden');
+        if (speakingContainer) speakingContainer.classList.add('hidden');
+        if (choicesContainer) choicesContainer.classList.remove('hidden');
+    } else if (currentPlayStyle === 'writing') {
+        if (timerContainer) timerContainer.classList.add('hidden');
+        if (writingContainer) writingContainer.classList.remove('hidden');
+        if (speakingContainer) speakingContainer.classList.add('hidden');
+        if (choicesContainer) choicesContainer.classList.add('hidden');
+        const writingInput = document.getElementById('writing-input');
+        if (writingInput) {
+            writingInput.value = '';
+            writingInput.disabled = false;
+            writingInput.className = 'w-full text-center py-3.5 px-10 rounded-2xl border-2 border-pink-300 bg-pink-50/30 text-rose-950 font-black text-xl sm:text-2xl focus:border-pink-500 focus:bg-white outline-none shadow-inner transition notranslate font-kawaii writing-input-glow';
+            setTimeout(() => writingInput.focus(), 150);
+        }
+    } else if (currentPlayStyle === 'speaking') {
+        if (timerContainer) timerContainer.classList.add('hidden');
+        if (writingContainer) writingContainer.classList.add('hidden');
+        if (speakingContainer) speakingContainer.classList.remove('hidden');
+        if (choicesContainer) choicesContainer.classList.add('hidden');
+        resetVoiceSpeakButton();
+    } else {
+        // Standard choice mode
+        if (timerContainer) timerContainer.classList.add('hidden');
+        if (writingContainer) writingContainer.classList.add('hidden');
+        if (speakingContainer) speakingContainer.classList.add('hidden');
+        if (choicesContainer) choicesContainer.classList.remove('hidden');
     }
 
     if (activeMode.isGrammar) {
@@ -1014,7 +1827,16 @@ function loadQuestion() {
         if (grammarSentenceCard) grammarSentenceCard.classList.add('hidden');
         if (grammarExpBox) grammarExpBox.classList.add('hidden');
 
-        mascotTalk(`คำถามข้อที่ ${currentQuestion + 1}! ทายซิว่ารูปนี้คือภาษาญี่ปุ่นคำไหนเอ่ย? ✨`, 'idle');
+        // ข้อความคำพูดของยูกิจังตามโหมด
+        if (currentPlayStyle === 'timer') {
+            mascotTalk(`โหมดจับเวลาข้อที่ ${currentQuestion + 1}! มีเวลา ${timerDuration} วินาที รีบตอบให้ทันน้าค๊า! ⏱️🔥`, 'idle');
+        } else if (currentPlayStyle === 'writing') {
+            mascotTalk(`เควสต์เขียนคำศัพท์ข้อที่ ${currentQuestion + 1}! ดูคำศัพท์ด้านบนแล้วเขียนคำอ่านเป็นฮิราคานะลงในช่องว่างนะคะ ✍️✨`, 'idle');
+        } else if (currentPlayStyle === 'speaking') {
+            mascotTalk(`เควสต์ออกเสียงคำศัพท์ข้อที่ ${currentQuestion + 1}! กดปุ่มไมค์แล้วพูดคำศัพท์ภาษาญี่ปุ่นให้ถูกต้องเพื่อผ่านไปข้อต่อไปค่ะ 🎙️🌸`, 'idle');
+        } else {
+            mascotTalk(`คำถามข้อที่ ${currentQuestion + 1}! ทายซิว่ารูปนี้คือภาษาญี่ปุ่นคำไหนเอ่ย? ✨`, 'idle');
+        }
 
         // ซ่อนคำแปลประโยค/คำใบ้ไว้ก่อนเสมอ จนกว่าผู้เล่นจะกดตอบคำถาม
         if (questionHint) {
@@ -1027,9 +1849,9 @@ function loadQuestion() {
         }
 
         const questionTextOverlay = document.getElementById('question-text-overlay');
-        const isCharMode = currentModeKey === 'カタカナ' || currentModeKey === 'ひらかな' || !!(currentData.character || currentData.kanji);
+        const isCharMode = currentModeKey === 'カタカナ' || currentModeKey === 'ひらかな' || !!(currentData.character || currentData.kanji) || currentPlayStyle === 'writing' || currentPlayStyle === 'speaking';
         if (isCharMode && questionTextOverlay) {
-            const displayText = currentData.kanji || currentData.character || '';
+            const displayText = currentData.kanji || currentData.character || currentData.japaneseText || '';
             questionTextOverlay.innerText = displayText;
             questionTextOverlay.classList.remove('hidden');
             if (questionImg) questionImg.classList.add('hidden');
@@ -1068,25 +1890,37 @@ function loadQuestion() {
 
     if (choicesContainer) {
         choicesContainer.innerHTML = "";
-        currentData.choices.forEach((choice, index) => {
-            const button = document.createElement('button');
-            button.setAttribute('translate', 'no');
-            if (activeMode.isGrammar) {
-                button.className = "w-full text-center py-4 px-6 rounded-2xl border-2 border-rose-100/60 bg-white hover:bg-pink-50 hover:border-pink-300 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-center justify-center gap-3";
-                button.innerHTML = `<span class="bg-pink-100 px-2.5 py-1 rounded-xl text-xs font-black text-pink-600 font-kawaii">${index + 1}</span> <span class="font-kawaii text-2xl font-black text-rose-850">${choice}</span>`;
-            } else {
-                button.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-rose-100/50 bg-white hover:bg-pink-50/75 hover:border-pink-300 text-xs font-bold text-rose-950 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate";
-                button.innerHTML = `<span class="bg-pink-100 px-1.5 py-0.5 rounded text-[9px] font-black text-pink-600 border border-pink-200 mr-1.5 font-kawaii">${index + 1}</span> ${choice}`;
-            }
-            button.setAttribute('data-no-click-sound', 'true');
-            button.addEventListener('click', () => selectAnswer(index, button));
-            choicesContainer.appendChild(button);
-        });
+        if (currentPlayStyle !== 'writing' && currentPlayStyle !== 'speaking') {
+            choicesContainer.classList.remove('hidden');
+            currentData.choices.forEach((choice, index) => {
+                const button = document.createElement('button');
+                button.setAttribute('translate', 'no');
+                if (activeMode.isGrammar) {
+                    button.className = "w-full text-center py-4 px-6 rounded-2xl border-2 border-rose-100/60 bg-white hover:bg-pink-50 hover:border-pink-300 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-center justify-center gap-3";
+                    button.innerHTML = `<span class="bg-pink-100 px-2.5 py-1 rounded-xl text-xs font-black text-pink-600 font-kawaii">${index + 1}</span> <span class="font-kawaii text-2xl font-black text-rose-850">${choice}</span>`;
+                } else {
+                    button.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-rose-100/50 bg-white hover:bg-pink-50/75 hover:border-pink-300 text-xs font-bold text-rose-950 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate";
+                    button.innerHTML = `<span class="bg-pink-100 px-1.5 py-0.5 rounded text-[9px] font-black text-pink-600 border border-pink-200 mr-1.5 font-kawaii">${index + 1}</span> ${choice}`;
+                }
+                button.setAttribute('data-no-click-sound', 'true');
+                button.addEventListener('click', () => selectAnswer(index, button));
+                choicesContainer.appendChild(button);
+            });
+        } else {
+            choicesContainer.classList.add('hidden');
+        }
+    }
+
+    if (currentPlayStyle === 'timer') {
+        startQuestionTimer();
     }
 }
 
 function selectAnswer(selectedIndex, clickedButton) {
     if (answerSelected) return;
+    if (currentPlayStyle === 'timer') {
+        stopQuestionTimer();
+    }
     unlockMobileAudio();
 
     const activeMode = allQuizModes[currentModeKey];
@@ -1105,8 +1939,14 @@ function selectAnswer(selectedIndex, clickedButton) {
         if (selectedIndex === currentData.correct) {
             playCorrectSound();
             if (clickedButton) clickedButton.className = "w-full text-center py-4 px-6 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-700 font-black shadow-[0_0_15px_rgba(52,211,153,0.2)] flex items-center justify-center gap-3";
+            let bonusExp = 0;
+            let speedBonusText = "";
+            if (currentPlayStyle === 'timer' && timeLeft >= Math.floor(timerDuration * 0.45)) {
+                bonusExp = 15;
+                speedBonusText = " ⚡ Speed Bonus +15 EXP!";
+            }
             if (feedbackText) {
-                feedbackText.innerText = "🌸 正解 (เติมคำช่วยถูกต้องยอดเยี่ยมค๊า!)";
+                feedbackText.innerText = "🌸 正解 (เติมคำช่วยถูกต้องยอดเยี่ยมค๊า!)" + speedBonusText;
                 feedbackText.className = "text-emerald-500 text-sm font-black animate-pulse";
             }
             if (blankSlot) {
@@ -1116,7 +1956,7 @@ function selectAnswer(selectedIndex, clickedButton) {
             score++;
             if (scoreDisplay) scoreDisplay.innerText = score;
             comboStreak++;
-            playerEXP += 25 + (comboStreak * 5);
+            playerEXP += 25 + (comboStreak * 5) + bonusExp;
             calculateRPGBond();
             updateComboUI();
 
@@ -1176,8 +2016,14 @@ function selectAnswer(selectedIndex, clickedButton) {
     if (selectedIndex === currentData.correct) {
         playCorrectSound();
         clickedButton.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-600 font-extrabold shadow-[0_0_15px_rgba(52,211,153,0.2)] transition-all";
+        let bonusExp = 0;
+        let speedBonusText = "";
+        if (currentPlayStyle === 'timer' && timeLeft >= Math.floor(timerDuration * 0.45)) {
+            bonusExp = 15;
+            speedBonusText = " ⚡ Speed Bonus +15 EXP!";
+        }
         if (feedbackText) {
-            feedbackText.innerText = "🌸 正解 (ถูกต้องยอดเยี่ยมค๊า!)";
+            feedbackText.innerText = "🌸 正解 (ถูกต้องยอดเยี่ยมค๊า!)" + speedBonusText;
             feedbackText.className = "text-emerald-500 text-sm font-black animate-pulse";
         }
 
@@ -1185,7 +2031,7 @@ function selectAnswer(selectedIndex, clickedButton) {
         if (scoreDisplay) scoreDisplay.innerText = score;
 
         comboStreak++;
-        playerEXP += 20 + (comboStreak * 5);
+        playerEXP += 20 + (comboStreak * 5) + bonusExp;
         calculateRPGBond();
         updateComboUI();
 
@@ -1262,7 +2108,7 @@ function submitGrammarTypedAnswer() {
     }
 }
 
-// ผูกเหตุการณ์กดปุ่ม Enter ในช่องพิมพ์คำช่วย
+// ผูกเหตุการณ์คีย์บอร์ดและช่องกรอกคำตอบ
 document.addEventListener('DOMContentLoaded', () => {
     const typeInput = document.getElementById('grammar-type-input');
     if (typeInput) {
@@ -1272,26 +2118,52 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // โหมดเขียนฮิราคานะ (Writing Mode): แปลง Romaji เป็นฮิราคานะแบบเรียลไทม์ และกด Enter เพื่อส่งคำตอบ
+    const writingInput = document.getElementById('writing-input');
+    if (writingInput) {
+        writingInput.addEventListener('input', (e) => {
+            if (romajiAutoConvertEnabled) {
+                const originalVal = e.target.value;
+                const converted = romajiToHiragana(originalVal);
+                if (converted !== originalVal) {
+                    e.target.value = converted;
+                }
+            }
+        });
+        writingInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                submitWritingAnswer();
+            }
+        });
+    }
 });
 
 if (nextBtn) {
     nextBtn.addEventListener('click', () => {
-        currentQuestion++;
-        const activeMode = allQuizModes[currentModeKey];
-
-        if (currentQuestion < activeMode.questions.length) {
-            loadQuestion();
-        } else {
-            showResults();
-        }
+        advanceToNextQuestion();
     });
 }
 
 // นำเสนอผลลัพธ์ด่านเมื่อทายคำครบทุกข้อ
 function showResults() {
+    stopQuestionTimer();
+    stopVoiceRecognition();
     if (quizScreen) quizScreen.classList.add('hidden');
     if (resultArea) resultArea.classList.remove('hidden');
     if (finalScore) finalScore.innerText = score;
+
+    const playstyleBadge = document.getElementById('result-playstyle-badge');
+    if (playstyleBadge) {
+        const styleLabels = {
+            'choice': '🌸 โหมดช้อยส์ปกติ',
+            'timer': `⏱️ โหมดจับเวลา (${timerDuration}s)`,
+            'writing': '✍️ โหมดเขียนฮิราคานะ',
+            'speaking': '🎙️ โหมดพูดออกเสียง'
+        };
+        playstyleBadge.innerText = styleLabels[currentPlayStyle] || '🌸 โหมดช้อยส์ปกติ';
+    }
 
     // คืนค่า Layout แผงซ้ายกลับมาเพื่อให้ยูกิจังประเมินเกรด
     if (companionSidebar) companionSidebar.classList.remove('hidden');
@@ -1335,6 +2207,8 @@ function showResults() {
 }
 
 function goHome() {
+    stopQuestionTimer();
+    stopVoiceRecognition();
     if (quizScreen) quizScreen.classList.add('hidden');
     if (resultArea) resultArea.classList.add('hidden');
     if (adminScreen) adminScreen.classList.add('hidden');
@@ -1349,6 +2223,8 @@ function goHome() {
 
 if (restartBtn) {
     restartBtn.addEventListener('click', () => {
+        stopQuestionTimer();
+        stopVoiceRecognition();
         selectMode(currentModeKey);
     });
 }
@@ -1789,7 +2665,7 @@ async function submitWordSuggestion() {
             bc.postMessage({ type: 'word_suggested', item: savedItem });
             bc.close();
         }
-    } catch (_) {}
+    } catch (_) { }
 
     playUnlockSound();
     mascotTalk(`ยูกิจังได้รับคำศัพท์ "${kanji}" (${reading}) บทที่ ${lesson} แล้วค่ะ! รอผู้ดูแลระบบ (Admin) ตรวจสอบและกดยอมรับก่อน จากนั้นทุกคนจะสามารถเรียนรู้คำนี้ได้ค่ะ 🌸📝`, 'happy');
@@ -2097,7 +2973,7 @@ async function approveAndAddSuggestion(id) {
             bc.postMessage({ type: 'word_approved', item: item });
             bc.close();
         }
-    } catch (_) {}
+    } catch (_) { }
 
     playUnlockSound();
     mascotTalk(`เย้! อนุมัติคำศัพท์ "${item.kanji}" (${item.reading}) ลงในบทที่ ${lessonNum} สำเร็จแล้วค๊า! 🌸✨`, 'happy');
@@ -2120,7 +2996,7 @@ async function approveAllPendingSuggestions() {
         item.status = 'approved';
         try {
             await fetch(`/api/suggest-word/${item.id}/approve`, { method: 'POST' });
-        } catch (_) {}
+        } catch (_) { }
 
         const lessonNum = parseInt(item.lesson, 10);
         const targetKey = findModeKeyByLesson(lessonNum);
@@ -2140,7 +3016,7 @@ async function approveAllPendingSuggestions() {
             bc.postMessage({ type: 'all_approved' });
             bc.close();
         }
-    } catch (_) {}
+    } catch (_) { }
 
     playUnlockSound();
     mascotTalk(`อนุมัติคำศัพท์ทั้งหมด ${pendingItems.length} คำเรียบร้อยแล้วค๊า! ทุกคนสามารถเรียนรู้ได้ทันที🌸✨`, 'happy');
@@ -2167,7 +3043,7 @@ async function deleteSuggestion(id, showAlert = true) {
             bc.postMessage({ type: 'word_deleted', id: id });
             bc.close();
         }
-    } catch (_) {}
+    } catch (_) { }
 
     loadWordSuggestions();
 
@@ -2628,7 +3504,7 @@ window.onload = function () {
                 }
             };
         }
-    } catch (_) {}
+    } catch (_) { }
 
     // บันทึกเสียงคลิกน่ารักๆ บนปุ่มทั้งหมดบนหน้าเว็บ
     document.addEventListener('click', function (e) {
@@ -2641,3 +3517,21 @@ window.onload = function () {
         }
     });
 };
+
+// ===== หน้าต่างป๊อปอัพโดเนทสนับสนุน (Donate PromptPay Modal) =====
+function openDonateModal() {
+    const modal = document.getElementById('donate-modal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        playCuteClickSound();
+    }
+}
+window.openDonateModal = openDonateModal;
+
+function closeDonateModal() {
+    const modal = document.getElementById('donate-modal');
+    if (modal) {
+        modal.classList.add('hidden');
+    }
+}
+window.closeDonateModal = closeDonateModal;

@@ -150,3 +150,35 @@ body {
     color: #b91c1c;
     background: rgba(254, 202, 202, 0.7);
 }
+
+/* แอนิเมชันสำหรับปุ่มไมโครโฟนโหมดพูด (Voice Recognition Mic Active Pulse) */
+@keyframes mic-wave-pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(244, 63, 94, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(244, 63, 94, 0); }
+}
+
+.mic-recording-active {
+    animation: mic-wave-pulse 1.3s infinite !important;
+    background: linear-gradient(135deg, #ef4444, #f43f5e) !important;
+}
+
+/* แอนิเมชันสำหรับเวลานับถอยหลังเร่งด่วน (Urgent Timer Alert) */
+@keyframes timer-urgent {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.8)); }
+}
+
+.timer-urgent-text {
+    animation: timer-urgent 0.5s infinite !important;
+    color: #ef4444 !important;
+}
+
+.timer-bar-urgent {
+    background: linear-gradient(90deg, #f87171, #ef4444) !important;
+}
+
+/* สไตล์กล่องพิมพ์คำอ่านฮิราคานะ */
+.writing-input-glow:focus {
+    box-shadow: 0 0 0 4px rgba(244, 63, 94, 0.25), 0 4px 15px rgba(244, 63, 94, 0.15);
+}

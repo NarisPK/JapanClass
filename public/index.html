@@ -34,22 +34,35 @@
                 <span
                     class="text-2xl bg-gradient-to-tr from-pink-400 to-rose-300 p-2 rounded-xl text-white shadow-md shadow-pink-300/30">⛩️</span>
                 <div>
-                    <h1
-                        class="text-xl md:text-2xl font-black tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500 uppercase font-kawaii">
-                        日本語　勉強しましょう</h1>
+                    <div class="flex items-center gap-2">
+                        <h1
+                            class="text-xl md:text-2xl font-black tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500 uppercase font-kawaii">
+                            日本語　勉強しましょう</h1>
+                        <span class="text-[10px] font-black bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full border border-pink-300 shadow-xs" title="เวอร์ชันปัจจุบัน">v0.0.1</span>
+                    </div>
                     <p class="text-[9px] md:text-[10px] text-rose-400/70 uppercase tracking-widest font-bold">
                         มาเรียนภาษาญี่ปุ่นกันเถอะ</p>
                 </div>
             </div>
 
-            <!-- แท็บเข้าโหมดแอดมินและปุ่มสะสมคอมโบ -->
-            <div class="flex items-center gap-2">
+            <!-- เมนูหลัก, Discord, โดเนท, สลับเล่ม และโหมดแอดมิน -->
+            <div class="flex flex-wrap items-center justify-center md:justify-end gap-2">
+                <a href="https://discord.gg/Wk2PKVftrk" target="_blank" rel="noopener noreferrer"
+                    title="เข้าร่วม Discord เพื่อแจ้งปัญหาหรือเสนอบทเรียน"
+                    class="bg-[#5865F2] hover:bg-[#4752C4] text-white font-extrabold text-[10px] md:text-xs py-2 px-3 rounded-xl transition duration-150 flex items-center gap-1.5 active:scale-95 shadow-md shadow-indigo-300/30">
+                    <i class="fa-brands fa-discord text-sm"></i> <span>ลิ้งDiscord เเจ้งปัญหา หรือ เสนอบทเรียน</span>
+                </a>
+                <button onclick="openDonateModal()"
+                    title="สนับสนุนการพัฒนาและเซิร์ฟเวอร์"
+                    class="bg-gradient-to-r from-amber-400 via-rose-400 to-pink-500 hover:from-amber-500 hover:to-pink-600 text-white font-extrabold text-[10px] md:text-xs py-2 px-3 rounded-xl transition duration-150 flex items-center gap-1.5 active:scale-95 shadow-md shadow-amber-300/30">
+                    <i class="fa-solid fa-heart text-white animate-pulse"></i> <span>หากต้องการสนับสนุนหรือโดเนท</span>
+                </button>
                 <button id="book-toggle-header-btn" onclick="toggleBook()"
                     class="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-extrabold text-[10px] md:text-xs py-2 px-3 rounded-xl transition duration-150 flex items-center gap-1.5 active:scale-95 shadow-md shadow-indigo-300/30">
                     <i class="fa-solid fa-book-open"></i> <span id="book-toggle-header-text">ไปยังเล่ม 2 (Minna 2) ➔</span>
                 </button>
                 <button onclick="openSuggestModal()"
-                    class="bg-gradient-to-r from-amber-400 via-rose-400 to-pink-500 hover:from-amber-500 hover:to-pink-600 text-white font-extrabold text-[10px] md:text-xs py-2 px-3 rounded-xl transition duration-150 flex items-center gap-1.5 active:scale-95 shadow-md shadow-pink-300/30">
+                    class="bg-white/80 hover:bg-pink-50 text-pink-700 border border-pink-200 font-extrabold text-[10px] md:text-xs py-2 px-3 rounded-xl transition duration-150 flex items-center gap-1.5 active:scale-95 shadow-sm">
                     <i class="fa-solid fa-file-circle-plus"></i> แจ้งเพิ่มคำศัพท์
                 </button>
                 <button onclick="openPasswordGate()"
@@ -127,6 +140,21 @@
                     <p id="daily-fact">คำสรรพนามภาษาญี่ปุ่น: สำหรับผู้หญิงมักพูดแทนตนเองว่า "วาตาชิ" หรือ "อุกิ" ค่ะ!
                     </p>
                 </div>
+
+                <!-- ช่องทางติดต่อ Discord และ โดเนท -->
+                <div class="mt-3 pt-3 border-t border-rose-100 space-y-2">
+                    <a href="https://discord.gg/Wk2PKVftrk" target="_blank" rel="noopener noreferrer"
+                        class="w-full bg-[#5865F2] hover:bg-[#4752C4] text-white font-extrabold text-[10px] py-2 px-2.5 rounded-xl transition duration-150 flex items-center justify-center gap-1.5 shadow-sm active:scale-95">
+                        <i class="fa-brands fa-discord text-xs"></i> <span>ลิ้งDiscord เเจ้งปัญหา หรือ เสนอบทเรียน</span>
+                    </a>
+                    <button onclick="openDonateModal()"
+                        class="w-full bg-gradient-to-r from-pink-500 via-rose-400 to-amber-400 hover:from-pink-600 hover:to-amber-500 text-white font-black text-[10px] py-2 px-2.5 rounded-xl transition duration-150 flex items-center justify-center gap-1.5 shadow-sm active:scale-95">
+                        <i class="fa-solid fa-heart text-white animate-pulse"></i> <span>หากต้องการสนับสนุนหรือโดเนท</span>
+                    </button>
+                    <div class="text-center pt-0.5">
+                        <span class="text-[9px] font-black text-rose-500/80 bg-pink-100/70 border border-pink-200/80 px-2 py-0.5 rounded-full">เวอร์ชัน 0.0.1</span>
+                    </div>
+                </div>
             </div>
 
             <!-- ส่วนของบอร์ดเกมและหน้าจอเลือกด่าน -->
@@ -176,6 +204,50 @@
                             class="flex-1 py-2.5 px-3 rounded-xl font-bold text-xs transition-all duration-200 flex items-center justify-center gap-1.5 text-pink-700 hover:bg-pink-50">
                             ⛩️ ไวยากรณ์ เติมคำช่วย (บท 1-12)
                         </button>
+                    </div>
+
+                    <!-- แถบเลือกสไตล์การเล่น (Play Mode Selector: ช้อยส์ปกติ / โหมดจับเวลา / เขียนคำศัพท์ / พูดออกเสียง) -->
+                    <div class="space-y-2 max-w-xl mx-auto">
+                        <div class="flex items-center justify-between px-2 text-[11px] font-black text-rose-900">
+                            <span class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-gamepad text-pink-500"></i> เลือกโหมดการฝึกฝน:
+                            </span>
+                            <span id="active-playstyle-desc" class="text-[10px] text-pink-600 font-bold bg-pink-50 px-2.5 py-0.5 rounded-full border border-pink-200">
+                                🌸 ช้อยส์ 4 ตัวเลือก (มาตรฐาน)
+                            </span>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 p-1.5 bg-white/85 backdrop-blur-md rounded-2xl border border-rose-200/80 shadow-sm">
+                            <button id="playstyle-choice-btn" onclick="setPlayStyle('choice')"
+                                class="py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r from-pink-400 to-rose-400 text-white shadow-pink-300/30">
+                                🌸 ช้อยส์ปกติ
+                            </button>
+                            <button id="playstyle-timer-btn" onclick="setPlayStyle('timer')"
+                                class="py-2.5 px-3 rounded-xl font-bold text-xs transition-all duration-200 flex items-center justify-center gap-1.5 text-rose-700 hover:bg-pink-50">
+                                ⏱️ จับเวลา
+                            </button>
+                            <button id="playstyle-writing-btn" onclick="setPlayStyle('writing')"
+                                class="py-2.5 px-3 rounded-xl font-bold text-xs transition-all duration-200 flex items-center justify-center gap-1.5 text-rose-700 hover:bg-pink-50">
+                                ✍️ เขียนคำศัพท์
+                            </button>
+                            <button id="playstyle-speaking-btn" onclick="setPlayStyle('speaking')"
+                                class="py-2.5 px-3 rounded-xl font-bold text-xs transition-all duration-200 flex items-center justify-center gap-1.5 text-rose-700 hover:bg-pink-50">
+                                🎙️ พูดออกเสียง
+                            </button>
+                        </div>
+
+                        <!-- แถบตั้งค่าเพิ่มเติมสำหรับโหมดจับเวลา (จะแสดงเมื่อเลือกโหมดจับเวลา) -->
+                        <div id="timer-settings-bar" class="hidden flex flex-col sm:flex-row items-center justify-between gap-2 p-2 px-3 bg-gradient-to-r from-amber-50 to-pink-50 rounded-xl border border-amber-200 text-[11px] animate-fade-in shadow-inner">
+                            <div class="flex items-center gap-1.5 font-bold text-amber-900">
+                                <i class="fa-solid fa-stopwatch text-amber-500 animate-pulse"></i>
+                                <span>เวลานับถอยหลังต่อข้อ:</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <button onclick="setTimerDuration(10)" id="timer-opt-10" class="px-2.5 py-1 rounded-lg text-[10px] font-bold border transition bg-white text-slate-700 border-slate-200 hover:bg-pink-50">10 วิ</button>
+                                <button onclick="setTimerDuration(15)" id="timer-opt-15" class="px-2.5 py-1 rounded-lg text-[10px] font-black border transition bg-amber-400 text-white border-amber-400 shadow-sm">15 วิ (แนะนำ)</button>
+                                <button onclick="setTimerDuration(20)" id="timer-opt-20" class="px-2.5 py-1 rounded-lg text-[10px] font-bold border transition bg-white text-slate-700 border-slate-200 hover:bg-pink-50">20 วิ</button>
+                                <button onclick="setTimerDuration(30)" id="timer-opt-30" class="px-2.5 py-1 rounded-lg text-[10px] font-bold border transition bg-white text-slate-700 border-slate-200 hover:bg-pink-50">30 วิ</button>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- ปุ่มด่วนสำหรับแจ้งเพิ่มคลังคำศัพท์ในหน้านี้ (Quick Suggest Button) -->
@@ -243,12 +315,31 @@
                             class="bg-pink-50 hover:bg-pink-100 text-pink-700 font-black px-4 py-2 rounded-xl border border-pink-200/40 transition-all flex items-center gap-1.5 active:scale-95 shadow-sm">
                             <i class="fa-solid fa-chevron-left"></i> ย้อนกลับ
                         </button>
-                        <span id="current-mode-badge" class="text-pink-600 font-extrabold text-sm">
-                            หมวดหมู่
-                        </span>
+                        <div class="flex items-center gap-2">
+                            <span id="current-mode-badge" class="text-pink-600 font-extrabold text-sm">
+                                หมวดหมู่
+                            </span>
+                            <span id="current-playstyle-badge" class="text-[10px] bg-pink-100 text-pink-700 font-black px-2.5 py-0.5 rounded-full border border-pink-200 shadow-sm flex items-center gap-1">
+                                🌸 ช้อยส์ปกติ
+                            </span>
+                        </div>
                         <div class="text-right flex items-center gap-2">
                             <span class="text-slate-400 block font-bold text-[10px] uppercase">SCORE:</span>
                             <span id="score-display" class="font-black text-rose-500 font-kawaii text-lg">0</span>
+                        </div>
+                    </div>
+
+                    <!-- แถบแสดงเวลานับถอยหลังสำหรับโหมดจับเวลา (Timer Mode Countdown) -->
+                    <div id="quiz-timer-container" class="hidden w-full max-w-md mx-auto bg-white/95 p-2.5 px-4 rounded-2xl border-2 border-rose-200 shadow-sm transition-all duration-300">
+                        <div class="flex justify-between items-center text-xs font-black text-rose-800 mb-1.5">
+                            <span class="flex items-center gap-1.5">
+                                <i id="timer-clock-icon" class="fa-solid fa-stopwatch text-rose-500 animate-pulse"></i>
+                                <span>เวลาที่เหลือ:</span>
+                            </span>
+                            <span id="timer-countdown-text" class="text-base font-black font-kawaii text-rose-600 tracking-wider">15.0s</span>
+                        </div>
+                        <div class="w-full bg-rose-100 h-2.5 rounded-full overflow-hidden p-[1px] relative shadow-inner">
+                            <div id="timer-progress-bar" class="h-full bg-gradient-to-r from-emerald-400 via-amber-400 to-rose-500 rounded-full transition-all duration-100 ease-linear w-full"></div>
                         </div>
                     </div>
 
@@ -330,9 +421,99 @@
                         </div>
                     </div>
 
-                    <!-- พื้นที่ตัวเลือกทายคำศัพท์ที่วางด้านล่างรูปเดี่ยวเพื่อเน้นสมาธิ -->
+                    <!-- พื้นที่ตัวเลือกทายคำศัพท์ที่วางด้านล่างรูปเดี่ยวสำหรับโหมดช้อยส์และจับเวลา -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto" id="choices-container">
                         <!-- ปุ่มจะแรนเดอร์ด้วย Javascript -->
+                    </div>
+
+                    <!-- ================= โซนเขียนคำศัพท์ฮิรางานะ (Hiragana Writing Mode UI) ================= -->
+                    <div id="writing-mode-container" class="hidden w-full max-w-2xl mx-auto space-y-3">
+                        <div class="bg-white/95 p-4 sm:p-6 rounded-3xl border-2 border-pink-200/90 shadow-md text-center space-y-3">
+                            <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs font-bold text-pink-600 px-1">
+                                <span class="flex items-center gap-1.5 font-black">
+                                    <i class="fa-solid fa-pen-nib text-pink-500"></i> เขียนคำอ่านเป็นตัวฮิราคานะ:
+                                </span>
+                                <button type="button" onclick="toggleRomajiAutoConvert()" id="btn-romaji-toggle"
+                                    class="text-[10px] bg-pink-100 hover:bg-pink-200 text-pink-700 px-3 py-1 rounded-full transition font-extrabold flex items-center gap-1 shadow-sm active:scale-95">
+                                    <i class="fa-solid fa-keyboard"></i> พิมพ์ Romaji อัตโนมัติ: <span id="romaji-status-text" class="text-emerald-600 font-black">เปิด</span>
+                                </button>
+                            </div>
+
+                            <!-- ช่องพิมพ์ฮิรางานะขนาดใหญ่ -->
+                            <div class="relative max-w-md mx-auto">
+                                <input id="writing-input" type="text" placeholder="พิมพ์คำอ่านฮิราคานะ เช่น わたし, にほん..."
+                                    autocomplete="off" autocapitalize="none" spellcheck="false"
+                                    class="w-full text-center py-3.5 px-10 rounded-2xl border-2 border-pink-300 bg-pink-50/30 text-rose-950 font-black text-xl sm:text-2xl focus:border-pink-500 focus:bg-white outline-none shadow-inner transition notranslate font-kawaii writing-input-glow" />
+                                <button type="button" onclick="clearWritingInput()"
+                                    class="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-xl bg-pink-100 hover:bg-pink-200 text-pink-500 hover:text-pink-700 flex items-center justify-center transition text-xs active:scale-90"
+                                    title="ล้างข้อความ">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+
+                            <!-- แผงช่วยใส่ตัวอักษรพิเศษ (促音, 拗音, เสียงยาว, ん) -->
+                            <div class="flex flex-wrap items-center justify-center gap-1.5 pt-1 text-xs">
+                                <span class="text-[10px] text-slate-400 font-bold mr-1">แป้นด่วน:</span>
+                                <button type="button" onclick="insertKanaChar('っ')" class="px-2.5 py-1 rounded-lg bg-pink-50 hover:bg-pink-100 border border-pink-200 font-bold text-pink-700 active:scale-95 transition text-[11px]">っ</button>
+                                <button type="button" onclick="insertKanaChar('ゃ')" class="px-2.5 py-1 rounded-lg bg-pink-50 hover:bg-pink-100 border border-pink-200 font-bold text-pink-700 active:scale-95 transition text-[11px]">ゃ</button>
+                                <button type="button" onclick="insertKanaChar('ゅ')" class="px-2.5 py-1 rounded-lg bg-pink-50 hover:bg-pink-100 border border-pink-200 font-bold text-pink-700 active:scale-95 transition text-[11px]">ゅ</button>
+                                <button type="button" onclick="insertKanaChar('ょ')" class="px-2.5 py-1 rounded-lg bg-pink-50 hover:bg-pink-100 border border-pink-200 font-bold text-pink-700 active:scale-95 transition text-[11px]">ょ</button>
+                                <button type="button" onclick="insertKanaChar('ー')" class="px-2.5 py-1 rounded-lg bg-pink-50 hover:bg-pink-100 border border-pink-200 font-bold text-pink-700 active:scale-95 transition text-[11px]">ー (เสียงยาว)</button>
+                                <button type="button" onclick="insertKanaChar('ん')" class="px-2.5 py-1 rounded-lg bg-pink-50 hover:bg-pink-100 border border-pink-200 font-bold text-pink-700 active:scale-95 transition text-[11px]">ん</button>
+                            </div>
+
+                            <!-- ปุ่มตรวจคำตอบและปุ่มดูเฉลย (เอาปุ่มฟังตัวอย่างเสียงอ่านออกแล้ว) -->
+                            <div class="grid grid-cols-2 gap-3 pt-2 max-w-sm mx-auto">
+                                <button type="button" onclick="submitWritingAnswer()"
+                                    class="bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-black py-3 px-4 rounded-xl shadow-md transition active:scale-95 text-xs flex items-center justify-center gap-1.5">
+                                    <i class="fa-solid fa-check"></i> ตรวจคำตอบ 🌸
+                                </button>
+                                <button type="button" onclick="revealWritingAnswer()"
+                                    class="bg-amber-50 hover:bg-amber-100 text-amber-700 font-bold py-3 px-3 rounded-xl border border-amber-200 transition active:scale-95 text-xs flex items-center justify-center gap-1.5 shadow-sm">
+                                    <i class="fa-solid fa-lightbulb"></i> ดูเฉลย
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ================= โซนพูดออกเสียงคำศัพท์ (Voice Speaking Mode UI - ไม่มีช้อยส์) ================= -->
+                    <div id="speaking-mode-container" class="hidden w-full max-w-2xl mx-auto space-y-4">
+                        <div class="bg-white/95 p-6 rounded-3xl border-2 border-pink-200/90 shadow-md text-center space-y-4">
+                            <div class="space-y-1">
+                                <span class="text-[11px] font-black uppercase tracking-wider text-pink-600 bg-pink-100 px-3 py-1 rounded-full inline-block shadow-sm">
+                                    🎙️ โหมดออกเสียงคำศัพท์ (Voice Challenge - ไม่มีช้อยส์)
+                                </span>
+                                <p class="text-xs text-slate-500 font-bold">กดปุ่มไมโครโฟน แล้วพูดคำศัพท์ภาษาญี่ปุ่นให้ถูกต้องเพื่อผ่านไปข้อต่อไปค่ะ!</p>
+                            </div>
+
+                            <!-- ปุ่มกดพูดไมโครโฟนขนาดใหญ่ พร้อมแอนิเมชันคลื่นเสียง -->
+                            <div class="py-2 flex flex-col items-center justify-center relative">
+                                <button type="button" id="voice-speak-btn" onclick="toggleVoiceSpeechRecognition()"
+                                    class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gradient-to-tr from-pink-500 via-rose-500 to-amber-400 hover:from-pink-600 hover:to-amber-500 text-white shadow-xl shadow-pink-400/40 flex flex-col items-center justify-center gap-1 transition-all duration-300 transform active:scale-90 group relative cursor-pointer border-4 border-white select-none">
+                                    <i id="voice-speak-icon" class="fa-solid fa-microphone text-3xl sm:text-4xl group-hover:scale-110 transition-transform"></i>
+                                    <span id="voice-speak-status" class="text-[10px] font-black uppercase tracking-wider">กดเพื่อพูด</span>
+                                    
+                                    <!-- วงแหวนคลื่นเสียงเมื่อกำลังฟัง -->
+                                    <span id="voice-ripple-1" class="hidden absolute inset-0 rounded-full border-4 border-pink-400 animate-ping opacity-75 pointer-events-none"></span>
+                                    <span id="voice-ripple-2" class="hidden absolute -inset-2 rounded-full border-2 border-rose-300 animate-pulse pointer-events-none"></span>
+                                </button>
+                            </div>
+
+                            <!-- กล่องแสดงข้อความที่ระบบได้ยิน (Live Speech Transcript) -->
+                            <div id="voice-transcript-card" class="p-3 bg-pink-50/70 rounded-2xl border border-pink-200/80 min-h-[52px] flex items-center justify-center max-w-md mx-auto">
+                                <p id="voice-transcript-text" class="text-xs text-slate-500 font-bold italic">
+                                    <i class="fa-solid fa-ear-listen mr-1 text-pink-400"></i> กดปุ่มไมค์แล้วพูดได้เลยค๊าบ...
+                                </p>
+                            </div>
+
+                            <!-- ปุ่มตัวช่วย: ข้ามข้อ (เอาปุ่มตัวอย่างการออกเสียงก่อนตอบออกแล้ว) -->
+                            <div class="flex items-center justify-center pt-1">
+                                <button type="button" onclick="skipSpeakingQuestion()"
+                                    class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2 px-6 rounded-xl border border-slate-200 text-xs transition active:scale-95 flex items-center gap-1.5 shadow-sm">
+                                    <i class="fa-solid fa-forward-step"></i> ข้ามข้อนี้
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- พื้นที่แนะแนวและขั้นตอนการกดข้าม -->
@@ -353,6 +534,7 @@
                             class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500 font-kawaii uppercase">
                             ผ่านเควสต์สำเร็จด่าน!</h2>
                         <p class="text-rose-400/70 text-xs font-bold">คุณทำคะแนนและสะสมความสนิทสนมเรียบร้อยแล้วค่ะ</p>
+                        <p id="result-playstyle-badge" class="inline-block text-[11px] bg-pink-100 text-pink-700 font-extrabold px-3 py-1 rounded-full border border-pink-200 shadow-sm mt-1">🌸 โหมดช้อยส์ปกติ</p>
                     </div>
 
                     <div
@@ -779,6 +961,94 @@ function doGet(e) {
 
         </div>
 
+        <!-- ================= ส่วนท้ายเว็บ (Footer: Discord, โดเนทสนับสนุน PromptPay และ Version 0.0.1) ================= -->
+        <footer class="mt-8 pt-6 border-t border-rose-200/60 flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left">
+            <div class="space-y-2 max-w-md">
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                    <span class="text-base bg-pink-100 p-1.5 rounded-xl shadow-xs">🌸</span>
+                    <span class="text-sm font-black text-rose-950 font-kawaii">日本語 勉強しましょう</span>
+                    <span class="text-[10px] font-black bg-gradient-to-r from-pink-100 to-rose-100 text-rose-700 px-2.5 py-0.5 rounded-full border border-pink-300 shadow-xs">
+                        เวอร์ชัน 0.0.1
+                    </span>
+                </div>
+                <p class="text-[11px] text-slate-500 font-bold leading-relaxed">
+                    ระบบฝึกฝนคำศัพท์ ไวยากรณ์ การเขียนฮิราคานะ และการออกเสียงภาษาญี่ปุ่น Minna no Nihongo (บทที่ 1-50)
+                </p>
+                <div class="pt-1 flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                    <a href="https://discord.gg/Wk2PKVftrk" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 bg-[#5865F2] hover:bg-[#4752C4] text-white text-xs font-black px-4 py-2.5 rounded-2xl shadow-md shadow-indigo-300/30 transition active:scale-95">
+                        <i class="fa-brands fa-discord text-base"></i>
+                        <span>ลิ้งDiscord เเจ้งปัญหา หรือ เสนอบทเรียน</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- การ์ดแปะภาพ หากต้องการสนับสนุนหรือโดเนท PromptPay -->
+            <div class="bg-gradient-to-br from-pink-50/90 via-rose-50/70 to-amber-50/80 p-4 sm:p-5 rounded-3xl border-2 border-pink-200/90 shadow-md flex flex-col sm:flex-row items-center gap-4 max-w-lg w-full">
+                <div class="relative group cursor-pointer shrink-0" onclick="openDonateModal()" title="คลิกเพื่อดูภาพขยาย QR Code">
+                    <img src="images/promptpay_qr.png" alt="หากต้องการสนับสนุนหรือโดเนท PromptPay QR"
+                        class="w-32 h-32 sm:w-36 sm:h-36 object-contain rounded-2xl bg-white p-2 border-2 border-pink-300 shadow-md transition-transform duration-200 group-hover:scale-105">
+                    <span class="absolute -bottom-1.5 -right-1.5 bg-pink-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-[10px] shadow-sm">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </span>
+                </div>
+                <div class="space-y-1.5 text-center sm:text-left">
+                    <div class="flex items-center justify-center sm:justify-start gap-1.5 text-xs sm:text-sm font-black text-rose-950 font-kawaii">
+                        <i class="fa-solid fa-heart text-rose-500 animate-pulse"></i>
+                        <span>หากต้องการสนับสนุนหรือโดเนท</span>
+                    </div>
+                    <p class="text-[11px] text-slate-600 font-bold leading-relaxed">
+                        สามารถสแกน PromptPay QR Code ผ่านแอปธนาคาร เพื่อร่วมสนับสนุนและเป็นกำลังใจในการพัฒนาบทเรียนได้ค่ะ ขอบคุณมากๆ นะคะ 💖🌸
+                    </p>
+                    <div class="pt-1 flex items-center justify-center sm:justify-start gap-2">
+                        <button type="button" onclick="openDonateModal()"
+                            class="bg-white hover:bg-pink-100 text-pink-700 font-extrabold text-[11px] px-3.5 py-1.5 rounded-xl border border-pink-200 transition active:scale-95 shadow-xs flex items-center gap-1.5">
+                            <i class="fa-solid fa-expand"></i> ดูภาพขยาย PromptPay
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ================= ป๊อปอัพหน้าต่างสนับสนุนหรือโดเนท (Donate PromptPay Modal) ================= -->
+    <div id="donate-modal"
+        class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm animate-fade-in"
+        onclick="if(event.target === this) closeDonateModal()">
+        <div
+            class="bg-white/95 rounded-3xl p-6 border-2 border-pink-200 shadow-2xl max-w-sm w-full relative text-center space-y-4">
+            <div class="flex items-center justify-between pb-2 border-b border-pink-100">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">💖</span>
+                    <h3 class="text-sm font-black text-rose-950 font-kawaii">หากต้องการสนับสนุนหรือโดเนท</h3>
+                </div>
+                <button onclick="closeDonateModal()"
+                    class="w-8 h-8 rounded-full bg-pink-100/70 hover:bg-pink-200 text-pink-700 font-black text-xs transition flex items-center justify-center">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="py-2 flex flex-col items-center">
+                <div class="bg-white p-3 rounded-2xl border-2 border-pink-300 shadow-md">
+                    <img src="images/promptpay_qr.png" alt="หากต้องการสนับสนุนหรือโดเนท PromptPay QR"
+                        class="w-64 h-64 sm:w-72 sm:h-72 object-contain rounded-xl" />
+                </div>
+                <p class="text-xs font-bold text-slate-600 mt-3 flex items-center justify-center gap-1">
+                    <i class="fa-solid fa-mobile-screen-button text-pink-500"></i> สแกนผ่านแอปธนาคาร PromptPay ได้ทุกธนาคารค่ะ 🌸
+                </p>
+                <div class="mt-2 text-[10px] text-pink-600 font-bold bg-pink-50 border border-pink-200 px-3 py-1 rounded-full">
+                    เวอร์ชัน 0.0.1
+                </div>
+            </div>
+
+            <div class="pt-2">
+                <button type="button" onclick="closeDonateModal()"
+                    class="w-full bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white font-extrabold text-xs py-2.5 rounded-xl shadow-md transition active:scale-95">
+                    ปิดหน้าต่าง
+                </button>
+            </div>
+        </div>
     </div>
 
     <!-- ================= ป๊อปอัพหน้าต่างแจ้งเพิ่มคำศัพท์ (Suggest Word Modal) ================= -->
@@ -954,8 +1224,8 @@ function doGet(e) {
     <script src="js/data/grammarData.js"></script>
     <!-- โหลดตัวประกอบข้อมูลควิซหลัก -->
     <script src="js/quizData.js"></script>
-    <!-- โหลดตัวรันเกม Logic หลัก (เพิ่ม v=2.5 ป้องกันเบราว์เซอร์มือถือค้างแคช) -->
-    <script src="js/app.js?v=2.5"></script>
+    <!-- โหลดตัวรันเกม Logic หลัก (เพิ่ม v=3.2 ป้องกันเบราว์เซอร์มือถือค้างแคช) -->
+    <script src="js/app.js?v=3.2"></script>
 </body>
 
 </html>
