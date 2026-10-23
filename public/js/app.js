@@ -2216,10 +2216,24 @@ function goHome() {
     const passwordModal = document.getElementById('password-gate-modal');
     if (passwordModal) passwordModal.classList.add('hidden');
 
+    const donateModal = document.getElementById('donate-modal');
+    if (donateModal) donateModal.classList.add('hidden');
+
+    const suggestModal = document.getElementById('suggest-word-modal');
+    if (suggestModal) suggestModal.classList.add('hidden');
+
+    if (companionSidebar) companionSidebar.classList.remove('hidden');
+    if (gameTerminalCol) {
+        gameTerminalCol.classList.remove('md:col-span-12');
+        gameTerminalCol.classList.add('md:col-span-9');
+    }
+
     if (modeSelectionScreen) modeSelectionScreen.classList.remove('hidden');
     window.speechSynthesis.cancel();
     initHomepage();
+    mascotTalk("ยินดีต้อนรับกลับสู่หน้าแรกค๊า! เลือกบทเรียนที่อยากฝึกได้เลยน้า 🌸✨", 'happy');
 }
+window.goHome = goHome;
 
 if (restartBtn) {
     restartBtn.addEventListener('click', () => {
