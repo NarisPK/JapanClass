@@ -489,6 +489,7 @@ function loadQuizDatabase() {
         };
     }
     console.log("loadQuizDatabase: allQuizModes is:", allQuizModes);
+    if (typeof rebuildVocabCache === 'function') rebuildVocabCache();
 
     // รีเซ็ต EXP และค่าเลเวลจำลองสำหรับการรันเซสชันสดแบบ In-Memory
     playerEXP = 0;
@@ -966,8 +967,8 @@ function setPlayStyle(style) {
             descEl.innerText = "🎙️ โหมดพูดออกเสียง (ไม่มีช้อยส์)";
             mascotTalk("เลือกโหมดพูดออกเสียงแล้วค๊า! 🎙️ ดูคำศัพท์แล้วกดปุ่มไมค์พูดภาษาญี่ปุ่นให้ถูกต้องเพื่อผ่านไปข้อต่อไปค่ะ!", 'happy');
         } else {
-            descEl.innerText = "🌸 ช้อยส์ 4 ตัวเลือก (มาตรฐาน)";
-            mascotTalk("เลือกโหมดช้อยส์ปกติแล้วค๊า! 🌸 มาสนุกกับการทายคำศัพท์กันเลยนะคะ!", 'happy');
+            descEl.innerText = "🌸 ช้อยส์ 4 ตัวเลือก (ตัวหลอกระดับสูง JLPT)";
+            mascotTalk("เลือกโหมดช้อยส์แล้วค๊า! 🌸 อัปเกรดตัวเลือกหลอกให้ท้าทาย คาดเดาได้ยากขึ้นตามข้อสอบจริงเลยนะคะ!", 'happy');
         }
     }
 }
@@ -1076,7 +1077,7 @@ function onQuestionTimeUp() {
 
     // ไฮไลต์ข้อที่ถูกต้องด้วยสีเขียว
     if (allButtons[currentData.correct]) {
-        allButtons[currentData.correct].className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-700 font-extrabold shadow-sm";
+        allButtons[currentData.correct].className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-700 font-extrabold shadow-sm flex items-center";
     }
 
     if (feedbackText) {
@@ -1715,6 +1716,345 @@ function updateComboUI() {
     }
 }
 
+// =======================================================================
+// ===== ระบบสร้างตัวเลือกคำตอบอัจฉริยะ ระดับสูง คาดเดาได้ยาก (JLPT Smart Distractors) =====
+// =======================================================================
+let allVocabDatabase = [];
+
+function rebuildVocabCache() {
+    allVocabDatabase = [];
+    if (typeof allQuizModes === 'undefined') return;
+    Object.keys(allQuizModes).forEach(k => {
+        const mode = allQuizModes[k];
+        if (mode && !mode.isGrammar && Array.isArray(mode.questions)) {
+            mode.questions.forEach(q => {
+                const reading = q.japaneseText || (q.choices && q.correct !== undefined ? q.choices[q.correct] : null);
+                if (reading && typeof reading === 'string') {
+                    const rClean = reading.trim();
+                    if (!allVocabDatabase.some(item => item.reading === rClean)) {
+                        allVocabDatabase.push({
+                            reading: rClean,
+                            kanji: q.kanji || q.character || rClean,
+                            modeKey: k
+                        });
+                    }
+                }
+            });
+        }
+    });
+}
+
+const DAKUON_MAP = {
+    'か':'が', 'き':'ぎ', 'く':'ぐ', 'け':'げ', 'こ':'ご',
+    'が':'か', 'ぎ':'き', 'ぐ':'く', 'げ':'け', 'ご':'こ',
+    'さ':'ざ', 'し':'じ', 'す':'ず', 'せ':'ぜ', 'そ':'ぞ',
+    'ざ':'さ', 'じ':'し', 'ず':'す', 'ぜ':'せ', 'ぞ':'そ',
+    'た':'だ', 'ち':'ぢ', 'つ':'づ', 'て':'で', 'と':'ど',
+    'だ':'た', 'ぢ':'ち', 'づ':'つ', 'で':'て', 'ど':'と',
+    'は':'ば', 'ば':'ぱ', 'ぱ':'は',
+    'ひ':'び', 'び':'ぴ', 'ぴ':'ひ',
+    'ふ':'ぶ', 'ぶ':'ぷ', 'ぷ':'ふ',
+    'へ':'べ', 'べ':'ぺ', 'ペ':'へ',
+    'ほ':'ぼ', 'ぼ':'ぽ', 'ぽ':'ほ',
+    'カ':'ガ', 'キ':'ギ', 'ク':'グ', 'ケ':'ゲ', 'コ':'ゴ',
+    'ガ':'カ', 'ギ':'キ', 'グ':'ク', 'ゲ':'ケ', 'ゴ':'コ',
+    'サ':'ザ', 'シ':'ジ', 'ス':'ズ', 'セ':'ゼ', 'ソ':'ゾ',
+    'ザ':'サ', 'ジ':'シ', 'ズ':'ス', 'ゼ':'セ', 'ゾ':'ソ',
+    'タ':'ダ', 'チ':'ヂ', 'ツ':'ヅ', 'テ':'デ', 'ト':'ド',
+    'ダ':'タ', 'ヂ':'チ', 'ヅ':'ツ', 'デ':'テ', 'ド':'ト',
+    'ハ':'バ', 'バ':'パ', 'パ':'ハ',
+    'ヒ':'ビ', 'ビ':'ピ', 'ピ':'ヒ',
+    'フ':'ブ', 'ブ':'プ', 'プ':'フ',
+    'ヘ':'ベ', 'ベ':'ペ', 'ペ':'ヘ',
+    'ホ':'ボ', 'ボ':'ポ', 'ポ':'ホ'
+};
+
+const ALT_DAKUON = {
+    'ば':'は', 'ぱ':'ば', 'び':'ひ', 'ぴ':'び', 'ぶ':'ふ', 'ぷ':'ぶ', 'べ':'へ', 'ぺ':'べ', 'ぼ':'ほ', 'ぽ':'ぼ',
+    'ち':'じ', 'じ':'ち', 'づ':'ず', 'ず':'つ', 'で':'て', 'て':'で'
+};
+
+const SOKUON_ELIGIBLE = 'かきくけこがぎぐげごさしすせそざじずぜぞたちつてとだぢづでどぱぴぷぺぽカキクケコサシスセソタチツテトパピプペポ';
+
+const SEMANTIC_GROUPS = [
+    // 0: วันในสัปดาห์ (Days of week)
+    ["げつようび", "かようび", "すいようび", "もくようび", "きんようび", "どようび", "にちようび", "なんようび"],
+    // 1: ลักษณนามแบบญี่ปุ่นดั้งเดิม (Native counters)
+    ["ひとつ", "ふたつ", "みっつ", "よっつ", "いつつ", "むっつ", "ななつ", "やっつ", "ここのつ", "とお"],
+    // 2: วันที่ของเดือน (Days of month)
+    ["ついたち", "ふつか", "みっか", "よっか", "いつか", "むいか", "なのか", "ようか", "ここのか", "とおか", "じゅうよっか", "はつか", "にじゅうよっか"],
+    // 3: คำบอกเวลาสัมพันธ์ (Relative time)
+    ["きのう", "きょう", "あした", "あさって", "おととい", "いま", "まいあさ", "まいばん", "まいにち", "こんばん", "けさ", "ゆうがた", "ひる", "よる", "あさ"],
+    // 4: ทิศทางและตำแหน่ง (Directions / Positions)
+    ["うえ", "した", "まえ", "うしろ", "みぎ", "ひだり", "なか", "そと", "となり", "ちかく", "あいだ"],
+    // 5: ครอบครัว (Family)
+    ["ちち", "はは", "あに", "あね", "おとうと", "いもうと", "おっと", "つま", "こども", "りょうしん", "かぞく", "おとうさん", "おかあさん", "おにいさん", "おねえさん", "おとうとさん", "いもうとさん"],
+    // 6: ยานพาหนะ (Transportation)
+    ["でんしゃ", "ちかてつ", "しんかんせん", "バス", "タクシー", "じてんしゃ", "ひこうき", "ふね", "くるま", "あるいて"],
+    // 7: สถานที่ (Places / Facilities)
+    ["がっこう", "だいがく", "スーパー", "えき", "びょういん", "ぎんこう", "ゆうびんきょく", "としょかん", "びじゅつかん", "こうえん", "きっさてん", "レストラン", "かいしゃ", "うち", "へや", "きょうしつ", "うけつけ", "じむしょ", "デパート"],
+    // 8: อาหารและเครื่องดื่ม (Food & Drink)
+    ["ごはん", "パン", "たまご", "にく", "さかな", "やさい", "くだもの", "みず", "おちゃ", "こうちゃ", "ぎゅうにゅう", "ジュース", "ビール", "おさけ"],
+    // 9: เดือน (Months)
+    ["いちがつ", "にがつ", "さんがつ", "しがつ", "ごがつ", "ろくがつ", "しちがつ", "はちがつ", "くがつ", "じゅうがつ", "じゅういちがつ", "じゅうにがつ", "なんがつ"]
+];
+
+function generateLinguisticTraps(word, isVerb = false) {
+    if (!word || typeof word !== 'string' || word.length < 2) return [];
+    const traps = [];
+
+    let stem = word;
+    let suffix = '';
+    if (isVerb && word.endsWith('ます')) {
+        stem = word.slice(0, -2);
+        suffix = 'ます';
+    }
+
+    // 1. Dakuon/Handakuon single replacement
+    for (let i = 0; i < stem.length; i++) {
+        const char = stem[i];
+        if (DAKUON_MAP[char]) {
+            const variant = stem.substring(0, i) + DAKUON_MAP[char] + stem.substring(i + 1) + suffix;
+            if (variant !== word && !traps.includes(variant)) traps.push(variant);
+        }
+        if (ALT_DAKUON[char]) {
+            const variant = stem.substring(0, i) + ALT_DAKUON[char] + stem.substring(i + 1) + suffix;
+            if (variant !== word && !traps.includes(variant)) traps.push(variant);
+        }
+    }
+
+    // 2. Dakuon multi-replacement
+    const positions = [];
+    for (let i = 0; i < stem.length; i++) {
+        if (DAKUON_MAP[stem[i]]) positions.push(i);
+    }
+    if (positions.length >= 2) {
+        let multi = stem.split('');
+        positions.forEach(p => { multi[p] = DAKUON_MAP[multi[p]]; });
+        const v = multi.join('') + suffix;
+        if (v !== word && !traps.includes(v)) traps.push(v);
+    }
+
+    // 3. Sokuon removal and insertion
+    if (stem.includes('っ')) {
+        const v = stem.replace(/っ/g, '') + suffix;
+        if (v !== word && !traps.includes(v)) traps.push(v);
+    } else if (stem.includes('ッ')) {
+        const v = stem.replace(/ッ/g, '') + suffix;
+        if (v !== word && !traps.includes(v)) traps.push(v);
+    } else {
+        for (let i = 1; i < stem.length; i++) {
+            if (SOKUON_ELIGIBLE.includes(stem[i])) {
+                const v = stem.substring(0, i) + 'っ' + stem.substring(i) + suffix;
+                if (v !== word && !traps.includes(v)) traps.push(v);
+                break;
+            }
+        }
+    }
+
+    // 4. Youon traps (びょういん -> びよういん, びょいん)
+    if (stem.includes('ょう')) {
+        const v1 = stem.replace('ょう', 'よう') + suffix;
+        const v2 = stem.replace('ょう', 'ょ') + suffix;
+        if (v1 !== word && !traps.includes(v1)) traps.push(v1);
+        if (v2 !== word && !traps.includes(v2)) traps.push(v2);
+    } else if (stem.includes('ゅう')) {
+        const v1 = stem.replace('ゅう', 'ゆ') + suffix;
+        const v2 = stem.replace('ゅう', 'ゆう') + suffix;
+        if (v1 !== word && !traps.includes(v1)) traps.push(v1);
+        if (v2 !== word && !traps.includes(v2)) traps.push(v2);
+    } else if (stem.includes('ょ')) {
+        const v1 = stem.replace('ょ', 'よ') + suffix;
+        if (v1 !== word && !traps.includes(v1)) traps.push(v1);
+    } else if (stem.includes('ゅ')) {
+        const v1 = stem.replace('ゅ', 'ゆ') + suffix;
+        if (v1 !== word && !traps.includes(v1)) traps.push(v1);
+    } else if (stem.includes('ゃ')) {
+        const v1 = stem.replace('ゃ', 'や') + suffix;
+        if (v1 !== word && !traps.includes(v1)) traps.push(v1);
+    }
+
+    // 5. Chouon (長音)
+    if (stem.includes('ー')) {
+        const v = stem.replace(/ー/g, '') + suffix;
+        if (v !== word && !traps.includes(v)) traps.push(v);
+    } else if (!isVerb && (stem.endsWith('とう') || stem.endsWith('こう') || stem.endsWith('そう') || stem.endsWith('どう') || stem.endsWith('ろう') || stem.endsWith('ほう'))) {
+        const v = stem.slice(0, -1) + suffix;
+        if (v !== word && !traps.includes(v)) traps.push(v);
+    } else if (!isVerb && (stem.endsWith('けい') || stem.endsWith('めい') || stem.endsWith('せい') || stem.endsWith('てい'))) {
+        const v1 = stem.slice(0, -1) + suffix;
+        const v2 = stem.replace('い', 'え') + suffix;
+        if (v1 !== word && !traps.includes(v1)) traps.push(v1);
+        if (v2 !== word && !traps.includes(v2)) traps.push(v2);
+    }
+
+    return traps;
+}
+
+function generateNightmareChoices(question, targetReading, activeQuestions) {
+    const target = targetReading || question.japaneseText || (question.choices && question.choices[question.correct]) || question.character || '';
+    if (!target) return question.choices || [];
+
+    const isVerb = target.endsWith('ます') || (question.kanji && question.kanji.endsWith('ます'));
+
+    let matchedGroup = null;
+    for (const group of SEMANTIC_GROUPS) {
+        if (group.includes(target)) {
+            matchedGroup = group;
+            break;
+        }
+    }
+
+    const chosenDistractors = [];
+
+    // 1. Strict semantic categories
+    if (matchedGroup) {
+        const pool = matchedGroup.filter(w => w !== target);
+        pool.sort(() => Math.random() - 0.5);
+        chosenDistractors.push(...pool.slice(0, 3));
+    }
+    // 2. Verbs ending in ます
+    else if (isVerb) {
+        const allVerbs = allVocabDatabase.map(i => i.reading).filter(r => r && r !== target && r.endsWith('ます'));
+        const subEnding = target.length >= 4 ? target.slice(-3) : target.slice(-2);
+        const sameSubEnding = allVerbs.filter(v => v.endsWith(subEnding) && Math.abs(v.length - target.length) <= 1);
+        sameSubEnding.sort(() => Math.random() - 0.5);
+        for (const v of sameSubEnding) {
+            if (!chosenDistractors.includes(v)) chosenDistractors.push(v);
+            if (chosenDistractors.length === 3) break;
+        }
+
+        if (chosenDistractors.length < 3) {
+            const traps = generateLinguisticTraps(target, true);
+            traps.sort(() => Math.random() - 0.5);
+            for (const t of traps) {
+                if (!chosenDistractors.includes(t)) chosenDistractors.push(t);
+                if (chosenDistractors.length === 3) break;
+            }
+        }
+
+        if (chosenDistractors.length < 3) {
+            const sameLenVerbs = allVerbs.filter(v => v.length === target.length);
+            sameLenVerbs.sort(() => Math.random() - 0.5);
+            for (const v of sameLenVerbs) {
+                if (!chosenDistractors.includes(v)) chosenDistractors.push(v);
+                if (chosenDistractors.length === 3) break;
+            }
+        }
+
+        if (chosenDistractors.length < 3) {
+            allVerbs.sort(() => Math.random() - 0.5);
+            for (const v of allVerbs) {
+                if (!chosenDistractors.includes(v)) chosenDistractors.push(v);
+                if (chosenDistractors.length === 3) break;
+            }
+        }
+    }
+    // 3. Nouns & Adjectives
+    else {
+        // Priority 1: Linguistic phonetic traps
+        const traps = generateLinguisticTraps(target, false);
+        traps.sort(() => Math.random() - 0.5);
+        for (const t of traps) {
+            if (!chosenDistractors.includes(t)) {
+                chosenDistractors.push(t);
+                if (chosenDistractors.length === 3) break;
+            }
+        }
+
+        // Priority 2: Words that start with or end with the same 2 morae
+        if (chosenDistractors.length < 3 && target.length >= 2) {
+            const prefix = target.slice(0, 2);
+            const suffix = target.slice(-2);
+            const closeWords = allVocabDatabase
+                .map(i => i.reading)
+                .filter(w => w && w !== target && !w.endsWith('ます') && Math.abs(w.length - target.length) <= 1 && (w.startsWith(prefix) || w.endsWith(suffix)));
+            closeWords.sort(() => Math.random() - 0.5);
+            for (const w of closeWords) {
+                if (!chosenDistractors.includes(w)) {
+                    chosenDistractors.push(w);
+                    if (chosenDistractors.length === 3) break;
+                }
+            }
+        }
+
+        // Priority 3: Words with identical length
+        if (chosenDistractors.length < 3) {
+            const sameLen = allVocabDatabase
+                .map(i => i.reading)
+                .filter(w => w && w !== target && !w.endsWith('ます') && w.length === target.length);
+            sameLen.sort(() => Math.random() - 0.5);
+            for (const w of sameLen) {
+                if (!chosenDistractors.includes(w)) {
+                    chosenDistractors.push(w);
+                    if (chosenDistractors.length === 3) break;
+                }
+            }
+        }
+
+        // Priority 4: Words from current lesson questions
+        if (chosenDistractors.length < 3 && Array.isArray(activeQuestions)) {
+            const lessonWords = activeQuestions
+                .map(q => q.japaneseText || (q.choices && q.correct !== undefined ? q.choices[q.correct] : null))
+                .filter(w => w && w !== target);
+            lessonWords.sort(() => Math.random() - 0.5);
+            for (const w of lessonWords) {
+                if (!chosenDistractors.includes(w)) {
+                    chosenDistractors.push(w);
+                    if (chosenDistractors.length === 3) break;
+                }
+            }
+        }
+
+        // Priority 5: Fallback to any words in allVocabDatabase
+        if (chosenDistractors.length < 3) {
+            const anyWords = allVocabDatabase
+                .map(i => i.reading)
+                .filter(w => w && w !== target);
+            anyWords.sort(() => Math.random() - 0.5);
+            for (const w of anyWords) {
+                if (!chosenDistractors.includes(w)) {
+                    chosenDistractors.push(w);
+                    if (chosenDistractors.length === 3) break;
+                }
+            }
+        }
+    }
+
+    const finalChoices = [target, ...chosenDistractors.slice(0, 3)];
+    for (let i = finalChoices.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [finalChoices[i], finalChoices[j]] = [finalChoices[j], finalChoices[i]];
+    }
+    return finalChoices;
+}
+
+function prepareChallengingVocabChoices(currentData, activeMode, modeKey) {
+    if (!currentData) return;
+
+    if (!currentData._originalCorrect) {
+        if (currentData.japaneseText) {
+            currentData._originalCorrect = currentData.japaneseText;
+        } else if (currentData.choices && currentData.correct !== undefined && currentData.choices[currentData.correct]) {
+            currentData._originalCorrect = currentData.choices[currentData.correct];
+        } else if (currentData.character) {
+            currentData._originalCorrect = currentData.character;
+        }
+    }
+
+    const target = currentData._originalCorrect;
+    if (!target) return;
+
+    if (!allVocabDatabase || allVocabDatabase.length === 0) {
+        rebuildVocabCache();
+    }
+
+    const lessonQuestions = activeMode && Array.isArray(activeMode.questions) ? activeMode.questions : [];
+    const finalChoices = generateNightmareChoices(currentData, target, lessonQuestions);
+    currentData.choices = finalChoices;
+    currentData.correct = finalChoices.indexOf(target);
+}
+
 // โหลดข้อมูลเควสต์คำศัพท์หรือไวยากรณ์ทีละข้อ
 function loadQuestion() {
     answerSelected = false;
@@ -1761,7 +2101,7 @@ function loadQuestion() {
             playstyleBadge.innerHTML = `🎙️ พูดออกเสียง`;
         } else {
             playstyleBadge.className = 'text-[10px] bg-pink-100 text-pink-700 font-black px-2.5 py-0.5 rounded-full border border-pink-200 shadow-sm flex items-center gap-1';
-            playstyleBadge.innerHTML = `🌸 ช้อยส์ปกติ`;
+            playstyleBadge.innerHTML = `🌸 ช้อยส์ปกติ (ตัวหลอกระดับสูง)`;
         }
     }
 
@@ -1892,6 +2232,25 @@ function loadQuestion() {
         choicesContainer.innerHTML = "";
         if (currentPlayStyle !== 'writing' && currentPlayStyle !== 'speaking') {
             choicesContainer.classList.remove('hidden');
+
+            if (activeMode.isGrammar || currentModeKey === 'ひらかな' || currentModeKey === 'カタカナ') {
+                if (Array.isArray(currentData.choices)) {
+                    if (!currentData._originalCorrect) {
+                        currentData._originalCorrect = currentData.choices[currentData.correct];
+                    }
+                    const correctVal = currentData._originalCorrect;
+                    const shuffled = [...currentData.choices];
+                    for (let i = shuffled.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+                    }
+                    currentData.choices = shuffled;
+                    currentData.correct = shuffled.indexOf(correctVal);
+                }
+            } else {
+                prepareChallengingVocabChoices(currentData, activeMode, currentModeKey);
+            }
+
             currentData.choices.forEach((choice, index) => {
                 const button = document.createElement('button');
                 button.setAttribute('translate', 'no');
@@ -1899,8 +2258,8 @@ function loadQuestion() {
                     button.className = "w-full text-center py-4 px-6 rounded-2xl border-2 border-rose-100/60 bg-white hover:bg-pink-50 hover:border-pink-300 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-center justify-center gap-3";
                     button.innerHTML = `<span class="bg-pink-100 px-2.5 py-1 rounded-xl text-xs font-black text-pink-600 font-kawaii">${index + 1}</span> <span class="font-kawaii text-2xl font-black text-rose-850">${choice}</span>`;
                 } else {
-                    button.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-rose-100/50 bg-white hover:bg-pink-50/75 hover:border-pink-300 text-xs font-bold text-rose-950 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate";
-                    button.innerHTML = `<span class="bg-pink-100 px-1.5 py-0.5 rounded text-[9px] font-black text-pink-600 border border-pink-200 mr-1.5 font-kawaii">${index + 1}</span> ${choice}`;
+                    button.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-rose-100/50 bg-white hover:bg-pink-50/75 hover:border-pink-300 text-sm sm:text-base font-bold text-rose-950 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-center";
+                    button.innerHTML = `<span class="bg-pink-100 px-2 py-0.5 rounded text-[10px] font-black text-pink-600 border border-pink-200 mr-2.5 font-kawaii shrink-0">${index + 1}</span> <span class="break-words">${choice}</span>`;
                 }
                 button.setAttribute('data-no-click-sound', 'true');
                 button.addEventListener('click', () => selectAnswer(index, button));
@@ -2015,7 +2374,7 @@ function selectAnswer(selectedIndex, clickedButton) {
     // --- ประมวลผลผลลัพธ์โหมดคำศัพท์ปกติ (Vocabulary Mode) ---
     if (selectedIndex === currentData.correct) {
         playCorrectSound();
-        clickedButton.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-600 font-extrabold shadow-[0_0_15px_rgba(52,211,153,0.2)] transition-all";
+        clickedButton.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-600 font-extrabold shadow-[0_0_15px_rgba(52,211,153,0.2)] transition-all flex items-center";
         let bonusExp = 0;
         let speedBonusText = "";
         if (currentPlayStyle === 'timer' && timeLeft >= Math.floor(timerDuration * 0.45)) {
@@ -2040,7 +2399,7 @@ function selectAnswer(selectedIndex, clickedButton) {
         mascotTalk(`เก่งมากๆ เลยค๊าาา! ตอบถูกเผงเลย คำนี้อ่านว่า『${displayWord}』นะคะ! คอมโบสะสม x${comboStreak} แล้วน้า! 🎉`, 'happy');
     } else {
         playIncorrectSound();
-        clickedButton.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-500 font-extrabold shadow-[0_0_15px_rgba(244,63,94,0.2)] transition-all";
+        clickedButton.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-500 font-extrabold shadow-[0_0_15px_rgba(244,63,94,0.2)] transition-all flex items-center";
         if (feedbackText) {
             feedbackText.innerText = "❌ 残念 (ยังไม่ถูกน้าค๊า)";
             feedbackText.className = "text-rose-500 text-sm font-black";
@@ -2053,7 +2412,7 @@ function selectAnswer(selectedIndex, clickedButton) {
         const displayWord = (currentData.character && currentData.choices) ? `${currentData.character} (${currentData.choices[currentData.correct]})` : (currentData.japaneseText || (currentData.choices && currentData.choices[currentData.correct]) || 'เฉลย');
         mascotTalk(`โถ่... อย่าเพิ่งถอดใจนะค๊า! คำตอบที่ถูกต้องคือ『${displayWord}』จ้า ข้อต่อไปสู้ๆ น้าค๊า! 💪`, 'sad');
         if (allButtons[currentData.correct]) {
-            allButtons[currentData.correct].className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-700 font-extrabold shadow-sm";
+            allButtons[currentData.correct].className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-700 font-extrabold shadow-sm flex items-center";
         }
     }
 
@@ -2469,6 +2828,7 @@ async function syncApprovedWords() {
     });
 
     if (addedCount > 0) {
+        if (typeof rebuildVocabCache === 'function') rebuildVocabCache();
         renderModesList();
     }
 }
