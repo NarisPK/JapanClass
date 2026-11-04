@@ -4096,6 +4096,67 @@ window.switchCategoryTab = switchCategoryTab;
 window.showComingSoonNotice = showComingSoonNotice;
 window.renderCategoryTabs = renderCategoryTabs;
 
+
+// ===== จัดการระบบสลับโหมดมืด / โหมดสว่าง (Dark / Light Theme Toggle) =====
+let currentTheme = 'light';
+
+function initTheme() {
+    try {
+        const savedTheme = localStorage.getItem('japanclass_theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setTheme('dark', false);
+        } else {
+            setTheme('light', false);
+        }
+    } catch (e) {
+        setTheme('light', false);
+    }
+}
+
+function setTheme(theme, announce = true) {
+    currentTheme = theme;
+    const htmlEl = document.documentElement;
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    const themeIcon = document.getElementById('theme-toggle-icon');
+    const themeText = document.getElementById('theme-toggle-text');
+
+    if (theme === 'dark') {
+        htmlEl.classList.add('dark');
+        if (themeIcon) themeIcon.className = "fa-solid fa-sun text-amber-300";
+        if (themeText) themeText.innerText = "โหมดสว่าง";
+        if (themeBtn) {
+            themeBtn.title = "สลับไปโหมดสว่าง (Light Mode)";
+        }
+        if (announce && typeof mascotTalk === 'function') {
+            mascotTalk("สลับสู่โหมดมืดเรียบร้อยค๊า! 🌙✨ สบายตา เหมาะสำหรับฝึกฝนช่วงค่ำคืนนะคะ!", 'happy');
+        }
+    } else {
+        htmlEl.classList.remove('dark');
+        if (themeIcon) themeIcon.className = "fa-solid fa-moon text-indigo-500";
+        if (themeText) themeText.innerText = "โหมดมืด";
+        if (themeBtn) {
+            themeBtn.title = "สลับไปโหมดมืด (Dark Mode)";
+        }
+        if (announce && typeof mascotTalk === 'function') {
+            mascotTalk("สลับสู่โหมดสว่างเรียบร้อยค๊า! ☀️🌸 สดใส มีพลัง พร้อมลุยภาษาญี่ปุ่นแล้วค๊า!", 'happy');
+        }
+    }
+
+    try {
+        localStorage.setItem('japanclass_theme', theme);
+    } catch (e) { }
+}
+
+function toggleTheme() {
+    try { if (typeof playClickSound === 'function') playClickSound(); } catch (e) { }
+    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(nextTheme, true);
+}
+
+window.initTheme = initTheme;
+window.setTheme = setTheme;
+window.toggleTheme = toggleTheme;
+
 // ผูกฟังก์ชันระบบแจ้งเพิ่มคำศัพท์เข้ากับ window
 window.openSuggestModal = openSuggestModal;
 window.closeSuggestModal = closeSuggestModal;
@@ -4110,6 +4171,7 @@ window.deleteSuggestion = deleteSuggestion;
 
 // เริ่มต้นการทำงานทั้งหมดเมื่อหน้าต่างถูกโหลดสำเร็จ
 window.onload = function () {
+    initTheme();
     createSakuraPetals();
     loadQuizDatabase();
     syncApprovedWords(); // ซิงค์คำศัพท์ที่ได้รับอนุมัติทั้งหมดเข้าสู่โจทย์ของแต่ละบททันที
