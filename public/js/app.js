@@ -395,6 +395,29 @@ const bookConfigs = {
         badgeColor: "text-amber-500",
         badgeIcon: "fa-graduation-cap",
         mascotMsg: "ยินดีต้อนรับสู่ มินนะ โนะ นิฮงโกะ เล่ม 4 (บทที่ 39-50) ค๊า! 📙🔥 เล่มสุดท้ายครบ 50 บท พิชิตข้อสอบ N4 ได้แน่นอนค๊า!"
+    },
+    5: {
+        num: 5,
+        title: "คลังข้อสอบวัดระดับภาษาญี่ปุ่น JLPT N4",
+        rangeText: "ข้อสอบเก่าแยกพาร์ท (คำศัพท์・ไวยากรณ์・การอ่าน・การฟัง)",
+        vocabLabel: "🎯 คำศัพท์ (言葉)",
+        grammarLabel: "⛩️ ไวยากรณ์ (文法)",
+        readingLabel: "📖 การอ่าน (読解)",
+        listeningLabel: "🎧 การฟัง (聴解)",
+        themeGrad: "from-purple-500 to-indigo-600",
+        themeShadow: "shadow-purple-300/30",
+        activeClass: "py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r from-purple-500 to-indigo-600 text-white shadow-purple-300/30",
+        inactiveClass: "py-2.5 px-3 rounded-xl font-bold text-xs transition-all duration-200 flex items-center justify-center gap-1.5 text-purple-700 hover:bg-purple-50",
+        btnLabel: "🎯 คลังข้อสอบ N4",
+        headerBg: "from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 shadow-purple-300/30",
+        cardBgVocab: "from-purple-100 to-indigo-200/50 border-purple-200 text-purple-800 hover:border-purple-300 hover:from-purple-200/60 hover:to-indigo-200/70",
+        cardBgGrammar: "from-purple-50 to-indigo-100/70 border-purple-200 text-purple-900 hover:border-purple-300 hover:from-purple-100 hover:to-indigo-100",
+        borderClass: "border-purple-100",
+        textTitle: "text-purple-950",
+        textSub: "text-purple-600/80",
+        badgeColor: "text-purple-500",
+        badgeIcon: "fa-award",
+        mascotMsg: "ยินดีต้อนรับสู่ คลังข้อสอบ JLPT N4 ค๊า! 🎯 เลือกฝึกพาร์ทคำศัพท์ ไวยากรณ์ หรือดูโครงสร้างพาร์ทการอ่านและการฟังได้เลยนะคะ!"
     }
 };
 
@@ -736,7 +759,7 @@ let currentBook = 1;
 let currentCategoryTab = 'vocab';
 
 function switchBook(bookNum) {
-    const num = Math.max(1, Math.min(4, parseInt(bookNum, 10) || 1));
+    const num = Math.max(1, Math.min(5, parseInt(bookNum, 10) || 1));
     currentBook = num;
     try {
         window.location.hash = `book${currentBook}`;
@@ -748,8 +771,8 @@ function switchBook(bookNum) {
     const subtitleEl = document.getElementById('main-book-subtitle');
     if (subtitleEl) subtitleEl.innerText = `${cfg.title} (${cfg.rangeText})`;
 
-    // ปรับเปลี่ยนสถานะปุ่มกดเลือกเล่มทั้ง 4 ปุ่ม
-    for (let b = 1; b <= 4; b++) {
+    // ปรับเปลี่ยนสถานะปุ่มกดเลือกเล่มทั้ง 5 ปุ่ม
+    for (let b = 1; b <= 5; b++) {
         const btn = document.getElementById(`book-${b}-btn`);
         if (btn) {
             const bCfg = bookConfigs[b];
@@ -768,22 +791,32 @@ function switchBook(bookNum) {
         headerToggleBtn.className = `bg-gradient-to-r ${cfg.headerBg} text-white font-extrabold text-[10px] md:text-xs py-2 px-3 rounded-xl transition duration-150 flex items-center gap-1.5 active:scale-95 shadow-md`;
     }
     if (headerToggleText) {
-        const nextBook = (currentBook % 4) + 1;
-        headerToggleText.innerHTML = `สลับไป เล่ม ${nextBook} ➔`;
+        const nextBook = (currentBook % 5) + 1;
+        headerToggleText.innerHTML = (nextBook === 5) ? `สลับไป คลังข้อสอบ N4 ➔` : `สลับไป เล่ม ${nextBook} ➔`;
     }
 
     // ปรับเปลี่ยนข้อความปุ่มแจ้งเพิ่มคำศัพท์ในหน้านี้
     const suggestInBookText = document.getElementById('btn-suggest-in-book-text');
     if (suggestInBookText) {
-        suggestInBookText.innerText = `➕ แจ้งเพิ่มคลังคำศัพท์ (เล่ม ${currentBook})`;
+        suggestInBookText.innerText = (currentBook === 5) ? `➕ แจ้งเพิ่มคำศัพท์ (JLPT N4)` : `➕ แจ้งเพิ่มคลังคำศัพท์ (เล่ม ${currentBook})`;
     }
 
     mascotTalk(cfg.mascotMsg, 'happy');
-    switchCategoryTab(currentCategoryTab);
+    if (currentBook === 5) {
+        if (!['vocab', 'grammar', 'reading', 'listening'].includes(currentCategoryTab)) {
+            currentCategoryTab = 'vocab';
+        }
+    } else {
+        if (currentCategoryTab === 'reading' || currentCategoryTab === 'listening') {
+            currentCategoryTab = 'vocab';
+        }
+    }
+    renderCategoryTabs();
+    renderModesList();
 }
 
 function cycleBook() {
-    const next = (currentBook % 4) + 1;
+    const next = (currentBook % 5) + 1;
     switchBook(next);
 }
 
@@ -791,31 +824,55 @@ function toggleBook() {
     cycleBook();
 }
 
-function switchCategoryTab(tab) {
-    currentCategoryTab = tab;
-    const tabVocabBtn = document.getElementById('tab-vocab-btn');
-    const tabGrammarBtn = document.getElementById('tab-grammar-btn');
+function showComingSoonNotice(partName, sectionTitle) {
+    try { playClickSound(); } catch (e) { }
+    mascotTalk(`พาร์ท${partName} หัวข้อ「${sectionTitle}」ได้จัดทำโครงสร้างเตรียมไว้เรียบร้อยแล้วค๊า! 🌸✨ กำลังเตรียมพร้อมข้อสอบจริงเร็วๆ นี้นะคะ!`, 'happy');
+}
+
+function renderCategoryTabs() {
+    const container = document.getElementById('category-tabs-container');
+    if (!container) return;
     const cfg = bookConfigs[currentBook] || bookConfigs[1];
 
-    if (tab === 'vocab') {
-        if (tabVocabBtn) {
-            tabVocabBtn.className = `flex-1 py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r ${cfg.themeGrad} text-white ${cfg.themeShadow}`;
-            tabVocabBtn.innerHTML = cfg.vocabLabel;
-        }
-        if (tabGrammarBtn) {
-            tabGrammarBtn.className = "flex-1 py-2.5 px-3 rounded-xl font-bold text-xs transition-all duration-200 flex items-center justify-center gap-1.5 text-slate-700 hover:bg-slate-100";
-            tabGrammarBtn.innerHTML = cfg.grammarLabel;
-        }
+    if (currentBook === 5) {
+        container.className = "grid grid-cols-2 sm:grid-cols-4 gap-2 p-1.5 bg-white/80 backdrop-blur-md rounded-2xl border border-purple-100 max-w-2xl mx-auto shadow-sm";
+        const tabs = [
+            { id: 'vocab', label: '🎯 คำศัพท์ (言葉)', count: '333 ข้อ' },
+            { id: 'grammar', label: '⛩️ ไวยากรณ์ (文法)', count: '56 ข้อ' },
+            { id: 'reading', label: '📖 การอ่าน (読解)', count: 'เตรียมพร้อม 🌸' },
+            { id: 'listening', label: '🎧 การฟัง (聴解)', count: 'เตรียมพร้อม 🌸' }
+        ];
+        container.innerHTML = tabs.map(t => {
+            const isActive = currentCategoryTab === t.id;
+            const activeStyle = `bg-gradient-to-r ${cfg.themeGrad} text-white ${cfg.themeShadow} font-black shadow-sm`;
+            const inactiveStyle = `text-purple-700 hover:bg-purple-50 font-bold bg-white/60`;
+            return `
+                <button onclick="switchCategoryTab('${t.id}')"
+                    class="py-2 px-2 rounded-xl text-xs transition-all duration-200 flex flex-col items-center justify-center gap-0.5 ${isActive ? activeStyle : inactiveStyle}">
+                    <span>${t.label}</span>
+                    <span class="text-[9.5px] opacity-85 font-extrabold">${t.count}</span>
+                </button>
+            `;
+        }).join('');
     } else {
-        if (tabVocabBtn) {
-            tabVocabBtn.className = "flex-1 py-2.5 px-3 rounded-xl font-bold text-xs transition-all duration-200 flex items-center justify-center gap-1.5 text-slate-700 hover:bg-slate-100";
-            tabVocabBtn.innerHTML = cfg.vocabLabel;
-        }
-        if (tabGrammarBtn) {
-            tabGrammarBtn.className = `flex-1 py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r ${cfg.themeGrad} text-white ${cfg.themeShadow}`;
-            tabGrammarBtn.innerHTML = cfg.grammarLabel;
-        }
+        container.className = "flex items-center justify-center gap-2 p-1.5 bg-white/70 backdrop-blur-md rounded-2xl border border-rose-100 max-w-md mx-auto shadow-sm";
+        const isVocab = currentCategoryTab === 'vocab';
+        const activeStyle = `flex-1 py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r ${cfg.themeGrad} text-white ${cfg.themeShadow}`;
+        const inactiveStyle = "flex-1 py-2.5 px-3 rounded-xl font-bold text-xs transition-all duration-200 flex items-center justify-center gap-1.5 text-slate-700 hover:bg-slate-100";
+        container.innerHTML = `
+            <button id="tab-vocab-btn" onclick="switchCategoryTab('vocab')" class="${isVocab ? activeStyle : inactiveStyle}">
+                ${cfg.vocabLabel}
+            </button>
+            <button id="tab-grammar-btn" onclick="switchCategoryTab('grammar')" class="${!isVocab ? activeStyle : inactiveStyle}">
+                ${cfg.grammarLabel}
+            </button>
+        `;
     }
+}
+
+function switchCategoryTab(tab) {
+    currentCategoryTab = tab;
+    renderCategoryTabs();
     renderModesList();
 }
 
@@ -830,7 +887,7 @@ function initHomepage() {
         const match = window.location.hash.match(/book(\d)/);
         if (match && match[1]) {
             const b = parseInt(match[1], 10);
-            if (b >= 1 && b <= 4) {
+            if (b >= 1 && b <= 5) {
                 currentBook = b;
             }
         }
@@ -862,7 +919,7 @@ function renderModesList() {
 
     const cfg = bookConfigs[currentBook] || bookConfigs[1];
 
-    const keys = Object.keys(allQuizModes).filter(key => {
+    let keys = Object.keys(allQuizModes).filter(key => {
         const mode = allQuizModes[key];
         const modeBook = mode.book || 1;
         if (modeBook !== currentBook) return false;
@@ -873,6 +930,180 @@ function renderModesList() {
             return !mode.isGrammar;
         }
     });
+
+    // พาร์ทการอ่าน (読解) สำหรับ JLPT N4 (Book 5)
+    if (currentBook === 5 && currentCategoryTab === 'reading') {
+        const readingSections = [
+            {
+                title: "短文 (たんぶん) บทความสั้น",
+                sub: "อีเมล ประกาศสั้น และข้อความบันทึก (100-200 คำ)",
+                emoji: "📄",
+                badge: "เตรียมพร้อม 🌸",
+                badgeClass: "bg-purple-100 text-purple-700 border-purple-200",
+                desc: "ฝึกจับใจความสำคัญของข้อความสั้นที่พบในชีวิตประจำวัน เช่น ประกาศโรงเรียน บันทึกข้อความ อีเมลขอนัดหมาย"
+            },
+            {
+                title: "中文 (ちゅうぶん) บทความขนาดกลาง",
+                sub: "วิเคราะห์เหตุและผล และมุมมองผู้เขียน (ประมาณ 450 คำ)",
+                emoji: "📖",
+                badge: "เตรียมพร้อม 🌸",
+                badgeClass: "bg-indigo-100 text-indigo-700 border-indigo-200",
+                desc: "ฝึกอ่านบทความบอกเล่าประสบการณ์ วิเคราะห์ความสัมพันธ์ของเนื้อหา และความคิดเห็นของผู้เขียน"
+            },
+            {
+                title: "情報検索 (じょうほうけんさく) ค้นหาข้อมูล",
+                sub: "กวาดสายตาค้นหาข้อมูลจากใบปลิว ตาราง และป้ายประกาศ",
+                emoji: "🔍",
+                badge: "เตรียมพร้อม 🌸",
+                badgeClass: "bg-pink-100 text-pink-700 border-pink-200",
+                desc: "ฝึกทักษะการค้นหาเงื่อนไข วันเวลา ค่าใช้จ่าย จากใบปลิวและตารางตามคำถามที่กำหนด"
+            },
+            {
+                title: "🎲 สุ่มรวมข้อสอบการอ่าน N4 ทุกประเภท",
+                sub: "จำลองการทำข้อสอบพาร์ทการอ่านแบบครบทุกส่วน",
+                emoji: "🎯",
+                badge: "เร็วๆ นี้ ✨",
+                badgeClass: "bg-amber-100 text-amber-700 border-amber-200",
+                desc: "รวมข้อสอบการอ่าน N4 เสมือนจริง ครบทั้งบทความสั้น กลาง และค้นหาข้อมูล"
+            }
+        ];
+
+        readingSections.forEach(sec => {
+            const card = document.createElement('div');
+            card.className = "w-full p-4 bg-gradient-to-r from-purple-50 to-indigo-50/70 border-2 border-purple-200/80 rounded-2xl text-left transition-all duration-300 shadow-sm relative overflow-hidden group hover:border-purple-300";
+            card.innerHTML = `
+                <div class="absolute -right-4 -bottom-4 text-5xl opacity-10 group-hover:opacity-20 group-hover:scale-125 transition-all duration-300">${sec.emoji}</div>
+                <div class="flex items-start justify-between gap-3 relative z-10 mb-2">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl bg-white p-2 rounded-xl border border-purple-100 shadow-inner">${sec.emoji}</span>
+                        <div>
+                            <span class="font-extrabold text-purple-950 text-xs md:text-sm block tracking-wide">${sec.title}</span>
+                            <span class="text-[9.5px] text-purple-700/80 font-bold block mt-0.5">${sec.sub}</span>
+                        </div>
+                    </div>
+                    <span class="text-[9px] font-black px-2 py-0.5 rounded-full border ${sec.badgeClass} shrink-0">${sec.badge}</span>
+                </div>
+                <p class="text-[10px] text-slate-600 font-medium pl-1 relative z-10">${sec.desc}</p>
+                <div class="mt-3 pt-2.5 border-t border-purple-100/60 flex items-center justify-between text-[10px] text-purple-600 font-bold">
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-clock-rotate-left"></i> โครงสร้างข้อสอบ JLPT N4</span>
+                    <button onclick="showComingSoonNotice('การอ่าน (読解)', '${sec.title}')" class="px-2.5 py-1 bg-white hover:bg-purple-100 text-purple-700 rounded-lg border border-purple-200 transition text-[9.5px] font-extrabold">
+                        ดูรายละเอียด 🌸
+                    </button>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+        return;
+    }
+
+    // พาร์ทการฟัง (聴解) สำหรับ JLPT N4 (Book 5)
+    if (currentBook === 5 && currentCategoryTab === 'listening') {
+        const listeningSections = [
+            {
+                title: "課題理解 (かだいりかい) การเข้าใจงาน",
+                sub: "ฟังบทสนทนาแล้วจับใจความว่าต้องทำอะไรต่อไป",
+                emoji: "📋",
+                badge: "เตรียมพร้อม 🎧",
+                badgeClass: "bg-indigo-100 text-indigo-700 border-indigo-200",
+                desc: "ฟังบทสนทนาระหว่างบุคคล 2 คน แล้วเลือกคำตอบว่าหลังจากนี้ตัวละครจะต้องทำอะไรเป็นลำดับแรก"
+            },
+            {
+                title: "ポイント理解 (ポイントりかい) จับประเด็นสำคัญ",
+                sub: "ฟังข้อมูลเพื่อค้นหาเหตุผล จุดมุ่งหมาย หรือเงื่อนไข",
+                emoji: "🎯",
+                badge: "เตรียมพร้อม 🎧",
+                badgeClass: "bg-rose-100 text-rose-700 border-rose-200",
+                desc: "มีเวลาให้อ่านตัวเลือกก่อนฟัง จากนั้นฟังเนื้อหาเพื่อจับประเด็นสำคัญตามคำถาม"
+            },
+            {
+                title: "発話表現 (はつわひょうげん) การเลือกสำนวนพูด",
+                sub: "ดูภาพลูกศรชี้ แล้วเลือกประโยคที่ควรพูดให้เหมาะสม",
+                emoji: "💬",
+                badge: "เตรียมพร้อม 🎧",
+                badgeClass: "bg-amber-100 text-amber-700 border-amber-200",
+                desc: "ดูภาพสถานการณ์พร้อมลูกศรชี้ที่ตัวละคร แล้วเลือกสำนวนภาษาญี่ปุ่นที่ถูกต้องเหมาะสมกับสถานการณ์"
+            },
+            {
+                title: "即時応答 (そくじおうとう) การตอบสนองทันที",
+                sub: "ฟังประโยคสั้นๆ แล้วเลือกคำตอบโต้ตอบกลับทันที",
+                emoji: "⚡",
+                badge: "เตรียมพร้อม 🎧",
+                badgeClass: "bg-teal-100 text-teal-700 border-teal-200",
+                desc: "ฟังประโยคคำถามหรือประโยคทักทายสั้นๆ แล้วเลือกคำตอบที่ตอบกลับได้อย่างถูกต้องและเป็นธรรมชาติ"
+            },
+            {
+                title: "🎲 สุ่มรวมข้อสอบการฟัง N4 ครบทุกพาร์ท",
+                sub: "จำลองห้องสอบการฟัง JLPT N4 เสมือนจริง",
+                emoji: "🏆",
+                badge: "เร็วๆ นี้ ✨",
+                badgeClass: "bg-purple-100 text-purple-700 border-purple-200",
+                desc: "จำลองการสอบการฟัง JLPT N4 ครบทุกรูปแบบพร้อมจับเวลาและนับคะแนนเสมือนจริง"
+            }
+        ];
+
+        listeningSections.forEach(sec => {
+            const card = document.createElement('div');
+            card.className = "w-full p-4 bg-gradient-to-r from-purple-50 to-indigo-50/70 border-2 border-purple-200/80 rounded-2xl text-left transition-all duration-300 shadow-sm relative overflow-hidden group hover:border-purple-300";
+            card.innerHTML = `
+                <div class="absolute -right-4 -bottom-4 text-5xl opacity-10 group-hover:opacity-20 group-hover:scale-125 transition-all duration-300">${sec.emoji}</div>
+                <div class="flex items-start justify-between gap-3 relative z-10 mb-2">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl bg-white p-2 rounded-xl border border-purple-100 shadow-inner">${sec.emoji}</span>
+                        <div>
+                            <span class="font-extrabold text-purple-950 text-xs md:text-sm block tracking-wide">${sec.title}</span>
+                            <span class="text-[9.5px] text-purple-700/80 font-bold block mt-0.5">${sec.sub}</span>
+                        </div>
+                    </div>
+                    <span class="text-[9px] font-black px-2 py-0.5 rounded-full border ${sec.badgeClass} shrink-0">${sec.badge}</span>
+                </div>
+                <p class="text-[10px] text-slate-600 font-medium pl-1 relative z-10">${sec.desc}</p>
+                <div class="mt-3 pt-2.5 border-t border-purple-100/60 flex items-center justify-between text-[10px] text-purple-600 font-bold">
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-headphones"></i> ไฟล์เสียงข้อสอบจริง JLPT N4</span>
+                    <button onclick="showComingSoonNotice('การฟัง (聴解)', '${sec.title}')" class="px-2.5 py-1 bg-white hover:bg-purple-100 text-purple-700 rounded-lg border border-purple-200 transition text-[9.5px] font-extrabold">
+                        ดูรายละเอียด 🎧
+                    </button>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+        return;
+    }
+
+    // สำหรับโหมด JLPT N4 (Book 5): จัดเรียงคลังข้อสอบตามลำดับ
+    if (currentBook === 5) {
+        if (currentCategoryTab === 'grammar') {
+            const grammarOrder = [
+                'jlpt_n4_grammar_all',
+                'jlpt_n4_grammar_2021_12',
+                'jlpt_n4_grammar_2021_07',
+                'jlpt_n4_grammar_2018_12',
+                'jlpt_n4_grammar_2017_12'
+            ];
+            keys.sort((a, b) => {
+                const idxA = grammarOrder.indexOf(a);
+                const idxB = grammarOrder.indexOf(b);
+                if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                if (idxA !== -1) return -1;
+                if (idxB !== -1) return 1;
+                return 0;
+            });
+        } else {
+            const vocabOrder = [
+                'jlpt_n4_all',
+                'jlpt_n4_2024_12', 'jlpt_n4_2024_07', 'jlpt_n4_2023_07',
+                'jlpt_n4_2021_12', 'jlpt_n4_2021_07', 'jlpt_n4_2018_12',
+                'jlpt_n4_2017_12', 'jlpt_n4_2013_12'
+            ];
+            keys.sort((a, b) => {
+                const idxA = vocabOrder.indexOf(a);
+                const idxB = vocabOrder.indexOf(b);
+                if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                if (idxA !== -1) return -1;
+                if (idxB !== -1) return 1;
+                return 0;
+            });
+        }
+    }
 
     console.log(`renderModesList (Book ${currentBook}, ${currentCategoryTab}):`, keys);
     keys.forEach(key => {
@@ -904,6 +1135,24 @@ function renderModesList() {
         `;
         container.appendChild(button);
     });
+
+    // แบนเนอร์พิเศษเชื่อมต่อไปยังโหมด JLPT N4 (เมื่ออยู่ในเล่ม 4)
+    if (currentBook === 4 && currentCategoryTab === 'vocab') {
+        const jlptBanner = document.createElement('button');
+        jlptBanner.className = "w-full flex items-center justify-between p-4 bg-gradient-to-r from-purple-100 to-indigo-100 hover:from-purple-200/80 hover:to-indigo-200/80 border-2 border-purple-300 hover:border-purple-400 rounded-2xl text-left transition-all duration-300 group shadow-sm relative overflow-hidden arcade-btn-glow";
+        jlptBanner.onclick = () => switchBook(5);
+        jlptBanner.innerHTML = `
+            <div class="flex items-center gap-3 relative z-10">
+                <span class="text-2xl bg-white/90 p-2 rounded-xl border border-purple-200 shadow-inner group-hover:scale-110 transition-transform">🎯</span>
+                <div>
+                    <span class="font-extrabold text-purple-950 text-xs md:text-sm block tracking-wide">ตะลุยข้อสอบจริง JLPT N4 (言葉)</span>
+                    <span class="text-[9px] text-purple-700 font-extrabold block mt-0.5">รวมข้อสอบจริง 8 รอบ (2013-2024) ทั้งหมด 333 ข้อ ➔</span>
+                </div>
+            </div>
+            <span class="font-bold text-purple-600 group-hover:translate-x-1 transition-transform relative z-10"><i class="fa-solid fa-arrow-right text-xs"></i></span>
+        `;
+        container.appendChild(jlptBanner);
+    }
 
     // เพิ่มการ์ดแจ้งเพิ่มคำศัพท์ลงในคลังเล่มนี้
     if (currentCategoryTab === 'vocab') {
@@ -2147,7 +2396,8 @@ function loadQuestion() {
 
         if (grammarSentenceDisplay) {
             const blankHtml = `<span id="current-grammar-blank" class="grammar-blank-slot">[ ___ ]</span>`;
-            grammarSentenceDisplay.innerHTML = currentData.sentence.replace('[ ___ ]', blankHtml);
+            const formattedSentence = (currentData.sentence || '').replace('[ ___ ]', blankHtml).replace(/\n/g, '<br>');
+            grammarSentenceDisplay.innerHTML = formattedSentence;
         }
 
         if (grammarTypeInput) {
@@ -3842,6 +4092,9 @@ window.copyAppsScriptCode = copyAppsScriptCode;
 window.switchBook = switchBook;
 window.cycleBook = cycleBook;
 window.toggleBook = toggleBook;
+window.switchCategoryTab = switchCategoryTab;
+window.showComingSoonNotice = showComingSoonNotice;
+window.renderCategoryTabs = renderCategoryTabs;
 
 // ผูกฟังก์ชันระบบแจ้งเพิ่มคำศัพท์เข้ากับ window
 window.openSuggestModal = openSuggestModal;

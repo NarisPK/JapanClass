@@ -39,7 +39,7 @@
                         <h1
                             class="text-xl md:text-2xl font-black tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500 uppercase font-kawaii group-hover:opacity-90 transition">
                             日本語　勉強しましょう</h1>
-                        <span class="text-[10px] font-black bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full border border-pink-300 shadow-xs" title="เวอร์ชันปัจจุบัน">v0.0.1</span>
+                        <span class="text-[10px] font-black bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full border border-pink-300 shadow-xs" title="เวอร์ชันปัจจุบัน">v0.0.2</span>
                     </div>
                     <p class="text-[9px] md:text-[10px] text-rose-400/70 uppercase tracking-widest font-bold">
                         มาเรียนภาษาญี่ปุ่นกันเถอะ (กดเพื่อกลับหน้าแรก)</p>
@@ -178,9 +178,9 @@
                             Mina no niongo 1 みんなの日本語 1</p>
                     </div>
 
-                    <!-- ปุ่มกดเลือกเล่ม: เล่ม 1, 2, 3, 4 (みんなの日本語 1-4) -->
+                    <!-- ปุ่มกดเลือกเล่ม: เล่ม 1, 2, 3, 4 (みんなの日本語 1-4) และ โหมดข้อสอบ JLPT N4 (言葉) -->
                     <div
-                        class="grid grid-cols-2 sm:grid-cols-4 gap-2 p-1.5 bg-white/80 backdrop-blur-md rounded-2xl border border-rose-200/60 max-w-xl mx-auto shadow-sm">
+                        class="grid grid-cols-2 sm:grid-cols-5 gap-2 p-1.5 bg-white/80 backdrop-blur-md rounded-2xl border border-rose-200/60 max-w-2xl mx-auto shadow-sm">
                         <button id="book-1-btn" onclick="switchBook(1)"
                             class="py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r from-pink-400 to-rose-400 text-white shadow-pink-300/30">
                             🌸 เล่ม 1 (1-12)
@@ -197,11 +197,15 @@
                             class="py-2.5 px-3 rounded-xl font-bold text-xs transition-all duration-200 flex items-center justify-center gap-1.5 text-amber-700 hover:bg-amber-50">
                             📙 เล่ม 4 (39-50)
                         </button>
+                        <button id="book-5-btn" onclick="switchBook(5)"
+                            class="py-2.5 px-3 rounded-xl font-bold text-xs transition-all duration-200 flex items-center justify-center gap-1.5 text-purple-700 hover:bg-purple-50 col-span-2 sm:col-span-1">
+                            🎯 คลังข้อสอบ N4
+                        </button>
                     </div>
 
                     <!-- แถบสลับหมวด: คำศัพท์ vs ไวยากรณ์ เติมคำช่วย -->
                     <div
-                        class="flex items-center justify-center gap-2 p-1.5 bg-white/70 backdrop-blur-md rounded-2xl border border-rose-100 max-w-md mx-auto shadow-sm">
+                        id="category-tabs-container" class="flex items-center justify-center gap-2 p-1.5 bg-white/70 backdrop-blur-md rounded-2xl border border-rose-100 max-w-md mx-auto shadow-sm">
                         <button id="tab-vocab-btn" onclick="switchCategoryTab('vocab')"
                             class="flex-1 py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r from-pink-400 to-rose-400 text-white shadow-pink-300/30">
                             🌸 คลังคำศัพท์ (บท 1-12)
@@ -1234,10 +1238,14 @@ function doGet(e) {
     <script src="js/data/vocabBook4.js"></script>
     <!-- โหลดข้อมูลแบบฝึกหัดไวยากรณ์ เติมคำช่วย (บท 1-12) -->
     <script src="js/data/grammarData.js"></script>
+    <!-- โหลดข้อมูลคำศัพท์ข้อสอบวัดระดับ JLPT N4 (言葉) จากข้อสอบจริง -->
+    <script src="js/data/jlptN4Data.js"></script>
+    <!-- โหลดข้อมูลไวยากรณ์ข้อสอบวัดระดับ JLPT N4 (文法) จากข้อสอบจริง -->
+    <script src="js/data/jlptN4GrammarData.js"></script>
     <!-- โหลดตัวประกอบข้อมูลควิซหลัก -->
-    <script src="js/quizData.js"></script>
+    <script src="js/quizData.js?v=0.0.2"></script>
     <!-- โหลดตัวรันเกม Logic หลัก (เพิ่ม v=3.5 ป้องกันเบราว์เซอร์มือถือค้างแคช) -->
-    <script src="js/app.js?v=3.5"></script>
+    <script src="js/app.js?v=0.0.2"></script>
 </body>
 
 </html>

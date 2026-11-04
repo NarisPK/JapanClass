@@ -452,3 +452,17 @@ try {
 
 
 
+
+// ผนวกข้อมูลคำศัพท์ข้อสอบวัดระดับ JLPT N4 (言葉)
+if (typeof jlptN4Data !== 'undefined') {
+    Object.keys(jlptN4Data).forEach(k => {
+        defaultQuizModes[k] = jlptN4Data[k];
+    });
+}
+
+// ผนวกข้อมูลไวยากรณ์ข้อสอบวัดระดับ JLPT N4 (文法) จากข้อสอบจริง
+if (typeof jlptN4GrammarData !== 'undefined') {
+    Object.keys(jlptN4GrammarData).forEach(k => {
+        defaultQuizModes[k] = jlptN4GrammarData[k];
+    });
+}
