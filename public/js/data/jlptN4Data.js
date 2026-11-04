@@ -1,9 +1,9 @@
-// ข้อมูลคำศัพท์ข้อสอบวัดระดับ JLPT N4 (言葉) จากข้อสอบจริง 8 รอบ (2013-2024)
+// ข้อมูลข้อสอบคันจิข้อสอบวัดระดับ JLPT N4 (漢字) จากข้อสอบจริง 8 รอบ (2013-2024) [คัดมาเฉพาะคันจิ 295 ข้อ]
 // ข้อมูลอ้างอิงจาก Google Drive: https://drive.google.com/drive/folders/1oF9AQYzYNvFKB2Xg_Menc4ygmY5jVm9d
 const jlptN4Data = {
   "jlpt_n4_2024_12": {
-    "title": "JLPT N4 2024-12 (言葉)",
-    "sub": "ข้อสอบรอบ ธันวาคม 2024 (34 ข้อ)",
+    "title": "JLPT N4 2024-12 (漢字)",
+    "sub": "ข้อสอบคันจิรอบ ธันวาคม 2024 (30 ข้อ)",
     "emoji": "🎯",
     "book": 5,
     "colorClass": "from-purple-100 to-indigo-200/50 border-purple-200 text-purple-800 hover:border-purple-300 hover:from-purple-200/60 hover:to-indigo-200/70",
@@ -151,7 +151,7 @@ const jlptN4Data = {
           "あっさ",
           "あさ",
           "あざ",
-          "ずつ"
+          "むし"
         ],
         "correct": 1,
         "japaneseText": "あさ",
@@ -204,31 +204,16 @@ const jlptN4Data = {
         "sourceExam": "JLPT 2024-12"
       },
       {
-        "kanji": "メニュー",
-        "character": "メニュー",
-        "hint": "เมนู",
-        "choices": [
-          "くうこう",
-          "おやゆび",
-          "せつめい",
-          "めにゅー"
-        ],
-        "correct": 3,
-        "japaneseText": "めにゅー",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC",
-        "sourceExam": "JLPT 2024-12"
-      },
-      {
         "kanji": "復習します",
         "character": "復習します",
         "hint": "ทบทวนบทเรียน",
         "choices": [
-          "ふくしゅうします",
           "ふくじゅうします",
-          "ふくしゆうします",
-          "ぶくしゅうします"
+          "ふっくしゅうします",
+          "ふくしゅうします",
+          "ふぐしゅうします"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "ふくしゅうします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BE%A9%E7%BF%92%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-12"
@@ -254,9 +239,9 @@ const jlptN4Data = {
         "hint": "ทะเลาะ",
         "choices": [
           "けんかします",
-          "けんかじます",
-          "けんがします",
-          "げんかします"
+          "げんかします",
+          "けんっかします",
+          "けんがします"
         ],
         "correct": 0,
         "japaneseText": "けんかします",
@@ -268,29 +253,14 @@ const jlptN4Data = {
         "character": "決めます",
         "hint": "ตัดสินใจ",
         "choices": [
-          "ぎめます",
           "もちます",
-          "さします",
-          "きめます"
-        ],
-        "correct": 3,
-        "japaneseText": "きめます",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B1%BA%E3%82%81%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2024-12"
-      },
-      {
-        "kanji": "はっきり",
-        "character": "はっきり",
-        "hint": "อย่างชัดเจน",
-        "choices": [
-          "うっかり",
-          "はっきり",
-          "すっきり",
-          "ぼんやり"
+          "きめます",
+          "ぎめます",
+          "さします"
         ],
         "correct": 1,
-        "japaneseText": "はっきり",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%AF%E3%81%A3%E3%81%8D%E3%82%8A",
+        "japaneseText": "きめます",
+        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B1%BA%E3%82%81%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-12"
       },
       {
@@ -298,12 +268,12 @@ const jlptN4Data = {
         "character": "怖い",
         "hint": "น่ากลัว",
         "choices": [
+          "からだ",
           "こわい",
           "ごわい",
-          "からだ",
           "こうじ"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "こわい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%80%96%E3%81%84",
         "sourceExam": "JLPT 2024-12"
@@ -313,12 +283,12 @@ const jlptN4Data = {
         "character": "都合",
         "hint": "ความสะดวก",
         "choices": [
-          "つこう",
           "つごう",
+          "こうじ",
           "づごう",
-          "こうじ"
+          "つこう"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "つごう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%83%BD%E5%90%88",
         "sourceExam": "JLPT 2024-12"
@@ -329,11 +299,11 @@ const jlptN4Data = {
         "hint": "สำคัญ",
         "choices": [
           "こうじ",
-          "だいじ",
           "たいじ",
+          "だいじ",
           "だいし"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "だいじ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%A7%E4%BA%8B",
         "sourceExam": "JLPT 2024-12"
@@ -343,12 +313,12 @@ const jlptN4Data = {
         "character": "喜びます",
         "hint": "ดีใจ",
         "choices": [
-          "よろっこびます",
-          "よろごびます",
           "よろこびます",
-          "よろこぴます"
+          "よろごびます",
+          "よろこぴます",
+          "よろっこびます"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "よろこびます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%96%9C%E3%81%B3%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-12"
@@ -358,12 +328,12 @@ const jlptN4Data = {
         "character": "明日",
         "hint": "พรุ่งนี้",
         "choices": [
-          "あっした",
-          "あじた",
+          "あした",
           "あしだ",
-          "あした"
+          "あっした",
+          "あじた"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "あした",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%98%8E%E6%97%A5",
         "sourceExam": "JLPT 2024-12"
@@ -373,12 +343,12 @@ const jlptN4Data = {
         "character": "お礼を言います",
         "hint": "กล่าวคำขอบคุณ",
         "choices": [
+          "たいいんします",
           "ふくしゅうします",
-          "おれいをいいます",
           "にゅういんします",
-          "たいいんします"
+          "おれいをいいます"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "おれいをいいます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%8A%E7%A4%BC%E3%82%92%E8%A8%80%E3%81%84%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-12"
@@ -388,8 +358,8 @@ const jlptN4Data = {
         "character": "故障します",
         "hint": "ชำรุด/เสีย",
         "choices": [
-          "ごしょうします",
           "こしょうじます",
+          "ごしょうします",
           "こしょします",
           "こしょうします"
         ],
@@ -403,12 +373,12 @@ const jlptN4Data = {
         "character": "景色",
         "hint": "ทิวทัศน์",
         "choices": [
-          "けしぎ",
-          "けっしき",
           "けしき",
-          "けじき"
+          "けじき",
+          "げしき",
+          "けしぎ"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "けしき",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%99%AF%E8%89%B2",
         "sourceExam": "JLPT 2024-12"
@@ -418,44 +388,14 @@ const jlptN4Data = {
         "character": "育てます",
         "hint": "เลี้ยงดู/ปลูกเลี้ยง",
         "choices": [
-          "そたてます",
+          "ぞだてます",
+          "そだでます",
           "そだってます",
-          "そだてます",
-          "ぞだてます"
+          "そだてます"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "そだてます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%82%B2%E3%81%A6%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2024-12"
-      },
-      {
-        "kanji": "ざあざあ",
-        "character": "ざあざあ",
-        "hint": "เสียงฝนตกหนัก",
-        "choices": [
-          "ぺらぺら",
-          "ざあざあ",
-          "さらさら",
-          "ごろごろ"
-        ],
-        "correct": 1,
-        "japaneseText": "ざあざあ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%96%E3%81%82%E3%81%96%E3%81%82",
-        "sourceExam": "JLPT 2024-12"
-      },
-      {
-        "kanji": "ずつ",
-        "character": "ずつ",
-        "hint": "ทีละ...",
-        "choices": [
-          "つづ",
-          "ずっ",
-          "ずつ",
-          "づつ"
-        ],
-        "correct": 2,
-        "japaneseText": "ずつ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%9A%E3%81%A4",
         "sourceExam": "JLPT 2024-12"
       },
       {
@@ -463,12 +403,12 @@ const jlptN4Data = {
         "character": "刺します",
         "hint": "แทง/กัด (แมลง)",
         "choices": [
-          "さします",
           "さっします",
           "ざします",
+          "さします",
           "さじます"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "さします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%88%BA%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-12"
@@ -478,12 +418,12 @@ const jlptN4Data = {
         "character": "虫",
         "hint": "แมลง",
         "choices": [
-          "むじ",
-          "むっし",
           "むし",
-          "あさ"
+          "むっし",
+          "あさ",
+          "むじ"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "むし",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%99%AB",
         "sourceExam": "JLPT 2024-12"
@@ -493,12 +433,12 @@ const jlptN4Data = {
         "character": "驚きます",
         "hint": "ตกใจ",
         "choices": [
-          "おとろきます",
+          "おどろきます",
           "おどろぎます",
-          "おどろっきます",
-          "おどろきます"
+          "おとろきます",
+          "おどろっきます"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "おどろきます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%A9%9A%E3%81%8D%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-12"
@@ -508,12 +448,12 @@ const jlptN4Data = {
         "character": "工場",
         "hint": "โรงงาน",
         "choices": [
-          "こうじよう",
           "こうじょ",
-          "こうしょう",
-          "こうじょう"
+          "こうじょう",
+          "ごうじょう",
+          "こうじよう"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "こうじょう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%B7%A5%E5%A0%B4",
         "sourceExam": "JLPT 2024-12"
@@ -521,8 +461,8 @@ const jlptN4Data = {
     ]
   },
   "jlpt_n4_2024_07": {
-    "title": "JLPT N4 2024-07 (言葉)",
-    "sub": "ข้อสอบรอบ กรกฎาคม 2024 (36 ข้อ)",
+    "title": "JLPT N4 2024-07 (漢字)",
+    "sub": "ข้อสอบคันจิรอบ กรกฎาคม 2024 (34 ข้อ)",
     "emoji": "🌸",
     "book": 5,
     "colorClass": "from-purple-100 to-indigo-200/50 border-purple-200 text-purple-800 hover:border-purple-300 hover:from-purple-200/60 hover:to-indigo-200/70",
@@ -532,12 +472,12 @@ const jlptN4Data = {
         "character": "待ちます",
         "hint": "รอ",
         "choices": [
-          "まちます",
+          "まっちます",
           "おります",
           "まぢます",
-          "まっちます"
+          "まちます"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "まちます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BE%85%E3%81%A1%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -547,9 +487,9 @@ const jlptN4Data = {
         "character": "薬",
         "hint": "ยา",
         "choices": [
-          "くっすり",
-          "くすり",
           "くずり",
+          "くすり",
+          "くっすり",
           "ぐすり"
         ],
         "correct": 1,
@@ -562,9 +502,9 @@ const jlptN4Data = {
         "character": "早い",
         "hint": "เร็ว",
         "choices": [
-          "いちど",
-          "はやい",
           "くすり",
+          "はやい",
+          "いちど",
           "ばやい"
         ],
         "correct": 1,
@@ -577,12 +517,12 @@ const jlptN4Data = {
         "character": "海",
         "hint": "ทะเล",
         "choices": [
-          "うみ",
-          "いか",
           "おと",
-          "くすり"
+          "くすり",
+          "いか",
+          "うみ"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "うみ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B5%B7",
         "sourceExam": "JLPT 2024-07"
@@ -592,12 +532,12 @@ const jlptN4Data = {
         "character": "一度",
         "hint": "ครั้งหนึ่ง",
         "choices": [
-          "いちと",
           "いっちど",
           "いぢど",
-          "いちど"
+          "いちど",
+          "いちと"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "いちど",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%B8%80%E5%BA%A6",
         "sourceExam": "JLPT 2024-07"
@@ -607,12 +547,12 @@ const jlptN4Data = {
         "character": "教えます",
         "hint": "สอน",
         "choices": [
-          "うごきます",
           "おしえます",
           "おじえます",
+          "うごきます",
           "おっしえます"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "おしえます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%95%99%E3%81%88%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -622,10 +562,10 @@ const jlptN4Data = {
         "character": "天気予報",
         "hint": "พยากรณ์อากาศ",
         "choices": [
-          "てんぎよほう",
+          "でんきよほう",
           "てんきよほう",
-          "てんっきよほう",
-          "てんきよぼう"
+          "てんきよぼう",
+          "てんぎよほう"
         ],
         "correct": 1,
         "japaneseText": "てんきよほう",
@@ -637,12 +577,12 @@ const jlptN4Data = {
         "character": "暑い",
         "hint": "ร้อน",
         "choices": [
+          "あつい",
           "あづい",
-          "あっつい",
           "くすり",
-          "あつい"
+          "あっつい"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "あつい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%9A%91%E3%81%84",
         "sourceExam": "JLPT 2024-07"
@@ -652,12 +592,12 @@ const jlptN4Data = {
         "character": "動きます",
         "hint": "เคลื่อนไหว",
         "choices": [
+          "うごぎます",
           "うごっきます",
-          "うごきます",
           "うこきます",
-          "うごぎます"
+          "うごきます"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "うごきます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8B%95%E3%81%8D%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -667,12 +607,12 @@ const jlptN4Data = {
         "character": "以下",
         "hint": "ต่ำกว่า",
         "choices": [
-          "いか",
           "うみ",
+          "いか",
           "いが",
           "いっか"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "いか",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BB%A5%E4%B8%8B",
         "sourceExam": "JLPT 2024-07"
@@ -683,11 +623,11 @@ const jlptN4Data = {
         "hint": "เสียง",
         "choices": [
           "おど",
-          "おと",
+          "うみ",
           "おっと",
-          "うみ"
+          "おと"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "おと",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%9F%B3",
         "sourceExam": "JLPT 2024-07"
@@ -697,12 +637,12 @@ const jlptN4Data = {
         "character": "交通",
         "hint": "การขนส่ง",
         "choices": [
-          "こうつう",
           "こうづう",
-          "こうっつう",
-          "ごうつう"
+          "こうつう",
+          "ごうつう",
+          "こうっつう"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "こうつう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BA%A4%E9%80%9A",
         "sourceExam": "JLPT 2024-07"
@@ -714,7 +654,7 @@ const jlptN4Data = {
         "choices": [
           "さがします",
           "さがじます",
-          "さかします",
+          "さがっします",
           "ざがします"
         ],
         "correct": 0,
@@ -727,12 +667,12 @@ const jlptN4Data = {
         "character": "厳しい",
         "hint": "เข้มงวด",
         "choices": [
-          "きびじい",
-          "きぴしい",
           "ぎびしい",
-          "きびしい"
+          "きびじい",
+          "きびしい",
+          "きぴしい"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "きびしい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8E%B3%E3%81%97%E3%81%84",
         "sourceExam": "JLPT 2024-07"
@@ -758,9 +698,9 @@ const jlptN4Data = {
         "hint": "ความนิยม",
         "choices": [
           "にんっき",
-          "くすり",
+          "にんぎ",
           "にんき",
-          "にんぎ"
+          "くすり"
         ],
         "correct": 2,
         "japaneseText": "にんき",
@@ -774,8 +714,8 @@ const jlptN4Data = {
         "choices": [
           "たります",
           "おります",
-          "こみます",
-          "まちます"
+          "まちます",
+          "こみます"
         ],
         "correct": 1,
         "japaneseText": "おります",
@@ -787,12 +727,12 @@ const jlptN4Data = {
         "character": "種類",
         "hint": "ชนิด/ประเภท",
         "choices": [
-          "きびしい",
           "じゅるい",
-          "こうつう",
-          "しゅるい"
+          "きびしい",
+          "しゅるい",
+          "こうつう"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "しゅるい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%A8%AE%E9%A1%9E",
         "sourceExam": "JLPT 2024-07"
@@ -802,12 +742,12 @@ const jlptN4Data = {
         "character": "足ります",
         "hint": "เพียงพอ",
         "choices": [
-          "たります",
           "おります",
           "まちます",
+          "たります",
           "だります"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "たります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%B6%B3%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -817,12 +757,12 @@ const jlptN4Data = {
         "character": "騒ぎます",
         "hint": "ส่งเสียงดัง",
         "choices": [
-          "さわきます",
           "おしえます",
           "さわぎます",
-          "ざわぎます"
+          "ざわぎます",
+          "さわきます"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "さわぎます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%A8%92%E3%81%8E%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -832,10 +772,10 @@ const jlptN4Data = {
         "character": "盗みます",
         "hint": "ขโมย",
         "choices": [
+          "おしえます",
           "ぬっすみます",
-          "ぬずみます",
           "ぬすみます",
-          "おしえます"
+          "ぬずみます"
         ],
         "correct": 2,
         "japaneseText": "ぬすみます",
@@ -847,12 +787,12 @@ const jlptN4Data = {
         "character": "女性",
         "hint": "ผู้หญิง",
         "choices": [
-          "じょぜい",
-          "じよせい",
+          "じょせい",
+          "しょせい",
           "じょっせい",
-          "じょせい"
+          "じよせい"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "じょせい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A5%B3%E6%80%A7",
         "sourceExam": "JLPT 2024-07"
@@ -863,11 +803,11 @@ const jlptN4Data = {
         "hint": "พูดคุย",
         "choices": [
           "おしゃぺります",
-          "おしゃべります",
           "おっしゃべります",
+          "おしゃべります",
           "おじゃべります"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "おしゃべります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%8A%E5%96%8B%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -877,12 +817,12 @@ const jlptN4Data = {
         "character": "生産",
         "hint": "การผลิต",
         "choices": [
-          "せいっさん",
           "ぜいさん",
           "せいざん",
-          "せいさん"
+          "せいさん",
+          "せいっさん"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "せいさん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%94%9F%E7%94%A3",
         "sourceExam": "JLPT 2024-07"
@@ -892,9 +832,9 @@ const jlptN4Data = {
         "character": "人口",
         "hint": "ประชากร",
         "choices": [
-          "しんこう",
-          "じんっこう",
           "じんごう",
+          "じんっこう",
+          "しんこう",
           "じんこう"
         ],
         "correct": 3,
@@ -907,12 +847,12 @@ const jlptN4Data = {
         "character": "込みます",
         "hint": "แออัด",
         "choices": [
-          "まちます",
-          "おります",
+          "ごみます",
           "こみます",
-          "ごみます"
+          "おります",
+          "まちます"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "こみます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%BE%BC%E3%81%BF%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -922,12 +862,12 @@ const jlptN4Data = {
         "character": "逃げます",
         "hint": "หนี",
         "choices": [
-          "まちます",
-          "にけます",
           "おります",
-          "にげます"
+          "にげます",
+          "にけます",
+          "まちます"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "にげます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%80%83%E3%81%92%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -938,11 +878,11 @@ const jlptN4Data = {
         "hint": "ไม่สะดวก",
         "choices": [
           "ぶべん",
+          "くすり",
           "ふべん",
-          "ふぺん",
-          "くすり"
+          "ふぺん"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "ふべん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%B8%8D%E4%BE%BF",
         "sourceExam": "JLPT 2024-07"
@@ -953,11 +893,11 @@ const jlptN4Data = {
         "hint": "นาฬิกาข้อมือ",
         "choices": [
           "うてどけい",
-          "うでどけい",
           "うでどげい",
-          "うでとけい"
+          "うでとけい",
+          "うでどけい"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "うでどけい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%85%95%E6%99%82%E8%A8%88",
         "sourceExam": "JLPT 2024-07"
@@ -967,12 +907,12 @@ const jlptN4Data = {
         "character": "空きます",
         "hint": "ว่าง",
         "choices": [
-          "あきます",
-          "まちます",
           "あぎます",
-          "あっきます"
+          "まちます",
+          "あっきます",
+          "あきます"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "あきます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%A9%BA%E3%81%8D%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -982,12 +922,12 @@ const jlptN4Data = {
         "character": "会場",
         "hint": "สถานที่จัดงาน",
         "choices": [
-          "がいじょう",
-          "かいしょう",
+          "かいじよう",
+          "かいじょう",
           "かいじょ",
-          "かいじょう"
+          "かいしょう"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "かいじょう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BC%9A%E5%A0%B4",
         "sourceExam": "JLPT 2024-07"
@@ -1008,31 +948,16 @@ const jlptN4Data = {
         "sourceExam": "JLPT 2024-07"
       },
       {
-        "kanji": "びっくりします",
-        "character": "びっくりします",
-        "hint": "ตกใจ",
-        "choices": [
-          "うっかりします",
-          "あんしんします",
-          "びっくりします",
-          "がっかりします"
-        ],
-        "correct": 2,
-        "japaneseText": "びっくりします",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%B3%E3%81%A3%E3%81%8F%E3%82%8A%E3%81%97%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2024-07"
-      },
-      {
         "kanji": "注意します",
         "character": "注意します",
         "hint": "ระมัดระวัง",
         "choices": [
-          "ちゅいします",
-          "ちゅういっします",
+          "ちゅういします",
           "ちゆういします",
-          "ちゅういします"
+          "ちゅういっします",
+          "ちゅういじます"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "ちゅういします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B3%A8%E6%84%8F%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -1042,36 +967,21 @@ const jlptN4Data = {
         "character": "料金",
         "hint": "ค่าธรรมเนียม",
         "choices": [
+          "りょうぎん",
           "りようきん",
           "りょうっきん",
-          "りょうぎん",
           "りょうきん"
         ],
         "correct": 3,
         "japaneseText": "りょうきん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%96%99%E9%87%91",
         "sourceExam": "JLPT 2024-07"
-      },
-      {
-        "kanji": "サラダ",
-        "character": "サラダ",
-        "hint": "สลัด",
-        "choices": [
-          "さらだ",
-          "さらた",
-          "ざらだ",
-          "くすり"
-        ],
-        "correct": 0,
-        "japaneseText": "さらだ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%B5%E3%83%A9%E3%83%80",
-        "sourceExam": "JLPT 2024-07"
       }
     ]
   },
   "jlpt_n4_2023_07": {
-    "title": "JLPT N4 2023-07 (言葉)",
-    "sub": "ข้อสอบรอบ กรกฎาคม 2023 (48 ข้อ)",
+    "title": "JLPT N4 2023-07 (漢字)",
+    "sub": "ข้อสอบคันจิรอบ กรกฎาคม 2023 (41 ข้อ)",
     "emoji": "🎋",
     "book": 5,
     "colorClass": "from-purple-100 to-indigo-200/50 border-purple-200 text-purple-800 hover:border-purple-300 hover:from-purple-200/60 hover:to-indigo-200/70",
@@ -1081,10 +991,10 @@ const jlptN4Data = {
         "character": "白い",
         "hint": "ขาว",
         "choices": [
-          "つごう",
+          "じろい",
           "しろい",
           "よわい",
-          "じろい"
+          "つごう"
         ],
         "correct": 1,
         "japaneseText": "しろい",
@@ -1097,11 +1007,11 @@ const jlptN4Data = {
         "hint": "ช่วงนี้/ล่าสุด",
         "choices": [
           "ざいきん",
+          "さいきん",
           "さいぎん",
-          "さいっきん",
-          "さいきん"
+          "さいっきん"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "さいきん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%9C%80%E8%BF%91",
         "sourceExam": "JLPT 2023-07"
@@ -1112,7 +1022,7 @@ const jlptN4Data = {
         "hint": "สี",
         "choices": [
           "いと",
-          "ずつ",
+          "しろい",
           "いろ",
           "あに"
         ],
@@ -1126,8 +1036,8 @@ const jlptN4Data = {
         "character": "足ります",
         "hint": "เพียงพอ",
         "choices": [
-          "おきます",
           "だります",
+          "おきます",
           "まちます",
           "たります"
         ],
@@ -1141,12 +1051,12 @@ const jlptN4Data = {
         "character": "都合",
         "hint": "ความสะดวก",
         "choices": [
-          "つごう",
-          "つこう",
           "づごう",
-          "しろい"
+          "つこう",
+          "しろい",
+          "つごう"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "つごう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%83%BD%E5%90%88",
         "sourceExam": "JLPT 2023-07"
@@ -1157,8 +1067,8 @@ const jlptN4Data = {
         "hint": "ตื่น",
         "choices": [
           "おっきます",
-          "おぎます",
           "たります",
+          "おぎます",
           "おきます"
         ],
         "correct": 3,
@@ -1172,9 +1082,9 @@ const jlptN4Data = {
         "hint": "ด้าย/เส้นไหม",
         "choices": [
           "いと",
+          "いっと",
           "いど",
-          "いろ",
-          "いっと"
+          "いろ"
         ],
         "correct": 0,
         "japaneseText": "いと",
@@ -1187,11 +1097,11 @@ const jlptN4Data = {
         "hint": "รอ",
         "choices": [
           "まっちます",
-          "たります",
+          "まちます",
           "まぢます",
-          "まちます"
+          "たります"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "まちます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BE%85%E3%81%A1%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1201,10 +1111,10 @@ const jlptN4Data = {
         "character": "兄",
         "hint": "พี่ชาย",
         "choices": [
-          "いろ",
+          "しろい",
           "いと",
           "あに",
-          "ずつ"
+          "いろ"
         ],
         "correct": 2,
         "japaneseText": "あに",
@@ -1216,10 +1126,10 @@ const jlptN4Data = {
         "character": "工場",
         "hint": "โรงงาน",
         "choices": [
-          "こうじよう",
+          "こうしょう",
           "ごうじょう",
           "こうじょう",
-          "こうじょ"
+          "こうじよう"
         ],
         "correct": 2,
         "japaneseText": "こうじょう",
@@ -1231,12 +1141,12 @@ const jlptN4Data = {
         "character": "弱い",
         "hint": "อ่อนแอ",
         "choices": [
-          "れんじ",
-          "しろい",
           "よわい",
+          "しろい",
+          "いけん",
           "つごう"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "よわい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BC%B1%E3%81%84",
         "sourceExam": "JLPT 2023-07"
@@ -1246,29 +1156,14 @@ const jlptN4Data = {
         "character": "経験",
         "hint": "ประสบการณ์",
         "choices": [
-          "けいけん",
           "げいけん",
-          "けいっけん",
-          "けいげん"
-        ],
-        "correct": 0,
-        "japaneseText": "けいけん",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%B5%8C%E9%A8%93",
-        "sourceExam": "JLPT 2023-07"
-      },
-      {
-        "kanji": "レンジ",
-        "character": "レンジ",
-        "hint": "ไมโครเวฟ",
-        "choices": [
-          "れんし",
-          "つごう",
-          "れんじ",
-          "しろい"
+          "けいげん",
+          "けいけん",
+          "けいっけん"
         ],
         "correct": 2,
-        "japaneseText": "れんじ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%AC%E3%83%B3%E3%82%B8",
+        "japaneseText": "けいけん",
+        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%B5%8C%E9%A8%93",
         "sourceExam": "JLPT 2023-07"
       },
       {
@@ -1276,12 +1171,12 @@ const jlptN4Data = {
         "character": "温めます",
         "hint": "ทำให้ร้อน",
         "choices": [
-          "あただめます",
           "あたためます",
-          "あったためます",
-          "あだためます"
+          "あだためます",
+          "あただめます",
+          "あったためます"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "あたためます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B8%A9%E3%82%81%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1291,12 +1186,12 @@ const jlptN4Data = {
         "character": "意見",
         "hint": "ความคิดเห็น",
         "choices": [
-          "いげん",
           "いっけん",
-          "いけん",
-          "しろい"
+          "しろい",
+          "いげん",
+          "いけん"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "いけん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%84%8F%E8%A6%8B",
         "sourceExam": "JLPT 2023-07"
@@ -1306,12 +1201,12 @@ const jlptN4Data = {
         "character": "決めます",
         "hint": "ตัดสินใจ",
         "choices": [
-          "おきます",
-          "たります",
           "ぎめます",
-          "きめます"
+          "たります",
+          "きめます",
+          "おきます"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "きめます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B1%BA%E3%82%81%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1321,12 +1216,12 @@ const jlptN4Data = {
         "character": "届きます",
         "hint": "มาถึง",
         "choices": [
-          "とときます",
+          "とどぎます",
           "どどきます",
-          "とどっきます",
-          "とどきます"
+          "とどきます",
+          "とどっきます"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "とどきます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%B1%8A%E3%81%8D%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1336,12 +1231,12 @@ const jlptN4Data = {
         "character": "通ります",
         "hint": "ผ่าน",
         "choices": [
+          "しかります",
           "どおります",
           "とおります",
-          "しかります",
           "とどきます"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "とおります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%80%9A%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1351,12 +1246,12 @@ const jlptN4Data = {
         "character": "十分",
         "hint": "เพียงพอ",
         "choices": [
-          "じゆうぶん",
+          "じゅうぶん",
           "しゅうぶん",
-          "じゅうぷん",
-          "じゅうぶん"
+          "じゅぶん",
+          "じゅうぷん"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "じゅうぶん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8D%81%E5%88%86",
         "sourceExam": "JLPT 2023-07"
@@ -1366,12 +1261,12 @@ const jlptN4Data = {
         "character": "叱ります",
         "hint": "ดุ",
         "choices": [
-          "しかります",
-          "じかります",
           "しっかります",
-          "しがります"
+          "しがります",
+          "しかります",
+          "じかります"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "しかります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8F%B1%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1381,12 +1276,12 @@ const jlptN4Data = {
         "character": "褒めます",
         "hint": "ชม",
         "choices": [
-          "ぼめます",
           "おきます",
-          "ほめます",
-          "たります"
+          "たります",
+          "ぼめます",
+          "ほめます"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "ほめます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%A4%92%E3%82%81%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1396,12 +1291,12 @@ const jlptN4Data = {
         "character": "頼みます",
         "hint": "ขอร้อง",
         "choices": [
-          "たのみます",
-          "とどきます",
+          "だのみます",
           "とおります",
-          "だのみます"
+          "とどきます",
+          "たのみます"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "たのみます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%A0%BC%E3%81%BF%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1411,12 +1306,12 @@ const jlptN4Data = {
         "character": "誘います",
         "hint": "เชิญชวน",
         "choices": [
+          "さそいます",
           "さっそいます",
           "ざそいます",
-          "さそいます",
           "さぞいます"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "さそいます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%AA%98%E3%81%84%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1426,9 +1321,9 @@ const jlptN4Data = {
         "character": "財布",
         "hint": "กระเป๋าสตางค์",
         "choices": [
-          "しろい",
           "さいぶ",
           "ざいふ",
+          "しろい",
           "さいふ"
         ],
         "correct": 3,
@@ -1441,12 +1336,12 @@ const jlptN4Data = {
         "character": "残ります",
         "hint": "เหลือ",
         "choices": [
-          "のごります",
-          "のこります",
           "とどきます",
-          "のっこります"
+          "のっこります",
+          "のごります",
+          "のこります"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "のこります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%AE%8B%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1456,12 +1351,12 @@ const jlptN4Data = {
         "character": "世話します",
         "hint": "ดูแล",
         "choices": [
+          "せわじます",
           "ぜわします",
-          "せわします",
           "せわっします",
-          "せわじます"
+          "せわします"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "せわします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%B8%96%E8%A9%B1%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1471,12 +1366,12 @@ const jlptN4Data = {
         "character": "汚れます",
         "hint": "สกปรก",
         "choices": [
-          "とおります",
-          "とどきます",
           "よごれます",
-          "よこれます"
+          "とどきます",
+          "よこれます",
+          "とおります"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "よごれます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B1%9A%E3%82%8C%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1486,10 +1381,10 @@ const jlptN4Data = {
         "character": "汚い",
         "hint": "สกปรก",
         "choices": [
-          "きったない",
+          "ぎたない",
           "きだない",
           "きたない",
-          "ぎたない"
+          "きったない"
         ],
         "correct": 2,
         "japaneseText": "きたない",
@@ -1501,12 +1396,12 @@ const jlptN4Data = {
         "character": "冷えます",
         "hint": "เย็นลง",
         "choices": [
+          "ひえます",
           "びえます",
           "おきます",
-          "ひえます",
           "たります"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "ひえます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%86%B7%E3%81%88%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1518,8 +1413,8 @@ const jlptN4Data = {
         "choices": [
           "ぎそく",
           "きそく",
-          "きっそく",
-          "きそぐ"
+          "きぞく",
+          "きっそく"
         ],
         "correct": 1,
         "japaneseText": "きそく",
@@ -1527,31 +1422,16 @@ const jlptN4Data = {
         "sourceExam": "JLPT 2023-07"
       },
       {
-        "kanji": "ルール",
-        "character": "ルール",
-        "hint": "กฎ",
-        "choices": [
-          "よわい",
-          "つごう",
-          "しろい",
-          "るーる"
-        ],
-        "correct": 3,
-        "japaneseText": "るーる",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%AB%E3%83%BC%E3%83%AB",
-        "sourceExam": "JLPT 2023-07"
-      },
-      {
         "kanji": "沸かします",
         "character": "沸かします",
         "hint": "ต้มน้ำ",
         "choices": [
-          "わっかします",
           "わかじます",
+          "わかします",
           "わがします",
-          "わかします"
+          "わっかします"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "わかします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B2%B8%E3%81%8B%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1561,8 +1441,8 @@ const jlptN4Data = {
         "character": "招待します",
         "hint": "เชิญ",
         "choices": [
-          "しょたいします",
-          "しょうったいします",
+          "しようたいします",
+          "しょうだいします",
           "しょうたいします",
           "しょうたいじます"
         ],
@@ -1576,9 +1456,9 @@ const jlptN4Data = {
         "character": "止みます",
         "hint": "หยุด (ฝน, ลม)",
         "choices": [
+          "たります",
           "まちます",
           "おきます",
-          "たります",
           "やみます"
         ],
         "correct": 3,
@@ -1591,29 +1471,14 @@ const jlptN4Data = {
         "character": "自己紹介",
         "hint": "แนะนำตัวเอง",
         "choices": [
+          "じごしょうかい",
           "じこしょうかい",
-          "じこしょうがい",
-          "しこしょうかい",
-          "じっこしょうかい"
+          "じこしようかい",
+          "じこしょうがい"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "じこしょうかい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B",
-        "sourceExam": "JLPT 2023-07"
-      },
-      {
-        "kanji": "ずつ",
-        "character": "ずつ",
-        "hint": "ทีละ...",
-        "choices": [
-          "つづ",
-          "づつ",
-          "ずつ",
-          "ずっ"
-        ],
-        "correct": 2,
-        "japaneseText": "ずつ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%9A%E3%81%A4",
         "sourceExam": "JLPT 2023-07"
       },
       {
@@ -1621,12 +1486,12 @@ const jlptN4Data = {
         "character": "見るのも嫌です",
         "hint": "ไม่อยากจะดู",
         "choices": [
-          "みるのもいやです",
           "みるのもいやてす",
-          "みるのもいやでっす",
-          "みるのもいやでず"
+          "みるのもいやです",
+          "みるのもいやでず",
+          "みるのもいやでっす"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "みるのもいやです",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%A6%8B%E3%82%8B%E3%81%AE%E3%82%82%E5%AB%8C%E3%81%A7%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1636,29 +1501,14 @@ const jlptN4Data = {
         "character": "飾ります",
         "hint": "ตกแต่ง",
         "choices": [
-          "がざります",
           "かざります",
-          "とどきます",
-          "かさります"
+          "がざります",
+          "かさります",
+          "とどきます"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "かざります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%A3%BE%E3%82%8A%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2023-07"
-      },
-      {
-        "kanji": "トマト",
-        "character": "トマト",
-        "hint": "มะเขือเทศ",
-        "choices": [
-          "とまど",
-          "どまと",
-          "とまと",
-          "とまっと"
-        ],
-        "correct": 2,
-        "japaneseText": "とまと",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%88%E3%83%9E%E3%83%88",
         "sourceExam": "JLPT 2023-07"
       },
       {
@@ -1666,59 +1516,14 @@ const jlptN4Data = {
         "character": "洋服",
         "hint": "เสื้อผ้า",
         "choices": [
-          "ようふぐ",
-          "ようぶく",
           "ようふく",
-          "ようふっく"
+          "ようふっく",
+          "ようふぐ",
+          "ようぶく"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "ようふく",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B4%8B%E6%9C%8D",
-        "sourceExam": "JLPT 2023-07"
-      },
-      {
-        "kanji": "メモします",
-        "character": "メモします",
-        "hint": "จดบันทึก",
-        "choices": [
-          "めもっします",
-          "とどきます",
-          "めもします",
-          "めもじます"
-        ],
-        "correct": 2,
-        "japaneseText": "めもします",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%A1%E3%83%A2%E3%81%97%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2023-07"
-      },
-      {
-        "kanji": "チェックします",
-        "character": "チェックします",
-        "hint": "ตรวจสอบ",
-        "choices": [
-          "ちぇくします",
-          "ちぇっくします",
-          "ぢぇっくします",
-          "ちぇっぐします"
-        ],
-        "correct": 1,
-        "japaneseText": "ちぇっくします",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%97%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2023-07"
-      },
-      {
-        "kanji": "おもちゃ",
-        "character": "おもちゃ",
-        "hint": "ของเล่น",
-        "choices": [
-          "おみやげ",
-          "おもちゃ",
-          "おもちや",
-          "おみまい"
-        ],
-        "correct": 1,
-        "japaneseText": "おもちゃ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83",
         "sourceExam": "JLPT 2023-07"
       },
       {
@@ -1726,10 +1531,10 @@ const jlptN4Data = {
         "character": "卒業式",
         "hint": "พิธีจบการศึกษา",
         "choices": [
-          "そつぎょうじき",
           "ぞつぎょうしき",
+          "そつぎょうじき",
           "そつぎょうしき",
-          "そつきょうしき"
+          "そつぎようしき"
         ],
         "correct": 2,
         "japaneseText": "そつぎょうしき",
@@ -1741,12 +1546,12 @@ const jlptN4Data = {
         "character": "慣れます",
         "hint": "คุ้นเคย",
         "choices": [
-          "おきます",
           "まちます",
-          "なれます",
-          "たります"
+          "おきます",
+          "たります",
+          "なれます"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "なれます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%85%A3%E3%82%8C%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1757,7 +1562,7 @@ const jlptN4Data = {
         "hint": "ออกเดินทาง",
         "choices": [
           "しゅっぱつします",
-          "しゅっはつします",
+          "しゅぱつします",
           "しゅっぱつじます",
           "じゅっぱつします"
         ],
@@ -1771,12 +1576,12 @@ const jlptN4Data = {
         "character": "到着します",
         "hint": "ถึงที่หมาย",
         "choices": [
-          "とうちゃくじます",
-          "とうぢゃくします",
           "とうっちゃくします",
-          "とうちゃくします"
+          "とうぢゃくします",
+          "とうちゃくします",
+          "どうちゃくします"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "とうちゃくします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%88%B0%E7%9D%80%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -1787,9 +1592,9 @@ const jlptN4Data = {
         "hint": "ค่าธรรมเนียม",
         "choices": [
           "りょうきん",
-          "りようきん",
-          "りょうっきん",
-          "りょうぎん"
+          "りょきん",
+          "りょうぎん",
+          "りょうっきん"
         ],
         "correct": 0,
         "japaneseText": "りょうきん",
@@ -1799,8 +1604,8 @@ const jlptN4Data = {
     ]
   },
   "jlpt_n4_2021_12": {
-    "title": "JLPT N4 2021-12 (言葉)",
-    "sub": "ข้อสอบรอบ ธันวาคม 2021 (38 ข้อ)",
+    "title": "JLPT N4 2021-12 (漢字)",
+    "sub": "ข้อสอบคันจิรอบ ธันวาคม 2021 (35 ข้อ)",
     "emoji": "❄️",
     "book": 5,
     "colorClass": "from-purple-100 to-indigo-200/50 border-purple-200 text-purple-800 hover:border-purple-300 hover:from-purple-200/60 hover:to-indigo-200/70",
@@ -1810,12 +1615,12 @@ const jlptN4Data = {
         "character": "出発します",
         "hint": "ออกเดินทาง",
         "choices": [
-          "しゅっはつします",
-          "しゅっぱつじます",
+          "しゅっぱつします",
           "じゅっぱつします",
-          "しゅっぱつします"
+          "しゅっぱづします",
+          "しゅっぱつじます"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "しゅっぱつします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%87%BA%E7%99%BA%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
@@ -1825,12 +1630,12 @@ const jlptN4Data = {
         "character": "答えます",
         "hint": "ตอบ",
         "choices": [
-          "こったえます",
-          "ごたえます",
           "こたえます",
+          "ごたえます",
+          "こったえます",
           "こだえます"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "こたえます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%AD%94%E3%81%88%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
@@ -1840,12 +1645,12 @@ const jlptN4Data = {
         "character": "心",
         "hint": "หัวใจ, จิตใจ",
         "choices": [
-          "こっころ",
-          "ごころ",
           "こごろ",
-          "こころ"
+          "こころ",
+          "ごころ",
+          "こっころ"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "こころ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BF%83",
         "sourceExam": "JLPT 2021-12"
@@ -1855,12 +1660,12 @@ const jlptN4Data = {
         "character": "最後",
         "hint": "สุดท้าย",
         "choices": [
-          "ざいご",
-          "さいこ",
+          "さいご",
           "こころ",
-          "さいご"
+          "さいこ",
+          "ざいご"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "さいご",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%9C%80%E5%BE%8C",
         "sourceExam": "JLPT 2021-12"
@@ -1870,12 +1675,12 @@ const jlptN4Data = {
         "character": "遠い",
         "hint": "ไกล",
         "choices": [
-          "どおい",
           "こころ",
           "とおい",
+          "どおい",
           "さいご"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "とおい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%81%A0%E3%81%84",
         "sourceExam": "JLPT 2021-12"
@@ -1886,9 +1691,9 @@ const jlptN4Data = {
         "hint": "ฤดูหนาว",
         "choices": [
           "ふゆ",
-          "ふね",
+          "ぶゆ",
           "のど",
-          "ぶゆ"
+          "ふね"
         ],
         "correct": 0,
         "japaneseText": "ふゆ",
@@ -1902,7 +1707,7 @@ const jlptN4Data = {
         "choices": [
           "よしゅうします",
           "よしゅうじます",
-          "よじゅうします",
+          "よっしゅうします",
           "よしゅします"
         ],
         "correct": 0,
@@ -1930,12 +1735,12 @@ const jlptN4Data = {
         "character": "作ります",
         "hint": "ทำ, สร้าง",
         "choices": [
-          "つくります",
           "つっくります",
+          "づくります",
           "つぐります",
-          "づくります"
+          "つくります"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "つくります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BD%9C%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
@@ -1975,12 +1780,12 @@ const jlptN4Data = {
         "character": "曇",
         "hint": "เมฆครึ้ม",
         "choices": [
-          "こころ",
-          "ぐもり",
+          "さいご",
           "くもり",
-          "さいご"
+          "こころ",
+          "ぐもり"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "くもり",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%9B%87",
         "sourceExam": "JLPT 2021-12"
@@ -1990,10 +1795,10 @@ const jlptN4Data = {
         "character": "喉",
         "hint": "ลาคอ",
         "choices": [
-          "のと",
+          "ふね",
           "のど",
-          "ふゆ",
-          "ふね"
+          "のと",
+          "ふゆ"
         ],
         "correct": 1,
         "japaneseText": "のど",
@@ -2006,9 +1811,9 @@ const jlptN4Data = {
         "hint": "แน่น, แออัด",
         "choices": [
           "こみます",
+          "こたえます",
           "つくります",
-          "ごみます",
-          "こたえます"
+          "ごみます"
         ],
         "correct": 0,
         "japaneseText": "こみます",
@@ -2022,27 +1827,12 @@ const jlptN4Data = {
         "choices": [
           "げいけん",
           "けいっけん",
-          "けいけん",
-          "けいげん"
+          "けいげん",
+          "けいけん"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "けいけん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%B5%8C%E9%A8%93",
-        "sourceExam": "JLPT 2021-12"
-      },
-      {
-        "kanji": "アンケート",
-        "character": "アンケート",
-        "hint": "แบบสอบถาม",
-        "choices": [
-          "あんけーと",
-          "あんけーど",
-          "あんっけーと",
-          "あんげーと"
-        ],
-        "correct": 0,
-        "japaneseText": "あんけーと",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%A2%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%88",
         "sourceExam": "JLPT 2021-12"
       },
       {
@@ -2051,11 +1841,11 @@ const jlptN4Data = {
         "hint": "ค่าเช่าบ้าน",
         "choices": [
           "やぢん",
+          "やっちん",
           "こころ",
-          "やちん",
-          "やっちん"
+          "やちん"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "やちん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%AE%B6%E8%B3%83",
         "sourceExam": "JLPT 2021-12"
@@ -2065,12 +1855,12 @@ const jlptN4Data = {
         "character": "写ります",
         "hint": "ปรากฏในภาพ, ติดในภาพ",
         "choices": [
+          "うっつります",
           "うづります",
           "うつります",
-          "こたえます",
-          "うっつります"
+          "こたえます"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "うつります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%86%99%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
@@ -2080,12 +1870,12 @@ const jlptN4Data = {
         "character": "片道",
         "hint": "เที่ยวเดียว",
         "choices": [
+          "がたみち",
+          "かだみち",
           "かたみち",
-          "かったみち",
-          "かたみぢ",
-          "がたみち"
+          "かったみち"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "かたみち",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%89%87%E9%81%93",
         "sourceExam": "JLPT 2021-12"
@@ -2095,12 +1885,12 @@ const jlptN4Data = {
         "character": "往復",
         "hint": "ไปกลับ",
         "choices": [
-          "おうふぐ",
+          "おうぶく",
           "おうふっく",
-          "おうふく",
-          "おうぶく"
+          "おうふぐ",
+          "おうふく"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "おうふく",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BE%80%E5%BE%A9",
         "sourceExam": "JLPT 2021-12"
@@ -2110,12 +1900,12 @@ const jlptN4Data = {
         "character": "包みます",
         "hint": "ห่อ",
         "choices": [
-          "つっつみます",
           "つつみます",
+          "つづみます",
           "づつみます",
-          "つづみます"
+          "つっつみます"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "つつみます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8C%85%E3%81%BF%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
@@ -2125,29 +1915,14 @@ const jlptN4Data = {
         "character": "秘密",
         "hint": "ความลับ",
         "choices": [
-          "ひみっつ",
           "ひみつ",
-          "ひみづ",
-          "びみつ"
+          "ひみっつ",
+          "びみつ",
+          "ひみづ"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "ひみつ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%A7%98%E5%AF%86",
-        "sourceExam": "JLPT 2021-12"
-      },
-      {
-        "kanji": "ニコニコします",
-        "character": "ニコニコします",
-        "hint": "ยิ้มแย้ม",
-        "choices": [
-          "にこにこじます",
-          "にこにこします",
-          "にっこにこします",
-          "にごにこします"
-        ],
-        "correct": 1,
-        "japaneseText": "にこにこします",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
       },
       {
@@ -2155,12 +1930,12 @@ const jlptN4Data = {
         "character": "独身",
         "hint": "โสด",
         "choices": [
-          "どくじん",
-          "どくしん",
+          "どぐしん",
           "とくしん",
+          "どくしん",
           "どっくしん"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "どくしん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%8B%AC%E8%BA%AB",
         "sourceExam": "JLPT 2021-12"
@@ -2170,10 +1945,10 @@ const jlptN4Data = {
         "character": "柔らかい",
         "hint": "อ่อนนุ่ม",
         "choices": [
-          "やわらがい",
+          "むしあつい",
           "やわらかい",
-          "やわらっかい",
-          "あんけーと"
+          "やわらがい",
+          "やわらっかい"
         ],
         "correct": 1,
         "japaneseText": "やわらかい",
@@ -2187,8 +1962,8 @@ const jlptN4Data = {
         "choices": [
           "かったい",
           "かたい",
-          "かだい",
-          "がたい"
+          "がたい",
+          "かだい"
         ],
         "correct": 1,
         "japaneseText": "かたい",
@@ -2200,12 +1975,12 @@ const jlptN4Data = {
         "character": "連絡します",
         "hint": "ติดต่อ",
         "choices": [
-          "れんらっくします",
-          "れんらくします",
+          "れんらぐします",
           "れんらくじます",
-          "れんらぐします"
+          "れんらくします",
+          "れんらっくします"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "れんらくします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%80%A3%E7%B5%A1%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
@@ -2215,12 +1990,12 @@ const jlptN4Data = {
         "character": "蒸し暑い",
         "hint": "ร้อนอบอ้าว",
         "choices": [
-          "むしあづい",
-          "むじあつい",
           "むしあつい",
-          "むっしあつい"
+          "むしあづい",
+          "むっしあつい",
+          "むじあつい"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "むしあつい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%92%B8%E3%81%97%E6%9A%91%E3%81%84",
         "sourceExam": "JLPT 2021-12"
@@ -2232,10 +2007,10 @@ const jlptN4Data = {
         "choices": [
           "けいっかく",
           "けいがく",
-          "けいかく",
-          "けいかぐ"
+          "げいかく",
+          "けいかく"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "けいかく",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%A8%88%E7%94%BB",
         "sourceExam": "JLPT 2021-12"
@@ -2245,12 +2020,12 @@ const jlptN4Data = {
         "character": "育てます",
         "hint": "เลี้ยงดู, เพาะปลูก",
         "choices": [
-          "そだでます",
+          "ぞだてます",
           "そだってます",
-          "そだてます",
-          "ぞだてます"
+          "そたてます",
+          "そだてます"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "そだてます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%82%B2%E3%81%A6%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
@@ -2262,7 +2037,7 @@ const jlptN4Data = {
         "choices": [
           "さっくぶん",
           "さくぶん",
-          "ざくぶん",
+          "さぐぶん",
           "さくぷん"
         ],
         "correct": 1,
@@ -2275,12 +2050,12 @@ const jlptN4Data = {
         "character": "京都",
         "hint": "เกียวโต",
         "choices": [
-          "きょうど",
           "きょうと",
-          "ぎょうと",
-          "きようと"
+          "きょと",
+          "きようと",
+          "ぎょうと"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "きょうと",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BA%AC%E9%83%BD",
         "sourceExam": "JLPT 2021-12"
@@ -2290,12 +2065,12 @@ const jlptN4Data = {
         "character": "東京",
         "hint": "โตเกียว",
         "choices": [
-          "どうきょう",
-          "とうぎょう",
           "とうっきょう",
-          "とうきょう"
+          "とうきょう",
+          "どうきょう",
+          "とうぎょう"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "とうきょう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%9D%B1%E4%BA%AC",
         "sourceExam": "JLPT 2021-12"
@@ -2305,10 +2080,10 @@ const jlptN4Data = {
         "character": "大阪",
         "hint": "โอซาก้า",
         "choices": [
-          "おおさが",
+          "おおっさか",
           "おおさか",
           "おおざか",
-          "おおっさか"
+          "おおさが"
         ],
         "correct": 1,
         "japaneseText": "おおさか",
@@ -2316,31 +2091,16 @@ const jlptN4Data = {
         "sourceExam": "JLPT 2021-12"
       },
       {
-        "kanji": "バスケットボール",
-        "character": "バスケットボール",
-        "hint": "บาสเกตบอล",
-        "choices": [
-          "ばすけっどぼーる",
-          "ばすけっとぼーる",
-          "ばすげっとぼーる",
-          "ばすけとぼーる"
-        ],
-        "correct": 1,
-        "japaneseText": "ばすけっとぼーる",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%90%E3%82%B9%E3%82%B1%E3%83%83%E3%83%88%E3%83%9C%E3%83%BC%E3%83%AB",
-        "sourceExam": "JLPT 2021-12"
-      },
-      {
         "kanji": "体育館",
         "character": "体育館",
         "hint": "โรงยิม, โรงฝึกกีฬา",
         "choices": [
-          "たいいくかん",
-          "だいいくかん",
           "たいいくがん",
+          "たいいぐかん",
+          "たいいくかん",
           "たいいっくかん"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "たいいくかん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BD%93%E8%82%B2%E9%A4%A8",
         "sourceExam": "JLPT 2021-12"
@@ -2350,12 +2110,12 @@ const jlptN4Data = {
         "character": "利用料金",
         "hint": "ค่าบริการ",
         "choices": [
-          "りようりょうきん",
+          "りようりょうぎん",
           "りようりようきん",
-          "りようりょきん",
-          "りようりょうぎん"
+          "りようりょうきん",
+          "りようりょうっきん"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "りようりょうきん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%88%A9%E7%94%A8%E6%96%99%E9%87%91",
         "sourceExam": "JLPT 2021-12"
@@ -2365,12 +2125,12 @@ const jlptN4Data = {
         "character": "宿題",
         "hint": "การบ้าน",
         "choices": [
-          "じゅくだい",
           "しゅくだい",
-          "しゅくたい",
-          "しゅぐだい"
+          "しゅっくだい",
+          "じゅくだい",
+          "しゅくたい"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "しゅくだい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%AE%BF%E9%A1%8C",
         "sourceExam": "JLPT 2021-12"
@@ -2378,8 +2138,8 @@ const jlptN4Data = {
     ]
   },
   "jlpt_n4_2021_07": {
-    "title": "JLPT N4 2021-07 (言葉)",
-    "sub": "ข้อสอบรอบ กรกฎาคม 2021 (31 ข้อ)",
+    "title": "JLPT N4 2021-07 (漢字)",
+    "sub": "ข้อสอบคันจิรอบ กรกฎาคม 2021 (30 ข้อ)",
     "emoji": "☀️",
     "book": 5,
     "colorClass": "from-purple-100 to-indigo-200/50 border-purple-200 text-purple-800 hover:border-purple-300 hover:from-purple-200/60 hover:to-indigo-200/70",
@@ -2389,12 +2149,12 @@ const jlptN4Data = {
         "character": "以上",
         "hint": "มากกว่า, ข้างต้น",
         "choices": [
-          "いしょう",
-          "いじょう",
           "いじょ",
-          "いじよう"
+          "いじよう",
+          "いじょう",
+          "いしょう"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "いじょう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BB%A5%E4%B8%8A",
         "sourceExam": "JLPT 2021-07"
@@ -2404,12 +2164,12 @@ const jlptN4Data = {
         "character": "近い",
         "hint": "ใกล้",
         "choices": [
-          "ぢかい",
           "ちかい",
-          "ちっかい",
-          "ちがい"
+          "ちがい",
+          "ぢかい",
+          "ちっかい"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "ちかい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%BF%91%E3%81%84",
         "sourceExam": "JLPT 2021-07"
@@ -2420,11 +2180,11 @@ const jlptN4Data = {
         "hint": "ความสะดวก (เวลา)",
         "choices": [
           "つこう",
+          "ちかい",
           "つごう",
-          "づごう",
-          "ちかい"
+          "づごう"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "つごう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%83%BD%E5%90%88",
         "sourceExam": "JLPT 2021-07"
@@ -2449,12 +2209,12 @@ const jlptN4Data = {
         "character": "女性",
         "hint": "ผู้หญิง",
         "choices": [
-          "じよせい",
           "じょぜい",
-          "じょっせい",
-          "じょせい"
+          "じょせい",
+          "しょせい",
+          "じょっせい"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "じょせい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A5%B3%E6%80%A7",
         "sourceExam": "JLPT 2021-07"
@@ -2464,12 +2224,12 @@ const jlptN4Data = {
         "character": "習います",
         "hint": "เรียน (จากผู้สอน)",
         "choices": [
-          "すすみます",
-          "ならいます",
+          "たおれます",
           "たのみます",
-          "たおれます"
+          "すすみます",
+          "ならいます"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "ならいます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%BF%92%E3%81%84%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-07"
@@ -2479,10 +2239,10 @@ const jlptN4Data = {
         "character": "お姉さん",
         "hint": "พี่สาว (คนอื่น)",
         "choices": [
-          "おねえっさん",
           "しょくどう",
+          "おねえざん",
           "おねえさん",
-          "おねえざん"
+          "おねえっさん"
         ],
         "correct": 2,
         "japaneseText": "おねえさん",
@@ -2495,11 +2255,11 @@ const jlptN4Data = {
         "hint": "กลางคืน",
         "choices": [
           "つごう",
-          "しろい",
           "ちかい",
-          "よる"
+          "よる",
+          "しろい"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "よる",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%9C",
         "sourceExam": "JLPT 2021-07"
@@ -2524,12 +2284,12 @@ const jlptN4Data = {
         "character": "食堂",
         "hint": "โรงอาหาร",
         "choices": [
+          "しょくどう",
           "しょくとう",
           "しょぐどう",
-          "しよくどう",
-          "しょくどう"
+          "じょくどう"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "しょくどう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%A3%9F%E5%A0%82",
         "sourceExam": "JLPT 2021-07"
@@ -2539,12 +2299,12 @@ const jlptN4Data = {
         "character": "閉めます",
         "hint": "ปิด (ประตู, หน้าต่าง)",
         "choices": [
-          "しめます",
+          "じめます",
           "ひきます",
-          "うみます",
-          "じめます"
+          "しめます",
+          "うみます"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "しめます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%96%89%E3%82%81%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-07"
@@ -2554,10 +2314,10 @@ const jlptN4Data = {
         "character": "親切",
         "hint": "ใจดี มีน้ำใจ",
         "choices": [
-          "しんせづ",
-          "しんせつ",
           "しんっせつ",
-          "じんせつ"
+          "しんせつ",
+          "じんせつ",
+          "しんせづ"
         ],
         "correct": 1,
         "japaneseText": "しんせつ",
@@ -2569,12 +2329,12 @@ const jlptN4Data = {
         "character": "必要",
         "hint": "จำเป็น",
         "choices": [
-          "ひづよう",
-          "びつよう",
           "ひつよう",
-          "ひっつよう"
+          "びつよう",
+          "ひっつよう",
+          "ひづよう"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "ひつよう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BF%85%E8%A6%81",
         "sourceExam": "JLPT 2021-07"
@@ -2584,12 +2344,12 @@ const jlptN4Data = {
         "character": "深い",
         "hint": "ลึก",
         "choices": [
-          "ふがい",
           "ふっかい",
-          "ふかい",
-          "ぶかい"
+          "ぶかい",
+          "ふがい",
+          "ふかい"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "ふかい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B7%B1%E3%81%84",
         "sourceExam": "JLPT 2021-07"
@@ -2599,12 +2359,12 @@ const jlptN4Data = {
         "character": "浅い",
         "hint": "ตื้น",
         "choices": [
-          "あっさい",
           "あさい",
           "あざい",
-          "ちかい"
+          "ちかい",
+          "あっさい"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "あさい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B5%85%E3%81%84",
         "sourceExam": "JLPT 2021-07"
@@ -2614,12 +2374,12 @@ const jlptN4Data = {
         "character": "営業",
         "hint": "เวลาทำการ",
         "choices": [
-          "えいぎょ",
           "えいぎょう",
+          "えいぎょ",
           "えいきょう",
           "えいぎよう"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "えいぎょう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%96%B6%E6%A5%AD",
         "sourceExam": "JLPT 2021-07"
@@ -2629,12 +2389,12 @@ const jlptN4Data = {
         "character": "進みます",
         "hint": "มุ่งหน้า",
         "choices": [
-          "すずみます",
-          "すすみます",
+          "ずすみます",
           "すっすみます",
-          "ずすみます"
+          "すすみます",
+          "すずみます"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "すすみます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%80%B2%E3%81%BF%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-07"
@@ -2644,12 +2404,12 @@ const jlptN4Data = {
         "character": "計画",
         "hint": "แผน, วางแผน",
         "choices": [
+          "けいかく",
+          "けいかぐ",
           "けいっかく",
-          "けいがく",
-          "げいかく",
-          "けいかく"
+          "げいかく"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "けいかく",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%A8%88%E7%94%BB",
         "sourceExam": "JLPT 2021-07"
@@ -2675,8 +2435,8 @@ const jlptN4Data = {
         "hint": "ผลลัพธ์",
         "choices": [
           "けっか",
-          "けか",
           "げっか",
+          "けか",
           "けっが"
         ],
         "correct": 0,
@@ -2689,9 +2449,9 @@ const jlptN4Data = {
         "character": "頼みます",
         "hint": "ขอร้อง、ไหว้วาน",
         "choices": [
+          "すすみます",
           "ならいます",
           "だのみます",
-          "すすみます",
           "たのみます"
         ],
         "correct": 3,
@@ -2704,12 +2464,12 @@ const jlptN4Data = {
         "character": "心配します",
         "hint": "เป็ นห่วง, กังวล",
         "choices": [
+          "しんっぱいします",
+          "しんはいします",
           "しんぱいじます",
-          "じんぱいします",
-          "しんぱいします",
-          "しんはいします"
+          "しんぱいします"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "しんぱいします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BF%83%E9%85%8D%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-07"
@@ -2719,12 +2479,12 @@ const jlptN4Data = {
         "character": "故障します",
         "hint": "เสีย, ขัดข้อง",
         "choices": [
-          "こしようします",
           "こっしょうします",
           "こしょうします",
-          "ごしょうします"
+          "こじょうします",
+          "こしょうじます"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "こしょうします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%95%85%E9%9A%9C%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-07"
@@ -2734,9 +2494,9 @@ const jlptN4Data = {
         "character": "倒れます",
         "hint": "ล้ม",
         "choices": [
-          "すすみます",
-          "たおれます",
           "ならいます",
+          "たおれます",
+          "すすみます",
           "だおれます"
         ],
         "correct": 1,
@@ -2749,29 +2509,14 @@ const jlptN4Data = {
         "character": "天気予報",
         "hint": "พยากรณ์อากาศ",
         "choices": [
-          "てんきよほう",
           "てんぎよほう",
           "てんきよぼう",
-          "でんきよほう"
-        ],
-        "correct": 0,
-        "japaneseText": "てんきよほう",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%A9%E6%B0%97%E4%BA%88%E5%A0%B1",
-        "sourceExam": "JLPT 2021-07"
-      },
-      {
-        "kanji": "スーツケース",
-        "character": "スーツケース",
-        "hint": "กระเป๋าเดินทาง",
-        "choices": [
-          "すーづけーす",
-          "すーつけーず",
-          "すーつげーす",
-          "すーつけーす"
+          "てんっきよほう",
+          "てんきよほう"
         ],
         "correct": 3,
-        "japaneseText": "すーつけーす",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%B9%E3%83%BC%E3%83%84%E3%82%B1%E3%83%BC%E3%82%B9",
+        "japaneseText": "てんきよほう",
+        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%A9%E6%B0%97%E4%BA%88%E5%A0%B1",
         "sourceExam": "JLPT 2021-07"
       },
       {
@@ -2779,12 +2524,12 @@ const jlptN4Data = {
         "character": "同じ",
         "hint": "เหมือนกัน",
         "choices": [
-          "つごう",
-          "おなじ",
+          "おなし",
           "ちかい",
-          "おなし"
+          "つごう",
+          "おなじ"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "おなじ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%90%8C%E3%81%98",
         "sourceExam": "JLPT 2021-07"
@@ -2794,12 +2539,12 @@ const jlptN4Data = {
         "character": "安心します",
         "hint": "โล่งใจ, วางใจ",
         "choices": [
-          "あんじんします",
           "あんしんじます",
+          "あんしんします",
           "あんっしんします",
-          "あんしんします"
+          "あんじんします"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "あんしんします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%AE%89%E5%BF%83%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-07"
@@ -2809,10 +2554,10 @@ const jlptN4Data = {
         "character": "集まります",
         "hint": "รวมตัว, ชุมนุม",
         "choices": [
+          "あっつまります",
           "あづまります",
-          "ならいます",
           "あつまります",
-          "あっつまります"
+          "ならいます"
         ],
         "correct": 2,
         "japaneseText": "あつまります",
@@ -2824,12 +2569,12 @@ const jlptN4Data = {
         "character": "咲きます",
         "hint": "บาน (ดอกไม้)",
         "choices": [
-          "ざきます",
           "さぎます",
           "さきます",
-          "さっきます"
+          "さっきます",
+          "ざきます"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "さきます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%92%B2%E3%81%8D%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-07"
@@ -2839,12 +2584,12 @@ const jlptN4Data = {
         "character": "残念",
         "hint": "น่าเสียดาย",
         "choices": [
-          "ざんねん",
           "じょせい",
-          "いじょう",
-          "さんねん"
+          "ざんねん",
+          "さんねん",
+          "いじょう"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "ざんねん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%AE%8B%E5%BF%B5",
         "sourceExam": "JLPT 2021-07"
@@ -2852,8 +2597,8 @@ const jlptN4Data = {
     ]
   },
   "jlpt_n4_2018_12": {
-    "title": "JLPT N4 2018-12 (言葉)",
-    "sub": "ข้อสอบรอบ ธันวาคม 2018 (46 ข้อ)",
+    "title": "JLPT N4 2018-12 (漢字)",
+    "sub": "ข้อสอบคันจิรอบ ธันวาคม 2018 (38 ข้อ)",
     "emoji": "🍁",
     "book": 5,
     "colorClass": "from-purple-100 to-indigo-200/50 border-purple-200 text-purple-800 hover:border-purple-300 hover:from-purple-200/60 hover:to-indigo-200/70",
@@ -2863,12 +2608,12 @@ const jlptN4Data = {
         "character": "楽しい",
         "hint": "สนุก",
         "choices": [
-          "たのじい",
           "だのしい",
           "たのしい",
+          "たのじい",
           "たのっしい"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "たのしい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%A5%BD%E3%81%97%E3%81%84",
         "sourceExam": "JLPT 2018-12"
@@ -2878,12 +2623,12 @@ const jlptN4Data = {
         "character": "味",
         "hint": "รสชาติ",
         "choices": [
-          "くも",
-          "あじ",
+          "よる",
           "あし",
-          "よる"
+          "くも",
+          "あじ"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "あじ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%91%B3",
         "sourceExam": "JLPT 2018-12"
@@ -2893,12 +2638,12 @@ const jlptN4Data = {
         "character": "不便",
         "hint": "ไม่สะดวก",
         "choices": [
-          "いがい",
-          "ふぺん",
+          "ぶべん",
           "ふべん",
-          "ぶべん"
+          "ふぺん",
+          "いがい"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "ふべん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%B8%8D%E4%BE%BF",
         "sourceExam": "JLPT 2018-12"
@@ -2908,12 +2653,12 @@ const jlptN4Data = {
         "character": "切ります",
         "hint": "ตัด",
         "choices": [
-          "あきます",
-          "きります",
           "かします",
-          "ぎります"
+          "ぎります",
+          "きります",
+          "あきます"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "きります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%88%87%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -2923,12 +2668,12 @@ const jlptN4Data = {
         "character": "以外",
         "hint": "นอกจาก",
         "choices": [
-          "いがい",
           "しろい",
           "いかい",
-          "ふべん"
+          "ふべん",
+          "いがい"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "いがい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BB%A5%E5%A4%96",
         "sourceExam": "JLPT 2018-12"
@@ -2954,11 +2699,11 @@ const jlptN4Data = {
         "hint": "รถด่วน",
         "choices": [
           "きゅこう",
-          "きゅうこう",
-          "きゅうっこう",
-          "きゅうごう"
+          "きゅうごう",
+          "ぎゅうこう",
+          "きゅうこう"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "きゅうこう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%80%A5%E8%A1%8C",
         "sourceExam": "JLPT 2018-12"
@@ -2969,11 +2714,11 @@ const jlptN4Data = {
         "hint": "ถ่ายภาพ (บางบริบท: คัดลอก)",
         "choices": [
           "うつじます",
-          "うつします",
           "うっつします",
+          "うつします",
           "うづします"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "うつします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%86%99%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -2983,12 +2728,12 @@ const jlptN4Data = {
         "character": "反対",
         "hint": "ตรงข้าม, คัดค้าน",
         "choices": [
-          "はんったい",
-          "はんだい",
+          "ばんたい",
           "はんたい",
-          "ばんたい"
+          "はんだい",
+          "はんったい"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "はんたい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8F%8D%E5%AF%BE",
         "sourceExam": "JLPT 2018-12"
@@ -2998,12 +2743,12 @@ const jlptN4Data = {
         "character": "白い",
         "hint": "ขาว",
         "choices": [
-          "しろい",
-          "じろい",
+          "いがい",
           "ふべん",
-          "いがい"
+          "じろい",
+          "しろい"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "しろい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%99%BD%E3%81%84",
         "sourceExam": "JLPT 2018-12"
@@ -3013,12 +2758,12 @@ const jlptN4Data = {
         "character": "計画",
         "hint": "แผน, วางแผน",
         "choices": [
+          "けいかぐ",
+          "けいっかく",
           "けいがく",
-          "げいかく",
-          "けいかく",
-          "けいっかく"
+          "けいかく"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "けいかく",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%A8%88%E7%94%BB",
         "sourceExam": "JLPT 2018-12"
@@ -3028,12 +2773,12 @@ const jlptN4Data = {
         "character": "夜",
         "hint": "กลางคืน",
         "choices": [
-          "くも",
-          "あじ",
+          "ゆめ",
           "よる",
-          "ゆめ"
+          "あじ",
+          "くも"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "よる",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%9C",
         "sourceExam": "JLPT 2018-12"
@@ -3043,12 +2788,12 @@ const jlptN4Data = {
         "character": "貸します",
         "hint": "ให้ยืม",
         "choices": [
-          "かじます",
-          "かします",
           "かっします",
-          "がします"
+          "がします",
+          "かじます",
+          "かします"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "かします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%B2%B8%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -3058,12 +2803,12 @@ const jlptN4Data = {
         "character": "試合",
         "hint": "การแข่งขัน",
         "choices": [
-          "ふべん",
-          "いがい",
           "じあい",
-          "しあい"
+          "しあい",
+          "ふべん",
+          "いがい"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "しあい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%A9%A6%E5%90%88",
         "sourceExam": "JLPT 2018-12"
@@ -3073,12 +2818,12 @@ const jlptN4Data = {
         "character": "心配します",
         "hint": "เป็ นห่วง, กังวล",
         "choices": [
-          "しんぱいします",
-          "しんぱいじます",
+          "しんはいします",
           "じんぱいします",
-          "しんはいします"
+          "しんっぱいします",
+          "しんぱいします"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "しんぱいします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BF%83%E9%85%8D%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -3088,29 +2833,14 @@ const jlptN4Data = {
         "character": "夢",
         "hint": "ความฝัน",
         "choices": [
-          "ゆめ",
-          "よる",
           "くも",
-          "あじ"
+          "よる",
+          "あじ",
+          "ゆめ"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "ゆめ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%A2",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
-        "kanji": "ぜひ",
-        "character": "ぜひ",
-        "hint": "ให้ได้, อย่างแน่นอน",
-        "choices": [
-          "たいへん",
-          "ぜび",
-          "ぜひ",
-          "ぜんぜん"
-        ],
-        "correct": 2,
-        "japaneseText": "ぜひ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%9C%E3%81%B2",
         "sourceExam": "JLPT 2018-12"
       },
       {
@@ -3120,10 +2850,10 @@ const jlptN4Data = {
         "choices": [
           "せっつめいします",
           "せつめいじます",
-          "ぜつめいします",
-          "せつめいします"
+          "せつめいします",
+          "ぜつめいします"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "せつめいします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%AA%AC%E6%98%8E%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -3133,12 +2863,12 @@ const jlptN4Data = {
         "character": "硬い",
         "hint": "แข็ง",
         "choices": [
-          "かだい",
           "がたい",
+          "かたい",
           "かったい",
-          "かたい"
+          "かだい"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "かたい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%A1%AC%E3%81%84",
         "sourceExam": "JLPT 2018-12"
@@ -3150,27 +2880,12 @@ const jlptN4Data = {
         "choices": [
           "ざそいます",
           "さそいます",
-          "さぞいます",
-          "さっそいます"
+          "さっそいます",
+          "さぞいます"
         ],
         "correct": 1,
         "japaneseText": "さそいます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%AA%98%E3%81%84%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
-        "kanji": "センチ",
-        "character": "センチ",
-        "hint": "เซนติเมตร",
-        "choices": [
-          "せんち",
-          "せんっち",
-          "ぜんち",
-          "せんぢ"
-        ],
-        "correct": 0,
-        "japaneseText": "せんち",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%BB%E3%83%B3%E3%83%81",
         "sourceExam": "JLPT 2018-12"
       },
       {
@@ -3179,9 +2894,9 @@ const jlptN4Data = {
         "hint": "ไม่อยู่บ้าน, ฝากบ้าน",
         "choices": [
           "るす",
-          "るず",
+          "あじ",
           "るっす",
-          "あじ"
+          "るず"
         ],
         "correct": 0,
         "japaneseText": "るす",
@@ -3193,8 +2908,8 @@ const jlptN4Data = {
         "character": "見つかります",
         "hint": "พบ, หาเจอ",
         "choices": [
-          "みづかります",
           "みつがります",
+          "みづかります",
           "みつかります",
           "みっつかります"
         ],
@@ -3204,48 +2919,18 @@ const jlptN4Data = {
         "sourceExam": "JLPT 2018-12"
       },
       {
-        "kanji": "アルバイトします",
-        "character": "アルバイトします",
-        "hint": "ทำงานพิเศษ",
-        "choices": [
-          "あるばいとします",
-          "あるばいどします",
-          "あるばいっとします",
-          "あるばいとじます"
-        ],
-        "correct": 0,
-        "japaneseText": "あるばいとします",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%A2%E3%83%AB%E3%83%90%E3%82%A4%E3%83%88%E3%81%97%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
         "kanji": "水泳",
         "character": "水泳",
         "hint": "ว่ายน้ำ",
         "choices": [
-          "すいえい",
-          "はんたい",
           "たのしい",
-          "ずいえい"
-        ],
-        "correct": 0,
-        "japaneseText": "すいえい",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B0%B4%E6%B3%B3",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
-        "kanji": "びっくりします",
-        "character": "びっくりします",
-        "hint": "ตกใจ",
-        "choices": [
-          "あんしんします",
-          "びっくりします",
-          "うっかりします",
-          "がっかりします"
+          "すいえい",
+          "ずいえい",
+          "はんたい"
         ],
         "correct": 1,
-        "japaneseText": "びっくりします",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%B3%E3%81%A3%E3%81%8F%E3%82%8A%E3%81%97%E3%81%BE%E3%81%99",
+        "japaneseText": "すいえい",
+        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B0%B4%E6%B3%B3",
         "sourceExam": "JLPT 2018-12"
       },
       {
@@ -3253,12 +2938,12 @@ const jlptN4Data = {
         "character": "美しい",
         "hint": "งดงาม",
         "choices": [
+          "うつくじい",
+          "うづくしい",
           "うつくしい",
-          "うっつくしい",
-          "うつぐしい",
-          "うづくしい"
+          "うつぐしい"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "うつくしい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%BE%8E%E3%81%97%E3%81%84",
         "sourceExam": "JLPT 2018-12"
@@ -3268,10 +2953,10 @@ const jlptN4Data = {
         "character": "輸入します",
         "hint": "นำเข้า",
         "choices": [
-          "ゆにゅします",
+          "ゆにゅうっします",
           "ゆにゅうします",
           "ゆにゅうじます",
-          "ゆにゆうします"
+          "ゆにゅします"
         ],
         "correct": 1,
         "japaneseText": "ゆにゅうします",
@@ -3283,12 +2968,12 @@ const jlptN4Data = {
         "character": "輸出します",
         "hint": "ส่งออก",
         "choices": [
+          "ゆしゅづします",
           "ゆじゅつします",
-          "ゆしゅつじます",
-          "ゆっしゅつします",
-          "ゆしゅつします"
+          "ゆしゅつします",
+          "ゆしゅつじます"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "ゆしゅつします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%BC%B8%E5%87%BA%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -3298,10 +2983,10 @@ const jlptN4Data = {
         "character": "最近",
         "hint": "เมื่อเร็ว ๆ นี้",
         "choices": [
-          "さいっきん",
+          "さいぎん",
           "さいきん",
           "ざいきん",
-          "さいぎん"
+          "さいっきん"
         ],
         "correct": 1,
         "japaneseText": "さいきん",
@@ -3313,12 +2998,12 @@ const jlptN4Data = {
         "character": "音",
         "hint": "เสียง",
         "choices": [
-          "おと",
-          "おど",
           "おっと",
-          "あじ"
+          "おと",
+          "あじ",
+          "おど"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "おと",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%9F%B3",
         "sourceExam": "JLPT 2018-12"
@@ -3329,7 +3014,7 @@ const jlptN4Data = {
         "hint": "เยี่ยมชม,ทัศนศึกษา",
         "choices": [
           "けんがくします",
-          "けんかくします",
+          "けんがぐします",
           "けんがくじます",
           "けんがっくします"
         ],
@@ -3343,12 +3028,12 @@ const jlptN4Data = {
         "character": "飾ります",
         "hint": "ประดับ,ตกแต่ง",
         "choices": [
-          "かざります",
+          "がざります",
           "うつします",
-          "かさります",
-          "がざります"
+          "かざります",
+          "かさります"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "かざります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%A3%BE%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -3358,74 +3043,14 @@ const jlptN4Data = {
         "character": "工事",
         "hint": "การก่อสร้าง",
         "choices": [
+          "こうし",
           "ふべん",
           "こうじ",
-          "ごうじ",
-          "こうし"
+          "ごうじ"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "こうじ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%B7%A5%E4%BA%8B",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
-        "kanji": "だれでも",
-        "character": "だれでも",
-        "hint": "ใครก็ได้",
-        "choices": [
-          "だれでも",
-          "どこでも",
-          "いつでも",
-          "なんでも"
-        ],
-        "correct": 0,
-        "japaneseText": "だれでも",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%A0%E3%82%8C%E3%81%A7%E3%82%82",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
-        "kanji": "なんでも",
-        "character": "なんでも",
-        "hint": "อะไรก็ได้",
-        "choices": [
-          "いつでも",
-          "なんでも",
-          "だれでも",
-          "どこでも"
-        ],
-        "correct": 1,
-        "japaneseText": "なんでも",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%AA%E3%82%93%E3%81%A7%E3%82%82",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
-        "kanji": "どこでも",
-        "character": "どこでも",
-        "hint": "ที่ไหนก็ได้",
-        "choices": [
-          "いつでも",
-          "だれでも",
-          "どこでも",
-          "なんでも"
-        ],
-        "correct": 2,
-        "japaneseText": "どこでも",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%A9%E3%81%93%E3%81%A7%E3%82%82",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
-        "kanji": "いつでも",
-        "character": "いつでも",
-        "hint": "เมื่อไรก็ได้",
-        "choices": [
-          "なんでも",
-          "だれでも",
-          "いつでも",
-          "どこでも"
-        ],
-        "correct": 2,
-        "japaneseText": "いつでも",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%84%E3%81%A4%E3%81%A7%E3%82%82",
         "sourceExam": "JLPT 2018-12"
       },
       {
@@ -3433,9 +3058,9 @@ const jlptN4Data = {
         "character": "入学します",
         "hint": "เข้าเรียน",
         "choices": [
-          "にゅうがっくします",
-          "にゆうがくします",
           "にゅうかくします",
+          "にゆうがくします",
+          "にゅがくします",
           "にゅうがくします"
         ],
         "correct": 3,
@@ -3448,12 +3073,12 @@ const jlptN4Data = {
         "character": "卒業します",
         "hint": "จบการศึกษา",
         "choices": [
-          "そつぎょします",
-          "そづぎょうします",
           "そつぎょうします",
-          "そつぎようします"
+          "そっつぎょうします",
+          "そづぎょうします",
+          "そつきょうします"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "そつぎょうします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8D%92%E6%A5%AD%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -3463,8 +3088,8 @@ const jlptN4Data = {
         "character": "遅れます",
         "hint": "สาย, ล่าช้า",
         "choices": [
-          "おぐれます",
           "おっくれます",
+          "おぐれます",
           "うつします",
           "おくれます"
         ],
@@ -3479,9 +3104,9 @@ const jlptN4Data = {
         "hint": "ที่นั่ง",
         "choices": [
           "せき",
+          "せぎ",
           "せっき",
-          "ぜき",
-          "せぎ"
+          "ぜき"
         ],
         "correct": 0,
         "japaneseText": "せき",
@@ -3493,12 +3118,12 @@ const jlptN4Data = {
         "character": "開きます",
         "hint": "เปิด (โดยอัตโนมัติ เช่น ประตู)",
         "choices": [
-          "あぎます",
+          "あきます",
           "あっきます",
-          "きります",
-          "あきます"
+          "あぎます",
+          "きります"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "あきます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%96%8B%E3%81%8D%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -3508,12 +3133,12 @@ const jlptN4Data = {
         "character": "忘れ物",
         "hint": "ของที่ลืมไว้",
         "choices": [
-          "きゅうこう",
           "わっすれもの",
           "わすれもの",
-          "わずれもの"
+          "わずれもの",
+          "きゅうこう"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "わすれもの",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BF%98%E3%82%8C%E7%89%A9",
         "sourceExam": "JLPT 2018-12"
@@ -3523,12 +3148,12 @@ const jlptN4Data = {
         "character": "楽しみ",
         "hint": "ความสนุก, สิ่งที่ตั้งตารอ",
         "choices": [
-          "たのしみ",
           "だのしみ",
+          "たのっしみ",
           "たのじみ",
-          "たのっしみ"
+          "たのしみ"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "たのしみ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%A5%BD%E3%81%97%E3%81%BF",
         "sourceExam": "JLPT 2018-12"
@@ -3538,12 +3163,12 @@ const jlptN4Data = {
         "character": "楽しみにしています",
         "hint": "ตั้งตารอ/อยากให้วันนั้นมาถึงไวๆ",
         "choices": [
-          "たのっしみにしています",
-          "たのじみにしています",
+          "たのしみにしています",
           "たのしみにじています",
-          "たのしみにしています"
+          "たのっしみにしています",
+          "たのじみにしています"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "たのしみにしています",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%A5%BD%E3%81%97%E3%81%BF%E3%81%AB%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -3551,8 +3176,8 @@ const jlptN4Data = {
     ]
   },
   "jlpt_n4_2017_12": {
-    "title": "JLPT N4 2017-12 (言葉)",
-    "sub": "ข้อสอบรอบ ธันวาคม 2017 (52 ข้อ)",
+    "title": "JLPT N4 2017-12 (漢字)",
+    "sub": "ข้อสอบคันจิรอบ ธันวาคม 2017 (45 ข้อ)",
     "emoji": "🏯",
     "book": 5,
     "colorClass": "from-purple-100 to-indigo-200/50 border-purple-200 text-purple-800 hover:border-purple-300 hover:from-purple-200/60 hover:to-indigo-200/70",
@@ -3562,12 +3187,12 @@ const jlptN4Data = {
         "character": "石",
         "hint": "หิน",
         "choices": [
-          "あき",
-          "いっし",
+          "いし",
           "いじ",
-          "いし"
+          "いっし",
+          "あき"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "いし",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%9F%B3",
         "sourceExam": "JLPT 2017-12"
@@ -3577,12 +3202,12 @@ const jlptN4Data = {
         "character": "経験",
         "hint": "ประสบการณ์",
         "choices": [
+          "げいけん",
           "けいげん",
           "けいけん",
-          "けいっけん",
-          "げいけん"
+          "けいっけん"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "けいけん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%B5%8C%E9%A8%93",
         "sourceExam": "JLPT 2017-12"
@@ -3592,9 +3217,9 @@ const jlptN4Data = {
         "character": "店員",
         "hint": "พนักงานร้าน",
         "choices": [
+          "でんいん",
           "けいけん",
           "ゆうがた",
-          "でんいん",
           "てんいん"
         ],
         "correct": 3,
@@ -3607,10 +3232,10 @@ const jlptN4Data = {
         "character": "食堂",
         "hint": "โรงอาหาร",
         "choices": [
-          "しょっくどう",
-          "しょくとう",
+          "じょくどう",
+          "しょぐどう",
           "しょくどう",
-          "しょぐどう"
+          "しょっくどう"
         ],
         "correct": 2,
         "japaneseText": "しょくどう",
@@ -3622,12 +3247,12 @@ const jlptN4Data = {
         "character": "港",
         "hint": "ท่าเรือ",
         "choices": [
-          "みなど",
-          "みなっと",
+          "みなと",
           "にっき",
-          "みなと"
+          "みなっと",
+          "みなど"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "みなと",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B8%AF",
         "sourceExam": "JLPT 2017-12"
@@ -3637,12 +3262,12 @@ const jlptN4Data = {
         "character": "小説",
         "hint": "นวนิยาย",
         "choices": [
-          "しょうっせつ",
-          "しょうぜつ",
           "しょうせつ",
-          "しょせつ"
+          "しょうせづ",
+          "しょうぜつ",
+          "じょうせつ"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "しょうせつ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%B0%8F%E8%AA%AC",
         "sourceExam": "JLPT 2017-12"
@@ -3652,12 +3277,12 @@ const jlptN4Data = {
         "character": "日記",
         "hint": "ไดอารี่, บันทึกประจำวัน",
         "choices": [
-          "にっき",
-          "みなと",
+          "にっぎ",
           "にき",
-          "にっぎ"
+          "にっき",
+          "みなと"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "にっき",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%97%A5%E8%A8%98",
         "sourceExam": "JLPT 2017-12"
@@ -3667,12 +3292,12 @@ const jlptN4Data = {
         "character": "夕方",
         "hint": "ตอนเย็น",
         "choices": [
+          "ゆうかた",
           "ゆうがった",
-          "ゆうがた",
           "ゆうがだ",
-          "ゆうかた"
+          "ゆうがた"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "ゆうがた",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%95%E6%96%B9",
         "sourceExam": "JLPT 2017-12"
@@ -3682,12 +3307,12 @@ const jlptN4Data = {
         "character": "秋",
         "hint": "ฤดูใบไม้ร่วง",
         "choices": [
-          "いし",
-          "あぎ",
+          "あっき",
           "あき",
-          "あっき"
+          "いし",
+          "あぎ"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "あき",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%A7%8B",
         "sourceExam": "JLPT 2017-12"
@@ -3712,12 +3337,12 @@ const jlptN4Data = {
         "character": "場所",
         "hint": "สถานที่",
         "choices": [
-          "ばしょ",
+          "ばしよ",
+          "ばっしょ",
           "ばじょ",
-          "ぱしょ",
-          "ばっしょ"
+          "ばしょ"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "ばしょ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A0%B4%E6%89%80",
         "sourceExam": "JLPT 2017-12"
@@ -3727,10 +3352,10 @@ const jlptN4Data = {
         "character": "歩きます",
         "hint": "เดิน",
         "choices": [
+          "あるっきます",
           "あるぎます",
-          "かわきます",
           "あるきます",
-          "あるっきます"
+          "かわきます"
         ],
         "correct": 2,
         "japaneseText": "あるきます",
@@ -3742,12 +3367,12 @@ const jlptN4Data = {
         "character": "便利",
         "hint": "สะดวก",
         "choices": [
-          "みなと",
-          "ぺんり",
+          "べんり",
           "にっき",
-          "べんり"
+          "ぺんり",
+          "みなと"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "べんり",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BE%BF%E5%88%A9",
         "sourceExam": "JLPT 2017-12"
@@ -3757,12 +3382,12 @@ const jlptN4Data = {
         "character": "眠い",
         "hint": "ง่วงนอน",
         "choices": [
-          "みなと",
-          "ねむい",
+          "にっき",
           "あおい",
-          "にっき"
+          "ねむい",
+          "みなと"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "ねむい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%9C%A0%E3%81%84",
         "sourceExam": "JLPT 2017-12"
@@ -3787,10 +3412,10 @@ const jlptN4Data = {
         "character": "乾きます",
         "hint": "แห้ง",
         "choices": [
-          "がわきます",
+          "かわっきます",
           "かわきます",
-          "かわぎます",
-          "かわっきます"
+          "がわきます",
+          "かわぎます"
         ],
         "correct": 1,
         "japaneseText": "かわきます",
@@ -3802,29 +3427,14 @@ const jlptN4Data = {
         "character": "熱心",
         "hint": "ตั้งใจ, กระตือรือร้น",
         "choices": [
-          "ねっしん",
+          "けいけん",
           "ねっじん",
-          "ねしん",
-          "けいけん"
+          "ねっしん",
+          "ねしん"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "ねっしん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%86%B1%E5%BF%83",
-        "sourceExam": "JLPT 2017-12"
-      },
-      {
-        "kanji": "ルール",
-        "character": "ルール",
-        "hint": "กฎ, กติกา",
-        "choices": [
-          "るーる",
-          "みなと",
-          "あおい",
-          "にっき"
-        ],
-        "correct": 0,
-        "japaneseText": "るーる",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%AB%E3%83%BC%E3%83%AB",
         "sourceExam": "JLPT 2017-12"
       },
       {
@@ -3832,12 +3442,12 @@ const jlptN4Data = {
         "character": "用意",
         "hint": "การเตรียม",
         "choices": [
-          "あおい",
-          "みなと",
           "ようい",
-          "にっき"
+          "みなと",
+          "にっき",
+          "あおい"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "ようい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%94%A8%E6%84%8F",
         "sourceExam": "JLPT 2017-12"
@@ -3847,10 +3457,10 @@ const jlptN4Data = {
         "character": "相談します",
         "hint": "ปรึกษา",
         "choices": [
-          "そうだんじます",
+          "そうたんします",
           "そうだんします",
           "ぞうだんします",
-          "そうたんします"
+          "そうだんじます"
         ],
         "correct": 1,
         "japaneseText": "そうだんします",
@@ -3862,12 +3472,12 @@ const jlptN4Data = {
         "character": "運びます",
         "hint": "ขนย้าย, ขนส่ง",
         "choices": [
-          "ばこびます",
-          "はごびます",
+          "はこぴます",
+          "はこびます",
           "はっこびます",
-          "はこびます"
+          "はごびます"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "はこびます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%81%8B%E3%81%B3%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2017-12"
@@ -3877,9 +3487,9 @@ const jlptN4Data = {
         "character": "危険",
         "hint": "อันตราย",
         "choices": [
+          "きっけん",
           "きげん",
           "ぎけん",
-          "きっけん",
           "きけん"
         ],
         "correct": 3,
@@ -3892,12 +3502,12 @@ const jlptN4Data = {
         "character": "止めます",
         "hint": "หยุด, จอด",
         "choices": [
+          "わります",
           "とめます",
-          "ほめます",
           "どめます",
-          "わります"
+          "ほめます"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "とめます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%AD%A2%E3%82%81%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2017-12"
@@ -3907,12 +3517,12 @@ const jlptN4Data = {
         "character": "出発します",
         "hint": "ออกเดินทาง",
         "choices": [
-          "じゅっぱつします",
-          "しゅっぱつじます",
           "しゅっぱつします",
+          "しゅっぱづします",
+          "しゅっぱつじます",
           "しゅっはつします"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "しゅっぱつします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%87%BA%E7%99%BA%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2017-12"
@@ -3923,11 +3533,11 @@ const jlptN4Data = {
         "hint": "มาถึง, เดินทางถึง",
         "choices": [
           "とうちゃぐします",
-          "とうちゃくじます",
           "とうちゃくします",
-          "どうちゃくします"
+          "とうちゃくじます",
+          "とうぢゃくします"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "とうちゃくします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%88%B0%E7%9D%80%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2017-12"
@@ -3937,12 +3547,12 @@ const jlptN4Data = {
         "character": "丁寧",
         "hint": "สุภาพ, เรียบร้อย",
         "choices": [
+          "けいけん",
           "でいねい",
           "てんいん",
-          "ていねい",
-          "けいけん"
+          "ていねい"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "ていねい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%B8%81%E5%AF%A7",
         "sourceExam": "JLPT 2017-12"
@@ -3952,10 +3562,10 @@ const jlptN4Data = {
         "character": "上手い",
         "hint": "อร่อย, เก่ง",
         "choices": [
-          "みなと",
           "にっき",
+          "あおい",
           "うまい",
-          "あおい"
+          "みなと"
         ],
         "correct": 2,
         "japaneseText": "うまい",
@@ -3967,12 +3577,12 @@ const jlptN4Data = {
         "character": "寝坊します",
         "hint": "ตื่นสาย",
         "choices": [
-          "ねぽうします",
-          "ねぼうじます",
           "ねぼうっします",
-          "ねぼうします"
+          "ねぽうします",
+          "ねぼうします",
+          "ねぼうじます"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "ねぼうします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%AF%9D%E5%9D%8A%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2017-12"
@@ -3982,9 +3592,9 @@ const jlptN4Data = {
         "character": "褒めます",
         "hint": "ชมเชย",
         "choices": [
-          "とめます",
-          "ぼめます",
           "わります",
+          "ぼめます",
+          "とめます",
           "ほめます"
         ],
         "correct": 3,
@@ -3997,12 +3607,12 @@ const jlptN4Data = {
         "character": "留守",
         "hint": "การไม่อยู่บ้าน",
         "choices": [
-          "るす",
           "いし",
           "るっす",
-          "るず"
+          "るず",
+          "るす"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "るす",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%95%99%E5%AE%88",
         "sourceExam": "JLPT 2017-12"
@@ -4012,10 +3622,10 @@ const jlptN4Data = {
         "character": "親切",
         "hint": "ใจดี",
         "choices": [
-          "しんせづ",
+          "しんっせつ",
           "しんせつ",
           "しんぜつ",
-          "じんせつ"
+          "しんせづ"
         ],
         "correct": 1,
         "japaneseText": "しんせつ",
@@ -4027,12 +3637,12 @@ const jlptN4Data = {
         "character": "苦い",
         "hint": "ขม",
         "choices": [
-          "にかい",
-          "にがい",
+          "みなと",
           "にっき",
-          "みなと"
+          "にかい",
+          "にがい"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "にがい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%8B%A6%E3%81%84",
         "sourceExam": "JLPT 2017-12"
@@ -4057,12 +3667,12 @@ const jlptN4Data = {
         "character": "遅刻します",
         "hint": "ไปสาย",
         "choices": [
-          "ちごくします",
-          "ちこくします",
           "ちっこくします",
-          "ちこぐします"
+          "ちこくじます",
+          "ちこくします",
+          "ぢこくします"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "ちこくします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%81%85%E5%88%BB%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2017-12"
@@ -4072,29 +3682,14 @@ const jlptN4Data = {
         "character": "米",
         "hint": "ข้าวสาร",
         "choices": [
-          "いし",
+          "こめ",
           "あき",
-          "ごめ",
-          "こめ"
+          "いし",
+          "ごめ"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "こめ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%B1%B3",
-        "sourceExam": "JLPT 2017-12"
-      },
-      {
-        "kanji": "ドライブ",
-        "character": "ドライブ",
-        "hint": "ขับรถเล่น",
-        "choices": [
-          "とらいぶ",
-          "どらいぷ",
-          "どらいぶ",
-          "けいけん"
-        ],
-        "correct": 2,
-        "japaneseText": "どらいぶ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96",
         "sourceExam": "JLPT 2017-12"
       },
       {
@@ -4102,10 +3697,10 @@ const jlptN4Data = {
         "character": "間に合います",
         "hint": "ทันเวลา",
         "choices": [
-          "ねぼうします",
+          "あるきます",
           "まにあいます",
-          "ちこくします",
-          "あるきます"
+          "ねぼうします",
+          "ちこくします"
         ],
         "correct": 1,
         "japaneseText": "まにあいます",
@@ -4118,11 +3713,11 @@ const jlptN4Data = {
         "hint": "ลูกค้า, แขก",
         "choices": [
           "おきゃくざん",
-          "おっきゃくさん",
           "おきゃくさん",
-          "おぎゃくさん"
+          "おぎゃくさん",
+          "おっきゃくさん"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "おきゃくさん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%8A%E5%AE%A2%E3%81%95%E3%82%93",
         "sourceExam": "JLPT 2017-12"
@@ -4132,29 +3727,14 @@ const jlptN4Data = {
         "character": "反対",
         "hint": "การคัดค้าน, ตรงข้าม",
         "choices": [
-          "はんだい",
-          "はんったい",
           "はんたい",
-          "ばんたい"
+          "はんったい",
+          "ばんたい",
+          "はんだい"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "はんたい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8F%8D%E5%AF%BE",
-        "sourceExam": "JLPT 2017-12"
-      },
-      {
-        "kanji": "ソファー",
-        "character": "ソファー",
-        "hint": "โซฟา",
-        "choices": [
-          "そぶぁー",
-          "ぞふぁー",
-          "けいけん",
-          "そふぁー"
-        ],
-        "correct": 3,
-        "japaneseText": "そふぁー",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%BD%E3%83%95%E3%82%A1%E3%83%BC",
         "sourceExam": "JLPT 2017-12"
       },
       {
@@ -4162,9 +3742,9 @@ const jlptN4Data = {
         "character": "お知らせ",
         "hint": "การแจ้งให้ทราบ",
         "choices": [
-          "おしらぜ",
-          "おしらせ",
           "おっしらせ",
+          "おしらせ",
+          "おしらぜ",
           "おじらせ"
         ],
         "correct": 1,
@@ -4177,12 +3757,12 @@ const jlptN4Data = {
         "character": "返事",
         "hint": "คำตอบ, การตอบกลับ",
         "choices": [
-          "みなと",
           "へんじ",
           "へんし",
-          "べんじ"
+          "べんじ",
+          "みなと"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "へんじ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%BF%94%E4%BA%8B",
         "sourceExam": "JLPT 2017-12"
@@ -4192,44 +3772,14 @@ const jlptN4Data = {
         "character": "湖",
         "hint": "ทะเลสาบ",
         "choices": [
+          "てんいん",
           "みすうみ",
           "みずうみ",
-          "てんいん",
           "けいけん"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "みずうみ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B9%96",
-        "sourceExam": "JLPT 2017-12"
-      },
-      {
-        "kanji": "ただ",
-        "character": "ただ",
-        "hint": "ฟรี, เปล่า",
-        "choices": [
-          "ただ",
-          "たった",
-          "ほぼ",
-          "まだまだ"
-        ],
-        "correct": 0,
-        "japaneseText": "ただ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%9F%E3%81%A0",
-        "sourceExam": "JLPT 2017-12"
-      },
-      {
-        "kanji": "フリー",
-        "character": "フリー",
-        "hint": "อิสระ, ว่าง, ฟรี",
-        "choices": [
-          "にっき",
-          "みなと",
-          "ふりー",
-          "ぶりー"
-        ],
-        "correct": 2,
-        "japaneseText": "ふりー",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%95%E3%83%AA%E3%83%BC",
         "sourceExam": "JLPT 2017-12"
       },
       {
@@ -4237,12 +3787,12 @@ const jlptN4Data = {
         "character": "体育館",
         "hint": "โรงยิม",
         "choices": [
-          "たいいくがん",
           "たいいっくかん",
+          "たいいくかん",
           "だいいくかん",
-          "たいいくかん"
+          "たいいくがん"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "たいいくかん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BD%93%E8%82%B2%E9%A4%A8",
         "sourceExam": "JLPT 2017-12"
@@ -4253,11 +3803,11 @@ const jlptN4Data = {
         "hint": "เหลืออยู่",
         "choices": [
           "のごります",
+          "のっこります",
           "あるきます",
-          "のこります",
-          "のっこります"
+          "のこります"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "のこります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%AE%8B%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2017-12"
@@ -4268,28 +3818,13 @@ const jlptN4Data = {
         "hint": "การเตรียมตัว",
         "choices": [
           "けいけん",
-          "じゅんび",
+          "しゅんび",
           "じゅんぴ",
-          "しゅんび"
+          "じゅんび"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "じゅんび",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%BA%96%E5%82%99",
-        "sourceExam": "JLPT 2017-12"
-      },
-      {
-        "kanji": "タオル",
-        "character": "タオル",
-        "hint": "ผ้าเช็ดตัว",
-        "choices": [
-          "たおる",
-          "にっき",
-          "みなと",
-          "だおる"
-        ],
-        "correct": 0,
-        "japaneseText": "たおる",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%BF%E3%82%AA%E3%83%AB",
         "sourceExam": "JLPT 2017-12"
       },
       {
@@ -4297,29 +3832,14 @@ const jlptN4Data = {
         "character": "お見舞い",
         "hint": "การเยี่ยมผู้ป่วย",
         "choices": [
-          "ゆうがた",
+          "おみまい",
           "けいけん",
           "てんいん",
-          "おみまい"
+          "ゆうがた"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "おみまい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%8A%E8%A6%8B%E8%88%9E%E3%81%84",
-        "sourceExam": "JLPT 2017-12"
-      },
-      {
-        "kanji": "ピアニスト",
-        "character": "ピアニスト",
-        "hint": "นักเปียโน",
-        "choices": [
-          "ひあにすと",
-          "ぴあにすと",
-          "ぴあにっすと",
-          "ぴあにすど"
-        ],
-        "correct": 1,
-        "japaneseText": "ぴあにすと",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%94%E3%82%A2%E3%83%8B%E3%82%B9%E3%83%88",
         "sourceExam": "JLPT 2017-12"
       },
       {
@@ -4327,12 +3847,12 @@ const jlptN4Data = {
         "character": "黒板",
         "hint": "กระดานดำ",
         "choices": [
+          "こくぱん",
           "こぐばん",
-          "こくばん",
-          "こっくばん",
-          "ごくばん"
+          "ごくばん",
+          "こくばん"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "こくばん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%BB%92%E6%9D%BF",
         "sourceExam": "JLPT 2017-12"
@@ -4340,8 +3860,8 @@ const jlptN4Data = {
     ]
   },
   "jlpt_n4_2013_12": {
-    "title": "JLPT N4 2013-12 (言葉)",
-    "sub": "ข้อสอบรอบ ธันวาคม 2013 (48 ข้อ)",
+    "title": "JLPT N4 2013-12 (漢字)",
+    "sub": "ข้อสอบคันจิรอบ ธันวาคม 2013 (42 ข้อ)",
     "emoji": "📜",
     "book": 5,
     "colorClass": "from-purple-100 to-indigo-200/50 border-purple-200 text-purple-800 hover:border-purple-300 hover:from-purple-200/60 hover:to-indigo-200/70",
@@ -4351,12 +3871,12 @@ const jlptN4Data = {
         "character": "指",
         "hint": "นิ้ว",
         "choices": [
-          "あね",
           "ゆび",
-          "うそ",
-          "ゆぴ"
+          "ゆぴ",
+          "あね",
+          "うそ"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "ゆび",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%8C%87",
         "sourceExam": "JLPT 2013-12"
@@ -4366,12 +3886,12 @@ const jlptN4Data = {
         "character": "旅行",
         "hint": "การท่องเที่ยว",
         "choices": [
-          "りよこう",
           "りょっこう",
           "りょごう",
-          "りょこう"
+          "りょこう",
+          "りよこう"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "りょこう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%97%85%E8%A1%8C",
         "sourceExam": "JLPT 2013-12"
@@ -4383,8 +3903,8 @@ const jlptN4Data = {
         "choices": [
           "いそきます",
           "いそぎます",
-          "いっそぎます",
-          "いぞぎます"
+          "いぞぎます",
+          "いっそぎます"
         ],
         "correct": 1,
         "japaneseText": "いそぎます",
@@ -4396,10 +3916,10 @@ const jlptN4Data = {
         "character": "工事",
         "hint": "การก่อสร้าง",
         "choices": [
-          "つよい",
-          "こうじ",
           "こうし",
-          "ごうじ"
+          "こうじ",
+          "ごうじ",
+          "つよい"
         ],
         "correct": 1,
         "japaneseText": "こうじ",
@@ -4412,11 +3932,11 @@ const jlptN4Data = {
         "hint": "พี่สาว (ของตนเอง)",
         "choices": [
           "こめ",
-          "あね",
+          "ゆび",
           "うそ",
-          "ゆび"
+          "あね"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "あね",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A7%89",
         "sourceExam": "JLPT 2013-12"
@@ -4426,8 +3946,8 @@ const jlptN4Data = {
         "character": "待ちます",
         "hint": "รอ",
         "choices": [
-          "まぢます",
           "あきます",
+          "まぢます",
           "まっちます",
           "まちます"
         ],
@@ -4441,12 +3961,12 @@ const jlptN4Data = {
         "character": "強い",
         "hint": "แข็งแรง, แรง",
         "choices": [
+          "つよい",
           "よわい",
           "づよい",
-          "こうじ",
-          "つよい"
+          "こうじ"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "つよい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BC%B7%E3%81%84",
         "sourceExam": "JLPT 2013-12"
@@ -4456,12 +3976,12 @@ const jlptN4Data = {
         "character": "弱い",
         "hint": "อ่อนแอ",
         "choices": [
-          "いしゃ",
-          "つよい",
           "こうじ",
-          "よわい"
+          "いしゃ",
+          "よわい",
+          "つよい"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "よわい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BC%B1%E3%81%84",
         "sourceExam": "JLPT 2013-12"
@@ -4471,12 +3991,12 @@ const jlptN4Data = {
         "character": "駅員",
         "hint": "พนักงานสถานีรถไฟ",
         "choices": [
+          "えっきいん",
           "えぎいん",
-          "えきいん",
           "りょこう",
-          "えっきいん"
+          "えきいん"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "えきいん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%A7%85%E5%93%A1",
         "sourceExam": "JLPT 2013-12"
@@ -4486,12 +4006,12 @@ const jlptN4Data = {
         "character": "医者",
         "hint": "หมอ",
         "choices": [
-          "いしゃ",
-          "いっしゃ",
           "こうじ",
-          "いじゃ"
+          "いっしゃ",
+          "いじゃ",
+          "いしゃ"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "いしゃ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8C%BB%E8%80%85",
         "sourceExam": "JLPT 2013-12"
@@ -4501,12 +4021,12 @@ const jlptN4Data = {
         "character": "反対",
         "hint": "การคัดค้าน, ตรงข้าม",
         "choices": [
-          "はんだい",
           "ばんたい",
-          "はんたい",
-          "はんったい"
+          "はんったい",
+          "はんだい",
+          "はんたい"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "はんたい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8F%8D%E5%AF%BE",
         "sourceExam": "JLPT 2013-12"
@@ -4516,12 +4036,12 @@ const jlptN4Data = {
         "character": "開きます",
         "hint": "เปิด (อัตโนมัติ)",
         "choices": [
-          "あきます",
-          "まちます",
           "あっきます",
+          "まちます",
+          "あきます",
           "あぎます"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "あきます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%96%8B%E3%81%8D%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -4531,12 +4051,12 @@ const jlptN4Data = {
         "character": "赤い",
         "hint": "สีแดง",
         "choices": [
-          "あがい",
-          "あかい",
           "あっかい",
-          "こうじ"
+          "こうじ",
+          "あがい",
+          "あかい"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "あかい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%B5%A4%E3%81%84",
         "sourceExam": "JLPT 2013-12"
@@ -4546,12 +4066,12 @@ const jlptN4Data = {
         "character": "走ります",
         "hint": "วิ่ง",
         "choices": [
-          "ばしります",
-          "はしります",
           "はじります",
-          "はっしります"
+          "はっしります",
+          "はしります",
+          "ばしります"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "はしります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%B5%B0%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -4561,12 +4081,12 @@ const jlptN4Data = {
         "character": "暗い",
         "hint": "มืด",
         "choices": [
-          "こうじ",
-          "つよい",
           "ぐらい",
-          "くらい"
+          "くらい",
+          "こうじ",
+          "つよい"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "くらい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%9A%97%E3%81%84",
         "sourceExam": "JLPT 2013-12"
@@ -4576,12 +4096,12 @@ const jlptN4Data = {
         "character": "野菜",
         "hint": "ผัก",
         "choices": [
+          "やさい",
           "やっさい",
           "やざい",
-          "やさい",
           "こうじ"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "やさい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%87%8E%E8%8F%9C",
         "sourceExam": "JLPT 2013-12"
@@ -4593,10 +4113,10 @@ const jlptN4Data = {
         "choices": [
           "あきます",
           "やみます",
-          "まちます",
-          "なれます"
+          "なれます",
+          "まちます"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "なれます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%85%A3%E3%82%8C%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -4606,12 +4126,12 @@ const jlptN4Data = {
         "character": "止みます",
         "hint": "หยุด (ฝน ฯลฯ)",
         "choices": [
-          "あきます",
-          "やみます",
           "なれます",
-          "まちます"
+          "まちます",
+          "やみます",
+          "あきます"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "やみます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%AD%A2%E3%81%BF%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -4621,12 +4141,12 @@ const jlptN4Data = {
         "character": "大人しい",
         "hint": "เรียบร้อย, สุภาพ",
         "choices": [
-          "おっとなしい",
           "おとなじい",
           "おとなしい",
-          "おどなしい"
+          "おどなしい",
+          "おっとなしい"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "おとなしい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%A7%E4%BA%BA%E3%81%97%E3%81%84",
         "sourceExam": "JLPT 2013-12"
@@ -4636,9 +4156,9 @@ const jlptN4Data = {
         "character": "お見舞い",
         "hint": "การเยี่ยมผู้ป่วย",
         "choices": [
-          "りょこう",
-          "えきいん",
           "はんたい",
+          "えきいん",
+          "りょこう",
           "おみまい"
         ],
         "correct": 3,
@@ -4651,12 +4171,12 @@ const jlptN4Data = {
         "character": "帰国",
         "hint": "การกลับประเทศ",
         "choices": [
-          "きこぐ",
-          "きこく",
           "ぎこく",
-          "きごく"
+          "きごく",
+          "きこぐ",
+          "きこく"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "きこく",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%B8%B0%E5%9B%BD",
         "sourceExam": "JLPT 2013-12"
@@ -4681,12 +4201,12 @@ const jlptN4Data = {
         "character": "真面目",
         "hint": "อย่างตั้งใจ, อย่างจริงจัง",
         "choices": [
-          "まじめ",
+          "こうじ",
           "つよい",
-          "ましめ",
-          "こうじ"
+          "まじめ",
+          "ましめ"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "まじめ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%9C%9F%E9%9D%A2%E7%9B%AE",
         "sourceExam": "JLPT 2013-12"
@@ -4696,12 +4216,12 @@ const jlptN4Data = {
         "character": "落とします",
         "hint": "ทำตก, ทำหล่น",
         "choices": [
-          "おとじます",
           "おっとします",
-          "おとします",
-          "おどします"
+          "おとじます",
+          "おどします",
+          "おとします"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "おとします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%90%BD%E3%81%A8%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -4711,59 +4231,14 @@ const jlptN4Data = {
         "character": "習慣",
         "hint": "นิสัย, ขนบธรรมเนียม",
         "choices": [
-          "じゅうかん",
+          "しゆうかん",
+          "しゅうがん",
           "しゅうかん",
-          "しゅうっかん",
-          "しゅうがん"
-        ],
-        "correct": 1,
-        "japaneseText": "しゅうかん",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%BF%92%E6%85%A3",
-        "sourceExam": "JLPT 2013-12"
-      },
-      {
-        "kanji": "スイッチ",
-        "character": "スイッチ",
-        "hint": "สวิตช์",
-        "choices": [
-          "すいっぢ",
-          "ずいっち",
-          "すいち",
-          "すいっち"
-        ],
-        "correct": 3,
-        "japaneseText": "すいっち",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%B9%E3%82%A4%E3%83%83%E3%83%81",
-        "sourceExam": "JLPT 2013-12"
-      },
-      {
-        "kanji": "チェック",
-        "character": "チェック",
-        "hint": "ตรวจสอบ",
-        "choices": [
-          "ちぇっぐ",
-          "ちぇく",
-          "ちぇっく",
-          "ぢぇっく"
+          "じゅうかん"
         ],
         "correct": 2,
-        "japaneseText": "ちぇっく",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF",
-        "sourceExam": "JLPT 2013-12"
-      },
-      {
-        "kanji": "スタート",
-        "character": "スタート",
-        "hint": "การเริ่มต้น",
-        "choices": [
-          "すたーど",
-          "すたーと",
-          "ずたーと",
-          "すったーと"
-        ],
-        "correct": 1,
-        "japaneseText": "すたーと",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88",
+        "japaneseText": "しゅうかん",
+        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%BF%92%E6%85%A3",
         "sourceExam": "JLPT 2013-12"
       },
       {
@@ -4771,12 +4246,12 @@ const jlptN4Data = {
         "character": "決めます",
         "hint": "ตัดสินใจ",
         "choices": [
-          "きめます",
           "ぎめます",
+          "きめます",
           "あきます",
           "まちます"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "きめます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B1%BA%E3%82%81%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -4786,12 +4261,12 @@ const jlptN4Data = {
         "character": "本当",
         "hint": "จริง",
         "choices": [
-          "ほんっとう",
+          "ほんとう",
           "ぼんとう",
           "ほんどう",
-          "ほんとう"
+          "ほんっとう"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "ほんとう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%9C%AC%E5%BD%93",
         "sourceExam": "JLPT 2013-12"
@@ -4801,12 +4276,12 @@ const jlptN4Data = {
         "character": "噓",
         "hint": "โกหก",
         "choices": [
-          "ゆび",
           "うっそ",
-          "うぞ",
-          "うそ"
+          "うそ",
+          "ゆび",
+          "うぞ"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "うそ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%99%93",
         "sourceExam": "JLPT 2013-12"
@@ -4816,12 +4291,12 @@ const jlptN4Data = {
         "character": "戻ります",
         "hint": "กลับไปที่เดิม",
         "choices": [
-          "はしります",
-          "もどります",
           "もとります",
-          "いそぎます"
+          "はしります",
+          "いそぎます",
+          "もどります"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "もどります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%88%BB%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -4831,12 +4306,12 @@ const jlptN4Data = {
         "character": "米",
         "hint": "ข้าวสาร",
         "choices": [
-          "あね",
+          "こめ",
           "ごめ",
           "ゆび",
-          "こめ"
+          "あね"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "こめ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%B1%B3",
         "sourceExam": "JLPT 2013-12"
@@ -4846,12 +4321,12 @@ const jlptN4Data = {
         "character": "輸出します",
         "hint": "ส่งออก",
         "choices": [
-          "ゆっしゅつします",
-          "ゆしゅつじます",
           "ゆしゅつします",
-          "ゆしゅづします"
+          "ゆじゅつします",
+          "ゆしゅつじます",
+          "ゆっしゅつします"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "ゆしゅつします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%BC%B8%E5%87%BA%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -4861,29 +4336,14 @@ const jlptN4Data = {
         "character": "輸入します",
         "hint": "นำเข้า",
         "choices": [
-          "ゆにゅうじます",
-          "ゆにゅうっします",
+          "ゆにゅします",
           "ゆにゅうします",
+          "ゆにゅうっします",
           "ゆにゆうします"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "ゆにゅうします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%BC%B8%E5%85%A5%E3%81%97%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2013-12"
-      },
-      {
-        "kanji": "ニコニコします",
-        "character": "ニコニコします",
-        "hint": "ยิ้มแย้ม",
-        "choices": [
-          "にこにこします",
-          "にっこにこします",
-          "にごにこします",
-          "にこにこじます"
-        ],
-        "correct": 0,
-        "japaneseText": "にこにこします",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
       },
       {
@@ -4891,12 +4351,12 @@ const jlptN4Data = {
         "character": "笑います",
         "hint": "หัวเราะ",
         "choices": [
-          "いそぎます",
-          "おとします",
           "はしります",
-          "わらいます"
+          "おとします",
+          "わらいます",
+          "いそぎます"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "わらいます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%AC%91%E3%81%84%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -4906,12 +4366,12 @@ const jlptN4Data = {
         "character": "家具",
         "hint": "เฟอร์นิเจอร์",
         "choices": [
-          "ゆび",
-          "かぐ",
           "がぐ",
-          "かく"
+          "ゆび",
+          "かく",
+          "かぐ"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "かぐ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%AE%B6%E5%85%B7",
         "sourceExam": "JLPT 2013-12"
@@ -4921,12 +4381,12 @@ const jlptN4Data = {
         "character": "洗濯します",
         "hint": "ซักผ้า",
         "choices": [
-          "せんたぐします",
+          "せんたくじます",
+          "せんだくします",
           "せんたくします",
-          "せんったくします",
           "ぜんたくします"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "せんたくします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B4%97%E6%BF%AF%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -4937,11 +4397,11 @@ const jlptN4Data = {
         "hint": "แออัด, แน่น",
         "choices": [
           "ごみます",
+          "こみます",
           "まちます",
-          "あきます",
-          "こみます"
+          "あきます"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "こみます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%BE%BC%E3%81%BF%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -4951,12 +4411,12 @@ const jlptN4Data = {
         "character": "似合います",
         "hint": "เหมาะสม, เข้ากันดี",
         "choices": [
-          "いそぎます",
           "おとします",
-          "はしります",
-          "にあいます"
+          "いそぎます",
+          "にあいます",
+          "はしります"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "にあいます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BC%BC%E5%90%88%E3%81%84%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -4967,28 +4427,13 @@ const jlptN4Data = {
         "hint": "เลี้ยงดู, เพาะปลูก",
         "choices": [
           "ぞだてます",
+          "そだてます",
           "そたてます",
-          "そだってます",
-          "そだてます"
+          "そだでます"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "そだてます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%82%B2%E3%81%A6%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2013-12"
-      },
-      {
-        "kanji": "ぜひ",
-        "character": "ぜひ",
-        "hint": "ให้ได้, โดยเด็ดขาด",
-        "choices": [
-          "ぜび",
-          "ぜんぜん",
-          "たいへん",
-          "ぜひ"
-        ],
-        "correct": 3,
-        "japaneseText": "ぜひ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%9C%E3%81%B2",
         "sourceExam": "JLPT 2013-12"
       },
       {
@@ -4998,27 +4443,12 @@ const jlptN4Data = {
         "choices": [
           "れきじ",
           "れっきし",
-          "れきし",
-          "れぎし"
+          "れぎし",
+          "れきし"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "れきし",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%AD%B4%E5%8F%B2",
-        "sourceExam": "JLPT 2013-12"
-      },
-      {
-        "kanji": "ずっと",
-        "character": "ずっと",
-        "hint": "ตลอด, โดยตลอด",
-        "choices": [
-          "さっと",
-          "そっと",
-          "ずっと",
-          "じっと"
-        ],
-        "correct": 2,
-        "japaneseText": "ずっと",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%9A%E3%81%A3%E3%81%A8",
         "sourceExam": "JLPT 2013-12"
       },
       {
@@ -5027,11 +4457,11 @@ const jlptN4Data = {
         "hint": "เกิด",
         "choices": [
           "おとします",
-          "はしります",
+          "うまれます",
           "いそぎます",
-          "うまれます"
+          "はしります"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "うまれます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%94%9F%E3%81%BE%E3%82%8C%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -5041,12 +4471,12 @@ const jlptN4Data = {
         "character": "運転手",
         "hint": "คนขับรถ",
         "choices": [
-          "うんてんしゅ",
           "うんってんしゅ",
           "うんでんしゅ",
-          "うんてんじゅ"
+          "うんてんじゅ",
+          "うんてんしゅ"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "うんてんしゅ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%81%8B%E8%BB%A2%E6%89%8B",
         "sourceExam": "JLPT 2013-12"
@@ -5057,11 +4487,11 @@ const jlptN4Data = {
         "hint": "ใช้ประโยชน์",
         "choices": [
           "よやくします",
+          "りようします",
           "りようじます",
-          "りようっします",
-          "りようします"
+          "りようっします"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "りようします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%88%A9%E7%94%A8%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -5069,8 +4499,8 @@ const jlptN4Data = {
     ]
   },
   "jlpt_n4_all": {
-    "title": "JLPT N4 (言葉) สุ่มรวมทุกรอบ 2013-2024",
-    "sub": "รวมคำศัพท์ข้อสอบจริง 8 รอบ (333 ข้อ)",
+    "title": "JLPT N4 (漢字) สุ่มรวมทุกรอบ 2013-2024",
+    "sub": "รวมข้อสอบคันจิแท้จริง 8 รอบ (295 ข้อ)",
     "emoji": "🏆",
     "book": 5,
     "colorClass": "from-purple-200 via-indigo-200 to-pink-200 border-purple-300 text-purple-900 hover:border-purple-400 hover:from-purple-200/80 hover:to-indigo-200/90",
@@ -5218,7 +4648,7 @@ const jlptN4Data = {
           "あっさ",
           "あさ",
           "あざ",
-          "ずつ"
+          "むし"
         ],
         "correct": 1,
         "japaneseText": "あさ",
@@ -5271,31 +4701,16 @@ const jlptN4Data = {
         "sourceExam": "JLPT 2024-12"
       },
       {
-        "kanji": "メニュー",
-        "character": "メニュー",
-        "hint": "เมนู",
-        "choices": [
-          "くうこう",
-          "おやゆび",
-          "せつめい",
-          "めにゅー"
-        ],
-        "correct": 3,
-        "japaneseText": "めにゅー",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC",
-        "sourceExam": "JLPT 2024-12"
-      },
-      {
         "kanji": "復習します",
         "character": "復習します",
         "hint": "ทบทวนบทเรียน",
         "choices": [
-          "ふくしゅうします",
           "ふくじゅうします",
-          "ふくしゆうします",
-          "ぶくしゅうします"
+          "ふっくしゅうします",
+          "ふくしゅうします",
+          "ふぐしゅうします"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "ふくしゅうします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BE%A9%E7%BF%92%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-12"
@@ -5321,9 +4736,9 @@ const jlptN4Data = {
         "hint": "ทะเลาะ",
         "choices": [
           "けんかします",
-          "けんかじます",
-          "けんがします",
-          "げんかします"
+          "げんかします",
+          "けんっかします",
+          "けんがします"
         ],
         "correct": 0,
         "japaneseText": "けんかします",
@@ -5335,29 +4750,14 @@ const jlptN4Data = {
         "character": "決めます",
         "hint": "ตัดสินใจ",
         "choices": [
-          "ぎめます",
           "もちます",
-          "さします",
-          "きめます"
-        ],
-        "correct": 3,
-        "japaneseText": "きめます",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B1%BA%E3%82%81%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2024-12"
-      },
-      {
-        "kanji": "はっきり",
-        "character": "はっきり",
-        "hint": "อย่างชัดเจน",
-        "choices": [
-          "うっかり",
-          "はっきり",
-          "すっきり",
-          "ぼんやり"
+          "きめます",
+          "ぎめます",
+          "さします"
         ],
         "correct": 1,
-        "japaneseText": "はっきり",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%AF%E3%81%A3%E3%81%8D%E3%82%8A",
+        "japaneseText": "きめます",
+        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B1%BA%E3%82%81%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-12"
       },
       {
@@ -5365,12 +4765,12 @@ const jlptN4Data = {
         "character": "怖い",
         "hint": "น่ากลัว",
         "choices": [
+          "からだ",
           "こわい",
           "ごわい",
-          "からだ",
           "こうじ"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "こわい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%80%96%E3%81%84",
         "sourceExam": "JLPT 2024-12"
@@ -5380,12 +4780,12 @@ const jlptN4Data = {
         "character": "都合",
         "hint": "ความสะดวก",
         "choices": [
-          "つこう",
           "つごう",
+          "こうじ",
           "づごう",
-          "こうじ"
+          "つこう"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "つごう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%83%BD%E5%90%88",
         "sourceExam": "JLPT 2024-12"
@@ -5396,11 +4796,11 @@ const jlptN4Data = {
         "hint": "สำคัญ",
         "choices": [
           "こうじ",
-          "だいじ",
           "たいじ",
+          "だいじ",
           "だいし"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "だいじ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%A7%E4%BA%8B",
         "sourceExam": "JLPT 2024-12"
@@ -5410,12 +4810,12 @@ const jlptN4Data = {
         "character": "喜びます",
         "hint": "ดีใจ",
         "choices": [
-          "よろっこびます",
-          "よろごびます",
           "よろこびます",
-          "よろこぴます"
+          "よろごびます",
+          "よろこぴます",
+          "よろっこびます"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "よろこびます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%96%9C%E3%81%B3%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-12"
@@ -5425,12 +4825,12 @@ const jlptN4Data = {
         "character": "明日",
         "hint": "พรุ่งนี้",
         "choices": [
-          "あっした",
-          "あじた",
+          "あした",
           "あしだ",
-          "あした"
+          "あっした",
+          "あじた"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "あした",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%98%8E%E6%97%A5",
         "sourceExam": "JLPT 2024-12"
@@ -5440,12 +4840,12 @@ const jlptN4Data = {
         "character": "お礼を言います",
         "hint": "กล่าวคำขอบคุณ",
         "choices": [
+          "たいいんします",
           "ふくしゅうします",
-          "おれいをいいます",
           "にゅういんします",
-          "たいいんします"
+          "おれいをいいます"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "おれいをいいます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%8A%E7%A4%BC%E3%82%92%E8%A8%80%E3%81%84%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-12"
@@ -5455,8 +4855,8 @@ const jlptN4Data = {
         "character": "故障します",
         "hint": "ชำรุด/เสีย",
         "choices": [
-          "ごしょうします",
           "こしょうじます",
+          "ごしょうします",
           "こしょします",
           "こしょうします"
         ],
@@ -5470,12 +4870,12 @@ const jlptN4Data = {
         "character": "景色",
         "hint": "ทิวทัศน์",
         "choices": [
-          "けしぎ",
-          "けっしき",
           "けしき",
-          "けじき"
+          "けじき",
+          "げしき",
+          "けしぎ"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "けしき",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%99%AF%E8%89%B2",
         "sourceExam": "JLPT 2024-12"
@@ -5485,44 +4885,14 @@ const jlptN4Data = {
         "character": "育てます",
         "hint": "เลี้ยงดู/ปลูกเลี้ยง",
         "choices": [
-          "そたてます",
+          "ぞだてます",
+          "そだでます",
           "そだってます",
-          "そだてます",
-          "ぞだてます"
+          "そだてます"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "そだてます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%82%B2%E3%81%A6%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2024-12"
-      },
-      {
-        "kanji": "ざあざあ",
-        "character": "ざあざあ",
-        "hint": "เสียงฝนตกหนัก",
-        "choices": [
-          "ぺらぺら",
-          "ざあざあ",
-          "さらさら",
-          "ごろごろ"
-        ],
-        "correct": 1,
-        "japaneseText": "ざあざあ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%96%E3%81%82%E3%81%96%E3%81%82",
-        "sourceExam": "JLPT 2024-12"
-      },
-      {
-        "kanji": "ずつ",
-        "character": "ずつ",
-        "hint": "ทีละ...",
-        "choices": [
-          "つづ",
-          "ずっ",
-          "ずつ",
-          "づつ"
-        ],
-        "correct": 2,
-        "japaneseText": "ずつ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%9A%E3%81%A4",
         "sourceExam": "JLPT 2024-12"
       },
       {
@@ -5530,12 +4900,12 @@ const jlptN4Data = {
         "character": "刺します",
         "hint": "แทง/กัด (แมลง)",
         "choices": [
-          "さします",
           "さっします",
           "ざします",
+          "さします",
           "さじます"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "さします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%88%BA%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-12"
@@ -5545,12 +4915,12 @@ const jlptN4Data = {
         "character": "虫",
         "hint": "แมลง",
         "choices": [
-          "むじ",
-          "むっし",
           "むし",
-          "あさ"
+          "むっし",
+          "あさ",
+          "むじ"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "むし",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%99%AB",
         "sourceExam": "JLPT 2024-12"
@@ -5560,12 +4930,12 @@ const jlptN4Data = {
         "character": "驚きます",
         "hint": "ตกใจ",
         "choices": [
-          "おとろきます",
+          "おどろきます",
           "おどろぎます",
-          "おどろっきます",
-          "おどろきます"
+          "おとろきます",
+          "おどろっきます"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "おどろきます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%A9%9A%E3%81%8D%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-12"
@@ -5575,12 +4945,12 @@ const jlptN4Data = {
         "character": "工場",
         "hint": "โรงงาน",
         "choices": [
-          "こうじよう",
           "こうじょ",
-          "こうしょう",
-          "こうじょう"
+          "こうじょう",
+          "ごうじょう",
+          "こうじよう"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "こうじょう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%B7%A5%E5%A0%B4",
         "sourceExam": "JLPT 2024-12"
@@ -5590,12 +4960,12 @@ const jlptN4Data = {
         "character": "待ちます",
         "hint": "รอ",
         "choices": [
-          "まちます",
+          "まっちます",
           "おります",
           "まぢます",
-          "まっちます"
+          "まちます"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "まちます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BE%85%E3%81%A1%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -5605,9 +4975,9 @@ const jlptN4Data = {
         "character": "薬",
         "hint": "ยา",
         "choices": [
-          "くっすり",
-          "くすり",
           "くずり",
+          "くすり",
+          "くっすり",
           "ぐすり"
         ],
         "correct": 1,
@@ -5620,9 +4990,9 @@ const jlptN4Data = {
         "character": "早い",
         "hint": "เร็ว",
         "choices": [
-          "いちど",
-          "はやい",
           "くすり",
+          "はやい",
+          "いちど",
           "ばやい"
         ],
         "correct": 1,
@@ -5635,12 +5005,12 @@ const jlptN4Data = {
         "character": "海",
         "hint": "ทะเล",
         "choices": [
-          "うみ",
-          "いか",
           "おと",
-          "くすり"
+          "くすり",
+          "いか",
+          "うみ"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "うみ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B5%B7",
         "sourceExam": "JLPT 2024-07"
@@ -5650,12 +5020,12 @@ const jlptN4Data = {
         "character": "一度",
         "hint": "ครั้งหนึ่ง",
         "choices": [
-          "いちと",
           "いっちど",
           "いぢど",
-          "いちど"
+          "いちど",
+          "いちと"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "いちど",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%B8%80%E5%BA%A6",
         "sourceExam": "JLPT 2024-07"
@@ -5665,12 +5035,12 @@ const jlptN4Data = {
         "character": "教えます",
         "hint": "สอน",
         "choices": [
-          "うごきます",
           "おしえます",
           "おじえます",
+          "うごきます",
           "おっしえます"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "おしえます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%95%99%E3%81%88%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -5680,10 +5050,10 @@ const jlptN4Data = {
         "character": "天気予報",
         "hint": "พยากรณ์อากาศ",
         "choices": [
-          "てんぎよほう",
+          "でんきよほう",
           "てんきよほう",
-          "てんっきよほう",
-          "てんきよぼう"
+          "てんきよぼう",
+          "てんぎよほう"
         ],
         "correct": 1,
         "japaneseText": "てんきよほう",
@@ -5695,12 +5065,12 @@ const jlptN4Data = {
         "character": "暑い",
         "hint": "ร้อน",
         "choices": [
+          "あつい",
           "あづい",
-          "あっつい",
           "くすり",
-          "あつい"
+          "あっつい"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "あつい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%9A%91%E3%81%84",
         "sourceExam": "JLPT 2024-07"
@@ -5710,12 +5080,12 @@ const jlptN4Data = {
         "character": "動きます",
         "hint": "เคลื่อนไหว",
         "choices": [
+          "うごぎます",
           "うごっきます",
-          "うごきます",
           "うこきます",
-          "うごぎます"
+          "うごきます"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "うごきます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8B%95%E3%81%8D%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -5725,12 +5095,12 @@ const jlptN4Data = {
         "character": "以下",
         "hint": "ต่ำกว่า",
         "choices": [
-          "いか",
           "うみ",
+          "いか",
           "いが",
           "いっか"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "いか",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BB%A5%E4%B8%8B",
         "sourceExam": "JLPT 2024-07"
@@ -5741,11 +5111,11 @@ const jlptN4Data = {
         "hint": "เสียง",
         "choices": [
           "おど",
-          "おと",
+          "うみ",
           "おっと",
-          "うみ"
+          "おと"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "おと",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%9F%B3",
         "sourceExam": "JLPT 2024-07"
@@ -5755,12 +5125,12 @@ const jlptN4Data = {
         "character": "交通",
         "hint": "การขนส่ง",
         "choices": [
-          "こうつう",
           "こうづう",
-          "こうっつう",
-          "ごうつう"
+          "こうつう",
+          "ごうつう",
+          "こうっつう"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "こうつう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BA%A4%E9%80%9A",
         "sourceExam": "JLPT 2024-07"
@@ -5772,7 +5142,7 @@ const jlptN4Data = {
         "choices": [
           "さがします",
           "さがじます",
-          "さかします",
+          "さがっします",
           "ざがします"
         ],
         "correct": 0,
@@ -5785,12 +5155,12 @@ const jlptN4Data = {
         "character": "厳しい",
         "hint": "เข้มงวด",
         "choices": [
-          "きびじい",
-          "きぴしい",
           "ぎびしい",
-          "きびしい"
+          "きびじい",
+          "きびしい",
+          "きぴしい"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "きびしい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8E%B3%E3%81%97%E3%81%84",
         "sourceExam": "JLPT 2024-07"
@@ -5816,9 +5186,9 @@ const jlptN4Data = {
         "hint": "ความนิยม",
         "choices": [
           "にんっき",
-          "くすり",
+          "にんぎ",
           "にんき",
-          "にんぎ"
+          "くすり"
         ],
         "correct": 2,
         "japaneseText": "にんき",
@@ -5832,8 +5202,8 @@ const jlptN4Data = {
         "choices": [
           "たります",
           "おります",
-          "こみます",
-          "まちます"
+          "まちます",
+          "こみます"
         ],
         "correct": 1,
         "japaneseText": "おります",
@@ -5845,12 +5215,12 @@ const jlptN4Data = {
         "character": "種類",
         "hint": "ชนิด/ประเภท",
         "choices": [
-          "きびしい",
           "じゅるい",
-          "こうつう",
-          "しゅるい"
+          "きびしい",
+          "しゅるい",
+          "こうつう"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "しゅるい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%A8%AE%E9%A1%9E",
         "sourceExam": "JLPT 2024-07"
@@ -5860,12 +5230,12 @@ const jlptN4Data = {
         "character": "足ります",
         "hint": "เพียงพอ",
         "choices": [
-          "たります",
           "おります",
           "まちます",
+          "たります",
           "だります"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "たります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%B6%B3%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -5875,12 +5245,12 @@ const jlptN4Data = {
         "character": "騒ぎます",
         "hint": "ส่งเสียงดัง",
         "choices": [
-          "さわきます",
           "おしえます",
           "さわぎます",
-          "ざわぎます"
+          "ざわぎます",
+          "さわきます"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "さわぎます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%A8%92%E3%81%8E%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -5890,10 +5260,10 @@ const jlptN4Data = {
         "character": "盗みます",
         "hint": "ขโมย",
         "choices": [
+          "おしえます",
           "ぬっすみます",
-          "ぬずみます",
           "ぬすみます",
-          "おしえます"
+          "ぬずみます"
         ],
         "correct": 2,
         "japaneseText": "ぬすみます",
@@ -5905,12 +5275,12 @@ const jlptN4Data = {
         "character": "女性",
         "hint": "ผู้หญิง",
         "choices": [
-          "じょぜい",
-          "じよせい",
+          "じょせい",
+          "しょせい",
           "じょっせい",
-          "じょせい"
+          "じよせい"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "じょせい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A5%B3%E6%80%A7",
         "sourceExam": "JLPT 2024-07"
@@ -5921,11 +5291,11 @@ const jlptN4Data = {
         "hint": "พูดคุย",
         "choices": [
           "おしゃぺります",
-          "おしゃべります",
           "おっしゃべります",
+          "おしゃべります",
           "おじゃべります"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "おしゃべります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%8A%E5%96%8B%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -5935,12 +5305,12 @@ const jlptN4Data = {
         "character": "生産",
         "hint": "การผลิต",
         "choices": [
-          "せいっさん",
           "ぜいさん",
           "せいざん",
-          "せいさん"
+          "せいさん",
+          "せいっさん"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "せいさん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%94%9F%E7%94%A3",
         "sourceExam": "JLPT 2024-07"
@@ -5950,9 +5320,9 @@ const jlptN4Data = {
         "character": "人口",
         "hint": "ประชากร",
         "choices": [
-          "しんこう",
-          "じんっこう",
           "じんごう",
+          "じんっこう",
+          "しんこう",
           "じんこう"
         ],
         "correct": 3,
@@ -5965,12 +5335,12 @@ const jlptN4Data = {
         "character": "込みます",
         "hint": "แออัด",
         "choices": [
-          "まちます",
-          "おります",
+          "ごみます",
           "こみます",
-          "ごみます"
+          "おります",
+          "まちます"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "こみます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%BE%BC%E3%81%BF%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -5980,12 +5350,12 @@ const jlptN4Data = {
         "character": "逃げます",
         "hint": "หนี",
         "choices": [
-          "まちます",
-          "にけます",
           "おります",
-          "にげます"
+          "にげます",
+          "にけます",
+          "まちます"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "にげます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%80%83%E3%81%92%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -5996,11 +5366,11 @@ const jlptN4Data = {
         "hint": "ไม่สะดวก",
         "choices": [
           "ぶべん",
+          "くすり",
           "ふべん",
-          "ふぺん",
-          "くすり"
+          "ふぺん"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "ふべん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%B8%8D%E4%BE%BF",
         "sourceExam": "JLPT 2024-07"
@@ -6011,11 +5381,11 @@ const jlptN4Data = {
         "hint": "นาฬิกาข้อมือ",
         "choices": [
           "うてどけい",
-          "うでどけい",
           "うでどげい",
-          "うでとけい"
+          "うでとけい",
+          "うでどけい"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "うでどけい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%85%95%E6%99%82%E8%A8%88",
         "sourceExam": "JLPT 2024-07"
@@ -6025,12 +5395,12 @@ const jlptN4Data = {
         "character": "空きます",
         "hint": "ว่าง",
         "choices": [
-          "あきます",
-          "まちます",
           "あぎます",
-          "あっきます"
+          "まちます",
+          "あっきます",
+          "あきます"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "あきます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%A9%BA%E3%81%8D%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -6040,12 +5410,12 @@ const jlptN4Data = {
         "character": "会場",
         "hint": "สถานที่จัดงาน",
         "choices": [
-          "がいじょう",
-          "かいしょう",
+          "かいじよう",
+          "かいじょう",
           "かいじょ",
-          "かいじょう"
+          "かいしょう"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "かいじょう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BC%9A%E5%A0%B4",
         "sourceExam": "JLPT 2024-07"
@@ -6066,31 +5436,16 @@ const jlptN4Data = {
         "sourceExam": "JLPT 2024-07"
       },
       {
-        "kanji": "びっくりします",
-        "character": "びっくりします",
-        "hint": "ตกใจ",
-        "choices": [
-          "うっかりします",
-          "あんしんします",
-          "びっくりします",
-          "がっかりします"
-        ],
-        "correct": 2,
-        "japaneseText": "びっくりします",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%B3%E3%81%A3%E3%81%8F%E3%82%8A%E3%81%97%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2024-07"
-      },
-      {
         "kanji": "注意します",
         "character": "注意します",
         "hint": "ระมัดระวัง",
         "choices": [
-          "ちゅいします",
-          "ちゅういっします",
+          "ちゅういします",
           "ちゆういします",
-          "ちゅういします"
+          "ちゅういっします",
+          "ちゅういじます"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "ちゅういします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B3%A8%E6%84%8F%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2024-07"
@@ -6100,9 +5455,9 @@ const jlptN4Data = {
         "character": "料金",
         "hint": "ค่าธรรมเนียม",
         "choices": [
+          "りょうぎん",
           "りようきん",
           "りょうっきん",
-          "りょうぎん",
           "りょうきん"
         ],
         "correct": 3,
@@ -6111,29 +5466,14 @@ const jlptN4Data = {
         "sourceExam": "JLPT 2024-07"
       },
       {
-        "kanji": "サラダ",
-        "character": "サラダ",
-        "hint": "สลัด",
-        "choices": [
-          "さらだ",
-          "さらた",
-          "ざらだ",
-          "くすり"
-        ],
-        "correct": 0,
-        "japaneseText": "さらだ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%B5%E3%83%A9%E3%83%80",
-        "sourceExam": "JLPT 2024-07"
-      },
-      {
         "kanji": "白い",
         "character": "白い",
         "hint": "ขาว",
         "choices": [
-          "つごう",
+          "じろい",
           "しろい",
           "よわい",
-          "じろい"
+          "つごう"
         ],
         "correct": 1,
         "japaneseText": "しろい",
@@ -6146,11 +5486,11 @@ const jlptN4Data = {
         "hint": "ช่วงนี้/ล่าสุด",
         "choices": [
           "ざいきん",
+          "さいきん",
           "さいぎん",
-          "さいっきん",
-          "さいきん"
+          "さいっきん"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "さいきん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%9C%80%E8%BF%91",
         "sourceExam": "JLPT 2023-07"
@@ -6161,7 +5501,7 @@ const jlptN4Data = {
         "hint": "สี",
         "choices": [
           "いと",
-          "ずつ",
+          "しろい",
           "いろ",
           "あに"
         ],
@@ -6175,8 +5515,8 @@ const jlptN4Data = {
         "character": "足ります",
         "hint": "เพียงพอ",
         "choices": [
-          "おきます",
           "だります",
+          "おきます",
           "まちます",
           "たります"
         ],
@@ -6190,12 +5530,12 @@ const jlptN4Data = {
         "character": "都合",
         "hint": "ความสะดวก",
         "choices": [
-          "つごう",
-          "つこう",
           "づごう",
-          "しろい"
+          "つこう",
+          "しろい",
+          "つごう"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "つごう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%83%BD%E5%90%88",
         "sourceExam": "JLPT 2023-07"
@@ -6206,8 +5546,8 @@ const jlptN4Data = {
         "hint": "ตื่น",
         "choices": [
           "おっきます",
-          "おぎます",
           "たります",
+          "おぎます",
           "おきます"
         ],
         "correct": 3,
@@ -6221,9 +5561,9 @@ const jlptN4Data = {
         "hint": "ด้าย/เส้นไหม",
         "choices": [
           "いと",
+          "いっと",
           "いど",
-          "いろ",
-          "いっと"
+          "いろ"
         ],
         "correct": 0,
         "japaneseText": "いと",
@@ -6236,11 +5576,11 @@ const jlptN4Data = {
         "hint": "รอ",
         "choices": [
           "まっちます",
-          "たります",
+          "まちます",
           "まぢます",
-          "まちます"
+          "たります"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "まちます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BE%85%E3%81%A1%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6250,10 +5590,10 @@ const jlptN4Data = {
         "character": "兄",
         "hint": "พี่ชาย",
         "choices": [
-          "いろ",
+          "しろい",
           "いと",
           "あに",
-          "ずつ"
+          "いろ"
         ],
         "correct": 2,
         "japaneseText": "あに",
@@ -6265,10 +5605,10 @@ const jlptN4Data = {
         "character": "工場",
         "hint": "โรงงาน",
         "choices": [
-          "こうじよう",
+          "こうしょう",
           "ごうじょう",
           "こうじょう",
-          "こうじょ"
+          "こうじよう"
         ],
         "correct": 2,
         "japaneseText": "こうじょう",
@@ -6280,12 +5620,12 @@ const jlptN4Data = {
         "character": "弱い",
         "hint": "อ่อนแอ",
         "choices": [
-          "れんじ",
-          "しろい",
           "よわい",
+          "しろい",
+          "いけん",
           "つごう"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "よわい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BC%B1%E3%81%84",
         "sourceExam": "JLPT 2023-07"
@@ -6295,29 +5635,14 @@ const jlptN4Data = {
         "character": "経験",
         "hint": "ประสบการณ์",
         "choices": [
-          "けいけん",
           "げいけん",
-          "けいっけん",
-          "けいげん"
-        ],
-        "correct": 0,
-        "japaneseText": "けいけん",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%B5%8C%E9%A8%93",
-        "sourceExam": "JLPT 2023-07"
-      },
-      {
-        "kanji": "レンジ",
-        "character": "レンジ",
-        "hint": "ไมโครเวฟ",
-        "choices": [
-          "れんし",
-          "つごう",
-          "れんじ",
-          "しろい"
+          "けいげん",
+          "けいけん",
+          "けいっけん"
         ],
         "correct": 2,
-        "japaneseText": "れんじ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%AC%E3%83%B3%E3%82%B8",
+        "japaneseText": "けいけん",
+        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%B5%8C%E9%A8%93",
         "sourceExam": "JLPT 2023-07"
       },
       {
@@ -6325,12 +5650,12 @@ const jlptN4Data = {
         "character": "温めます",
         "hint": "ทำให้ร้อน",
         "choices": [
-          "あただめます",
           "あたためます",
-          "あったためます",
-          "あだためます"
+          "あだためます",
+          "あただめます",
+          "あったためます"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "あたためます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B8%A9%E3%82%81%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6340,12 +5665,12 @@ const jlptN4Data = {
         "character": "意見",
         "hint": "ความคิดเห็น",
         "choices": [
-          "いげん",
           "いっけん",
-          "いけん",
-          "しろい"
+          "しろい",
+          "いげん",
+          "いけん"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "いけん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%84%8F%E8%A6%8B",
         "sourceExam": "JLPT 2023-07"
@@ -6355,12 +5680,12 @@ const jlptN4Data = {
         "character": "決めます",
         "hint": "ตัดสินใจ",
         "choices": [
-          "おきます",
-          "たります",
           "ぎめます",
-          "きめます"
+          "たります",
+          "きめます",
+          "おきます"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "きめます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B1%BA%E3%82%81%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6370,12 +5695,12 @@ const jlptN4Data = {
         "character": "届きます",
         "hint": "มาถึง",
         "choices": [
-          "とときます",
+          "とどぎます",
           "どどきます",
-          "とどっきます",
-          "とどきます"
+          "とどきます",
+          "とどっきます"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "とどきます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%B1%8A%E3%81%8D%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6385,12 +5710,12 @@ const jlptN4Data = {
         "character": "通ります",
         "hint": "ผ่าน",
         "choices": [
+          "しかります",
           "どおります",
           "とおります",
-          "しかります",
           "とどきます"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "とおります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%80%9A%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6400,12 +5725,12 @@ const jlptN4Data = {
         "character": "十分",
         "hint": "เพียงพอ",
         "choices": [
-          "じゆうぶん",
+          "じゅうぶん",
           "しゅうぶん",
-          "じゅうぷん",
-          "じゅうぶん"
+          "じゅぶん",
+          "じゅうぷん"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "じゅうぶん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8D%81%E5%88%86",
         "sourceExam": "JLPT 2023-07"
@@ -6415,12 +5740,12 @@ const jlptN4Data = {
         "character": "叱ります",
         "hint": "ดุ",
         "choices": [
-          "しかります",
-          "じかります",
           "しっかります",
-          "しがります"
+          "しがります",
+          "しかります",
+          "じかります"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "しかります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8F%B1%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6430,12 +5755,12 @@ const jlptN4Data = {
         "character": "褒めます",
         "hint": "ชม",
         "choices": [
-          "ぼめます",
           "おきます",
-          "ほめます",
-          "たります"
+          "たります",
+          "ぼめます",
+          "ほめます"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "ほめます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%A4%92%E3%82%81%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6445,12 +5770,12 @@ const jlptN4Data = {
         "character": "頼みます",
         "hint": "ขอร้อง",
         "choices": [
-          "たのみます",
-          "とどきます",
+          "だのみます",
           "とおります",
-          "だのみます"
+          "とどきます",
+          "たのみます"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "たのみます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%A0%BC%E3%81%BF%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6460,12 +5785,12 @@ const jlptN4Data = {
         "character": "誘います",
         "hint": "เชิญชวน",
         "choices": [
+          "さそいます",
           "さっそいます",
           "ざそいます",
-          "さそいます",
           "さぞいます"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "さそいます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%AA%98%E3%81%84%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6475,9 +5800,9 @@ const jlptN4Data = {
         "character": "財布",
         "hint": "กระเป๋าสตางค์",
         "choices": [
-          "しろい",
           "さいぶ",
           "ざいふ",
+          "しろい",
           "さいふ"
         ],
         "correct": 3,
@@ -6490,12 +5815,12 @@ const jlptN4Data = {
         "character": "残ります",
         "hint": "เหลือ",
         "choices": [
-          "のごります",
-          "のこります",
           "とどきます",
-          "のっこります"
+          "のっこります",
+          "のごります",
+          "のこります"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "のこります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%AE%8B%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6505,12 +5830,12 @@ const jlptN4Data = {
         "character": "世話します",
         "hint": "ดูแล",
         "choices": [
+          "せわじます",
           "ぜわします",
-          "せわします",
           "せわっします",
-          "せわじます"
+          "せわします"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "せわします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%B8%96%E8%A9%B1%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6520,12 +5845,12 @@ const jlptN4Data = {
         "character": "汚れます",
         "hint": "สกปรก",
         "choices": [
-          "とおります",
-          "とどきます",
           "よごれます",
-          "よこれます"
+          "とどきます",
+          "よこれます",
+          "とおります"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "よごれます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B1%9A%E3%82%8C%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6535,10 +5860,10 @@ const jlptN4Data = {
         "character": "汚い",
         "hint": "สกปรก",
         "choices": [
-          "きったない",
+          "ぎたない",
           "きだない",
           "きたない",
-          "ぎたない"
+          "きったない"
         ],
         "correct": 2,
         "japaneseText": "きたない",
@@ -6550,12 +5875,12 @@ const jlptN4Data = {
         "character": "冷えます",
         "hint": "เย็นลง",
         "choices": [
+          "ひえます",
           "びえます",
           "おきます",
-          "ひえます",
           "たります"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "ひえます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%86%B7%E3%81%88%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6567,8 +5892,8 @@ const jlptN4Data = {
         "choices": [
           "ぎそく",
           "きそく",
-          "きっそく",
-          "きそぐ"
+          "きぞく",
+          "きっそく"
         ],
         "correct": 1,
         "japaneseText": "きそく",
@@ -6576,31 +5901,16 @@ const jlptN4Data = {
         "sourceExam": "JLPT 2023-07"
       },
       {
-        "kanji": "ルール",
-        "character": "ルール",
-        "hint": "กฎ",
-        "choices": [
-          "よわい",
-          "つごう",
-          "しろい",
-          "るーる"
-        ],
-        "correct": 3,
-        "japaneseText": "るーる",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%AB%E3%83%BC%E3%83%AB",
-        "sourceExam": "JLPT 2023-07"
-      },
-      {
         "kanji": "沸かします",
         "character": "沸かします",
         "hint": "ต้มน้ำ",
         "choices": [
-          "わっかします",
           "わかじます",
+          "わかします",
           "わがします",
-          "わかします"
+          "わっかします"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "わかします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B2%B8%E3%81%8B%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6610,8 +5920,8 @@ const jlptN4Data = {
         "character": "招待します",
         "hint": "เชิญ",
         "choices": [
-          "しょたいします",
-          "しょうったいします",
+          "しようたいします",
+          "しょうだいします",
           "しょうたいします",
           "しょうたいじます"
         ],
@@ -6625,9 +5935,9 @@ const jlptN4Data = {
         "character": "止みます",
         "hint": "หยุด (ฝน, ลม)",
         "choices": [
+          "たります",
           "まちます",
           "おきます",
-          "たります",
           "やみます"
         ],
         "correct": 3,
@@ -6640,29 +5950,14 @@ const jlptN4Data = {
         "character": "自己紹介",
         "hint": "แนะนำตัวเอง",
         "choices": [
+          "じごしょうかい",
           "じこしょうかい",
-          "じこしょうがい",
-          "しこしょうかい",
-          "じっこしょうかい"
+          "じこしようかい",
+          "じこしょうがい"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "じこしょうかい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B",
-        "sourceExam": "JLPT 2023-07"
-      },
-      {
-        "kanji": "ずつ",
-        "character": "ずつ",
-        "hint": "ทีละ...",
-        "choices": [
-          "つづ",
-          "づつ",
-          "ずつ",
-          "ずっ"
-        ],
-        "correct": 2,
-        "japaneseText": "ずつ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%9A%E3%81%A4",
         "sourceExam": "JLPT 2023-07"
       },
       {
@@ -6670,12 +5965,12 @@ const jlptN4Data = {
         "character": "見るのも嫌です",
         "hint": "ไม่อยากจะดู",
         "choices": [
-          "みるのもいやです",
           "みるのもいやてす",
-          "みるのもいやでっす",
-          "みるのもいやでず"
+          "みるのもいやです",
+          "みるのもいやでず",
+          "みるのもいやでっす"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "みるのもいやです",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%A6%8B%E3%82%8B%E3%81%AE%E3%82%82%E5%AB%8C%E3%81%A7%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6685,29 +5980,14 @@ const jlptN4Data = {
         "character": "飾ります",
         "hint": "ตกแต่ง",
         "choices": [
-          "がざります",
           "かざります",
-          "とどきます",
-          "かさります"
+          "がざります",
+          "かさります",
+          "とどきます"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "かざります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%A3%BE%E3%82%8A%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2023-07"
-      },
-      {
-        "kanji": "トマト",
-        "character": "トマト",
-        "hint": "มะเขือเทศ",
-        "choices": [
-          "とまど",
-          "どまと",
-          "とまと",
-          "とまっと"
-        ],
-        "correct": 2,
-        "japaneseText": "とまと",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%88%E3%83%9E%E3%83%88",
         "sourceExam": "JLPT 2023-07"
       },
       {
@@ -6715,59 +5995,14 @@ const jlptN4Data = {
         "character": "洋服",
         "hint": "เสื้อผ้า",
         "choices": [
-          "ようふぐ",
-          "ようぶく",
           "ようふく",
-          "ようふっく"
+          "ようふっく",
+          "ようふぐ",
+          "ようぶく"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "ようふく",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B4%8B%E6%9C%8D",
-        "sourceExam": "JLPT 2023-07"
-      },
-      {
-        "kanji": "メモします",
-        "character": "メモします",
-        "hint": "จดบันทึก",
-        "choices": [
-          "めもっします",
-          "とどきます",
-          "めもします",
-          "めもじます"
-        ],
-        "correct": 2,
-        "japaneseText": "めもします",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%A1%E3%83%A2%E3%81%97%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2023-07"
-      },
-      {
-        "kanji": "チェックします",
-        "character": "チェックします",
-        "hint": "ตรวจสอบ",
-        "choices": [
-          "ちぇくします",
-          "ちぇっくします",
-          "ぢぇっくします",
-          "ちぇっぐします"
-        ],
-        "correct": 1,
-        "japaneseText": "ちぇっくします",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%97%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2023-07"
-      },
-      {
-        "kanji": "おもちゃ",
-        "character": "おもちゃ",
-        "hint": "ของเล่น",
-        "choices": [
-          "おみやげ",
-          "おもちゃ",
-          "おもちや",
-          "おみまい"
-        ],
-        "correct": 1,
-        "japaneseText": "おもちゃ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83",
         "sourceExam": "JLPT 2023-07"
       },
       {
@@ -6775,10 +6010,10 @@ const jlptN4Data = {
         "character": "卒業式",
         "hint": "พิธีจบการศึกษา",
         "choices": [
-          "そつぎょうじき",
           "ぞつぎょうしき",
+          "そつぎょうじき",
           "そつぎょうしき",
-          "そつきょうしき"
+          "そつぎようしき"
         ],
         "correct": 2,
         "japaneseText": "そつぎょうしき",
@@ -6790,12 +6025,12 @@ const jlptN4Data = {
         "character": "慣れます",
         "hint": "คุ้นเคย",
         "choices": [
-          "おきます",
           "まちます",
-          "なれます",
-          "たります"
+          "おきます",
+          "たります",
+          "なれます"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "なれます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%85%A3%E3%82%8C%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6806,7 +6041,7 @@ const jlptN4Data = {
         "hint": "ออกเดินทาง",
         "choices": [
           "しゅっぱつします",
-          "しゅっはつします",
+          "しゅぱつします",
           "しゅっぱつじます",
           "じゅっぱつします"
         ],
@@ -6820,12 +6055,12 @@ const jlptN4Data = {
         "character": "到着します",
         "hint": "ถึงที่หมาย",
         "choices": [
-          "とうちゃくじます",
-          "とうぢゃくします",
           "とうっちゃくします",
-          "とうちゃくします"
+          "とうぢゃくします",
+          "とうちゃくします",
+          "どうちゃくします"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "とうちゃくします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%88%B0%E7%9D%80%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2023-07"
@@ -6836,9 +6071,9 @@ const jlptN4Data = {
         "hint": "ค่าธรรมเนียม",
         "choices": [
           "りょうきん",
-          "りようきん",
-          "りょうっきん",
-          "りょうぎん"
+          "りょきん",
+          "りょうぎん",
+          "りょうっきん"
         ],
         "correct": 0,
         "japaneseText": "りょうきん",
@@ -6850,12 +6085,12 @@ const jlptN4Data = {
         "character": "出発します",
         "hint": "ออกเดินทาง",
         "choices": [
-          "しゅっはつします",
-          "しゅっぱつじます",
+          "しゅっぱつします",
           "じゅっぱつします",
-          "しゅっぱつします"
+          "しゅっぱづします",
+          "しゅっぱつじます"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "しゅっぱつします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%87%BA%E7%99%BA%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
@@ -6865,12 +6100,12 @@ const jlptN4Data = {
         "character": "答えます",
         "hint": "ตอบ",
         "choices": [
-          "こったえます",
-          "ごたえます",
           "こたえます",
+          "ごたえます",
+          "こったえます",
           "こだえます"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "こたえます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%AD%94%E3%81%88%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
@@ -6880,12 +6115,12 @@ const jlptN4Data = {
         "character": "心",
         "hint": "หัวใจ, จิตใจ",
         "choices": [
-          "こっころ",
-          "ごころ",
           "こごろ",
-          "こころ"
+          "こころ",
+          "ごころ",
+          "こっころ"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "こころ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BF%83",
         "sourceExam": "JLPT 2021-12"
@@ -6895,12 +6130,12 @@ const jlptN4Data = {
         "character": "最後",
         "hint": "สุดท้าย",
         "choices": [
-          "ざいご",
-          "さいこ",
+          "さいご",
           "こころ",
-          "さいご"
+          "さいこ",
+          "ざいご"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "さいご",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%9C%80%E5%BE%8C",
         "sourceExam": "JLPT 2021-12"
@@ -6910,12 +6145,12 @@ const jlptN4Data = {
         "character": "遠い",
         "hint": "ไกล",
         "choices": [
-          "どおい",
           "こころ",
           "とおい",
+          "どおい",
           "さいご"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "とおい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%81%A0%E3%81%84",
         "sourceExam": "JLPT 2021-12"
@@ -6926,9 +6161,9 @@ const jlptN4Data = {
         "hint": "ฤดูหนาว",
         "choices": [
           "ふゆ",
-          "ふね",
+          "ぶゆ",
           "のど",
-          "ぶゆ"
+          "ふね"
         ],
         "correct": 0,
         "japaneseText": "ふゆ",
@@ -6942,7 +6177,7 @@ const jlptN4Data = {
         "choices": [
           "よしゅうします",
           "よしゅうじます",
-          "よじゅうします",
+          "よっしゅうします",
           "よしゅします"
         ],
         "correct": 0,
@@ -6970,12 +6205,12 @@ const jlptN4Data = {
         "character": "作ります",
         "hint": "ทำ, สร้าง",
         "choices": [
-          "つくります",
           "つっくります",
+          "づくります",
           "つぐります",
-          "づくります"
+          "つくります"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "つくります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BD%9C%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
@@ -7015,12 +6250,12 @@ const jlptN4Data = {
         "character": "曇",
         "hint": "เมฆครึ้ม",
         "choices": [
-          "こころ",
-          "ぐもり",
+          "さいご",
           "くもり",
-          "さいご"
+          "こころ",
+          "ぐもり"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "くもり",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%9B%87",
         "sourceExam": "JLPT 2021-12"
@@ -7030,10 +6265,10 @@ const jlptN4Data = {
         "character": "喉",
         "hint": "ลาคอ",
         "choices": [
-          "のと",
+          "ふね",
           "のど",
-          "ふゆ",
-          "ふね"
+          "のと",
+          "ふゆ"
         ],
         "correct": 1,
         "japaneseText": "のど",
@@ -7046,9 +6281,9 @@ const jlptN4Data = {
         "hint": "แน่น, แออัด",
         "choices": [
           "こみます",
+          "こたえます",
           "つくります",
-          "ごみます",
-          "こたえます"
+          "ごみます"
         ],
         "correct": 0,
         "japaneseText": "こみます",
@@ -7062,27 +6297,12 @@ const jlptN4Data = {
         "choices": [
           "げいけん",
           "けいっけん",
-          "けいけん",
-          "けいげん"
+          "けいげん",
+          "けいけん"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "けいけん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%B5%8C%E9%A8%93",
-        "sourceExam": "JLPT 2021-12"
-      },
-      {
-        "kanji": "アンケート",
-        "character": "アンケート",
-        "hint": "แบบสอบถาม",
-        "choices": [
-          "あんけーと",
-          "あんけーど",
-          "あんっけーと",
-          "あんげーと"
-        ],
-        "correct": 0,
-        "japaneseText": "あんけーと",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%A2%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%88",
         "sourceExam": "JLPT 2021-12"
       },
       {
@@ -7091,11 +6311,11 @@ const jlptN4Data = {
         "hint": "ค่าเช่าบ้าน",
         "choices": [
           "やぢん",
+          "やっちん",
           "こころ",
-          "やちん",
-          "やっちん"
+          "やちん"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "やちん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%AE%B6%E8%B3%83",
         "sourceExam": "JLPT 2021-12"
@@ -7105,12 +6325,12 @@ const jlptN4Data = {
         "character": "写ります",
         "hint": "ปรากฏในภาพ, ติดในภาพ",
         "choices": [
+          "うっつります",
           "うづります",
           "うつります",
-          "こたえます",
-          "うっつります"
+          "こたえます"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "うつります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%86%99%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
@@ -7120,12 +6340,12 @@ const jlptN4Data = {
         "character": "片道",
         "hint": "เที่ยวเดียว",
         "choices": [
+          "がたみち",
+          "かだみち",
           "かたみち",
-          "かったみち",
-          "かたみぢ",
-          "がたみち"
+          "かったみち"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "かたみち",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%89%87%E9%81%93",
         "sourceExam": "JLPT 2021-12"
@@ -7135,12 +6355,12 @@ const jlptN4Data = {
         "character": "往復",
         "hint": "ไปกลับ",
         "choices": [
-          "おうふぐ",
+          "おうぶく",
           "おうふっく",
-          "おうふく",
-          "おうぶく"
+          "おうふぐ",
+          "おうふく"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "おうふく",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BE%80%E5%BE%A9",
         "sourceExam": "JLPT 2021-12"
@@ -7150,12 +6370,12 @@ const jlptN4Data = {
         "character": "包みます",
         "hint": "ห่อ",
         "choices": [
-          "つっつみます",
           "つつみます",
+          "つづみます",
           "づつみます",
-          "つづみます"
+          "つっつみます"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "つつみます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8C%85%E3%81%BF%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
@@ -7165,29 +6385,14 @@ const jlptN4Data = {
         "character": "秘密",
         "hint": "ความลับ",
         "choices": [
-          "ひみっつ",
           "ひみつ",
-          "ひみづ",
-          "びみつ"
+          "ひみっつ",
+          "びみつ",
+          "ひみづ"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "ひみつ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%A7%98%E5%AF%86",
-        "sourceExam": "JLPT 2021-12"
-      },
-      {
-        "kanji": "ニコニコします",
-        "character": "ニコニコします",
-        "hint": "ยิ้มแย้ม",
-        "choices": [
-          "にこにこじます",
-          "にこにこします",
-          "にっこにこします",
-          "にごにこします"
-        ],
-        "correct": 1,
-        "japaneseText": "にこにこします",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
       },
       {
@@ -7195,12 +6400,12 @@ const jlptN4Data = {
         "character": "独身",
         "hint": "โสด",
         "choices": [
-          "どくじん",
-          "どくしん",
+          "どぐしん",
           "とくしん",
+          "どくしん",
           "どっくしん"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "どくしん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%8B%AC%E8%BA%AB",
         "sourceExam": "JLPT 2021-12"
@@ -7210,10 +6415,10 @@ const jlptN4Data = {
         "character": "柔らかい",
         "hint": "อ่อนนุ่ม",
         "choices": [
-          "やわらがい",
+          "むしあつい",
           "やわらかい",
-          "やわらっかい",
-          "あんけーと"
+          "やわらがい",
+          "やわらっかい"
         ],
         "correct": 1,
         "japaneseText": "やわらかい",
@@ -7227,8 +6432,8 @@ const jlptN4Data = {
         "choices": [
           "かったい",
           "かたい",
-          "かだい",
-          "がたい"
+          "がたい",
+          "かだい"
         ],
         "correct": 1,
         "japaneseText": "かたい",
@@ -7240,12 +6445,12 @@ const jlptN4Data = {
         "character": "連絡します",
         "hint": "ติดต่อ",
         "choices": [
-          "れんらっくします",
-          "れんらくします",
+          "れんらぐします",
           "れんらくじます",
-          "れんらぐします"
+          "れんらくします",
+          "れんらっくします"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "れんらくします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%80%A3%E7%B5%A1%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
@@ -7255,12 +6460,12 @@ const jlptN4Data = {
         "character": "蒸し暑い",
         "hint": "ร้อนอบอ้าว",
         "choices": [
-          "むしあづい",
-          "むじあつい",
           "むしあつい",
-          "むっしあつい"
+          "むしあづい",
+          "むっしあつい",
+          "むじあつい"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "むしあつい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%92%B8%E3%81%97%E6%9A%91%E3%81%84",
         "sourceExam": "JLPT 2021-12"
@@ -7272,10 +6477,10 @@ const jlptN4Data = {
         "choices": [
           "けいっかく",
           "けいがく",
-          "けいかく",
-          "けいかぐ"
+          "げいかく",
+          "けいかく"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "けいかく",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%A8%88%E7%94%BB",
         "sourceExam": "JLPT 2021-12"
@@ -7285,12 +6490,12 @@ const jlptN4Data = {
         "character": "育てます",
         "hint": "เลี้ยงดู, เพาะปลูก",
         "choices": [
-          "そだでます",
+          "ぞだてます",
           "そだってます",
-          "そだてます",
-          "ぞだてます"
+          "そたてます",
+          "そだてます"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "そだてます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%82%B2%E3%81%A6%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-12"
@@ -7302,7 +6507,7 @@ const jlptN4Data = {
         "choices": [
           "さっくぶん",
           "さくぶん",
-          "ざくぶん",
+          "さぐぶん",
           "さくぷん"
         ],
         "correct": 1,
@@ -7315,12 +6520,12 @@ const jlptN4Data = {
         "character": "京都",
         "hint": "เกียวโต",
         "choices": [
-          "きょうど",
           "きょうと",
-          "ぎょうと",
-          "きようと"
+          "きょと",
+          "きようと",
+          "ぎょうと"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "きょうと",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BA%AC%E9%83%BD",
         "sourceExam": "JLPT 2021-12"
@@ -7330,12 +6535,12 @@ const jlptN4Data = {
         "character": "東京",
         "hint": "โตเกียว",
         "choices": [
-          "どうきょう",
-          "とうぎょう",
           "とうっきょう",
-          "とうきょう"
+          "とうきょう",
+          "どうきょう",
+          "とうぎょう"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "とうきょう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%9D%B1%E4%BA%AC",
         "sourceExam": "JLPT 2021-12"
@@ -7345,10 +6550,10 @@ const jlptN4Data = {
         "character": "大阪",
         "hint": "โอซาก้า",
         "choices": [
-          "おおさが",
+          "おおっさか",
           "おおさか",
           "おおざか",
-          "おおっさか"
+          "おおさが"
         ],
         "correct": 1,
         "japaneseText": "おおさか",
@@ -7356,31 +6561,16 @@ const jlptN4Data = {
         "sourceExam": "JLPT 2021-12"
       },
       {
-        "kanji": "バスケットボール",
-        "character": "バスケットボール",
-        "hint": "บาสเกตบอล",
-        "choices": [
-          "ばすけっどぼーる",
-          "ばすけっとぼーる",
-          "ばすげっとぼーる",
-          "ばすけとぼーる"
-        ],
-        "correct": 1,
-        "japaneseText": "ばすけっとぼーる",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%90%E3%82%B9%E3%82%B1%E3%83%83%E3%83%88%E3%83%9C%E3%83%BC%E3%83%AB",
-        "sourceExam": "JLPT 2021-12"
-      },
-      {
         "kanji": "体育館",
         "character": "体育館",
         "hint": "โรงยิม, โรงฝึกกีฬา",
         "choices": [
-          "たいいくかん",
-          "だいいくかん",
           "たいいくがん",
+          "たいいぐかん",
+          "たいいくかん",
           "たいいっくかん"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "たいいくかん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BD%93%E8%82%B2%E9%A4%A8",
         "sourceExam": "JLPT 2021-12"
@@ -7390,12 +6580,12 @@ const jlptN4Data = {
         "character": "利用料金",
         "hint": "ค่าบริการ",
         "choices": [
-          "りようりょうきん",
+          "りようりょうぎん",
           "りようりようきん",
-          "りようりょきん",
-          "りようりょうぎん"
+          "りようりょうきん",
+          "りようりょうっきん"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "りようりょうきん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%88%A9%E7%94%A8%E6%96%99%E9%87%91",
         "sourceExam": "JLPT 2021-12"
@@ -7405,12 +6595,12 @@ const jlptN4Data = {
         "character": "宿題",
         "hint": "การบ้าน",
         "choices": [
-          "じゅくだい",
           "しゅくだい",
-          "しゅくたい",
-          "しゅぐだい"
+          "しゅっくだい",
+          "じゅくだい",
+          "しゅくたい"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "しゅくだい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%AE%BF%E9%A1%8C",
         "sourceExam": "JLPT 2021-12"
@@ -7420,12 +6610,12 @@ const jlptN4Data = {
         "character": "以上",
         "hint": "มากกว่า, ข้างต้น",
         "choices": [
-          "いしょう",
-          "いじょう",
           "いじょ",
-          "いじよう"
+          "いじよう",
+          "いじょう",
+          "いしょう"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "いじょう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BB%A5%E4%B8%8A",
         "sourceExam": "JLPT 2021-07"
@@ -7435,12 +6625,12 @@ const jlptN4Data = {
         "character": "近い",
         "hint": "ใกล้",
         "choices": [
-          "ぢかい",
           "ちかい",
-          "ちっかい",
-          "ちがい"
+          "ちがい",
+          "ぢかい",
+          "ちっかい"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "ちかい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%BF%91%E3%81%84",
         "sourceExam": "JLPT 2021-07"
@@ -7451,11 +6641,11 @@ const jlptN4Data = {
         "hint": "ความสะดวก (เวลา)",
         "choices": [
           "つこう",
+          "ちかい",
           "つごう",
-          "づごう",
-          "ちかい"
+          "づごう"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "つごう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%83%BD%E5%90%88",
         "sourceExam": "JLPT 2021-07"
@@ -7480,12 +6670,12 @@ const jlptN4Data = {
         "character": "女性",
         "hint": "ผู้หญิง",
         "choices": [
-          "じよせい",
           "じょぜい",
-          "じょっせい",
-          "じょせい"
+          "じょせい",
+          "しょせい",
+          "じょっせい"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "じょせい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A5%B3%E6%80%A7",
         "sourceExam": "JLPT 2021-07"
@@ -7495,12 +6685,12 @@ const jlptN4Data = {
         "character": "習います",
         "hint": "เรียน (จากผู้สอน)",
         "choices": [
-          "すすみます",
-          "ならいます",
+          "たおれます",
           "たのみます",
-          "たおれます"
+          "すすみます",
+          "ならいます"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "ならいます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%BF%92%E3%81%84%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-07"
@@ -7510,10 +6700,10 @@ const jlptN4Data = {
         "character": "お姉さん",
         "hint": "พี่สาว (คนอื่น)",
         "choices": [
-          "おねえっさん",
           "しょくどう",
+          "おねえざん",
           "おねえさん",
-          "おねえざん"
+          "おねえっさん"
         ],
         "correct": 2,
         "japaneseText": "おねえさん",
@@ -7526,11 +6716,11 @@ const jlptN4Data = {
         "hint": "กลางคืน",
         "choices": [
           "つごう",
-          "しろい",
           "ちかい",
-          "よる"
+          "よる",
+          "しろい"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "よる",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%9C",
         "sourceExam": "JLPT 2021-07"
@@ -7555,12 +6745,12 @@ const jlptN4Data = {
         "character": "食堂",
         "hint": "โรงอาหาร",
         "choices": [
+          "しょくどう",
           "しょくとう",
           "しょぐどう",
-          "しよくどう",
-          "しょくどう"
+          "じょくどう"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "しょくどう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%A3%9F%E5%A0%82",
         "sourceExam": "JLPT 2021-07"
@@ -7570,12 +6760,12 @@ const jlptN4Data = {
         "character": "閉めます",
         "hint": "ปิด (ประตู, หน้าต่าง)",
         "choices": [
-          "しめます",
+          "じめます",
           "ひきます",
-          "うみます",
-          "じめます"
+          "しめます",
+          "うみます"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "しめます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%96%89%E3%82%81%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-07"
@@ -7585,10 +6775,10 @@ const jlptN4Data = {
         "character": "親切",
         "hint": "ใจดี มีน้ำใจ",
         "choices": [
-          "しんせづ",
-          "しんせつ",
           "しんっせつ",
-          "じんせつ"
+          "しんせつ",
+          "じんせつ",
+          "しんせづ"
         ],
         "correct": 1,
         "japaneseText": "しんせつ",
@@ -7600,12 +6790,12 @@ const jlptN4Data = {
         "character": "必要",
         "hint": "จำเป็น",
         "choices": [
-          "ひづよう",
-          "びつよう",
           "ひつよう",
-          "ひっつよう"
+          "びつよう",
+          "ひっつよう",
+          "ひづよう"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "ひつよう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BF%85%E8%A6%81",
         "sourceExam": "JLPT 2021-07"
@@ -7615,12 +6805,12 @@ const jlptN4Data = {
         "character": "深い",
         "hint": "ลึก",
         "choices": [
-          "ふがい",
           "ふっかい",
-          "ふかい",
-          "ぶかい"
+          "ぶかい",
+          "ふがい",
+          "ふかい"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "ふかい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B7%B1%E3%81%84",
         "sourceExam": "JLPT 2021-07"
@@ -7630,12 +6820,12 @@ const jlptN4Data = {
         "character": "浅い",
         "hint": "ตื้น",
         "choices": [
-          "あっさい",
           "あさい",
           "あざい",
-          "ちかい"
+          "ちかい",
+          "あっさい"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "あさい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B5%85%E3%81%84",
         "sourceExam": "JLPT 2021-07"
@@ -7645,12 +6835,12 @@ const jlptN4Data = {
         "character": "営業",
         "hint": "เวลาทำการ",
         "choices": [
-          "えいぎょ",
           "えいぎょう",
+          "えいぎょ",
           "えいきょう",
           "えいぎよう"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "えいぎょう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%96%B6%E6%A5%AD",
         "sourceExam": "JLPT 2021-07"
@@ -7660,12 +6850,12 @@ const jlptN4Data = {
         "character": "進みます",
         "hint": "มุ่งหน้า",
         "choices": [
-          "すずみます",
-          "すすみます",
+          "ずすみます",
           "すっすみます",
-          "ずすみます"
+          "すすみます",
+          "すずみます"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "すすみます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%80%B2%E3%81%BF%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-07"
@@ -7675,12 +6865,12 @@ const jlptN4Data = {
         "character": "計画",
         "hint": "แผน, วางแผน",
         "choices": [
+          "けいかく",
+          "けいかぐ",
           "けいっかく",
-          "けいがく",
-          "げいかく",
-          "けいかく"
+          "げいかく"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "けいかく",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%A8%88%E7%94%BB",
         "sourceExam": "JLPT 2021-07"
@@ -7706,8 +6896,8 @@ const jlptN4Data = {
         "hint": "ผลลัพธ์",
         "choices": [
           "けっか",
-          "けか",
           "げっか",
+          "けか",
           "けっが"
         ],
         "correct": 0,
@@ -7720,9 +6910,9 @@ const jlptN4Data = {
         "character": "頼みます",
         "hint": "ขอร้อง、ไหว้วาน",
         "choices": [
+          "すすみます",
           "ならいます",
           "だのみます",
-          "すすみます",
           "たのみます"
         ],
         "correct": 3,
@@ -7735,12 +6925,12 @@ const jlptN4Data = {
         "character": "心配します",
         "hint": "เป็ นห่วง, กังวล",
         "choices": [
+          "しんっぱいします",
+          "しんはいします",
           "しんぱいじます",
-          "じんぱいします",
-          "しんぱいします",
-          "しんはいします"
+          "しんぱいします"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "しんぱいします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BF%83%E9%85%8D%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-07"
@@ -7750,12 +6940,12 @@ const jlptN4Data = {
         "character": "故障します",
         "hint": "เสีย, ขัดข้อง",
         "choices": [
-          "こしようします",
           "こっしょうします",
           "こしょうします",
-          "ごしょうします"
+          "こじょうします",
+          "こしょうじます"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "こしょうします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%95%85%E9%9A%9C%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-07"
@@ -7765,9 +6955,9 @@ const jlptN4Data = {
         "character": "倒れます",
         "hint": "ล้ม",
         "choices": [
-          "すすみます",
-          "たおれます",
           "ならいます",
+          "たおれます",
+          "すすみます",
           "だおれます"
         ],
         "correct": 1,
@@ -7780,29 +6970,14 @@ const jlptN4Data = {
         "character": "天気予報",
         "hint": "พยากรณ์อากาศ",
         "choices": [
-          "てんきよほう",
           "てんぎよほう",
           "てんきよぼう",
-          "でんきよほう"
-        ],
-        "correct": 0,
-        "japaneseText": "てんきよほう",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%A9%E6%B0%97%E4%BA%88%E5%A0%B1",
-        "sourceExam": "JLPT 2021-07"
-      },
-      {
-        "kanji": "スーツケース",
-        "character": "スーツケース",
-        "hint": "กระเป๋าเดินทาง",
-        "choices": [
-          "すーづけーす",
-          "すーつけーず",
-          "すーつげーす",
-          "すーつけーす"
+          "てんっきよほう",
+          "てんきよほう"
         ],
         "correct": 3,
-        "japaneseText": "すーつけーす",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%B9%E3%83%BC%E3%83%84%E3%82%B1%E3%83%BC%E3%82%B9",
+        "japaneseText": "てんきよほう",
+        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%A9%E6%B0%97%E4%BA%88%E5%A0%B1",
         "sourceExam": "JLPT 2021-07"
       },
       {
@@ -7810,12 +6985,12 @@ const jlptN4Data = {
         "character": "同じ",
         "hint": "เหมือนกัน",
         "choices": [
-          "つごう",
-          "おなじ",
+          "おなし",
           "ちかい",
-          "おなし"
+          "つごう",
+          "おなじ"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "おなじ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%90%8C%E3%81%98",
         "sourceExam": "JLPT 2021-07"
@@ -7825,12 +7000,12 @@ const jlptN4Data = {
         "character": "安心します",
         "hint": "โล่งใจ, วางใจ",
         "choices": [
-          "あんじんします",
           "あんしんじます",
+          "あんしんします",
           "あんっしんします",
-          "あんしんします"
+          "あんじんします"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "あんしんします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%AE%89%E5%BF%83%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-07"
@@ -7840,10 +7015,10 @@ const jlptN4Data = {
         "character": "集まります",
         "hint": "รวมตัว, ชุมนุม",
         "choices": [
+          "あっつまります",
           "あづまります",
-          "ならいます",
           "あつまります",
-          "あっつまります"
+          "ならいます"
         ],
         "correct": 2,
         "japaneseText": "あつまります",
@@ -7855,12 +7030,12 @@ const jlptN4Data = {
         "character": "咲きます",
         "hint": "บาน (ดอกไม้)",
         "choices": [
-          "ざきます",
           "さぎます",
           "さきます",
-          "さっきます"
+          "さっきます",
+          "ざきます"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "さきます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%92%B2%E3%81%8D%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2021-07"
@@ -7870,12 +7045,12 @@ const jlptN4Data = {
         "character": "残念",
         "hint": "น่าเสียดาย",
         "choices": [
-          "ざんねん",
           "じょせい",
-          "いじょう",
-          "さんねん"
+          "ざんねん",
+          "さんねん",
+          "いじょう"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "ざんねん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%AE%8B%E5%BF%B5",
         "sourceExam": "JLPT 2021-07"
@@ -7885,12 +7060,12 @@ const jlptN4Data = {
         "character": "楽しい",
         "hint": "สนุก",
         "choices": [
-          "たのじい",
           "だのしい",
           "たのしい",
+          "たのじい",
           "たのっしい"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "たのしい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%A5%BD%E3%81%97%E3%81%84",
         "sourceExam": "JLPT 2018-12"
@@ -7900,12 +7075,12 @@ const jlptN4Data = {
         "character": "味",
         "hint": "รสชาติ",
         "choices": [
-          "くも",
-          "あじ",
+          "よる",
           "あし",
-          "よる"
+          "くも",
+          "あじ"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "あじ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%91%B3",
         "sourceExam": "JLPT 2018-12"
@@ -7915,12 +7090,12 @@ const jlptN4Data = {
         "character": "不便",
         "hint": "ไม่สะดวก",
         "choices": [
-          "いがい",
-          "ふぺん",
+          "ぶべん",
           "ふべん",
-          "ぶべん"
+          "ふぺん",
+          "いがい"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "ふべん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%B8%8D%E4%BE%BF",
         "sourceExam": "JLPT 2018-12"
@@ -7930,12 +7105,12 @@ const jlptN4Data = {
         "character": "切ります",
         "hint": "ตัด",
         "choices": [
-          "あきます",
-          "きります",
           "かします",
-          "ぎります"
+          "ぎります",
+          "きります",
+          "あきます"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "きります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%88%87%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -7945,12 +7120,12 @@ const jlptN4Data = {
         "character": "以外",
         "hint": "นอกจาก",
         "choices": [
-          "いがい",
           "しろい",
           "いかい",
-          "ふべん"
+          "ふべん",
+          "いがい"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "いがい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BB%A5%E5%A4%96",
         "sourceExam": "JLPT 2018-12"
@@ -7976,11 +7151,11 @@ const jlptN4Data = {
         "hint": "รถด่วน",
         "choices": [
           "きゅこう",
-          "きゅうこう",
-          "きゅうっこう",
-          "きゅうごう"
+          "きゅうごう",
+          "ぎゅうこう",
+          "きゅうこう"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "きゅうこう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%80%A5%E8%A1%8C",
         "sourceExam": "JLPT 2018-12"
@@ -7991,11 +7166,11 @@ const jlptN4Data = {
         "hint": "ถ่ายภาพ (บางบริบท: คัดลอก)",
         "choices": [
           "うつじます",
-          "うつします",
           "うっつします",
+          "うつします",
           "うづします"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "うつします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%86%99%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -8005,12 +7180,12 @@ const jlptN4Data = {
         "character": "反対",
         "hint": "ตรงข้าม, คัดค้าน",
         "choices": [
-          "はんったい",
-          "はんだい",
+          "ばんたい",
           "はんたい",
-          "ばんたい"
+          "はんだい",
+          "はんったい"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "はんたい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8F%8D%E5%AF%BE",
         "sourceExam": "JLPT 2018-12"
@@ -8020,12 +7195,12 @@ const jlptN4Data = {
         "character": "白い",
         "hint": "ขาว",
         "choices": [
-          "しろい",
-          "じろい",
+          "いがい",
           "ふべん",
-          "いがい"
+          "じろい",
+          "しろい"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "しろい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%99%BD%E3%81%84",
         "sourceExam": "JLPT 2018-12"
@@ -8035,12 +7210,12 @@ const jlptN4Data = {
         "character": "計画",
         "hint": "แผน, วางแผน",
         "choices": [
+          "けいかぐ",
+          "けいっかく",
           "けいがく",
-          "げいかく",
-          "けいかく",
-          "けいっかく"
+          "けいかく"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "けいかく",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%A8%88%E7%94%BB",
         "sourceExam": "JLPT 2018-12"
@@ -8050,12 +7225,12 @@ const jlptN4Data = {
         "character": "夜",
         "hint": "กลางคืน",
         "choices": [
-          "くも",
-          "あじ",
+          "ゆめ",
           "よる",
-          "ゆめ"
+          "あじ",
+          "くも"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "よる",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%9C",
         "sourceExam": "JLPT 2018-12"
@@ -8065,12 +7240,12 @@ const jlptN4Data = {
         "character": "貸します",
         "hint": "ให้ยืม",
         "choices": [
-          "かじます",
-          "かします",
           "かっします",
-          "がします"
+          "がします",
+          "かじます",
+          "かします"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "かします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%B2%B8%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -8080,12 +7255,12 @@ const jlptN4Data = {
         "character": "試合",
         "hint": "การแข่งขัน",
         "choices": [
-          "ふべん",
-          "いがい",
           "じあい",
-          "しあい"
+          "しあい",
+          "ふべん",
+          "いがい"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "しあい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%A9%A6%E5%90%88",
         "sourceExam": "JLPT 2018-12"
@@ -8095,12 +7270,12 @@ const jlptN4Data = {
         "character": "心配します",
         "hint": "เป็ นห่วง, กังวล",
         "choices": [
-          "しんぱいします",
-          "しんぱいじます",
+          "しんはいします",
           "じんぱいします",
-          "しんはいします"
+          "しんっぱいします",
+          "しんぱいします"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "しんぱいします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BF%83%E9%85%8D%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -8110,29 +7285,14 @@ const jlptN4Data = {
         "character": "夢",
         "hint": "ความฝัน",
         "choices": [
-          "ゆめ",
-          "よる",
           "くも",
-          "あじ"
+          "よる",
+          "あじ",
+          "ゆめ"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "ゆめ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%A2",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
-        "kanji": "ぜひ",
-        "character": "ぜひ",
-        "hint": "ให้ได้, อย่างแน่นอน",
-        "choices": [
-          "たいへん",
-          "ぜび",
-          "ぜひ",
-          "ぜんぜん"
-        ],
-        "correct": 2,
-        "japaneseText": "ぜひ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%9C%E3%81%B2",
         "sourceExam": "JLPT 2018-12"
       },
       {
@@ -8142,10 +7302,10 @@ const jlptN4Data = {
         "choices": [
           "せっつめいします",
           "せつめいじます",
-          "ぜつめいします",
-          "せつめいします"
+          "せつめいします",
+          "ぜつめいします"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "せつめいします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%AA%AC%E6%98%8E%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -8155,12 +7315,12 @@ const jlptN4Data = {
         "character": "硬い",
         "hint": "แข็ง",
         "choices": [
-          "かだい",
           "がたい",
+          "かたい",
           "かったい",
-          "かたい"
+          "かだい"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "かたい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%A1%AC%E3%81%84",
         "sourceExam": "JLPT 2018-12"
@@ -8172,27 +7332,12 @@ const jlptN4Data = {
         "choices": [
           "ざそいます",
           "さそいます",
-          "さぞいます",
-          "さっそいます"
+          "さっそいます",
+          "さぞいます"
         ],
         "correct": 1,
         "japaneseText": "さそいます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%AA%98%E3%81%84%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
-        "kanji": "センチ",
-        "character": "センチ",
-        "hint": "เซนติเมตร",
-        "choices": [
-          "せんち",
-          "せんっち",
-          "ぜんち",
-          "せんぢ"
-        ],
-        "correct": 0,
-        "japaneseText": "せんち",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%BB%E3%83%B3%E3%83%81",
         "sourceExam": "JLPT 2018-12"
       },
       {
@@ -8201,9 +7346,9 @@ const jlptN4Data = {
         "hint": "ไม่อยู่บ้าน, ฝากบ้าน",
         "choices": [
           "るす",
-          "るず",
+          "あじ",
           "るっす",
-          "あじ"
+          "るず"
         ],
         "correct": 0,
         "japaneseText": "るす",
@@ -8215,8 +7360,8 @@ const jlptN4Data = {
         "character": "見つかります",
         "hint": "พบ, หาเจอ",
         "choices": [
-          "みづかります",
           "みつがります",
+          "みづかります",
           "みつかります",
           "みっつかります"
         ],
@@ -8226,48 +7371,18 @@ const jlptN4Data = {
         "sourceExam": "JLPT 2018-12"
       },
       {
-        "kanji": "アルバイトします",
-        "character": "アルバイトします",
-        "hint": "ทำงานพิเศษ",
-        "choices": [
-          "あるばいとします",
-          "あるばいどします",
-          "あるばいっとします",
-          "あるばいとじます"
-        ],
-        "correct": 0,
-        "japaneseText": "あるばいとします",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%A2%E3%83%AB%E3%83%90%E3%82%A4%E3%83%88%E3%81%97%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
         "kanji": "水泳",
         "character": "水泳",
         "hint": "ว่ายน้ำ",
         "choices": [
-          "すいえい",
-          "はんたい",
           "たのしい",
-          "ずいえい"
-        ],
-        "correct": 0,
-        "japaneseText": "すいえい",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B0%B4%E6%B3%B3",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
-        "kanji": "びっくりします",
-        "character": "びっくりします",
-        "hint": "ตกใจ",
-        "choices": [
-          "あんしんします",
-          "びっくりします",
-          "うっかりします",
-          "がっかりします"
+          "すいえい",
+          "ずいえい",
+          "はんたい"
         ],
         "correct": 1,
-        "japaneseText": "びっくりします",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%B3%E3%81%A3%E3%81%8F%E3%82%8A%E3%81%97%E3%81%BE%E3%81%99",
+        "japaneseText": "すいえい",
+        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B0%B4%E6%B3%B3",
         "sourceExam": "JLPT 2018-12"
       },
       {
@@ -8275,12 +7390,12 @@ const jlptN4Data = {
         "character": "美しい",
         "hint": "งดงาม",
         "choices": [
+          "うつくじい",
+          "うづくしい",
           "うつくしい",
-          "うっつくしい",
-          "うつぐしい",
-          "うづくしい"
+          "うつぐしい"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "うつくしい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%BE%8E%E3%81%97%E3%81%84",
         "sourceExam": "JLPT 2018-12"
@@ -8290,10 +7405,10 @@ const jlptN4Data = {
         "character": "輸入します",
         "hint": "นำเข้า",
         "choices": [
-          "ゆにゅします",
+          "ゆにゅうっします",
           "ゆにゅうします",
           "ゆにゅうじます",
-          "ゆにゆうします"
+          "ゆにゅします"
         ],
         "correct": 1,
         "japaneseText": "ゆにゅうします",
@@ -8305,12 +7420,12 @@ const jlptN4Data = {
         "character": "輸出します",
         "hint": "ส่งออก",
         "choices": [
+          "ゆしゅづします",
           "ゆじゅつします",
-          "ゆしゅつじます",
-          "ゆっしゅつします",
-          "ゆしゅつします"
+          "ゆしゅつします",
+          "ゆしゅつじます"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "ゆしゅつします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%BC%B8%E5%87%BA%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -8320,10 +7435,10 @@ const jlptN4Data = {
         "character": "最近",
         "hint": "เมื่อเร็ว ๆ นี้",
         "choices": [
-          "さいっきん",
+          "さいぎん",
           "さいきん",
           "ざいきん",
-          "さいぎん"
+          "さいっきん"
         ],
         "correct": 1,
         "japaneseText": "さいきん",
@@ -8335,12 +7450,12 @@ const jlptN4Data = {
         "character": "音",
         "hint": "เสียง",
         "choices": [
-          "おと",
-          "おど",
           "おっと",
-          "あじ"
+          "おと",
+          "あじ",
+          "おど"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "おと",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%9F%B3",
         "sourceExam": "JLPT 2018-12"
@@ -8351,7 +7466,7 @@ const jlptN4Data = {
         "hint": "เยี่ยมชม,ทัศนศึกษา",
         "choices": [
           "けんがくします",
-          "けんかくします",
+          "けんがぐします",
           "けんがくじます",
           "けんがっくします"
         ],
@@ -8365,12 +7480,12 @@ const jlptN4Data = {
         "character": "飾ります",
         "hint": "ประดับ,ตกแต่ง",
         "choices": [
-          "かざります",
+          "がざります",
           "うつします",
-          "かさります",
-          "がざります"
+          "かざります",
+          "かさります"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "かざります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%A3%BE%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -8380,74 +7495,14 @@ const jlptN4Data = {
         "character": "工事",
         "hint": "การก่อสร้าง",
         "choices": [
+          "こうし",
           "ふべん",
           "こうじ",
-          "ごうじ",
-          "こうし"
+          "ごうじ"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "こうじ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%B7%A5%E4%BA%8B",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
-        "kanji": "だれでも",
-        "character": "だれでも",
-        "hint": "ใครก็ได้",
-        "choices": [
-          "だれでも",
-          "どこでも",
-          "いつでも",
-          "なんでも"
-        ],
-        "correct": 0,
-        "japaneseText": "だれでも",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%A0%E3%82%8C%E3%81%A7%E3%82%82",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
-        "kanji": "なんでも",
-        "character": "なんでも",
-        "hint": "อะไรก็ได้",
-        "choices": [
-          "いつでも",
-          "なんでも",
-          "だれでも",
-          "どこでも"
-        ],
-        "correct": 1,
-        "japaneseText": "なんでも",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%AA%E3%82%93%E3%81%A7%E3%82%82",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
-        "kanji": "どこでも",
-        "character": "どこでも",
-        "hint": "ที่ไหนก็ได้",
-        "choices": [
-          "いつでも",
-          "だれでも",
-          "どこでも",
-          "なんでも"
-        ],
-        "correct": 2,
-        "japaneseText": "どこでも",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%A9%E3%81%93%E3%81%A7%E3%82%82",
-        "sourceExam": "JLPT 2018-12"
-      },
-      {
-        "kanji": "いつでも",
-        "character": "いつでも",
-        "hint": "เมื่อไรก็ได้",
-        "choices": [
-          "なんでも",
-          "だれでも",
-          "いつでも",
-          "どこでも"
-        ],
-        "correct": 2,
-        "japaneseText": "いつでも",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%84%E3%81%A4%E3%81%A7%E3%82%82",
         "sourceExam": "JLPT 2018-12"
       },
       {
@@ -8455,9 +7510,9 @@ const jlptN4Data = {
         "character": "入学します",
         "hint": "เข้าเรียน",
         "choices": [
-          "にゅうがっくします",
-          "にゆうがくします",
           "にゅうかくします",
+          "にゆうがくします",
+          "にゅがくします",
           "にゅうがくします"
         ],
         "correct": 3,
@@ -8470,12 +7525,12 @@ const jlptN4Data = {
         "character": "卒業します",
         "hint": "จบการศึกษา",
         "choices": [
-          "そつぎょします",
-          "そづぎょうします",
           "そつぎょうします",
-          "そつぎようします"
+          "そっつぎょうします",
+          "そづぎょうします",
+          "そつきょうします"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "そつぎょうします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8D%92%E6%A5%AD%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -8485,8 +7540,8 @@ const jlptN4Data = {
         "character": "遅れます",
         "hint": "สาย, ล่าช้า",
         "choices": [
-          "おぐれます",
           "おっくれます",
+          "おぐれます",
           "うつします",
           "おくれます"
         ],
@@ -8501,9 +7556,9 @@ const jlptN4Data = {
         "hint": "ที่นั่ง",
         "choices": [
           "せき",
+          "せぎ",
           "せっき",
-          "ぜき",
-          "せぎ"
+          "ぜき"
         ],
         "correct": 0,
         "japaneseText": "せき",
@@ -8515,12 +7570,12 @@ const jlptN4Data = {
         "character": "開きます",
         "hint": "เปิด (โดยอัตโนมัติ เช่น ประตู)",
         "choices": [
-          "あぎます",
+          "あきます",
           "あっきます",
-          "きります",
-          "あきます"
+          "あぎます",
+          "きります"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "あきます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%96%8B%E3%81%8D%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -8530,12 +7585,12 @@ const jlptN4Data = {
         "character": "忘れ物",
         "hint": "ของที่ลืมไว้",
         "choices": [
-          "きゅうこう",
           "わっすれもの",
           "わすれもの",
-          "わずれもの"
+          "わずれもの",
+          "きゅうこう"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "わすれもの",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BF%98%E3%82%8C%E7%89%A9",
         "sourceExam": "JLPT 2018-12"
@@ -8545,12 +7600,12 @@ const jlptN4Data = {
         "character": "楽しみ",
         "hint": "ความสนุก, สิ่งที่ตั้งตารอ",
         "choices": [
-          "たのしみ",
           "だのしみ",
+          "たのっしみ",
           "たのじみ",
-          "たのっしみ"
+          "たのしみ"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "たのしみ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%A5%BD%E3%81%97%E3%81%BF",
         "sourceExam": "JLPT 2018-12"
@@ -8560,12 +7615,12 @@ const jlptN4Data = {
         "character": "楽しみにしています",
         "hint": "ตั้งตารอ/อยากให้วันนั้นมาถึงไวๆ",
         "choices": [
-          "たのっしみにしています",
-          "たのじみにしています",
+          "たのしみにしています",
           "たのしみにじています",
-          "たのしみにしています"
+          "たのっしみにしています",
+          "たのじみにしています"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "たのしみにしています",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%A5%BD%E3%81%97%E3%81%BF%E3%81%AB%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2018-12"
@@ -8575,12 +7630,12 @@ const jlptN4Data = {
         "character": "石",
         "hint": "หิน",
         "choices": [
-          "あき",
-          "いっし",
+          "いし",
           "いじ",
-          "いし"
+          "いっし",
+          "あき"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "いし",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%9F%B3",
         "sourceExam": "JLPT 2017-12"
@@ -8590,12 +7645,12 @@ const jlptN4Data = {
         "character": "経験",
         "hint": "ประสบการณ์",
         "choices": [
+          "げいけん",
           "けいげん",
           "けいけん",
-          "けいっけん",
-          "げいけん"
+          "けいっけん"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "けいけん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%B5%8C%E9%A8%93",
         "sourceExam": "JLPT 2017-12"
@@ -8605,9 +7660,9 @@ const jlptN4Data = {
         "character": "店員",
         "hint": "พนักงานร้าน",
         "choices": [
+          "でんいん",
           "けいけん",
           "ゆうがた",
-          "でんいん",
           "てんいん"
         ],
         "correct": 3,
@@ -8620,10 +7675,10 @@ const jlptN4Data = {
         "character": "食堂",
         "hint": "โรงอาหาร",
         "choices": [
-          "しょっくどう",
-          "しょくとう",
+          "じょくどう",
+          "しょぐどう",
           "しょくどう",
-          "しょぐどう"
+          "しょっくどう"
         ],
         "correct": 2,
         "japaneseText": "しょくどう",
@@ -8635,12 +7690,12 @@ const jlptN4Data = {
         "character": "港",
         "hint": "ท่าเรือ",
         "choices": [
-          "みなど",
-          "みなっと",
+          "みなと",
           "にっき",
-          "みなと"
+          "みなっと",
+          "みなど"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "みなと",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B8%AF",
         "sourceExam": "JLPT 2017-12"
@@ -8650,12 +7705,12 @@ const jlptN4Data = {
         "character": "小説",
         "hint": "นวนิยาย",
         "choices": [
-          "しょうっせつ",
-          "しょうぜつ",
           "しょうせつ",
-          "しょせつ"
+          "しょうせづ",
+          "しょうぜつ",
+          "じょうせつ"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "しょうせつ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%B0%8F%E8%AA%AC",
         "sourceExam": "JLPT 2017-12"
@@ -8665,12 +7720,12 @@ const jlptN4Data = {
         "character": "日記",
         "hint": "ไดอารี่, บันทึกประจำวัน",
         "choices": [
-          "にっき",
-          "みなと",
+          "にっぎ",
           "にき",
-          "にっぎ"
+          "にっき",
+          "みなと"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "にっき",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%97%A5%E8%A8%98",
         "sourceExam": "JLPT 2017-12"
@@ -8680,12 +7735,12 @@ const jlptN4Data = {
         "character": "夕方",
         "hint": "ตอนเย็น",
         "choices": [
+          "ゆうかた",
           "ゆうがった",
-          "ゆうがた",
           "ゆうがだ",
-          "ゆうかた"
+          "ゆうがた"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "ゆうがた",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%95%E6%96%B9",
         "sourceExam": "JLPT 2017-12"
@@ -8695,12 +7750,12 @@ const jlptN4Data = {
         "character": "秋",
         "hint": "ฤดูใบไม้ร่วง",
         "choices": [
-          "いし",
-          "あぎ",
+          "あっき",
           "あき",
-          "あっき"
+          "いし",
+          "あぎ"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "あき",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%A7%8B",
         "sourceExam": "JLPT 2017-12"
@@ -8725,12 +7780,12 @@ const jlptN4Data = {
         "character": "場所",
         "hint": "สถานที่",
         "choices": [
-          "ばしょ",
+          "ばしよ",
+          "ばっしょ",
           "ばじょ",
-          "ぱしょ",
-          "ばっしょ"
+          "ばしょ"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "ばしょ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A0%B4%E6%89%80",
         "sourceExam": "JLPT 2017-12"
@@ -8740,10 +7795,10 @@ const jlptN4Data = {
         "character": "歩きます",
         "hint": "เดิน",
         "choices": [
+          "あるっきます",
           "あるぎます",
-          "かわきます",
           "あるきます",
-          "あるっきます"
+          "かわきます"
         ],
         "correct": 2,
         "japaneseText": "あるきます",
@@ -8755,12 +7810,12 @@ const jlptN4Data = {
         "character": "便利",
         "hint": "สะดวก",
         "choices": [
-          "みなと",
-          "ぺんり",
+          "べんり",
           "にっき",
-          "べんり"
+          "ぺんり",
+          "みなと"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "べんり",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BE%BF%E5%88%A9",
         "sourceExam": "JLPT 2017-12"
@@ -8770,12 +7825,12 @@ const jlptN4Data = {
         "character": "眠い",
         "hint": "ง่วงนอน",
         "choices": [
-          "みなと",
-          "ねむい",
+          "にっき",
           "あおい",
-          "にっき"
+          "ねむい",
+          "みなと"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "ねむい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%9C%A0%E3%81%84",
         "sourceExam": "JLPT 2017-12"
@@ -8800,10 +7855,10 @@ const jlptN4Data = {
         "character": "乾きます",
         "hint": "แห้ง",
         "choices": [
-          "がわきます",
+          "かわっきます",
           "かわきます",
-          "かわぎます",
-          "かわっきます"
+          "がわきます",
+          "かわぎます"
         ],
         "correct": 1,
         "japaneseText": "かわきます",
@@ -8815,29 +7870,14 @@ const jlptN4Data = {
         "character": "熱心",
         "hint": "ตั้งใจ, กระตือรือร้น",
         "choices": [
-          "ねっしん",
+          "けいけん",
           "ねっじん",
-          "ねしん",
-          "けいけん"
+          "ねっしん",
+          "ねしん"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "ねっしん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%86%B1%E5%BF%83",
-        "sourceExam": "JLPT 2017-12"
-      },
-      {
-        "kanji": "ルール",
-        "character": "ルール",
-        "hint": "กฎ, กติกา",
-        "choices": [
-          "るーる",
-          "みなと",
-          "あおい",
-          "にっき"
-        ],
-        "correct": 0,
-        "japaneseText": "るーる",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%AB%E3%83%BC%E3%83%AB",
         "sourceExam": "JLPT 2017-12"
       },
       {
@@ -8845,12 +7885,12 @@ const jlptN4Data = {
         "character": "用意",
         "hint": "การเตรียม",
         "choices": [
-          "あおい",
-          "みなと",
           "ようい",
-          "にっき"
+          "みなと",
+          "にっき",
+          "あおい"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "ようい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%94%A8%E6%84%8F",
         "sourceExam": "JLPT 2017-12"
@@ -8860,10 +7900,10 @@ const jlptN4Data = {
         "character": "相談します",
         "hint": "ปรึกษา",
         "choices": [
-          "そうだんじます",
+          "そうたんします",
           "そうだんします",
           "ぞうだんします",
-          "そうたんします"
+          "そうだんじます"
         ],
         "correct": 1,
         "japaneseText": "そうだんします",
@@ -8875,12 +7915,12 @@ const jlptN4Data = {
         "character": "運びます",
         "hint": "ขนย้าย, ขนส่ง",
         "choices": [
-          "ばこびます",
-          "はごびます",
+          "はこぴます",
+          "はこびます",
           "はっこびます",
-          "はこびます"
+          "はごびます"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "はこびます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%81%8B%E3%81%B3%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2017-12"
@@ -8890,9 +7930,9 @@ const jlptN4Data = {
         "character": "危険",
         "hint": "อันตราย",
         "choices": [
+          "きっけん",
           "きげん",
           "ぎけん",
-          "きっけん",
           "きけん"
         ],
         "correct": 3,
@@ -8905,12 +7945,12 @@ const jlptN4Data = {
         "character": "止めます",
         "hint": "หยุด, จอด",
         "choices": [
+          "わります",
           "とめます",
-          "ほめます",
           "どめます",
-          "わります"
+          "ほめます"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "とめます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%AD%A2%E3%82%81%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2017-12"
@@ -8920,12 +7960,12 @@ const jlptN4Data = {
         "character": "出発します",
         "hint": "ออกเดินทาง",
         "choices": [
-          "じゅっぱつします",
-          "しゅっぱつじます",
           "しゅっぱつします",
+          "しゅっぱづします",
+          "しゅっぱつじます",
           "しゅっはつします"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "しゅっぱつします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%87%BA%E7%99%BA%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2017-12"
@@ -8936,11 +7976,11 @@ const jlptN4Data = {
         "hint": "มาถึง, เดินทางถึง",
         "choices": [
           "とうちゃぐします",
-          "とうちゃくじます",
           "とうちゃくします",
-          "どうちゃくします"
+          "とうちゃくじます",
+          "とうぢゃくします"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "とうちゃくします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%88%B0%E7%9D%80%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2017-12"
@@ -8950,12 +7990,12 @@ const jlptN4Data = {
         "character": "丁寧",
         "hint": "สุภาพ, เรียบร้อย",
         "choices": [
+          "けいけん",
           "でいねい",
           "てんいん",
-          "ていねい",
-          "けいけん"
+          "ていねい"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "ていねい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%B8%81%E5%AF%A7",
         "sourceExam": "JLPT 2017-12"
@@ -8965,10 +8005,10 @@ const jlptN4Data = {
         "character": "上手い",
         "hint": "อร่อย, เก่ง",
         "choices": [
-          "みなと",
           "にっき",
+          "あおい",
           "うまい",
-          "あおい"
+          "みなと"
         ],
         "correct": 2,
         "japaneseText": "うまい",
@@ -8980,12 +8020,12 @@ const jlptN4Data = {
         "character": "寝坊します",
         "hint": "ตื่นสาย",
         "choices": [
-          "ねぽうします",
-          "ねぼうじます",
           "ねぼうっします",
-          "ねぼうします"
+          "ねぽうします",
+          "ねぼうします",
+          "ねぼうじます"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "ねぼうします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%AF%9D%E5%9D%8A%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2017-12"
@@ -8995,9 +8035,9 @@ const jlptN4Data = {
         "character": "褒めます",
         "hint": "ชมเชย",
         "choices": [
-          "とめます",
-          "ぼめます",
           "わります",
+          "ぼめます",
+          "とめます",
           "ほめます"
         ],
         "correct": 3,
@@ -9010,12 +8050,12 @@ const jlptN4Data = {
         "character": "留守",
         "hint": "การไม่อยู่บ้าน",
         "choices": [
-          "るす",
           "いし",
           "るっす",
-          "るず"
+          "るず",
+          "るす"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "るす",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%95%99%E5%AE%88",
         "sourceExam": "JLPT 2017-12"
@@ -9025,10 +8065,10 @@ const jlptN4Data = {
         "character": "親切",
         "hint": "ใจดี",
         "choices": [
-          "しんせづ",
+          "しんっせつ",
           "しんせつ",
           "しんぜつ",
-          "じんせつ"
+          "しんせづ"
         ],
         "correct": 1,
         "japaneseText": "しんせつ",
@@ -9040,12 +8080,12 @@ const jlptN4Data = {
         "character": "苦い",
         "hint": "ขม",
         "choices": [
-          "にかい",
-          "にがい",
+          "みなと",
           "にっき",
-          "みなと"
+          "にかい",
+          "にがい"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "にがい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%8B%A6%E3%81%84",
         "sourceExam": "JLPT 2017-12"
@@ -9070,12 +8110,12 @@ const jlptN4Data = {
         "character": "遅刻します",
         "hint": "ไปสาย",
         "choices": [
-          "ちごくします",
-          "ちこくします",
           "ちっこくします",
-          "ちこぐします"
+          "ちこくじます",
+          "ちこくします",
+          "ぢこくします"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "ちこくします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%81%85%E5%88%BB%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2017-12"
@@ -9085,29 +8125,14 @@ const jlptN4Data = {
         "character": "米",
         "hint": "ข้าวสาร",
         "choices": [
-          "いし",
+          "こめ",
           "あき",
-          "ごめ",
-          "こめ"
+          "いし",
+          "ごめ"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "こめ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%B1%B3",
-        "sourceExam": "JLPT 2017-12"
-      },
-      {
-        "kanji": "ドライブ",
-        "character": "ドライブ",
-        "hint": "ขับรถเล่น",
-        "choices": [
-          "とらいぶ",
-          "どらいぷ",
-          "どらいぶ",
-          "けいけん"
-        ],
-        "correct": 2,
-        "japaneseText": "どらいぶ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96",
         "sourceExam": "JLPT 2017-12"
       },
       {
@@ -9115,10 +8140,10 @@ const jlptN4Data = {
         "character": "間に合います",
         "hint": "ทันเวลา",
         "choices": [
-          "ねぼうします",
+          "あるきます",
           "まにあいます",
-          "ちこくします",
-          "あるきます"
+          "ねぼうします",
+          "ちこくします"
         ],
         "correct": 1,
         "japaneseText": "まにあいます",
@@ -9131,11 +8156,11 @@ const jlptN4Data = {
         "hint": "ลูกค้า, แขก",
         "choices": [
           "おきゃくざん",
-          "おっきゃくさん",
           "おきゃくさん",
-          "おぎゃくさん"
+          "おぎゃくさん",
+          "おっきゃくさん"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "おきゃくさん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%8A%E5%AE%A2%E3%81%95%E3%82%93",
         "sourceExam": "JLPT 2017-12"
@@ -9145,29 +8170,14 @@ const jlptN4Data = {
         "character": "反対",
         "hint": "การคัดค้าน, ตรงข้าม",
         "choices": [
-          "はんだい",
-          "はんったい",
           "はんたい",
-          "ばんたい"
+          "はんったい",
+          "ばんたい",
+          "はんだい"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "はんたい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8F%8D%E5%AF%BE",
-        "sourceExam": "JLPT 2017-12"
-      },
-      {
-        "kanji": "ソファー",
-        "character": "ソファー",
-        "hint": "โซฟา",
-        "choices": [
-          "そぶぁー",
-          "ぞふぁー",
-          "けいけん",
-          "そふぁー"
-        ],
-        "correct": 3,
-        "japaneseText": "そふぁー",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%BD%E3%83%95%E3%82%A1%E3%83%BC",
         "sourceExam": "JLPT 2017-12"
       },
       {
@@ -9175,9 +8185,9 @@ const jlptN4Data = {
         "character": "お知らせ",
         "hint": "การแจ้งให้ทราบ",
         "choices": [
-          "おしらぜ",
-          "おしらせ",
           "おっしらせ",
+          "おしらせ",
+          "おしらぜ",
           "おじらせ"
         ],
         "correct": 1,
@@ -9190,12 +8200,12 @@ const jlptN4Data = {
         "character": "返事",
         "hint": "คำตอบ, การตอบกลับ",
         "choices": [
-          "みなと",
           "へんじ",
           "へんし",
-          "べんじ"
+          "べんじ",
+          "みなと"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "へんじ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%BF%94%E4%BA%8B",
         "sourceExam": "JLPT 2017-12"
@@ -9205,44 +8215,14 @@ const jlptN4Data = {
         "character": "湖",
         "hint": "ทะเลสาบ",
         "choices": [
+          "てんいん",
           "みすうみ",
           "みずうみ",
-          "てんいん",
           "けいけん"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "みずうみ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B9%96",
-        "sourceExam": "JLPT 2017-12"
-      },
-      {
-        "kanji": "ただ",
-        "character": "ただ",
-        "hint": "ฟรี, เปล่า",
-        "choices": [
-          "ただ",
-          "たった",
-          "ほぼ",
-          "まだまだ"
-        ],
-        "correct": 0,
-        "japaneseText": "ただ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%9F%E3%81%A0",
-        "sourceExam": "JLPT 2017-12"
-      },
-      {
-        "kanji": "フリー",
-        "character": "フリー",
-        "hint": "อิสระ, ว่าง, ฟรี",
-        "choices": [
-          "にっき",
-          "みなと",
-          "ふりー",
-          "ぶりー"
-        ],
-        "correct": 2,
-        "japaneseText": "ふりー",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%95%E3%83%AA%E3%83%BC",
         "sourceExam": "JLPT 2017-12"
       },
       {
@@ -9250,12 +8230,12 @@ const jlptN4Data = {
         "character": "体育館",
         "hint": "โรงยิม",
         "choices": [
-          "たいいくがん",
           "たいいっくかん",
+          "たいいくかん",
           "だいいくかん",
-          "たいいくかん"
+          "たいいくがん"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "たいいくかん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BD%93%E8%82%B2%E9%A4%A8",
         "sourceExam": "JLPT 2017-12"
@@ -9266,11 +8246,11 @@ const jlptN4Data = {
         "hint": "เหลืออยู่",
         "choices": [
           "のごります",
+          "のっこります",
           "あるきます",
-          "のこります",
-          "のっこります"
+          "のこります"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "のこります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%AE%8B%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2017-12"
@@ -9281,28 +8261,13 @@ const jlptN4Data = {
         "hint": "การเตรียมตัว",
         "choices": [
           "けいけん",
-          "じゅんび",
+          "しゅんび",
           "じゅんぴ",
-          "しゅんび"
+          "じゅんび"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "じゅんび",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%BA%96%E5%82%99",
-        "sourceExam": "JLPT 2017-12"
-      },
-      {
-        "kanji": "タオル",
-        "character": "タオル",
-        "hint": "ผ้าเช็ดตัว",
-        "choices": [
-          "たおる",
-          "にっき",
-          "みなと",
-          "だおる"
-        ],
-        "correct": 0,
-        "japaneseText": "たおる",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%BF%E3%82%AA%E3%83%AB",
         "sourceExam": "JLPT 2017-12"
       },
       {
@@ -9310,29 +8275,14 @@ const jlptN4Data = {
         "character": "お見舞い",
         "hint": "การเยี่ยมผู้ป่วย",
         "choices": [
-          "ゆうがた",
+          "おみまい",
           "けいけん",
           "てんいん",
-          "おみまい"
+          "ゆうがた"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "おみまい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%8A%E8%A6%8B%E8%88%9E%E3%81%84",
-        "sourceExam": "JLPT 2017-12"
-      },
-      {
-        "kanji": "ピアニスト",
-        "character": "ピアニスト",
-        "hint": "นักเปียโน",
-        "choices": [
-          "ひあにすと",
-          "ぴあにすと",
-          "ぴあにっすと",
-          "ぴあにすど"
-        ],
-        "correct": 1,
-        "japaneseText": "ぴあにすと",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%94%E3%82%A2%E3%83%8B%E3%82%B9%E3%83%88",
         "sourceExam": "JLPT 2017-12"
       },
       {
@@ -9340,12 +8290,12 @@ const jlptN4Data = {
         "character": "黒板",
         "hint": "กระดานดำ",
         "choices": [
+          "こくぱん",
           "こぐばん",
-          "こくばん",
-          "こっくばん",
-          "ごくばん"
+          "ごくばん",
+          "こくばん"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "こくばん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%BB%92%E6%9D%BF",
         "sourceExam": "JLPT 2017-12"
@@ -9355,12 +8305,12 @@ const jlptN4Data = {
         "character": "指",
         "hint": "นิ้ว",
         "choices": [
-          "あね",
           "ゆび",
-          "うそ",
-          "ゆぴ"
+          "ゆぴ",
+          "あね",
+          "うそ"
         ],
-        "correct": 1,
+        "correct": 0,
         "japaneseText": "ゆび",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%8C%87",
         "sourceExam": "JLPT 2013-12"
@@ -9370,12 +8320,12 @@ const jlptN4Data = {
         "character": "旅行",
         "hint": "การท่องเที่ยว",
         "choices": [
-          "りよこう",
           "りょっこう",
           "りょごう",
-          "りょこう"
+          "りょこう",
+          "りよこう"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "りょこう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%97%85%E8%A1%8C",
         "sourceExam": "JLPT 2013-12"
@@ -9387,8 +8337,8 @@ const jlptN4Data = {
         "choices": [
           "いそきます",
           "いそぎます",
-          "いっそぎます",
-          "いぞぎます"
+          "いぞぎます",
+          "いっそぎます"
         ],
         "correct": 1,
         "japaneseText": "いそぎます",
@@ -9400,10 +8350,10 @@ const jlptN4Data = {
         "character": "工事",
         "hint": "การก่อสร้าง",
         "choices": [
-          "つよい",
-          "こうじ",
           "こうし",
-          "ごうじ"
+          "こうじ",
+          "ごうじ",
+          "つよい"
         ],
         "correct": 1,
         "japaneseText": "こうじ",
@@ -9416,11 +8366,11 @@ const jlptN4Data = {
         "hint": "พี่สาว (ของตนเอง)",
         "choices": [
           "こめ",
-          "あね",
+          "ゆび",
           "うそ",
-          "ゆび"
+          "あね"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "あね",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A7%89",
         "sourceExam": "JLPT 2013-12"
@@ -9430,8 +8380,8 @@ const jlptN4Data = {
         "character": "待ちます",
         "hint": "รอ",
         "choices": [
-          "まぢます",
           "あきます",
+          "まぢます",
           "まっちます",
           "まちます"
         ],
@@ -9445,12 +8395,12 @@ const jlptN4Data = {
         "character": "強い",
         "hint": "แข็งแรง, แรง",
         "choices": [
+          "つよい",
           "よわい",
           "づよい",
-          "こうじ",
-          "つよい"
+          "こうじ"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "つよい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BC%B7%E3%81%84",
         "sourceExam": "JLPT 2013-12"
@@ -9460,12 +8410,12 @@ const jlptN4Data = {
         "character": "弱い",
         "hint": "อ่อนแอ",
         "choices": [
-          "いしゃ",
-          "つよい",
           "こうじ",
-          "よわい"
+          "いしゃ",
+          "よわい",
+          "つよい"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "よわい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%BC%B1%E3%81%84",
         "sourceExam": "JLPT 2013-12"
@@ -9475,12 +8425,12 @@ const jlptN4Data = {
         "character": "駅員",
         "hint": "พนักงานสถานีรถไฟ",
         "choices": [
+          "えっきいん",
           "えぎいん",
-          "えきいん",
           "りょこう",
-          "えっきいん"
+          "えきいん"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "えきいん",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%A7%85%E5%93%A1",
         "sourceExam": "JLPT 2013-12"
@@ -9490,12 +8440,12 @@ const jlptN4Data = {
         "character": "医者",
         "hint": "หมอ",
         "choices": [
-          "いしゃ",
-          "いっしゃ",
           "こうじ",
-          "いじゃ"
+          "いっしゃ",
+          "いじゃ",
+          "いしゃ"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "いしゃ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8C%BB%E8%80%85",
         "sourceExam": "JLPT 2013-12"
@@ -9505,12 +8455,12 @@ const jlptN4Data = {
         "character": "反対",
         "hint": "การคัดค้าน, ตรงข้าม",
         "choices": [
-          "はんだい",
           "ばんたい",
-          "はんたい",
-          "はんったい"
+          "はんったい",
+          "はんだい",
+          "はんたい"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "はんたい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%8F%8D%E5%AF%BE",
         "sourceExam": "JLPT 2013-12"
@@ -9520,12 +8470,12 @@ const jlptN4Data = {
         "character": "開きます",
         "hint": "เปิด (อัตโนมัติ)",
         "choices": [
-          "あきます",
-          "まちます",
           "あっきます",
+          "まちます",
+          "あきます",
           "あぎます"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "あきます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%96%8B%E3%81%8D%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -9535,12 +8485,12 @@ const jlptN4Data = {
         "character": "赤い",
         "hint": "สีแดง",
         "choices": [
-          "あがい",
-          "あかい",
           "あっかい",
-          "こうじ"
+          "こうじ",
+          "あがい",
+          "あかい"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "あかい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%B5%A4%E3%81%84",
         "sourceExam": "JLPT 2013-12"
@@ -9550,12 +8500,12 @@ const jlptN4Data = {
         "character": "走ります",
         "hint": "วิ่ง",
         "choices": [
-          "ばしります",
-          "はしります",
           "はじります",
-          "はっしります"
+          "はっしります",
+          "はしります",
+          "ばしります"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "はしります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%B5%B0%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -9565,12 +8515,12 @@ const jlptN4Data = {
         "character": "暗い",
         "hint": "มืด",
         "choices": [
-          "こうじ",
-          "つよい",
           "ぐらい",
-          "くらい"
+          "くらい",
+          "こうじ",
+          "つよい"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "くらい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%9A%97%E3%81%84",
         "sourceExam": "JLPT 2013-12"
@@ -9580,12 +8530,12 @@ const jlptN4Data = {
         "character": "野菜",
         "hint": "ผัก",
         "choices": [
+          "やさい",
           "やっさい",
           "やざい",
-          "やさい",
           "こうじ"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "やさい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%87%8E%E8%8F%9C",
         "sourceExam": "JLPT 2013-12"
@@ -9597,10 +8547,10 @@ const jlptN4Data = {
         "choices": [
           "あきます",
           "やみます",
-          "まちます",
-          "なれます"
+          "なれます",
+          "まちます"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "なれます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%85%A3%E3%82%8C%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -9610,12 +8560,12 @@ const jlptN4Data = {
         "character": "止みます",
         "hint": "หยุด (ฝน ฯลฯ)",
         "choices": [
-          "あきます",
-          "やみます",
           "なれます",
-          "まちます"
+          "まちます",
+          "やみます",
+          "あきます"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "やみます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%AD%A2%E3%81%BF%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -9625,12 +8575,12 @@ const jlptN4Data = {
         "character": "大人しい",
         "hint": "เรียบร้อย, สุภาพ",
         "choices": [
-          "おっとなしい",
           "おとなじい",
           "おとなしい",
-          "おどなしい"
+          "おどなしい",
+          "おっとなしい"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "おとなしい",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%A4%A7%E4%BA%BA%E3%81%97%E3%81%84",
         "sourceExam": "JLPT 2013-12"
@@ -9640,9 +8590,9 @@ const jlptN4Data = {
         "character": "お見舞い",
         "hint": "การเยี่ยมผู้ป่วย",
         "choices": [
-          "りょこう",
-          "えきいん",
           "はんたい",
+          "えきいん",
+          "りょこう",
           "おみまい"
         ],
         "correct": 3,
@@ -9655,12 +8605,12 @@ const jlptN4Data = {
         "character": "帰国",
         "hint": "การกลับประเทศ",
         "choices": [
-          "きこぐ",
-          "きこく",
           "ぎこく",
-          "きごく"
+          "きごく",
+          "きこぐ",
+          "きこく"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "きこく",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%B8%B0%E5%9B%BD",
         "sourceExam": "JLPT 2013-12"
@@ -9685,12 +8635,12 @@ const jlptN4Data = {
         "character": "真面目",
         "hint": "อย่างตั้งใจ, อย่างจริงจัง",
         "choices": [
-          "まじめ",
+          "こうじ",
           "つよい",
-          "ましめ",
-          "こうじ"
+          "まじめ",
+          "ましめ"
         ],
-        "correct": 0,
+        "correct": 2,
         "japaneseText": "まじめ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%9C%9F%E9%9D%A2%E7%9B%AE",
         "sourceExam": "JLPT 2013-12"
@@ -9700,12 +8650,12 @@ const jlptN4Data = {
         "character": "落とします",
         "hint": "ทำตก, ทำหล่น",
         "choices": [
-          "おとじます",
           "おっとします",
-          "おとします",
-          "おどします"
+          "おとじます",
+          "おどします",
+          "おとします"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "おとします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%90%BD%E3%81%A8%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -9715,59 +8665,14 @@ const jlptN4Data = {
         "character": "習慣",
         "hint": "นิสัย, ขนบธรรมเนียม",
         "choices": [
-          "じゅうかん",
+          "しゆうかん",
+          "しゅうがん",
           "しゅうかん",
-          "しゅうっかん",
-          "しゅうがん"
-        ],
-        "correct": 1,
-        "japaneseText": "しゅうかん",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%BF%92%E6%85%A3",
-        "sourceExam": "JLPT 2013-12"
-      },
-      {
-        "kanji": "スイッチ",
-        "character": "スイッチ",
-        "hint": "สวิตช์",
-        "choices": [
-          "すいっぢ",
-          "ずいっち",
-          "すいち",
-          "すいっち"
-        ],
-        "correct": 3,
-        "japaneseText": "すいっち",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%B9%E3%82%A4%E3%83%83%E3%83%81",
-        "sourceExam": "JLPT 2013-12"
-      },
-      {
-        "kanji": "チェック",
-        "character": "チェック",
-        "hint": "ตรวจสอบ",
-        "choices": [
-          "ちぇっぐ",
-          "ちぇく",
-          "ちぇっく",
-          "ぢぇっく"
+          "じゅうかん"
         ],
         "correct": 2,
-        "japaneseText": "ちぇっく",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF",
-        "sourceExam": "JLPT 2013-12"
-      },
-      {
-        "kanji": "スタート",
-        "character": "スタート",
-        "hint": "การเริ่มต้น",
-        "choices": [
-          "すたーど",
-          "すたーと",
-          "ずたーと",
-          "すったーと"
-        ],
-        "correct": 1,
-        "japaneseText": "すたーと",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88",
+        "japaneseText": "しゅうかん",
+        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%BF%92%E6%85%A3",
         "sourceExam": "JLPT 2013-12"
       },
       {
@@ -9775,12 +8680,12 @@ const jlptN4Data = {
         "character": "決めます",
         "hint": "ตัดสินใจ",
         "choices": [
-          "きめます",
           "ぎめます",
+          "きめます",
           "あきます",
           "まちます"
         ],
-        "correct": 0,
+        "correct": 1,
         "japaneseText": "きめます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B1%BA%E3%82%81%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -9790,12 +8695,12 @@ const jlptN4Data = {
         "character": "本当",
         "hint": "จริง",
         "choices": [
-          "ほんっとう",
+          "ほんとう",
           "ぼんとう",
           "ほんどう",
-          "ほんとう"
+          "ほんっとう"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "ほんとう",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%9C%AC%E5%BD%93",
         "sourceExam": "JLPT 2013-12"
@@ -9805,12 +8710,12 @@ const jlptN4Data = {
         "character": "噓",
         "hint": "โกหก",
         "choices": [
-          "ゆび",
           "うっそ",
-          "うぞ",
-          "うそ"
+          "うそ",
+          "ゆび",
+          "うぞ"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "うそ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%99%93",
         "sourceExam": "JLPT 2013-12"
@@ -9820,12 +8725,12 @@ const jlptN4Data = {
         "character": "戻ります",
         "hint": "กลับไปที่เดิม",
         "choices": [
-          "はしります",
-          "もどります",
           "もとります",
-          "いそぎます"
+          "はしります",
+          "いそぎます",
+          "もどります"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "もどります",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%88%BB%E3%82%8A%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -9835,12 +8740,12 @@ const jlptN4Data = {
         "character": "米",
         "hint": "ข้าวสาร",
         "choices": [
-          "あね",
+          "こめ",
           "ごめ",
           "ゆび",
-          "こめ"
+          "あね"
         ],
-        "correct": 3,
+        "correct": 0,
         "japaneseText": "こめ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%B1%B3",
         "sourceExam": "JLPT 2013-12"
@@ -9850,12 +8755,12 @@ const jlptN4Data = {
         "character": "輸出します",
         "hint": "ส่งออก",
         "choices": [
-          "ゆっしゅつします",
-          "ゆしゅつじます",
           "ゆしゅつします",
-          "ゆしゅづします"
+          "ゆじゅつします",
+          "ゆしゅつじます",
+          "ゆっしゅつします"
         ],
-        "correct": 2,
+        "correct": 0,
         "japaneseText": "ゆしゅつします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%BC%B8%E5%87%BA%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -9865,29 +8770,14 @@ const jlptN4Data = {
         "character": "輸入します",
         "hint": "นำเข้า",
         "choices": [
-          "ゆにゅうじます",
-          "ゆにゅうっします",
+          "ゆにゅします",
           "ゆにゅうします",
+          "ゆにゅうっします",
           "ゆにゆうします"
         ],
-        "correct": 2,
+        "correct": 1,
         "japaneseText": "ゆにゅうします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%BC%B8%E5%85%A5%E3%81%97%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2013-12"
-      },
-      {
-        "kanji": "ニコニコします",
-        "character": "ニコニコします",
-        "hint": "ยิ้มแย้ม",
-        "choices": [
-          "にこにこします",
-          "にっこにこします",
-          "にごにこします",
-          "にこにこじます"
-        ],
-        "correct": 0,
-        "japaneseText": "にこにこします",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
       },
       {
@@ -9895,12 +8785,12 @@ const jlptN4Data = {
         "character": "笑います",
         "hint": "หัวเราะ",
         "choices": [
-          "いそぎます",
-          "おとします",
           "はしります",
-          "わらいます"
+          "おとします",
+          "わらいます",
+          "いそぎます"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "わらいます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%AC%91%E3%81%84%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -9910,12 +8800,12 @@ const jlptN4Data = {
         "character": "家具",
         "hint": "เฟอร์นิเจอร์",
         "choices": [
-          "ゆび",
-          "かぐ",
           "がぐ",
-          "かく"
+          "ゆび",
+          "かく",
+          "かぐ"
         ],
-        "correct": 1,
+        "correct": 3,
         "japaneseText": "かぐ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%AE%B6%E5%85%B7",
         "sourceExam": "JLPT 2013-12"
@@ -9925,12 +8815,12 @@ const jlptN4Data = {
         "character": "洗濯します",
         "hint": "ซักผ้า",
         "choices": [
-          "せんたぐします",
+          "せんたくじます",
+          "せんだくします",
           "せんたくします",
-          "せんったくします",
           "ぜんたくします"
         ],
-        "correct": 1,
+        "correct": 2,
         "japaneseText": "せんたくします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%B4%97%E6%BF%AF%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -9941,11 +8831,11 @@ const jlptN4Data = {
         "hint": "แออัด, แน่น",
         "choices": [
           "ごみます",
+          "こみます",
           "まちます",
-          "あきます",
-          "こみます"
+          "あきます"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "こみます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%BE%BC%E3%81%BF%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -9955,12 +8845,12 @@ const jlptN4Data = {
         "character": "似合います",
         "hint": "เหมาะสม, เข้ากันดี",
         "choices": [
-          "いそぎます",
           "おとします",
-          "はしります",
-          "にあいます"
+          "いそぎます",
+          "にあいます",
+          "はしります"
         ],
-        "correct": 3,
+        "correct": 2,
         "japaneseText": "にあいます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E4%BC%BC%E5%90%88%E3%81%84%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -9971,28 +8861,13 @@ const jlptN4Data = {
         "hint": "เลี้ยงดู, เพาะปลูก",
         "choices": [
           "ぞだてます",
+          "そだてます",
           "そたてます",
-          "そだってます",
-          "そだてます"
+          "そだでます"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "そだてます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E8%82%B2%E3%81%A6%E3%81%BE%E3%81%99",
-        "sourceExam": "JLPT 2013-12"
-      },
-      {
-        "kanji": "ぜひ",
-        "character": "ぜひ",
-        "hint": "ให้ได้, โดยเด็ดขาด",
-        "choices": [
-          "ぜび",
-          "ぜんぜん",
-          "たいへん",
-          "ぜひ"
-        ],
-        "correct": 3,
-        "japaneseText": "ぜひ",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%9C%E3%81%B2",
         "sourceExam": "JLPT 2013-12"
       },
       {
@@ -10002,27 +8877,12 @@ const jlptN4Data = {
         "choices": [
           "れきじ",
           "れっきし",
-          "れきし",
-          "れぎし"
+          "れぎし",
+          "れきし"
         ],
-        "correct": 2,
+        "correct": 3,
         "japaneseText": "れきし",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E6%AD%B4%E5%8F%B2",
-        "sourceExam": "JLPT 2013-12"
-      },
-      {
-        "kanji": "ずっと",
-        "character": "ずっと",
-        "hint": "ตลอด, โดยตลอด",
-        "choices": [
-          "さっと",
-          "そっと",
-          "ずっと",
-          "じっと"
-        ],
-        "correct": 2,
-        "japaneseText": "ずっと",
-        "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E3%81%9A%E3%81%A3%E3%81%A8",
         "sourceExam": "JLPT 2013-12"
       },
       {
@@ -10031,11 +8891,11 @@ const jlptN4Data = {
         "hint": "เกิด",
         "choices": [
           "おとします",
-          "はしります",
+          "うまれます",
           "いそぎます",
-          "うまれます"
+          "はしります"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "うまれます",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E7%94%9F%E3%81%BE%E3%82%8C%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
@@ -10045,12 +8905,12 @@ const jlptN4Data = {
         "character": "運転手",
         "hint": "คนขับรถ",
         "choices": [
-          "うんてんしゅ",
           "うんってんしゅ",
           "うんでんしゅ",
-          "うんてんじゅ"
+          "うんてんじゅ",
+          "うんてんしゅ"
         ],
-        "correct": 0,
+        "correct": 3,
         "japaneseText": "うんてんしゅ",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E9%81%8B%E8%BB%A2%E6%89%8B",
         "sourceExam": "JLPT 2013-12"
@@ -10061,11 +8921,11 @@ const jlptN4Data = {
         "hint": "ใช้ประโยชน์",
         "choices": [
           "よやくします",
+          "りようします",
           "りようじます",
-          "りようっします",
-          "りようします"
+          "りようっします"
         ],
-        "correct": 3,
+        "correct": 1,
         "japaneseText": "りようします",
         "img": "https://placehold.co/600x600/f3e8ff/6b21a8?text=%E5%88%A9%E7%94%A8%E3%81%97%E3%81%BE%E3%81%99",
         "sourceExam": "JLPT 2013-12"
