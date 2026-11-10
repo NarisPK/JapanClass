@@ -316,8 +316,8 @@ const bookConfigs = {
         num: 1,
         title: "Mina no niongo 1 みんなの日本語 1",
         rangeText: "บท 1-12",
-        vocabLabel: "🌸 คลังคำศัพท์ (บท 1-12)",
-        grammarLabel: "⛩️ ไวยากรณ์ เติมคำช่วย (บท 1-12)",
+        vocabLabel: "🌸 แบบทดสอบควิซ (บท 1-12)",
+        grammarLabel: "🎴 บัตรคำศัพท์ (บท 1-12)",
         themeGrad: "from-pink-400 to-rose-400",
         themeShadow: "shadow-pink-300/30",
         activeClass: "py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r from-pink-400 to-rose-400 text-white shadow-pink-300/30",
@@ -337,8 +337,8 @@ const bookConfigs = {
         num: 2,
         title: "Mina no niongo 2 みんなの日本語 2",
         rangeText: "บท 13-25",
-        vocabLabel: "📘 คลังคำศัพท์ (บท 13-25)",
-        grammarLabel: "⛩️ ไวยากรณ์ เติมคำช่วย (บท 13-25)",
+        vocabLabel: "📘 แบบทดสอบควิซ (บท 13-25)",
+        grammarLabel: "🎴 บัตรคำศัพท์ (บท 13-25)",
         themeGrad: "from-indigo-500 to-blue-600",
         themeShadow: "shadow-indigo-300/30",
         activeClass: "py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r from-indigo-500 to-blue-600 text-white shadow-indigo-300/30",
@@ -358,8 +358,8 @@ const bookConfigs = {
         num: 3,
         title: "Mina no niongo 3 みんなの日本語 3",
         rangeText: "บท 26-38",
-        vocabLabel: "📗 คลังคำศัพท์ (บท 26-38)",
-        grammarLabel: "⛩️ ไวยากรณ์ เติมคำช่วย (บท 26-38)",
+        vocabLabel: "📗 แบบทดสอบควิซ (บท 26-38)",
+        grammarLabel: "🎴 บัตรคำศัพท์ (บท 26-38)",
         themeGrad: "from-emerald-500 to-teal-600",
         themeShadow: "shadow-emerald-300/30",
         activeClass: "py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-emerald-300/30",
@@ -379,8 +379,8 @@ const bookConfigs = {
         num: 4,
         title: "Mina no niongo 4 みんなの日本語 4",
         rangeText: "บท 39-50",
-        vocabLabel: "📙 คลังคำศัพท์ (บท 39-50)",
-        grammarLabel: "⛩️ ไวยากรณ์ เติมคำช่วย (บท 39-50)",
+        vocabLabel: "📙 แบบทดสอบควิซ (บท 39-50)",
+        grammarLabel: "🎴 บัตรคำศัพท์ (บท 39-50)",
         themeGrad: "from-amber-500 to-orange-600",
         themeShadow: "shadow-amber-300/30",
         activeClass: "py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-amber-300/30",
@@ -399,9 +399,10 @@ const bookConfigs = {
     5: {
         num: 5,
         title: "คลังข้อสอบวัดระดับภาษาญี่ปุ่น JLPT N4",
-        rangeText: "ข้อสอบเก่าแยกพาร์ท (คันจิ・ไวยากรณ์・การอ่าน・การฟัง)",
-        vocabLabel: "🎯 คันจิ (漢字)",
-        grammarLabel: "⛩️ ไวยากรณ์ (文法)",
+        rangeText: "ข้อสอบเก่าแยกพาร์ท (คันจิ・บัตรคำศัพท์・ไวยากรณ์・การอ่าน・การฟัง)",
+        vocabLabel: "🎯 คันจิ (ควิซ 295 ข้อ)",
+        flashcardLabel: "🎴 บัตรคำศัพท์ N4 (295 คำ)",
+        grammarLabel: "⛩️ ไวยากรณ์ (56 ข้อ)",
         readingLabel: "📖 การอ่าน (読解)",
         listeningLabel: "🎧 การฟัง (聴解)",
         themeGrad: "from-purple-500 to-indigo-600",
@@ -803,11 +804,11 @@ function switchBook(bookNum) {
 
     mascotTalk(cfg.mascotMsg, 'happy');
     if (currentBook === 5) {
-        if (!['vocab', 'grammar', 'reading', 'listening'].includes(currentCategoryTab)) {
+        if (!['vocab', 'flashcard', 'grammar', 'reading', 'listening'].includes(currentCategoryTab)) {
             currentCategoryTab = 'vocab';
         }
     } else {
-        if (currentCategoryTab === 'reading' || currentCategoryTab === 'listening') {
+        if (!['vocab', 'grammar'].includes(currentCategoryTab)) {
             currentCategoryTab = 'vocab';
         }
     }
@@ -835,12 +836,13 @@ function renderCategoryTabs() {
     const cfg = bookConfigs[currentBook] || bookConfigs[1];
 
     if (currentBook === 5) {
-        container.className = "grid grid-cols-2 sm:grid-cols-4 gap-2 p-1.5 bg-white/80 backdrop-blur-md rounded-2xl border border-purple-100 max-w-2xl mx-auto shadow-sm";
+        container.className = "grid grid-cols-2 sm:grid-cols-5 gap-2 p-1.5 bg-white/80 backdrop-blur-md rounded-2xl border border-purple-100 max-w-3xl mx-auto shadow-sm";
         const tabs = [
-            { id: 'vocab', label: '🎯 คันจิ (漢字)', count: '295 ข้อ' },
-            { id: 'grammar', label: '⛩️ ไวยากรณ์ (文法)', count: '56 ข้อ' },
-            { id: 'reading', label: '📖 การอ่าน (読解)', count: 'เตรียมพร้อม 🌸' },
-            { id: 'listening', label: '🎧 การฟัง (聴解)', count: 'เตรียมพร้อม 🌸' }
+            { id: 'vocab', label: '🎯 คันจิ (ควิซ)', count: '295 ข้อ' },
+            { id: 'flashcard', label: '🎴 บัตรคำศัพท์', count: '295 คำ' },
+            { id: 'grammar', label: '⛩️ ไวยากรณ์', count: '56 ข้อ' },
+            { id: 'reading', label: '📖 การอ่าน', count: 'เตรียมพร้อม 🌸' },
+            { id: 'listening', label: '🎧 การฟัง', count: 'เตรียมพร้อม 🌸' }
         ];
         container.innerHTML = tabs.map(t => {
             const isActive = currentCategoryTab === t.id;
@@ -918,13 +920,17 @@ function renderModesList() {
     container.innerHTML = "";
 
     const cfg = bookConfigs[currentBook] || bookConfigs[1];
+    const isFlashcardTab = (currentBook <= 4 && currentCategoryTab === 'grammar') || (currentBook === 5 && currentCategoryTab === 'flashcard');
 
     let keys = Object.keys(allQuizModes).filter(key => {
         const mode = allQuizModes[key];
         const modeBook = mode.book || 1;
         if (modeBook !== currentBook) return false;
 
-        if (currentCategoryTab === 'grammar') {
+        if (isFlashcardTab) {
+            // โหมดบัตรคำศัพท์: นำคำศัพท์ทั้งหมดของแต่ละบทมาสร้างเป็นบัตรคำสไตล์ Quizlet
+            return !mode.isGrammar;
+        } else if (currentBook === 5 && currentCategoryTab === 'grammar') {
             return !!mode.isGrammar;
         } else {
             return !mode.isGrammar;
@@ -1069,8 +1075,48 @@ function renderModesList() {
         return;
     }
 
-    // สำหรับโหมด JLPT N4 (Book 5): จัดเรียงคลังข้อสอบตามลำดับ
-    if (currentBook === 5) {
+    // จัดเรียงลำดับบทเรียนอย่างเป็นระเบียบสำหรับทุกเล่ม
+    if (currentBook === 1) {
+        const book1Order = ['vocab_all_1', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'ひらかな', 'カタカナ'];
+        keys.sort((a, b) => {
+            const idxA = book1Order.indexOf(a);
+            const idxB = book1Order.indexOf(b);
+            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+            if (idxA !== -1) return -1;
+            if (idxB !== -1) return 1;
+            return 0;
+        });
+    } else if (currentBook === 2) {
+        const book2Order = ['vocab_all_2', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'twentyone', 'twentytwo', 'twentythree', 'twentyfour', 'twentyfive'];
+        keys.sort((a, b) => {
+            const idxA = book2Order.indexOf(a);
+            const idxB = book2Order.indexOf(b);
+            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+            if (idxA !== -1) return -1;
+            if (idxB !== -1) return 1;
+            return 0;
+        });
+    } else if (currentBook === 3) {
+        const book3Order = ['vocab_all_3', 'lesson_26', 'lesson_27', 'lesson_28', 'lesson_29', 'lesson_30', 'lesson_31', 'lesson_32', 'lesson_33', 'lesson_34', 'lesson_35', 'lesson_36', 'lesson_37', 'lesson_38'];
+        keys.sort((a, b) => {
+            const idxA = book3Order.indexOf(a);
+            const idxB = book3Order.indexOf(b);
+            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+            if (idxA !== -1) return -1;
+            if (idxB !== -1) return 1;
+            return 0;
+        });
+    } else if (currentBook === 4) {
+        const book4Order = ['vocab_all_4', 'lesson_39', 'lesson_40', 'lesson_41', 'lesson_42', 'lesson_43', 'lesson_44', 'lesson_45', 'lesson_46', 'lesson_47', 'lesson_48', 'lesson_49', 'lesson_50'];
+        keys.sort((a, b) => {
+            const idxA = book4Order.indexOf(a);
+            const idxB = book4Order.indexOf(b);
+            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+            if (idxA !== -1) return -1;
+            if (idxB !== -1) return 1;
+            return 0;
+        });
+    } else if (currentBook === 5) {
         if (currentCategoryTab === 'grammar') {
             const grammarOrder = [
                 'jlpt_n4_grammar_all',
@@ -1113,26 +1159,52 @@ function renderModesList() {
 
         let colorClass = mode.colorClass;
         if (!colorClass) {
-            colorClass = mode.isGrammar ? cfg.cardBgGrammar : cfg.cardBgVocab;
+            colorClass = isFlashcardTab ? cfg.cardBgGrammar : (mode.isGrammar ? cfg.cardBgGrammar : cfg.cardBgVocab);
         }
 
         button.className = `w-full flex items-center justify-between p-4 bg-gradient-to-r ${colorClass} border-2 rounded-2xl text-left transition-all duration-300 group shadow-sm relative overflow-hidden arcade-btn-glow`;
-        button.onclick = () => selectMode(key);
 
-        const badgeIcon = mode.isGrammar ? 'fa-scroll' : cfg.badgeIcon;
-        const badgeColor = cfg.badgeColor;
+        if (isFlashcardTab) {
+            button.onclick = () => openFlashcards(key);
 
-        button.innerHTML = `
-            <div class="absolute -right-5 -bottom-5 text-5xl opacity-10 group-hover:opacity-20 group-hover:scale-125 transition-all duration-300">${mode.emoji || '🌸'}</div>
-            <div class="flex items-center gap-3 relative z-10">
-                <span class="text-2xl bg-white/75 p-2 rounded-xl border ${cfg.borderClass} shadow-inner">${mode.emoji || '🌸'}</span>
-                <div>
-                    <span class="font-extrabold ${cfg.textTitle} text-xs md:text-sm block tracking-wide">${mode.title}</span>
-                    <span class="text-[9px] ${cfg.textSub} font-extrabold block mt-0.5">${mode.sub || ''} (${qLength} เควสต์)</span>
+            let displayTitle = mode.title || '';
+            if (key.startsWith('vocab_all_')) {
+                displayTitle = `🌟 รวมบัตรคำศัพท์ ${cfg.rangeText} ทั้งหมด`;
+            } else if (key === 'jlpt_n4_all') {
+                displayTitle = `🌟 รวมบัตรคำศัพท์คันจิ N4 ทุกรอบ`;
+            } else if (!displayTitle.includes('บัตรคำ')) {
+                displayTitle = `🎴 บัตรคำ: ${displayTitle.replace('คำศัพท์', '').trim()}`;
+            }
+
+            button.innerHTML = `
+                <div class="absolute -right-5 -bottom-5 text-5xl opacity-10 group-hover:opacity-20 group-hover:scale-125 transition-all duration-300">🎴</div>
+                <div class="flex items-center gap-3 relative z-10">
+                    <span class="text-2xl bg-white/80 p-2 rounded-xl border ${cfg.borderClass} shadow-inner group-hover:scale-110 transition-transform">🎴</span>
+                    <div>
+                        <span class="font-extrabold ${cfg.textTitle} text-xs md:text-sm block tracking-wide">${displayTitle}</span>
+                        <span class="text-[9px] ${cfg.textSub} font-extrabold block mt-0.5">🎴 บัตรคำศัพท์ (${qLength} คำ) • ดับเบิ้ลคลิกเพื่อพลิก</span>
+                    </div>
                 </div>
-            </div>
-            <span class="font-bold ${badgeColor} group-hover:translate-x-1 transition-transform relative z-10"><i class="fa-solid ${badgeIcon} text-xs"></i></span>
-        `;
+                <span class="font-bold ${cfg.badgeColor} group-hover:rotate-180 transition-transform duration-500 relative z-10"><i class="fa-solid fa-repeat text-xs"></i></span>
+            `;
+        } else {
+            button.onclick = () => selectMode(key);
+
+            const badgeIcon = mode.isGrammar ? 'fa-scroll' : cfg.badgeIcon;
+            const badgeColor = cfg.badgeColor;
+
+            button.innerHTML = `
+                <div class="absolute -right-5 -bottom-5 text-5xl opacity-10 group-hover:opacity-20 group-hover:scale-125 transition-all duration-300">${mode.emoji || '🌸'}</div>
+                <div class="flex items-center gap-3 relative z-10">
+                    <span class="text-2xl bg-white/75 p-2 rounded-xl border ${cfg.borderClass} shadow-inner">${mode.emoji || '🌸'}</span>
+                    <div>
+                        <span class="font-extrabold ${cfg.textTitle} text-xs md:text-sm block tracking-wide">${mode.title}</span>
+                        <span class="text-[9px] ${cfg.textSub} font-extrabold block mt-0.5">${mode.sub || ''} (${qLength} เควสต์)</span>
+                    </div>
+                </div>
+                <span class="font-bold ${badgeColor} group-hover:translate-x-1 transition-transform relative z-10"><i class="fa-solid ${badgeIcon} text-xs"></i></span>
+            `;
+        }
         container.appendChild(button);
     });
 
@@ -2822,6 +2894,16 @@ function goHome() {
     if (resultArea) resultArea.classList.add('hidden');
     if (adminScreen) adminScreen.classList.add('hidden');
 
+    const fcScreen = document.getElementById('flashcard-screen');
+    if (fcScreen) fcScreen.classList.add('hidden');
+    const fcInner = document.getElementById('flashcard-inner');
+    if (fcInner) {
+        fcInner.classList.remove('flipped');
+        if (fcInner.parentElement) fcInner.parentElement.classList.remove('hidden');
+    }
+    const fcFin = document.getElementById('fc-finished-view');
+    if (fcFin) fcFin.classList.add('hidden');
+
     const passwordModal = document.getElementById('password-gate-modal');
     if (passwordModal) passwordModal.classList.add('hidden');
 
@@ -4224,3 +4306,386 @@ function closeDonateModal() {
     }
 }
 window.closeDonateModal = closeDonateModal;
+
+
+// =========================================================================
+// 🎴 ระบบบัตรคำศัพท์สไตล์ควิกเล็ท (Quizlet Flashcard Engine)
+// 1. ดับเบิ้ลคลิก / แตะ 2 ครั้ง เพื่อพลิกดูคำอ่านฮิราคานะ
+// 2. นำคำศัพท์ทั้งหมดจากทุกบท (1-50 และ JLPT N4) มาใช้งาน
+// 3. ปุ่มกดฟังเสียงอ่านภาษาญี่ปุ่น (ไม่มีการออกเสียงออโต้ ต้องกดเท่านั้น)
+// =========================================================================
+
+// ตัวแปลงฮิราคานะเป็นโรมาจิสำหรับแสดงผลบนบัตรคำ
+const hiraganaRomajiDict = {
+    'きゃ': 'kya', 'きゅ': 'kyu', 'きょ': 'kyo',
+    'しゃ': 'sha', 'しゅ': 'shu', 'しょ': 'sho',
+    'ちゃ': 'cha', 'ちゅ': 'chu', 'ちょ': 'cho',
+    'にゃ': 'nya', 'にゅ': 'nyu', 'にょ': 'nyo',
+    'ひゃ': 'hya', 'ひゅ': 'hyu', 'ひょ': 'hyo',
+    'みゃ': 'mya', 'みゅ': 'myu', 'みょ': 'myo',
+    'りゃ': 'rya', 'りゅ': 'ryu', 'りょ': 'ryo',
+    'ぎゃ': 'gya', 'ぎゅ': 'gyu', 'ぎょ': 'gyo',
+    'じゃ': 'ja', 'じゅ': 'ju', 'じょ': 'jo',
+    'びゃ': 'bya', 'びゅ': 'byu', 'びょ': 'byo',
+    'ぴゃ': 'pya', 'ぴゅ': 'pyu', 'ぴょ': 'pyo',
+    'あ': 'a', 'い': 'i', 'う': 'u', 'え': 'e', 'お': 'o',
+    'か': 'ka', 'き': 'ki', 'く': 'ku', 'け': 'ke', 'こ': 'ko',
+    'さ': 'sa', 'し': 'shi', 'す': 'su', 'せ': 'se', 'そ': 'so',
+    'た': 'ta', 'ち': 'chi', 'つ': 'tsu', 'て': 'te', 'と': 'to',
+    'な': 'na', 'に': 'ni', 'ぬ': 'nu', 'ね': 'ne', 'の': 'no',
+    'は': 'ha', 'ひ': 'hi', 'ふ': 'fu', 'へ': 'he', 'ほ': 'ho',
+    'ま': 'ma', 'み': 'mi', 'む': 'mu', 'め': 'me', 'โม': 'mo',
+    'や': 'ya', 'ゆ': 'yu', 'よ': 'yo',
+    'ら': 'ra', 'り': 'ri', 'る': 'ru', 'れ': 're', 'ろ': 'ro',
+    'わ': 'wa', 'を': 'o', 'ん': 'n',
+    'が': 'ga', 'ぎ': 'gi', 'ぐ': 'gu', 'げ': 'ge', 'ご': 'go',
+    'ざ': 'za', 'じ': 'ji', 'ず': 'zu', 'ぜ': 'ze', 'ぞ': 'zo',
+    'だ': 'da', 'ぢ': 'ji', 'づ': 'zu', 'で': 'de', 'ど': 'do',
+    'ば': 'ba', 'び': 'bi', 'ぶ': 'bu', 'べ': 'be', 'ぼ': 'bo',
+    'ぱ': 'pa', 'ぴ': 'pi', 'ぷ': 'pu', 'ぺ': 'pe', 'ぽ': 'po'
+};
+
+function kanaToRomaji(str) {
+    if (!str) return '';
+    let res = '';
+    let i = 0;
+    while (i < str.length) {
+        if (str[i] === 'っ' && i + 1 < str.length) {
+            const nextTwo = str.slice(i + 1, i + 3);
+            const nextOne = str.slice(i + 1, i + 2);
+            const nextR = hiraganaRomajiDict[nextTwo] || hiraganaRomajiDict[nextOne];
+            if (nextR) {
+                res += nextR[0];
+                i++;
+                continue;
+            }
+        }
+        const two = str.slice(i, i + 2);
+        if (hiraganaRomajiDict[two]) {
+            res += hiraganaRomajiDict[two];
+            i += 2;
+            continue;
+        }
+        const one = str[i];
+        if (hiraganaRomajiDict[one]) {
+            res += hiraganaRomajiDict[one];
+        } else {
+            res += one;
+        }
+        i++;
+    }
+    return res;
+}
+
+let fcCurrentDeckKey = null;
+let fcCards = [];
+let fcOriginalOrder = [];
+let fcCurrentIndex = 0;
+let fcIsFlipped = false;
+let fcIsShuffled = false;
+let fcLastTapTime = 0;
+
+// เปิดหน้าบัตรคำศัพท์จากบทที่เลือก
+function openFlashcards(deckKey) {
+    stopQuestionTimer();
+    stopVoiceRecognition();
+    window.speechSynthesis.cancel();
+    try { playClickSound(); } catch (e) { }
+
+    const mode = allQuizModes[deckKey];
+    if (!mode || !mode.questions || mode.questions.length === 0) {
+        mascotTalk(`หมวดนี้ยังไม่มีคำศัพท์สำหรับสร้างบัตรคำค๊า! 🌸`, 'happy');
+        return;
+    }
+
+    fcCurrentDeckKey = deckKey;
+    fcCards = JSON.parse(JSON.stringify(mode.questions));
+    fcOriginalOrder = JSON.parse(JSON.stringify(mode.questions));
+    fcCurrentIndex = 0;
+    fcIsFlipped = false;
+    fcIsShuffled = false;
+
+    // ซ่อนหน้าจออื่นและแสดงหน้าจอบัตรคำ
+    if (modeSelectionScreen) modeSelectionScreen.classList.add('hidden');
+    if (quizScreen) quizScreen.classList.add('hidden');
+    if (resultArea) resultArea.classList.add('hidden');
+    if (adminScreen) adminScreen.classList.add('hidden');
+    if (companionSidebar) companionSidebar.classList.add('hidden');
+    if (gameTerminalCol) {
+        gameTerminalCol.classList.remove('md:col-span-9');
+        gameTerminalCol.classList.add('md:col-span-12');
+    }
+
+    const fcScreen = document.getElementById('flashcard-screen');
+    if (fcScreen) fcScreen.classList.remove('hidden');
+
+    const fcTitle = document.getElementById('fc-deck-title');
+    if (fcTitle) fcTitle.innerText = `${mode.title} ${mode.sub ? `(${mode.sub})` : ''}`;
+
+    const fcBadge = document.getElementById('fc-deck-badge');
+    if (fcBadge) {
+        fcBadge.innerHTML = mode.lessonNum ? `🎴 บัตรคำศัพท์ บทที่ ${mode.lessonNum}` : `🎴 บัตรคำศัพท์ ${mode.title}`;
+    }
+
+    const shuffleText = document.getElementById('fc-shuffle-text');
+    if (shuffleText) shuffleText.innerText = 'สุ่มการ์ด: ปิด';
+    const shuffleBtn = document.getElementById('fc-shuffle-btn');
+    if (shuffleBtn) {
+        shuffleBtn.className = 'py-2 px-3 rounded-xl bg-white/80 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold text-slate-700 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-slate-700 transition flex items-center gap-1.5 shadow-2xs';
+    }
+
+    renderCurrentFlashcard();
+
+    // แจ้งเตือนผ่านยูกิจัง (ไม่มีเสียงพูดคำศัพท์ออโต้)
+    mascotTalk(`เริ่มท่องบัตรคำศัพท์ ${mode.title} (${fcCards.length} คำ) แล้วค๊า! 🎴 กดที่คำ 2 ครั้ง เพื่อพลิกดูคำอ่านฮิราคานะได้เลยนะคะ ✨`, 'happy');
+}
+window.openFlashcards = openFlashcards;
+
+// เรนเดอร์การ์ดปัจจุบัน
+function renderCurrentFlashcard() {
+    const fcInner = document.getElementById('flashcard-inner');
+    const fcFin = document.getElementById('fc-finished-view');
+    const prevBtn = document.getElementById('fc-prev-btn');
+    const nextBtn = document.getElementById('fc-next-btn');
+
+    if (!fcCards || fcCards.length === 0) return;
+
+    if (fcCurrentIndex >= fcCards.length) {
+        if (fcInner && fcInner.parentElement) fcInner.parentElement.classList.add('hidden');
+        if (prevBtn && prevBtn.parentElement) prevBtn.parentElement.classList.add('hidden');
+        if (fcFin) {
+            fcFin.classList.remove('hidden');
+            const desc = document.getElementById('fc-finished-desc');
+            if (desc) desc.innerText = `คุณได้เรียนรู้และทบทวนคำศัพท์ชุดนี้ครบทั้ง ${fcCards.length} คำเรียบร้อยแล้วนะคะ เก่งมากๆ เลยค่ะ! ✨🌸`;
+        }
+        mascotTalk(`ยอดเยี่ยมมากค๊า! 🌸🎉 ทบทวนบัตรคำศัพท์ครบทั้ง ${fcCards.length} คำเรียบร้อยแล้วนะคะ!`, 'happy');
+        return;
+    }
+
+    if (fcFin) fcFin.classList.add('hidden');
+    if (fcInner && fcInner.parentElement) fcInner.parentElement.classList.remove('hidden');
+    if (prevBtn && prevBtn.parentElement) prevBtn.parentElement.classList.remove('hidden');
+
+    // รีเซ็ตสถานะการพลิกกลับไปด้านหน้าเสมอเมื่อเปลี่ยนการ์ด
+    fcIsFlipped = false;
+    if (fcInner) fcInner.classList.remove('flipped');
+
+    const card = fcCards[fcCurrentIndex];
+
+    // ตัวเลขนับการ์ดและแถบความคืบหน้า
+    const counterText = document.getElementById('fc-counter-text');
+    if (counterText) counterText.innerText = `ใบที่ ${fcCurrentIndex + 1} / ${fcCards.length}`;
+
+    const progressBar = document.getElementById('fc-progress-bar');
+    if (progressBar) {
+        const pct = ((fcCurrentIndex + 1) / fcCards.length) * 100;
+        progressBar.style.width = `${pct}%`;
+    }
+
+    // ด้านหน้า: แสดงคำศัพท์คันจิ/คำศัพท์หลัก และความหมายภาษาไทย
+    const frontBadge = document.getElementById('fc-front-badge');
+    if (frontBadge) frontBadge.innerText = `🌸 ด้านหน้า • ใบที่ ${fcCurrentIndex + 1} / ${fcCards.length}`;
+
+    const frontWord = document.getElementById('fc-front-word');
+    const mainWord = card.kanji || card.character || card.japaneseText || '';
+    if (frontWord) frontWord.innerText = mainWord;
+
+    const frontMeaning = document.getElementById('fc-front-meaning');
+    if (frontMeaning) frontMeaning.innerText = card.hint || card.thaiMeaning || '';
+
+    // ด้านหลัง: แสดงคำอ่านที่เป็นฮิราคานะเด่นชัดเจน โรมาจิ และคันจิ
+    const backBadge = document.getElementById('fc-back-badge');
+    if (backBadge) backBadge.innerText = `✨ ด้านหลัง • ใบที่ ${fcCurrentIndex + 1} / ${fcCards.length}`;
+
+    const backHiragana = document.getElementById('fc-back-hiragana');
+    const hiraganaText = card.japaneseText || card.character || card.kanji || '';
+    if (backHiragana) backHiragana.innerText = hiraganaText;
+
+    const backRomaji = document.getElementById('fc-back-romaji');
+    const romajiText = card.romaji || kanaToRomaji(hiraganaText);
+    if (backRomaji) backRomaji.innerText = romajiText;
+
+    const backKanji = document.getElementById('fc-back-kanji');
+    const backKanjiRow = document.getElementById('fc-back-kanji-row');
+    if (card.kanji && card.kanji !== hiraganaText) {
+        if (backKanji) backKanji.innerText = card.kanji;
+        if (backKanjiRow) backKanjiRow.style.display = 'block';
+    } else {
+        if (backKanjiRow) backKanjiRow.style.display = 'none';
+    }
+
+    const backMeaning = document.getElementById('fc-back-meaning');
+    if (backMeaning) backMeaning.innerText = card.hint || card.thaiMeaning || '';
+
+    // สถานะปุ่มก่อนหน้า / ถัดไป
+    if (prevBtn) {
+        if (fcCurrentIndex === 0) {
+            prevBtn.classList.add('opacity-40', 'cursor-not-allowed');
+        } else {
+            prevBtn.classList.remove('opacity-40', 'cursor-not-allowed');
+        }
+    }
+    if (nextBtn) {
+        if (fcCurrentIndex === fcCards.length - 1) {
+            nextBtn.innerHTML = `<span>จบชุด</span> <i class="fa-solid fa-flag-checkered text-amber-500"></i>`;
+        } else {
+            nextBtn.innerHTML = `<span>ถัดไป</span> <i class="fa-solid fa-arrow-right"></i>`;
+        }
+    }
+
+    // หมายเหตุ: ไม่มีการเรียก speakJapanese() ที่นี่ เพื่อให้เสียงไม่ออกออโต้ ต้องกดเท่านั้น
+}
+window.renderCurrentFlashcard = renderCurrentFlashcard;
+
+// ฟังก์ชันพลิกหน้าหลังบัตรคำ
+function flipFlashcard() {
+    const fcInner = document.getElementById('flashcard-inner');
+    if (!fcInner) return;
+    fcIsFlipped = !fcIsFlipped;
+    if (fcIsFlipped) {
+        fcInner.classList.add('flipped');
+    } else {
+        fcInner.classList.remove('flipped');
+    }
+    try { playCuteClickSound(); } catch (e) { }
+    // ไม่มีเสียงพูดออโต้เมื่อพลิกการ์ด
+}
+window.flipFlashcard = flipFlashcard;
+
+// ไปการ์ดถัดไป
+function nextFlashcard() {
+    if (fcCurrentIndex < fcCards.length) {
+        fcCurrentIndex++;
+        renderCurrentFlashcard();
+    }
+}
+window.nextFlashcard = nextFlashcard;
+
+// ย้อนกลับการ์ดก่อนหน้า
+function prevFlashcard() {
+    if (fcCurrentIndex > 0) {
+        fcCurrentIndex--;
+        renderCurrentFlashcard();
+    }
+}
+window.prevFlashcard = prevFlashcard;
+
+// เล่นเสียงอ่านภาษาญี่ปุ่นเมื่อกดปุ่มลำโพงเท่านั้น (ไม่มีเสียงออโต้)
+function playFlashcardAudio(event) {
+    if (event) {
+        event.stopPropagation();
+        event.preventDefault();
+    }
+    if (!fcCards || fcCards.length === 0 || fcCurrentIndex >= fcCards.length) return;
+    const card = fcCards[fcCurrentIndex];
+    const textToSpeak = card.japaneseText || card.character || card.kanji;
+    if (!textToSpeak) return;
+
+    // แอนิเมชันปุ่มขยายตอนเล่นเสียง
+    const iconF = document.getElementById('fc-sound-icon-front');
+    const iconB = document.getElementById('fc-sound-icon-back');
+    if (iconF) iconF.classList.add('text-amber-500', 'scale-125');
+    if (iconB) iconB.classList.add('text-amber-300', 'scale-125');
+    setTimeout(() => {
+        if (iconF) iconF.classList.remove('text-amber-500', 'scale-125');
+        if (iconB) iconB.classList.remove('text-amber-300', 'scale-125');
+    }, 600);
+
+    speakJapanese(textToSpeak);
+}
+window.playFlashcardAudio = playFlashcardAudio;
+
+// สลับสุ่มลำดับการ์ด
+function toggleFlashcardShuffle() {
+    fcIsShuffled = !fcIsShuffled;
+    const btn = document.getElementById('fc-shuffle-btn');
+    const txt = document.getElementById('fc-shuffle-text');
+    if (fcIsShuffled) {
+        for (let i = fcCards.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [fcCards[i], fcCards[j]] = [fcCards[j], fcCards[i]];
+        }
+        if (txt) txt.innerText = 'สุ่มการ์ด: เปิด ✨';
+        if (btn) btn.className = 'py-2 px-3 rounded-xl bg-pink-100 dark:bg-pink-900 text-pink-700 dark:text-pink-300 border border-pink-300 font-bold transition flex items-center gap-1.5 shadow-2xs';
+        mascotTalk("สุ่มลำดับบัตรคำศัพท์เรียบร้อยแล้วค๊า! 🔀✨", 'happy');
+    } else {
+        fcCards = JSON.parse(JSON.stringify(fcOriginalOrder));
+        if (txt) txt.innerText = 'สุ่มการ์ด: ปิด';
+        if (btn) btn.className = 'py-2 px-3 rounded-xl bg-white/80 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold text-slate-700 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-slate-700 transition flex items-center gap-1.5 shadow-2xs';
+        mascotTalk("เรียงลำดับบัตรคำศัพท์ตามบทเรียนปกติแล้วค๊า! 🌸", 'happy');
+    }
+    fcCurrentIndex = 0;
+    renderCurrentFlashcard();
+}
+window.toggleFlashcardShuffle = toggleFlashcardShuffle;
+
+// เริ่มต้นใหม่ตั้งแต่การ์ดใบแรก
+function restartFlashcards() {
+    fcCurrentIndex = 0;
+    renderCurrentFlashcard();
+}
+window.restartFlashcards = restartFlashcards;
+
+function restartWithShuffle() {
+    fcIsShuffled = true;
+    for (let i = fcCards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [fcCards[i], fcCards[j]] = [fcCards[j], fcCards[i]];
+    }
+    const txt = document.getElementById('fc-shuffle-text');
+    if (txt) txt.innerText = 'สุ่มการ์ด: เปิด ✨';
+    fcCurrentIndex = 0;
+    renderCurrentFlashcard();
+}
+window.restartWithShuffle = restartWithShuffle;
+
+// สลับไปทำแบบทดสอบควิซของบทนี้
+function startQuizFromCurrentDeck() {
+    if (fcCurrentDeckKey) {
+        selectMode(fcCurrentDeckKey);
+    }
+}
+window.startQuizFromCurrentDeck = startQuizFromCurrentDeck;
+
+// จัดการแตะหน้าจอ 2 ครั้งบนมือถือ (Double Tap detection)
+function handleCardTouchStart(event) {
+    // Touch start
+}
+window.handleCardTouchStart = handleCardTouchStart;
+
+function handleCardTouchEnd(event) {
+    if (event.target && event.target.closest('button')) {
+        return; // ไม่พลิกการ์ดเมื่อคลิกปุ่มเสียง
+    }
+    const currentTime = Date.now();
+    const tapLength = currentTime - fcLastTapTime;
+    if (tapLength < 350 && tapLength > 50) {
+        event.preventDefault();
+        flipFlashcard();
+        fcLastTapTime = 0;
+    } else {
+        fcLastTapTime = currentTime;
+    }
+}
+window.handleCardTouchEnd = handleCardTouchEnd;
+
+// คีย์ลัดบนคีย์บอร์ดสำหรับโหมดบัตรคำศัพท์
+document.addEventListener('keydown', function (e) {
+    const fcScreen = document.getElementById('flashcard-screen');
+    if (!fcScreen || fcScreen.classList.contains('hidden')) return;
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+    if (e.code === 'Space' || e.key === ' ' || e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        flipFlashcard();
+    } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        nextFlashcard();
+    } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prevFlashcard();
+    } else if (e.key === 's' || e.key === 'S' || e.key === 'v' || e.key === 'V') {
+        e.preventDefault();
+        playFlashcardAudio();
+    }
+});

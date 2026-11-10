@@ -53,7 +53,7 @@
                         <h1
                             class="text-xl md:text-2xl font-black tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500 uppercase font-kawaii group-hover:opacity-90 transition">
                             日本語　勉強しましょう</h1>
-                        <span class="text-[10px] font-black bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full border border-pink-300 shadow-xs" title="เวอร์ชันปัจจุบัน">v0.0.3</span>
+                        <span class="text-[10px] font-black bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full border border-pink-300 shadow-xs" title="เวอร์ชันปัจจุบัน">v0.0.4</span>
                     </div>
                     <p class="text-[9px] md:text-[10px] text-rose-400/70 uppercase tracking-widest font-bold">
                         มาเรียนภาษาญี่ปุ่นกันเถอะ (กดเพื่อกลับหน้าแรก)</p>
@@ -178,7 +178,7 @@
                         <i class="fa-solid fa-heart text-white animate-pulse"></i> <span>หากต้องการสนับสนุนหรือโดเนท</span>
                     </button>
                     <div class="text-center pt-0.5">
-                        <span class="text-[9px] font-black text-rose-500/80 bg-pink-100/70 border border-pink-200/80 px-2 py-0.5 rounded-full">เวอร์ชัน 0.0.1</span>
+                        <span class="text-[9px] font-black text-rose-500/80 bg-pink-100/70 border border-pink-200/80 px-2 py-0.5 rounded-full">เวอร์ชัน 0.0.4</span>
                     </div>
                 </div>
             </div>
@@ -228,11 +228,11 @@
                         id="category-tabs-container" class="flex items-center justify-center gap-2 p-1.5 bg-white/70 backdrop-blur-md rounded-2xl border border-rose-100 max-w-md mx-auto shadow-sm">
                         <button id="tab-vocab-btn" onclick="switchCategoryTab('vocab')"
                             class="flex-1 py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r from-pink-400 to-rose-400 text-white shadow-pink-300/30">
-                            🌸 คลังคำศัพท์ (บท 1-12)
+                            🌸 แบบทดสอบควิซ (บท 1-12)
                         </button>
                         <button id="tab-grammar-btn" onclick="switchCategoryTab('grammar')"
                             class="flex-1 py-2.5 px-3 rounded-xl font-bold text-xs transition-all duration-200 flex items-center justify-center gap-1.5 text-pink-700 hover:bg-pink-50">
-                            ⛩️ ไวยากรณ์ เติมคำช่วย (บท 1-12)
+                            🎴 บัตรคำศัพท์ (บท 1-12)
                         </button>
                     </div>
 
@@ -611,7 +611,186 @@
                     </div>
                 </div>
 
-                <!-- ================= หน้าควบคุมโหมดผู้ดูแลระบบ (Admin Panel Screen) ================= -->
+                
+                <!-- ================= หน้าบัตรคำศัพท์สไตล์ควิกเล็ท (Quizlet Flashcard Mode) ================= -->
+                <div id="flashcard-screen" class="hidden space-y-5 w-full max-w-4xl mx-auto py-2">
+
+                    <!-- แถบด้านบน: แสดงข้อมูลบทเรียนและปุ่มกลับหน้าแรก -->
+                    <div class="flex flex-wrap justify-between items-center bg-white/90 dark:bg-slate-800/90 p-3 px-4 rounded-2xl border border-rose-100 dark:border-slate-700 shadow-sm text-xs gap-2">
+                        <div class="flex items-center gap-2">
+                            <button onclick="goHome()" title="กลับไปหน้าแรก"
+                                class="bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 hover:from-pink-600 hover:to-amber-600 text-white font-black px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 active:scale-95 shadow-md shadow-pink-300/30 text-xs cursor-pointer">
+                                <i class="fa-solid fa-house"></i> <span>กลับไปหน้าแรก</span>
+                            </button>
+                            <span id="fc-deck-badge" class="bg-pink-100 dark:bg-pink-900/50 text-pink-700 dark:text-pink-300 font-black px-2.5 py-1 rounded-xl border border-pink-200 dark:border-pink-800 flex items-center gap-1">
+                                🎴 บัตรคำศัพท์
+                            </span>
+                        </div>
+                        <div class="text-center flex-1 min-w-[150px]">
+                            <h3 id="fc-deck-title" class="font-extrabold text-xs md:text-sm text-rose-950 dark:text-rose-100 truncate">บทที่ 1 คำศัพท์</h3>
+                            <span id="fc-counter-text" class="text-[10px] text-pink-600 dark:text-pink-400 font-extrabold block">ใบที่ 1 / 18</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <button id="fc-switch-quiz-btn" onclick="startQuizFromCurrentDeck()" title="สลับไปทำแบบทดสอบควิซของบทนี้"
+                                class="bg-white hover:bg-pink-50 dark:bg-slate-700 dark:hover:bg-slate-600 text-pink-700 dark:text-pink-300 border border-pink-200 dark:border-slate-600 font-bold px-3 py-1.5 rounded-xl text-xs flex items-center gap-1 transition active:scale-95">
+                                <i class="fa-solid fa-gamepad text-pink-500"></i> <span class="hidden sm:inline">เล่นควิซ</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- แถบแสดงสถานะความคืบหน้า (Progress Bar) -->
+                    <div class="w-full bg-rose-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden shadow-inner">
+                        <div id="fc-progress-bar" class="h-full bg-gradient-to-r from-pink-400 via-rose-400 to-purple-500 rounded-full transition-all duration-300 w-0"></div>
+                    </div>
+
+                    <!-- กล่องแสดงบัตรคำศัพท์ 3 มิติ (3D Flashcard Container) -->
+                    <div class="perspective-1200 w-full max-w-xl mx-auto my-2 select-none">
+                        <div id="flashcard-inner" 
+                            class="flashcard-inner relative w-full min-h-[340px] sm:min-h-[370px] md:min-h-[400px] rounded-3xl cursor-pointer transition-all duration-500 shadow-xl"
+                            ondblclick="flipFlashcard()"
+                            ontouchstart="handleCardTouchStart(event)"
+                            ontouchend="handleCardTouchEnd(event)">
+
+                            <!-- ด้านหน้าบัตรคำ (Front Face: คำศัพท์คันจิ / ภาษาไทย / เสียงอ่าน) -->
+                            <div class="flashcard-face flashcard-front rounded-3xl p-6 sm:p-8 flex flex-col justify-between bg-gradient-to-br from-white via-pink-50/40 to-rose-100/50 dark:from-slate-800 dark:via-slate-850 dark:to-slate-900 border-2 border-pink-200/90 dark:border-pink-900/60 shadow-lg">
+                                <!-- แถบบนด้านหน้า: ป้ายกำกับและปุ่มฟังเสียง (ต้องกดเท่านั้นจึงจะออก) -->
+                                <div class="flex items-center justify-between">
+                                    <span id="fc-front-badge" class="text-[10px] sm:text-xs font-black text-pink-600 dark:text-pink-300 bg-pink-100/80 dark:bg-pink-950/60 border border-pink-200 dark:border-pink-800 px-3 py-1 rounded-full flex items-center gap-1.5">
+                                        🌸 ด้านหน้า • คำศัพท์
+                                    </span>
+                                    <button onclick="playFlashcardAudio(event)" title="กดเพื่อฟังเสียงภาษาญี่ปุ่น (ไม่มีเสียงออโต้)"
+                                        class="w-11 h-11 rounded-2xl bg-white/90 dark:bg-slate-700 text-pink-600 dark:text-pink-300 hover:text-pink-700 hover:bg-pink-50 hover:scale-110 active:scale-90 shadow-md border border-pink-200 dark:border-pink-800 flex items-center justify-center transition-all group">
+                                        <i id="fc-sound-icon-front" class="fa-solid fa-volume-high text-base group-hover:scale-110 transition-transform"></i>
+                                    </button>
+                                </div>
+
+                                <!-- กึ่งกลางด้านหน้า: คำศัพท์คันจิหรือคำศัพท์หลักขนาดใหญ่ชัดเจน -->
+                                <div class="my-auto py-4 text-center space-y-4">
+                                    <div id="fc-front-word" class="font-black text-4xl sm:text-5xl md:text-6xl text-rose-950 dark:text-rose-100 tracking-wider font-kawaii break-words drop-shadow-xs">
+                                        私
+                                    </div>
+                                    <div class="flex justify-center">
+                                        <span id="fc-front-meaning" class="text-sm sm:text-base font-bold text-slate-700 dark:text-slate-200 px-4 py-1.5 bg-white/80 dark:bg-slate-700/80 rounded-2xl border border-pink-100 dark:border-slate-600 shadow-xs">
+                                            ฉัน, ตัวฉัน
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- แถบล่างด้านหน้า: คำแนะนำพลิกการ์ด -->
+                                <div class="text-center pt-2 border-t border-pink-100/60 dark:border-slate-700">
+                                    <span class="text-[10.5px] sm:text-[11.5px] font-black text-pink-500/90 dark:text-pink-400 flex items-center justify-center gap-1.5">
+                                        <i class="fa-solid fa-hand-pointer animate-bounce"></i> กดที่คำ 2 ครั้ง เพื่อเปิดดูคำอ่านฮิราคานะ ↺
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- ด้านหลังบัตรคำ (Back Face: คำอ่านฮิราคานะชัดเจน / โรมาจิ / ความหมายภาษาไทย) -->
+                            <div class="flashcard-face flashcard-back rounded-3xl p-6 sm:p-8 flex flex-col justify-between bg-gradient-to-br from-pink-500 via-rose-500 to-purple-600 text-white shadow-xl border-2 border-pink-300/40">
+                                <!-- แถบบนด้านหลัง -->
+                                <div class="flex items-center justify-between">
+                                    <span id="fc-back-badge" class="text-[10px] sm:text-xs font-black text-pink-100 bg-white/20 border border-white/30 px-3 py-1 rounded-full flex items-center gap-1.5">
+                                        ✨ ด้านหลัง • คำอ่านฮิราคานะ
+                                    </span>
+                                    <button onclick="playFlashcardAudio(event)" title="กดเพื่อฟังเสียงภาษาญี่ปุ่น (ไม่มีเสียงออโต้)"
+                                        class="w-11 h-11 rounded-2xl bg-white/20 hover:bg-white/30 text-white hover:scale-110 active:scale-90 shadow-md border border-white/40 flex items-center justify-center transition-all group">
+                                        <i id="fc-sound-icon-back" class="fa-solid fa-volume-high text-base group-hover:scale-110 transition-transform"></i>
+                                    </button>
+                                </div>
+
+                                <!-- กึ่งกลางด้านหลัง: คำอ่านฮิราคานะเด่นชัดเจน -->
+                                <div class="my-auto py-3 text-center space-y-3">
+                                    <span class="text-[10px] uppercase tracking-widest text-pink-100 font-extrabold block">คำอ่านภาษาญี่ปุ่น</span>
+                                    <div id="fc-back-hiragana" class="font-black text-4xl sm:text-5xl md:text-6xl text-white tracking-wider font-kawaii break-words drop-shadow-md">
+                                        わたし
+                                    </div>
+                                    <div id="fc-back-romaji" class="text-xs sm:text-sm font-mono tracking-widest text-pink-200 font-bold">
+                                        watashi
+                                    </div>
+                                    <div class="bg-white/20 backdrop-blur-md rounded-2xl p-2.5 px-4 border border-white/25 max-w-sm mx-auto shadow-inner">
+                                        <div id="fc-back-kanji-row" class="text-[11px] font-bold text-pink-100 mb-0.5">
+                                            ตัวเขียนคันจิ: <span id="fc-back-kanji" class="text-white font-black text-xs sm:text-sm">私</span>
+                                        </div>
+                                        <div id="fc-back-meaning" class="text-xs sm:text-sm font-black text-white">
+                                            ฉัน, ตัวฉัน
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- แถบล่างด้านหลัง: คำแนะนำพลิกกลับ -->
+                                <div class="text-center pt-2 border-t border-white/20">
+                                    <span class="text-[10.5px] sm:text-[11.5px] font-black text-pink-100/90 flex items-center justify-center gap-1.5">
+                                        <i class="fa-solid fa-rotate"></i> กด 2 ครั้ง เพื่อพลิกกลับด้านหน้า ↺
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- แถบปุ่มควบคุมการเลื่อนการ์ดหลัก (Bottom Navigation Controls) -->
+                    <div class="flex items-center justify-center gap-2 sm:gap-3 max-w-md mx-auto pt-1">
+                        <button id="fc-prev-btn" onclick="prevFlashcard()"
+                            class="flex-1 py-3 px-3 sm:px-4 rounded-2xl bg-white dark:bg-slate-800 hover:bg-pink-50 dark:hover:bg-slate-700 text-rose-700 dark:text-rose-300 font-black text-xs border border-pink-200 dark:border-slate-700 shadow-sm flex items-center justify-center gap-1.5 transition active:scale-95">
+                            <i class="fa-solid fa-arrow-left"></i> <span>ก่อนหน้า</span>
+                        </button>
+
+                        <button id="fc-flip-btn" onclick="flipFlashcard()"
+                            class="flex-1 max-w-[170px] py-3.5 px-4 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 hover:from-pink-600 hover:to-amber-600 text-white font-black text-xs sm:text-sm shadow-md shadow-pink-300/40 flex items-center justify-center gap-2 transition active:scale-95 cursor-pointer">
+                            <i class="fa-solid fa-repeat text-sm sm:text-base animate-spin-slow"></i> <span>พลิกบัตรคำ</span>
+                        </button>
+
+                        <button id="fc-next-btn" onclick="nextFlashcard()"
+                            class="flex-1 py-3 px-3 sm:px-4 rounded-2xl bg-white dark:bg-slate-800 hover:bg-pink-50 dark:hover:bg-slate-700 text-rose-700 dark:text-rose-300 font-black text-xs border border-pink-200 dark:border-slate-700 shadow-sm flex items-center justify-center gap-1.5 transition active:scale-95">
+                            <span>ถัดไป</span> <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- แถบเครื่องมือเสริม (สุ่มการ์ด / เริ่มใหม่ / ฟังเสียง / สลับควิซ) -->
+                    <div class="flex flex-wrap items-center justify-center gap-2 max-w-lg mx-auto pt-1 text-[11px]">
+                        <button id="fc-shuffle-btn" onclick="toggleFlashcardShuffle()"
+                            class="py-2 px-3 rounded-xl bg-white/80 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold text-slate-700 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-slate-700 transition flex items-center gap-1.5 shadow-2xs">
+                            <i class="fa-solid fa-shuffle text-pink-500"></i> <span id="fc-shuffle-text">สุ่มการ์ด: ปิด</span>
+                        </button>
+                        <button onclick="restartFlashcards()"
+                            class="py-2 px-3 rounded-xl bg-white/80 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold text-slate-700 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-slate-700 transition flex items-center gap-1.5 shadow-2xs">
+                            <i class="fa-solid fa-arrow-rotate-left text-amber-500"></i> <span>เริ่มการ์ดใบแรก</span>
+                        </button>
+                        <button onclick="playFlashcardAudio(event)"
+                            class="py-2 px-3 rounded-xl bg-pink-100 dark:bg-pink-950/60 border border-pink-200 dark:border-pink-800 font-black text-pink-700 dark:text-pink-300 hover:bg-pink-200 transition flex items-center gap-1.5 shadow-2xs">
+                            <i class="fa-solid fa-volume-high text-pink-500"></i> <span>กดฟังเสียงอ่าน</span>
+                        </button>
+                    </div>
+
+                    <!-- หน้าจอเมื่อทบทวนการ์ดจบชุด (Deck Finished View) -->
+                    <div id="fc-finished-view" class="hidden text-center py-6 px-4 bg-white/90 dark:bg-slate-850 rounded-3xl border-2 border-pink-200 dark:border-pink-900/60 shadow-xl space-y-4 animate-fade-in max-w-lg mx-auto">
+                        <div class="text-5xl animate-bounce">🌸🎉</div>
+                        <div>
+                            <h3 class="text-xl font-black text-rose-950 dark:text-rose-100 font-kawaii">ยินดีด้วยค๊า! ทบทวนครบทุกใบแล้ว!</h3>
+                            <p id="fc-finished-desc" class="text-xs text-slate-600 dark:text-slate-300 mt-1">คุณได้เรียนรู้คำศัพท์ในบทนี้ครบทั้งหมดเรียบร้อยแล้วนะคะ ✨</p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2">
+                            <button onclick="restartFlashcards()"
+                                class="py-3 px-4 rounded-xl bg-gradient-to-r from-pink-400 to-rose-400 text-white font-black text-xs shadow-md transition active:scale-95 flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-arrow-rotate-left"></i> ทบทวนใหม่อีกครั้ง
+                            </button>
+                            <button onclick="restartWithShuffle()"
+                                class="py-3 px-4 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-black text-xs shadow-md transition active:scale-95 flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-shuffle"></i> สุ่มการ์ดแล้วทบทวน
+                            </button>
+                            <button onclick="startQuizFromCurrentDeck()"
+                                class="py-3 px-4 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 text-white font-black text-xs shadow-md transition active:scale-95 flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-gamepad"></i> ทดสอบด้วยควิซ
+                            </button>
+                            <button onclick="goHome()"
+                                class="py-3 px-4 rounded-xl bg-pink-100 dark:bg-slate-700 text-pink-700 dark:text-pink-300 font-black text-xs border border-pink-200 dark:border-slate-600 transition active:scale-95 flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-house"></i> กลับไปเลือกบทเรียน
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+<!-- ================= หน้าควบคุมโหมดผู้ดูแลระบบ (Admin Panel Screen) ================= -->
                 <div id="admin-screen" class="hidden space-y-4">
                     <div class="flex justify-between items-center border-b border-rose-100 pb-2">
                         <h2 class="text-base font-black text-pink-600 flex items-center gap-1.5">
@@ -1004,7 +1183,7 @@ function doGet(e) {
                     <span class="text-base bg-pink-100 p-1.5 rounded-xl shadow-xs">🌸</span>
                     <span class="text-sm font-black text-rose-950 font-kawaii">日本語 勉強しましょう</span>
                     <span class="text-[10px] font-black bg-gradient-to-r from-pink-100 to-rose-100 text-rose-700 px-2.5 py-0.5 rounded-full border border-pink-300 shadow-xs">
-                        เวอร์ชัน 0.0.1
+                        เวอร์ชัน 0.0.4
                     </span>
                 </div>
                 <p class="text-[11px] text-slate-500 font-bold leading-relaxed">
@@ -1074,7 +1253,7 @@ function doGet(e) {
                     <i class="fa-solid fa-mobile-screen-button text-pink-500"></i> สแกนผ่านแอปธนาคาร PromptPay ได้ทุกธนาคารค่ะ 🌸
                 </p>
                 <div class="mt-2 text-[10px] text-pink-600 font-bold bg-pink-50 border border-pink-200 px-3 py-1 rounded-full">
-                    เวอร์ชัน 0.0.1
+                    เวอร์ชัน 0.0.4
                 </div>
             </div>
 
