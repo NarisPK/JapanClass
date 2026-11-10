@@ -527,6 +527,80 @@ function loadQuizDatabase() {
             questions: JSON.parse(JSON.stringify(allGrammarQuestions4))
         };
     }
+
+    // ผนวกข้อมูลคำศัพท์เพิ่มเติมเฉพาะสำหรับโหมดบัตรคำศัพท์ (Flashcard Mode) จากคลังบัตรคำศัพท์ PDF Minna no Nihongo (1-50)
+    if (typeof flashcardExtraData !== 'undefined') {
+        const lessonKeyMap = {
+            1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six',
+            7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven', 12: 'twelve',
+            13: 'thirteen', 14: 'fourteen', 15: 'fifteen', 16: 'sixteen', 17: 'seventeen',
+            18: 'eighteen', 19: 'nineteen', 20: 'twenty', 21: 'twentyone', 22: 'twentytwo',
+            23: 'twentythree', 24: 'twentyfour', 25: 'twentyfive'
+        };
+        for (let i = 26; i <= 50; i++) {
+            lessonKeyMap[i] = `lesson_${i}`;
+        }
+
+        // กำหนด flashcards ให้แต่ละบท
+        Object.keys(lessonKeyMap).forEach(lStr => {
+            const lNum = parseInt(lStr, 10);
+            const mKey = lessonKeyMap[lNum];
+            if (allQuizModes[mKey]) {
+                const baseQuestions = allQuizModes[mKey].questions || [];
+                const extraCards = flashcardExtraData[lNum] || [];
+                allQuizModes[mKey].flashcards = [...baseQuestions, ...extraCards];
+            }
+        });
+
+        // กำหนด flashcards ให้กับชุดรวมบท เล่ม 1 (บท 1-12)
+        const allFlashcards1 = [];
+        for (let i = 1; i <= 12; i++) {
+            const mKey = lessonKeyMap[i];
+            if (allQuizModes[mKey] && allQuizModes[mKey].flashcards) {
+                allFlashcards1.push(...allQuizModes[mKey].flashcards);
+            }
+        }
+        if (allQuizModes['vocab_all_1']) {
+            allQuizModes['vocab_all_1'].flashcards = allFlashcards1;
+        }
+
+        // กำหนด flashcards ให้กับชุดรวมบท เล่ม 2 (บท 13-25)
+        const allFlashcards2 = [];
+        for (let i = 13; i <= 25; i++) {
+            const mKey = lessonKeyMap[i];
+            if (allQuizModes[mKey] && allQuizModes[mKey].flashcards) {
+                allFlashcards2.push(...allQuizModes[mKey].flashcards);
+            }
+        }
+        if (allQuizModes['vocab_all_2']) {
+            allQuizModes['vocab_all_2'].flashcards = allFlashcards2;
+        }
+
+        // กำหนด flashcards ให้กับชุดรวมบท เล่ม 3 (บท 26-38)
+        const allFlashcards3 = [];
+        for (let i = 26; i <= 38; i++) {
+            const mKey = lessonKeyMap[i];
+            if (allQuizModes[mKey] && allQuizModes[mKey].flashcards) {
+                allFlashcards3.push(...allQuizModes[mKey].flashcards);
+            }
+        }
+        if (allQuizModes['vocab_all_3']) {
+            allQuizModes['vocab_all_3'].flashcards = allFlashcards3;
+        }
+
+        // กำหนด flashcards ให้กับชุดรวมบท เล่ม 4 (บท 39-50)
+        const allFlashcards4 = [];
+        for (let i = 39; i <= 50; i++) {
+            const mKey = lessonKeyMap[i];
+            if (allQuizModes[mKey] && allQuizModes[mKey].flashcards) {
+                allFlashcards4.push(...allQuizModes[mKey].flashcards);
+            }
+        }
+        if (allQuizModes['vocab_all_4']) {
+            allQuizModes['vocab_all_4'].flashcards = allFlashcards4;
+        }
+    }
+
     console.log("loadQuizDatabase: allQuizModes is:", allQuizModes);
     if (typeof rebuildVocabCache === 'function') rebuildVocabCache();
 
@@ -1199,7 +1273,9 @@ function renderModesList() {
     keys.forEach(key => {
         const mode = allQuizModes[key];
         const button = document.createElement('button');
-        const qLength = mode.questions ? mode.questions.length : 0;
+        const qLength = isFlashcardTab
+            ? ((mode.flashcards && mode.flashcards.length > 0) ? mode.flashcards.length : (mode.questions ? mode.questions.length : 0))
+            : (mode.questions ? mode.questions.length : 0);
 
         let colorClass = mode.colorClass;
         if (!colorClass) {
@@ -4573,14 +4649,15 @@ function openFlashcards(deckKey) {
     try { playClickSound(); } catch (e) { }
 
     const mode = allQuizModes[deckKey];
-    if (!mode || !mode.questions || mode.questions.length === 0) {
+    const cardsSource = (mode && mode.flashcards && mode.flashcards.length > 0) ? mode.flashcards : (mode ? mode.questions : null);
+    if (!mode || !cardsSource || cardsSource.length === 0) {
         mascotTalk(`หมวดนี้ยังไม่มีคำศัพท์สำหรับสร้างบัตรคำค๊า! 🌸`, 'happy');
         return;
     }
 
     fcCurrentDeckKey = deckKey;
-    fcCards = JSON.parse(JSON.stringify(mode.questions));
-    fcOriginalOrder = JSON.parse(JSON.stringify(mode.questions));
+    fcCards = JSON.parse(JSON.stringify(cardsSource));
+    fcOriginalOrder = JSON.parse(JSON.stringify(cardsSource));
     fcCurrentIndex = 0;
     fcIsFlipped = false;
     fcIsShuffled = false;
