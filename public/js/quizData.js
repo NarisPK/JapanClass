@@ -466,3 +466,10 @@ if (typeof jlptN4GrammarData !== 'undefined') {
         defaultQuizModes[k] = jlptN4GrammarData[k];
     });
 }
+
+// ผนวกข้อมูลการอ่านข้อสอบวัดระดับ JLPT N4 (読解) จากข้อสอบจริง
+if (typeof jlptN4ReadingData !== 'undefined') {
+    Object.keys(jlptN4ReadingData).forEach(k => {
+        defaultQuizModes[k] = jlptN4ReadingData[k];
+    });
+}

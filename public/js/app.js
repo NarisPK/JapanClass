@@ -411,7 +411,7 @@ const bookConfigs = {
         vocabLabel: "🎯 คันจิ (ควิซ 295 ข้อ)",
         flashcardLabel: "🎴 บัตรคำศัพท์ N4 (295 คำ)",
         grammarLabel: "⛩️ ไวยากรณ์ (118 ข้อ)",
-        readingLabel: "📖 การอ่าน (読解)",
+        readingLabel: "📖 การอ่าน (24 ข้อ)",
         listeningLabel: "🎧 การฟัง (聴解)",
         themeGrad: "from-purple-500 to-indigo-600",
         themeShadow: "shadow-purple-300/30",
@@ -441,6 +441,13 @@ function loadQuizDatabase() {
             allQuizModes[k].book = 1;
         }
     });
+
+    // ผนวกข้อมูลแบบฝึกหัดการอ่านข้อสอบจริง JLPT N4 (読解)
+    if (typeof jlptN4ReadingData !== 'undefined') {
+        Object.keys(jlptN4ReadingData).forEach(k => {
+            allQuizModes[k] = jlptN4ReadingData[k];
+        });
+    }
 
     // ผนวกข้อมูลแบบฝึกหัดไวยากรณ์ เติมคำช่วย (บท 1-50 จากเอกสาร Google Docs)
     if (typeof grammarData !== 'undefined') {
@@ -755,7 +762,9 @@ if (pronounceBtn) {
         const activeMode = allQuizModes[currentModeKey];
         const currentData = activeMode ? activeMode.questions[currentQuestion] : null;
         if (currentData) {
-            if (activeMode.isGrammar) {
+            if (activeMode.isReading) {
+                speakJapanese(currentData.question);
+            } else if (activeMode.isGrammar) {
                 speakJapanese(currentData.fullSentence);
             } else {
                 speakJapanese(currentData.japaneseText || currentData.character || (currentData.choices && currentData.choices[currentData.correct]));
@@ -849,7 +858,7 @@ function renderCategoryTabs() {
             { id: 'vocab', label: '🎯 คันจิ (ควิซ)', count: '295 ข้อ' },
             { id: 'flashcard', label: '🎴 บัตรคำศัพท์', count: '295 คำ' },
             { id: 'grammar', label: '⛩️ ไวยากรณ์', count: '118 ข้อ' },
-            { id: 'reading', label: '📖 การอ่าน', count: 'เตรียมพร้อม 🌸' },
+            { id: 'reading', label: '📖 การอ่าน', count: '24 ข้อ' },
             { id: 'listening', label: '🎧 การฟัง', count: 'เตรียมพร้อม 🌸' }
         ];
         container.innerHTML = tabs.map(t => {
@@ -945,83 +954,37 @@ function renderModesList() {
     const cfg = bookConfigs[currentBook] || bookConfigs[1];
     const isFlashcardTab = currentCategoryTab === 'flashcard';
     const isGrammarTab = currentCategoryTab === 'grammar';
+    const isReadingTab = currentCategoryTab === 'reading';
+
+    // ถ้าเปิดแท็บการอ่าน แต่ไม่ได้อยู่ที่เล่ม 5 (JLPT N4) ให้แสดงการ์ดแนะนำให้ไปเล่ม 5
+    if (isReadingTab && currentBook !== 5) {
+        const notice = document.createElement('div');
+        notice.className = "w-full p-6 bg-white/85 dark:bg-slate-800 rounded-3xl border-2 border-purple-200 dark:border-purple-800 text-center space-y-3 shadow-sm";
+        notice.innerHTML = `
+            <div class="text-4xl">📖</div>
+            <div class="font-extrabold text-slate-800 dark:text-slate-100 text-sm md:text-base">คลังข้อสอบการอ่าน (読解) พร้อมใช้งานแล้วในระดับ JLPT N4 (เล่ม 5)</div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">ครบทั้งบทความสั้น (短文), บทความขนาดกลาง (中文), และการค้นหาข้อมูล (情報検索) รวม 24 ข้อ จากข้อสอบจริง</p>
+            <button onclick="switchBook(5); switchCategoryTab('reading');" class="px-5 py-2.5 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-xl font-black text-xs shadow-md hover:scale-105 transition-all">
+                🚀 ไปฝึกพาร์ทการอ่าน JLPT N4 เล่ม 5 ทันที!
+            </button>
+        `;
+        container.appendChild(notice);
+        return;
+    }
 
     let keys = Object.keys(allQuizModes).filter(key => {
         const mode = allQuizModes[key];
         const modeBook = mode.book || 1;
         if (modeBook !== currentBook) return false;
 
-        if (isGrammarTab) {
-            return !!mode.isGrammar;
+        if (isReadingTab) {
+            return !!mode.isReading;
+        } else if (isGrammarTab) {
+            return !!mode.isGrammar && !mode.isReading;
         } else {
-            return !mode.isGrammar;
+            return !mode.isGrammar && !mode.isReading;
         }
     });
-
-    // พาร์ทการอ่าน (読解) สำหรับ JLPT N4 (Book 5)
-    if (currentBook === 5 && currentCategoryTab === 'reading') {
-        const readingSections = [
-            {
-                title: "短文 (たんぶん) บทความสั้น",
-                sub: "อีเมล ประกาศสั้น และข้อความบันทึก (100-200 คำ)",
-                emoji: "📄",
-                badge: "เตรียมพร้อม 🌸",
-                badgeClass: "bg-purple-100 text-purple-700 border-purple-200",
-                desc: "ฝึกจับใจความสำคัญของข้อความสั้นที่พบในชีวิตประจำวัน เช่น ประกาศโรงเรียน บันทึกข้อความ อีเมลขอนัดหมาย"
-            },
-            {
-                title: "中文 (ちゅうぶん) บทความขนาดกลาง",
-                sub: "วิเคราะห์เหตุและผล และมุมมองผู้เขียน (ประมาณ 450 คำ)",
-                emoji: "📖",
-                badge: "เตรียมพร้อม 🌸",
-                badgeClass: "bg-indigo-100 text-indigo-700 border-indigo-200",
-                desc: "ฝึกอ่านบทความบอกเล่าประสบการณ์ วิเคราะห์ความสัมพันธ์ของเนื้อหา และความคิดเห็นของผู้เขียน"
-            },
-            {
-                title: "情報検索 (じょうほうけんさく) ค้นหาข้อมูล",
-                sub: "กวาดสายตาค้นหาข้อมูลจากใบปลิว ตาราง และป้ายประกาศ",
-                emoji: "🔍",
-                badge: "เตรียมพร้อม 🌸",
-                badgeClass: "bg-pink-100 text-pink-700 border-pink-200",
-                desc: "ฝึกทักษะการค้นหาเงื่อนไข วันเวลา ค่าใช้จ่าย จากใบปลิวและตารางตามคำถามที่กำหนด"
-            },
-            {
-                title: "🎲 สุ่มรวมข้อสอบการอ่าน N4 ทุกประเภท",
-                sub: "จำลองการทำข้อสอบพาร์ทการอ่านแบบครบทุกส่วน",
-                emoji: "🎯",
-                badge: "เร็วๆ นี้ ✨",
-                badgeClass: "bg-amber-100 text-amber-700 border-amber-200",
-                desc: "รวมข้อสอบการอ่าน N4 เสมือนจริง ครบทั้งบทความสั้น กลาง และค้นหาข้อมูล"
-            }
-        ];
-
-        readingSections.forEach(sec => {
-            const card = document.createElement('div');
-            card.className = "w-full p-4 bg-gradient-to-r from-purple-50 to-indigo-50/70 border-2 border-purple-200/80 rounded-2xl text-left transition-all duration-300 shadow-sm relative overflow-hidden group hover:border-purple-300";
-            card.innerHTML = `
-                <div class="absolute -right-4 -bottom-4 text-5xl opacity-10 group-hover:opacity-20 group-hover:scale-125 transition-all duration-300">${sec.emoji}</div>
-                <div class="flex items-start justify-between gap-3 relative z-10 mb-2">
-                    <div class="flex items-center gap-3">
-                        <span class="text-2xl bg-white p-2 rounded-xl border border-purple-100 shadow-inner">${sec.emoji}</span>
-                        <div>
-                            <span class="font-extrabold text-purple-950 text-xs md:text-sm block tracking-wide">${sec.title}</span>
-                            <span class="text-[9.5px] text-purple-700/80 font-bold block mt-0.5">${sec.sub}</span>
-                        </div>
-                    </div>
-                    <span class="text-[9px] font-black px-2 py-0.5 rounded-full border ${sec.badgeClass} shrink-0">${sec.badge}</span>
-                </div>
-                <p class="text-[10px] text-slate-600 font-medium pl-1 relative z-10">${sec.desc}</p>
-                <div class="mt-3 pt-2.5 border-t border-purple-100/60 flex items-center justify-between text-[10px] text-purple-600 font-bold">
-                    <span class="flex items-center gap-1"><i class="fa-solid fa-clock-rotate-left"></i> โครงสร้างข้อสอบ JLPT N4</span>
-                    <button onclick="showComingSoonNotice('การอ่าน (読解)', '${sec.title}')" class="px-2.5 py-1 bg-white hover:bg-purple-100 text-purple-700 rounded-lg border border-purple-200 transition text-[9.5px] font-extrabold">
-                        ดูรายละเอียด 🌸
-                    </button>
-                </div>
-            `;
-            container.appendChild(card);
-        });
-        return;
-    }
 
     // พาร์ทการฟัง (聴解) สำหรับ JLPT N4 (Book 5)
     if (currentBook === 5 && currentCategoryTab === 'listening') {
@@ -1097,7 +1060,22 @@ function renderModesList() {
     }
 
     // จัดเรียงลำดับบทเรียนอย่างเป็นระเบียบสำหรับทุกเล่ม
-    if (isGrammarTab) {
+    if (isReadingTab) {
+        const readingOrder = [
+            'jlpt_n4_reading_all',
+            'jlpt_n4_reading_2024_12',
+            'jlpt_n4_reading_2021_12',
+            'jlpt_n4_reading_2021_07'
+        ];
+        keys.sort((a, b) => {
+            const idxA = readingOrder.indexOf(a);
+            const idxB = readingOrder.indexOf(b);
+            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+            if (idxA !== -1) return -1;
+            if (idxB !== -1) return 1;
+            return 0;
+        });
+    } else if (isGrammarTab) {
         if (currentBook === 1) {
             const book1GrammarOrder = ['grammar_all_1', 'grammar_1', 'grammar_2', 'grammar_3', 'grammar_4', 'grammar_5', 'grammar_6', 'grammar_7', 'grammar_8', 'grammar_9', 'grammar_10', 'grammar_11', 'grammar_12'];
             keys.sort((a, b) => {
@@ -1256,8 +1234,8 @@ function renderModesList() {
         } else {
             button.onclick = () => selectMode(key);
 
-            const badgeIcon = mode.isGrammar ? 'fa-scroll' : cfg.badgeIcon;
-            const badgeColor = cfg.badgeColor;
+            const badgeIcon = mode.isGrammar ? 'fa-scroll' : (mode.isReading ? 'fa-book-open' : cfg.badgeIcon);
+            const badgeColor = mode.isReading ? 'text-purple-600 dark:text-purple-400' : cfg.badgeColor;
 
             button.innerHTML = `
                 <div class="absolute -right-5 -bottom-5 text-5xl opacity-10 group-hover:opacity-20 group-hover:scale-125 transition-all duration-300">${mode.emoji || '🌸'}</div>
@@ -2063,11 +2041,13 @@ function selectMode(modeKey) {
 
     currentModeKey = modeKey;
 
-    // สุ่มสลับคำถามก่อนเริ่มเล่นทุกครั้ง
+    // สุ่มสลับคำถามก่อนเริ่มเล่นทุกครั้ง (ยกเว้นโหมดการอ่าน เพื่อรักษาลำดับบทความและข้อคำถาม)
     const questions = allQuizModes[modeKey].questions;
-    for (let i = questions.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [questions[i], questions[j]] = [questions[j], questions[i]];
+    if (!selectedMode.isReading) {
+        for (let i = questions.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [questions[i], questions[j]] = [questions[j], questions[i]];
+        }
     }
 
     currentQuestion = 0;
@@ -2462,6 +2442,13 @@ function loadQuestion() {
     const grammarSentenceDisplay = document.getElementById('grammar-sentence-display');
     const grammarExpBox = document.getElementById('grammar-explanation-box');
     const grammarTypeInput = document.getElementById('grammar-type-input');
+    const grammarTypeContainer = document.getElementById('grammar-type-container');
+    const grammarBadgeInstruction = document.getElementById('grammar-badge-instruction');
+    const readingPassageCard = document.getElementById('reading-passage-card');
+    const readingBadgeType = document.getElementById('reading-badge-type');
+    const readingPassageTitle = document.getElementById('reading-passage-title');
+    const readingPassageBody = document.getElementById('reading-passage-body');
+    const readingQuestionText = document.getElementById('reading-question-text');
 
     const timerContainer = document.getElementById('quiz-timer-container');
     const writingContainer = document.getElementById('writing-mode-container');
@@ -2524,23 +2511,55 @@ function loadQuestion() {
         if (choicesContainer) choicesContainer.classList.remove('hidden');
     }
 
-    if (activeMode.isGrammar) {
+    if (activeMode.isReading) {
+        // --- โหมดการอ่านข้อสอบจริง JLPT N4 (Reading Comprehension Mode) ---
+        if (mediaCardContainer) mediaCardContainer.classList.add('hidden');
+        if (grammarSentenceCard) grammarSentenceCard.classList.add('hidden');
+        if (grammarExpBox) grammarExpBox.classList.add('hidden');
+        if (readingPassageCard) readingPassageCard.classList.remove('hidden');
+
+        mascotTalk(`ข้อสอบการอ่านข้อที่ ${currentQuestion + 1}! ลองอ่านบทความและเลือกคำตอบที่ถูกต้องที่สุดนะคะ 📖✨`, 'idle');
+
+        if (readingBadgeType) readingBadgeType.innerText = currentData.passageType || '📖 短文 (たんぶん) บทความสั้น';
+        if (readingPassageTitle) readingPassageTitle.innerText = currentData.passageTitle || currentData.sourceExam || '';
+        if (readingPassageBody) readingPassageBody.innerText = currentData.passage || '';
+        if (readingQuestionText) readingQuestionText.innerText = currentData.question || '';
+
+        // ซ่อนคำแปลบทอ่าน/คำใบ้ไว้ก่อนเสมอ จนกว่าผู้เล่นจะกดตอบคำถาม
+        if (questionHint) {
+            questionHint.classList.add('hidden');
+            questionHint.style.display = 'none';
+            questionHint.innerHTML = '';
+        }
+    } else if (activeMode.isGrammar) {
         // --- โหมดไวยากรณ์ เติมคำช่วย (Grammar Particle Mode) ---
+        if (readingPassageCard) readingPassageCard.classList.add('hidden');
         if (mediaCardContainer) mediaCardContainer.classList.add('hidden');
         if (grammarSentenceCard) grammarSentenceCard.classList.remove('hidden');
         if (grammarExpBox) grammarExpBox.classList.add('hidden');
 
-        mascotTalk(`แบบฝึกหัดข้อที่ ${currentQuestion + 1}! ลองเลือกหรือพิมพ์คำช่วยที่ถูกต้องเติมลงในช่องว่างดูนะคะ ✨`, 'idle');
+        // แสดงช่องพิมพ์คำช่วยเฉพาะโหมดเขียน/พิมพ์ (writing) เท่านั้น! โหมดอื่นซ่อนเสมอตามคำขอของผู้ใช้
+        if (currentPlayStyle === 'writing') {
+            if (grammarTypeContainer) grammarTypeContainer.classList.remove('hidden');
+            if (grammarBadgeInstruction) grammarBadgeInstruction.innerText = "⛩️ พิมพ์คำช่วยที่ถูกต้องเติมลงในช่องว่าง";
+            if (writingContainer) writingContainer.classList.add('hidden');
+            mascotTalk(`แบบฝึกหัดข้อที่ ${currentQuestion + 1}! พิมพ์คำช่วยที่ถูกต้องเติมลงในช่องว่างนะคะ ✍️✨`, 'idle');
+            if (grammarTypeInput) {
+                grammarTypeInput.value = '';
+                grammarTypeInput.disabled = false;
+                setTimeout(() => grammarTypeInput.focus(), 150);
+            }
+        } else {
+            // โหมดอื่นๆ ทั้งหมด (ช้อยส์ปกติ, จับเวลา, พูดออกเสียง ฯลฯ) ซ่อนช่องพิมพ์คำช่วยออกตามคำขอของผู้ใช้!
+            if (grammarTypeContainer) grammarTypeContainer.classList.add('hidden');
+            if (grammarBadgeInstruction) grammarBadgeInstruction.innerText = "⛩️ เลือกคำช่วยที่ถูกต้องเติมลงในช่องว่าง";
+            mascotTalk(`แบบฝึกหัดข้อที่ ${currentQuestion + 1}! ลองเลือกคำช่วยที่ถูกต้องเติมลงในช่องว่างดูนะคะ ✨`, 'idle');
+        }
 
         if (grammarSentenceDisplay) {
             const blankHtml = `<span id="current-grammar-blank" class="grammar-blank-slot">[ ___ ]</span>`;
             const formattedSentence = (currentData.sentence || '').replace('[ ___ ]', blankHtml).replace(/\n/g, '<br>');
             grammarSentenceDisplay.innerHTML = formattedSentence;
-        }
-
-        if (grammarTypeInput) {
-            grammarTypeInput.value = '';
-            grammarTypeInput.disabled = false;
         }
 
         // ซ่อนคำแปลประโยค/คำใบ้ไว้ก่อนเสมอ จนกว่าผู้เล่นจะกดตอบคำถาม
@@ -2551,9 +2570,10 @@ function loadQuestion() {
         }
     } else {
         // --- โหมดคำศัพท์ปกติ (Vocabulary Mode) ---
-        if (mediaCardContainer) mediaCardContainer.classList.remove('hidden');
+        if (readingPassageCard) readingPassageCard.classList.add('hidden');
         if (grammarSentenceCard) grammarSentenceCard.classList.add('hidden');
         if (grammarExpBox) grammarExpBox.classList.add('hidden');
+        if (mediaCardContainer) mediaCardContainer.classList.remove('hidden');
 
         // ข้อความคำพูดของยูกิจังตามโหมด
         if (currentPlayStyle === 'timer') {
@@ -2621,38 +2641,54 @@ function loadQuestion() {
         if (currentPlayStyle !== 'writing' && currentPlayStyle !== 'speaking') {
             choicesContainer.classList.remove('hidden');
 
-            if (activeMode.isGrammar || currentModeKey === 'ひらかな' || currentModeKey === 'カタカナ') {
-                if (Array.isArray(currentData.choices)) {
-                    if (!currentData._originalCorrect) {
-                        currentData._originalCorrect = currentData.choices[currentData.correct];
-                    }
-                    const correctVal = currentData._originalCorrect;
-                    const shuffled = [...currentData.choices];
-                    for (let i = shuffled.length - 1; i > 0; i--) {
-                        const j = Math.floor(Math.random() * (i + 1));
-                        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-                    }
-                    currentData.choices = shuffled;
-                    currentData.correct = shuffled.indexOf(correctVal);
-                }
+            if (activeMode.isReading) {
+                // สำหรับโหมดการอ่าน: แสดง 1 คอลัมน์ ไม่สลับตัวเลือก เพื่อรักษาความถูกต้องตามข้อสอบจริง
+                choicesContainer.className = "grid grid-cols-1 gap-3 max-w-2xl mx-auto";
+                currentData.choices.forEach((choice, index) => {
+                    const button = document.createElement('button');
+                    button.setAttribute('translate', 'no');
+                    button.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-purple-100/70 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-purple-50/80 dark:hover:bg-slate-700/80 hover:border-purple-300 dark:hover:border-purple-600 text-sm sm:text-base font-bold text-slate-800 dark:text-slate-100 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-start gap-3";
+                    button.innerHTML = `<span class="bg-purple-100 dark:bg-purple-900/60 text-purple-700 dark:text-purple-300 px-2.5 py-0.5 rounded-lg text-xs font-black font-kawaii shrink-0 mt-0.5">${index + 1}</span> <span class="break-words font-japanese leading-relaxed">${choice}</span>`;
+                    button.setAttribute('data-no-click-sound', 'true');
+                    button.addEventListener('click', () => selectAnswer(index, button));
+                    choicesContainer.appendChild(button);
+                });
             } else {
-                prepareChallengingVocabChoices(currentData, activeMode, currentModeKey);
-            }
+                choicesContainer.className = "grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto";
 
-            currentData.choices.forEach((choice, index) => {
-                const button = document.createElement('button');
-                button.setAttribute('translate', 'no');
-                if (activeMode.isGrammar) {
-                    button.className = "w-full text-center py-4 px-6 rounded-2xl border-2 border-rose-100/60 bg-white hover:bg-pink-50 hover:border-pink-300 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-center justify-center gap-3";
-                    button.innerHTML = `<span class="bg-pink-100 px-2.5 py-1 rounded-xl text-xs font-black text-pink-600 font-kawaii">${index + 1}</span> <span class="font-kawaii text-2xl font-black text-rose-850">${choice}</span>`;
+                if (activeMode.isGrammar || currentModeKey === 'ひらかな' || currentModeKey === 'カタカナ') {
+                    if (Array.isArray(currentData.choices)) {
+                        if (!currentData._originalCorrect) {
+                            currentData._originalCorrect = currentData.choices[currentData.correct];
+                        }
+                        const correctVal = currentData._originalCorrect;
+                        const shuffled = [...currentData.choices];
+                        for (let i = shuffled.length - 1; i > 0; i--) {
+                            const j = Math.floor(Math.random() * (i + 1));
+                            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+                        }
+                        currentData.choices = shuffled;
+                        currentData.correct = shuffled.indexOf(correctVal);
+                    }
                 } else {
-                    button.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-rose-100/50 bg-white hover:bg-pink-50/75 hover:border-pink-300 text-sm sm:text-base font-bold text-rose-950 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-center";
-                    button.innerHTML = `<span class="bg-pink-100 px-2 py-0.5 rounded text-[10px] font-black text-pink-600 border border-pink-200 mr-2.5 font-kawaii shrink-0">${index + 1}</span> <span class="break-words">${choice}</span>`;
+                    prepareChallengingVocabChoices(currentData, activeMode, currentModeKey);
                 }
-                button.setAttribute('data-no-click-sound', 'true');
-                button.addEventListener('click', () => selectAnswer(index, button));
-                choicesContainer.appendChild(button);
-            });
+
+                currentData.choices.forEach((choice, index) => {
+                    const button = document.createElement('button');
+                    button.setAttribute('translate', 'no');
+                    if (activeMode.isGrammar) {
+                        button.className = "w-full text-center py-4 px-6 rounded-2xl border-2 border-rose-100/60 bg-white hover:bg-pink-50 hover:border-pink-300 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-center justify-center gap-3";
+                        button.innerHTML = `<span class="bg-pink-100 px-2.5 py-1 rounded-xl text-xs font-black text-pink-600 font-kawaii">${index + 1}</span> <span class="font-kawaii text-2xl font-black text-rose-850">${choice}</span>`;
+                    } else {
+                        button.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-rose-100/50 bg-white hover:bg-pink-50/75 hover:border-pink-300 text-sm sm:text-base font-bold text-rose-950 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-center";
+                        button.innerHTML = `<span class="bg-pink-100 px-2 py-0.5 rounded text-[10px] font-black text-pink-600 border border-pink-200 mr-2.5 font-kawaii shrink-0">${index + 1}</span> <span class="break-words">${choice}</span>`;
+                    }
+                    button.setAttribute('data-no-click-sound', 'true');
+                    button.addEventListener('click', () => selectAnswer(index, button));
+                    choicesContainer.appendChild(button);
+                });
+            }
         } else {
             choicesContainer.classList.add('hidden');
         }
@@ -2675,6 +2711,74 @@ function selectAnswer(selectedIndex, clickedButton) {
     answerSelected = true;
 
     const allButtons = choicesContainer.querySelectorAll('button');
+
+    if (activeMode.isReading) {
+        // --- ประมวลผลผลลัพธ์โหมดการอ่าน (Reading Comprehension Mode) ---
+        const expBox = document.getElementById('grammar-explanation-box');
+
+        if (selectedIndex === currentData.correct) {
+            playCorrectSound();
+            if (clickedButton) clickedButton.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-800 font-bold shadow-[0_0_15px_rgba(52,211,153,0.2)] flex items-start gap-3";
+            let bonusExp = 0;
+            let speedBonusText = "";
+            if (currentPlayStyle === 'timer' && timeLeft >= Math.floor(timerDuration * 0.45)) {
+                bonusExp = 15;
+                speedBonusText = " ⚡ Speed Bonus +15 EXP!";
+            }
+            if (feedbackText) {
+                feedbackText.innerText = "🌸 正解 (อ่านจับใจความถูกต้องยอดเยี่ยมค๊า!)" + speedBonusText;
+                feedbackText.className = "text-emerald-500 text-sm font-black animate-pulse";
+            }
+            score++;
+            if (scoreDisplay) scoreDisplay.innerText = score;
+            comboStreak++;
+            playerEXP += 30 + (comboStreak * 5) + bonusExp;
+            calculateRPGBond();
+            updateComboUI();
+
+            mascotTalk(`เก่งมากๆ เลยค๊าาา! อ่านจับใจความได้ถูกต้องยอดเยี่ยม! คอมโบสะสม x${comboStreak} แล้วน้า! 🎉`, 'happy');
+        } else {
+            playIncorrectSound();
+            if (clickedButton) clickedButton.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-700 font-bold shadow-[0_0_15px_rgba(244,63,94,0.2)] flex items-start gap-3";
+            if (feedbackText) {
+                feedbackText.innerText = "❌ 残念 (คำตอบยังไม่ถูกต้องน้าค๊า)";
+                feedbackText.className = "text-rose-500 text-sm font-black";
+            }
+            comboStreak = 0;
+            updateComboUI();
+            if (allButtons[currentData.correct]) {
+                allButtons[currentData.correct].className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-800 font-bold flex items-start gap-3";
+            }
+            mascotTalk(`โถ่... ข้อนี้คำตอบที่ถูกต้องคือข้อ [ ${currentData.correct + 1} ] นะคะ ลองดูคำอธิบายเฉลยด้านล่างได้เลยค่ะ! 💪`, 'sad');
+        }
+
+        if (expBox && currentData.explanation) {
+            expBox.innerHTML = `💡 <b>คำอธิบายเฉลย:</b> ${currentData.explanation}`;
+            expBox.classList.remove('hidden');
+        }
+
+        // แสดงคำแปลบทอ่านภาษาไทยหลังตอบคำถามแล้วเท่านั้น
+        if (questionHint) {
+            if (currentData.thaiHint) {
+                questionHint.innerHTML = `<span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-lightbulb text-purple-500 animate-bounce" style="animation-duration: 2s"></i> <span><strong class="text-purple-600">คำแปล / วิเคราะห์บทอ่าน:</strong> <span class="text-slate-800 dark:text-slate-100 font-bold">${currentData.thaiHint}</span></span></span>`;
+                questionHint.classList.remove('hidden');
+                questionHint.style.display = 'inline-block';
+            } else {
+                questionHint.classList.add('hidden');
+                questionHint.style.display = 'none';
+            }
+        }
+
+        if (pronounceBtn) {
+            pronounceBtn.classList.remove('hidden');
+        }
+
+        if (nextBtn) {
+            nextBtn.classList.remove('hidden');
+            nextBtn.classList.add('flex');
+        }
+        return;
+    }
 
     if (activeMode.isGrammar) {
         // --- ประมวลผลผลลัพธ์โหมดไวยากรณ์ (Grammar Mode) ---
@@ -2859,8 +2963,18 @@ function submitGrammarTypedAnswer() {
 document.addEventListener('DOMContentLoaded', () => {
     const typeInput = document.getElementById('grammar-type-input');
     if (typeInput) {
+        typeInput.addEventListener('input', (e) => {
+            if (romajiAutoConvertEnabled) {
+                const originalVal = e.target.value;
+                const converted = romajiToHiragana(originalVal);
+                if (converted !== originalVal) {
+                    e.target.value = converted;
+                }
+            }
+        });
         typeInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
+                e.preventDefault();
                 submitGrammarTypedAnswer();
             }
         });
