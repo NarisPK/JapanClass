@@ -53,7 +53,7 @@
                         <h1
                             class="text-xl md:text-2xl font-black tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500 uppercase font-kawaii group-hover:opacity-90 transition">
                             日本語　勉強しましょう</h1>
-                        <span class="text-[10px] font-black bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full border border-pink-300 shadow-xs" title="เวอร์ชันปัจจุบัน">v0.0.4</span>
+                        <span class="text-[10px] font-black bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full border border-pink-300 shadow-xs" title="เวอร์ชันปัจจุบัน">v0.0.5</span>
                     </div>
                     <p class="text-[9px] md:text-[10px] text-rose-400/70 uppercase tracking-widest font-bold">
                         มาเรียนภาษาญี่ปุ่นกันเถอะ (กดเพื่อกลับหน้าแรก)</p>
@@ -178,7 +178,7 @@
                         <i class="fa-solid fa-heart text-white animate-pulse"></i> <span>หากต้องการสนับสนุนหรือโดเนท</span>
                     </button>
                     <div class="text-center pt-0.5">
-                        <span class="text-[9px] font-black text-rose-500/80 bg-pink-100/70 border border-pink-200/80 px-2 py-0.5 rounded-full">เวอร์ชัน 0.0.4</span>
+                        <span class="text-[9px] font-black text-rose-500/80 bg-pink-100/70 border border-pink-200/80 px-2 py-0.5 rounded-full">เวอร์ชัน 0.0.5</span>
                     </div>
                 </div>
             </div>
@@ -223,21 +223,28 @@
                         </button>
                     </div>
 
-                    <!-- แถบสลับหมวด: คำศัพท์ vs ไวยากรณ์ เติมคำช่วย -->
+                    <!-- แถบสลับหมวด: คำศัพท์ vs บัตรคำศัพท์ vs ไวยากรณ์ เติมคำช่วย -->
                     <div
-                        id="category-tabs-container" class="flex items-center justify-center gap-2 p-1.5 bg-white/70 backdrop-blur-md rounded-2xl border border-rose-100 max-w-md mx-auto shadow-sm">
+                        id="category-tabs-container" class="grid grid-cols-3 gap-2 p-1.5 bg-white/70 dark:bg-slate-800/80 backdrop-blur-md rounded-2xl border border-rose-100 dark:border-slate-700 max-w-xl mx-auto shadow-sm">
                         <button id="tab-vocab-btn" onclick="switchCategoryTab('vocab')"
-                            class="flex-1 py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r from-pink-400 to-rose-400 text-white shadow-pink-300/30">
-                            🌸 แบบทดสอบควิซ (บท 1-12)
+                            class="py-2.5 px-2 rounded-xl text-xs transition-all duration-200 flex flex-col items-center justify-center gap-0.5 shadow-sm bg-gradient-to-r from-pink-400 to-rose-400 text-white shadow-pink-300/30 font-black">
+                            <span>🌸 ควิซคำศัพท์</span>
+                            <span class="text-[9.5px] opacity-85 font-extrabold">บท 1-12</span>
+                        </button>
+                        <button id="tab-flashcard-btn" onclick="switchCategoryTab('flashcard')"
+                            class="py-2.5 px-2 rounded-xl text-xs transition-all duration-200 flex flex-col items-center justify-center gap-0.5 text-pink-700 dark:text-pink-300 hover:bg-pink-50 dark:hover:bg-slate-700/60 font-bold bg-white/60 dark:bg-slate-800/60">
+                            <span>🎴 บัตรคำศัพท์</span>
+                            <span class="text-[9.5px] opacity-85 font-extrabold">ควิกเล็ท ↺</span>
                         </button>
                         <button id="tab-grammar-btn" onclick="switchCategoryTab('grammar')"
-                            class="flex-1 py-2.5 px-3 rounded-xl font-bold text-xs transition-all duration-200 flex items-center justify-center gap-1.5 text-pink-700 hover:bg-pink-50">
-                            🎴 บัตรคำศัพท์ (บท 1-12)
+                            class="py-2.5 px-2 rounded-xl text-xs transition-all duration-200 flex flex-col items-center justify-center gap-0.5 text-pink-700 dark:text-pink-300 hover:bg-pink-50 dark:hover:bg-slate-700/60 font-bold bg-white/60 dark:bg-slate-800/60">
+                            <span>⛩️ ไวยากรณ์ เติมคำช่วย</span>
+                            <span class="text-[9.5px] opacity-85 font-extrabold">172 ข้อ</span>
                         </button>
                     </div>
 
                     <!-- แถบเลือกสไตล์การเล่น (Play Mode Selector: ช้อยส์ปกติ / โหมดจับเวลา / เขียนคำศัพท์ / พูดออกเสียง) -->
-                    <div class="space-y-2 max-w-xl mx-auto">
+                    <div id="playstyle-container" class="space-y-2 max-w-xl mx-auto">
                         <div class="flex items-center justify-between px-2 text-[11px] font-black text-rose-900">
                             <span class="flex items-center gap-1.5">
                                 <i class="fa-solid fa-gamepad text-pink-500"></i> เลือกโหมดการฝึกฝน:
@@ -664,22 +671,17 @@
                                     </button>
                                 </div>
 
-                                <!-- กึ่งกลางด้านหน้า: คำศัพท์คันจิหรือคำศัพท์หลักขนาดใหญ่ชัดเจน -->
-                                <div class="my-auto py-4 text-center space-y-4">
-                                    <div id="fc-front-word" class="font-black text-4xl sm:text-5xl md:text-6xl text-rose-950 dark:text-rose-100 tracking-wider font-kawaii break-words drop-shadow-xs">
+                                <!-- กึ่งกลางด้านหน้า: คำศัพท์คันจิหรือคำศัพท์หลักขนาดใหญ่ชัดเจน (ไม่มีคำแปล) -->
+                                <div class="my-auto py-8 text-center">
+                                    <div id="fc-front-word" class="font-black text-5xl sm:text-6xl md:text-7xl text-rose-950 dark:text-rose-100 tracking-wider font-kawaii break-words drop-shadow-xs">
                                         私
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <span id="fc-front-meaning" class="text-sm sm:text-base font-bold text-slate-700 dark:text-slate-200 px-4 py-1.5 bg-white/80 dark:bg-slate-700/80 rounded-2xl border border-pink-100 dark:border-slate-600 shadow-xs">
-                                            ฉัน, ตัวฉัน
-                                        </span>
                                     </div>
                                 </div>
 
                                 <!-- แถบล่างด้านหน้า: คำแนะนำพลิกการ์ด -->
                                 <div class="text-center pt-2 border-t border-pink-100/60 dark:border-slate-700">
                                     <span class="text-[10.5px] sm:text-[11.5px] font-black text-pink-500/90 dark:text-pink-400 flex items-center justify-center gap-1.5">
-                                        <i class="fa-solid fa-hand-pointer animate-bounce"></i> กดที่คำ 2 ครั้ง เพื่อเปิดดูคำอ่านฮิราคานะ ↺
+                                        <i class="fa-solid fa-hand-pointer animate-bounce"></i> กดที่คำ 2 ครั้ง เพื่อเปิดดูคำอ่านฮิราคานะและคำแปล ↺
                                     </span>
                                 </div>
                             </div>
@@ -689,7 +691,7 @@
                                 <!-- แถบบนด้านหลัง -->
                                 <div class="flex items-center justify-between">
                                     <span id="fc-back-badge" class="text-[10px] sm:text-xs font-black text-pink-100 bg-white/20 border border-white/30 px-3 py-1 rounded-full flex items-center gap-1.5">
-                                        ✨ ด้านหลัง • คำอ่านฮิราคานะ
+                                        ✨ ด้านหลัง • คำอ่านและคำแปล
                                     </span>
                                     <button onclick="playFlashcardAudio(event)" title="กดเพื่อฟังเสียงภาษาญี่ปุ่น (ไม่มีเสียงออโต้)"
                                         class="w-11 h-11 rounded-2xl bg-white/20 hover:bg-white/30 text-white hover:scale-110 active:scale-90 shadow-md border border-white/40 flex items-center justify-center transition-all group">

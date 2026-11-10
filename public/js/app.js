@@ -316,8 +316,10 @@ const bookConfigs = {
         num: 1,
         title: "Mina no niongo 1 みんなの日本語 1",
         rangeText: "บท 1-12",
-        vocabLabel: "🌸 แบบทดสอบควิซ (บท 1-12)",
-        grammarLabel: "🎴 บัตรคำศัพท์ (บท 1-12)",
+        vocabLabel: "🌸 ควิซคำศัพท์",
+        flashcardLabel: "🎴 บัตรคำศัพท์",
+        grammarLabel: "⛩️ ไวยากรณ์ เติมคำช่วย",
+        grammarSub: "172 ข้อ",
         themeGrad: "from-pink-400 to-rose-400",
         themeShadow: "shadow-pink-300/30",
         activeClass: "py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r from-pink-400 to-rose-400 text-white shadow-pink-300/30",
@@ -337,8 +339,10 @@ const bookConfigs = {
         num: 2,
         title: "Mina no niongo 2 みんなの日本語 2",
         rangeText: "บท 13-25",
-        vocabLabel: "📘 แบบทดสอบควิซ (บท 13-25)",
-        grammarLabel: "🎴 บัตรคำศัพท์ (บท 13-25)",
+        vocabLabel: "📘 ควิซคำศัพท์",
+        flashcardLabel: "🎴 บัตรคำศัพท์",
+        grammarLabel: "⛩️ ไวยากรณ์ เติมคำช่วย",
+        grammarSub: "260 ข้อ",
         themeGrad: "from-indigo-500 to-blue-600",
         themeShadow: "shadow-indigo-300/30",
         activeClass: "py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r from-indigo-500 to-blue-600 text-white shadow-indigo-300/30",
@@ -358,8 +362,10 @@ const bookConfigs = {
         num: 3,
         title: "Mina no niongo 3 みんなの日本語 3",
         rangeText: "บท 26-38",
-        vocabLabel: "📗 แบบทดสอบควิซ (บท 26-38)",
-        grammarLabel: "🎴 บัตรคำศัพท์ (บท 26-38)",
+        vocabLabel: "📗 ควิซคำศัพท์",
+        flashcardLabel: "🎴 บัตรคำศัพท์",
+        grammarLabel: "⛩️ ไวยากรณ์ เติมคำช่วย",
+        grammarSub: "260 ข้อ",
         themeGrad: "from-emerald-500 to-teal-600",
         themeShadow: "shadow-emerald-300/30",
         activeClass: "py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-emerald-300/30",
@@ -379,8 +385,10 @@ const bookConfigs = {
         num: 4,
         title: "Mina no niongo 4 みんなの日本語 4",
         rangeText: "บท 39-50",
-        vocabLabel: "📙 แบบทดสอบควิซ (บท 39-50)",
-        grammarLabel: "🎴 บัตรคำศัพท์ (บท 39-50)",
+        vocabLabel: "📙 ควิซคำศัพท์",
+        flashcardLabel: "🎴 บัตรคำศัพท์",
+        grammarLabel: "⛩️ ไวยากรณ์ เติมคำช่วย",
+        grammarSub: "238 ข้อ",
         themeGrad: "from-amber-500 to-orange-600",
         themeShadow: "shadow-amber-300/30",
         activeClass: "py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-amber-300/30",
@@ -402,7 +410,7 @@ const bookConfigs = {
         rangeText: "ข้อสอบเก่าแยกพาร์ท (คันจิ・บัตรคำศัพท์・ไวยากรณ์・การอ่าน・การฟัง)",
         vocabLabel: "🎯 คันจิ (ควิซ 295 ข้อ)",
         flashcardLabel: "🎴 บัตรคำศัพท์ N4 (295 คำ)",
-        grammarLabel: "⛩️ ไวยากรณ์ (56 ข้อ)",
+        grammarLabel: "⛩️ ไวยากรณ์ (118 ข้อ)",
         readingLabel: "📖 การอ่าน (読解)",
         listeningLabel: "🎧 การฟัง (聴解)",
         themeGrad: "from-purple-500 to-indigo-600",
@@ -808,7 +816,7 @@ function switchBook(bookNum) {
             currentCategoryTab = 'vocab';
         }
     } else {
-        if (!['vocab', 'grammar'].includes(currentCategoryTab)) {
+        if (!['vocab', 'flashcard', 'grammar'].includes(currentCategoryTab)) {
             currentCategoryTab = 'vocab';
         }
     }
@@ -836,39 +844,54 @@ function renderCategoryTabs() {
     const cfg = bookConfigs[currentBook] || bookConfigs[1];
 
     if (currentBook === 5) {
-        container.className = "grid grid-cols-2 sm:grid-cols-5 gap-2 p-1.5 bg-white/80 backdrop-blur-md rounded-2xl border border-purple-100 max-w-3xl mx-auto shadow-sm";
+        container.className = "grid grid-cols-2 sm:grid-cols-5 gap-2 p-1.5 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md rounded-2xl border border-purple-100 dark:border-slate-700 max-w-3xl mx-auto shadow-sm";
         const tabs = [
             { id: 'vocab', label: '🎯 คันจิ (ควิซ)', count: '295 ข้อ' },
             { id: 'flashcard', label: '🎴 บัตรคำศัพท์', count: '295 คำ' },
-            { id: 'grammar', label: '⛩️ ไวยากรณ์', count: '56 ข้อ' },
+            { id: 'grammar', label: '⛩️ ไวยากรณ์', count: '118 ข้อ' },
             { id: 'reading', label: '📖 การอ่าน', count: 'เตรียมพร้อม 🌸' },
             { id: 'listening', label: '🎧 การฟัง', count: 'เตรียมพร้อม 🌸' }
         ];
         container.innerHTML = tabs.map(t => {
             const isActive = currentCategoryTab === t.id;
             const activeStyle = `bg-gradient-to-r ${cfg.themeGrad} text-white ${cfg.themeShadow} font-black shadow-sm`;
-            const inactiveStyle = `text-purple-700 hover:bg-purple-50 font-bold bg-white/60`;
+            const inactiveStyle = `text-purple-700 dark:text-purple-300 hover:bg-purple-50 dark:hover:bg-slate-700/60 font-bold bg-white/60 dark:bg-slate-800/60`;
             return `
                 <button onclick="switchCategoryTab('${t.id}')"
-                    class="py-2 px-2 rounded-xl text-xs transition-all duration-200 flex flex-col items-center justify-center gap-0.5 ${isActive ? activeStyle : inactiveStyle}">
+                    class="py-2.5 px-2 rounded-xl text-xs transition-all duration-200 flex flex-col items-center justify-center gap-0.5 ${isActive ? activeStyle : inactiveStyle}">
                     <span>${t.label}</span>
                     <span class="text-[9.5px] opacity-85 font-extrabold">${t.count}</span>
                 </button>
             `;
         }).join('');
     } else {
-        container.className = "flex items-center justify-center gap-2 p-1.5 bg-white/70 backdrop-blur-md rounded-2xl border border-rose-100 max-w-md mx-auto shadow-sm";
-        const isVocab = currentCategoryTab === 'vocab';
-        const activeStyle = `flex-1 py-2.5 px-3 rounded-xl font-black text-xs transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm bg-gradient-to-r ${cfg.themeGrad} text-white ${cfg.themeShadow}`;
-        const inactiveStyle = "flex-1 py-2.5 px-3 rounded-xl font-bold text-xs transition-all duration-200 flex items-center justify-center gap-1.5 text-slate-700 hover:bg-slate-100";
-        container.innerHTML = `
-            <button id="tab-vocab-btn" onclick="switchCategoryTab('vocab')" class="${isVocab ? activeStyle : inactiveStyle}">
-                ${cfg.vocabLabel}
-            </button>
-            <button id="tab-grammar-btn" onclick="switchCategoryTab('grammar')" class="${!isVocab ? activeStyle : inactiveStyle}">
-                ${cfg.grammarLabel}
-            </button>
-        `;
+        container.className = "grid grid-cols-3 gap-2 p-1.5 bg-white/70 dark:bg-slate-800/80 backdrop-blur-md rounded-2xl border border-rose-100 dark:border-slate-700 max-w-xl mx-auto shadow-sm";
+        const tabs = [
+            { id: 'vocab', label: cfg.vocabLabel, count: cfg.rangeText },
+            { id: 'flashcard', label: cfg.flashcardLabel, count: 'ควิกเล็ท ↺' },
+            { id: 'grammar', label: cfg.grammarLabel, count: cfg.grammarSub || 'เติมคำช่วย' }
+        ];
+        container.innerHTML = tabs.map(t => {
+            const isActive = currentCategoryTab === t.id;
+            const activeStyle = `bg-gradient-to-r ${cfg.themeGrad} text-white ${cfg.themeShadow} font-black shadow-sm`;
+            const inactiveStyle = `text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/60 font-bold bg-white/60 dark:bg-slate-800/60`;
+            return `
+                <button onclick="switchCategoryTab('${t.id}')"
+                    class="py-2.5 px-2 rounded-xl text-xs transition-all duration-200 flex flex-col items-center justify-center gap-0.5 ${isActive ? activeStyle : inactiveStyle}">
+                    <span>${t.label}</span>
+                    <span class="text-[9.5px] opacity-85 font-extrabold">${t.count}</span>
+                </button>
+            `;
+        }).join('');
+    }
+
+    const playstyleContainer = document.getElementById('playstyle-container');
+    if (playstyleContainer) {
+        if (currentCategoryTab === 'flashcard' || currentCategoryTab === 'reading' || currentCategoryTab === 'listening') {
+            playstyleContainer.classList.add('hidden');
+        } else {
+            playstyleContainer.classList.remove('hidden');
+        }
     }
 }
 
@@ -920,17 +943,15 @@ function renderModesList() {
     container.innerHTML = "";
 
     const cfg = bookConfigs[currentBook] || bookConfigs[1];
-    const isFlashcardTab = (currentBook <= 4 && currentCategoryTab === 'grammar') || (currentBook === 5 && currentCategoryTab === 'flashcard');
+    const isFlashcardTab = currentCategoryTab === 'flashcard';
+    const isGrammarTab = currentCategoryTab === 'grammar';
 
     let keys = Object.keys(allQuizModes).filter(key => {
         const mode = allQuizModes[key];
         const modeBook = mode.book || 1;
         if (modeBook !== currentBook) return false;
 
-        if (isFlashcardTab) {
-            // โหมดบัตรคำศัพท์: นำคำศัพท์ทั้งหมดของแต่ละบทมาสร้างเป็นบัตรคำสไตล์ Quizlet
-            return !mode.isGrammar;
-        } else if (currentBook === 5 && currentCategoryTab === 'grammar') {
+        if (isGrammarTab) {
             return !!mode.isGrammar;
         } else {
             return !mode.isGrammar;
@@ -1076,54 +1097,57 @@ function renderModesList() {
     }
 
     // จัดเรียงลำดับบทเรียนอย่างเป็นระเบียบสำหรับทุกเล่ม
-    if (currentBook === 1) {
-        const book1Order = ['vocab_all_1', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'ひらかな', 'カタカナ'];
-        keys.sort((a, b) => {
-            const idxA = book1Order.indexOf(a);
-            const idxB = book1Order.indexOf(b);
-            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-            if (idxA !== -1) return -1;
-            if (idxB !== -1) return 1;
-            return 0;
-        });
-    } else if (currentBook === 2) {
-        const book2Order = ['vocab_all_2', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'twentyone', 'twentytwo', 'twentythree', 'twentyfour', 'twentyfive'];
-        keys.sort((a, b) => {
-            const idxA = book2Order.indexOf(a);
-            const idxB = book2Order.indexOf(b);
-            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-            if (idxA !== -1) return -1;
-            if (idxB !== -1) return 1;
-            return 0;
-        });
-    } else if (currentBook === 3) {
-        const book3Order = ['vocab_all_3', 'lesson_26', 'lesson_27', 'lesson_28', 'lesson_29', 'lesson_30', 'lesson_31', 'lesson_32', 'lesson_33', 'lesson_34', 'lesson_35', 'lesson_36', 'lesson_37', 'lesson_38'];
-        keys.sort((a, b) => {
-            const idxA = book3Order.indexOf(a);
-            const idxB = book3Order.indexOf(b);
-            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-            if (idxA !== -1) return -1;
-            if (idxB !== -1) return 1;
-            return 0;
-        });
-    } else if (currentBook === 4) {
-        const book4Order = ['vocab_all_4', 'lesson_39', 'lesson_40', 'lesson_41', 'lesson_42', 'lesson_43', 'lesson_44', 'lesson_45', 'lesson_46', 'lesson_47', 'lesson_48', 'lesson_49', 'lesson_50'];
-        keys.sort((a, b) => {
-            const idxA = book4Order.indexOf(a);
-            const idxB = book4Order.indexOf(b);
-            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-            if (idxA !== -1) return -1;
-            if (idxB !== -1) return 1;
-            return 0;
-        });
-    } else if (currentBook === 5) {
-        if (currentCategoryTab === 'grammar') {
+    if (isGrammarTab) {
+        if (currentBook === 1) {
+            const book1GrammarOrder = ['grammar_all_1', 'grammar_1', 'grammar_2', 'grammar_3', 'grammar_4', 'grammar_5', 'grammar_6', 'grammar_7', 'grammar_8', 'grammar_9', 'grammar_10', 'grammar_11', 'grammar_12'];
+            keys.sort((a, b) => {
+                const idxA = book1GrammarOrder.indexOf(a);
+                const idxB = book1GrammarOrder.indexOf(b);
+                if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                if (idxA !== -1) return -1;
+                if (idxB !== -1) return 1;
+                return 0;
+            });
+        } else if (currentBook === 2) {
+            const book2GrammarOrder = ['grammar_all_2', 'grammar_13', 'grammar_14', 'grammar_15', 'grammar_16', 'grammar_17', 'grammar_18', 'grammar_19', 'grammar_20', 'grammar_21', 'grammar_22', 'grammar_23', 'grammar_24', 'grammar_25'];
+            keys.sort((a, b) => {
+                const idxA = book2GrammarOrder.indexOf(a);
+                const idxB = book2GrammarOrder.indexOf(b);
+                if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                if (idxA !== -1) return -1;
+                if (idxB !== -1) return 1;
+                return 0;
+            });
+        } else if (currentBook === 3) {
+            const book3GrammarOrder = ['grammar_all_3', 'grammar_26', 'grammar_27', 'grammar_28', 'grammar_29', 'grammar_30', 'grammar_31', 'grammar_32', 'grammar_33', 'grammar_34', 'grammar_35', 'grammar_36', 'grammar_37', 'grammar_38'];
+            keys.sort((a, b) => {
+                const idxA = book3GrammarOrder.indexOf(a);
+                const idxB = book3GrammarOrder.indexOf(b);
+                if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                if (idxA !== -1) return -1;
+                if (idxB !== -1) return 1;
+                return 0;
+            });
+        } else if (currentBook === 4) {
+            const book4GrammarOrder = ['grammar_all_4', 'grammar_39', 'grammar_40', 'grammar_41', 'grammar_42', 'grammar_43', 'grammar_44', 'grammar_45', 'grammar_46', 'grammar_47', 'grammar_48', 'grammar_49', 'grammar_50'];
+            keys.sort((a, b) => {
+                const idxA = book4GrammarOrder.indexOf(a);
+                const idxB = book4GrammarOrder.indexOf(b);
+                if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                if (idxA !== -1) return -1;
+                if (idxB !== -1) return 1;
+                return 0;
+            });
+        } else if (currentBook === 5) {
             const grammarOrder = [
                 'jlpt_n4_grammar_all',
                 'jlpt_n4_grammar_2021_12',
                 'jlpt_n4_grammar_2021_07',
                 'jlpt_n4_grammar_2018_12',
-                'jlpt_n4_grammar_2017_12'
+                'jlpt_n4_grammar_2017_12',
+                'jlpt_n4_grammar_2013_12',
+                'jlpt_n4_grammar_2013_07',
+                'jlpt_n4_grammar_2010'
             ];
             keys.sort((a, b) => {
                 const idxA = grammarOrder.indexOf(a);
@@ -1133,7 +1157,49 @@ function renderModesList() {
                 if (idxB !== -1) return 1;
                 return 0;
             });
-        } else {
+        }
+    } else {
+        if (currentBook === 1) {
+            const book1Order = ['vocab_all_1', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'ひらかな', 'カタカナ'];
+            keys.sort((a, b) => {
+                const idxA = book1Order.indexOf(a);
+                const idxB = book1Order.indexOf(b);
+                if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                if (idxA !== -1) return -1;
+                if (idxB !== -1) return 1;
+                return 0;
+            });
+        } else if (currentBook === 2) {
+            const book2Order = ['vocab_all_2', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'twentyone', 'twentytwo', 'twentythree', 'twentyfour', 'twentyfive'];
+            keys.sort((a, b) => {
+                const idxA = book2Order.indexOf(a);
+                const idxB = book2Order.indexOf(b);
+                if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                if (idxA !== -1) return -1;
+                if (idxB !== -1) return 1;
+                return 0;
+            });
+        } else if (currentBook === 3) {
+            const book3Order = ['vocab_all_3', 'lesson_26', 'lesson_27', 'lesson_28', 'lesson_29', 'lesson_30', 'lesson_31', 'lesson_32', 'lesson_33', 'lesson_34', 'lesson_35', 'lesson_36', 'lesson_37', 'lesson_38'];
+            keys.sort((a, b) => {
+                const idxA = book3Order.indexOf(a);
+                const idxB = book3Order.indexOf(b);
+                if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                if (idxA !== -1) return -1;
+                if (idxB !== -1) return 1;
+                return 0;
+            });
+        } else if (currentBook === 4) {
+            const book4Order = ['vocab_all_4', 'lesson_39', 'lesson_40', 'lesson_41', 'lesson_42', 'lesson_43', 'lesson_44', 'lesson_45', 'lesson_46', 'lesson_47', 'lesson_48', 'lesson_49', 'lesson_50'];
+            keys.sort((a, b) => {
+                const idxA = book4Order.indexOf(a);
+                const idxB = book4Order.indexOf(b);
+                if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                if (idxA !== -1) return -1;
+                if (idxB !== -1) return 1;
+                return 0;
+            });
+        } else if (currentBook === 5) {
             const vocabOrder = [
                 'jlpt_n4_all',
                 'jlpt_n4_2024_12', 'jlpt_n4_2024_07', 'jlpt_n4_2023_07',
@@ -4482,16 +4548,13 @@ function renderCurrentFlashcard() {
         progressBar.style.width = `${pct}%`;
     }
 
-    // ด้านหน้า: แสดงคำศัพท์คันจิ/คำศัพท์หลัก และความหมายภาษาไทย
+    // ด้านหน้า: แสดงคำศัพท์คันจิ/คำศัพท์หลักอย่างชัดเจน (ไม่มีคำแปลภาษาไทยตามสไตล์ควิกเล็ท)
     const frontBadge = document.getElementById('fc-front-badge');
     if (frontBadge) frontBadge.innerText = `🌸 ด้านหน้า • ใบที่ ${fcCurrentIndex + 1} / ${fcCards.length}`;
 
     const frontWord = document.getElementById('fc-front-word');
     const mainWord = card.kanji || card.character || card.japaneseText || '';
     if (frontWord) frontWord.innerText = mainWord;
-
-    const frontMeaning = document.getElementById('fc-front-meaning');
-    if (frontMeaning) frontMeaning.innerText = card.hint || card.thaiMeaning || '';
 
     // ด้านหลัง: แสดงคำอ่านที่เป็นฮิราคานะเด่นชัดเจน โรมาจิ และคันจิ
     const backBadge = document.getElementById('fc-back-badge');
