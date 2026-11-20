@@ -460,6 +460,13 @@ if (typeof jlptN4Data !== 'undefined') {
     });
 }
 
+// ผนวกข้อมูลข้อสอบพาร์ทคันจิ JLPT N4 (文字) จากข้อสอบจริง
+if (typeof jlptN4KanjiExamData !== 'undefined') {
+    Object.keys(jlptN4KanjiExamData).forEach(k => {
+        defaultQuizModes[k] = jlptN4KanjiExamData[k];
+    });
+}
+
 // ผนวกข้อมูลไวยากรณ์ข้อสอบวัดระดับ JLPT N4 (文法) จากข้อสอบจริง
 if (typeof jlptN4GrammarData !== 'undefined') {
     Object.keys(jlptN4GrammarData).forEach(k => {

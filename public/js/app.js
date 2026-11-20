@@ -407,9 +407,10 @@ const bookConfigs = {
     5: {
         num: 5,
         title: "คลังข้อสอบวัดระดับภาษาญี่ปุ่น JLPT N4",
-        rangeText: "ข้อสอบเก่าแยกพาร์ท (คันจิ・บัตรคำศัพท์・ไวยากรณ์・การอ่าน・การฟัง)",
+        rangeText: "ข้อสอบเก่าแยกพาร์ท (คันจิควิซ・บัตรคำศัพท์・พาร์ทคันจิ・ไวยากรณ์・การอ่าน・การฟัง)",
         vocabLabel: "🎯 คันจิ (ควิซ 295 ข้อ)",
         flashcardLabel: "🎴 บัตรคำศัพท์ N4 (295 คำ)",
+        kanjiExamLabel: "📝 พาร์ทคันจิ (125 ข้อ)",
         grammarLabel: "⛩️ ไวยากรณ์ (118 ข้อ)",
         readingLabel: "📖 การอ่าน (44 ข้อ)",
         listeningLabel: "🎧 การฟัง (聴解)",
@@ -446,6 +447,13 @@ function loadQuizDatabase() {
     if (typeof jlptN4ReadingData !== 'undefined') {
         Object.keys(jlptN4ReadingData).forEach(k => {
             allQuizModes[k] = jlptN4ReadingData[k];
+        });
+    }
+
+    // ผนวกข้อมูลข้อสอบพาร์ทคันจิ JLPT N4 (文字) จากข้อสอบจริง
+    if (typeof jlptN4KanjiExamData !== 'undefined') {
+        Object.keys(jlptN4KanjiExamData).forEach(k => {
+            allQuizModes[k] = jlptN4KanjiExamData[k];
         });
     }
 
@@ -838,6 +846,9 @@ if (pronounceBtn) {
         if (currentData) {
             if (activeMode.isReading) {
                 speakJapanese(currentData.question);
+            } else if (activeMode.isKanjiExam) {
+                const textToSpeak = currentData.character ? currentData.character.replace(/<[^>]+>/g, '') : currentData.kanji;
+                speakJapanese(textToSpeak || (currentData.choices && currentData.choices[currentData.correct]) || currentData.japaneseText);
             } else if (activeMode.isGrammar) {
                 speakJapanese(currentData.fullSentence);
             } else {
@@ -895,7 +906,7 @@ function switchBook(bookNum) {
 
     mascotTalk(cfg.mascotMsg, 'happy');
     if (currentBook === 5) {
-        if (!['vocab', 'flashcard', 'grammar', 'reading', 'listening'].includes(currentCategoryTab)) {
+        if (!['vocab', 'flashcard', 'kanji_exam', 'grammar', 'reading', 'listening'].includes(currentCategoryTab)) {
             currentCategoryTab = 'vocab';
         }
     } else {
@@ -927,10 +938,11 @@ function renderCategoryTabs() {
     const cfg = bookConfigs[currentBook] || bookConfigs[1];
 
     if (currentBook === 5) {
-        container.className = "grid grid-cols-2 sm:grid-cols-5 gap-2 p-1.5 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md rounded-2xl border border-purple-100 dark:border-slate-700 max-w-3xl mx-auto shadow-sm";
+        container.className = "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 p-1.5 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md rounded-2xl border border-purple-100 dark:border-slate-700 max-w-4xl mx-auto shadow-sm";
         const tabs = [
-            { id: 'vocab', label: '🎯 คันจิ (ควิซ)', count: '295 ข้อ' },
+            { id: 'vocab', label: '🎯 คันจิ (ควิซ)', count: '295 คำ' },
             { id: 'flashcard', label: '🎴 บัตรคำศัพท์', count: '295 คำ' },
+            { id: 'kanji_exam', label: '📝 พาร์ทคันจิ', count: '125 ข้อ' },
             { id: 'grammar', label: '⛩️ ไวยากรณ์', count: '118 ข้อ' },
             { id: 'reading', label: '📖 การอ่าน', count: '44 ข้อ' },
             { id: 'listening', label: '🎧 การฟัง', count: 'เตรียมพร้อม 🌸' }
@@ -970,7 +982,7 @@ function renderCategoryTabs() {
 
     const playstyleContainer = document.getElementById('playstyle-container');
     if (playstyleContainer) {
-        if (currentCategoryTab === 'flashcard' || currentCategoryTab === 'reading' || currentCategoryTab === 'listening') {
+        if (currentCategoryTab === 'flashcard' || currentCategoryTab === 'reading' || currentCategoryTab === 'listening' || currentCategoryTab === 'kanji_exam') {
             playstyleContainer.classList.add('hidden');
         } else {
             playstyleContainer.classList.remove('hidden');
@@ -1027,8 +1039,25 @@ function renderModesList() {
 
     const cfg = bookConfigs[currentBook] || bookConfigs[1];
     const isFlashcardTab = currentCategoryTab === 'flashcard';
+    const isKanjiExamTab = currentCategoryTab === 'kanji_exam';
     const isGrammarTab = currentCategoryTab === 'grammar';
     const isReadingTab = currentCategoryTab === 'reading';
+
+    // ถ้าเปิดแท็บพาร์ทคันจิ แต่ไม่ได้อยู่ที่เล่ม 5 (JLPT N4) ให้แสดงการ์ดแนะนำให้ไปเล่ม 5
+    if (isKanjiExamTab && currentBook !== 5) {
+        const notice = document.createElement('div');
+        notice.className = "w-full p-6 bg-white/85 dark:bg-slate-800 rounded-3xl border-2 border-purple-200 dark:border-purple-800 text-center space-y-3 shadow-sm";
+        notice.innerHTML = `
+            <div class="text-4xl">📝</div>
+            <div class="font-extrabold text-slate-800 dark:text-slate-100 text-sm md:text-base">คลังข้อสอบพาร์ทคันจิ (文字) พร้อมใช้งานแล้วในระดับ JLPT N4 (เล่ม 5)</div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">ครบทั้งโจทย์การอ่านคันจิ (漢字読み) และการเขียนคันจิ (漢字表記) รวม 125 ข้อ จากข้อสอบจริง 9 รอบ</p>
+            <button onclick="switchBook(5); switchCategoryTab('kanji_exam');" class="px-5 py-2.5 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-xl font-black text-xs shadow-md hover:scale-105 transition-all">
+                🚀 ไปฝึกพาร์ทคันจิ JLPT N4 เล่ม 5 ทันที!
+            </button>
+        `;
+        container.appendChild(notice);
+        return;
+    }
 
     // ถ้าเปิดแท็บการอ่าน แต่ไม่ได้อยู่ที่เล่ม 5 (JLPT N4) ให้แสดงการ์ดแนะนำให้ไปเล่ม 5
     if (isReadingTab && currentBook !== 5) {
@@ -1053,10 +1082,12 @@ function renderModesList() {
 
         if (isReadingTab) {
             return !!mode.isReading;
+        } else if (isKanjiExamTab) {
+            return !!mode.isKanjiExam;
         } else if (isGrammarTab) {
-            return !!mode.isGrammar && !mode.isReading;
+            return !!mode.isGrammar && !mode.isReading && !mode.isKanjiExam;
         } else {
-            return !mode.isGrammar && !mode.isReading;
+            return !mode.isGrammar && !mode.isReading && !mode.isKanjiExam;
         }
     });
 
@@ -1146,6 +1177,27 @@ function renderModesList() {
         keys.sort((a, b) => {
             const idxA = readingOrder.indexOf(a);
             const idxB = readingOrder.indexOf(b);
+            if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+            if (idxA !== -1) return -1;
+            if (idxB !== -1) return 1;
+            return 0;
+        });
+    } else if (isKanjiExamTab) {
+        const kanjiExamOrder = [
+            'jlpt_n4_kanji_exam_all',
+            'jlpt_n4_kanji_exam_2024_12',
+            'jlpt_n4_kanji_exam_2021_12',
+            'jlpt_n4_kanji_exam_2021_07',
+            'jlpt_n4_kanji_exam_2018_12',
+            'jlpt_n4_kanji_exam_2017_12',
+            'jlpt_n4_kanji_exam_2014_12',
+            'jlpt_n4_kanji_exam_2013_12',
+            'jlpt_n4_kanji_exam_2013_07',
+            'jlpt_n4_kanji_exam_2010_2011'
+        ];
+        keys.sort((a, b) => {
+            const idxA = kanjiExamOrder.indexOf(a);
+            const idxB = kanjiExamOrder.indexOf(b);
             if (idxA !== -1 && idxB !== -1) return idxA - idxB;
             if (idxA !== -1) return -1;
             if (idxB !== -1) return 1;
@@ -1312,8 +1364,8 @@ function renderModesList() {
         } else {
             button.onclick = () => selectMode(key);
 
-            const badgeIcon = mode.isGrammar ? 'fa-scroll' : (mode.isReading ? 'fa-book-open' : cfg.badgeIcon);
-            const badgeColor = mode.isReading ? 'text-purple-600 dark:text-purple-400' : cfg.badgeColor;
+            const badgeIcon = mode.isKanjiExam ? 'fa-pen-to-square' : (mode.isGrammar ? 'fa-scroll' : (mode.isReading ? 'fa-book-open' : cfg.badgeIcon));
+            const badgeColor = mode.isKanjiExam ? 'text-teal-600 dark:text-teal-400' : (mode.isReading ? 'text-purple-600 dark:text-purple-400' : cfg.badgeColor);
 
             button.innerHTML = `
                 <div class="absolute -right-5 -bottom-5 text-5xl opacity-10 group-hover:opacity-20 group-hover:scale-125 transition-all duration-300">${mode.emoji || '🌸'}</div>
@@ -2609,6 +2661,32 @@ function loadQuestion() {
             questionHint.style.display = 'none';
             questionHint.innerHTML = '';
         }
+    } else if (activeMode.isKanjiExam) {
+        // --- โหมดข้อสอบพาร์ทคันจิ JLPT N4 (Kanji Exam Part Mode) ---
+        if (readingPassageCard) readingPassageCard.classList.add('hidden');
+        if (mediaCardContainer) mediaCardContainer.classList.add('hidden');
+        if (grammarSentenceCard) grammarSentenceCard.classList.remove('hidden');
+        if (grammarExpBox) grammarExpBox.classList.add('hidden');
+        if (grammarTypeContainer) grammarTypeContainer.classList.add('hidden');
+
+        mascotTalk(`ข้อสอบพาร์ทคันจิข้อที่ ${currentQuestion + 1}! เลือกคำตอบที่ถูกต้องตามโจทย์ข้อสอบจริงนะคะ 📝✨`, 'idle');
+
+        if (grammarBadgeInstruction) {
+            grammarBadgeInstruction.innerHTML = `<span class="text-teal-600 dark:text-teal-300 font-black"><i class="fa-solid fa-pen-nib"></i> ${currentData.questionType || 'พาร์ทคันจิ (文字)'}</span> • <span class="text-slate-600 dark:text-slate-300 font-bold">${currentData.sourceExam || 'JLPT N4'}</span>`;
+        }
+
+        if (grammarSentenceDisplay) {
+            const formattedSentence = (currentData.character || currentData.kanji || '')
+                .replace(/<u>/g, '<u class="text-teal-700 dark:text-teal-300 font-black decoration-teal-500 underline decoration-2">');
+            grammarSentenceDisplay.innerHTML = formattedSentence;
+        }
+
+        // ซ่อนคำแปลประโยค/คำใบ้ไว้ก่อนเสมอ จนกว่าผู้เล่นจะกดตอบคำถาม
+        if (questionHint) {
+            questionHint.classList.add('hidden');
+            questionHint.style.display = 'none';
+            questionHint.innerHTML = '';
+        }
     } else if (activeMode.isGrammar) {
         // --- โหมดไวยากรณ์ เติมคำช่วย (Grammar Particle Mode) ---
         if (readingPassageCard) readingPassageCard.classList.add('hidden');
@@ -2731,6 +2809,18 @@ function loadQuestion() {
                     button.addEventListener('click', () => selectAnswer(index, button));
                     choicesContainer.appendChild(button);
                 });
+            } else if (activeMode.isKanjiExam) {
+                // สำหรับพาร์ทคันจิข้อสอบจริง: แสดง 4 ตัวเลือกพร้อมหมายเลข 1-4 ตามข้อสอบจริง ไม่สลับตัวเลือก
+                choicesContainer.className = "grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto";
+                currentData.choices.forEach((choice, index) => {
+                    const button = document.createElement('button');
+                    button.setAttribute('translate', 'no');
+                    button.className = "w-full text-center py-4 px-6 rounded-2xl border-2 border-teal-100/80 bg-white hover:bg-teal-50 hover:border-teal-300 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-center justify-center gap-3";
+                    button.innerHTML = `<span class="bg-teal-100 px-2.5 py-1 rounded-xl text-xs font-black text-teal-700 font-kawaii">${index + 1}</span> <span class="font-kawaii text-xl sm:text-2xl font-black text-slate-800 dark:text-slate-100">${choice}</span>`;
+                    button.setAttribute('data-no-click-sound', 'true');
+                    button.addEventListener('click', () => selectAnswer(index, button));
+                    choicesContainer.appendChild(button);
+                });
             } else {
                 choicesContainer.className = "grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto";
 
@@ -2846,6 +2936,73 @@ function selectAnswer(selectedIndex, clickedButton) {
                 questionHint.style.display = 'none';
             }
         }
+
+        if (pronounceBtn) {
+            pronounceBtn.classList.remove('hidden');
+        }
+
+        if (nextBtn) {
+            nextBtn.classList.remove('hidden');
+            nextBtn.classList.add('flex');
+        }
+        return;
+    }
+
+    if (activeMode.isKanjiExam) {
+        // --- ประมวลผลผลลัพธ์โหมดข้อสอบพาร์ทคันจิ (Kanji Exam Part Mode) ---
+        const expBox = document.getElementById('grammar-explanation-box');
+
+        if (selectedIndex === currentData.correct) {
+            playCorrectSound();
+            if (clickedButton) clickedButton.className = "w-full text-center py-4 px-6 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-800 font-black shadow-[0_0_15px_rgba(52,211,153,0.2)] flex items-center justify-center gap-3";
+            let bonusExp = 0;
+            let speedBonusText = "";
+            if (currentPlayStyle === 'timer' && timeLeft >= Math.floor(timerDuration * 0.45)) {
+                bonusExp = 15;
+                speedBonusText = " ⚡ Speed Bonus +15 EXP!";
+            }
+            if (feedbackText) {
+                feedbackText.innerText = "🌸 正解 (ตอบพาร์ทคันจิถูกต้องยอดเยี่ยมค๊า!)" + speedBonusText;
+                feedbackText.className = "text-emerald-500 text-sm font-black animate-pulse";
+            }
+            score++;
+            if (scoreDisplay) scoreDisplay.innerText = score;
+            comboStreak++;
+            playerEXP += 25 + (comboStreak * 5) + bonusExp;
+            calculateRPGBond();
+            updateComboUI();
+
+            mascotTalk(`เก่งมากๆ เลยค๊าาา! คำตอบที่ถูกต้องคือ『${currentData.choices[currentData.correct]}』ค่ะ! คอมโบสะสม x${comboStreak} แล้วน้า! 🎉`, 'happy');
+        } else {
+            playIncorrectSound();
+            if (clickedButton) clickedButton.className = "w-full text-center py-4 px-6 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-700 font-black shadow-[0_0_15px_rgba(244,63,94,0.2)] flex items-center justify-center gap-3";
+            if (feedbackText) {
+                feedbackText.innerText = "❌ 残念 (คำตอบยังไม่ถูกต้องน้าค๊า)";
+                feedbackText.className = "text-rose-500 text-sm font-black";
+            }
+            comboStreak = 0;
+            updateComboUI();
+            if (allButtons[currentData.correct]) {
+                allButtons[currentData.correct].className = "w-full text-center py-4 px-6 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-800 font-black flex items-center justify-center gap-3";
+            }
+            mascotTalk(`โถ่... ข้อนี้คำตอบที่ถูกต้องคือข้อ [ ${currentData.correct + 1} ] 『${currentData.choices[currentData.correct]}』 นะคะ ดูคำอธิบายเฉลยด้านล่างได้เลยค่ะ! 💪`, 'sad');
+        }
+
+        if (expBox && currentData.explanation) {
+            expBox.innerHTML = `💡 <b>คำอธิบายเฉลย:</b> ${currentData.explanation}`;
+            expBox.classList.remove('hidden');
+        }
+
+        if (questionHint && currentData.hint) {
+            questionHint.innerHTML = `<span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-lightbulb text-teal-500 animate-bounce" style="animation-duration: 2s"></i> <span><strong class="text-teal-700">ประโยคและคำแปล:</strong> <span class="text-slate-800 dark:text-slate-100 font-bold">${currentData.hint}</span></span></span>`;
+            questionHint.classList.remove('hidden');
+            questionHint.style.display = 'inline-block';
+        }
+
+        setTimeout(() => {
+            const textToSpeak = currentData.character ? currentData.character.replace(/<[^>]+>/g, '') : currentData.kanji;
+            speakJapanese(textToSpeak || currentData.choices[currentData.correct]);
+        }, 200);
 
         if (pronounceBtn) {
             pronounceBtn.classList.remove('hidden');
