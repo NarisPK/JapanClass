@@ -411,7 +411,7 @@ const bookConfigs = {
         vocabLabel: "🎯 คันจิ (ควิซ 295 ข้อ)",
         flashcardLabel: "🎴 บัตรคำศัพท์ N4 (295 คำ)",
         grammarLabel: "⛩️ ไวยากรณ์ (118 ข้อ)",
-        readingLabel: "📖 การอ่าน (24 ข้อ)",
+        readingLabel: "📖 การอ่าน (44 ข้อ)",
         listeningLabel: "🎧 การฟัง (聴解)",
         themeGrad: "from-purple-500 to-indigo-600",
         themeShadow: "shadow-purple-300/30",
@@ -932,7 +932,7 @@ function renderCategoryTabs() {
             { id: 'vocab', label: '🎯 คันจิ (ควิซ)', count: '295 ข้อ' },
             { id: 'flashcard', label: '🎴 บัตรคำศัพท์', count: '295 คำ' },
             { id: 'grammar', label: '⛩️ ไวยากรณ์', count: '118 ข้อ' },
-            { id: 'reading', label: '📖 การอ่าน', count: '24 ข้อ' },
+            { id: 'reading', label: '📖 การอ่าน', count: '44 ข้อ' },
             { id: 'listening', label: '🎧 การฟัง', count: 'เตรียมพร้อม 🌸' }
         ];
         container.innerHTML = tabs.map(t => {
@@ -1037,7 +1037,7 @@ function renderModesList() {
         notice.innerHTML = `
             <div class="text-4xl">📖</div>
             <div class="font-extrabold text-slate-800 dark:text-slate-100 text-sm md:text-base">คลังข้อสอบการอ่าน (読解) พร้อมใช้งานแล้วในระดับ JLPT N4 (เล่ม 5)</div>
-            <p class="text-xs text-slate-500 dark:text-slate-400">ครบทั้งบทความสั้น (短文), บทความขนาดกลาง (中文), และการค้นหาข้อมูล (情報検索) รวม 24 ข้อ จากข้อสอบจริง</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">ครบทั้งบทความสั้น (短文), บทความขนาดกลาง (中文), และการค้นหาข้อมูล (情報検索) รวม 44 ข้อ จากข้อสอบจริง</p>
             <button onclick="switchBook(5); switchCategoryTab('reading');" class="px-5 py-2.5 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-xl font-black text-xs shadow-md hover:scale-105 transition-all">
                 🚀 ไปฝึกพาร์ทการอ่าน JLPT N4 เล่ม 5 ทันที!
             </button>
@@ -1139,7 +1139,9 @@ function renderModesList() {
             'jlpt_n4_reading_all',
             'jlpt_n4_reading_2024_12',
             'jlpt_n4_reading_2021_12',
-            'jlpt_n4_reading_2021_07'
+            'jlpt_n4_reading_2021_07',
+            'jlpt_n4_reading_2017_07',
+            'jlpt_n4_reading_2014_07'
         ];
         keys.sort((a, b) => {
             const idxA = readingOrder.indexOf(a);
