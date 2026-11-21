@@ -18,6 +18,24 @@ let currentQuestion = 0;
 let score = 0;
 let answerSelected = false;
 
+// บันทึกรายการข้อที่ตอบผิดเพื่อนำมาทำซ้ำ (Retry Incorrect Questions)
+let incorrectQuestions = [];
+let originalQuizModeKey = null;
+
+function recordIncorrectQuestion(questionData) {
+    if (!questionData) return;
+    const alreadyRecorded = incorrectQuestions.some(q =>
+        q === questionData ||
+        (q.character && questionData.character && q.character === questionData.character && q.correct === questionData.correct) ||
+        (q.japaneseText && questionData.japaneseText && q.japaneseText === questionData.japaneseText && q.correct === questionData.correct) ||
+        (q.sentenceWithBlank && questionData.sentenceWithBlank && q.sentenceWithBlank === questionData.sentenceWithBlank) ||
+        (q.readingText && questionData.readingText && q.readingText === questionData.readingText && q.questionNumber === questionData.questionNumber)
+    );
+    if (!alreadyRecorded) {
+        incorrectQuestions.push(questionData);
+    }
+}
+
 // RPG Bond Mechanics
 let comboStreak = 0;
 let playerEXP = 0;
@@ -1568,6 +1586,7 @@ function onQuestionTimeUp() {
     const activeMode = allQuizModes[currentModeKey];
     if (!activeMode || !activeMode.questions) return;
     const currentData = activeMode.questions[currentQuestion];
+    recordIncorrectQuestion(currentData);
     const allButtons = choicesContainer ? choicesContainer.querySelectorAll('button') : [];
 
     // ไฮไลต์ข้อที่ถูกต้องด้วยสีเขียว
@@ -1739,6 +1758,7 @@ function submitWritingAnswer() {
         updateComboUI();
         mascotTalk(`เก่งมากๆ เลยค๊าาา! เขียนว่า『${targetReading}』ถูกต้องเป๊ะเลย! คอมโบสะสม x${comboStreak} แล้วน้า! 🎉`, 'happy');
     } else {
+        recordIncorrectQuestion(currentData);
         playIncorrectSound();
         inputEl.className = "w-full text-center py-3.5 px-10 rounded-2xl border-2 border-rose-500 bg-rose-50 text-rose-700 font-black text-xl sm:text-2xl shadow-[0_0_15px_rgba(244,63,94,0.3)] notranslate font-kawaii shake-anime";
         if (feedbackText) {
@@ -1778,6 +1798,7 @@ function revealWritingAnswer() {
     const activeMode = allQuizModes[currentModeKey];
     if (!activeMode || !activeMode.questions) return;
     const currentData = activeMode.questions[currentQuestion];
+    recordIncorrectQuestion(currentData);
     const targetReading = currentData.japaneseText || currentData.character || (currentData.choices && currentData.choices[currentData.correct]) || '';
 
     if (inputEl) {
@@ -2096,6 +2117,7 @@ function skipSpeakingQuestion() {
     const activeMode = allQuizModes[currentModeKey];
     if (!activeMode || !activeMode.questions) return;
     const currentData = activeMode.questions[currentQuestion];
+    recordIncorrectQuestion(currentData);
     const targetWord = currentData.japaneseText || currentData.character || (currentData.choices && currentData.choices[currentData.correct]) || '';
 
     comboStreak = 0;
@@ -2145,7 +2167,7 @@ function advanceToNextQuestion() {
 }
 
 // เริ่มเข้าสู่แบบทดสอบทายคำศัพท์หรือไวยากรณ์
-function selectMode(modeKey) {
+function selectMode(modeKey, isRetry = false) {
     const selectedMode = allQuizModes[modeKey];
     if (!selectedMode || !selectedMode.questions || selectedMode.questions.length === 0) {
         playIncorrectSound();
@@ -2168,6 +2190,11 @@ function selectMode(modeKey) {
         }
         return;
     }
+
+    if (!isRetry) {
+        originalQuizModeKey = modeKey;
+    }
+    incorrectQuestions = [];
 
     currentModeKey = modeKey;
 
@@ -2912,6 +2939,7 @@ function selectAnswer(selectedIndex, clickedButton) {
 
             mascotTalk(`เก่งมากๆ เลยค๊าาา! อ่านจับใจความได้ถูกต้องยอดเยี่ยม! คอมโบสะสม x${comboStreak} แล้วน้า! 🎉`, 'happy');
         } else {
+            recordIncorrectQuestion(currentData);
             playIncorrectSound();
             if (clickedButton) clickedButton.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-700 font-bold shadow-[0_0_15px_rgba(244,63,94,0.2)] flex items-start gap-3";
             if (feedbackText) {
@@ -2980,6 +3008,7 @@ function selectAnswer(selectedIndex, clickedButton) {
 
             mascotTalk(`เก่งมากๆ เลยค๊าาา! คำตอบที่ถูกต้องคือ『${currentData.choices[currentData.correct]}』ค่ะ! คอมโบสะสม x${comboStreak} แล้วน้า! 🎉`, 'happy');
         } else {
+            recordIncorrectQuestion(currentData);
             playIncorrectSound();
             if (clickedButton) clickedButton.className = "w-full text-center py-4 px-6 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-700 font-black shadow-[0_0_15px_rgba(244,63,94,0.2)] flex items-center justify-center gap-3";
             if (feedbackText) {
@@ -3054,6 +3083,7 @@ function selectAnswer(selectedIndex, clickedButton) {
 
             mascotTalk(`เก่งมากๆ เลยค๊าาา! ประโยคที่สมบูรณ์คือ『${currentData.fullSentence}』ค่ะ! คอมโบสะสม x${comboStreak} แล้วน้า! 🎉`, 'happy');
         } else {
+            recordIncorrectQuestion(currentData);
             playIncorrectSound();
             if (clickedButton) clickedButton.className = "w-full text-center py-4 px-6 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-600 font-black shadow-[0_0_15px_rgba(244,63,94,0.2)] flex items-center justify-center gap-3";
             if (feedbackText) {
@@ -3131,6 +3161,7 @@ function selectAnswer(selectedIndex, clickedButton) {
         const displayWord = (currentData.character && currentData.choices) ? `${currentData.character} (${currentData.choices[currentData.correct]})` : (currentData.japaneseText || (currentData.choices && currentData.choices[currentData.correct]) || 'คำนี้');
         mascotTalk(`เก่งมากๆ เลยค๊าาา! ตอบถูกเผงเลย คำนี้อ่านว่า『${displayWord}』นะคะ! คอมโบสะสม x${comboStreak} แล้วน้า! 🎉`, 'happy');
     } else {
+        recordIncorrectQuestion(currentData);
         playIncorrectSound();
         clickedButton.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-500 font-extrabold shadow-[0_0_15px_rgba(244,63,94,0.2)] transition-all flex items-center";
         if (feedbackText) {
@@ -3280,6 +3311,20 @@ function showResults() {
         currentTotalScoreEl.innerText = ` / ${totalQs} เควสต์`;
     }
 
+    // แสดง/ซ่อนปุ่มทำอีกครั้งเฉพาะข้อที่ตอบผิด
+    const retryBtn = document.getElementById('retry-incorrect-btn');
+    const retryBtnText = document.getElementById('retry-incorrect-btn-text');
+    if (retryBtn) {
+        if (incorrectQuestions.length > 0) {
+            retryBtn.classList.remove('hidden');
+            if (retryBtnText) {
+                retryBtnText.innerText = `ทำอีกครั้งเฉพาะข้อที่ตอบผิด (${incorrectQuestions.length} ข้อ)`;
+            }
+        } else {
+            retryBtn.classList.add('hidden');
+        }
+    }
+
     const percentage = (score / totalQs) * 100;
     const incompleteContainer = document.getElementById('incomplete-score-image-container');
     const fullContainer = document.getElementById('full-score-image-container');
@@ -3314,6 +3359,18 @@ function goHome() {
     if (quizScreen) quizScreen.classList.add('hidden');
     if (resultArea) resultArea.classList.add('hidden');
     if (adminScreen) adminScreen.classList.add('hidden');
+
+    const retryBtn = document.getElementById('retry-incorrect-btn');
+    if (retryBtn) retryBtn.classList.add('hidden');
+
+    // ล้างโหมดแบบทดสอบเฉพาะข้อที่ผิดชั่วคราว
+    Object.keys(allQuizModes).forEach(k => {
+        if (k.startsWith('retry_incorrect_')) {
+            delete allQuizModes[k];
+        }
+    });
+    originalQuizModeKey = null;
+    incorrectQuestions = [];
 
     const fcScreen = document.getElementById('flashcard-screen');
     if (fcScreen) fcScreen.classList.add('hidden');
@@ -3351,9 +3408,39 @@ if (restartBtn) {
     restartBtn.addEventListener('click', () => {
         stopQuestionTimer();
         stopVoiceRecognition();
-        selectMode(currentModeKey);
+        const targetMode = originalQuizModeKey || currentModeKey;
+        // ล้างโหมดแบบทดสอบเฉพาะข้อที่ผิดชั่วคราว
+        Object.keys(allQuizModes).forEach(k => {
+            if (k.startsWith('retry_incorrect_')) {
+                delete allQuizModes[k];
+            }
+        });
+        selectMode(targetMode);
     });
 }
+
+// ทำอีกครั้งเฉพาะข้อที่ตอบผิด
+function retryIncorrectQuestions() {
+    if (!incorrectQuestions || incorrectQuestions.length === 0) return;
+
+    stopQuestionTimer();
+    stopVoiceRecognition();
+
+    const baseModeKey = originalQuizModeKey || currentModeKey;
+    const baseMode = allQuizModes[baseModeKey] || {};
+
+    const retryModeKey = `retry_incorrect_${Date.now()}`;
+    const retryQuestions = incorrectQuestions.map(q => ({ ...q }));
+
+    allQuizModes[retryModeKey] = {
+        ...baseMode,
+        title: `${baseMode.title || 'แบบทดสอบ'} (ทบทวนข้อที่ผิด)`,
+        questions: retryQuestions
+    };
+
+    selectMode(retryModeKey, true);
+}
+window.retryIncorrectQuestions = retryIncorrectQuestions;
 
 function openPasswordGate() {
     const passwordInput = document.getElementById('admin-password-input');
