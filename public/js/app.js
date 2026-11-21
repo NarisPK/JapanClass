@@ -410,7 +410,7 @@ const bookConfigs = {
         rangeText: "ข้อสอบเก่าแยกพาร์ท (คันจิควิซ・บัตรคำศัพท์・พาร์ทคันจิ・ไวยากรณ์・การอ่าน・การฟัง)",
         vocabLabel: "🎯 คันจิ (ควิซ 295 ข้อ)",
         flashcardLabel: "🎴 บัตรคำศัพท์ N4 (295 คำ)",
-        kanjiExamLabel: "📝 พาร์ทคันจิ (125 ข้อ)",
+        kanjiExamLabel: "📝 พาร์ทคันจิ (292 ข้อ)",
         grammarLabel: "⛩️ ไวยากรณ์ (118 ข้อ)",
         readingLabel: "📖 การอ่าน (44 ข้อ)",
         listeningLabel: "🎧 การฟัง (聴解)",
@@ -942,7 +942,7 @@ function renderCategoryTabs() {
         const tabs = [
             { id: 'vocab', label: '🎯 คันจิ (ควิซ)', count: '295 คำ' },
             { id: 'flashcard', label: '🎴 บัตรคำศัพท์', count: '295 คำ' },
-            { id: 'kanji_exam', label: '📝 พาร์ทคันจิ', count: '125 ข้อ' },
+            { id: 'kanji_exam', label: '📝 พาร์ทคันจิ', count: '292 ข้อ' },
             { id: 'grammar', label: '⛩️ ไวยากรณ์', count: '118 ข้อ' },
             { id: 'reading', label: '📖 การอ่าน', count: '44 ข้อ' },
             { id: 'listening', label: '🎧 การฟัง', count: 'เตรียมพร้อม 🌸' }
@@ -1050,7 +1050,7 @@ function renderModesList() {
         notice.innerHTML = `
             <div class="text-4xl">📝</div>
             <div class="font-extrabold text-slate-800 dark:text-slate-100 text-sm md:text-base">คลังข้อสอบพาร์ทคันจิ (文字) พร้อมใช้งานแล้วในระดับ JLPT N4 (เล่ม 5)</div>
-            <p class="text-xs text-slate-500 dark:text-slate-400">ครบทั้งโจทย์การอ่านคันจิ (漢字読み) และการเขียนคันจิ (漢字表記) รวม 125 ข้อ จากข้อสอบจริง 9 รอบ</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">ครบทุกรูปแบบ もんだい 1-5 (การอ่านคันจิ, การเขียนคันจิ, คำตามบริบท, ความหมายใกล้เคียง, และการใช้คำ) รวม 292 ข้อ จากข้อสอบจริง 9 รอบ</p>
             <button onclick="switchBook(5); switchCategoryTab('kanji_exam');" class="px-5 py-2.5 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-xl font-black text-xs shadow-md hover:scale-105 transition-all">
                 🚀 ไปฝึกพาร์ทคันจิ JLPT N4 เล่ม 5 ทันที!
             </button>
@@ -2811,12 +2811,18 @@ function loadQuestion() {
                 });
             } else if (activeMode.isKanjiExam) {
                 // สำหรับพาร์ทคันจิข้อสอบจริง: แสดง 4 ตัวเลือกพร้อมหมายเลข 1-4 ตามข้อสอบจริง ไม่สลับตัวเลือก
-                choicesContainer.className = "grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto";
+                const hasLongChoices = currentData.choices.some(c => c && c.length > 15);
+                choicesContainer.className = hasLongChoices ? "grid grid-cols-1 gap-3 max-w-2xl mx-auto" : "grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto";
                 currentData.choices.forEach((choice, index) => {
                     const button = document.createElement('button');
                     button.setAttribute('translate', 'no');
-                    button.className = "w-full text-center py-4 px-6 rounded-2xl border-2 border-teal-100/80 bg-white hover:bg-teal-50 hover:border-teal-300 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-center justify-center gap-3";
-                    button.innerHTML = `<span class="bg-teal-100 px-2.5 py-1 rounded-xl text-xs font-black text-teal-700 font-kawaii">${index + 1}</span> <span class="font-kawaii text-xl sm:text-2xl font-black text-slate-800 dark:text-slate-100">${choice}</span>`;
+                    if (hasLongChoices) {
+                        button.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-teal-100/80 bg-white hover:bg-teal-50 hover:border-teal-300 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-center gap-3.5";
+                        button.innerHTML = `<span class="bg-teal-100 px-2.5 py-1 rounded-xl text-xs font-black text-teal-700 font-kawaii shrink-0">${index + 1}</span> <span class="font-medium text-sm sm:text-base text-slate-800 dark:text-slate-100">${choice}</span>`;
+                    } else {
+                        button.className = "w-full text-center py-4 px-6 rounded-2xl border-2 border-teal-100/80 bg-white hover:bg-teal-50 hover:border-teal-300 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-center justify-center gap-3";
+                        button.innerHTML = `<span class="bg-teal-100 px-2.5 py-1 rounded-xl text-xs font-black text-teal-700 font-kawaii">${index + 1}</span> <span class="font-kawaii text-xl sm:text-2xl font-black text-slate-800 dark:text-slate-100">${choice}</span>`;
+                    }
                     button.setAttribute('data-no-click-sound', 'true');
                     button.addEventListener('click', () => selectAnswer(index, button));
                     choicesContainer.appendChild(button);
