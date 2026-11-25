@@ -2684,7 +2684,7 @@ function loadQuestion() {
 
         if (listeningBadgeText) listeningBadgeText.innerText = currentData.mondai || '聴解';
         if (listeningQuestionNum) listeningQuestionNum.innerText = `ข้อ ${currentData.examQNum || (currentQuestion + 1)}`;
-        if (listeningQuestionText) listeningQuestionText.innerText = currentData.character || '';
+        if (listeningQuestionText) listeningQuestionText.innerHTML = currentData.character || '';
         if (listeningQuestionHint) {
             listeningQuestionHint.innerText = currentData.hint ? `แปล: ${currentData.hint}` : '';
             listeningQuestionHint.classList.add('hidden'); // ซ่อนไว้ก่อนตอบ
