@@ -28,7 +28,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こうじ",
             "isCorrect": true,
-            "text": "こうじ = งานก่อสร้าง"
+            "text": "こうじ = งานก่อสร้าง (工事)"
           },
           {
             "choice": "こうごと",
@@ -77,7 +77,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "もって",
             "isCorrect": true,
-            "text": "もって = ถือ/ถือไว้"
+            "text": "もって = มาจาก 持つ (ถือ, พกพา)"
           },
           {
             "choice": "ひろって",
@@ -106,7 +106,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "からだ",
             "isCorrect": true,
-            "text": "からだ = ร่างกาย"
+            "text": "からだ = ร่างกาย (体)"
           },
           {
             "choice": "かお",
@@ -160,7 +160,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "にゅういん",
             "isCorrect": true,
-            "text": "にゅういん = เข้าพักรักษาตัวในโรงพยาบาล"
+            "text": "にゅういん = การเข้าพักรักษาตัวในโรงพยาบาล (入院)"
           }
         ]
       },
@@ -194,7 +194,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ひろい",
             "isCorrect": true,
-            "text": "ひろい = กว้าง"
+            "text": "ひろい = กว้าง, กว้างขวาง (広い)"
           },
           {
             "choice": "とおい",
@@ -228,7 +228,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かんがえました",
             "isCorrect": true,
-            "text": "かんがえました = คิด/พิจารณาแล้ว"
+            "text": "かんがえました = คิด, พิจารณาแล้ว (考える -> 考えました)"
           },
           {
             "choice": "おぼえました",
@@ -267,7 +267,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おやゆび",
             "isCorrect": true,
-            "text": "おやゆび = นิ้วหัวแม่มือ/นิ้วโป้ง"
+            "text": "おやゆび = นิ้วหัวแม่มือ, นิ้วโป้ง (親指)"
           },
           {
             "choice": "おやよび",
@@ -316,7 +316,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "寒い",
             "isCorrect": true,
-            "text": "寒い = หนาว (สภาพอากาศ)"
+            "text": "寒い (さむい) = หนาว (สภาพอากาศ)"
           }
         ]
       },
@@ -345,7 +345,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "朝",
             "isCorrect": true,
-            "text": "朝 = ตอนเช้า"
+            "text": "朝 (あさ) = ตอนเช้า"
           },
           {
             "choice": "昼",
@@ -394,7 +394,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "説明",
             "isCorrect": true,
-            "text": "説明 = การอธิบาย/คำอธิบาย"
+            "text": "説明 (せつめい) = การอธิบาย, คำอธิบาย"
           }
         ]
       },
@@ -418,7 +418,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "空港",
             "isCorrect": true,
-            "text": "空港 = สนามบิน"
+            "text": "空港 (くうこう) = สนามบิน"
           },
           {
             "choice": "銀行",
@@ -467,7 +467,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "走って",
             "isCorrect": true,
-            "text": "走って = วิ่ง"
+            "text": "走って (はしって) = มาจาก 走る (วิ่ง)"
           },
           {
             "choice": "捗って",
@@ -511,7 +511,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "メニュー",
             "isCorrect": true,
-            "text": "メニュー = เมนูอาหาร เหมาะกับบริบทการดูรายการอาหารในร้าน"
+            "text": "メニュー = เมนูอาหาร (Menu)"
           }
         ]
       },
@@ -540,7 +540,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ふくしゅう",
             "isCorrect": true,
-            "text": "ふくしゅう = ทบทวนบทเรียน"
+            "text": "ふくしゅう = การทบทวนบทเรียน (復習)"
           },
           {
             "choice": "けんがく",
@@ -584,7 +584,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さわらないで",
             "isCorrect": true,
-            "text": "さわらないで = อย่าแตะ/อย่าสัมผัส"
+            "text": "さわらないで = อย่าแตะ, อย่าสัมผัส (触る)"
           },
           {
             "choice": "つつまないで",
@@ -613,7 +613,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けんか",
             "isCorrect": true,
-            "text": "けんか = ทะเลาะวิวาท"
+            "text": "けんか = การทะเลาะวิวาท (喧嘩)"
           },
           {
             "choice": "そうだん",
@@ -652,7 +652,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きめましょう",
             "isCorrect": true,
-            "text": "きめましょう = ตัดสินใจ/กำหนด"
+            "text": "きめましょう = มาตัดสินใจกันเถอะ (決める)"
           },
           {
             "choice": "はいりましょう",
@@ -691,17 +691,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "たいてい",
             "isCorrect": false,
-            "text": "たいてい = โดยส่วนใหญ่, โดยปกติ"
+            "text": "たいてい = โดยทั่วไป, ส่วนใหญ่ (大抵)"
           },
           {
             "choice": "ちょうど",
             "isCorrect": false,
-            "text": "ちょうど = พอดี"
+            "text": "ちょうど = พอดี (เวลา/ขนาด) (丁度)"
           },
           {
             "choice": "はっきり",
             "isCorrect": true,
-            "text": "はっきり = ชัดเจน/อย่างตรงไปตรงมา"
+            "text": "はっきり = ชัดเจน, แจ่มแจ้ง"
           },
           {
             "choice": "けっこう",
@@ -735,7 +735,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こわい",
             "isCorrect": true,
-            "text": "こわい = น่ากลัว/รู้สึกกลัว"
+            "text": "こわい = น่ากลัว (怖い)"
           },
           {
             "choice": "かゆい",
@@ -769,22 +769,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "りゆう",
             "isCorrect": false,
-            "text": "りゆう = เชิญทานเยอะๆ ไม่ต้องเกรงใจเลยนะคะ"
+            "text": "りゆう = เหตุผล (理由)"
           },
           {
             "choice": "かんけい",
             "isCorrect": false,
-            "text": "かんけい = สนิทสนมกันดี, เข้ากันได้ดี"
+            "text": "かんけい = ความสัมพันธ์, ความเกี่ยวข้อง (関係)"
           },
           {
             "choice": "きょうみ",
             "isCorrect": false,
-            "text": "きょうみ = ระมัดระวัง"
+            "text": "きょうみ = ความสนใจ (興味)"
           },
           {
             "choice": "つごう",
             "isCorrect": true,
-            "text": "つごう = ไม่สะดวก (เรื่องวันเวลา)"
+            "text": "つごう = ความสะดวก (เรื่องเวลา/นัดหมาย) (都合)"
           }
         ]
       },
@@ -818,7 +818,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "これは とても たかい ものです。",
             "isCorrect": false,
-            "text": "これは とても たかい ものです。 = นี่เป็นสิ่งของที่ราคาแพงมาก (たかい = แพง)"
+            "text": "これは とても たかい ものです。 = นี่เป็นสิ่งของที่มีราคาแพงมาก (たかい = แพง)"
           },
           {
             "choice": "これは とても たいせつな ものです。",
@@ -1120,7 +1120,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "しゅっぱつ",
             "isCorrect": true,
-            "text": "しゅっぱつ = การออกเดินทาง"
+            "text": "しゅっぱつ = การออกเดินทาง (出発)"
           },
           {
             "choice": "しゅうはつ",
@@ -1169,12 +1169,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かんがえて",
             "isCorrect": false,
-            "text": "かんがえて = อยากซื้อพจนานุกรมแท้ๆ แต่เงินไม่พอ (足りる = เพียงพอ)"
+            "text": "かんがえて = คิด, ไตร่ตรอง (考えて <- 考える)"
           },
           {
             "choice": "こたえて",
             "isCorrect": true,
-            "text": "こたえて = ตอบ"
+            "text": "こたえて = ตอบ (คำถาม) (答えて <- 答える)"
           }
         ]
       },
@@ -1198,7 +1198,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きもち",
             "isCorrect": false,
-            "text": "きもち = ตอนที่ไปเที่ยวญี่ปุ่น ได้ทำประสบการณ์ต่างๆ มากมาย"
+            "text": "きもち = ความรู้สึก, อารมณ์ (気持ち)"
           },
           {
             "choice": "あたま",
@@ -1208,12 +1208,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かたち",
             "isCorrect": false,
-            "text": "かたち = แปลกประหลาด, มหัศจรรย์"
+            "text": "かたち = รูปร่าง, รูปทรง (形)"
           },
           {
             "choice": "こころ",
             "isCorrect": true,
-            "text": "こころ = หัวใจ/จิตใจ"
+            "text": "こころ = จิตใจ, หัวใจ (心)"
           }
         ]
       },
@@ -1242,7 +1242,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さいご",
             "isCorrect": true,
-            "text": "さいご = สุดท้าย/ท้ายสุด"
+            "text": "さいご = สุดท้าย, ท้ายสุด (最後)"
           },
           {
             "choice": "せいご",
@@ -1276,7 +1276,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おそい",
             "isCorrect": false,
-            "text": "おそい = มาก, เยอะ"
+            "text": "おそい = ช้า, สาย (遅い)"
           },
           {
             "choice": "ちかい",
@@ -1286,12 +1286,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "とおい",
             "isCorrect": true,
-            "text": "とおい = ไกล"
+            "text": "とおい = ไกล (遠い)"
           },
           {
             "choice": "はやい",
             "isCorrect": false,
-            "text": "はやい = ทะเล"
+            "text": "はやい = เร็ว, เช้าตรู่ (早い/速い)"
           }
         ]
       },
@@ -1315,22 +1315,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あき",
             "isCorrect": false,
-            "text": "あき = สีฟ้า, สีน้ำเงิน"
+            "text": "あき = ฤดูใบไม้ร่วง (秋)"
           },
           {
             "choice": "ふゆ",
             "isCorrect": true,
-            "text": "ふゆ = ฤดูหนาว"
+            "text": "ふゆ = ฤดูหนาว (冬)"
           },
           {
             "choice": "なつ",
             "isCorrect": false,
-            "text": "なつ = ฤดูใบไม้ร่วง"
+            "text": "なつ = ฤดูร้อน (夏)"
           },
           {
             "choice": "はる",
             "isCorrect": false,
-            "text": "はる = ฤดูร้อน"
+            "text": "はる = ฤดูใบไม้ผลิ (春)"
           }
         ]
       },
@@ -1354,7 +1354,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "よしゅう",
             "isCorrect": true,
-            "text": "よしゅう = การเตรียมบทเรียนล่วงหน้า"
+            "text": "よしゅう = การเตรียมบทเรียนล่วงหน้า (予習)"
           },
           {
             "choice": "ようしゅう",
@@ -1408,7 +1408,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "映画",
             "isCorrect": true,
-            "text": "映画 = ภาพยนตร์"
+            "text": "映画 (えいが) = ภาพยนตร์, หนัง"
           }
         ]
       },
@@ -1442,7 +1442,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "作って",
             "isCorrect": true,
-            "text": "作って = ทำ/สร้าง"
+            "text": "作って (つくって) = มาจาก 作る (ทำ, สร้าง)"
           },
           {
             "choice": "売って",
@@ -1471,7 +1471,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "運動",
             "isCorrect": true,
-            "text": "運動 = การออกกำลังกาย"
+            "text": "運動 = การออกกำลังกาย (うんどう)"
           },
           {
             "choice": "連動",
@@ -1515,7 +1515,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "船",
             "isCorrect": true,
-            "text": "船 = เรือ"
+            "text": "船 (ふね) = เรือ"
           },
           {
             "choice": "鳥",
@@ -1549,7 +1549,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "のど",
             "isCorrect": true,
-            "text": "のど = คอ/ลำคอ 「のどがいたい」 = เจ็บคอ"
+            "text": "のど = คอ, ลำคอ (喉)"
           },
           {
             "choice": "ひげ",
@@ -1559,7 +1559,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ゆび",
             "isCorrect": false,
-            "text": "ゆび = การท่องเที่ยว"
+            "text": "ゆび = นิ้วมือ (指)"
           },
           {
             "choice": "うで",
@@ -1593,7 +1593,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こんで",
             "isCorrect": true,
-            "text": "こんで = แน่น/แออัด"
+            "text": "こんで = แน่น, แออัด (混んで <- 混む)"
           },
           {
             "choice": "たりて",
@@ -1627,22 +1627,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けいけん",
             "isCorrect": true,
-            "text": "けいけん = ประสบการณ์ 「けいけんをする」 = สั่งสม/ทำประสบการณ์"
+            "text": "けいけん = ประสบการณ์ (経験)"
           },
           {
             "choice": "しゅうかん",
             "isCorrect": false,
-            "text": "しゅうかん = ...เดือน (ระยะเวลา)"
+            "text": "しゅうかん = ประเพณี, กิจวัตร, ธรรมเนียม (習慣)"
           },
           {
             "choice": "きょうみ",
             "isCorrect": false,
-            "text": "きょうみ = ระมัดระวัง"
+            "text": "きょうみ = ความสนใจ (興味)"
           },
           {
             "choice": "けっか",
             "isCorrect": false,
-            "text": "けっか = ขอร้อง、ไหว้วาน"
+            "text": "けっか = ผลลัพธ์ (結果)"
           }
         ]
       },
@@ -1666,17 +1666,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "コンサート",
             "isCorrect": false,
-            "text": "コンサート = คอนเสิร์ต"
+            "text": "コンサート = คอนเสิร์ต (Concert)"
           },
           {
             "choice": "コンピューター",
             "isCorrect": false,
-            "text": "コンピューター = คอมพิวเตอร์"
+            "text": "コンピューター = คอมพิวเตอร์ (Computer)"
           },
           {
             "choice": "アンケート",
             "isCorrect": true,
-            "text": "アンケート = แบบสอบถาม"
+            "text": "アンケート = แบบสอบถาม (Enquête)"
           },
           {
             "choice": "アルコール",
@@ -1715,12 +1715,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おつり",
             "isCorrect": false,
-            "text": "おつり = ซ่อมแซม, แก้ไข"
+            "text": "おつり = เงินทอน (お釣り)"
           },
           {
             "choice": "やちん",
             "isCorrect": true,
-            "text": "やちん = ค่าเช่าบ้าน/ค่าเช่าห้อง"
+            "text": "やちん = ค่าเช่าบ้าน/ห้อง (家賃)"
           }
         ]
       },
@@ -1754,7 +1754,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "うつって",
             "isCorrect": true,
-            "text": "うつって = ถ่ายติด/ปรากฏในภาพ"
+            "text": "うつって = ถ่ายติด, ย้าย, สะท้อน (写って/移って)"
           },
           {
             "choice": "とどいて",
@@ -1788,7 +1788,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おうふく",
             "isCorrect": true,
-            "text": "おうふく = ไป-กลับ ตรงข้ามกับ 「かたみち」 (เที่ยวเดียว)"
+            "text": "おうふく = ไปและกลับ, ตั๋วไปกลับ (往復)"
           },
           {
             "choice": "うんてん",
@@ -1798,7 +1798,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あんない",
             "isCorrect": false,
-            "text": "あんない = เพื่อนมาสายกว่าเวลานัด แต่กลับไม่ยอมขอโทษทุกคนเลย"
+            "text": "あんない = การนำทาง, การพาเที่ยวชม (案内)"
           }
         ]
       },
@@ -1837,7 +1837,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "つつんで",
             "isCorrect": true,
-            "text": "つつんで = ห่อ/หุ้ม"
+            "text": "つつんで = ห่อ (ของขวัญ/พัสดุ) (包んで <- 包む)"
           }
         ]
       },
@@ -2173,12 +2173,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いがい",
             "isCorrect": false,
-            "text": "いがい = เมฆ"
+            "text": "いがい = นอกจาก, ยกเว้น (以外)"
           },
           {
             "choice": "いじょう",
             "isCorrect": true,
-            "text": "いじょう = ตั้งแต่...ขึ้นไป/มากกว่า"
+            "text": "いじょう = ตั้งแต่...ขึ้นไป, มากกว่า (以上)"
           },
           {
             "choice": "いない",
@@ -2188,7 +2188,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いか",
             "isCorrect": false,
-            "text": "いか = เสียง"
+            "text": "いか = ตั้งแต่...ลงไป, ปลาหมึก (以下/烏賊)"
           }
         ]
       },
@@ -2212,12 +2212,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ちかい",
             "isCorrect": true,
-            "text": "ちかい = ใกล้"
+            "text": "ちかい = ใกล้ (近い)"
           },
           {
             "choice": "はやい",
             "isCorrect": false,
-            "text": "はやい = ทะเล"
+            "text": "はやい = เร็ว, เช้าตรู่ (早い/速い)"
           },
           {
             "choice": "ひろい",
@@ -2227,7 +2227,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ふとい",
             "isCorrect": false,
-            "text": "ふとい = เรียวเล็ก, ผอมบาง"
+            "text": "ふとい = หนา, อ้วน (太い)"
           }
         ]
       },
@@ -2261,12 +2261,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "つごう",
             "isCorrect": true,
-            "text": "つごう = ความสะดวก(ด้านเวลา/สถานการณ์)"
+            "text": "つごう = ความสะดวก (เรื่องเวลา/นัดหมาย) (都合)"
           },
           {
             "choice": "とかい",
             "isCorrect": false,
-            "text": "とかい = พวกเด็ก ๆ"
+            "text": "とかい = เมืองใหญ่, สังคมเมือง (都会)"
           }
         ]
       },
@@ -2295,7 +2295,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ひいて",
             "isCorrect": true,
-            "text": "ひいて = ดึง"
+            "text": "ひいて = ดึง (ประตู), ดีด (เปียโน) (引いて/弾いて)"
           },
           {
             "choice": "ついて",
@@ -2334,12 +2334,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "だんせい",
             "isCorrect": false,
-            "text": "だんせい = อายุยืนยาว"
+            "text": "だんせい = ผู้ชาย, บุรุษ (男性)"
           },
           {
             "choice": "じょせい",
             "isCorrect": true,
-            "text": "じょせい = ผู้หญิง/สตรี"
+            "text": "じょせい = ผู้หญิง, สตรี (女性)"
           },
           {
             "choice": "たんせい",
@@ -2383,7 +2383,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ならって",
             "isCorrect": true,
-            "text": "ならって = เรียน/เรียนรู้"
+            "text": "ならって = เรียน, ร่ำเรียน (習って <- 習う)"
           }
         ]
       },
@@ -2407,12 +2407,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おねえさん",
             "isCorrect": true,
-            "text": "おねえさん = พี่สาว"
+            "text": "おねえさん = พี่สาว (ของคนอื่น) (お姉さん)"
           },
           {
             "choice": "おにいさん",
             "isCorrect": false,
-            "text": "おにいさん = น้องชาย (ของฉัน)"
+            "text": "おにいさん = พี่ชาย (ของคนอื่น) (お兄さん)"
           },
           {
             "choice": "おねさん",
@@ -2451,7 +2451,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "夜",
             "isCorrect": true,
-            "text": "夜 = กลางคืน/ตอนค่ำ"
+            "text": "夜 (よる) = กลางคืน, ตอนค่ำ"
           },
           {
             "choice": "掩",
@@ -2500,7 +2500,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "白い",
             "isCorrect": true,
-            "text": "白い = ขาว"
+            "text": "白い (しろい) = สีขาว"
           }
         ]
       },
@@ -2534,7 +2534,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "食堂",
             "isCorrect": true,
-            "text": "食堂 = โรงอาหาร"
+            "text": "食堂 (しょくどう) = โรงอาหาร"
           },
           {
             "choice": "飯室",
@@ -2568,7 +2568,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "閉めて",
             "isCorrect": true,
-            "text": "閉めて = ปิด"
+            "text": "閉めて (しめて) = มาจาก 閉める (ปิดประตู/หน้าต่าง)"
           },
           {
             "choice": "間めて",
@@ -2602,7 +2602,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "親切",
             "isCorrect": true,
-            "text": "親切 = ใจดี/มีน้ำใจ"
+            "text": "親切 (しんせつ) = ใจดี, มีน้ำใจ"
           },
           {
             "choice": "新切",
@@ -2641,22 +2641,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ねっしん",
             "isCorrect": false,
-            "text": "ねっしん = การเตรียม"
+            "text": "ねっしん = กระตือรือร้น, ตั้งใจจริง (熱心)"
           },
           {
             "choice": "ていねい",
             "isCorrect": false,
-            "text": "ていねい = อร่อย, เก่ง"
+            "text": "ていねい = สุภาพ, ประณีต, พิถีพิถัน (丁寧)"
           },
           {
             "choice": "ひつよう",
             "isCorrect": true,
-            "text": "ひつよう = จำเป็น"
+            "text": "ひつよう = จำเป็น (必要)"
           },
           {
             "choice": "とくべつ",
             "isCorrect": false,
-            "text": "とくべつ = การว่ายน้ำ"
+            "text": "とくべつ = พิเศษ (特別)"
           }
         ]
       },
@@ -2680,7 +2680,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かたい",
             "isCorrect": false,
-            "text": "かたい = ติดต่อ"
+            "text": "かたい = แข็ง (固い/硬い)"
           },
           {
             "choice": "おもい",
@@ -2690,12 +2690,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ふかい",
             "isCorrect": true,
-            "text": "ふかい = ลึก"
+            "text": "ふかい = ลึก (深い)"
           },
           {
             "choice": "にがい",
             "isCorrect": false,
-            "text": "にがい = ทำแตก, แบ่ง"
+            "text": "にがい = ขม (苦い)"
           }
         ]
       },
@@ -2724,7 +2724,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はって",
             "isCorrect": true,
-            "text": "はって = แปะ/ติดแสตมป์"
+            "text": "はって = มาจาก 貼る (แปะ/ติด) หรือ 張る (ขึง/กาง)"
           },
           {
             "choice": "ぬって",
@@ -2758,12 +2758,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "えいぎょう",
             "isCorrect": true,
-            "text": "えいぎょう = เปิดทำการ/ดำเนินกิจการ"
+            "text": "えいぎょう = การดำเนินกิจการ, เวลาทำการ (営業)"
           },
           {
             "choice": "せいさん",
             "isCorrect": false,
-            "text": "せいさん = ประชากร"
+            "text": "せいさん = การคำนวณเงิน, การชำระเงิน (精算)"
           },
           {
             "choice": "ぼうえき",
@@ -2812,7 +2812,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "すすむ",
             "isCorrect": true,
-            "text": "すすむ = มุ่งหน้าไปข้างหน้า/ก้าวหน้า"
+            "text": "すすむ = ก้าวหน้า, คืบหน้า, เดินหน้า (進む)"
           }
         ]
       },
@@ -2836,12 +2836,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やくそく",
             "isCorrect": false,
-            "text": "やくそく = おれい (お礼) = การแสดงความขอบคุณ/คำขอบคุณ"
+            "text": "やくそく = สัญญา, การนัดหมาย (約束)"
           },
           {
             "choice": "いけん",
             "isCorrect": true,
-            "text": "いけん = ความคิดเห็น 「いけんを聞く」 = ถามความคิดเห็น"
+            "text": "いけん = ความคิดเห็น (意見)"
           },
           {
             "choice": "あいさつ",
@@ -2851,7 +2851,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ひみつ",
             "isCorrect": false,
-            "text": "ひみつ = โสด"
+            "text": "ひみつ = ความลับ (秘密)"
           }
         ]
       },
@@ -2890,7 +2890,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "うみました",
             "isCorrect": true,
-            "text": "うみました = คลอดลูก/ให้กำเนิด"
+            "text": "うみました = ให้กำเนิด, คลอดลูก (産みました <- 産む)"
           }
         ]
       },
@@ -2914,7 +2914,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けっか",
             "isCorrect": true,
-            "text": "けっか = ผลลัพธ์/ผลการสอบ"
+            "text": "けっか = ผลลัพธ์ (結果)"
           },
           {
             "choice": "ごうかく",
@@ -3075,17 +3075,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けさからこまかい雨がふっています。",
             "isCorrect": false,
-            "text": "けさからあたたかい雨がふっています。 = ตั้งแต่เช้าฝนอุ่นๆ ตกอยู่ (あたたかい = อบอุ่น)"
+            "text": "けさからこまかい雨がふっています。 = ตั้งแต่เช้าฝนเม็ดละเอียดตกปรอยๆ (こまかい = ละเอียด/ปรอยๆ)"
           },
           {
             "choice": "けさから雨がしずかにふっています。",
             "isCorrect": false,
-            "text": "けさからすこし雨がふっています。 = ตั้งแต่เช้าฝนตกปรอยๆ เล็กน้อย (すこし = เล็กน้อย)"
+            "text": "けさから雨がしずかにふっています。 = ตั้งแต่เช้าฝนตกอย่างเงียบๆ (しずか = เงียบสงบ)"
           },
           {
             "choice": "けさから雨がつよくふっています。",
             "isCorrect": true,
-            "text": "けさからつよい雨がふっています。 = ตั้งแต่เช้าฝนตกหนักมาก (ฝนตกหนักซู่ๆ ตรงกับ ざあざあ)"
+            "text": "けさから雨がつよくふっています。 = ตั้งแต่เช้าฝนตกหนักมาก (ฝนตกหนักซู่ๆ ตรงกับ ざあざあ)"
           }
         ]
       },
@@ -3148,22 +3148,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "この みちは せまいので、車は とおれません。",
             "isCorrect": true,
-            "text": "この服はちょっとせまいので、もうすこし大きいのはありませんか。 = เสื้อตัวนี้คับไปหน่อย มีตัวใหญ่กว่านี้ไหมคะ (เสื้อคับตัว ใช้ せまい หรือ きつい ถูกต้อง)"
+            "text": "この みちは せまいので、車は とおれません。 = ถนนเส้นนี้แคบ รถยนต์จึงแล่นผ่านไม่ได้ (ใช้ せまい กับถนน/พื้นที่แคบ ถูกต้อง)"
           },
           {
             "choice": "この ズボンは わたしには 少し せまいです。",
             "isCorrect": false,
-            "text": "テストの時間はせまいですから、いそいで答えを書いてください。 = เวลาสอบสั้น/มีน้อย (เวลาน้อย ต้องใช้ 時間が短い/少ない 不ใช่ せまい)"
+            "text": "この ズボンは わたしには 少し せまいです。 = กางเกงตัวนี้คับไปหน่อย (เสื้อผ้าคับ ต้องใช้ きつい 不ใช่ せまい)"
           },
           {
             "choice": "小さい じを 書く ときは、せまい ペンが いいです。",
             "isCorrect": false,
-            "text": "今月はお金がせまいので、やすいレストランに行きましょう。 = เดือนนี้เงินมีน้อย (เงินน้อย ต้องใช้ お金が少ない/ピンチ 不ใช่ せまい)"
+            "text": "小さい じを 書く ときは、せまい ペンが いいです。 = เวลาเขียนตัวหนังสือเล็กๆ ปากกาหัวเล็กจะดีกว่า (ปากกาหัวเล็ก ต้องใช้ 細い/ほそい)"
           },
           {
             "choice": "その やさいは せまく きって ください。",
             "isCorrect": false,
-            "text": "この川はせまいですから、あぶないです。入ってはいけません。 = แม่น้ำนี้ลึกและอันตราย (แม่น้ำลึก ต้องใช้ ふかい 不ใช่ せまい)"
+            "text": "その やさいは せまく きって ください。 = กรุณาหั่นผักนั้นให้เป็นชิ้นเล็กๆ (หั่นชิ้นเล็ก ต้องใช้ 細かく/こまかく)"
           }
         ]
       },
@@ -3187,22 +3187,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "水を あげるのを わすれて、花が こしょうして しまいました。",
             "isCorrect": false,
-            "text": "このはこはガラスのかびんが入っていますから、ていねいに持ってください。 = กล่องนี้มีแจกันแก้วอยู่ กรุณาถืออย่างระมัดระวังประณีต (ใช้ ていねいに ถูกต้อง)"
+            "text": "水を あげるのを わすれて、花が こしょうして しまいました。 = ลืมรดน้ำ ดอกไม้เลยเหี่ยวเฉา (ดอกไม้เหี่ยว ต้องใช้ 枯れる/かれる ไม่ใช่ こしょう)"
           },
           {
             "choice": "その パソコンは こしょうして いるので、つかえません。",
             "isCorrect": true,
-            "text": "テストの前には、ならった言葉をていねいにしてください。 = ก่อนสอบกรุณาทบทวนคำศัพท์ (ทบทวน ต้องใช้ 復習する 不ใช่ ていねいに)"
+            "text": "その パソコンは こしょうして いるので、つかえません。 = คอมพิวเตอร์เครื่องนั้นเสียอยู่ จึงใช้งานไม่ได้ (ใช้ こしょう กับอุปกรณ์อิเล็กทรอนิกส์ ถูกต้อง)"
           },
           {
             "choice": "この ぎゅうにゅうは こしょうして いるので、飲まないで ください。",
             "isCorrect": false,
-            "text": "このくつはていねいにはけるので、とても便利です。 = รองเท้าคู่นี้สวมใส่ง่ายสะดวก (สวมใส่ง่าย ต้องใช้ 楽に/簡単に 不ใช่ ていねいに)"
+            "text": "この ぎゅうにゅうは こしょうして いるので、飲まないで ください。 = นมกล่องนี้บูดเสียแล้ว อย่าดื่มนะ (อาหาร/นมบูด ต้องใช้ 腐る/くさる ไม่ใช่ こしょう)"
           },
           {
             "choice": "テーブルから おちて、コップが こしょうしました。",
             "isCorrect": false,
-            "text": "あしたははやく起きなければならないので、ていねいに寝ます。 = ต้องตื่นเช้าเลยจะรีบเข้านอน (รีบนอน ต้องใช้ 早く寝る 不ใช่ ていねいに)"
+            "text": "テーブルから おちて、コップが こしょうしました。 = แก้วตกจากโต๊ะแล้วแตก (แก้วแตก ต้องใช้ 割れる/われる ไม่ใช่ こしょう)"
           }
         ]
       },
@@ -3226,22 +3226,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "たいふうで 山が たおれました。",
             "isCorrect": false,
-            "text": "この本はおもしろかったので、１日でぜんぶ読みました。 = หนังสือเล่มนี้สนุกมาก เลยอ่านจบทั้งหมดภายใน 1 วัน (ใช้ ぜんぶ กับการอ่านทั้งหมด ถูกต้อง)"
+            "text": "たいふうで 山が たおれました。 = ภูเขาถล่มเพราะพายุไต้ฝุ่น (ดินภูเขาถล่ม ต้องใช้ 崩れる/くずれる 不ใช่ たおれる)"
           },
           {
             "choice": "おとうとは こうつうじこで 足が たおれました。",
             "isCorrect": false,
-            "text": "きょうのしけんはぜんぶよくできました。 = ข้อสอบวันนี้ทำได้ดีมากๆ (ทำได้ดีมาก ต้องใช้ とても/すごく 不ใช่ ぜんぶ)"
+            "text": "おとうとは こうつうじこで 足が たおれました。 = น้องชายประสบอุบัติเหตุขาหัก (กระดูกหัก ต้องใช้ 折れる/おれる 不ใช่ たおれる)"
           },
           {
             "choice": "大きい じしんで ほんだなが たおれました。",
             "isCorrect": true,
-            "text": "わたしはすしがぜんぶ好きです。 = ฉันชอบซูชิมากๆ (ชอบมาก ต้องใช้ 大好き/とても好き ไม่ใช่ ぜんぶ)"
+            "text": "大きい じしんで ほんだなが たおれました。 = แผ่นดินไหวครั้งใหญ่ทำให้ชั้นวางหนังสือล้มลงมา (สิ่งของทรงสูงล้ม ใช้ たおれる ถูกต้อง)"
           },
           {
             "choice": "先生の びょうきで じゅぎょうが たおれました。",
             "isCorrect": false,
-            "text": "あには背がぜんぶ高いです。 = พี่ชายตัวสูงมากๆ (ตัวสูงมาก ต้องใช้ とても高い 不ใช่ ぜんぶ)"
+            "text": "先生の びょうきで じゅぎょうが たおれました。 = อาจารย์ป่วย คาบเรียนเลยถูกงด (งดคาบเรียน ต้องใช้ 休講になる 不ใช่ たおれる)"
           }
         ]
       },
@@ -3275,7 +3275,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "たのしかった",
             "isCorrect": true,
-            "text": "たのしかった = สนุก"
+            "text": "たのしかった = สนุกสนานมาก (楽しかった <- 楽しい)"
           },
           {
             "choice": "かなしかった",
@@ -3304,22 +3304,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かたち",
             "isCorrect": false,
-            "text": "かたち = แปลกประหลาด, มหัศจรรย์"
+            "text": "かたち = รูปร่าง, รูปทรง (形)"
           },
           {
             "choice": "いろ",
             "isCorrect": false,
-            "text": "いろ = เพียงพอ"
+            "text": "いろ = สี, สีสัน (色)"
           },
           {
             "choice": "におい",
             "isCorrect": false,
-            "text": "におい = วิทยาศาสตร์"
+            "text": "におい = กลิ่น (匂い)"
           },
           {
             "choice": "あじ",
             "isCorrect": true,
-            "text": "あじ = รสชาติ"
+            "text": "あじ = รสชาติ (味)"
           }
         ]
       },
@@ -3343,7 +3343,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ふべん",
             "isCorrect": true,
-            "text": "ふべん = ไม่สะดวกสบาย"
+            "text": "ふべん = ไม่สะดวก, ไม่สะดวกสบาย (不便)"
           },
           {
             "choice": "ぶべん",
@@ -3387,7 +3387,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きって",
             "isCorrect": true,
-            "text": "きって = หั่น/ตัด"
+            "text": "きって = มาจาก 切る (หั่น, ตัด)"
           },
           {
             "choice": "あらって",
@@ -3426,7 +3426,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "にがい",
             "isCorrect": false,
-            "text": "にがい = ทำแตก, แบ่ง"
+            "text": "にがい = ขม (苦い)"
           },
           {
             "choice": "いそと",
@@ -3436,7 +3436,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いがい",
             "isCorrect": true,
-            "text": "いがい = นอกจาก/ยกเว้น"
+            "text": "いがい = นอกจาก, ยกเว้น (以外)"
           }
         ]
       },
@@ -3460,22 +3460,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ほし",
             "isCorrect": false,
-            "text": "ほし = ลม"
+            "text": "ほし = ดวงดาว (星)"
           },
           {
             "choice": "ゆき",
             "isCorrect": false,
-            "text": "ゆき = แห้ง"
+            "text": "ゆき = หิมะ (雪)"
           },
           {
             "choice": "くも",
             "isCorrect": true,
-            "text": "くも = เมฆ"
+            "text": "くも = เมฆ (雲) หรือ แมงมุม (蜘蛛)"
           },
           {
             "choice": "そら",
             "isCorrect": false,
-            "text": "そら = บิน, โบยบิน"
+            "text": "そら = ท้องฟ้า (空)"
           }
         ]
       },
@@ -3514,7 +3514,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きゅうこう",
             "isCorrect": true,
-            "text": "きゅうこう = รถไฟด่วน"
+            "text": "きゅうこう = รถไฟด่วน, การหยุดเรียน (急行/休講)"
           }
         ]
       },
@@ -3543,7 +3543,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "うつさないで",
             "isCorrect": true,
-            "text": "うつさないで = ลอก/คัดลอก"
+            "text": "うつさないで = อย่าถ่ายรูป/อย่าลอกเลียนแบบ (写さないで <- 写す)"
           },
           {
             "choice": "けさないで",
@@ -3577,7 +3577,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はんたい",
             "isCorrect": true,
-            "text": "はんたい = ตรงกันข้าม/คัดค้าน"
+            "text": "はんたい = ตรงกันข้าม, คัดค้าน (反対)"
           },
           {
             "choice": "ほんたい",
@@ -3621,7 +3621,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "黒い",
             "isCorrect": true,
-            "text": "黒い = ดำ"
+            "text": "黒い (くろい) = สีดำ"
           },
           {
             "choice": "赤い",
@@ -3665,7 +3665,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "計画",
             "isCorrect": true,
-            "text": "計画 = แผนการ"
+            "text": "計画 (けいかく) = แผนการ, โปรเจกต์"
           },
           {
             "choice": "訂書",
@@ -3709,7 +3709,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "医者",
             "isCorrect": true,
-            "text": "医者 = แพทย์/หมอ"
+            "text": "医者 (いしゃ) = คุณหมอ, แพทย์"
           }
         ]
       },
@@ -3733,7 +3733,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "夜",
             "isCorrect": true,
-            "text": "夜 = กลางคืน/ตอนค่ำ"
+            "text": "夜 (よる) = กลางคืน, ตอนค่ำ"
           },
           {
             "choice": "昼",
@@ -3782,7 +3782,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "貸して",
             "isCorrect": true,
-            "text": "貸して = ให้ยืม"
+            "text": "貸して (かして) = มาจาก 貸す (ให้ยืม)"
           },
           {
             "choice": "質して",
@@ -3826,7 +3826,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "試合",
             "isCorrect": true,
-            "text": "試合 = การแข่งขัน/การประลอง"
+            "text": "試合 (しあい) = การแข่งขันกีฬา, แมตช์"
           }
         ]
       },
@@ -3850,12 +3850,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "しんぱい",
             "isCorrect": true,
-            "text": "しんぱい = เป็นห่วง/กังวล"
+            "text": "しんぱい = เป็นห่วง, กังวล (心配)"
           },
           {
             "choice": "けいけん",
             "isCorrect": false,
-            "text": "けいけん = ทำให้ร้อน"
+            "text": "けいけん = ประสบการณ์ (経験)"
           },
           {
             "choice": "しつれい",
@@ -3889,12 +3889,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けしき",
             "isCorrect": false,
-            "text": "けしき = เลี้ยงดู/ปลูกเลี้ยง"
+            "text": "けしき = ทัศนียภาพ, วิวทิวทัศน์ (景色)"
           },
           {
             "choice": "ゆめ",
             "isCorrect": true,
-            "text": "ゆめ = ความฝัน 「ゆめがある」 = มีความฝัน"
+            "text": "ゆめ = ความฝัน (夢)"
           },
           {
             "choice": "おもいで",
@@ -3904,7 +3904,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "せわ",
             "isCorrect": false,
-            "text": "せわ = อีกเดี๋ยวรถไฟด่วนพิเศษก็จะมาแล้วค่ะ (特急 = ด่วนพิเศษ)"
+            "text": "せわ = การดูแล, เอาใจใส่ (世話)"
           }
         ]
       },
@@ -3933,12 +3933,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ぜひ",
             "isCorrect": true,
-            "text": "ぜひ = ให้ได้/แน่นอน (มักใช้ร่วมกับประโยคชักชวนหรือขอร้อง)"
+            "text": "ぜひ = ให้ได้, แน่นอน (是非)"
           },
           {
             "choice": "じゅうぶん",
             "isCorrect": false,
-            "text": "じゅうぶん = ดุ"
+            "text": "じゅうぶん = เพียงพอ (十分)"
           },
           {
             "choice": "いつも",
@@ -3967,7 +3967,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "じゅんび",
             "isCorrect": false,
-            "text": "じゅんび = การเยี่ยมผู้ป่วย"
+            "text": "じゅんび = การเตรียมตัว, การเตรียมพร้อม (準備)"
           },
           {
             "choice": "りよう",
@@ -3977,12 +3977,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "せつめい",
             "isCorrect": true,
-            "text": "せつめい = อธิบาย"
+            "text": "せつめい = การอธิบาย, คำอธิบาย (説明)"
           },
           {
             "choice": "せいさん",
             "isCorrect": false,
-            "text": "せいさん = ประชากร"
+            "text": "せいさん = การคำนวณเงิน, การชำระเงิน (精算)"
           }
         ]
       },
@@ -4006,22 +4006,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きびしい",
             "isCorrect": false,
-            "text": "きびしい = จำเป็น"
+            "text": "きびしい = เข้มงวด, เคร่งครัด (厳しい)"
           },
           {
             "choice": "かたい",
             "isCorrect": true,
-            "text": "かたい = แข็ง"
+            "text": "かたい = แข็ง (固い/硬い)"
           },
           {
             "choice": "はやい",
             "isCorrect": false,
-            "text": "はやい = ทะเล"
+            "text": "はやい = เร็ว, เช้าตรู่ (早い/速い)"
           },
           {
             "choice": "ふかい",
             "isCorrect": false,
-            "text": "ふかい = ตื้น"
+            "text": "ふかい = ลึก (深い)"
           }
         ]
       },
@@ -4045,7 +4045,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さそいました",
             "isCorrect": true,
-            "text": "さそいました = ชวน/ชักชวน"
+            "text": "さそいました = ชวนแล้ว, เชื้อเชิญแล้ว (誘いました <- 誘う)"
           },
           {
             "choice": "つたえました",
@@ -4089,17 +4089,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ばん",
             "isCorrect": false,
-            "text": "ばん = ถัดไป, ต่อไป"
+            "text": "ばん = ตอนเย็น, ค่ำ (晩)"
           },
           {
             "choice": "けん",
             "isCorrect": false,
-            "text": "けん = ด้านบน"
+            "text": "けん = ตั๋ว, บัตร (券) หรือ จังหวัด (県)"
           },
           {
             "choice": "センチ",
             "isCorrect": true,
-            "text": "センチ = ลูกชายของฉัน ส่วนสูงเพิ่มขึ้นประมาณ 5 เซนติเมตรใน 1 ปี"
+            "text": "センチ = เซนติเมตร (Centimeter)"
           }
         ]
       },
@@ -4133,7 +4133,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "くらべて",
             "isCorrect": true,
-            "text": "くらべて = เปรียบเทียบ"
+            "text": "くらべて = เปรียบเทียบ (比べて <- 比べる)"
           },
           {
             "choice": "はらって",
@@ -4162,7 +4162,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "うそ",
             "isCorrect": false,
-            "text": "うそ = กลับไปที่เดิม"
+            "text": "うそ = คำโกหก, เรื่องไม่จริง (嘘)"
           },
           {
             "choice": "じゆう",
@@ -4172,12 +4172,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ちゅうし",
             "isCorrect": false,
-            "text": "ちゅうし = คะแนน, จุด"
+            "text": "ちゅうし = การยกเลิก, การระงับ (中止)"
           },
           {
             "choice": "るす",
             "isCorrect": true,
-            "text": "るす = การไม่อยู่บ้าน"
+            "text": "るす = การไม่อยู่บ้าน (留守)"
           }
         ]
       },
@@ -4201,7 +4201,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "見つかりません",
             "isCorrect": true,
-            "text": "見つかりません = พบ/หาเจอ ในรูปปฏิเสธ 「見つかりません」 = ยังไม่เจอ"
+            "text": "見つかりません = ยังหาไม่พบ, ยังหาไม่เจอ (見つかる)"
           },
           {
             "choice": "つかまえません",
@@ -4240,22 +4240,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おとうとは あの きっさてんで まって います。",
             "isCorrect": false,
-            "text": "おとうとは あの きっさてんで まって います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "おとうとは あの きっさてんで まって います。 = น้องชายกำลังรออยู่ที่ร้านกาแฟแห่งนั้น (まつ = รอ)"
           },
           {
             "choice": "おとうとは あの きっさてんで はたらいて います。",
             "isCorrect": true,
-            "text": "おとうとは あの きっさてんで はたらいて います。 = ทำงานพิเศษ/พาร์ตไทม์ มีความหมายเหมือนกับ 「はたらいている」 (กำลังทำงาน)"
+            "text": "おとうとは あの きっさてんで はたらいて います。 = น้องชายกำลังทำงานอยู่ที่ร้านกาแฟแห่งนั้น (ทำงานพิเศษ ตรงกับ はたらく)"
           },
           {
             "choice": "おとうとは あの きっさてんで コーヒーを 飲んで います。",
             "isCorrect": false,
-            "text": "おとうとは あの きっさてんで コーヒーを 飲んで います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "おとうとは あの きっさてんで コーヒーを 飲んで います。 = น้องชายกำลังดื่มกาแฟอยู่ที่ร้านกาแฟแห่งนั้น"
           },
           {
             "choice": "おとうとは あの きっさてんで 友だちと 話して います。",
             "isCorrect": false,
-            "text": "おとうとは あの きっさてんで 友だちと 話して います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "おとうとは あの きっさてんで 友だちと 話して います。 = น้องชายกำลังพูดคุยกับเพื่อนอยู่ที่ร้านกาแฟแห่งนั้น"
           }
         ]
       },
@@ -4279,22 +4279,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "わたしは はしるのが すきです。",
             "isCorrect": false,
-            "text": "わたしは はしるのが すきです。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "わたしは はしるのが すきです。 = ฉันชอบการวิ่ง (はしる = วิ่ง)"
           },
           {
             "choice": "わたしは およぐのが すきです。",
             "isCorrect": true,
-            "text": "わたしは およぐのが すきです。 = การว่ายน้ำ มีความหมาย"
+            "text": "わたしは およぐのが すきです。 = ฉันชอบการว่ายน้ำ (ว่ายน้ำ ตรงกับ すいえい / およぐ)"
           },
           {
             "choice": "わたしは ごはんを 食べるのが すきです。",
             "isCorrect": false,
-            "text": "わたしは ごはんを 食べるのが すきです。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "わたしは ごはんを 食べるのが すきです。 = ฉันชอบการทานอาหาร (たべる = กิน/ทาน)"
           },
           {
             "choice": "わたしは 本を 読むのが すきです。",
             "isCorrect": false,
-            "text": "わたしは 本を 読むのが すきです。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "わたしは 本を 読むのが すきです。 = ฉันชอบการอ่านหนังสือ (よむ = อ่าน)"
           }
         ]
       },
@@ -4318,22 +4318,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "それを 聞いて わらいました。",
             "isCorrect": false,
-            "text": "それを 聞いて わらいました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "それを 聞いて わらいました。 = ได้ยินเรื่องนั้นแล้วหัวเราะ (わらう = หัวเราะ)"
           },
           {
             "choice": "それを 聞いて こまりました。",
             "isCorrect": false,
-            "text": "それを 聞いて こまりました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "それを 聞いて こまりました。 = ได้ยินเรื่องนั้นแล้วลำบากใจ (こまる = ลำบากใจ)"
           },
           {
             "choice": "それを 聞いて おこりました。",
             "isCorrect": false,
-            "text": "それを 聞いて おこりました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "それを 聞いて おこりました。 = ได้ยินเรื่องนั้นแล้วโกรธ (おこる = โกรธ)"
           },
           {
             "choice": "それを 聞いて おどろきました。",
             "isCorrect": true,
-            "text": "それを 聞いて おどろきました。 = ตกใจ/ประหลาดใจ"
+            "text": "それを 聞いて おどろきました。 = ได้ยินเรื่องนั้นแล้วตกใจประหลาดใจ (ตกใจ ตรงกับ びっくりする / おどろく)"
           }
         ]
       },
@@ -4357,22 +4357,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あの 人は きれいですね。",
             "isCorrect": true,
-            "text": "あの 人は きれいですね。 = สวย/งดงาม"
+            "text": "あの 人は きれいですね。 = คนคนนั้นสวยจริงๆ เลยนะ (สวยงาม ตรงกับ うつくしい / きれい)"
           },
           {
             "choice": "あの 人は 元気ですね。",
             "isCorrect": false,
-            "text": "あの 人は 元気ですね。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "あの 人は 元気ですね。 = คนคนนั้นดูร่าเริงแข็งแรงจังเลยนะ (げんき = แข็งแรง/ร่าเริง)"
           },
           {
             "choice": "あの 人は おもしろいですね。",
             "isCorrect": false,
-            "text": "あの 人は おもしろいですね。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "あの 人は おもしろいですね。 = คนคนนั้นน่าสนใจ/ตลกดีนะ (おもしろい = ตลก/น่าสนใจ)"
           },
           {
             "choice": "あの 人は わかいですね。",
             "isCorrect": false,
-            "text": "あの 人は わかいですね。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "あの 人は わかいですね。 = คนคนนั้นดูหนุ่มสาวจังเลยนะ (わかい = หนุ่มสาว)"
           }
         ]
       },
@@ -4396,22 +4396,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "この 国は こめを ほかの 国に うって います。",
             "isCorrect": false,
-            "text": "この 国は こめを ほかの 国に うって います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "この 国は こめを ほかの 国に うって います。 = ประเทศนี้ขายข้าวให้ประเทศอื่น (うつている = ขาย)"
           },
           {
             "choice": "この 国は こめを ほかの 国から もらって います。",
             "isCorrect": false,
-            "text": "この 国は こめを ほかの 国から もらって います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "この 国は こめを ほかの 国から もらって います。 = ประเทศนี้ได้รับข้าวมาจากประเทศอื่น (もらう = ได้รับ)"
           },
           {
             "choice": "この 国は こめを ほかの 国から 買って います。",
             "isCorrect": true,
-            "text": "この 国は こめを ほかの 国から 買って います。 = นำเข้าสินค้าจากต่างประเทศ ซึ่งคือ 「ほかの国から買う」 (ซื้อจากประเทศอื่น)"
+            "text": "この 国は こめを ほかの 国から 買って います。 = ประเทศนี้ซื้อข้าวจากประเทศอื่น (นำเข้า/ซื้อจากต่างประเทศ ตรงกับ ゆにゅうする / かう)"
           },
           {
             "choice": "この 国は こめを ほかの 国に あげて います。",
             "isCorrect": false,
-            "text": "この 国は こめを ほかの 国に あげて います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "この 国は こめを ほかの 国に あげて います。 = ประเทศนี้มอบข้าวให้ประเทศอื่น (あげる = ให้)"
           }
         ]
       },
@@ -4435,22 +4435,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さいきん りょうりが できたので、いっしょに 食べましょう。",
             "isCorrect": false,
-            "text": "さいきん りょうりが できたので、いっしょに 食べましょう。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "さいきん りょうりが できたので、いっしょに 食べましょう。 = ทำอาหารเสร็จเมื่อกี้นี้เอง (เพิ่งเสร็จสดๆ ร้อนๆ ต้องใช้ さっき/いま 不ใช่ さいきん)"
           },
           {
             "choice": "さいきん しゅくだいを 出して ください。",
             "isCorrect": false,
-            "text": "さいきん しゅくだいを 出して ください。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "さいきん しゅくだいを 出して ください。 = ส่งการบ้านเร็วๆ นี้ (ส่งในไม่ช้า ต้องใช้ もうすぐ/近いうちに 不ใช่ さいきん)"
           },
           {
             "choice": "きむらさんは さいきん けっこんした そうです。",
             "isCorrect": true,
-            "text": "きむらさんは さいきん けっこんした そうです。 = หมู่นี้/เมื่อเร็วๆ นี้ ได้ยินว่าคุณคิมูระแต่งงานเมื่อเร็วๆ นี้"
+            "text": "きむらさんは さいきん けっこんした そうです。 = ได้ยินว่าคุณคิมุระเพิ่งแต่งงานไปเมื่อเร็วๆ นี้ (ใช้ さいきん กับเหตุการณ์ช่วงที่ผ่านมา ถูกต้อง)"
           },
           {
             "choice": "さいきん 電車が 来ますから、いそいで えきに 行きましょう。",
             "isCorrect": false,
-            "text": "さいきん 電車が 来ますから、いそいで えきに 行きましょう。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "さいきん 電車が 来ますから、いそいで えきに 行きましょう。 = รถไฟจะมาถึงในไม่ช้า (ในไม่ช้า ต้องใช้ まもなく/もうすぐ 不ใช่ さいきん)"
           }
         ]
       },
@@ -4474,22 +4474,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ラジオの おとが 大きいので、もう 少し 小さく して ください。",
             "isCorrect": true,
-            "text": "ラジオの おとが 大きいので、もう 少し 小さく して ください。 = เสียง (เสียงสิ่งของ เครื่องจักร หรือเสียงทั่วไปที่ไม่ใช่เสียงพูดของคน"
+            "text": "ラジオの おとが 大きいので、もう 少し 小さく して ください。 = เสียงวิทยุดังมาก กรุณาหรี่ให้เบาลงหน่อย (ใช้ おと กับเสียงอุปกรณ์/เครื่องใช้ ถูกต้อง)"
           },
           {
             "choice": "日本語の おとが じょうずに なりたいので、毎日 たくさん 話します。",
             "isCorrect": false,
-            "text": "日本語の おとが じょうずに なりたいので、毎日 たくさん 話します。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "日本語の おとが じょうずに なりたいので、毎日 たくさん 話します。 = อยากออกเสียงภาษาญี่ปุ่นเก่งๆ (การออกเสียง ต้องใช้ 発音/はつおん ไม่ใช่ おと)"
           },
           {
             "choice": "店の 人に 大きな おとで 名前を よばれました。",
             "isCorrect": false,
-            "text": "店の 人に 大きな おとで 名前を よばれました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "店の 人に 大きな おとで 名前を よばれました。 = พนักงานร้านเรียกชื่อด้วยเสียงอันดัง (เสียงคนพูด ต้องใช้ 声/こえ ไม่ใช่ おと)"
           },
           {
             "choice": "すずきさんが ギターで ゆうめいな おとを ひいて くれました。",
             "isCorrect": false,
-            "text": "すずきさんが ギターで ゆうめいな おとを ひいて くれました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "すずきさんが ギターで ゆうめいな おとを ひいて くれました。 = คุณซูซูกิเล่นเพลงดังด้วยกีตาร์ (บทเพลง ต้องใช้ 曲/きょく 不ใช่ おと)"
           }
         ]
       },
@@ -4513,22 +4513,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かばんが ほしいので、デパートに 行って けんがくします。",
             "isCorrect": false,
-            "text": "かばんが ほしいので、デパートに 行って けんがくします。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "かばんが ほしいので、デパートに 行って けんがくします。 = อยากได้กระเป๋าเลยไปเดินดูที่ห้าง (เดินดูซื้อของ ต้องใช้ 買い物/見て回る ไม่ใช่ けんがく)"
           },
           {
             "choice": "わからない かんじは じしょで けんがくして ください。",
             "isCorrect": false,
-            "text": "わからない かんじは じしょで けんがくして ください。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "わからない かんじは じしょで けんがくして ください。 = คันจิตัวที่ไม่เข้าใจกรุณาค้นในพจนานุกรม (ค้นพจนานุกรม ต้องใช้ 調べる/しらべる)"
           },
           {
             "choice": "先生や 友だちと こうじょうを けんがくしました。",
             "isCorrect": true,
-            "text": "先生や 友だちと こうじょうを けんがくしました。 = การทัศนศึกษาดูงานเพื่อการเรียนรู้"
+            "text": "先生や 友だちと こうじょうを けんがくしました。 = ไปทัศนศึกษาดูงานที่โรงงานกับอาจารย์และเพื่อนๆ (ทัศนศึกษาดูงาน ใช้ けんがく ถูกต้อง)"
           },
           {
             "choice": "まいばん テレビで ニュースを けんがくして います。",
             "isCorrect": false,
-            "text": "まいばん テレビで ニュースを けんがくして います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "まいばん テレビで ニュースを けんがくして います。 = ดูข่าวทางโทรทัศน์ทุกคืน (ดูโทรทัศน์ ต้องใช้ 見る/みる 不ใช่ けんがく)"
           }
         ]
       },
@@ -4552,22 +4552,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やまだ先生は テストの おしらせを きょうしつに かざりました。",
             "isCorrect": false,
-            "text": "やまだ先生は テストの おしらせを きょうしつに かざりました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "やまだ先生は テストの おしらせを きょうしつに かざりました。 = อาจารย์ยามาดะติดประกาศเรื่องสอบไว้ในห้องเรียน (ติดประกาศ ต้องใช้ 貼る/はる ไม่ใช่ かざる)"
           },
           {
             "choice": "おきゃくさんが 来ますから、へやに 花を かざりましょう。",
             "isCorrect": true,
-            "text": "おきゃくさんが 来ますから、へやに 花を かざりましょう。 = ประดับตกแต่ง ใช้กับการประดับดอกไม้ในห้อง (花をかざる)"
+            "text": "おきゃくさんが 来ますから、へやに 花を かざりましょう。 = แขกจะมาที่บ้าน พวกเรามาประดับดอกไม้ในห้องกันเถอะ (ประดับตกแต่ง ใช้ かざる ถูกต้อง)"
           },
           {
             "choice": "天気が わるいので、せんたくものは うちの 中に かざります。",
             "isCorrect": false,
-            "text": "天気が わるいので、せんたくものは うちの 中に かざります。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "天気が わるいので、せんたくものは うちの 中に かざります。 = อากาศแย่ เสื้อผ้าซักเลยตากไว้ในบ้าน (ตากผ้า ต้องใช้ 干す/ほす 不ใช่ かざる)"
           },
           {
             "choice": "こっちの エアコンは、となりの へやの かべに かざって ください。",
             "isCorrect": false,
-            "text": "こっちの エアコンは、となりの へやの かべに かざって ください。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "こっちの エアコンは、となりの へやの かべに かざって ください。 = แอร์เครื่องนี้กรุณาติดตั้งบนผนังห้องข้างๆ (ติดตั้งเครื่องใช้ ต้องใช้ 取り付ける)"
           }
         ]
       },
@@ -4591,22 +4591,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はが いたかったので、はいしゃで こうじを して もらいました。",
             "isCorrect": false,
-            "text": "はが いたかったので、はいしゃで こうじを して もらいました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "はが いたかったので、はいしゃで こうじを して もらいました。 = ปวดฟันเลยให้หมอฟันรักษาให้ (รักษาฟัน ต้องใช้ 治療/ちりょう 不ใช่ こうじ)"
           },
           {
             "choice": "この セーターは 古いですが、こうじを して、ずっと きて います。",
             "isCorrect": false,
-            "text": "この セーターは 古いですが、こうじを して、ずっと きて います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "この セーターは 古いですが、こうじを して、ずっと きて います。 = เสื้อกันหนาวนี้เก่าแต่ก็เย็บซ่อมใส่มาตลอด (ซ่อมแซมเสื้อผ้า ต้องใช้ 直す/なおす)"
           },
           {
             "choice": "ほんだなが こわれて しまったので、こうじを しました。",
             "isCorrect": false,
-            "text": "ほんだなが こわれて しまったので、こうじを しました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "ほんだなが こわれて しまったので、こうじを しました。 = ชั้นหนังสือพังเลยลงมือซ่อม (ซ่อมเฟอร์นิเจอร์ ต้องใช้ 修理/しゅうり ไม่ใช่ こうじ)"
           },
           {
             "choice": "この みちは こうじを して いるので、とおれません。",
             "isCorrect": true,
-            "text": "この みちは こうじを して いるので、とおれません。 = งานก่อสร้างถนนหรืออาคาร ถนนสายนี้กำลังก่อสร้างซ่อมแซมจึงสัญจรผ่านไม่ได้"
+            "text": "この みちは こうじを して いるので、とおれません。 = ถนนเส้นนี้กำลังก่อสร้างปรับปรุงอยู่ จึงผ่านไม่ได้ (งานก่อสร้างทาง ใช้ こうじ ถูกต้อง)"
           }
         ]
       },
@@ -4630,7 +4630,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いし",
             "isCorrect": true,
-            "text": "いし = ก้อนหิน"
+            "text": "いし = หิน (石) หรือ ความตั้งใจ/ความมุ่งมั่น (意志)"
           },
           {
             "choice": "すな",
@@ -4645,7 +4645,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "えだ",
             "isCorrect": false,
-            "text": "えだ = เจ้าหน้าที่ประจำสถานีรถไฟ"
+            "text": "えだ = กิ่งไม้ (枝)"
           }
         ]
       },
@@ -4669,7 +4669,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けいけん",
             "isCorrect": true,
-            "text": "けいけん = ประสบการณ์"
+            "text": "けいけん = ประสบการณ์ (経験)"
           },
           {
             "choice": "けいげん",
@@ -4723,7 +4723,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "てんいん",
             "isCorrect": true,
-            "text": "てんいん = พนักงานร้าน"
+            "text": "てんいん = พนักงานร้าน (店員)"
           }
         ]
       },
@@ -4752,7 +4752,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "しょくどう",
             "isCorrect": true,
-            "text": "しょくどう = โรงอาหาร"
+            "text": "しょくどう = โรงอาหาร (食堂)"
           },
           {
             "choice": "しょくど",
@@ -4786,22 +4786,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "うみ",
             "isCorrect": false,
-            "text": "うみ = ครั้งหนึ่ง"
+            "text": "うみ = ทะเล (海)"
           },
           {
             "choice": "みなと",
             "isCorrect": true,
-            "text": "みなと = ท่าเรือ"
+            "text": "みなと = ท่าเรือ (港)"
           },
           {
             "choice": "みずうみ",
             "isCorrect": false,
-            "text": "みずうみ = โรงยิม"
+            "text": "みずうみ = ทะเลสาบ (湖)"
           },
           {
             "choice": "いけ",
             "isCorrect": false,
-            "text": "いけ = ที่เดิม"
+            "text": "いけ = สระน้ำ, บ่อน้ำ (池)"
           }
         ]
       },
@@ -4835,7 +4835,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "しょうせつ",
             "isCorrect": true,
-            "text": "しょうせつ = นวนิยาย"
+            "text": "しょうせつ = นวนิยาย (小説)"
           },
           {
             "choice": "しょうぜつ",
@@ -4864,7 +4864,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "にっき",
             "isCorrect": true,
-            "text": "にっき = บันทึกประจำวัน/ไดอารี่"
+            "text": "にっき = สมุดบันทึกประจำวัน, ไดอารี่ (日記)"
           },
           {
             "choice": "にちき",
@@ -4908,7 +4908,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ゆうがた",
             "isCorrect": true,
-            "text": "ゆうがた = ตอนเย็น/พลบค่ำ"
+            "text": "ゆうがた = ตอนพลบค่ำ, ตอนเย็น (夕方)"
           },
           {
             "choice": "ゆほう",
@@ -4942,22 +4942,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ふゆ",
             "isCorrect": false,
-            "text": "ふゆ = เตรียมบทเรียนล่วงหน้า"
+            "text": "ふゆ = ฤดูหนาว (冬)"
           },
           {
             "choice": "なつ",
             "isCorrect": false,
-            "text": "なつ = ฤดูใบไม้ร่วง"
+            "text": "なつ = ฤดูร้อน (夏)"
           },
           {
             "choice": "はる",
             "isCorrect": false,
-            "text": "はる = ฤดูร้อน"
+            "text": "はる = ฤดูใบไม้ผลิ (春)"
           },
           {
             "choice": "あき",
             "isCorrect": true,
-            "text": "あき = ฤดูใบไม้ร่วง"
+            "text": "あき = ฤดูใบไม้ร่วง (秋)"
           }
         ]
       },
@@ -4981,7 +4981,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "青い",
             "isCorrect": true,
-            "text": "青い = สีน้ำเงิน/สีฟ้า"
+            "text": "青い (あおい) = สีฟ้า, สีน้ำเงิน"
           },
           {
             "choice": "黒い",
@@ -5035,7 +5035,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "場所",
             "isCorrect": true,
-            "text": "場所 = สถานที่"
+            "text": "場所 (ばしょ) = สถานที่"
           }
         ]
       },
@@ -5069,7 +5069,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "歩いて",
             "isCorrect": true,
-            "text": "歩いて = เดิน"
+            "text": "歩いて (あるいて) = มาจาก 歩く (เดิน)"
           },
           {
             "choice": "涉いて",
@@ -5098,7 +5098,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "便利",
             "isCorrect": true,
-            "text": "便利 = สะดวกสบาย"
+            "text": "便利 (べんり) = สะดวกสบาย"
           },
           {
             "choice": "便理",
@@ -5152,7 +5152,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "眠かった",
             "isCorrect": true,
-            "text": "眠かった = ง่วงนอน"
+            "text": "眠かった (ねむかった) = มาจาก 眠い (ง่วงนอน)"
           }
         ]
       },
@@ -5176,7 +5176,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "雪",
             "isCorrect": true,
-            "text": "雪 = หิมะ"
+            "text": "雪 (ゆき) = หิมะ"
           },
           {
             "choice": "電",
@@ -5220,7 +5220,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "なおって",
             "isCorrect": false,
-            "text": "なおって = มีคนกางร่มเดินอยู่ ข้างนอกคงกำลังฝนตกอยู่แน่ๆ"
+            "text": "なおって = หายป่วย, ซ่อมเสร็จ (治って/直って)"
           },
           {
             "choice": "ぬれて",
@@ -5230,7 +5230,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かわいて",
             "isCorrect": true,
-            "text": "かわいて = แห้ง 「かわいていません」 = ยังไม่แห้ง"
+            "text": "かわいて = แห้ง, กระหายน้ำ (乾いて/渇いて)"
           }
         ]
       },
@@ -5264,7 +5264,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ねっしんに",
             "isCorrect": true,
-            "text": "ねっしんに = อย่างกระตือรือร้น/ตั้งอกตั้งใจ"
+            "text": "ねっしんに = อย่างกระตือรือร้น (熱心に)"
           },
           {
             "choice": "まっすぐに",
@@ -5298,7 +5298,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きょうみ",
             "isCorrect": true,
-            "text": "きょうみ = ความสนใจ 「きょうみがある」 = มีความสนใจใน..."
+            "text": "きょうみ = ความสนใจ (興味)"
           },
           {
             "choice": "こころ",
@@ -5308,7 +5308,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "しゅみ",
             "isCorrect": false,
-            "text": "しゅみ = สมุดบันทึกประจำวัน, ไดอารี่"
+            "text": "しゅみ = งานอดิเรก (趣味)"
           }
         ]
       },
@@ -5332,22 +5332,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "アイディア",
             "isCorrect": false,
-            "text": "アイディア = ส่งหนังสือที่ซื้อในญี่ปุ่นกลับไปที่ประเทศบ้านเกิด"
+            "text": "アイディア = ความคิด, ไอเดีย (Idea)"
           },
           {
             "choice": "ルール",
             "isCorrect": true,
-            "text": "ルール = กฎ/กติกาการแข่งขัน"
+            "text": "ルール = กฎเกณฑ์, กติกา (Rule)"
           },
           {
             "choice": "あんない",
             "isCorrect": false,
-            "text": "あんない = เพื่อนมาสายกว่าเวลานัด แต่กลับไม่ยอมขอโทษทุกคนเลย"
+            "text": "あんない = การนำทาง, การพาเที่ยวชม (案内)"
           },
           {
             "choice": "せつめい",
             "isCorrect": false,
-            "text": "せつめい = สนามบิน"
+            "text": "せつめい = การอธิบาย, คำอธิบาย (説明)"
           }
         ]
       },
@@ -5371,7 +5371,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やくそく",
             "isCorrect": false,
-            "text": "やくそく = おれい (お礼) = การแสดงความขอบคุณ/คำขอบคุณ"
+            "text": "やくそく = สัญญา, การนัดหมาย (約束)"
           },
           {
             "choice": "りよう",
@@ -5381,12 +5381,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "せわ",
             "isCorrect": false,
-            "text": "せわ = อีกเดี๋ยวรถไฟด่วนพิเศษก็จะมาแล้วค่ะ (特急 = ด่วนพิเศษ)"
+            "text": "せわ = การดูแล, เอาใจใส่ (世話)"
           },
           {
             "choice": "ようい",
             "isCorrect": true,
-            "text": "ようい = การเตรียมพร้อม/การจัดเตรียม"
+            "text": "ようい = การเตรียมการ, การจัดเตรียม (用意)"
           }
         ]
       },
@@ -5410,7 +5410,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さんせい",
             "isCorrect": false,
-            "text": "さんせい = คัดค้าน, ตรงกันข้าม"
+            "text": "さんせい = การเห็นด้วย, การยินยอม (賛成)"
           },
           {
             "choice": "あいさつ",
@@ -5420,12 +5420,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "そうだん",
             "isCorrect": true,
-            "text": "そうだん = ปรึกษาหารือ"
+            "text": "そうだん = การปรึกษาหารือ (相談)"
           },
           {
             "choice": "へんじ",
             "isCorrect": false,
-            "text": "へんじ = ทะเลสาบ"
+            "text": "へんじ = การตอบกลับ, คำตอบ (返事)"
           }
         ]
       },
@@ -5449,7 +5449,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はこんで",
             "isCorrect": true,
-            "text": "はこんで = ขนย้าย/ลำเลียง"
+            "text": "はこんで = ขนย้าย, แบกหาม (運んで <- 運ぶ)"
           },
           {
             "choice": "つたえて",
@@ -5493,7 +5493,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きけん",
             "isCorrect": true,
-            "text": "きけん = อันตราย"
+            "text": "きけん = อันตราย, ความเสี่ยง (危険)"
           },
           {
             "choice": "じゆう",
@@ -5537,7 +5537,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "とめないで",
             "isCorrect": true,
-            "text": "とめないで = จอดรถ 「車をとめないでください」 = กรุณาอย่าจอดรถ"
+            "text": "とめないで = อย่าจอด (รถ), อย่าหยุด (止めないで <- 止める)"
           },
           {
             "choice": "きめないで",
@@ -5566,22 +5566,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "バスが とまりました。",
             "isCorrect": false,
-            "text": "バスが とまりました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "バスが とまりました。 = รถบัสหยุดแล้ว (とまる = หยุด/จอด)"
           },
           {
             "choice": "バスが つきました。",
             "isCorrect": false,
-            "text": "バスが つきました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "バスが つきました。 = รถบัสมาถึงแล้ว (つく = มาถึง)"
           },
           {
             "choice": "バスが でました。",
             "isCorrect": true,
-            "text": "バスが でました。 = ออกเดินทาง มีความหมายเดียวกับ 「でる」 (出る / でました = ออกรถ)"
+            "text": "バスが でました。 = รถบัสออกเดินทางแล้ว (ออกรถ ตรงกับ しゅっぱつする / でる)"
           },
           {
             "choice": "バスが まがりました。",
             "isCorrect": false,
-            "text": "バスが まがりました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "バスが まがりました。 = รถบัสเลี้ยวแล้ว (まがる = เลี้ยว)"
           }
         ]
       },
@@ -5605,22 +5605,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "もっと おおきく かいて ください。",
             "isCorrect": false,
-            "text": "きょうしつを でて ください。 = กรุณาออกจากห้องเรียนไปครับ (でる = ออกไป)"
+            "text": "もっと おおきく かいて ください。 = กรุณาเขียนให้ตัวใหญ่กว่านี้ (おおきい = ใหญ่)"
           },
           {
             "choice": "もっと きれいに かいて ください。",
             "isCorrect": true,
-            "text": "きょうしつに はいって ください。 = กรุณาเข้ามาในห้องเรียนครับ (เข้ามาข้างใน ตรงกับ おはいりください)"
+            "text": "もっと きれいに かいて ください。 = กรุณาเขียนให้สวยงามเรียบร้อยกว่านี้ (ประณีตเรียบร้อย ตรงกับ ていねいに / きれいに)"
           },
           {
             "choice": "もっと ふとく かいて ください。",
             "isCorrect": false,
-            "text": "きょうしつを そうじして ください。 = กรุณาทำความสะอาดห้องเรียนครับ (そうじする = ทำความสะอาด)"
+            "text": "もっと ふとく かいて ください。 = กรุณาเขียนให้เส้นหนากว่านี้ (ふとい = หนา)"
           },
           {
             "choice": "もっと かんたんに かいて ください。",
             "isCorrect": false,
-            "text": "きょうしつを あけて ください。 = กรุณาเปิดห้องเรียนครับ (あける = เปิด)"
+            "text": "もっと かんたんに かいて ください。 = กรุณาเขียนให้เรียบง่ายกว่านี้ (かんたん = ง่าย)"
           }
         ]
       },
@@ -5644,22 +5644,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あには えが じょうずです。",
             "isCorrect": true,
-            "text": "やまださんは きのう 会社を はじめました。 = เมื่อวานคุณยามาดะเริ่มเปิดบริษัท (はじめる = เริ่มต้น)"
+            "text": "あには えが じょうずです。 = พี่ชายวาดรูปเก่งมาก (เก่ง/ชำนาญ ตรงกับ うまい / じょうず)"
           },
           {
             "choice": "あには えが きらいです。",
             "isCorrect": false,
-            "text": "やまださんは きのう 会社に いきました。 = เมื่อวานคุณยามาดะไปทำงานที่บริษัท (いく = ไป)"
+            "text": "あには えが きらいです。 = พี่ชายเกลียดการวาดรูป (きらい = เกลียด)"
           },
           {
             "choice": "あには えが へたです。",
             "isCorrect": false,
-            "text": "やまださんは きのう 会社を やすみました。 = เมื่อวานคุณยามาดะหยุดงานที่บริษัท (หยุดงาน/ไม่มา ตรงกับ こなかった)"
+            "text": "あには えが へたです。 = พี่ชายวาดรูปไม่เก่ง (へた = ไม่เก่ง/ห่วย)"
           },
           {
             "choice": "あには えが すきです。",
             "isCorrect": false,
-            "text": "やまださんは きのう 会社を やめました。 = เมื่อวานคุณยามาดะลาออกจากบริษัท (やめる = ลาออก/เลิก)"
+            "text": "あには えが すきです。 = พี่ชายชอบวาดรูป (すき = ชอบ)"
           }
         ]
       },
@@ -5683,22 +5683,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きのうは ねるのが おそく なって しまいました。",
             "isCorrect": false,
-            "text": "きのうの テストは かんたんでした。 = ข้อสอบเมื่อวานง่ายมาก (かんたん = ง่าย)"
+            "text": "きのうは ねるのが おそく なって しまいました。 = เมื่อวานนี้นอนดึกไปหน่อย (นอนดึก)"
           },
           {
             "choice": "きのうは はやく ねて しまいました。",
             "isCorrect": false,
-            "text": "きのうの テストは つまらなかったです。 = ข้อสอบเมื่อวานน่าเบื่อมาก (つまらない = น่าเบื่อ)"
+            "text": "きのうは はやく ねて しまいました。 = เมื่อวานนี้เข้านอนเร็ว (เข้านอนเร็ว)"
           },
           {
             "choice": "きのうは おきるのが おそく なって しまいました。",
             "isCorrect": true,
-            "text": "きのうの テストは だいじょうぶでした。 = ข้อสอบเมื่อวานไม่เป็นไร/พอไหว (だいじょうぶ = ไม่เป็นไร)"
+            "text": "きのうは おきるのが おそく なって しまいました。 = เมื่อวานนี้ตื่นนอนสายไปหน่อย (ตื่นสาย ตรงกับ ねぼうする / おきるのがおそい)"
           },
           {
             "choice": "きのうは はやく おきて しまいました。",
             "isCorrect": false,
-            "text": "きのうの テストは むずかしかったです。 = ข้อสอบเมื่อวานยากมาก (ลำบาก/ยาก ตรงกับ たいへんでした)"
+            "text": "きのうは はやく おきて しまいました。 = เมื่อวานนี้ตื่นนอนแต่เช้า (ตื่นเช้า)"
           }
         ]
       },
@@ -5722,22 +5722,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "先生は たなかさんに「気をつけてね」と 言いました。",
             "isCorrect": false,
-            "text": "この へやは くらいですね。 = ห้องนี้มืดจังเลยนะ (くらい = มืด)"
+            "text": "先生は たなかさんに「気をつけてね」と 言いました。 = อาจารย์พูดกับคุณทานากะว่า \"ระวังตัวด้วยนะ\""
           },
           {
             "choice": "先生は たなかさんに「とても よかったですよ」と 言いました。",
             "isCorrect": true,
-            "text": "この へやは あかるいですね。 = ห้องนี้สว่างจังเลยนะ (สว่าง ตรงกับ ひかりが たくさん 入って)"
+            "text": "先生は たなかさんに「とても よかったですよ」と 言いました。 = อาจารย์พูดกับคุณทานากะว่า \"ทำได้ยอดเยี่ยมมากเลยนะ\" (ได้รับคำชม ตรงกับ ほめられる)"
           },
           {
             "choice": "先生は たなかさんに「ちょっと 休みましょう」と 言いました。",
             "isCorrect": false,
-            "text": "この へやは せまいですね。 = ห้องนี้แคบจังเลยนะ (せまい = แคบ)"
+            "text": "先生は たなかさんに「ちょっと 休みましょう」と 言いました。 = อาจารย์พูดกับคุณทานากะว่า \"พักสักหน่อยเถอะ\""
           },
           {
             "choice": "先生は たなかさんに「たいへんですね」と 言いました。",
             "isCorrect": false,
-            "text": "この へやは ひろいですね。 = ห้องนี้กว้างจังเลยนะ (ひろい = กว้าง)"
+            "text": "先生は たなかさんに「たいへんですね」と 言いました。 = อาจารย์พูดกับคุณทานากะว่า \"ลำบากแย่เลยนะ\""
           }
         ]
       },
@@ -5761,22 +5761,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さいきん いそがしくて、しごとが るすに なりません。",
             "isCorrect": false,
-            "text": "さいきん いそがしくて、しごとが るすに なりません。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "さいきん いそがしくて、しごとが るすに なりません。 = ช่วงนี้ยุ่งมาก งานเลยไม่เสร็จสักที (งานค้างคา ต้องใช้ 終わらない 不ใช่ るす)"
           },
           {
             "choice": "あの デパートは きょうは るすです。",
             "isCorrect": false,
-            "text": "あの デパートは きょうは るすです。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "あの デパートは きょうは るすです。 = ห้างสรรพสินค้าแห่งนั้นวันนี้ปิดทำการ (ห้างปิดทำการ ต้องใช้ 休み/休業 不ใช่ るす)"
           },
           {
             "choice": "この ひこうきには るすの せきが ありません。",
             "isCorrect": false,
-            "text": "この ひこうきには るすの せきが ありません。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "この ひこうきには るすの せきが ありません。 = บนเครื่องบินลำนี้ไม่มีที่นั่งว่างเลย (ที่นั่งว่าง ต้องใช้ 空席/あき ไม่ใช่ るす)"
           },
           {
             "choice": "ともだちの いえに 行ったら るすでした。",
             "isCorrect": true,
-            "text": "ともだちの いえに 行ったら るすでした。 = การไม่อยู่บ้าน"
+            "text": "ともだちの いえに 行ったら るすでした。 = พอไปที่บ้านเพื่อน ปรากฏว่าเพื่อนไม่อยู่บ้าน (ไม่อยู่บ้าน ใช้ るす ถูกต้อง)"
           }
         ]
       },
@@ -5800,22 +5800,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "この りょうりは からだに とても しんせつですよ。",
             "isCorrect": false,
-            "text": "雨が やんだので、かさを たたみました。 = ฝนหยุดตกแล้วจึงพับร่มเก็บ (พับร่ม ใช้ たたむ ถูกต้อง)"
+            "text": "この りょうりは からだに とても しんせつですよ。 = อาหารจานนี้ดีต่อสุขภาพมาก (ดีต่อร่างกาย ต้องใช้ 体にいい 不ใช่ しんせつ)"
           },
           {
             "choice": "コンビニは 何でも 買えるので とても しんせつです。",
             "isCorrect": false,
-            "text": "あしたの よていを てちょうに たたみました。 = จดกำหนดการลงสมุดพก (จดบันทึก ต้องใช้ メモしました/書きました)"
+            "text": "コンビニは 何でも 買えるので とても しんせつです。 = ร้านสะดวกซื้อซื้อของได้ทุกอย่างเลยสะดวกมาก (สะดวกสบาย ต้องใช้ 便利/べんり)"
           },
           {
             "choice": "この びょういんの おいしゃさんは とても しんせつですよ。",
             "isCorrect": true,
-            "text": "びょうきに ならないように、体を たたんで います。 = รักษาสุขภาพร่างกายไม่ให้ป่วย (ดูแลร่างกาย ต้องใช้ 気をつけて/休めて)"
+            "text": "この びょういんの おいしゃさんは とても しんせつですよ。 = คุณหมอที่โรงพยาบาลแห่งนี้ใจดีมีน้ำใจมาก (ใจดีมีน้ำใจ ใช้ しんせつ ถูกต้อง)"
           },
           {
             "choice": "わたしの 母は にわの 花に とても しんせつです。",
             "isCorrect": false,
-            "text": "じゅぎょうが おわったので、まどを たたみました。 = คาบเรียนจบแล้วจึงปิดหน้าต่าง (ปิดหน้าต่าง ต้องใช้ まどを閉めました)"
+            "text": "わたしの 母は にわの 花に とても しんせつです。 = คุณแม่ดูแลเอาใจใส่ดอกไม้ในสวนเป็นอย่างดี (ดูแลเอาใจใส่ ต้องใช้ 世話/せわ)"
           }
         ]
       },
@@ -5839,22 +5839,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かぜを ひいたので、こえが にがいです。",
             "isCorrect": false,
-            "text": "まどを あけると、すずしい かぜが 入って きました。 = พอเปิดหน้าต่าง ลมเย็นสบายก็พัดเข้ามา (ลมเย็นสบาย ใช้ すずしい ถูกต้อง)"
+            "text": "かぜを ひいたので、こえが にがいです。 = เป็นหวัดเลยเสียงแหบ (เสียงแหบแห้ง ต้องใช้ かすれている 不ใช่ にがい)"
           },
           {
             "choice": "くらい みちを 一人で あるくのは にがいです。",
             "isCorrect": false,
-            "text": "この コーヒーは すずしくて、とても おいしいです。 = กาแฟนี้เย็นชื่นใจอร่อยมาก (กาแฟเย็น ต้องใช้ つめたい ไม่ใช่ すずしい)"
+            "text": "くらい みちを 一人で あるくのは にがいです。 = เดินคนเดียวบนถนนมืดๆ รู้สึกน่ากลัว (น่ากลัว ต้องใช้ こわい 不ใช่ にがい)"
           },
           {
             "choice": "にもつが おもかったので、うでが にがいです。",
             "isCorrect": false,
-            "text": "きのうの ばんは、すずしい おふろに 入りました。 = เมื่อคืนแช่น้ำอุ่นสบาย (น้ำอุ่น ต้องใช้ ぬるい/あたたかい ไม่ใช่ すずしい)"
+            "text": "にもつが おもかったので、うでが にがいです。 = สัมภาระหนัก แขนเลยล้าปวดเมื่อย (ปวดเมื่อย ต้องใช้ だるい/痛い 不ใช่ にがい)"
           },
           {
             "choice": "この くすりは とても にがいです。",
             "isCorrect": true,
-            "text": "わたしの へやは 日が あたらないので、冬は とても すずしいです。 = ห้องแดดส่องไม่ถึง หน้าหนาวเลยหนาวมาก (หนาว ต้องใช้ さむい 不ใช่ すずしい)"
+            "text": "この くすりは とても にがいです。 = ยานี้ขมมาก (รสชาติขม ใช้ にがい ถูกต้อง)"
           }
         ]
       },
@@ -5878,22 +5878,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おさらを おとして、わって しまいました。",
             "isCorrect": true,
-            "text": "あしたの パーティーには、ぜひ 来て ください。 = งานเลี้ยงวันพรุ่งนี้ ต้องมาให้ได้เลยนะ (ชวนอย่างจริงใจ ใช้ ぜひ ถูกต้อง)"
+            "text": "おさらを おとして、わって しまいました。 = ทำจานหล่นจนแตกกระจาย (ทำภาชนะแตก ใช้ わる ถูกต้อง)"
           },
           {
             "choice": "しんぶんを わって、かばんに 入れました。",
             "isCorrect": false,
-            "text": "あしたの 天気は、ぜひ 雨でしょう。 = อากาศวันพรุ่งนี้ฝนน่าจะตกอย่างแน่นอน (คาดคะเน ต้องใช้ たぶん/きっと 不ใช่ ぜひ)"
+            "text": "しんぶんを わって、かばんに 入れました。 = พับหนังสือพิมพ์ใส่กระเป๋า (พับกระดาษ ต้องใช้ 折る/たたむ 不ใช่ わる)"
           },
           {
             "choice": "ようふくを わって、母に おこられました。",
             "isCorrect": false,
-            "text": "この えいがは、ぜひ おもしろかったです。 = หนังเรื่องนี้สนุกมากๆ (บอกเล่าความรู้สึก ต้องใช้ とても/すごく 不ใช่ ぜひ)"
+            "text": "ようふくを わって、母に おこられました。 = ทำเสื้อผ้าฉีกขาดเลยโดนคุณแม่ดุ (เสื้อผ้าฉีกขาด ต้องใช้ 破る/やぶる 不ใช่ わる)"
           },
           {
             "choice": "この ジャムを 三本の びんに わって ください。",
             "isCorrect": false,
-            "text": "かれは ぜひ テニスが じょうずです。 = เขาเล่นเทนนิสเก่งมากๆ (บอกความสามารถ ต้องใช้ とても/本当に 不ใช่ ぜひ)"
+            "text": "この ジャムを 三本の びんに わって ください。 = แบ่งแยมนี้ใส่ลงในขวด 3 ใบ (แบ่งใส่ ต้องใช้ 分ける/わける 不ใช่ わる)"
           }
         ]
       },
@@ -5917,22 +5917,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あの とけいは ちょっと ちこくして います。",
             "isCorrect": false,
-            "text": "この へやは、だれでも じゆうに 使って いいです。 = ห้องนี้ ใครก็สามารถเข้ามาใช้ได้อย่างอิสระตามสบาย (ใช้อย่างอิสระ ใช้ じゆうに ถูกต้อง)"
+            "text": "あの とけいは ちょっと ちこくして います。 = นาฬิกาเรือนนั้นเดินช้าไปหน่อย (นาฬิกาเดินช้า ต้องใช้ 遅れている 不ใช่ ちこく)"
           },
           {
             "choice": "じゅぎょうに ちこくして すみません。",
             "isCorrect": true,
-            "text": "じかんが じゆうに ありますから、ゆっくり 話しましょう。 = มีเวลาเหลือเฟือ (มีเวลาเหลือ ต้องใช้ たくさん/十分に 不ใช่ じゆうに)"
+            "text": "じゅぎょうに ちこくして すみません。 = ขอโทษด้วยครับที่มาเข้าเรียนสาย (มาสาย ใช้ ちこくする ถูกต้อง)"
           },
           {
             "choice": "10時の でんしゃに ちこくして しまいました。",
             "isCorrect": false,
-            "text": "あしたは じゆうに 晴れるでしょう。 = พรุ่งนี้ท้องฟ้าแจ่มใสแน่นอน (พยากรณ์ ต้องใช้ きっと/たぶん 不ใช่ じゆうに)"
+            "text": "10時の でんしゃに ちこくして しまいました。 = ตกรถไฟรอบ 10 โมง (ตกรถไฟ ต้องใช้ 乗り遅れる 不ใช่ ちこくする)"
           },
           {
             "choice": "れんらくが ちこくして すみません。",
             "isCorrect": false,
-            "text": "この りょうりは じゆうに おいしいです。 = อาหารจานนี้อร่อยมากๆ (บอกความอร่อย ต้องใช้ とても/すごく 不ใช่ じゆうに)"
+            "text": "れんらくが ちこくして すみません。 = ขอโทษด้วยครับที่ติดต่อกลับมาช้า (ติดต่อช้า ต้องใช้ 返事が遅れて 不ใช่ ちこく)"
           }
         ]
       },
@@ -5971,7 +5971,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "たのしかった",
             "isCorrect": true,
-            "text": "たのしかった = สนุก"
+            "text": "たのしかった = สนุกสนานมาก (楽しかった <- 楽しい)"
           }
         ]
       },
@@ -6005,7 +6005,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ならって",
             "isCorrect": true,
-            "text": "ならって = เรียน"
+            "text": "ならって = เรียน, ร่ำเรียน (習って <- 習う)"
           },
           {
             "choice": "のこって",
@@ -6034,7 +6034,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かるい",
             "isCorrect": true,
-            "text": "かるい = เบา"
+            "text": "かるい = เบา (軽い)"
           },
           {
             "choice": "おもい",
@@ -6044,12 +6044,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はやい",
             "isCorrect": false,
-            "text": "はやい = ทะเล"
+            "text": "はやい = เร็ว, เช้าตรู่ (早い/速い)"
           },
           {
             "choice": "おそい",
             "isCorrect": false,
-            "text": "おそい = มาก, เยอะ"
+            "text": "おそい = ช้า, สาย (遅い)"
           }
         ]
       },
@@ -6078,7 +6078,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "しょくりょうひん",
             "isCorrect": true,
-            "text": "しょくりょうひん = สินค้าประเภทอาหาร"
+            "text": "しょくりょうひん = สินค้าประเภทอาหาร (食料品)"
           },
           {
             "choice": "しゅくりょうひん",
@@ -6122,12 +6122,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ふく",
             "isCorrect": false,
-            "text": "ふく = ผลิตภัณฑ์, สินค้า"
+            "text": "ふく = เสื้อผ้า (服)"
           },
           {
             "choice": "かお",
             "isCorrect": true,
-            "text": "かお = ใบหน้า"
+            "text": "かお = ใบหน้า (顔)"
           }
         ]
       },
@@ -6151,7 +6151,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "よほう",
             "isCorrect": true,
-            "text": "よほう = พยากรณ์อากาศ"
+            "text": "よほう = การพยากรณ์, การคาดหมาย (予報)"
           },
           {
             "choice": "ようほう",
@@ -6195,7 +6195,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "うごかないで",
             "isCorrect": true,
-            "text": "うごかないで = อย่าขยับ"
+            "text": "うごかないで = อย่าขยับ (動かないで <- 動く)"
           },
           {
             "choice": "なかないで",
@@ -6234,7 +6234,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "せわ",
             "isCorrect": true,
-            "text": "せわ = การดูแล/ปรนนิบัติ"
+            "text": "せわ = การดูแล, เอาใจใส่ (世話)"
           },
           {
             "choice": "せはなし",
@@ -6278,7 +6278,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "とっきゅう",
             "isCorrect": true,
-            "text": "とっきゅう = ด่วนพิเศษ"
+            "text": "とっきゅう = รถไฟด่วนพิเศษ (特急)"
           },
           {
             "choice": "ときゅ",
@@ -6317,7 +6317,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "映画",
             "isCorrect": true,
-            "text": "映画 = ภาพยนตร์"
+            "text": "映画 (えいが) = ภาพยนตร์, หนัง"
           },
           {
             "choice": "央面",
@@ -6351,7 +6351,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "泳いで",
             "isCorrect": true,
-            "text": "泳いで = ว่ายน้ำ"
+            "text": "泳いで (およいで) = มาจาก 泳ぐ (ว่ายน้ำ)"
           },
           {
             "choice": "港いで",
@@ -6385,7 +6385,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "売り場",
             "isCorrect": true,
-            "text": "売り場 = แผนกขายสินค้า/เคาน์เตอร์ขาย"
+            "text": "売り場 (うりば) = แผนกขาย, จุดขายสินค้า"
           },
           {
             "choice": "売り所",
@@ -6439,7 +6439,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "終わります",
             "isCorrect": true,
-            "text": "終わります = จบ/สิ้นสุด"
+            "text": "終わります (おわります) = มาจาก 終わる (จบ, เสร็จสิ้น)"
           }
         ]
       },
@@ -6473,7 +6473,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "本屋",
             "isCorrect": true,
-            "text": "本屋 = ร้านหนังสือ"
+            "text": "本屋 (ほんや) = ร้านขายหนังสือ"
           },
           {
             "choice": "本家",
@@ -6507,7 +6507,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "係り",
             "isCorrect": true,
-            "text": "係り = เจ้าหน้าที่ผู้รับผิดชอบ"
+            "text": "係り (かかり) = ผู้รับผิดชอบ, เจ้าหน้าที่ประจำจุด"
           },
           {
             "choice": "員り",
@@ -6546,7 +6546,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "のりかえて",
             "isCorrect": true,
-            "text": "のりかえて = ต่อรถ/เปลี่ยนขบวน"
+            "text": "のりかえて = เปลี่ยนสายรถไฟ/ยานพาหนะ (乗り換えて <- 乗り換える)"
           },
           {
             "choice": "ひっこして",
@@ -6580,7 +6580,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "サービス",
             "isCorrect": false,
-            "text": "サービス = บริการ"
+            "text": "サービス = บริการ, เซอร์วิส (Service)"
           },
           {
             "choice": "チップ",
@@ -6590,12 +6590,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "アルバイト",
             "isCorrect": false,
-            "text": "アルバイト = งานพิเศษ, งานพาร์ทไทม์"
+            "text": "アルバイト = งานพิเศษ, งานพาร์ตไทม์ (Arbeit)"
           },
           {
             "choice": "メニュー",
             "isCorrect": true,
-            "text": "メニュー = เมนูอาหาร"
+            "text": "メニュー = เมนูอาหาร (Menu)"
           }
         ]
       },
@@ -6624,17 +6624,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きょういく",
             "isCorrect": false,
-            "text": "きょういく = วัฒนธรรม"
+            "text": "きょういく = การศึกษา (教育)"
           },
           {
             "choice": "けんきゅう",
             "isCorrect": false,
-            "text": "けんきゅう = ตารางเวลา (รถไฟ, รถบัส)"
+            "text": "けんきゅう = การวิจัย, การค้นคว้า (研究)"
           },
           {
             "choice": "そつぎょう",
             "isCorrect": true,
-            "text": "そつぎょう = สำเร็จการศึกษา"
+            "text": "そつぎょう = การสำเร็จการศึกษา, เรียนจบ (卒業)"
           }
         ]
       },
@@ -6658,17 +6658,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こしょう",
             "isCorrect": false,
-            "text": "こしょう = けしき (景色) = ทิวทัศน์/ทัศนียภาพตามธรรมชาติ"
+            "text": "こしょう = การชำรุดเสียหาย, การพัง (故障)"
           },
           {
             "choice": "こうじ",
             "isCorrect": true,
-            "text": "こうじ = การก่อสร้าง"
+            "text": "こうじ = งานก่อสร้าง (工事)"
           },
           {
             "choice": "はんたい",
             "isCorrect": false,
-            "text": "はんたい = ขาว"
+            "text": "はんたい = ตรงกันข้าม, คัดค้าน (反対)"
           },
           {
             "choice": "しっぱい",
@@ -6697,22 +6697,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "タオル",
             "isCorrect": false,
-            "text": "タオル = ผ้าขนหนู"
+            "text": "タオル = ผ้าขนหนู (Towel)"
           },
           {
             "choice": "ふくろ",
             "isCorrect": false,
-            "text": "ふくろ = เอกสาร"
+            "text": "ふくろ = ถุง, ซอง (袋)"
           },
           {
             "choice": "さら",
             "isCorrect": true,
-            "text": "さら = จาน ใช้ลักษณนาม 「まい」 และทำแตกได้"
+            "text": "さら = จาน (皿)"
           },
           {
             "choice": "ポスター",
             "isCorrect": false,
-            "text": "ポスター = โปสเตอร์"
+            "text": "ポスター = โปสเตอร์ (Poster)"
           }
         ]
       },
@@ -6736,17 +6736,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "チェック",
             "isCorrect": true,
-            "text": "チェック = ตรวจสอบ/เช็กดู"
+            "text": "チェック = การตรวจสอบ, เช็ค (Check)"
           },
           {
             "choice": "コピー",
             "isCorrect": false,
-            "text": "コピー = การถ่ายเอกสาร, สำเนา"
+            "text": "コピー = การถ่ายเอกสาร, ก็อปปี้ (Copy)"
           },
           {
             "choice": "スタート",
             "isCorrect": false,
-            "text": "スタート = การเริ่มต้น, การออกตัว"
+            "text": "スタート = การเริ่มต้น, ออกตัว (Start)"
           },
           {
             "choice": "サイン",
@@ -6780,7 +6780,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さんせい",
             "isCorrect": false,
-            "text": "さんせい = คัดค้าน, ตรงกันข้าม"
+            "text": "さんせい = การเห็นด้วย, การยินยอม (賛成)"
           },
           {
             "choice": "しつもん",
@@ -6790,7 +6790,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いけん",
             "isCorrect": true,
-            "text": "いけん = ความคิดเห็น มักใช้ในรูป 「意見を聞く」 (ถาม/รับฟังความคิดเห็น) ประโยคนี้แปลว่า ถามความคิดเห็นของทุกคนในห้องว่าจะไปเที่ยวที่ไหน แล้วจึงตัดสินใจ"
+            "text": "いけん = ความคิดเห็น (意見)"
           }
         ]
       },
@@ -6814,7 +6814,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "むかえ",
             "isCorrect": true,
-            "text": "むかえ = ไปรับ"
+            "text": "むかえ = การไปรับ (คน) (迎え)"
           },
           {
             "choice": "さそい",
@@ -6824,12 +6824,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あんない",
             "isCorrect": false,
-            "text": "あんない = เพื่อนมาสายกว่าเวลานัด แต่กลับไม่ยอมขอโทษทุกคนเลย"
+            "text": "あんない = การนำทาง, การพาเที่ยวชม (案内)"
           },
           {
             "choice": "じゅんび",
             "isCorrect": false,
-            "text": "じゅんび = การเยี่ยมผู้ป่วย"
+            "text": "じゅんび = การเตรียมตัว, การเตรียมพร้อม (準備)"
           }
         ]
       },
@@ -6853,7 +6853,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かんで",
             "isCorrect": true,
-            "text": "かんで = เคี้ยว"
+            "text": "かんで = เคี้ยว, กัด (噛んで <- 噛む)"
           },
           {
             "choice": "こわして",
@@ -6897,12 +6897,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おくりました",
             "isCorrect": false,
-            "text": "おくりました = กาแฟแก้วนี้มีรสชาติแปลกๆ อยู่นะ"
+            "text": "おくりました = ส่งไปแล้ว (送りました <- 送る)"
           },
           {
             "choice": "かざりました",
             "isCorrect": true,
-            "text": "かざりました = ประดับ/ตกแต่ง"
+            "text": "かざりました = ประดับตกแต่งแล้ว (飾りました <- 飾る)"
           },
           {
             "choice": "たてました",
@@ -6931,22 +6931,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "これは とても ゆうめいです。",
             "isCorrect": false,
-            "text": "かれは ひとりで 外国へ 行きました。 = เขาไปต่างประเทศคนเดียว (ひとりで = คนเดียว)"
+            "text": "これは とても ゆうめいです。 = นี่เป็นสิ่งที่มีชื่อเสียงมาก (ゆうめい = มีชื่อเสียง)"
           },
           {
             "choice": "これは とても たいせつです。",
             "isCorrect": true,
-            "text": "かれは 友だちと 外国へ 行きました。 = เขาไปต่างประเทศกับเพื่อน (友だちと = กับเพื่อน)"
+            "text": "これは とても たいせつです。 = นี่เป็นสิ่งที่สำคัญมาก (สำคัญ ตรงกับ だいじ / たいせつ)"
           },
           {
             "choice": "これは とても べんりです。",
             "isCorrect": false,
-            "text": "かれは かぞくと 外国へ 行きました。 = เขาไปต่างประเทศกับครอบครัว (ครอบครัว ตรงกับ りょうしんと = กับพ่อแม่)"
+            "text": "これは とても べんりです。 = นี่เป็นสิ่งที่สะดวกสบายมาก (べんり = สะดวก)"
           },
           {
             "choice": "これは とても じょうぶです。",
             "isCorrect": false,
-            "text": "かれは 会社の人と 外国へ 行きました。 = เขาไปต่างประเทศกับคนที่บริษัท (会社の人と = กับคนที่บริษัท)"
+            "text": "これは とても じょうぶです。 = นี่เป็นสิ่งที่แข็งแรงทนทานมาก (じょうぶ = ทนทาน)"
           }
         ]
       },
@@ -6970,22 +6970,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ここで 右に まがってはいけません。",
             "isCorrect": false,
-            "text": "やまださんは ほっそりして います。 = คุณยามาดะหุ่นผอมเพรียว (ほっそり = ผอมเพรียว)"
+            "text": "ここで 右に まがってはいけません。 = ห้ามเลี้ยวขวาที่ตรงนี้"
           },
           {
             "choice": "ここで しゃしんを とってはいけません。",
             "isCorrect": false,
-            "text": "やまださんは ふとって います。 = คุณยามาดะอ้วนท้วน (ふとる = อ้วน)"
+            "text": "ここで しゃしんを とってはいけません。 = ห้ามถ่ายรูปที่ตรงนี้"
           },
           {
             "choice": "ここで のみものを 飲んではいけません。",
             "isCorrect": false,
-            "text": "やまださんは せが ひくいです。 = คุณยามาดะตัวเตี้ย (ひくい = เตี้ย)"
+            "text": "ここで のみものを 飲んではいけません。 = ห้ามดื่มเครื่องดื่มที่ตรงนี้"
           },
           {
             "choice": "ここで たばこを すってはいけません。",
             "isCorrect": true,
-            "text": "やまださんは やせて います。 = คุณยามาดะผอม/รูปร่างผอม (ผอม ตรงกับ スタイルが ほそい/やせている)"
+            "text": "ここで たばこを すってはいけません。 = ห้ามสูบบุหรี่ที่ตรงนี้ (เขตปลอดบุหรี่ ตรงกับ きんえん / たばこをすってはいけない)"
           }
         ]
       },
@@ -7009,22 +7009,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きのう 父に わらわれました。",
             "isCorrect": false,
-            "text": "たなかさんは うたが 下手です。 = คุณทานากะร้องเพลงไม่เก่ง (下手 = ไม่เก่ง)"
+            "text": "きのう 父に わらわれました。 = เมื่อวานถูกคุณพ่อหัวเราะใส่"
           },
           {
             "choice": "きのう 父に ほめられました。",
             "isCorrect": false,
-            "text": "たなかさんは うたが 上手です。 = คุณทานากะร้องเพลงเก่งมาก (เก่ง ตรงกับ 得意 / うまい)"
+            "text": "きのう 父に ほめられました。 = เมื่อวานได้รับคำชมจากคุณพ่อ"
           },
           {
             "choice": "きのう 父に たのまれました。",
             "isCorrect": false,
-            "text": "たなかさんは うたが すきです。 = คุณทานากะชอบร้องเพลง (すき = ชอบ)"
+            "text": "きのう 父に たのまれました。 = เมื่อวานถูกคุณพ่อไหว้วานขอร้อง"
           },
           {
             "choice": "きのう 父に おこられました。",
             "isCorrect": true,
-            "text": "たなかさんは うたが きらいです。 = คุณทานากะเกลียดการร้องเพลง (きらい = เกลียด)"
+            "text": "きのう 父に おこられました。 = เมื่อวานถูกคุณพ่อดุว่า/โกรธใส่ (โดนดุ ตรงกับ しかられる / おこられる)"
           }
         ]
       },
@@ -7048,22 +7048,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あしたの 9時に そちらに もっていきます。",
             "isCorrect": true,
-            "text": "この まちは しずかですね。 = เมืองนี้เงียบสงบจังนะ (しずか = เงียบสงบ)"
+            "text": "あしたの 9時に そちらに もっていきます。 = วันพรุ่งนี้ 9 โมงจะนำของไปให้ที่นั่น (นำไปส่งให้ ตรงกับ とどける / もっていく)"
           },
           {
             "choice": "あしたの 9時に そちらに かえします。",
             "isCorrect": false,
-            "text": "この まちは にぎやかですね。 = เมืองนี้คึกคักครึกครื้นจังนะ (คึกคัก ตรงกับ 人が たくさん いて)"
+            "text": "あしたの 9時に そちらに かえします。 = วันพรุ่งนี้ 9 โมงจะนำของไปคืนที่นั่น (かえす = คืนของ)"
           },
           {
             "choice": "あしたの 9時に そちらに つきます。",
             "isCorrect": false,
-            "text": "この まちは きれいですね。 = เมืองนี้สวยงามจังนะ (きれい = สวย/สะอาด)"
+            "text": "あしたの 9時に そちらに つきます。 = วันพรุ่งนี้ 9 โมงจะไปถึงที่นั่น (つく = ถึงที่หมาย)"
           },
           {
             "choice": "あしたの 9時に そちらに かえります。",
             "isCorrect": false,
-            "text": "この まちは ふべんですね。 = เมืองนี้ไม่สะดวกสบายเลยนะ (ふべん = ไม่สะดวก)"
+            "text": "あしたの 9時に そちらに かえります。 = วันพรุ่งนี้ 9 โมงจะกลับไปที่นั่น (かえる = กลับ)"
           }
         ]
       },
@@ -7087,22 +7087,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ここは 車をかりる ところです。",
             "isCorrect": false,
-            "text": "コーヒーを おかわりします。 = ขอเติมกาแฟอีกแก้วหนึ่ง (ขอเบิ้ล/เติมอีก ตรงกับ もう一杯)"
+            "text": "ここは 車をかりる ところです。 = ที่นี่เป็นสถานที่สำหรับเช่ารถยนต์ (かりる = เช่า)"
           },
           {
             "choice": "ここは 車をとめる ところです。",
             "isCorrect": false,
-            "text": "コーヒーを ちゅうもんします。 = สั่งกาแฟ (ちゅうもん = สั่งอาหาร/เครื่องดื่ม)"
+            "text": "ここは 車をとめる ところです。 = ที่นี่เป็นสถานที่สำหรับจอดรถยนต์ (とめる = จอดรถ)"
           },
           {
             "choice": "ここは 車をつくる ところです。",
             "isCorrect": true,
-            "text": "コーヒーを こぼしました。 = ทำกาแฟหกเลอะเทอะ (こぼす = ทำหก)"
+            "text": "ここは 車をつくる ところです。 = ที่นี่เป็นสถานที่สำหรับผลิต/ทำรถยนต์ (ผลิต ตรงกับ せいさんする / つくる)"
           },
           {
             "choice": "ここは 車をあらう ところです。",
             "isCorrect": false,
-            "text": "コーヒーを のみおわりました。 = ดื่มกาแฟหมดแล้ว (のみおわる = ดื่มเสร็จ)"
+            "text": "ここは 車をあらう ところです。 = ที่นี่เป็นสถานที่สำหรับล้างรถยนต์ (あらう = ล้าง)"
           }
         ]
       },
@@ -7126,22 +7126,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "この ひこうきは 10時に 日本に つく やくそくです。",
             "isCorrect": false,
-            "text": "テレビが こしょうしたので、修理に 出しました。 = โทรทัศน์เสียจึงส่งซ่อม (ใช้ こしょう กับเครื่องใช้ไฟฟ้า ถูกต้อง)"
+            "text": "この ひこうきは 10時に 日本に つく やくそくです。 = เครื่องบินลำนี้มีกำหนดถึงญี่ปุ่นเวลา 10 โมง (กำหนดการ ต้องใช้ 予定/よてい)"
           },
           {
             "choice": "あしたは、母と かいものに 行く やくそくが あります。",
             "isCorrect": true,
-            "text": "本を 落としたら、こしょうしました。 = ทำหนังสือตกแล้วพัง (หนังสือชำรุดเสียหาย ต้องใช้ 破れた/汚れた)"
+            "text": "あしたは、母と かいものに 行く やくそくが あります。 = วันพรุ่งนี้มีนัดไปซื้อของกับคุณแม่ (นัดหมาย ใช้ やくそく ถูกต้อง)"
           },
           {
             "choice": "電車の きっぷの やくそくは インターネットで できますか。",
             "isCorrect": false,
-            "text": "くつ下が こしょうしたので、新しいのを 買いました。 = ถุงเท้าขาดเลยซื้อใหม่ (ถุงเท้าขาด ต้องใช้ 破れた/穴があいた)"
+            "text": "電車の きっぷの やくそくは インターネットで できますか。 = จองตั๋วรถไฟทางอินเทอร์เน็ตได้ไหม (จองตั๋ว ต้องใช้ 予約/よやく 不ใช่ やくそく)"
           },
           {
             "choice": "今から、きょうの 見学の やくそくを せつめいします。",
             "isCorrect": false,
-            "text": "かぜを ひいて、のどが こしょうしました。 = เป็นหวัดจนเจ็บคอ (เจ็บคอ ต้องใช้ のどが痛い)"
+            "text": "今から、きょうの 見学の やくそくを せつめいします。 = ต่อจากนี้จะอธิบายระเบียบการทัศนศึกษาดูงาน (ระเบียบ/ข้อปฏิบัติ ต้องใช้ 規則/ルール)"
           }
         ]
       },
@@ -7165,22 +7165,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おみやげを もらったので、おれいを 言いました。",
             "isCorrect": true,
-            "text": "わたしは いつも 電車で ざっしを 読みます。 = ฉันมักจะอ่านนิตยสารบนรถไฟเป็นประจำเสมอ (ใช้ いつも ถูกต้อง)"
+            "text": "おみやげを もらったので、おれいを 言いました。 = ได้รับของฝากมา จึงกล่าวขอบคุณ (กล่าวขอบคุณ ใช้ おれいを言う ถูกต้อง)"
           },
           {
             "choice": "にゅういんした とき、友だちが おれいに 来て くれました。",
             "isCorrect": false,
-            "text": "いつも 雨が ふって いますから、出かけません。 = วันนี้ฝนตก (สภาพอากาศปัจจุบัน ต้องใช้ 今/きょう 不ใช่ いつも)"
+            "text": "にゅういんした とき、友だちが おれいに 来て くれました。 = ตอนเข้าโรงพยาบาล เพื่อนมาเยี่ยมไข้ (มาเยี่ยมคนป่วย ต้องใช้ お見舞い/おみまい)"
           },
           {
             "choice": "きょうは 父の たんじょうびの おれいを 買いに 行きます。",
             "isCorrect": false,
-            "text": "いつも この バスに 乗って ください。 = กรุณาขึ้นรถบัสคันนี้ (ชี้เฉพาะคัน ต้องใช้ このバスに)"
+            "text": "きょうは 父の たんじょうびの おれいを 買いに 行きます。 = วันนี้จะไปซื้อของขวัญวันเกิดให้คุณพ่อ (ของขวัญ ต้องใช้ プレゼント)"
           },
           {
             "choice": "「しつれいします」と 言って、おれいを してから へやに 入ります。",
             "isCorrect": false,
-            "text": "いつも ありがとうございました。 = ขอบคุณสำหรับทุกสิ่งเสมอมา (ขอบคุณในโอกาส ต้องใช้ どうも/いつもお世話になり)"
+            "text": "「しつれいします」と 言って、おれいを してから へやに 入ります。 = พูดว่า \"ขออนุญาตครับ\" แล้วโค้งคำนับก่อนเข้าห้อง (โค้งคำนับ ต้องใช้ お辞儀/おじぎ)"
           }
         ]
       },
@@ -7204,22 +7204,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "デパートや ホテルの 人は ていねいな ことばを つかいます。",
             "isCorrect": true,
-            "text": "テストの じゅんびを して います。 = กำลังเตรียมตัวสำหรับการสอบอยู่ (เตรียมตัวอ่านหนังสือสอบ ใช้ じゅんび ถูกต้อง)"
+            "text": "デパートや ホテルの 人は ていねいな ことばを つかいます。 = พนักงานห้างสรรพสินค้าและโรงแรมใช้ถ้อยคำที่สุภาพไพเราะ (ใช้ ていねい กับคำพูดสุภาพ ถูกต้อง)"
           },
           {
             "choice": "父の たんじょうびに ていねいな レストランに 行きました。",
             "isCorrect": false,
-            "text": "へやの じゅんびを して、きれいになりました。 = ทำความสะอาดห้องจนสะอาด (ทำความสะอาด ต้องใช้ そうじ)"
+            "text": "父の たんじょうびに ていねいな レストランに 行きました。 = ไปทานอาหารที่ร้านหรูในวันเกิดคุณพ่อ (ร้านอาหารหรู ต้องใช้ 高級な/こうきゅうな)"
           },
           {
             "choice": "女の人に 年を 聞くのは ていねいではありません。",
             "isCorrect": false,
-            "text": "レポートの じゅんびを 出しました。 = ส่งรายงานให้อาจารย์ (ส่งรายงาน ต้องใช้ レポートを出しました)"
+            "text": "女の人に 年を 聞くのは ていねいではありません。 = การถามอายุของผู้หญิงเป็นการเสียมารยาท (เสียมารยาท ต้องใช้ 失礼/しつれい)"
           },
           {
             "choice": "この おかしは あじが とても ていねいですね。",
             "isCorrect": false,
-            "text": "ごはんの じゅんびを 食べました。 = ทานอาหาร (ทานอาหาร ต้องใช้ ごはんを食べました)"
+            "text": "この おかしは あじが とても ていねいですね。 = ขนมนี้รสชาติประณีตกลมกล่อมมาก (รสชาติอร่อย ต้องใช้ 上品な味/おいしい)"
           }
         ]
       },
@@ -7243,22 +7243,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "チョコレートで 手が ぬれて しまいました。",
             "isCorrect": false,
-            "text": "この みちは 車が 多くて、きけんです。 = ถนนเส้นนี้รถเยอะมาก อันตราย (อันตราย ใช้ きけん ถูกต้อง)"
+            "text": "チョコレートで 手が ぬれて しまいました。 = มือเปื้อนช็อกโกแลตเลอะเทอะ (เปื้อนเลอะ ต้องใช้ 汚れる/よごれる 不ใช่ ぬれる)"
           },
           {
             "choice": "もりの 中の 空気は いつも ぬれて います。",
             "isCorrect": false,
-            "text": "この ナイフは よく きれて、きけんです。 = มีดเล่มนี้คมมาก อันตราย (คมอันตราย ใช้ あぶない/きけん ถูกต้อง)"
+            "text": "もりの 中の 空気は いつも ぬれて います。 = อากาศในป่าสดชื่นบริสุทธิ์เสมอ (อากาศบริสุทธิ์ ต้องใช้ 澄んでいる/新鮮)"
           },
           {
             "choice": "雨で せんたくものが ぬれて しまいました。",
             "isCorrect": true,
-            "text": "この ケーキは あまくて、きけんです。 = เค้กหวานมาก (หวานจัด ต้องใช้ あますぎる)"
+            "text": "雨で せんたくものが ぬれて しまいました。 = เสื้อผ้าที่ซักตากไว้เปียกปอนเพราะฝนตก (เปียกน้ำ ใช้ ぬれる ถูกต้อง)"
           },
           {
             "choice": "この メロンは ぬれて いて、おいしいですね。",
             "isCorrect": false,
-            "text": "この へやは 寒くて、きけんです。 = ห้องหนาวมาก (หนาวจัด ต้องใช้ 寒すぎる)"
+            "text": "この メロンは ぬれて いて、おいしいですね。 = เมลอนผลนี้ฉ่ำน้ำหวานอร่อย (ฉ่ำน้ำ ต้องใช้ みずみずしい 不ใช่ ぬれている)"
           }
         ]
       },
@@ -7282,22 +7282,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はしる前に、少し うんどうを して、からだを わかしました。",
             "isCorrect": false,
-            "text": "かいぎの 日時を メモしました。 = จดบันทึกวันและเวลาการประชุมไว้ (จดบันทึก ใช้ メモする ถูกต้อง)"
+            "text": "はしる前に、少し うんどうを して、からだを わかしました。 = ก่อนวิ่งออกกำลังกายอบอุ่นร่างกายสักหน่อย (อบอุ่นร่างกาย ต้องใช้ 体を温める/あたたまる)"
           },
           {
             "choice": "わかした たまごを 半分にして、サラダに 入れました。",
             "isCorrect": false,
-            "text": "黒板の 字を メモして ください。 = กรุณาจดข้อความบนกระดาน (จดข้อความ ใช้ ノートに書く/メモする)"
+            "text": "わかした たまごを 半分にして、サラダに 入れました。 = ผ่าไข่ต้มออกเป็นสองซีกแล้วใส่ในสลัด (ต้มไข่ ต้องใช้ ゆでた たまご 不ใช่ わかす)"
           },
           {
             "choice": "さむいので、ストーブで へやを わかしましょう。",
             "isCorrect": false,
-            "text": "本を メモして 読みました。 = อ่านหนังสือ (อ่านหนังสือ ต้องใช้ 本を読みました)"
+            "text": "さむいので、ストーブで へやを わかしましょう。 = อากาศหนาว มาเปิดเตาผิงอุ่นห้องกันเถอะ (ทำให้ห้องอุ่น ต้องใช้ へやを暖める)"
           },
           {
             "choice": "おちゃを 入れるから、おゆを わかして ください。",
             "isCorrect": true,
-            "text": "手紙を メモして ポストに 入れました。 = เขียนจดหมายแล้วหยอดตู้ (เขียนจดหมาย ต้องใช้ 手紙を書いて)"
+            "text": "おちゃを 入れるから、おゆを わかして ください。 = จะชงน้ำชา ช่วยต้มน้ำร้อนให้หน่อยนะครับ (ต้มน้ำร้อน ใช้ お湯を沸かす ถูกต้อง)"
           }
         ]
       },
@@ -7321,7 +7321,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はな",
             "isCorrect": false,
-            "text": "はな = สิ่งของ, สัมภาระ"
+            "text": "はな = ดอกไม้ (花) หรือ จมูก (鼻)"
           },
           {
             "choice": "あたま",
@@ -7331,7 +7331,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ゆび",
             "isCorrect": true,
-            "text": "ゆび = นิ้วมือ"
+            "text": "ゆび = นิ้วมือ (指)"
           },
           {
             "choice": "うで",
@@ -7365,7 +7365,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "りょこう",
             "isCorrect": true,
-            "text": "りょこう = ท่องเที่ยว"
+            "text": "りょこう = การท่องเที่ยว (旅行)"
           },
           {
             "choice": "りょうこ",
@@ -7404,7 +7404,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いそがなくても",
             "isCorrect": true,
-            "text": "いそがなくても = รีบ"
+            "text": "いそがなくても = แม้จะไม่รีบ (急がなくても <- 急ぐ)"
           },
           {
             "choice": "およがなくても",
@@ -7443,7 +7443,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おくじょう",
             "isCorrect": false,
-            "text": "おくじょう = ต่างประเทศ"
+            "text": "おくじょう = ดาดฟ้า (屋上)"
           },
           {
             "choice": "こうじょ",
@@ -7453,7 +7453,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こうじょう",
             "isCorrect": true,
-            "text": "こうじょう = โรงงาน"
+            "text": "こうじょう = โรงงาน (工場)"
           }
         ]
       },
@@ -7477,22 +7477,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いもうと",
             "isCorrect": true,
-            "text": "いもうと = น้องสาว"
+            "text": "いもうと = น้องสาว (妹)"
           },
           {
             "choice": "あね",
             "isCorrect": false,
-            "text": "あね = พี่สาว (ของผู้อื่น)"
+            "text": "あね = พี่สาว (姉)"
           },
           {
             "choice": "おとうと",
             "isCorrect": false,
-            "text": "おとうと = น้องชาย (ของผู้อื่น)"
+            "text": "おとうと = น้องชาย (弟)"
           },
           {
             "choice": "あに",
             "isCorrect": false,
-            "text": "あに = พี่ชาย (ของผู้อื่น)"
+            "text": "あに = พี่ชาย (兄)"
           }
         ]
       },
@@ -7516,7 +7516,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "まって",
             "isCorrect": true,
-            "text": "まって = รอ"
+            "text": "まって = มาจาก 待つ (รอ)"
           },
           {
             "choice": "もって",
@@ -7560,12 +7560,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "よわく",
             "isCorrect": false,
-            "text": "よわく = กรุณาบอกที่อยู่ใหม่ด้วยนะคะ (住所 = ที่อยู่)"
+            "text": "よわく = อ่อนลง, เบาลง (弱く <- 弱い)"
           },
           {
             "choice": "つよく",
             "isCorrect": true,
-            "text": "つよく = แรง/แข็งแรง"
+            "text": "つよく = อย่างแข็งแรง, อย่างรุนแรง (強く <- 強い)"
           },
           {
             "choice": "つめたく",
@@ -7604,12 +7604,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "てんいん",
             "isCorrect": false,
-            "text": "てんいん = โรงอาหาร"
+            "text": "てんいん = พนักงานร้าน (店員)"
           },
           {
             "choice": "えきいん",
             "isCorrect": true,
-            "text": "えきいん = เจ้าหน้าที่สถานีรถไฟ"
+            "text": "えきいん = เจ้าหน้าที่สถานีรถไฟ (駅員)"
           }
         ]
       },
@@ -7638,7 +7638,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いしゃ",
             "isCorrect": true,
-            "text": "いしゃ = แพทย์/หมอ"
+            "text": "いしゃ = คุณหมอ, แพทย์ (医者)"
           },
           {
             "choice": "いいじゃ",
@@ -7672,7 +7672,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "反対",
             "isCorrect": true,
-            "text": "反対 = ตรงกันข้าม/คัดค้าน"
+            "text": "反対 (はんたい) = ตรงกันข้าม, คัดค้าน"
           },
           {
             "choice": "半対",
@@ -7726,7 +7726,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "開いて",
             "isCorrect": true,
-            "text": "開いて = เปิด"
+            "text": "開いて (ひらいて) = มาจาก 開く (เปิดหน้าต่าง/เปิดหนังสือ)"
           }
         ]
       },
@@ -7760,7 +7760,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "赤い",
             "isCorrect": true,
-            "text": "赤い = สีแดง"
+            "text": "赤い (あかい) = สีแดง"
           },
           {
             "choice": "白い",
@@ -7794,7 +7794,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "走って",
             "isCorrect": true,
-            "text": "走って = วิ่ง"
+            "text": "走って (はしって) = มาจาก 走る (วิ่ง)"
           },
           {
             "choice": "是って",
@@ -7828,7 +7828,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "暗い",
             "isCorrect": true,
-            "text": "暗い = มืด"
+            "text": "暗い (くらい) = มืด, มืดมิด"
           },
           {
             "choice": "明い",
@@ -7872,7 +7872,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "野菜",
             "isCorrect": true,
-            "text": "野菜 = ผัก"
+            "text": "野菜 (やさい) = ผัก"
           },
           {
             "choice": "理菜",
@@ -7906,7 +7906,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "なれましたか",
             "isCorrect": true,
-            "text": "なれましたか = คุ้นเคย/ชิน 「しごとになれる」 = คุ้นเคยกับงาน"
+            "text": "なれましたか = คุ้นเคยหรือยัง, ชินแล้วหรือยัง (慣れましたか <- 慣れる)"
           },
           {
             "choice": "がんばりましたか",
@@ -7955,7 +7955,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やんで",
             "isCorrect": true,
-            "text": "やんで = ฝนหยุดตกแล้ว อากาศก็แจ่มใสขึ้นมา"
+            "text": "やんで = (ฝน) หยุดตก (止んで <- 止む)"
           },
           {
             "choice": "きえて",
@@ -7984,22 +7984,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かわいい",
             "isCorrect": false,
-            "text": "かわいい = แปลกใหม่, หายาก"
+            "text": "かわいい = น่ารัก (可愛い)"
           },
           {
             "choice": "おとなしい",
             "isCorrect": true,
-            "text": "おとなしい = เงียบเรียบร้อย/ไม่พูดจาโผงผาง"
+            "text": "おとなしい = เรียบร้อย, ว่าง่าย, สงบเสงี่ยม (大人しい)"
           },
           {
             "choice": "わかい",
             "isCorrect": false,
-            "text": "わかい = ยาว"
+            "text": "わかい = หนุ่มสาว, อายุน้อย (若い)"
           },
           {
             "choice": "うつくしい",
             "isCorrect": false,
-            "text": "うつくしい = นำเข้า"
+            "text": "うつくしい = สวยงาม, งดงาม (美しい)"
           }
         ]
       },
@@ -8023,7 +8023,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おみまい",
             "isCorrect": true,
-            "text": "おみまい = การเยี่ยมคนป่วย"
+            "text": "おみまい = การไปเยี่ยมคนป่วย (お見舞い)"
           },
           {
             "choice": "おねがい",
@@ -8062,12 +8062,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けいかく",
             "isCorrect": false,
-            "text": "けいかく = เลี้ยงดู, เพาะปลูก"
+            "text": "けいかく = แผนการ, แผนงาน (計画)"
           },
           {
             "choice": "よやく",
             "isCorrect": true,
-            "text": "よやく = จอง (ตั๋ว/ห้องพัก)"
+            "text": "よやく = การจอง (ตั๋ว/ห้องพัก) (予約)"
           },
           {
             "choice": "うけつけ",
@@ -8077,7 +8077,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やくそく",
             "isCorrect": false,
-            "text": "やくそく = おれい (お礼) = การแสดงความขอบคุณ/คำขอบคุณ"
+            "text": "やくそく = สัญญา, การนัดหมาย (約束)"
           }
         ]
       },
@@ -8111,7 +8111,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "まじめに",
             "isCorrect": true,
-            "text": "まじめに = อย่างเอาจริงเอาจัง/อย่างขยัน"
+            "text": "まじめに = อย่างจริงจัง, อย่างขยันขันแข็ง (真面目に)"
           },
           {
             "choice": "だいじに",
@@ -8155,7 +8155,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おとして",
             "isCorrect": true,
-            "text": "おとして = ทำตก/ทำหล่น"
+            "text": "おとして = ทำตก, ทำหล่น (落として <- 落とす)"
           }
         ]
       },
@@ -8179,22 +8179,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "よてい",
             "isCorrect": false,
-            "text": "よてい = การแจ้งให้ทราบ, ข่าวประกาศ"
+            "text": "よてい = กำหนดการ, แผนการ (予定)"
           },
           {
             "choice": "しゅうかん",
             "isCorrect": true,
-            "text": "しゅうかん = ขนบธรรมเนียม/ประเพณี"
+            "text": "しゅうかん = ประเพณี, กิจวัตร, ธรรมเนียม (習慣)"
           },
           {
             "choice": "けいけん",
             "isCorrect": false,
-            "text": "けいけん = ทำให้ร้อน"
+            "text": "けいけん = ประสบการณ์ (経験)"
           },
           {
             "choice": "きょうみ",
             "isCorrect": false,
-            "text": "きょうみ = ระมัดระวัง"
+            "text": "きょうみ = ความสนใจ (興味)"
           }
         ]
       },
@@ -8218,22 +8218,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "チェック",
             "isCorrect": false,
-            "text": "チェック = ถามความคิดเห็นของทุกคนในห้องว่าจะไปเที่ยวที่ไหน แล้วจึงตัดสินใจ (いけん = ความคิดเห็น)"
+            "text": "チェック = การตรวจสอบ, เช็ค (Check)"
           },
           {
             "choice": "スタート",
             "isCorrect": false,
-            "text": "スタート = การเริ่มต้น, การออกตัว"
+            "text": "スタート = การเริ่มต้น, ออกตัว (Start)"
           },
           {
             "choice": "チャンス",
             "isCorrect": false,
-            "text": "チャンス = โอกาส"
+            "text": "チャンス = โอกาส (Chance)"
           },
           {
             "choice": "スイッチ",
             "isCorrect": true,
-            "text": "スイッチ = สวิตช์ไฟ 「スイッチをおす」 = กดสวิตช์"
+            "text": "スイッチ = สวิตช์ไฟ (Switch)"
           }
         ]
       },
@@ -8257,7 +8257,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きめましょう",
             "isCorrect": true,
-            "text": "きめましょう = กำหนด/ตัดสินใจ"
+            "text": "きめましょう = มาตัดสินใจกันเถอะ (決める)"
           },
           {
             "choice": "はいりましょう",
@@ -8296,22 +8296,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きのうの 話は ほんとうですよ。",
             "isCorrect": false,
-            "text": "この ペンは かきやすいです。 = ปากกาด้ามนี้เขียนง่ายดี (かきやすい = เขียนง่าย)"
+            "text": "きのうの 話は ほんとうですよ。 = เรื่องเมื่อวานนี้เป็นเรื่องจริงนะ (ほんとう = เรื่องจริง)"
           },
           {
             "choice": "きのうの 話は ほんとうじゃありませんよ。",
             "isCorrect": true,
-            "text": "この ペンは かきにくいです。 = ปากกาด้ามนี้เขียนยาก (かきにくい = เขียนยาก)"
+            "text": "きのうの 話は ほんとうじゃありませんよ。 = เรื่องเมื่อวานนี้ไม่ใช่เรื่องจริงนะ (เรื่องโกหก ตรงกับ うそ / ほんとうじゃない)"
           },
           {
             "choice": "きのうの 話は ゆうめいですよ。",
             "isCorrect": false,
-            "text": "この ペンは インクが ありません。 = ปากกาด้ามนี้ไม่มีหมึก (インクがない = ไม่มีหมึก)"
+            "text": "きのうの 話は ゆうめいですよ。 = เรื่องเมื่อวานนี้มีชื่อเสียงมากนะ"
           },
           {
             "choice": "きのうの 話は ゆうめいじゃありませんよ。",
             "isCorrect": false,
-            "text": "この ペンは インクが でません。 = ปากกาด้ามนี้หมึกไม่ออก (เขียนไม่ติด ตรงกับ つかえません)"
+            "text": "きのうの 話は ゆうめいじゃありませんよ。 = เรื่องเมื่อวานนี้ไม่ได้มีชื่อเสียงอะไรนะ"
           }
         ]
       },
@@ -8335,22 +8335,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やまださんは 何時ごろ かえって きますか。",
             "isCorrect": true,
-            "text": "すずきさんは いつも しんせつです。 = คุณซูซูกิมีน้ำใจเสมอ (しんせつ = มีน้ำใจ/ใจดี)"
+            "text": "やまださんは 何時ごろ かえって きますか。 = คุณยามาดะจะกลับมาประมาณกี่โมงครับ (กลับมา ตรงกับ もどる / かえってくる)"
           },
           {
             "choice": "やまださんは 何時ごろ でかけますか。",
             "isCorrect": false,
-            "text": "すずきさんは いつも まじめです。 = คุณซูซูกิขยันตั้งใจจริงจังเสมอ (まじめ = ขยัน/ตั้งใจ)"
+            "text": "やまださんは 何時ごろ でかけますか。 = คุณยามาดะจะออกไปข้างนอกประมาณกี่โมงครับ (でかける = ออกไปข้างนอก)"
           },
           {
             "choice": "やまださんは 何時ごろ ねますか。",
             "isCorrect": false,
-            "text": "すずきさんは いつも あたまが いいです。 = คุณซูซูกิฉลาดหลักแหลมเสมอ (あたまがいい = ฉลาด)"
+            "text": "やまださんは 何時ごろ ねますか。 = คุณยามาดะจะเข้านอนประมาณกี่โมงครับ (ねる = นอน)"
           },
           {
             "choice": "やまださんは 何時ごろ おきますか。",
             "isCorrect": false,
-            "text": "すずきさんは いつも げんきです。 = คุณซูซูกิแข็งแรงร่าเริงเสมอ (ร่าเริงแข็งแรง ตรงกับ 体が じょうぶ)"
+            "text": "やまださんは 何時ごろ おきますか。 = คุณยามาดะจะตื่นนอนประมาณกี่โมงครับ (おきる = ตื่น)"
           }
         ]
       },
@@ -8374,22 +8374,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "この 国は こめを ほかの 国から もらって いますか。",
             "isCorrect": false,
-            "text": "この えいがは おもしろいです。 = หนังเรื่องนี้สนุกสนานมาก (おもしろい = สนุก)"
+            "text": "この 国は こめを ほかの 国から もらって いますか。 = ประเทศนี้ได้รับข้าวมาจากประเทศอื่นหรือเปล่า (もらう = ได้รับ)"
           },
           {
             "choice": "この 国は こめを ほかの 国から かって いますか。",
             "isCorrect": false,
-            "text": "この えいがは こわいです。 = หนังเรื่องนี้น่ากลัวมาก (こわい = น่ากลัว)"
+            "text": "この 国は こめを ほかの 国から かって いますか。 = ประเทศนี้ซื้อข้าวมาจากประเทศอื่นหรือเปล่า (かう = ซื้อ)"
           },
           {
             "choice": "この 国は こめを ほかの 国に あげて いますか。",
             "isCorrect": false,
-            "text": "この えいがは つまらないです。 = หนังเรื่องนี้น่าเบื่อ (つまらない = น่าเบื่อ)"
+            "text": "この 国は こめを ほかの 国に あげて いますか。 = ประเทศนี้มอบข้าวให้ประเทศอื่นหรือเปล่า (あげる = ให้)"
           },
           {
             "choice": "この 国は こめを ほかの 国に うって いますか。",
             "isCorrect": true,
-            "text": "この えいがは かなしいです。 = หนังเรื่องนี้เศร้าซึ้งมาก (เศร้าใจ ตรงกับ なみだが 出る)"
+            "text": "この 国は こめを ほかの 国に うって いますか。 = ประเทศนี้ขายข้าวให้ประเทศอื่นหรือเปล่า (ส่งออก/ขายให้ต่างชาติ ตรงกับ ゆしゅつする / うる)"
           }
         ]
       },
@@ -8413,22 +8413,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "たなかさんは こまって いました。",
             "isCorrect": false,
-            "text": "にもつを はこびました。 = ขนย้ายสัมภาระไปแล้ว (はこぶ = ขนย้าย)"
+            "text": "たなかさんは こまって いました。 = คุณทานากะกำลังลำบากใจอยู่ (こまる = ลำบากใจ)"
           },
           {
             "choice": "たなかさんは やすんで いました。",
             "isCorrect": false,
-            "text": "にもつを あずけました。 = ฝากสัมภาระไว้ (あずける = ฝากของ)"
+            "text": "たなかさんは やすんで いました。 = คุณทานากะกำลังพักผ่อนอยู่ (やすむ = พักผ่อน)"
           },
           {
             "choice": "たなかさんは わらって いました。",
             "isCorrect": true,
-            "text": "にもつを うけとりました。 = รับมอบสัมภาระแล้ว (ได้รับมอบของ ตรงกับ もらいました)"
+            "text": "たなかさんは わらって いました。 = คุณทานากะกำลังยิ้มแย้มอยู่ (ยิ้มแย้ม ตรงกับ にこにこする / わらう)"
           },
           {
             "choice": "たなかさんは あそんで いました。",
             "isCorrect": false,
-            "text": "にもつを おくりました。 = ส่งสัมภาระไปแล้ว (おくる = ส่ง)"
+            "text": "たなかさんは あそんで いました。 = คุณทานากะกำลังเล่นอยู่ (あそぶ = เล่น)"
           }
         ]
       },
@@ -8452,22 +8452,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "新しい かばんや さいふが ほしいです。",
             "isCorrect": false,
-            "text": "じゅぎょうを はじめます。 = เริ่มคาบเรียนแล้ว (はじめる = เริ่มต้น)"
+            "text": "新しい かばんや さいふが ほしいです。 = อยากได้กระเป๋าหรือกระเป๋าสตางค์ใบใหม่"
           },
           {
             "choice": "新しい つくえや ベッドが ほしいです。",
             "isCorrect": true,
-            "text": "じゅぎょうを やすみます。 = หยุดเรียน (やすむ = พัก/หยุด)"
+            "text": "新しい つくえや ベッドが ほしいです。 = อยากได้โต๊ะหรือเตียงนอนใหม่ (เฟอร์นิเจอร์ ตรงกับ かぐ / つくえやベッド)"
           },
           {
             "choice": "新しい カメラや ビデオが ほしいです。",
             "isCorrect": false,
-            "text": "じゅぎょうを おわります。 = คาบเรียนจบลงแล้ว (จบ/เสร็จสิ้น ตรงกับ チャイムが なって 終わり)"
+            "text": "新しい カメラや ビデオが ほしいです。 = อยากได้กล้องถ่ายรูปหรือกล้องวิดีโอใหม่"
           },
           {
             "choice": "新しい ノートや ペンが ほしいです。",
             "isCorrect": false,
-            "text": "じゅぎょうを つづけます。 = เรียนต่ออย่างต่อเนื่อง (つづける = ทำต่อ)"
+            "text": "新しい ノートや ペンが ほしいです。 = อยากได้สมุดโน้ตหรือปากกาด้ามใหม่"
           }
         ]
       },
@@ -8491,22 +8491,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "シャンプーで かみを せんたくしました。",
             "isCorrect": false,
-            "text": "あさは いつも パンと コーヒーを 食べます。 = ตอนเช้าทานขนมปังกับกาแฟเป็นประจำ (เป็นประจำสม่ำเสมอ ใช้ いつも ถูกต้อง)"
+            "text": "シャンプーで かみを せんたくしました。 = สระผมด้วยแชมพู (สระผม ต้องใช้ 髪を洗う/洗髪 ไม่ใช่ せんたく)"
           },
           {
             "choice": "にちようびに へやを せんたくします。",
             "isCorrect": false,
-            "text": "いま いつも 雨が ふって います。 = ตอนนี้ฝนกำลังตก (บอกช่วงเวลานี้ ต้องใช้ ちょうど/今 不ใช่ いつも)"
+            "text": "にちようびに へやを せんたくします。 = ทำความสะอาดห้องในวันอาทิตย์ (ทำความสะอาดห้อง ต้องใช้ 掃除/そうじ)"
           },
           {
             "choice": "しょくじの あとで、はを せんたくします。",
             "isCorrect": false,
-            "text": "あした いつも 映画を 見に 行きます。 = พรุ่งนี้จะไปดูหนัง (กำหนดการ ต้องใช้ 予定/行くつもり 不ใช่ いつも)"
+            "text": "しょくじの あとで、はを せんたくします。 = แปรงฟันหลังมื้ออาหาร (แปรงฟัน ต้องใช้ 歯を磨く/はをみがく)"
           },
           {
             "choice": "シャツと パンツを せんたく しました。",
             "isCorrect": true,
-            "text": "きのう いつも 買い物を しました。 = เมื่อวานไปซื้อของ (อดีต ต้องใช้ きのう買い物をしました)"
+            "text": "シャツと パンツを せんたく しました。 = ซักเสื้อเชิ้ตและกางเกง (ซักเสื้อผ้า ใช้ 洗濯/せんたく ถูกต้อง)"
           }
         ]
       },
@@ -8530,22 +8530,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ごはんを 食べすぎて、おなかが こんで います。",
             "isCorrect": false,
-            "text": "コートを きて いるので、あたたかいです。 = สวมเสื้อโค้ตอยู่จึงอบอุ่น (อบอุ่นร่างกาย ใช้ あたたかい ถูกต้อง)"
+            "text": "ごはんを 食べすぎて、おなかが こんで います。 = ทานข้าวมากไปจนแน่นท้อง (แน่นท้อง ต้องใช้ おなかがいっぱい)"
           },
           {
             "choice": "この じしょは じが こんで いて、読みにくいです。",
             "isCorrect": false,
-            "text": "この おちゃは あたたかくて おいしいです。 = ชานี้อุ่นๆ อร่อยดี (เครื่องดื่มอุ่น ใช้ あたたかい ถูกต้อง)"
+            "text": "この じしょは じが こんで いて、読みにくいです。 = พจนานุกรมเล่มนี้ตัวหนังสือแน่นเอี๊ยดอ่านยาก (ตัวหนังสือแน่น ต้องใช้ びっしり)"
           },
           {
             "choice": "もりさんの スーツケースは ようふくで こんで います。",
             "isCorrect": false,
-            "text": "きょうの てんきは あたたかいですね。 = อากาศวันนี้อบอุ่นสบายดีนะ (สภาพอากาศอบอุ่น ใช้ あたたかい ถูกต้อง)"
+            "text": "もりさんの スーツケースは ようふくで こんで います。 = กระเป๋าเดินทางของคุณโมริอัดแน่นไปด้วยเสื้อผ้า (ของอัดแน่น ต้องใช้ つまっている)"
           },
           {
             "choice": "あさの 電車は こんで いて、すわれません。",
             "isCorrect": true,
-            "text": "この へやは あたたかくて、ねむく なります。 = ห้องนี้อบอุ่นจนชวนง่วงนอน (ใช้ あたたかい ถูกต้อง)"
+            "text": "あさの 電車は こんで いて、すわれません。 = รถไฟรอบเช้าแน่นแออัดมากจนไม่มีที่นั่ง (คนแน่นแออัด ใช้ こむ ถูกต้อง)"
           }
         ]
       },
@@ -8569,22 +8569,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あの きょうだいは かおが よく にあって いますね。",
             "isCorrect": false,
-            "text": "しごとが たくさん あって、いそがしいです。 = งานมีเยอะมาก ยุ่งสุดๆ (ยุ่งเพราะมีงานเยอะ ใช้ いそがしい ถูกต้อง)"
+            "text": "あの きょうだいは かおが よく にあって いますね。 = พี่น้องคู่นั้นหน้าตาเหมือนกันมาก (หน้าตาเหมือนกัน ต้องใช้ 似ている/にている)"
           },
           {
             "choice": "その みどりの ぼうしは よく にあって いますよ。",
             "isCorrect": true,
-            "text": "この まちは いつも 人が いそがしいです。 = เมืองนี้คนขวักไขว่ (คนคึกคัก ต้องใช้ にぎやか 不ใช่ いそがしい)"
+            "text": "その みどりの ぼうしは よく にあって いますよ。 = หมวกสีเขียวใบนั้นเข้ากับคุณดีมากๆ เลยนะ (เสื้อผ้า/เครื่องแต่งกายเข้ากันดี ใช้ にあう ถูกต้อง)"
           },
           {
             "choice": "わたしと たなかさんは しゅみが にあって います。",
             "isCorrect": false,
-            "text": "時間が いそがしいですから、はやく 行きましょう。 = เวลาเร่งรีบ (เวลากระชั้นชิด ต้องใช้ 時間がない 不ใช่ いそがしい)"
+            "text": "わたしと たなかさんは しゅみが にあって います。 = ฉันกับคุณทานากะมีงานอดิเรกตรงกัน (งานอดิเรกตรงกัน ต้องใช้ 趣味が合う)"
           },
           {
             "choice": "この 会社の しごとは わたしに にあって います。",
             "isCorrect": false,
-            "text": "あたまが いそがしくて、つかれました。 = ปวดหัว/มึนหัว (ปวดหัว ต้องใช้ あたまが痛い)"
+            "text": "この 会社の しごとは わたしに にあって います。 = งานของบริษัทนี้เหมาะกับตัวฉัน (งานเหมาะสมกับตัว ต้องใช้ 向いている/合っている)"
           }
         ]
       },
@@ -8608,22 +8608,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "みんなで さくらの 木を たいせつに そだてて います。",
             "isCorrect": true,
-            "text": "友だちと いっしょに しゅくだいを しました。 = ทำการบ้านด้วยกันกับเพื่อน (ทำร่วมกันกับคนอื่น ใช้ いっしょに ถูกต้อง)"
+            "text": "みんなで さくらの 木を たいせつに そだてて います。 = ช่วงดึกคืนนี้น่าจะมีฝนตก (ช่วงดึก ต้องใช้ 夜中/よなか 不ใช่ とちゅう)"
           },
           {
             "choice": "いろいろな しりょうを しらべて、レポートを そだてました。",
             "isCorrect": false,
-            "text": "ひとりで いっしょに ごはんを 食べました。 = ทานข้าวคนเดียว (คนเดียว ขัดแย้งกับ いっしょに ต้องใช้ ひとりで)"
+            "text": "いろいろな しりょうを しらべて、レポートを そだてました。 = วางเค้กไว้ตรงกลางโต๊ะกลม (ตรงกึ่งกลาง ต้องใช้ 真ん中/まんなか)"
           },
           {
             "choice": "先月から ここで 新しい ビルを そだてて います。",
             "isCorrect": false,
-            "text": "あした いっしょに 晴れると いいですね。 = พรุ่งนี้ขอให้อากาศแจ่มใส (อากาศดี ต้องใช้ 晴れるといい)"
+            "text": "先月から ここで 新しい ビルを そだてて います。 = มองเห็นทะเลจากช่องว่างระหว่างตึก (ช่องว่างระหว่างตึก ต้องใช้ 間/あいだ)"
           },
           {
             "choice": "おいしく なるまで、ゆっくりと りょうりを そだてます。",
             "isCorrect": false,
-            "text": "この 本は いっしょに おもしろいです。 = หนังสือเล่มนี้สนุกมาก (สนุกมาก ต้องใช้ とても/すごく)"
+            "text": "おいしく なるまで、ゆっくりと りょうりを そだてます。 = โทรศัพท์ดังขึ้นระหว่างการประชุม (ระหว่างดำเนินกิจกรรม ใช้ とちゅう ถูกต้อง)"
           }
         ]
       },
@@ -8647,22 +8647,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ぜひ いちど 読んで みて ください。",
             "isCorrect": true,
-            "text": "えきで 電車を まって います。 = กำลังรอรถไฟอยู่ที่สถานี (รอคอย ใช้ まつ ถูกต้อง)"
+            "text": "ぜひ いちど 読んで みて ください。 = สัปดาห์นี้งานไม่ค่อยยุ่งสบายๆ (งานเบา ต้องใช้ 楽な/すくない 不ใช่ おとなしい)"
           },
           {
             "choice": "あしたも ぜひ はれるでしょう。",
             "isCorrect": false,
-            "text": "みちを まって あるきました。 = เดินข้ามถนน (ข้ามถนน ต้องใช้ わたって/あるいて)"
+            "text": "あしたも ぜひ はれるでしょう。 = เมื่อวานนี้สภาพอากาศสงบแจ่มใส (อากาศสงบ ต้องใช้ 穏やかな/おだやか)"
           },
           {
             "choice": "あぶないので、ぜひ さわらないで ください。",
             "isCorrect": false,
-            "text": "テレビを まって 見ました。 = นั่งดูทีวี (ดูทีวี ต้องใช้ 見ました)"
+            "text": "あぶないので、ぜひ さわらないで ください。 = สุนัขของคุณทานากะเรียบร้อยว่าง่ายไม่ดุจังเลยนะ (สัตว์เลี้ยงว่าง่ายไม่ดุ ใช้ おとなしい ถูกต้อง)"
           },
           {
             "choice": "かりた お金は ぜひ かえします。",
             "isCorrect": false,
-            "text": "ドアを まって 開けました。 = เปิดประตู (เปิดประตู ต้องใช้ あけました)"
+            "text": "かりた お金は ぜひ かえします。 = ร้านอาหารนี้เงียบสงบดีนะ (ร้านเงียบสงบ ต้องใช้ 静かな/しずか)"
           }
         ]
       },
@@ -8686,22 +8686,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こえ",
             "isCorrect": false,
-            "text": "こえ = คลื่นทะเล"
+            "text": "こえ = เสียง (คนหรือสัตว์) (声)"
           },
           {
             "choice": "あじ",
             "isCorrect": true,
-            "text": "あじ = รสชาติ"
+            "text": "あじ = รสชาติ (味)"
           },
           {
             "choice": "おと",
             "isCorrect": false,
-            "text": "おと = การขนส่ง"
+            "text": "おと = เสียง (音)"
           },
           {
             "choice": "におい",
             "isCorrect": false,
-            "text": "におい = วิทยาศาสตร์"
+            "text": "におい = กลิ่น (匂い)"
           }
         ]
       },
@@ -8740,7 +8740,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "せかい",
             "isCorrect": true,
-            "text": "せかい = โลก"
+            "text": "せかい = โลก (世界)"
           }
         ]
       },
@@ -8769,12 +8769,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こたえて",
             "isCorrect": false,
-            "text": "こたえて = คนคนนั้นจิตใจงดงาม (心 = หัวใจ/จิตใจ)"
+            "text": "こたえて = ตอบ (คำถาม) (答えて <- 答える)"
           },
           {
             "choice": "かんがえて",
             "isCorrect": true,
-            "text": "かんがえて = คิด"
+            "text": "かんがえて = คิด, ไตร่ตรอง (考えて <- 考える)"
           },
           {
             "choice": "つたえて",
@@ -8803,7 +8803,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "たりません",
             "isCorrect": true,
-            "text": "たりません = ไม่พอ"
+            "text": "たりません = ไม่เพียงพอ (足りません <- 足りる)"
           },
           {
             "choice": "あしりません",
@@ -8857,7 +8857,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "からだ",
             "isCorrect": true,
-            "text": "からだ = ร่างกาย"
+            "text": "からだ = ร่างกาย (体)"
           }
         ]
       },
@@ -8886,7 +8886,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こんど",
             "isCorrect": true,
-            "text": "こんど = ครั้งนี้/คราวนี้"
+            "text": "こんど = คราวนี้, คราวหน้า (今度)"
           },
           {
             "choice": "こんと",
@@ -8920,7 +8920,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "じゅぎょう",
             "isCorrect": false,
-            "text": "じゅぎょう = การบรรยายในมหาวิทยาลัย"
+            "text": "じゅぎょう = คาบเรียน, ชั้นเรียน (授業)"
           },
           {
             "choice": "えいきょう",
@@ -8930,7 +8930,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "えいぎょう",
             "isCorrect": true,
-            "text": "えいぎょう = การเปิดให้บริการ/การดำเนินธุรกิจ"
+            "text": "えいぎょう = การดำเนินกิจการ, เวลาทำการ (営業)"
           },
           {
             "choice": "じゅきょう",
@@ -8959,22 +8959,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "くも",
             "isCorrect": true,
-            "text": "くも = เมฆ"
+            "text": "くも = เมฆ (雲) หรือ แมงมุม (蜘蛛)"
           },
           {
             "choice": "ほし",
             "isCorrect": false,
-            "text": "ほし = ลม"
+            "text": "ほし = ดวงดาว (星)"
           },
           {
             "choice": "つき",
             "isCorrect": false,
-            "text": "つき = จริง ๆ"
+            "text": "つき = ดวงจันทร์, พระจันทร์ (月)"
           },
           {
             "choice": "そら",
             "isCorrect": false,
-            "text": "そら = บิน, โบยบิน"
+            "text": "そら = ท้องฟ้า (空)"
           }
         ]
       },
@@ -8998,7 +8998,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きんじょ",
             "isCorrect": true,
-            "text": "きんじょ = แถวบ้าน/ละแวกใกล้เคียง"
+            "text": "きんじょ = ละแวกใกล้เคียง, แถวบ้าน (近所)"
           },
           {
             "choice": "ちかじょ",
@@ -9047,7 +9047,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "薬",
             "isCorrect": true,
-            "text": "薬 = ยา"
+            "text": "薬 (くすり) = ยา, ยารักษาโรค"
           },
           {
             "choice": "栗",
@@ -9086,7 +9086,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "起きました",
             "isCorrect": true,
-            "text": "起きました = ตื่นนอน"
+            "text": "起きました (おきました) = มาจาก 起きる (ตื่นนอน)"
           },
           {
             "choice": "匙きました",
@@ -9125,7 +9125,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "男性",
             "isCorrect": true,
-            "text": "男性 = ผู้ชาย/บุรุษ"
+            "text": "男性 (だんせい) = ผู้ชาย, บุรุษ"
           },
           {
             "choice": "女姓",
@@ -9164,7 +9164,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "押せば",
             "isCorrect": true,
-            "text": "押せば = ถ้ากด"
+            "text": "押せば (おせば) = มาจาก 押す (ถ้ากดปุ่ม/ผลัก)"
           },
           {
             "choice": "坤せば",
@@ -9208,7 +9208,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "送りました",
             "isCorrect": true,
-            "text": "送りました = ส่ง"
+            "text": "送りました (おくりました) = มาจาก 送る (ส่งจดหมาย/พัสดุแล้ว)"
           }
         ]
       },
@@ -9232,7 +9232,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "運転",
             "isCorrect": true,
-            "text": "運転 = การขับขี่"
+            "text": "運転 = การขับรถ (うんてん)"
           },
           {
             "choice": "運軽",
@@ -9271,7 +9271,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ざんねん",
             "isCorrect": true,
-            "text": "ざんねん = น่าเสียดาย"
+            "text": "ざんねん = น่าเสียดาย (残念)"
           },
           {
             "choice": "ふべん",
@@ -9281,12 +9281,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "だめ",
             "isCorrect": false,
-            "text": "だめ = เหมือนกัน, เดียวกัน"
+            "text": "だめ = ไม่ได้, เปล่าประโยชน์ (駄目)"
           },
           {
             "choice": "しんぱい",
             "isCorrect": false,
-            "text": "しんぱい = せまい (狭い) = แคบ (พื้นที่/ถนน/ห้อง)"
+            "text": "しんぱい = เป็นห่วง, กังวล (心配)"
           }
         ]
       },
@@ -9315,7 +9315,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さがした",
             "isCorrect": true,
-            "text": "さがした = ตามหา/ค้นหา"
+            "text": "さがした = หาแล้ว, ค้นหาแล้ว (探した <- 探す)"
           },
           {
             "choice": "みつけた",
@@ -9359,12 +9359,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きもち",
             "isCorrect": true,
-            "text": "きもち = รู้สึกดี/รู้สึกสบายสดชื่น"
+            "text": "きもち = ความรู้สึก, อารมณ์ (気持ち)"
           },
           {
             "choice": "げんき",
             "isCorrect": false,
-            "text": "げんき = ว่าง (มีเวลาว่าง)"
+            "text": "げんき = แข็งแรง, สบายดี, ร่าเริง (元気)"
           }
         ]
       },
@@ -9388,7 +9388,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けいけん",
             "isCorrect": true,
-            "text": "けいけん = ประสบการณ์ 「けいけんをする」 = ทำประสบการณ์"
+            "text": "けいけん = ประสบการณ์ (経験)"
           },
           {
             "choice": "おもいで",
@@ -9403,7 +9403,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きょうみ",
             "isCorrect": false,
-            "text": "きょうみ = ระมัดระวัง"
+            "text": "きょうみ = ความสนใจ (興味)"
           }
         ]
       },
@@ -9442,7 +9442,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やめました",
             "isCorrect": true,
-            "text": "やめました = ล้มเลิก/หยุด/ยกเลิก"
+            "text": "やめました = ลาออกแล้ว, เลิกแล้ว (辞めました/やめました)"
           }
         ]
       },
@@ -9466,12 +9466,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はこんで",
             "isCorrect": false,
-            "text": "はこんで = เครื่องจักรนี้ถ้าใช้วิธีผิดจะเป็นอันตรายมาก"
+            "text": "はこんで = ขนย้าย, แบกหาม (運んで <- 運ぶ)"
           },
           {
             "choice": "てつだって",
             "isCorrect": true,
-            "text": "てつだって = ช่วยเหลือ 「ひっこしをてつだう」 = ช่วยย้ายบ้าน"
+            "text": "てつだって = ช่วยเหลือ (งาน) (手伝って <- 手伝う)"
           },
           {
             "choice": "かたづけて",
@@ -9481,7 +9481,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "つつんで",
             "isCorrect": false,
-            "text": "つつんで = เรื่องนี้เป็นความลับ"
+            "text": "つつんで = ห่อ (ของขวัญ/พัสดุ) (包んで <- 包む)"
           }
         ]
       },
@@ -9505,17 +9505,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "れんらく",
             "isCorrect": false,
-            "text": "れんらく = むしあつい (蒸し暑い) = ร้อนอบอ้าว (สภาพอากาศ)"
+            "text": "れんらく = การติดต่อ, การแจ้งให้ทราบ (連絡)"
           },
           {
             "choice": "りゆう",
             "isCorrect": true,
-            "text": "りゆう = เหตุผล"
+            "text": "りゆう = เหตุผล (理由)"
           },
           {
             "choice": "いけん",
             "isCorrect": false,
-            "text": "いけん = ตัดสินใจ"
+            "text": "いけん = ความคิดเห็น (意見)"
           },
           {
             "choice": "そうだん",
@@ -9549,7 +9549,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "えんりょ",
             "isCorrect": true,
-            "text": "えんりょ = ไม่ต้องเกรงใจ"
+            "text": "えんりょ = ความเกรงใจ, การปฏิเสธด้วยความเกรงใจ (遠慮)"
           },
           {
             "choice": "ちゅうい",
@@ -9559,7 +9559,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はんたい",
             "isCorrect": false,
-            "text": "はんたい = ขาว"
+            "text": "はんたい = ตรงกันข้าม, คัดค้าน (反対)"
           }
         ]
       },
@@ -9583,7 +9583,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "せわ",
             "isCorrect": true,
-            "text": "せわ = ดูแลเอาใจใส่"
+            "text": "せわ = การดูแล, เอาใจใส่ (世話)"
           },
           {
             "choice": "うんどう",
@@ -9593,12 +9593,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ようい",
             "isCorrect": false,
-            "text": "ようい = ปรึกษา"
+            "text": "ようい = การเตรียมการ, การจัดเตรียม (用意)"
           },
           {
             "choice": "しゅうかん",
             "isCorrect": false,
-            "text": "しゅうかん = ...เดือน (ระยะเวลา)"
+            "text": "しゅうかん = ประเพณี, กิจวัตร, ธรรมเนียม (習慣)"
           }
         ]
       },
@@ -9627,7 +9627,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "よって",
             "isCorrect": true,
-            "text": "よって = แวะ 「びょういんによる」 = แวะโรงพยาบาล"
+            "text": "よって = แวะ (สถานที่), เมาเหล้า (寄って/酔って)"
           },
           {
             "choice": "まがって",
@@ -9676,7 +9676,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おとうとは あそこで はたらいています。",
             "isCorrect": true,
-            "text": "おとうとは あそこで はたらいています。 = น้องชายกำลังทำงานอยู่ที่ตรงโน้น (ทำงาน ตรงกับ しごとを して います)"
+            "text": "おとうとは あそこで はたらいています。 = น้องชายกำลังทำงานอยู่ที่ตรงโน้น (ทำงานพิเศษ ตรงกับ アルバイト / はたらく)"
           }
         ]
       },
@@ -9700,12 +9700,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あの 人は ほんとうに きれいですね。",
             "isCorrect": true,
-            "text": "あの 人は ほんとうに きれいですね。 = คนคนนั้นสวยจริงๆ เลยนะ (สวยงาม ตรงกับ うつくしい)"
+            "text": "あの 人は ほんとうに きれいですね。 = คนคนนั้นสวยจริงๆ เลยนะ (สวยงาม ตรงกับ うつくしい / きれい)"
           },
           {
             "choice": "あの 人は ほんとうに おもしろいですね。",
             "isCorrect": false,
-            "text": "あの 人は ほんとうに おもしろいですね。 = คนคนนั้นตลก/น่าสนใจจริงๆ เลยนะ (おもしろい = ตลก)"
+            "text": "あの 人は ほんとうに おもしろいですね。 = คนคนนั้นน่าสนใจ/ตลกจริงๆ เลยนะ (おもしろい = ตลก)"
           },
           {
             "choice": "あの 人は ほんとうに わかいですね。",
@@ -9744,12 +9744,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あの 店は おきゃくさんが 多いです。",
             "isCorrect": false,
-            "text": "あの 店は おきゃくさんが 多いです。 = ร้านนั้นลูกค้าเยอะมาก (おきゃくさんが多い = ลูกค้าเยอะ/แน่นร้าน)"
+            "text": "あの 店は おきゃくさんが 多いです。 = ร้านนั้นลูกค้าเยอะมาก (おきゃくさんが多い = ลูกค้าเยอะ)"
           },
           {
             "choice": "あの 店は おきゃくさんが 少ないです。",
             "isCorrect": true,
-            "text": "あの 店は おきゃくさんが 少ないです。 = ร้านนั้นลูกค้าน้อยมาก (คนโล่ง/คนน้อย ตรงกับ すいて います)"
+            "text": "あの 店は おきゃくさんが 少ないです。 = ร้านนั้นลูกค้าน้อยมาก (คนโล่ง/คนน้อย ตรงกับ すいている / おきゃくさんがすくない)"
           },
           {
             "choice": "あの 店は しなものが 多いです。",
@@ -9778,22 +9778,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "この シャワーは あつくないです。",
             "isCorrect": true,
-            "text": "この シャワーは あつくないです。 = ฝักบัวนี้ไม่ร้อน (อุ่นๆ/ไม่ร้อน ตรงกับ ぬるい)"
+            "text": "この シャワーは あつくないです。 = ฝักบัวนี้น้ำไม่ร้อน (อุ่นๆ/ไม่ร้อน ตรงกับ ぬるい / あつくない)"
           },
           {
             "choice": "この シャワーは あついです。",
             "isCorrect": false,
-            "text": "この シャワーは あついです。 = ฝักบัวนี้ร้อนมาก (あつい = ร้อน)"
+            "text": "この シャワーは あついです。 = ฝักบัวนี้น้ำร้อนมาก (あつい = ร้อน)"
           },
           {
             "choice": "この シャワーは つよいです。",
             "isCorrect": false,
-            "text": "この シャワーは つよいです。 = ฝักบัวนี้แรงดันน้ำแรงมาก (つよい = แรง)"
+            "text": "この シャワーは つよいです。 = ฝักบัวนี้น้ำไหลแรงมาก (つよい = แรง)"
           },
           {
             "choice": "この シャワーは つよくないです。",
             "isCorrect": false,
-            "text": "この シャワーは つよくないです。 = ฝักบัวนี้แรงดันน้ำไม่แรง (つよくない = ไม่แรง)"
+            "text": "この シャワーは つよくないです。 = ฝักบัวนี้น้ำไหลไม่แรง (つよくない = ไม่แรง)"
           }
         ]
       },
@@ -9832,7 +9832,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "友だちに 日本の りょうりを ならいました。",
             "isCorrect": true,
-            "text": "友だちに 日本の りょうりを ならいました。 = เรียนการทำอาหารญี่ปุ่นจากเพื่อน (เรียนรู้ ตรงกับ おそわりました)"
+            "text": "友だちに 日本の りょうりを ならいました。 = เรียนการทำอาหารญี่ปุ่นจากเพื่อน (เรียนรู้จาก ตรงกับ おそわる / ならう)"
           }
         ]
       },
@@ -9856,22 +9856,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "先週 えきまえに できた 店は、中の けしきが とても あかるいです。",
             "isCorrect": false,
-            "text": "この たてものは、けしきは ふるいですが、中は きれいです。 = อาคารนี้ภายนอกเก่า (ภายนอก ต้องใช้ 見た目/外観 不ใช่ けしき)"
+            "text": "先週 えきまえに できた 店は、中の けしきが とても あかるいです。 = แปลนิยายภาษาต่างประเทศเป็นภาษาญี่ปุ่น (แปลภาษา ต้องใช้ 翻訳する/ほんやくする)"
           },
           {
             "choice": "わたしは かぞくの たのしそうな けしきを いつも ビデオで とっています。",
             "isCorrect": false,
-            "text": "この 店の ケーキは、おいしくて けしきも かわいいです。 = เค้กหน้าตาน่ารัก (หน้าตาเค้ก ต้องใช้ 見た目/かたち 不ใช่ けしき)"
+            "text": "わたしは かぞくの たのしそうな けしきを いつも ビデオで とっています。 = แจ้งกำหนดเวลาการสอบให้นักเรียนทราบ (แจ้งข้อความ/ถ่ายทอดข้อมูล ใช้ つたえる ถูกต้อง)"
           },
           {
             "choice": "この まちは 山も 川も あって、けしきがとても いいです。",
             "isCorrect": true,
-            "text": "この まちは 山も 川も あって、けしきがとても いいです。 = เมืองนี้มีทั้งภูเขาและแม่น้ำ วิวทิวทัศน์สวยงามมาก (ใช้ けしき กับธรรมชาติ ถูกต้อง)"
+            "text": "この まちは 山も 川も あって、けしきがとても いいです。 = ส่งพัสดุที่ไปรษณีย์ (ส่งพัสดุ ต้องใช้ 荷物を送る/出す ไม่ใช่ つたえる)"
           },
           {
             "choice": "子どもの けしきが へんだったので、びょういんに つれて いきました。",
             "isCorrect": false,
-            "text": "子どもの けしきが へんだったので、びょういんに つれて いきました。 = อาการของลูกแปลกไป (อาการเด็ก ต้องใช้ 様子/ようす 不ใช่ けしき)"
+            "text": "子どもの けしきが へんだったので、びょういんに つれて いきました。 = มอบดอกไม้ให้เพื่อนในวันเกิด (มอบให้เป็นของขวัญ ต้องใช้ プレゼントする/あげる)"
           }
         ]
       },
@@ -9895,22 +9895,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "みんなの 前で 話す とき、いつも おどろいて じょうずに 話せません。",
             "isCorrect": false,
-            "text": "みんなの 前で 話す とき、いつも おどろいて じょうずに 話せません。 = ตื่นเต้นต่อหน้าคนเยอะ (ประหม่าตื่นเต้น ต้องใช้ きんちょうして ไม่ใช่ おどろいて)"
+            "text": "みんなの 前で 話す とき、いつも おどろいて じょうずに 話せません。 = เก็บกวาดห้องให้เรียบร้อยเพื่อเตรียมงานปาร์ตี้ (เก็บกวาดให้เรียบร้อย ใช้ かたづける ถูกต้อง)"
           },
           {
             "choice": "やまださんの おにいさんが ゆうめいな かしゅだと 聞いて、おどろきました。",
             "isCorrect": true,
-            "text": "やまださんの おにいさんが ゆうめいな かしゅだと 聞いて、おどろきました。 = ได้ยินว่าพี่ชายคุณยามาดะเป็นนักร้องดังเลยตกใจประหลาดใจมาก (ใช้ おどろく ถูกต้อง)"
+            "text": "やまださんの おにいさんが ゆうめいな かしゅだと 聞いて、おどろきました。 = อาจารย์แบ่งนักเรียนออกเป็น 3 กลุ่ม (แบ่งกลุ่ม ต้องใช้ グループに分ける)"
           },
           {
             "choice": "ねる 前に コーヒーを 飲むと、おどろいて ねむれません。",
             "isCorrect": false,
-            "text": "ねる 前に コーヒーを 飲むと、おどろいて ねむれません。 = ดื่มกาแฟแล้วตาสว่าง (ตาสว่าง ต้องใช้ 目がさえて 不ใช่ おどろいて)"
+            "text": "ねる 前に コーヒーを 飲むと、おどろいて ねむれません。 = บรรจุของขวัญลงกล่องสวยงาม (บรรจุลงกล่อง ต้องใช้ 箱につめる/入れる)"
           },
           {
             "choice": "あしたは はじめての デートなので、いまから おどろいて います。",
             "isCorrect": false,
-            "text": "あしたは はじめての デートなので、いまから おどろいて います。 = พรุ่งนี้เดตแรกตื่นเต้นจัง (ตื่นเต้นดีใจ ต้องใช้ わくわくして 不ใช่ おどろいて)"
+            "text": "あしたは はじめての デートなので、いまから おどろいて います。 = รวบรวมสรุปความคิดเห็นต่างๆ (สรุปความเห็น ต้องใช้ まとめる 不ใช่ かたづける)"
           }
         ]
       },
@@ -9934,22 +9934,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "みちが わからなく なったので、かばんから ちずを ひろいました。",
             "isCorrect": false,
-            "text": "みちが わからなく なったので、かばんから ちずを ひろいました。 = หยิบแผนที่ออกจากกระเป๋า (หยิบออกมา ต้องใช้ 出しました 不ใช่ ひろいました)"
+            "text": "みちが わからなく なったので、かばんから ちずを ひろいました。 = มีคำศัพท์ที่มีความหมายคล้ายกันมากมาย (ความหมายคล้ายกัน ต้องใช้ 意味が似ている)"
           },
           {
             "choice": "すみません、たなの 上の はこを ひろって くれませんか。",
             "isCorrect": false,
-            "text": "すみません、たなの 上の はこを ひろって くれませんか。 = ช่วยหยิบกล่องบนชั้นลงมาให้หน่อย (หยิบของจากที่สูง ต้องใช้ とって 不ใช่ ひろって)"
+            "text": "すみません、たなの 上の はこを ひろって くれませんか。 = คุณยามาดะใส่เสื้อผ้าสีแดงแล้วเข้ากันดีมากเลยนะ (เสื้อผ้าสีเข้ากับคน ใช้ にあう ถูกต้อง)"
           },
           {
             "choice": "木から りんごを ひろって、ふくろに 入れました。",
             "isCorrect": false,
-            "text": "木から りんごを ひろって、ふくろに 入れました。 = เด็ดแอปเปิ้ลจากต้น (เด็ดผลไม้จากต้น ต้องใช้ とって/もいで 不ใช่ ひろって)"
+            "text": "木から りんごを ひろって、ふくろに 入れました。 = เด็กคนนั้นดวงตาเหมือนคุณแม่มาก (หน้าเหมือนแม่ ต้องใช้ 目が似ている)"
           },
           {
             "choice": "小学生が ごみを ひろって、こうえんを そうじして います。",
             "isCorrect": true,
-            "text": "小学生が ごみを ひろって、こうえんを そうじして います。 = เด็กประถมช่วยกันเก็บขยะบนพื้นทำความสะอาดสวน (เก็บของจากพื้น ใช้ ひろう ถูกต้อง)"
+            "text": "小学生が ごみを ひろって、こうえんを そうじして います。 = นับหลายรอบแล้วแต่จำนวนไม่ตรงกัน (จำนวนไม่ตรงกัน ต้องใช้ 数が合わない)"
           }
         ]
       },
@@ -9973,22 +9973,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "119ばんに 電話して、きゅうきゅうしゃを いえに しょうたいしてください。",
             "isCorrect": false,
-            "text": "119ばんに 電話して、きゅうきゅうしゃを いえに しょうたいしてください。 = โทรเรียกรถพยาบาล (เรียกรถพยาบาล ต้องใช้ 呼んで/よんで ไม่ใช่ しょうたい)"
+            "text": "119ばんに 電話して、きゅうきゅうしゃを いえに しょうたいしてください。 = อาคารนี้ภายนอกเก่าแต่ข้างในสวย (ภายนอก ต้องใช้ 見た目/外観 ไม่ใช่ けしき)"
           },
           {
             "choice": "ぶちょうに しょうたいされて、休みの 日に 会社に 行きました。",
             "isCorrect": false,
-            "text": "ぶちょうに しょうたいされて、休みの 日に 会社に 行きました。 = โดนสั่งให้ไปทำงานวันหยุด (ถูกสั่ง/เรียกตัว ต้องใช้ 呼ばれて 不ใช่ しょうたい)"
+            "text": "ぶちょうに しょうたいされて、休みの 日に 会社に 行きました。 = เค้กร้านนี้หน้าตาน่ารัก (หน้าตาเค้ก ต้องใช้ 見た目/かたち 不ใช่ けしき)"
           },
           {
             "choice": "大学の こうはいを けっこんしきに しょうたいする つもりです。",
             "isCorrect": true,
-            "text": "大学の こうはいを けっこんしきに しょうたいする つもりです。 = ตั้งใจจะเชิญรุ่นน้องที่มหาวิทยาลัยมาร่วมงานแต่งงาน (เชิญร่วมงาน ใช้ しょうたいする ถูกต้อง)"
+            "text": "大学の こうはいを けっこんしきに しょうたいする つもりです。 = เมืองนี้มีทั้งภูเขาและแม่น้ำ ทิวทัศน์สวยงามมาก (ใช้ けしき กับธรรมชาติ ถูกต้อง)"
           },
           {
             "choice": "いしゃに しょうたいされて、あしたから にゅういんする ことに なりました。",
             "isCorrect": false,
-            "text": "いしゃに しょうたいされて、あしたから にゅういんする ことに なりました。 = หมอแนะนำให้แอดมิทโรงพยาบาล (หมอสั่ง/แนะนำ ต้องใช้ 言われて/指示されて)"
+            "text": "いしゃに しょうたいされて、あしたから にゅういんする ことに なりました。 = อาการของลูกแปลกไปเลยพาไปโรงพยาบาล (อาการเด็ก ต้องใช้ 様子/ようす 不ใช่ けしき)"
           }
         ]
       },
@@ -10012,22 +10012,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "毎日 にわの 花に 水を わたして います。",
             "isCorrect": false,
-            "text": "毎日 にわの 花に 水を わたして います。 = รดน้ำดอกไม้ในสวน (รดน้ำ ต้องใช้ 水をやる/あげる 不ใช่ わたす)"
+            "text": "毎日 にわの 花に 水を わたして います。 = ตื่นเต้นประหม่าต่อหน้าคนเยอะเลยพูดไม่เก่ง (ประหม่าตื่นเต้น ต้องใช้ 緊張して/きんちょうして)"
           },
           {
             "choice": "この きっぷは、かいさつぐちを 出る とき、えきいんに わたして ください。",
             "isCorrect": true,
-            "text": "この きっぷは、かいさつぐちを 出る とき、えきいんに わたして ください。 = ตั๋วใบนี้ ตอนออกจากช่องตรวจตั๋วกรุณายื่นให้เจ้าหน้าที่สถานี (ยื่นส่งให้ ใช้ わたす ถูกต้อง)"
+            "text": "この きっぷは、かいさつぐちを 出る とき、えきいんに わたして ください。 = ได้ยินว่าพี่ชายคุณยามาดะเป็นนักร้องดังเลยตกใจประหลาดใจมาก (ใช้ おどろく ถูกต้อง)"
           },
           {
             "choice": "この てがみを ポストに わたして きて ください。",
             "isCorrect": false,
-            "text": "この てがみを ポストに わたして きて ください。 = หยอดจดหมายลงตู้ไปรษณีย์ (หยอดตู้ ต้องใช้ ポストに入れて 不ใช่ わたして)"
+            "text": "この てがみを ポストに わたして きて ください。 = ดื่มกาแฟก่อนนอนเลยตาสว่างนอนไม่หลับ (ตาสว่าง ต้องใช้ 目がさえて 不ใช่ おどろいて)"
           },
           {
             "choice": "わたしは いつも こうちゃに さとうと ぎゅうにゅうを わたします。",
             "isCorrect": false,
-            "text": "わたしは いつも こうちゃに さとうと ぎゅうにゅうを わたします。 = ใส่ชานมและน้ำตาล (ใส่ส่วนผสม ต้องใช้ 入れます 不ใช่ わたします)"
+            "text": "わたしは いつも こうちゃに さとうと ぎゅうにゅうを わたします。 = พรุ่งนี้เดตครั้งแรกเลยตื่นเต้นดีใจตั้งแต่ตอนนี้ (ตื่นเต้นกระวนกระวายใจ ต้องใช้ わくわくして)"
           }
         ]
       },
@@ -10056,7 +10056,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "じぶん",
             "isCorrect": true,
-            "text": "じぶん = ตัวเอง"
+            "text": "じぶん = ตัวเอง, ตนเอง (自分)"
           },
           {
             "choice": "じいぶん",
@@ -10100,7 +10100,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "りょかん",
             "isCorrect": true,
-            "text": "りょかん = โรงแรมแบบดั้งเดิมของญี่ปุ่น"
+            "text": "りょかん = โรงแรมแบบญี่ปุ่น (旅館)"
           },
           {
             "choice": "りょがん",
@@ -10129,7 +10129,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さきに",
             "isCorrect": false,
-            "text": "さきに = วางบน, นำขึ้นวาง"
+            "text": "さきに = ก่อน, ล่วงหน้า (先に)"
           },
           {
             "choice": "べつに",
@@ -10144,7 +10144,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "とくに",
             "isCorrect": true,
-            "text": "とくに = โดยเฉพาะ/เป็นพิเศษ"
+            "text": "とくに = โดยเฉพาะ, เป็นพิเศษ (特に)"
           }
         ]
       },
@@ -10173,7 +10173,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きまりました",
             "isCorrect": true,
-            "text": "きまりました = ถูกกำหนด/ตัดสินแล้ว"
+            "text": "きまりました = ตัดสินใจแล้ว, กำหนดแล้ว (決まりました <- 決まる)"
           },
           {
             "choice": "はじまりました",
@@ -10217,12 +10217,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "つつんで",
             "isCorrect": false,
-            "text": "つつんで = เรื่องนี้เป็นความลับ"
+            "text": "つつんで = ห่อ (ของขวัญ/พัสดุ) (包んで <- 包む)"
           },
           {
             "choice": "すすんで",
             "isCorrect": true,
-            "text": "すすんで = ก้าวหน้า"
+            "text": "すすんで = ก้าวหน้า, สมัครใจ (進んで <- 進む)"
           }
         ]
       },
@@ -10246,7 +10246,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かんで",
             "isCorrect": false,
-            "text": "かんで = วันนี้มีงานปาร์ตี้ จึงประดับดอกไม้ไว้ที่โต๊ะ"
+            "text": "かんで = เคี้ยว, กัด (噛んで <- 噛む)"
           },
           {
             "choice": "ふんで",
@@ -10256,7 +10256,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はこんで",
             "isCorrect": true,
-            "text": "はこんで = ขน/แบกหาม"
+            "text": "はこんで = ขนย้าย, แบกหาม (運んで <- 運ぶ)"
           },
           {
             "choice": "たのんで",
@@ -10300,7 +10300,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "くうこう",
             "isCorrect": true,
-            "text": "くうこう = สนามบิน"
+            "text": "くうこう = สนามบิน (空港)"
           }
         ]
       },
@@ -10324,17 +10324,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "よわく",
             "isCorrect": true,
-            "text": "よわく = อ่อนลง/เบาลง"
+            "text": "よわく = อ่อนลง, เบาลง (弱く <- 弱い)"
           },
           {
             "choice": "つよく",
             "isCorrect": false,
-            "text": "つよく = ถามทางกับเจ้าหน้าที่สถานีรถไฟ (駅員 = พนักงานสถานี)"
+            "text": "つよく = อย่างแข็งแรง, อย่างรุนแรง (強く <- 強い)"
           },
           {
             "choice": "おそく",
             "isCorrect": false,
-            "text": "おそく = สบายดี, แข็งแรง"
+            "text": "おそく = ช้า, ดึก, สาย (遅く)"
           },
           {
             "choice": "はやく",
@@ -10363,7 +10363,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "じゅうしょ",
             "isCorrect": true,
-            "text": "じゅうしょ = ที่อยู่"
+            "text": "じゅうしょ = ที่อยู่ (住所)"
           },
           {
             "choice": "じゅうしょう",
@@ -10412,7 +10412,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "説明",
             "isCorrect": true,
-            "text": "説明 = การอธิบาย"
+            "text": "説明 (せつめい) = การอธิบาย, คำอธิบาย"
           },
           {
             "choice": "記明",
@@ -10441,7 +10441,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "起きます",
             "isCorrect": true,
-            "text": "起きます = ตื่นนอน"
+            "text": "起きます = ตื่นนอน, เกิดขึ้น (起きる)"
           },
           {
             "choice": "置きます",
@@ -10485,7 +10485,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "遠い",
             "isCorrect": true,
-            "text": "遠い = ไกล"
+            "text": "遠い = ไกล (とおい)"
           },
           {
             "choice": "違い",
@@ -10534,7 +10534,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "野菜",
             "isCorrect": true,
-            "text": "野菜 = ผัก"
+            "text": "野菜 (やさい) = ผัก"
           }
         ]
       },
@@ -10568,7 +10568,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "閉じて",
             "isCorrect": true,
-            "text": "閉じて = หลับตา/ปิด"
+            "text": "閉じて (とじて) = มาจาก 閉じる (ปิดหนังสือ/หลับตา)"
           },
           {
             "choice": "関じて",
@@ -10602,7 +10602,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "営業",
             "isCorrect": true,
-            "text": "営業 = เปิดทำการ/ดำเนินกิจการ"
+            "text": "営業 (えいぎょう) = การดำเนินกิจการ, เปิดทำการ"
           },
           {
             "choice": "宮事",
@@ -10636,7 +10636,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "せんぱい",
             "isCorrect": true,
-            "text": "せんぱい = รุ่นพี่"
+            "text": "せんぱい = รุ่นพี่ (先輩)"
           },
           {
             "choice": "しゃいん",
@@ -10646,12 +10646,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "てんいん",
             "isCorrect": false,
-            "text": "てんいん = โรงอาหาร"
+            "text": "てんいん = พนักงานร้าน (店員)"
           },
           {
             "choice": "しゃちょう",
             "isCorrect": false,
-            "text": "しゃちょう = สัตว์"
+            "text": "しゃちょう = ประธานบริษัท (社長)"
           }
         ]
       },
@@ -10675,7 +10675,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "スタート",
             "isCorrect": false,
-            "text": "スタート = การเริ่มต้น, การออกตัว"
+            "text": "スタート = การเริ่มต้น, ออกตัว (Start)"
           },
           {
             "choice": "オープン",
@@ -10685,12 +10685,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "スイッチ",
             "isCorrect": false,
-            "text": "スイッチ = สวิตช์ไฟ"
+            "text": "スイッチ = สวิตช์ไฟ (Switch)"
           },
           {
             "choice": "チェック",
             "isCorrect": true,
-            "text": "チェック = ตรวจสอบ/ตรวจเช็ก"
+            "text": "チェック = การตรวจสอบ, เช็ค (Check)"
           }
         ]
       },
@@ -10719,17 +10719,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あんない",
             "isCorrect": true,
-            "text": "あんない = พานำเที่ยว/นำทาง"
+            "text": "あんない = การนำทาง, การพาเที่ยวชม (案内)"
           },
           {
             "choice": "れんらく",
             "isCorrect": false,
-            "text": "れんらく = むしあつい (蒸し暑い) = ร้อนอบอ้าว (สภาพอากาศ)"
+            "text": "れんらく = การติดต่อ, การแจ้งให้ทราบ (連絡)"
           },
           {
             "choice": "しょうたい",
             "isCorrect": false,
-            "text": "しょうたい = わたす (渡す) = ส่งมอบ/ยื่นให้"
+            "text": "しょうたい = การเชื้อเชิญ, การเทียบเชิญ (招待)"
           }
         ]
       },
@@ -10763,7 +10763,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あやまりませんでした",
             "isCorrect": true,
-            "text": "あやまりませんでした = ขอโทษ ในรูปปฏิเสธ 「あやまりませんでした」 = ไม่ขอโทษ"
+            "text": "あやまりませんでした = ไม่ได้ขอโทษ (謝りませんでした <- 謝る)"
           },
           {
             "choice": "まにあいませんでした",
@@ -10797,7 +10797,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ふとって",
             "isCorrect": true,
-            "text": "ふとって = อ้วนขึ้น/ท้วม 「ふとっている」 = อ้วน"
+            "text": "ふとって = อ้วนท้วน (太って <- 太る)"
           },
           {
             "choice": "ふえて",
@@ -10831,12 +10831,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "アイディア",
             "isCorrect": true,
-            "text": "アイディア = ความคิด/ไอเดีย"
+            "text": "アイディア = ความคิด, ไอเดีย (Idea)"
           },
           {
             "choice": "ニュース",
             "isCorrect": false,
-            "text": "ニュース = ข่าว"
+            "text": "ニュース = ข่าว (News)"
           },
           {
             "choice": "クラブ",
@@ -10880,7 +10880,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おくりました",
             "isCorrect": true,
-            "text": "おくりました = ส่งสิ่งของ/พัสดุ"
+            "text": "おくりました = ส่งไปแล้ว (送りました <- 送る)"
           },
           {
             "choice": "なげました",
@@ -10919,7 +10919,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "しますね",
             "isCorrect": true,
-            "text": "しますね = กาแฟแก้วนี้มีรสชาติแปลกๆ อยู่นะ"
+            "text": "しますね = จะทำนะคะ/ครับ (する)"
           },
           {
             "choice": "いますね",
@@ -10963,7 +10963,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "なおって",
             "isCorrect": true,
-            "text": "なおって = หายป่วย/หายดี"
+            "text": "なおって = หายป่วย, ซ่อมเสร็จ (治って/直って)"
           }
         ]
       },
@@ -10987,7 +10987,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さして",
             "isCorrect": true,
-            "text": "さして = มีคนกางร่มเดินอยู่ ข้างนอกคงกำลังฝนตกอยู่แน่ๆ"
+            "text": "さして = กาง (ร่ม), ชี้ (指して/差して)"
           },
           {
             "choice": "おして",
@@ -11031,7 +11031,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "わたしは やまださんに「今日から かいものに 行って きます」と 言いました。",
             "isCorrect": false,
-            "text": "わたしは やまださんに「今日から かいものに 行って きます」と 言いました。 = ฉันบอกคุณยามาดะว่า \"ตั้งแต่จะไปซื้อของแล้วนะคะ\""
+            "text": "わたしは やまださんに「今日から かいものに 行って きます」と 言いました。 = ฉันบอกคุณยามาดะว่า \"จะไปซื้อของแล้วนะคะ\""
           },
           {
             "choice": "わたしは やまださんに「かいものに 行って きて ください」と 言いました。",
@@ -11041,7 +11041,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "わたしは やまださんに「いっしょに かいものに いきませんか」と 言いました。",
             "isCorrect": true,
-            "text": "わたしは やまださんに「いっしょに かいものに いきませんか」と 言いました。 = ฉันชวนคุณยามาดะว่า \"ไปซื้อของด้วยกันไหมคะ\" (ชวน ตรงกับ さそいました)"
+            "text": "わたしは やまださんに「いっしょに かいものに いきませんか」と 言いました。 = ฉันชวนคุณยามาดะว่า \"ไปซื้อของด้วยกันไหมคะ\" (ชวน ตรงกับ さそう / いきませんか)"
           }
         ]
       },
@@ -11065,7 +11065,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "デパートで さいふを とられました。",
             "isCorrect": true,
-            "text": "デパートで さいふを とられました。 = กระเป๋าสตางค์ถูกขโมยไปที่ห้าง (โดนขโมยไป ตรงกับ ぬすまれました)"
+            "text": "デパートで さいふを とられました。 = กระเป๋าสตางค์ถูกขโมยไปที่ห้าง (โดนขโมยไป ตรงกับ ぬすまれる / とられる)"
           },
           {
             "choice": "デパートで さいふを みせられました。",
@@ -11104,7 +11104,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "この 車は ヨーロッパで つくられて います。",
             "isCorrect": true,
-            "text": "この 車は ヨーロッパで つくられて います。 = รถคันนี้ผลิตขึ้นที่ยุโรป (ผลิตในยุโรป ตรงกับ ヨーロッパです)"
+            "text": "この 車は ヨーロッパで つくられて います。 = รถคันนี้ผลิตขึ้นที่ยุโรป (ผลิตที่ยุโรป ตรงกับ ヨーロッパです / つくられている)"
           },
           {
             "choice": "この 車は ヨーロッパで のられて います。",
@@ -11153,12 +11153,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やまもとさんの じは ちいさいです。",
             "isCorrect": true,
-            "text": "やまもとさんの じは ちいさいです。 = ลายมือของคุณยามาโมโตะตัวเล็กละเอียด (ตัวเล็กละเอียด ตรงกับ こまかい)"
+            "text": "やまもとさんの じは ちいさいです。 = ลายมือของคุณยามาโมโตะตัวเล็กละเอียด (ตัวเล็กละเอียด ตรงกับ こまかい / ちいさい)"
           },
           {
             "choice": "やまもとさんの じは おおきいです。",
             "isCorrect": false,
-            "text": "やまもとさんの じは おおきいです。 = ลายมือของคุณยามาโมโตะตัวใหญ่ (おおきい = ตัวใหญ่)"
+            "text": "やまもとさんの じは おおきいです。 = ลายมือของคุณยามาโมโตะตัวใหญ่ (おおきい = ใหญ่)"
           }
         ]
       },
@@ -11187,7 +11187,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きのうの かいぎには たなかさんは 来ませんでしたが、ほかの 人は 来ました。",
             "isCorrect": true,
-            "text": "きのうの かいぎには たなかさんは 来ませんでしたが、ほかの 人は 来ました。 = การประชุมเมื่อวานคุณทานากะไม่ได้มา แต่คนอื่นมากันหมด (ยกเว้นคุณทานากะ ตรงกับ たなかさん以外)"
+            "text": "きのうの かいぎには たなかさんは 来ませんでしたが、ほかの 人は 来ました。 = การประชุมเมื่อวานคุณทานากะไม่ได้มา แต่คนอื่นมากันหมด (ยกเว้นคุณทานากะ ตรงกับ 以外 / 来ませんでしたがほかの人は来た)"
           },
           {
             "choice": "きのうの かいぎには たなかさんが 来る 前に、ほかの 人が 来ました。",
@@ -11221,22 +11221,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こんやの とちゅう、雨が ふるでしょう。",
             "isCorrect": false,
-            "text": "こんやの とちゅう、雨が ふるでしょう。 = คืนนี้ฝนน่าจะตก (ช่วงดึก ต้องใช้ 夜中/よなか 不ใช่ とちゅう)"
+            "text": "こんやの とちゅう、雨が ふるでしょう。 = หยิบแผนที่ออกจากกระเป๋า (หยิบออกจากกระเป๋า ต้องใช้ 地図を出す ไม่ใช่ ひろう)"
           },
           {
             "choice": "まるい テーブルの とちゅうに ケーキを おきました。",
             "isCorrect": false,
-            "text": "まるい テーブルの とちゅうに ケーキを おきました。 = วางเค้กไว้ตรงกลางโต๊ะกลม (ตรงกลาง ต้องใช้ まんなか 不ใช่ とちゅう)"
+            "text": "まるい テーブルの とちゅうに ケーキを おきました。 = ช่วยหยิบกล่องบนชั้นลงมาให้หน่อย (หยิบของจากที่สูง ต้องใช้ 箱をとる 不ใช่ ひろう)"
           },
           {
             "choice": "ビルと ビルの とちゅうから うみが 見えます。",
             "isCorrect": false,
-            "text": "ビルと ビルの とちゅうから うみが 見えます。 = มองเห็นทะเลจากระหว่างซอกตึก (ช่องว่างระหว่างตึก ต้องใช้ あいだ 不ใช่ とちゅう)"
+            "text": "ビルと ビルの とちゅうから うみが 見えます。 = เด็ดผลแอปเปิ้ลจากต้น (เด็ดผลไม้จากต้น ต้องใช้ りんごをもぐ/とる 不ใช่ ひろう)"
           },
           {
             "choice": "かいぎの とちゅうで 電話が なりました。",
             "isCorrect": true,
-            "text": "かいぎの とちゅうで 電話が なりました。 = โทรศัพท์ดังขึ้นกลางคันระหว่างการประชุม (ระหว่างดำเนินกิจกรรม ใช้ とちゅう ถูกต้อง)"
+            "text": "かいぎの とちゅうで 電話が なりました。 = เด็กประถมช่วยกันเก็บขยะบนพื้นทำความสะอาดสวน (เก็บของจากพื้น ใช้ ひろう ถูกต้อง)"
           }
         ]
       },
@@ -11260,22 +11260,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "今週は しごとの よていが おとなしいです。",
             "isCorrect": false,
-            "text": "今週は しごとの よていが おとなしいです。 = สัปดาห์นี้งานไม่ยุ่ง (งานเบา ต้องใช้ 楽/すくない 不ใช่ おとなしい)"
+            "text": "今週は しごとの よていが おとなしいです。 = โทรเรียกรถพยาบาลมาที่บ้าน (เรียกรถพยาบาล ต้องใช้ 救急車を呼ぶ/よぶ ไม่ใช่ しょうたい)"
           },
           {
             "choice": "きのうは おとなしい 天気でした。",
             "isCorrect": false,
-            "text": "きのうは おとなしい 天気でした。 = เมื่อวานอากาศสงบดี (อากาศดี ต้องใช้ おだやか/いい天気 不ใช่ おとなしい)"
+            "text": "きのうは おとなしい 天気でした。 = โดนหัวหน้าเรียกตัวไปทำงานวันหยุด (ถูกสั่ง/เรียกตัว ต้องใช้ 呼ばれて 不ใช่ しょうたい)"
           },
           {
             "choice": "たなかさんの いぬは おとなしいですね。",
             "isCorrect": true,
-            "text": "たなかさんの いぬは おとなしいですね。 = สุนัขของคุณทานากะเรียบร้อยว่าง่ายไม่ดุจังเลยนะ (สัตว์เลี้ยงว่าง่ายไม่ดุ ใช้ おとなしい ถูกต้อง)"
+            "text": "たなかさんの いぬは おとなしいですね。 = ตั้งใจจะเชิญรุ่นน้องที่มหาวิทยาลัยมาร่วมงานแต่งงาน (เชิญร่วมงาน ใช้ しょうたいする ถูกต้อง)"
           },
           {
             "choice": "ここは とても おとなしい レストランですね。",
             "isCorrect": false,
-            "text": "ここは とても おとなしい レストランですね。 = ร้านอาหารนี้เงียบสงบดีนะ (ร้านเงียบสงบ ต้องใช้ 静かな 不ใช่ おとなしい)"
+            "text": "ここは とても おとなしい レストランですね。 = หมอแนะนำให้เข้าพักรักษาตัวในโรงพยาบาล (หมอแนะนำ/สั่ง ต้องใช้ 指示されて/言われて)"
           }
         ]
       },
@@ -11299,22 +11299,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "外国語の しょうせつを 日本語に つたえました。",
             "isCorrect": false,
-            "text": "外国語の しょうせつを 日本語に つたえました。 = แปลนิยายภาษาต่างประเทศเป็นภาษาญี่ปุ่น (แปลภาษา ต้องใช้ ほんやくしました 不ใช่ つたえました)"
+            "text": "外国語の しょうせつを 日本語に つたえました。 = รดน้ำดอกไม้ในสวนทุกวัน (รดน้ำต้นไม้ ต้องใช้ 水をやる/あげる 不ใช่ わたす)"
           },
           {
             "choice": "学生に しけんの 時間を つたえました。",
             "isCorrect": true,
-            "text": "学生に しけんの 時間を つたえました。 = แจ้งเวลาการสอบให้นักเรียนทราบ (แจ้งข้อความ/ถ่ายทอดข้อมูล ใช้ つたえる ถูกต้อง)"
+            "text": "学生に しけんの 時間を つたえました。 = ตั๋วใบนี้ ตอนออกจากช่องตรวจตั๋วกรุณายื่นส่งให้เจ้าหน้าที่ (ยื่นส่งให้ ใช้ わたす ถูกต้อง)"
           },
           {
             "choice": "ゆうびんきょくで にもつを つたえました。",
             "isCorrect": false,
-            "text": "ゆうびんきょくで にもつを つたえました。 = ส่งพัสดุที่ไปรษณีย์ (ส่งพัสดุ ต้องใช้ 送りました/出しました 不ใช่ つたえました)"
+            "text": "ゆうびんきょくで にもつを つたえました。 = หยอดจดหมายลงตู้ไปรษณีย์ (หยอดตู้ไปรษณีย์ ต้องใช้ ポストに入れる 不ใช่ わたす)"
           },
           {
             "choice": "ともだちの たんじょうびに 花を つたえました。",
             "isCorrect": false,
-            "text": "ともだちの たんじょうびに 花を つたえました。 = มอบดอกไม้ให้เพื่อนในวันเกิด (มอบให้ ต้องใช้ プレゼントしました/あげました)"
+            "text": "ともだちの たんじょうびに 花を つたえました。 = ใส่นมและน้ำตาลลงในชาฝรั่ง (ใส่ส่วนผสม ต้องใช้ 砂糖と牛乳を入れる)"
           }
         ]
       },
@@ -11338,22 +11338,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "へやを かたづけて パーティーの じゅんびを しました。",
             "isCorrect": true,
-            "text": "へやを かたづけて パーティーの じゅんびを しました。 = เก็บกวาดห้องให้เรียบร้อยเพื่อเตรียมงานปาร์ตี้ (เก็บกวาดให้เรียบร้อย ใช้ かたづける ถูกต้อง)"
+            "text": "へやを かたづけて パーティーの じゅんびを しました。 = เครื่องซักผ้านี้เสียอยู่ จึงใช้งานไม่ได้ (ใช้ こしょう กับเครื่องจักร ถูกต้อง)"
           },
           {
             "choice": "せんせいは 学生を 三つの グループに かたづけました。",
             "isCorrect": false,
-            "text": "せんせいは 学生を 三つの グループに かたづけました。 = อาจารย์แบ่งนักเรียนออกเป็น 3 กลุ่ม (แบ่งกลุ่ม ต้องใช้ 分けました 不ใช่ かたづけました)"
+            "text": "せんせいは 学生を 三つの グループに かたづけました。 = แว่นตาตกแล้วพัง (แว่นตาตกแตก ต้องใช้ 壊れる / こわれる 不ใช่ こしょう)"
           },
           {
             "choice": "プレゼントを きれいな はこに かたづけて ともだちに あげます。",
             "isCorrect": false,
-            "text": "プレゼントを きれいな はこに かたづけて ともだちに あげます。 = บรรจุของขวัญลงกล่องสวยงาม (บรรจุ/ห่อ ต้องใช้ つめて/入れて 不ใช่ かたづけて)"
+            "text": "プレゼントを きれいな はこに かたづけて ともだちに あげます。 = เสื้อของลูกพัง (เสื้อผ้าฉีกขาด ต้องใช้ 破れる / やぶれる)"
           },
           {
             "choice": "いろいろな いけんが 出たので、少し かたづけました。",
             "isCorrect": false,
-            "text": "いろいろな いけんが 出たので、少し かたづけました。 = สรุปความคิดเห็นต่างๆ (สรุปความเห็น ต้องใช้ まとめました 不ใช่ かたづけました)"
+            "text": "いろいろな いけんが 出たので、少し かたづけました。 = กินมากไปจนปวดท้อง (ท้องเสีย/ปวดท้อง ต้องใช้ こわす / こわしました)"
           }
         ]
       },
@@ -11377,22 +11377,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いみの にあって いる ことばが たくさん あります。",
             "isCorrect": false,
-            "text": "いみの にあって いる ことばが たくさん あります。 = มีคำศัพท์ที่มีความหมายคล้ายกันมากมาย (ความหมายคล้ายกัน ต้องใช้ 似ている 不ใช่ 似合う)"
+            "text": "いみの にあって いる ことばが たくさん あります。 = ชั้นวางหนังสือนี้ทำขึ้นเอง (ประกอบ/ทำเฟอร์นิเจอร์ ต้องใช้ 組み立てる / 作る 不ใช่ そだてる)"
           },
           {
             "choice": "やまださんは あかい ふくが にあいますね。",
             "isCorrect": true,
-            "text": "やまださんは あかい ふくが にあいますね。 = คุณยามาดะใส่เสื้อผ้าสีแดงแล้วเข้ากันดีมากเลยนะ (เสื้อผ้าสีเข้ากับคน ใช้ にあう ถูกต้อง)"
+            "text": "やまださんは あかい ふくが にあいますね。 = วันหยุดมักทำเค้กกับลูก (ทำเค้ก ต้องใช้ ケーキを作る ไม่ใช่ そだてる)"
           },
           {
             "choice": "あの 子は 目が お母さんに にあって いますね。",
             "isCorrect": false,
-            "text": "あの 子は 目が お母さんに にあって いますね。 = เด็กคนนั้นตาเหมือนแม่มาก (หน้าเหมือนแม่ ต้องใช้ 似ている 不ใช่ 似合う)"
+            "text": "あの 子は 目が お母さんに にあって いますね。 = ทำรายงานการบ้านที่ห้องสมุด (เขียนรายงาน ต้องใช้ レポートを書く ไม่ใช่ そだてる)"
           },
           {
             "choice": "なんども かぞえましたが、かずが にあいません。",
             "isCorrect": false,
-            "text": "なんども かぞえましたが、かずが にあいません。 = นับหลายรอบแล้วแต่จำนวนไม่ตรงกัน (จำนวนไม่ตรงกัน ต้องใช้ 合いません 不ใช่ 似合いません)"
+            "text": "なんども かぞえましたが、かずが にあいません。 = ฉันปลูกและดูแลดอกไม้หลากหลายชนิดในสวน (ใช้ そだてる กับการปลูกพืช/เลี้ยงดู ถูกต้อง)"
           }
         ]
       }
@@ -11426,7 +11426,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こうじ",
             "isCorrect": true,
-            "text": "こうじ = งานก่อสร้าง"
+            "text": "こうじ = งานก่อสร้าง (工事)"
           },
           {
             "choice": "こうごと",
@@ -11475,7 +11475,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "もって",
             "isCorrect": true,
-            "text": "もって = ถือ/ถือไว้"
+            "text": "もって = มาจาก 持つ (ถือ, พกพา)"
           },
           {
             "choice": "ひろって",
@@ -11504,7 +11504,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "からだ",
             "isCorrect": true,
-            "text": "からだ = ร่างกาย"
+            "text": "からだ = ร่างกาย (体)"
           },
           {
             "choice": "かお",
@@ -11558,7 +11558,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "にゅういん",
             "isCorrect": true,
-            "text": "にゅういん = เข้าพักรักษาตัวในโรงพยาบาล"
+            "text": "にゅういん = การเข้าพักรักษาตัวในโรงพยาบาล (入院)"
           }
         ]
       },
@@ -11592,7 +11592,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ひろい",
             "isCorrect": true,
-            "text": "ひろい = กว้าง"
+            "text": "ひろい = กว้าง, กว้างขวาง (広い)"
           },
           {
             "choice": "とおい",
@@ -11626,7 +11626,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かんがえました",
             "isCorrect": true,
-            "text": "かんがえました = คิด/พิจารณาแล้ว"
+            "text": "かんがえました = คิด, พิจารณาแล้ว (考える -> 考えました)"
           },
           {
             "choice": "おぼえました",
@@ -11665,7 +11665,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おやゆび",
             "isCorrect": true,
-            "text": "おやゆび = นิ้วหัวแม่มือ/นิ้วโป้ง"
+            "text": "おやゆび = นิ้วหัวแม่มือ, นิ้วโป้ง (親指)"
           },
           {
             "choice": "おやよび",
@@ -11714,7 +11714,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "寒い",
             "isCorrect": true,
-            "text": "寒い = หนาว (สภาพอากาศ)"
+            "text": "寒い (さむい) = หนาว (สภาพอากาศ)"
           }
         ]
       },
@@ -11743,7 +11743,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "朝",
             "isCorrect": true,
-            "text": "朝 = ตอนเช้า"
+            "text": "朝 (あさ) = ตอนเช้า"
           },
           {
             "choice": "昼",
@@ -11792,7 +11792,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "説明",
             "isCorrect": true,
-            "text": "説明 = การอธิบาย/คำอธิบาย"
+            "text": "説明 (せつめい) = การอธิบาย, คำอธิบาย"
           }
         ]
       },
@@ -11816,7 +11816,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "空港",
             "isCorrect": true,
-            "text": "空港 = สนามบิน"
+            "text": "空港 (くうこう) = สนามบิน"
           },
           {
             "choice": "銀行",
@@ -11865,7 +11865,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "走って",
             "isCorrect": true,
-            "text": "走って = วิ่ง"
+            "text": "走って (はしって) = มาจาก 走る (วิ่ง)"
           },
           {
             "choice": "捗って",
@@ -11909,7 +11909,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "メニュー",
             "isCorrect": true,
-            "text": "メニュー = เมนูอาหาร เหมาะกับบริบทการดูรายการอาหารในร้าน"
+            "text": "メニュー = เมนูอาหาร (Menu)"
           }
         ]
       },
@@ -11938,7 +11938,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ふくしゅう",
             "isCorrect": true,
-            "text": "ふくしゅう = ทบทวนบทเรียน"
+            "text": "ふくしゅう = การทบทวนบทเรียน (復習)"
           },
           {
             "choice": "けんがく",
@@ -11982,7 +11982,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さわらないで",
             "isCorrect": true,
-            "text": "さわらないで = อย่าแตะ/อย่าสัมผัส"
+            "text": "さわらないで = อย่าแตะ, อย่าสัมผัส (触る)"
           },
           {
             "choice": "つつまないで",
@@ -12011,7 +12011,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けんか",
             "isCorrect": true,
-            "text": "けんか = ทะเลาะวิวาท"
+            "text": "けんか = การทะเลาะวิวาท (喧嘩)"
           },
           {
             "choice": "そうだん",
@@ -12050,7 +12050,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きめましょう",
             "isCorrect": true,
-            "text": "きめましょう = ตัดสินใจ/กำหนด"
+            "text": "きめましょう = มาตัดสินใจกันเถอะ (決める)"
           },
           {
             "choice": "はいりましょう",
@@ -12089,17 +12089,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "たいてい",
             "isCorrect": false,
-            "text": "たいてい = โดยส่วนใหญ่, โดยปกติ"
+            "text": "たいてい = โดยทั่วไป, ส่วนใหญ่ (大抵)"
           },
           {
             "choice": "ちょうど",
             "isCorrect": false,
-            "text": "ちょうど = พอดี"
+            "text": "ちょうど = พอดี (เวลา/ขนาด) (丁度)"
           },
           {
             "choice": "はっきり",
             "isCorrect": true,
-            "text": "はっきり = ชัดเจน/อย่างตรงไปตรงมา"
+            "text": "はっきり = ชัดเจน, แจ่มแจ้ง"
           },
           {
             "choice": "けっこう",
@@ -12133,7 +12133,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こわい",
             "isCorrect": true,
-            "text": "こわい = น่ากลัว/รู้สึกกลัว"
+            "text": "こわい = น่ากลัว (怖い)"
           },
           {
             "choice": "かゆい",
@@ -12167,22 +12167,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "りゆう",
             "isCorrect": false,
-            "text": "りゆう = เชิญทานเยอะๆ ไม่ต้องเกรงใจเลยนะคะ"
+            "text": "りゆう = เหตุผล (理由)"
           },
           {
             "choice": "かんけい",
             "isCorrect": false,
-            "text": "かんけい = สนิทสนมกันดี, เข้ากันได้ดี"
+            "text": "かんけい = ความสัมพันธ์, ความเกี่ยวข้อง (関係)"
           },
           {
             "choice": "きょうみ",
             "isCorrect": false,
-            "text": "きょうみ = ระมัดระวัง"
+            "text": "きょうみ = ความสนใจ (興味)"
           },
           {
             "choice": "つごう",
             "isCorrect": true,
-            "text": "つごう = ไม่สะดวก (เรื่องวันเวลา)"
+            "text": "つごう = ความสะดวก (เรื่องเวลา/นัดหมาย) (都合)"
           }
         ]
       },
@@ -12216,7 +12216,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "これは とても たかい ものです。",
             "isCorrect": false,
-            "text": "これは とても たかい ものです。 = นี่เป็นสิ่งของที่ราคาแพงมาก (たかい = แพง)"
+            "text": "これは とても たかい ものです。 = นี่เป็นสิ่งของที่มีราคาแพงมาก (たかい = แพง)"
           },
           {
             "choice": "これは とても たいせつな ものです。",
@@ -12528,7 +12528,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "しゅっぱつ",
             "isCorrect": true,
-            "text": "しゅっぱつ = การออกเดินทาง"
+            "text": "しゅっぱつ = การออกเดินทาง (出発)"
           },
           {
             "choice": "しゅうはつ",
@@ -12577,12 +12577,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かんがえて",
             "isCorrect": false,
-            "text": "かんがえて = อยากซื้อพจนานุกรมแท้ๆ แต่เงินไม่พอ (足りる = เพียงพอ)"
+            "text": "かんがえて = คิด, ไตร่ตรอง (考えて <- 考える)"
           },
           {
             "choice": "こたえて",
             "isCorrect": true,
-            "text": "こたえて = ตอบ"
+            "text": "こたえて = ตอบ (คำถาม) (答えて <- 答える)"
           }
         ]
       },
@@ -12606,7 +12606,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きもち",
             "isCorrect": false,
-            "text": "きもち = ตอนที่ไปเที่ยวญี่ปุ่น ได้ทำประสบการณ์ต่างๆ มากมาย"
+            "text": "きもち = ความรู้สึก, อารมณ์ (気持ち)"
           },
           {
             "choice": "あたま",
@@ -12616,12 +12616,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かたち",
             "isCorrect": false,
-            "text": "かたち = แปลกประหลาด, มหัศจรรย์"
+            "text": "かたち = รูปร่าง, รูปทรง (形)"
           },
           {
             "choice": "こころ",
             "isCorrect": true,
-            "text": "こころ = หัวใจ/จิตใจ"
+            "text": "こころ = จิตใจ, หัวใจ (心)"
           }
         ]
       },
@@ -12650,7 +12650,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さいご",
             "isCorrect": true,
-            "text": "さいご = สุดท้าย/ท้ายสุด"
+            "text": "さいご = สุดท้าย, ท้ายสุด (最後)"
           },
           {
             "choice": "せいご",
@@ -12684,7 +12684,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おそい",
             "isCorrect": false,
-            "text": "おそい = มาก, เยอะ"
+            "text": "おそい = ช้า, สาย (遅い)"
           },
           {
             "choice": "ちかい",
@@ -12694,12 +12694,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "とおい",
             "isCorrect": true,
-            "text": "とおい = ไกล"
+            "text": "とおい = ไกล (遠い)"
           },
           {
             "choice": "はやい",
             "isCorrect": false,
-            "text": "はやい = ทะเล"
+            "text": "はやい = เร็ว, เช้าตรู่ (早い/速い)"
           }
         ]
       },
@@ -12723,22 +12723,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あき",
             "isCorrect": false,
-            "text": "あき = สีฟ้า, สีน้ำเงิน"
+            "text": "あき = ฤดูใบไม้ร่วง (秋)"
           },
           {
             "choice": "ふゆ",
             "isCorrect": true,
-            "text": "ふゆ = ฤดูหนาว"
+            "text": "ふゆ = ฤดูหนาว (冬)"
           },
           {
             "choice": "なつ",
             "isCorrect": false,
-            "text": "なつ = ฤดูใบไม้ร่วง"
+            "text": "なつ = ฤดูร้อน (夏)"
           },
           {
             "choice": "はる",
             "isCorrect": false,
-            "text": "はる = ฤดูร้อน"
+            "text": "はる = ฤดูใบไม้ผลิ (春)"
           }
         ]
       },
@@ -12762,7 +12762,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "よしゅう",
             "isCorrect": true,
-            "text": "よしゅう = การเตรียมบทเรียนล่วงหน้า"
+            "text": "よしゅう = การเตรียมบทเรียนล่วงหน้า (予習)"
           },
           {
             "choice": "ようしゅう",
@@ -12816,7 +12816,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "映画",
             "isCorrect": true,
-            "text": "映画 = ภาพยนตร์"
+            "text": "映画 (えいが) = ภาพยนตร์, หนัง"
           }
         ]
       },
@@ -12850,7 +12850,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "作って",
             "isCorrect": true,
-            "text": "作って = ทำ/สร้าง"
+            "text": "作って (つくって) = มาจาก 作る (ทำ, สร้าง)"
           },
           {
             "choice": "売って",
@@ -12879,7 +12879,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "運動",
             "isCorrect": true,
-            "text": "運動 = การออกกำลังกาย"
+            "text": "運動 = การออกกำลังกาย (うんどう)"
           },
           {
             "choice": "連動",
@@ -12923,7 +12923,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "船",
             "isCorrect": true,
-            "text": "船 = เรือ"
+            "text": "船 (ふね) = เรือ"
           },
           {
             "choice": "鳥",
@@ -12957,7 +12957,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "のど",
             "isCorrect": true,
-            "text": "のど = คอ/ลำคอ 「のどがいたい」 = เจ็บคอ"
+            "text": "のど = คอ, ลำคอ (喉)"
           },
           {
             "choice": "ひげ",
@@ -12967,7 +12967,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ゆび",
             "isCorrect": false,
-            "text": "ゆび = การท่องเที่ยว"
+            "text": "ゆび = นิ้วมือ (指)"
           },
           {
             "choice": "うで",
@@ -13001,7 +13001,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こんで",
             "isCorrect": true,
-            "text": "こんで = แน่น/แออัด"
+            "text": "こんで = แน่น, แออัด (混んで <- 混む)"
           },
           {
             "choice": "たりて",
@@ -13035,22 +13035,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けいけん",
             "isCorrect": true,
-            "text": "けいけん = ประสบการณ์ 「けいけんをする」 = สั่งสม/ทำประสบการณ์"
+            "text": "けいけん = ประสบการณ์ (経験)"
           },
           {
             "choice": "しゅうかん",
             "isCorrect": false,
-            "text": "しゅうかん = ...เดือน (ระยะเวลา)"
+            "text": "しゅうかん = ประเพณี, กิจวัตร, ธรรมเนียม (習慣)"
           },
           {
             "choice": "きょうみ",
             "isCorrect": false,
-            "text": "きょうみ = ระมัดระวัง"
+            "text": "きょうみ = ความสนใจ (興味)"
           },
           {
             "choice": "けっか",
             "isCorrect": false,
-            "text": "けっか = ขอร้อง、ไหว้วาน"
+            "text": "けっか = ผลลัพธ์ (結果)"
           }
         ]
       },
@@ -13074,17 +13074,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "コンサート",
             "isCorrect": false,
-            "text": "コンサート = คอนเสิร์ต"
+            "text": "コンサート = คอนเสิร์ต (Concert)"
           },
           {
             "choice": "コンピューター",
             "isCorrect": false,
-            "text": "コンピューター = คอมพิวเตอร์"
+            "text": "コンピューター = คอมพิวเตอร์ (Computer)"
           },
           {
             "choice": "アンケート",
             "isCorrect": true,
-            "text": "アンケート = แบบสอบถาม"
+            "text": "アンケート = แบบสอบถาม (Enquête)"
           },
           {
             "choice": "アルコール",
@@ -13123,12 +13123,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おつり",
             "isCorrect": false,
-            "text": "おつり = ซ่อมแซม, แก้ไข"
+            "text": "おつり = เงินทอน (お釣り)"
           },
           {
             "choice": "やちん",
             "isCorrect": true,
-            "text": "やちん = ค่าเช่าบ้าน/ค่าเช่าห้อง"
+            "text": "やちん = ค่าเช่าบ้าน/ห้อง (家賃)"
           }
         ]
       },
@@ -13162,7 +13162,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "うつって",
             "isCorrect": true,
-            "text": "うつって = ถ่ายติด/ปรากฏในภาพ"
+            "text": "うつって = ถ่ายติด, ย้าย, สะท้อน (写って/移って)"
           },
           {
             "choice": "とどいて",
@@ -13196,7 +13196,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おうふく",
             "isCorrect": true,
-            "text": "おうふく = ไป-กลับ ตรงข้ามกับ 「かたみち」 (เที่ยวเดียว)"
+            "text": "おうふく = ไปและกลับ, ตั๋วไปกลับ (往復)"
           },
           {
             "choice": "うんてん",
@@ -13206,7 +13206,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あんない",
             "isCorrect": false,
-            "text": "あんない = เพื่อนมาสายกว่าเวลานัด แต่กลับไม่ยอมขอโทษทุกคนเลย"
+            "text": "あんない = การนำทาง, การพาเที่ยวชม (案内)"
           }
         ]
       },
@@ -13245,7 +13245,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "つつんで",
             "isCorrect": true,
-            "text": "つつんで = ห่อ/หุ้ม"
+            "text": "つつんで = ห่อ (ของขวัญ/พัสดุ) (包んで <- 包む)"
           }
         ]
       },
@@ -13591,12 +13591,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いがい",
             "isCorrect": false,
-            "text": "いがい = เมฆ"
+            "text": "いがい = นอกจาก, ยกเว้น (以外)"
           },
           {
             "choice": "いじょう",
             "isCorrect": true,
-            "text": "いじょう = ตั้งแต่...ขึ้นไป/มากกว่า"
+            "text": "いじょう = ตั้งแต่...ขึ้นไป, มากกว่า (以上)"
           },
           {
             "choice": "いない",
@@ -13606,7 +13606,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いか",
             "isCorrect": false,
-            "text": "いか = เสียง"
+            "text": "いか = ตั้งแต่...ลงไป, ปลาหมึก (以下/烏賊)"
           }
         ]
       },
@@ -13630,12 +13630,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ちかい",
             "isCorrect": true,
-            "text": "ちかい = ใกล้"
+            "text": "ちかい = ใกล้ (近い)"
           },
           {
             "choice": "はやい",
             "isCorrect": false,
-            "text": "はやい = ทะเล"
+            "text": "はやい = เร็ว, เช้าตรู่ (早い/速い)"
           },
           {
             "choice": "ひろい",
@@ -13645,7 +13645,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ふとい",
             "isCorrect": false,
-            "text": "ふとい = เรียวเล็ก, ผอมบาง"
+            "text": "ふとい = หนา, อ้วน (太い)"
           }
         ]
       },
@@ -13679,12 +13679,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "つごう",
             "isCorrect": true,
-            "text": "つごう = ความสะดวก(ด้านเวลา/สถานการณ์)"
+            "text": "つごう = ความสะดวก (เรื่องเวลา/นัดหมาย) (都合)"
           },
           {
             "choice": "とかい",
             "isCorrect": false,
-            "text": "とかい = พวกเด็ก ๆ"
+            "text": "とかい = เมืองใหญ่, สังคมเมือง (都会)"
           }
         ]
       },
@@ -13713,7 +13713,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ひいて",
             "isCorrect": true,
-            "text": "ひいて = ดึง"
+            "text": "ひいて = ดึง (ประตู), ดีด (เปียโน) (引いて/弾いて)"
           },
           {
             "choice": "ついて",
@@ -13752,12 +13752,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "だんせい",
             "isCorrect": false,
-            "text": "だんせい = อายุยืนยาว"
+            "text": "だんせい = ผู้ชาย, บุรุษ (男性)"
           },
           {
             "choice": "じょせい",
             "isCorrect": true,
-            "text": "じょせい = ผู้หญิง/สตรี"
+            "text": "じょせい = ผู้หญิง, สตรี (女性)"
           },
           {
             "choice": "たんせい",
@@ -13801,7 +13801,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ならって",
             "isCorrect": true,
-            "text": "ならって = เรียน/เรียนรู้"
+            "text": "ならって = เรียน, ร่ำเรียน (習って <- 習う)"
           }
         ]
       },
@@ -13825,12 +13825,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おねえさん",
             "isCorrect": true,
-            "text": "おねえさん = พี่สาว"
+            "text": "おねえさん = พี่สาว (ของคนอื่น) (お姉さん)"
           },
           {
             "choice": "おにいさん",
             "isCorrect": false,
-            "text": "おにいさん = น้องชาย (ของฉัน)"
+            "text": "おにいさん = พี่ชาย (ของคนอื่น) (お兄さん)"
           },
           {
             "choice": "おねさん",
@@ -13869,7 +13869,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "夜",
             "isCorrect": true,
-            "text": "夜 = กลางคืน/ตอนค่ำ"
+            "text": "夜 (よる) = กลางคืน, ตอนค่ำ"
           },
           {
             "choice": "掩",
@@ -13918,7 +13918,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "白い",
             "isCorrect": true,
-            "text": "白い = ขาว"
+            "text": "白い (しろい) = สีขาว"
           }
         ]
       },
@@ -13952,7 +13952,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "食堂",
             "isCorrect": true,
-            "text": "食堂 = โรงอาหาร"
+            "text": "食堂 (しょくどう) = โรงอาหาร"
           },
           {
             "choice": "飯室",
@@ -13986,7 +13986,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "閉めて",
             "isCorrect": true,
-            "text": "閉めて = ปิด"
+            "text": "閉めて (しめて) = มาจาก 閉める (ปิดประตู/หน้าต่าง)"
           },
           {
             "choice": "間めて",
@@ -14020,7 +14020,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "親切",
             "isCorrect": true,
-            "text": "親切 = ใจดี/มีน้ำใจ"
+            "text": "親切 (しんせつ) = ใจดี, มีน้ำใจ"
           },
           {
             "choice": "新切",
@@ -14059,22 +14059,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ねっしん",
             "isCorrect": false,
-            "text": "ねっしん = การเตรียม"
+            "text": "ねっしん = กระตือรือร้น, ตั้งใจจริง (熱心)"
           },
           {
             "choice": "ていねい",
             "isCorrect": false,
-            "text": "ていねい = อร่อย, เก่ง"
+            "text": "ていねい = สุภาพ, ประณีต, พิถีพิถัน (丁寧)"
           },
           {
             "choice": "ひつよう",
             "isCorrect": true,
-            "text": "ひつよう = จำเป็น"
+            "text": "ひつよう = จำเป็น (必要)"
           },
           {
             "choice": "とくべつ",
             "isCorrect": false,
-            "text": "とくべつ = การว่ายน้ำ"
+            "text": "とくべつ = พิเศษ (特別)"
           }
         ]
       },
@@ -14098,7 +14098,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かたい",
             "isCorrect": false,
-            "text": "かたい = ติดต่อ"
+            "text": "かたい = แข็ง (固い/硬い)"
           },
           {
             "choice": "おもい",
@@ -14108,12 +14108,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ふかい",
             "isCorrect": true,
-            "text": "ふかい = ลึก"
+            "text": "ふかい = ลึก (深い)"
           },
           {
             "choice": "にがい",
             "isCorrect": false,
-            "text": "にがい = ทำแตก, แบ่ง"
+            "text": "にがい = ขม (苦い)"
           }
         ]
       },
@@ -14142,7 +14142,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はって",
             "isCorrect": true,
-            "text": "はって = แปะ/ติดแสตมป์"
+            "text": "はって = มาจาก 貼る (แปะ/ติด) หรือ 張る (ขึง/กาง)"
           },
           {
             "choice": "ぬって",
@@ -14176,12 +14176,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "えいぎょう",
             "isCorrect": true,
-            "text": "えいぎょう = เปิดทำการ/ดำเนินกิจการ"
+            "text": "えいぎょう = การดำเนินกิจการ, เวลาทำการ (営業)"
           },
           {
             "choice": "せいさん",
             "isCorrect": false,
-            "text": "せいさん = ประชากร"
+            "text": "せいさん = การคำนวณเงิน, การชำระเงิน (精算)"
           },
           {
             "choice": "ぼうえき",
@@ -14230,7 +14230,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "すすむ",
             "isCorrect": true,
-            "text": "すすむ = มุ่งหน้าไปข้างหน้า/ก้าวหน้า"
+            "text": "すすむ = ก้าวหน้า, คืบหน้า, เดินหน้า (進む)"
           }
         ]
       },
@@ -14254,12 +14254,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やくそく",
             "isCorrect": false,
-            "text": "やくそく = おれい (お礼) = การแสดงความขอบคุณ/คำขอบคุณ"
+            "text": "やくそく = สัญญา, การนัดหมาย (約束)"
           },
           {
             "choice": "いけん",
             "isCorrect": true,
-            "text": "いけん = ความคิดเห็น 「いけんを聞く」 = ถามความคิดเห็น"
+            "text": "いけん = ความคิดเห็น (意見)"
           },
           {
             "choice": "あいさつ",
@@ -14269,7 +14269,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ひみつ",
             "isCorrect": false,
-            "text": "ひみつ = โสด"
+            "text": "ひみつ = ความลับ (秘密)"
           }
         ]
       },
@@ -14308,7 +14308,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "うみました",
             "isCorrect": true,
-            "text": "うみました = คลอดลูก/ให้กำเนิด"
+            "text": "うみました = ให้กำเนิด, คลอดลูก (産みました <- 産む)"
           }
         ]
       },
@@ -14332,7 +14332,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けっか",
             "isCorrect": true,
-            "text": "けっか = ผลลัพธ์/ผลการสอบ"
+            "text": "けっか = ผลลัพธ์ (結果)"
           },
           {
             "choice": "ごうかく",
@@ -14493,17 +14493,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けさからこまかい雨がふっています。",
             "isCorrect": false,
-            "text": "けさからあたたかい雨がふっています。 = ตั้งแต่เช้าฝนอุ่นๆ ตกอยู่ (あたたかい = อบอุ่น)"
+            "text": "けさからこまかい雨がふっています。 = ตั้งแต่เช้าฝนเม็ดละเอียดตกปรอยๆ (こまかい = ละเอียด/ปรอยๆ)"
           },
           {
             "choice": "けさから雨がしずかにふっています。",
             "isCorrect": false,
-            "text": "けさからすこし雨がふっています。 = ตั้งแต่เช้าฝนตกปรอยๆ เล็กน้อย (すこし = เล็กน้อย)"
+            "text": "けさから雨がしずかにふっています。 = ตั้งแต่เช้าฝนตกอย่างเงียบๆ (しずか = เงียบสงบ)"
           },
           {
             "choice": "けさから雨がつよくふっています。",
             "isCorrect": true,
-            "text": "けさからつよい雨がふっています。 = ตั้งแต่เช้าฝนตกหนักมาก (ฝนตกหนักซู่ๆ ตรงกับ ざあざあ)"
+            "text": "けさから雨がつよくふっています。 = ตั้งแต่เช้าฝนตกหนักมาก (ฝนตกหนักซู่ๆ ตรงกับ ざあざあ)"
           }
         ]
       },
@@ -14566,22 +14566,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "この みちは せまいので、車は とおれません。",
             "isCorrect": true,
-            "text": "この服はちょっとせまいので、もうすこし大きいのはありませんか。 = เสื้อตัวนี้คับไปหน่อย มีตัวใหญ่กว่านี้ไหมคะ (เสื้อคับตัว ใช้ せまい หรือ きつい ถูกต้อง)"
+            "text": "この みちは せまいので、車は とおれません。 = ถนนเส้นนี้แคบ รถยนต์จึงแล่นผ่านไม่ได้ (ใช้ せまい กับถนน/พื้นที่แคบ ถูกต้อง)"
           },
           {
             "choice": "この ズボンは わたしには 少し せまいです。",
             "isCorrect": false,
-            "text": "テストの時間はせまいですから、いそいで答えを書いてください。 = เวลาสอบสั้น/มีน้อย (เวลาน้อย ต้องใช้ 時間が短い/少ない 不ใช่ せまい)"
+            "text": "この ズボンは わたしには 少し せまいです。 = กางเกงตัวนี้คับไปหน่อย (เสื้อผ้าคับ ต้องใช้ きつい 不ใช่ せまい)"
           },
           {
             "choice": "小さい じを 書く ときは、せまい ペンが いいです。",
             "isCorrect": false,
-            "text": "今月はお金がせまいので、やすいレストランに行きましょう。 = เดือนนี้เงินมีน้อย (เงินน้อย ต้องใช้ お金が少ない/ピンチ 不ใช่ せまい)"
+            "text": "小さい じを 書く ときは、せまい ペンが いいです。 = เวลาเขียนตัวหนังสือเล็กๆ ปากกาหัวเล็กจะดีกว่า (ปากกาหัวเล็ก ต้องใช้ 細い/ほそい)"
           },
           {
             "choice": "その やさいは せまく きって ください。",
             "isCorrect": false,
-            "text": "この川はせまいですから、あぶないです。入ってはいけません。 = แม่น้ำนี้ลึกและอันตราย (แม่น้ำลึก ต้องใช้ ふかい 不ใช่ せまい)"
+            "text": "その やさいは せまく きって ください。 = กรุณาหั่นผักนั้นให้เป็นชิ้นเล็กๆ (หั่นชิ้นเล็ก ต้องใช้ 細かく/こまかく)"
           }
         ]
       },
@@ -14605,22 +14605,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "水を あげるのを わすれて、花が こしょうして しまいました。",
             "isCorrect": false,
-            "text": "このはこはガラスのかびんが入っていますから、ていねいに持ってください。 = กล่องนี้มีแจกันแก้วอยู่ กรุณาถืออย่างระมัดระวังประณีต (ใช้ ていねいに ถูกต้อง)"
+            "text": "水を あげるのを わすれて、花が こしょうして しまいました。 = ลืมรดน้ำ ดอกไม้เลยเหี่ยวเฉา (ดอกไม้เหี่ยว ต้องใช้ 枯れる/かれる ไม่ใช่ こしょう)"
           },
           {
             "choice": "その パソコンは こしょうして いるので、つかえません。",
             "isCorrect": true,
-            "text": "テストの前には、ならった言葉をていねいにしてください。 = ก่อนสอบกรุณาทบทวนคำศัพท์ (ทบทวน ต้องใช้ 復習する 不ใช่ ていねいに)"
+            "text": "その パソコンは こしょうして いるので、つかえません。 = คอมพิวเตอร์เครื่องนั้นเสียอยู่ จึงใช้งานไม่ได้ (ใช้ こしょう กับอุปกรณ์อิเล็กทรอนิกส์ ถูกต้อง)"
           },
           {
             "choice": "この ぎゅうにゅうは こしょうして いるので、飲まないで ください。",
             "isCorrect": false,
-            "text": "このくつはていねいにはけるので、とても便利です。 = รองเท้าคู่นี้สวมใส่ง่ายสะดวก (สวมใส่ง่าย ต้องใช้ 楽に/簡単に 不ใช่ ていねいに)"
+            "text": "この ぎゅうにゅうは こしょうして いるので、飲まないで ください。 = นมกล่องนี้บูดเสียแล้ว อย่าดื่มนะ (อาหาร/นมบูด ต้องใช้ 腐る/くさる ไม่ใช่ こしょう)"
           },
           {
             "choice": "テーブルから おちて、コップが こしょうしました。",
             "isCorrect": false,
-            "text": "あしたははやく起きなければならないので、ていねいに寝ます。 = ต้องตื่นเช้าเลยจะรีบเข้านอน (รีบนอน ต้องใช้ 早く寝る 不ใช่ ていねいに)"
+            "text": "テーブルから おちて、コップが こしょうしました。 = แก้วตกจากโต๊ะแล้วแตก (แก้วแตก ต้องใช้ 割れる/われる ไม่ใช่ こしょう)"
           }
         ]
       },
@@ -14644,22 +14644,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "たいふうで 山が たおれました。",
             "isCorrect": false,
-            "text": "この本はおもしろかったので、１日でぜんぶ読みました。 = หนังสือเล่มนี้สนุกมาก เลยอ่านจบทั้งหมดภายใน 1 วัน (ใช้ ぜんぶ กับการอ่านทั้งหมด ถูกต้อง)"
+            "text": "たいふうで 山が たおれました。 = ภูเขาถล่มเพราะพายุไต้ฝุ่น (ดินภูเขาถล่ม ต้องใช้ 崩れる/くずれる 不ใช่ たおれる)"
           },
           {
             "choice": "おとうとは こうつうじこで 足が たおれました。",
             "isCorrect": false,
-            "text": "きょうのしけんはぜんぶよくできました。 = ข้อสอบวันนี้ทำได้ดีมากๆ (ทำได้ดีมาก ต้องใช้ とても/すごく 不ใช่ ぜんぶ)"
+            "text": "おとうとは こうつうじこで 足が たおれました。 = น้องชายประสบอุบัติเหตุขาหัก (กระดูกหัก ต้องใช้ 折れる/おれる 不ใช่ たおれる)"
           },
           {
             "choice": "大きい じしんで ほんだなが たおれました。",
             "isCorrect": true,
-            "text": "わたしはすしがぜんぶ好きです。 = ฉันชอบซูชิมากๆ (ชอบมาก ต้องใช้ 大好き/とても好き ไม่ใช่ ぜんぶ)"
+            "text": "大きい じしんで ほんだなが たおれました。 = แผ่นดินไหวครั้งใหญ่ทำให้ชั้นวางหนังสือล้มลงมา (สิ่งของทรงสูงล้ม ใช้ たおれる ถูกต้อง)"
           },
           {
             "choice": "先生の びょうきで じゅぎょうが たおれました。",
             "isCorrect": false,
-            "text": "あには背がぜんぶ高いです。 = พี่ชายตัวสูงมากๆ (ตัวสูงมาก ต้องใช้ とても高い 不ใช่ ぜんぶ)"
+            "text": "先生の びょうきで じゅぎょうが たおれました。 = อาจารย์ป่วย คาบเรียนเลยถูกงด (งดคาบเรียน ต้องใช้ 休講になる 不ใช่ たおれる)"
           }
         ]
       }
@@ -14703,7 +14703,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "たのしかった",
             "isCorrect": true,
-            "text": "たのしかった = สนุก"
+            "text": "たのしかった = สนุกสนานมาก (楽しかった <- 楽しい)"
           },
           {
             "choice": "かなしかった",
@@ -14732,22 +14732,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かたち",
             "isCorrect": false,
-            "text": "かたち = แปลกประหลาด, มหัศจรรย์"
+            "text": "かたち = รูปร่าง, รูปทรง (形)"
           },
           {
             "choice": "いろ",
             "isCorrect": false,
-            "text": "いろ = เพียงพอ"
+            "text": "いろ = สี, สีสัน (色)"
           },
           {
             "choice": "におい",
             "isCorrect": false,
-            "text": "におい = วิทยาศาสตร์"
+            "text": "におい = กลิ่น (匂い)"
           },
           {
             "choice": "あじ",
             "isCorrect": true,
-            "text": "あじ = รสชาติ"
+            "text": "あじ = รสชาติ (味)"
           }
         ]
       },
@@ -14771,7 +14771,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ふべん",
             "isCorrect": true,
-            "text": "ふべん = ไม่สะดวกสบาย"
+            "text": "ふべん = ไม่สะดวก, ไม่สะดวกสบาย (不便)"
           },
           {
             "choice": "ぶべん",
@@ -14815,7 +14815,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きって",
             "isCorrect": true,
-            "text": "きって = หั่น/ตัด"
+            "text": "きって = มาจาก 切る (หั่น, ตัด)"
           },
           {
             "choice": "あらって",
@@ -14854,7 +14854,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "にがい",
             "isCorrect": false,
-            "text": "にがい = ทำแตก, แบ่ง"
+            "text": "にがい = ขม (苦い)"
           },
           {
             "choice": "いそと",
@@ -14864,7 +14864,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いがい",
             "isCorrect": true,
-            "text": "いがい = นอกจาก/ยกเว้น"
+            "text": "いがい = นอกจาก, ยกเว้น (以外)"
           }
         ]
       },
@@ -14888,22 +14888,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ほし",
             "isCorrect": false,
-            "text": "ほし = ลม"
+            "text": "ほし = ดวงดาว (星)"
           },
           {
             "choice": "ゆき",
             "isCorrect": false,
-            "text": "ゆき = แห้ง"
+            "text": "ゆき = หิมะ (雪)"
           },
           {
             "choice": "くも",
             "isCorrect": true,
-            "text": "くも = เมฆ"
+            "text": "くも = เมฆ (雲) หรือ แมงมุม (蜘蛛)"
           },
           {
             "choice": "そら",
             "isCorrect": false,
-            "text": "そら = บิน, โบยบิน"
+            "text": "そら = ท้องฟ้า (空)"
           }
         ]
       },
@@ -14942,7 +14942,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きゅうこう",
             "isCorrect": true,
-            "text": "きゅうこう = รถไฟด่วน"
+            "text": "きゅうこう = รถไฟด่วน, การหยุดเรียน (急行/休講)"
           }
         ]
       },
@@ -14971,7 +14971,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "うつさないで",
             "isCorrect": true,
-            "text": "うつさないで = ลอก/คัดลอก"
+            "text": "うつさないで = อย่าถ่ายรูป/อย่าลอกเลียนแบบ (写さないで <- 写す)"
           },
           {
             "choice": "けさないで",
@@ -15005,7 +15005,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はんたい",
             "isCorrect": true,
-            "text": "はんたい = ตรงกันข้าม/คัดค้าน"
+            "text": "はんたい = ตรงกันข้าม, คัดค้าน (反対)"
           },
           {
             "choice": "ほんたい",
@@ -15049,7 +15049,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "黒い",
             "isCorrect": true,
-            "text": "黒い = ดำ"
+            "text": "黒い (くろい) = สีดำ"
           },
           {
             "choice": "赤い",
@@ -15093,7 +15093,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "計画",
             "isCorrect": true,
-            "text": "計画 = แผนการ"
+            "text": "計画 (けいかく) = แผนการ, โปรเจกต์"
           },
           {
             "choice": "訂書",
@@ -15137,7 +15137,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "医者",
             "isCorrect": true,
-            "text": "医者 = แพทย์/หมอ"
+            "text": "医者 (いしゃ) = คุณหมอ, แพทย์"
           }
         ]
       },
@@ -15161,7 +15161,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "夜",
             "isCorrect": true,
-            "text": "夜 = กลางคืน/ตอนค่ำ"
+            "text": "夜 (よる) = กลางคืน, ตอนค่ำ"
           },
           {
             "choice": "昼",
@@ -15210,7 +15210,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "貸して",
             "isCorrect": true,
-            "text": "貸して = ให้ยืม"
+            "text": "貸して (かして) = มาจาก 貸す (ให้ยืม)"
           },
           {
             "choice": "質して",
@@ -15254,7 +15254,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "試合",
             "isCorrect": true,
-            "text": "試合 = การแข่งขัน/การประลอง"
+            "text": "試合 (しあい) = การแข่งขันกีฬา, แมตช์"
           }
         ]
       },
@@ -15278,12 +15278,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "しんぱい",
             "isCorrect": true,
-            "text": "しんぱい = เป็นห่วง/กังวล"
+            "text": "しんぱい = เป็นห่วง, กังวล (心配)"
           },
           {
             "choice": "けいけん",
             "isCorrect": false,
-            "text": "けいけん = ทำให้ร้อน"
+            "text": "けいけん = ประสบการณ์ (経験)"
           },
           {
             "choice": "しつれい",
@@ -15317,12 +15317,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けしき",
             "isCorrect": false,
-            "text": "けしき = เลี้ยงดู/ปลูกเลี้ยง"
+            "text": "けしき = ทัศนียภาพ, วิวทิวทัศน์ (景色)"
           },
           {
             "choice": "ゆめ",
             "isCorrect": true,
-            "text": "ゆめ = ความฝัน 「ゆめがある」 = มีความฝัน"
+            "text": "ゆめ = ความฝัน (夢)"
           },
           {
             "choice": "おもいで",
@@ -15332,7 +15332,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "せわ",
             "isCorrect": false,
-            "text": "せわ = อีกเดี๋ยวรถไฟด่วนพิเศษก็จะมาแล้วค่ะ (特急 = ด่วนพิเศษ)"
+            "text": "せわ = การดูแล, เอาใจใส่ (世話)"
           }
         ]
       },
@@ -15361,12 +15361,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ぜひ",
             "isCorrect": true,
-            "text": "ぜひ = ให้ได้/แน่นอน (มักใช้ร่วมกับประโยคชักชวนหรือขอร้อง)"
+            "text": "ぜひ = ให้ได้, แน่นอน (是非)"
           },
           {
             "choice": "じゅうぶん",
             "isCorrect": false,
-            "text": "じゅうぶん = ดุ"
+            "text": "じゅうぶん = เพียงพอ (十分)"
           },
           {
             "choice": "いつも",
@@ -15395,7 +15395,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "じゅんび",
             "isCorrect": false,
-            "text": "じゅんび = การเยี่ยมผู้ป่วย"
+            "text": "じゅんび = การเตรียมตัว, การเตรียมพร้อม (準備)"
           },
           {
             "choice": "りよう",
@@ -15405,12 +15405,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "せつめい",
             "isCorrect": true,
-            "text": "せつめい = อธิบาย"
+            "text": "せつめい = การอธิบาย, คำอธิบาย (説明)"
           },
           {
             "choice": "せいさん",
             "isCorrect": false,
-            "text": "せいさん = ประชากร"
+            "text": "せいさん = การคำนวณเงิน, การชำระเงิน (精算)"
           }
         ]
       },
@@ -15434,22 +15434,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きびしい",
             "isCorrect": false,
-            "text": "きびしい = จำเป็น"
+            "text": "きびしい = เข้มงวด, เคร่งครัด (厳しい)"
           },
           {
             "choice": "かたい",
             "isCorrect": true,
-            "text": "かたい = แข็ง"
+            "text": "かたい = แข็ง (固い/硬い)"
           },
           {
             "choice": "はやい",
             "isCorrect": false,
-            "text": "はやい = ทะเล"
+            "text": "はやい = เร็ว, เช้าตรู่ (早い/速い)"
           },
           {
             "choice": "ふかい",
             "isCorrect": false,
-            "text": "ふかい = ตื้น"
+            "text": "ふかい = ลึก (深い)"
           }
         ]
       },
@@ -15473,7 +15473,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さそいました",
             "isCorrect": true,
-            "text": "さそいました = ชวน/ชักชวน"
+            "text": "さそいました = ชวนแล้ว, เชื้อเชิญแล้ว (誘いました <- 誘う)"
           },
           {
             "choice": "つたえました",
@@ -15517,17 +15517,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ばん",
             "isCorrect": false,
-            "text": "ばん = ถัดไป, ต่อไป"
+            "text": "ばん = ตอนเย็น, ค่ำ (晩)"
           },
           {
             "choice": "けん",
             "isCorrect": false,
-            "text": "けん = ด้านบน"
+            "text": "けん = ตั๋ว, บัตร (券) หรือ จังหวัด (県)"
           },
           {
             "choice": "センチ",
             "isCorrect": true,
-            "text": "センチ = ลูกชายของฉัน ส่วนสูงเพิ่มขึ้นประมาณ 5 เซนติเมตรใน 1 ปี"
+            "text": "センチ = เซนติเมตร (Centimeter)"
           }
         ]
       },
@@ -15561,7 +15561,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "くらべて",
             "isCorrect": true,
-            "text": "くらべて = เปรียบเทียบ"
+            "text": "くらべて = เปรียบเทียบ (比べて <- 比べる)"
           },
           {
             "choice": "はらって",
@@ -15590,7 +15590,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "うそ",
             "isCorrect": false,
-            "text": "うそ = กลับไปที่เดิม"
+            "text": "うそ = คำโกหก, เรื่องไม่จริง (嘘)"
           },
           {
             "choice": "じゆう",
@@ -15600,12 +15600,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ちゅうし",
             "isCorrect": false,
-            "text": "ちゅうし = คะแนน, จุด"
+            "text": "ちゅうし = การยกเลิก, การระงับ (中止)"
           },
           {
             "choice": "るす",
             "isCorrect": true,
-            "text": "るす = การไม่อยู่บ้าน"
+            "text": "るす = การไม่อยู่บ้าน (留守)"
           }
         ]
       },
@@ -15629,7 +15629,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "見つかりません",
             "isCorrect": true,
-            "text": "見つかりません = พบ/หาเจอ ในรูปปฏิเสธ 「見つかりません」 = ยังไม่เจอ"
+            "text": "見つかりません = ยังหาไม่พบ, ยังหาไม่เจอ (見つかる)"
           },
           {
             "choice": "つかまえません",
@@ -15668,22 +15668,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おとうとは あの きっさてんで まって います。",
             "isCorrect": false,
-            "text": "おとうとは あの きっさてんで まって います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "おとうとは あの きっさてんで まって います。 = น้องชายกำลังรออยู่ที่ร้านกาแฟแห่งนั้น (まつ = รอ)"
           },
           {
             "choice": "おとうとは あの きっさてんで はたらいて います。",
             "isCorrect": true,
-            "text": "おとうとは あの きっさてんで はたらいて います。 = ทำงานพิเศษ/พาร์ตไทม์ มีความหมายเหมือนกับ 「はたらいている」 (กำลังทำงาน)"
+            "text": "おとうとは あの きっさてんで はたらいて います。 = น้องชายกำลังทำงานอยู่ที่ร้านกาแฟแห่งนั้น (ทำงานพิเศษ ตรงกับ はたらく)"
           },
           {
             "choice": "おとうとは あの きっさてんで コーヒーを 飲んで います。",
             "isCorrect": false,
-            "text": "おとうとは あの きっさてんで コーヒーを 飲んで います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "おとうとは あの きっさてんで コーヒーを 飲んで います。 = น้องชายกำลังดื่มกาแฟอยู่ที่ร้านกาแฟแห่งนั้น"
           },
           {
             "choice": "おとうとは あの きっさてんで 友だちと 話して います。",
             "isCorrect": false,
-            "text": "おとうとは あの きっさてんで 友だちと 話して います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "おとうとは あの きっさてんで 友だちと 話して います。 = น้องชายกำลังพูดคุยกับเพื่อนอยู่ที่ร้านกาแฟแห่งนั้น"
           }
         ]
       },
@@ -15707,22 +15707,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "わたしは はしるのが すきです。",
             "isCorrect": false,
-            "text": "わたしは はしるのが すきです。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "わたしは はしるのが すきです。 = ฉันชอบการวิ่ง (はしる = วิ่ง)"
           },
           {
             "choice": "わたしは およぐのが すきです。",
             "isCorrect": true,
-            "text": "わたしは およぐのが すきです。 = การว่ายน้ำ มีความหมาย"
+            "text": "わたしは およぐのが すきです。 = ฉันชอบการว่ายน้ำ (ว่ายน้ำ ตรงกับ すいえい / およぐ)"
           },
           {
             "choice": "わたしは ごはんを 食べるのが すきです。",
             "isCorrect": false,
-            "text": "わたしは ごはんを 食べるのが すきです。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "わたしは ごはんを 食べるのが すきです。 = ฉันชอบการทานอาหาร (たべる = กิน/ทาน)"
           },
           {
             "choice": "わたしは 本を 読むのが すきです。",
             "isCorrect": false,
-            "text": "わたしは 本を 読むのが すきです。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "わたしは 本を 読むのが すきです。 = ฉันชอบการอ่านหนังสือ (よむ = อ่าน)"
           }
         ]
       },
@@ -15746,22 +15746,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "それを 聞いて わらいました。",
             "isCorrect": false,
-            "text": "それを 聞いて わらいました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "それを 聞いて わらいました。 = ได้ยินเรื่องนั้นแล้วหัวเราะ (わらう = หัวเราะ)"
           },
           {
             "choice": "それを 聞いて こまりました。",
             "isCorrect": false,
-            "text": "それを 聞いて こまりました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "それを 聞いて こまりました。 = ได้ยินเรื่องนั้นแล้วลำบากใจ (こまる = ลำบากใจ)"
           },
           {
             "choice": "それを 聞いて おこりました。",
             "isCorrect": false,
-            "text": "それを 聞いて おこりました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "それを 聞いて おこりました。 = ได้ยินเรื่องนั้นแล้วโกรธ (おこる = โกรธ)"
           },
           {
             "choice": "それを 聞いて おどろきました。",
             "isCorrect": true,
-            "text": "それを 聞いて おどろきました。 = ตกใจ/ประหลาดใจ"
+            "text": "それを 聞いて おどろきました。 = ได้ยินเรื่องนั้นแล้วตกใจประหลาดใจ (ตกใจ ตรงกับ びっくりする / おどろく)"
           }
         ]
       },
@@ -15785,22 +15785,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あの 人は きれいですね。",
             "isCorrect": true,
-            "text": "あの 人は きれいですね。 = สวย/งดงาม"
+            "text": "あの 人は きれいですね。 = คนคนนั้นสวยจริงๆ เลยนะ (สวยงาม ตรงกับ うつくしい / きれい)"
           },
           {
             "choice": "あの 人は 元気ですね。",
             "isCorrect": false,
-            "text": "あの 人は 元気ですね。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "あの 人は 元気ですね。 = คนคนนั้นดูร่าเริงแข็งแรงจังเลยนะ (げんき = แข็งแรง/ร่าเริง)"
           },
           {
             "choice": "あの 人は おもしろいですね。",
             "isCorrect": false,
-            "text": "あの 人は おもしろいですね。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "あの 人は おもしろいですね。 = คนคนนั้นน่าสนใจ/ตลกดีนะ (おもしろい = ตลก/น่าสนใจ)"
           },
           {
             "choice": "あの 人は わかいですね。",
             "isCorrect": false,
-            "text": "あの 人は わかいですね。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "あの 人は わかいですね。 = คนคนนั้นดูหนุ่มสาวจังเลยนะ (わかい = หนุ่มสาว)"
           }
         ]
       },
@@ -15824,22 +15824,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "この 国は こめを ほかの 国に うって います。",
             "isCorrect": false,
-            "text": "この 国は こめを ほかの 国に うって います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "この 国は こめを ほかの 国に うって います。 = ประเทศนี้ขายข้าวให้ประเทศอื่น (うつている = ขาย)"
           },
           {
             "choice": "この 国は こめを ほかの 国から もらって います。",
             "isCorrect": false,
-            "text": "この 国は こめを ほかの 国から もらって います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "この 国は こめを ほかの 国から もらって います。 = ประเทศนี้ได้รับข้าวมาจากประเทศอื่น (もらう = ได้รับ)"
           },
           {
             "choice": "この 国は こめを ほかの 国から 買って います。",
             "isCorrect": true,
-            "text": "この 国は こめを ほかの 国から 買って います。 = นำเข้าสินค้าจากต่างประเทศ ซึ่งคือ 「ほかの国から買う」 (ซื้อจากประเทศอื่น)"
+            "text": "この 国は こめを ほかの 国から 買って います。 = ประเทศนี้ซื้อข้าวจากประเทศอื่น (นำเข้า/ซื้อจากต่างประเทศ ตรงกับ ゆにゅうする / かう)"
           },
           {
             "choice": "この 国は こめを ほかの 国に あげて います。",
             "isCorrect": false,
-            "text": "この 国は こめを ほかの 国に あげて います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "この 国は こめを ほかの 国に あげて います。 = ประเทศนี้มอบข้าวให้ประเทศอื่น (あげる = ให้)"
           }
         ]
       },
@@ -15863,22 +15863,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さいきん りょうりが できたので、いっしょに 食べましょう。",
             "isCorrect": false,
-            "text": "さいきん りょうりが できたので、いっしょに 食べましょう。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "さいきん りょうりが できたので、いっしょに 食べましょう。 = ทำอาหารเสร็จเมื่อกี้นี้เอง (เพิ่งเสร็จสดๆ ร้อนๆ ต้องใช้ さっき/いま 不ใช่ さいきん)"
           },
           {
             "choice": "さいきん しゅくだいを 出して ください。",
             "isCorrect": false,
-            "text": "さいきん しゅくだいを 出して ください。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "さいきん しゅくだいを 出して ください。 = ส่งการบ้านเร็วๆ นี้ (ส่งในไม่ช้า ต้องใช้ もうすぐ/近いうちに 不ใช่ さいきん)"
           },
           {
             "choice": "きむらさんは さいきん けっこんした そうです。",
             "isCorrect": true,
-            "text": "きむらさんは さいきん けっこんした そうです。 = หมู่นี้/เมื่อเร็วๆ นี้ ได้ยินว่าคุณคิมูระแต่งงานเมื่อเร็วๆ นี้"
+            "text": "きむらさんは さいきん けっこんした そうです。 = ได้ยินว่าคุณคิมุระเพิ่งแต่งงานไปเมื่อเร็วๆ นี้ (ใช้ さいきん กับเหตุการณ์ช่วงที่ผ่านมา ถูกต้อง)"
           },
           {
             "choice": "さいきん 電車が 来ますから、いそいで えきに 行きましょう。",
             "isCorrect": false,
-            "text": "さいきん 電車が 来ますから、いそいで えきに 行きましょう。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "さいきん 電車が 来ますから、いそいで えきに 行きましょう。 = รถไฟจะมาถึงในไม่ช้า (ในไม่ช้า ต้องใช้ まもなく/もうすぐ 不ใช่ さいきん)"
           }
         ]
       },
@@ -15902,22 +15902,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ラジオの おとが 大きいので、もう 少し 小さく して ください。",
             "isCorrect": true,
-            "text": "ラジオの おとが 大きいので、もう 少し 小さく して ください。 = เสียง (เสียงสิ่งของ เครื่องจักร หรือเสียงทั่วไปที่ไม่ใช่เสียงพูดของคน"
+            "text": "ラジオの おとが 大きいので、もう 少し 小さく して ください。 = เสียงวิทยุดังมาก กรุณาหรี่ให้เบาลงหน่อย (ใช้ おと กับเสียงอุปกรณ์/เครื่องใช้ ถูกต้อง)"
           },
           {
             "choice": "日本語の おとが じょうずに なりたいので、毎日 たくさん 話します。",
             "isCorrect": false,
-            "text": "日本語の おとが じょうずに なりたいので、毎日 たくさん 話します。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "日本語の おとが じょうずに なりたいので、毎日 たくさん 話します。 = อยากออกเสียงภาษาญี่ปุ่นเก่งๆ (การออกเสียง ต้องใช้ 発音/はつおん ไม่ใช่ おと)"
           },
           {
             "choice": "店の 人に 大きな おとで 名前を よばれました。",
             "isCorrect": false,
-            "text": "店の 人に 大きな おとで 名前を よばれました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "店の 人に 大きな おとで 名前を よばれました。 = พนักงานร้านเรียกชื่อด้วยเสียงอันดัง (เสียงคนพูด ต้องใช้ 声/こえ ไม่ใช่ おと)"
           },
           {
             "choice": "すずきさんが ギターで ゆうめいな おとを ひいて くれました。",
             "isCorrect": false,
-            "text": "すずきさんが ギターで ゆうめいな おとを ひいて くれました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "すずきさんが ギターで ゆうめいな おとを ひいて くれました。 = คุณซูซูกิเล่นเพลงดังด้วยกีตาร์ (บทเพลง ต้องใช้ 曲/きょく 不ใช่ おと)"
           }
         ]
       },
@@ -15941,22 +15941,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かばんが ほしいので、デパートに 行って けんがくします。",
             "isCorrect": false,
-            "text": "かばんが ほしいので、デパートに 行って けんがくします。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "かばんが ほしいので、デパートに 行って けんがくします。 = อยากได้กระเป๋าเลยไปเดินดูที่ห้าง (เดินดูซื้อของ ต้องใช้ 買い物/見て回る ไม่ใช่ けんがく)"
           },
           {
             "choice": "わからない かんじは じしょで けんがくして ください。",
             "isCorrect": false,
-            "text": "わからない かんじは じしょで けんがくして ください。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "わからない かんじは じしょで けんがくして ください。 = คันจิตัวที่ไม่เข้าใจกรุณาค้นในพจนานุกรม (ค้นพจนานุกรม ต้องใช้ 調べる/しらべる)"
           },
           {
             "choice": "先生や 友だちと こうじょうを けんがくしました。",
             "isCorrect": true,
-            "text": "先生や 友だちと こうじょうを けんがくしました。 = การทัศนศึกษาดูงานเพื่อการเรียนรู้"
+            "text": "先生や 友だちと こうじょうを けんがくしました。 = ไปทัศนศึกษาดูงานที่โรงงานกับอาจารย์และเพื่อนๆ (ทัศนศึกษาดูงาน ใช้ けんがく ถูกต้อง)"
           },
           {
             "choice": "まいばん テレビで ニュースを けんがくして います。",
             "isCorrect": false,
-            "text": "まいばん テレビで ニュースを けんがくして います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "まいばん テレビで ニュースを けんがくして います。 = ดูข่าวทางโทรทัศน์ทุกคืน (ดูโทรทัศน์ ต้องใช้ 見る/みる 不ใช่ けんがく)"
           }
         ]
       },
@@ -15980,22 +15980,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やまだ先生は テストの おしらせを きょうしつに かざりました。",
             "isCorrect": false,
-            "text": "やまだ先生は テストの おしらせを きょうしつに かざりました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "やまだ先生は テストの おしらせを きょうしつに かざりました。 = อาจารย์ยามาดะติดประกาศเรื่องสอบไว้ในห้องเรียน (ติดประกาศ ต้องใช้ 貼る/はる ไม่ใช่ かざる)"
           },
           {
             "choice": "おきゃくさんが 来ますから、へやに 花を かざりましょう。",
             "isCorrect": true,
-            "text": "おきゃくさんが 来ますから、へやに 花を かざりましょう。 = ประดับตกแต่ง ใช้กับการประดับดอกไม้ในห้อง (花をかざる)"
+            "text": "おきゃくさんが 来ますから、へやに 花を かざりましょう。 = แขกจะมาที่บ้าน พวกเรามาประดับดอกไม้ในห้องกันเถอะ (ประดับตกแต่ง ใช้ かざる ถูกต้อง)"
           },
           {
             "choice": "天気が わるいので、せんたくものは うちの 中に かざります。",
             "isCorrect": false,
-            "text": "天気が わるいので、せんたくものは うちの 中に かざります。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "天気が わるいので、せんたくものは うちの 中に かざります。 = อากาศแย่ เสื้อผ้าซักเลยตากไว้ในบ้าน (ตากผ้า ต้องใช้ 干す/ほす 不ใช่ かざる)"
           },
           {
             "choice": "こっちの エアコンは、となりの へやの かべに かざって ください。",
             "isCorrect": false,
-            "text": "こっちの エアコンは、となりの へやの かべに かざって ください。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "こっちの エアコンは、となりの へやの かべに かざって ください。 = แอร์เครื่องนี้กรุณาติดตั้งบนผนังห้องข้างๆ (ติดตั้งเครื่องใช้ ต้องใช้ 取り付ける)"
           }
         ]
       },
@@ -16019,22 +16019,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はが いたかったので、はいしゃで こうじを して もらいました。",
             "isCorrect": false,
-            "text": "はが いたかったので、はいしゃで こうじを して もらいました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "はが いたかったので、はいしゃで こうじを して もらいました。 = ปวดฟันเลยให้หมอฟันรักษาให้ (รักษาฟัน ต้องใช้ 治療/ちりょう 不ใช่ こうじ)"
           },
           {
             "choice": "この セーターは 古いですが、こうじを して、ずっと きて います。",
             "isCorrect": false,
-            "text": "この セーターは 古いですが、こうじを して、ずっと きて います。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "この セーターは 古いですが、こうじを して、ずっと きて います。 = เสื้อกันหนาวนี้เก่าแต่ก็เย็บซ่อมใส่มาตลอด (ซ่อมแซมเสื้อผ้า ต้องใช้ 直す/なおす)"
           },
           {
             "choice": "ほんだなが こわれて しまったので、こうじを しました。",
             "isCorrect": false,
-            "text": "ほんだなが こわれて しまったので、こうじを しました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "ほんだなが こわれて しまったので、こうじを しました。 = ชั้นหนังสือพังเลยลงมือซ่อม (ซ่อมเฟอร์นิเจอร์ ต้องใช้ 修理/しゅうり ไม่ใช่ こうじ)"
           },
           {
             "choice": "この みちは こうじを して いるので、とおれません。",
             "isCorrect": true,
-            "text": "この みちは こうじを して いるので、とおれません。 = งานก่อสร้างถนนหรืออาคาร ถนนสายนี้กำลังก่อสร้างซ่อมแซมจึงสัญจรผ่านไม่ได้"
+            "text": "この みちは こうじを して いるので、とおれません。 = ถนนเส้นนี้กำลังก่อสร้างปรับปรุงอยู่ จึงผ่านไม่ได้ (งานก่อสร้างทาง ใช้ こうじ ถูกต้อง)"
           }
         ]
       }
@@ -16068,7 +16068,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いし",
             "isCorrect": true,
-            "text": "いし = ก้อนหิน"
+            "text": "いし = หิน (石) หรือ ความตั้งใจ/ความมุ่งมั่น (意志)"
           },
           {
             "choice": "すな",
@@ -16083,7 +16083,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "えだ",
             "isCorrect": false,
-            "text": "えだ = เจ้าหน้าที่ประจำสถานีรถไฟ"
+            "text": "えだ = กิ่งไม้ (枝)"
           }
         ]
       },
@@ -16107,7 +16107,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けいけん",
             "isCorrect": true,
-            "text": "けいけん = ประสบการณ์"
+            "text": "けいけん = ประสบการณ์ (経験)"
           },
           {
             "choice": "けいげん",
@@ -16161,7 +16161,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "てんいん",
             "isCorrect": true,
-            "text": "てんいん = พนักงานร้าน"
+            "text": "てんいん = พนักงานร้าน (店員)"
           }
         ]
       },
@@ -16190,7 +16190,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "しょくどう",
             "isCorrect": true,
-            "text": "しょくどう = โรงอาหาร"
+            "text": "しょくどう = โรงอาหาร (食堂)"
           },
           {
             "choice": "しょくど",
@@ -16224,22 +16224,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "うみ",
             "isCorrect": false,
-            "text": "うみ = ครั้งหนึ่ง"
+            "text": "うみ = ทะเล (海)"
           },
           {
             "choice": "みなと",
             "isCorrect": true,
-            "text": "みなと = ท่าเรือ"
+            "text": "みなと = ท่าเรือ (港)"
           },
           {
             "choice": "みずうみ",
             "isCorrect": false,
-            "text": "みずうみ = โรงยิม"
+            "text": "みずうみ = ทะเลสาบ (湖)"
           },
           {
             "choice": "いけ",
             "isCorrect": false,
-            "text": "いけ = ที่เดิม"
+            "text": "いけ = สระน้ำ, บ่อน้ำ (池)"
           }
         ]
       },
@@ -16273,7 +16273,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "しょうせつ",
             "isCorrect": true,
-            "text": "しょうせつ = นวนิยาย"
+            "text": "しょうせつ = นวนิยาย (小説)"
           },
           {
             "choice": "しょうぜつ",
@@ -16302,7 +16302,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "にっき",
             "isCorrect": true,
-            "text": "にっき = บันทึกประจำวัน/ไดอารี่"
+            "text": "にっき = สมุดบันทึกประจำวัน, ไดอารี่ (日記)"
           },
           {
             "choice": "にちき",
@@ -16346,7 +16346,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ゆうがた",
             "isCorrect": true,
-            "text": "ゆうがた = ตอนเย็น/พลบค่ำ"
+            "text": "ゆうがた = ตอนพลบค่ำ, ตอนเย็น (夕方)"
           },
           {
             "choice": "ゆほう",
@@ -16380,22 +16380,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ふゆ",
             "isCorrect": false,
-            "text": "ふゆ = เตรียมบทเรียนล่วงหน้า"
+            "text": "ふゆ = ฤดูหนาว (冬)"
           },
           {
             "choice": "なつ",
             "isCorrect": false,
-            "text": "なつ = ฤดูใบไม้ร่วง"
+            "text": "なつ = ฤดูร้อน (夏)"
           },
           {
             "choice": "はる",
             "isCorrect": false,
-            "text": "はる = ฤดูร้อน"
+            "text": "はる = ฤดูใบไม้ผลิ (春)"
           },
           {
             "choice": "あき",
             "isCorrect": true,
-            "text": "あき = ฤดูใบไม้ร่วง"
+            "text": "あき = ฤดูใบไม้ร่วง (秋)"
           }
         ]
       },
@@ -16419,7 +16419,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "青い",
             "isCorrect": true,
-            "text": "青い = สีน้ำเงิน/สีฟ้า"
+            "text": "青い (あおい) = สีฟ้า, สีน้ำเงิน"
           },
           {
             "choice": "黒い",
@@ -16473,7 +16473,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "場所",
             "isCorrect": true,
-            "text": "場所 = สถานที่"
+            "text": "場所 (ばしょ) = สถานที่"
           }
         ]
       },
@@ -16507,7 +16507,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "歩いて",
             "isCorrect": true,
-            "text": "歩いて = เดิน"
+            "text": "歩いて (あるいて) = มาจาก 歩く (เดิน)"
           },
           {
             "choice": "涉いて",
@@ -16536,7 +16536,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "便利",
             "isCorrect": true,
-            "text": "便利 = สะดวกสบาย"
+            "text": "便利 (べんり) = สะดวกสบาย"
           },
           {
             "choice": "便理",
@@ -16590,7 +16590,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "眠かった",
             "isCorrect": true,
-            "text": "眠かった = ง่วงนอน"
+            "text": "眠かった (ねむかった) = มาจาก 眠い (ง่วงนอน)"
           }
         ]
       },
@@ -16614,7 +16614,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "雪",
             "isCorrect": true,
-            "text": "雪 = หิมะ"
+            "text": "雪 (ゆき) = หิมะ"
           },
           {
             "choice": "電",
@@ -16658,7 +16658,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "なおって",
             "isCorrect": false,
-            "text": "なおって = มีคนกางร่มเดินอยู่ ข้างนอกคงกำลังฝนตกอยู่แน่ๆ"
+            "text": "なおって = หายป่วย, ซ่อมเสร็จ (治って/直って)"
           },
           {
             "choice": "ぬれて",
@@ -16668,7 +16668,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かわいて",
             "isCorrect": true,
-            "text": "かわいて = แห้ง 「かわいていません」 = ยังไม่แห้ง"
+            "text": "かわいて = แห้ง, กระหายน้ำ (乾いて/渇いて)"
           }
         ]
       },
@@ -16702,7 +16702,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ねっしんに",
             "isCorrect": true,
-            "text": "ねっしんに = อย่างกระตือรือร้น/ตั้งอกตั้งใจ"
+            "text": "ねっしんに = อย่างกระตือรือร้น (熱心に)"
           },
           {
             "choice": "まっすぐに",
@@ -16736,7 +16736,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きょうみ",
             "isCorrect": true,
-            "text": "きょうみ = ความสนใจ 「きょうみがある」 = มีความสนใจใน..."
+            "text": "きょうみ = ความสนใจ (興味)"
           },
           {
             "choice": "こころ",
@@ -16746,7 +16746,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "しゅみ",
             "isCorrect": false,
-            "text": "しゅみ = สมุดบันทึกประจำวัน, ไดอารี่"
+            "text": "しゅみ = งานอดิเรก (趣味)"
           }
         ]
       },
@@ -16770,22 +16770,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "アイディア",
             "isCorrect": false,
-            "text": "アイディア = ส่งหนังสือที่ซื้อในญี่ปุ่นกลับไปที่ประเทศบ้านเกิด"
+            "text": "アイディア = ความคิด, ไอเดีย (Idea)"
           },
           {
             "choice": "ルール",
             "isCorrect": true,
-            "text": "ルール = กฎ/กติกาการแข่งขัน"
+            "text": "ルール = กฎเกณฑ์, กติกา (Rule)"
           },
           {
             "choice": "あんない",
             "isCorrect": false,
-            "text": "あんない = เพื่อนมาสายกว่าเวลานัด แต่กลับไม่ยอมขอโทษทุกคนเลย"
+            "text": "あんない = การนำทาง, การพาเที่ยวชม (案内)"
           },
           {
             "choice": "せつめい",
             "isCorrect": false,
-            "text": "せつめい = สนามบิน"
+            "text": "せつめい = การอธิบาย, คำอธิบาย (説明)"
           }
         ]
       },
@@ -16809,7 +16809,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やくそく",
             "isCorrect": false,
-            "text": "やくそく = おれい (お礼) = การแสดงความขอบคุณ/คำขอบคุณ"
+            "text": "やくそく = สัญญา, การนัดหมาย (約束)"
           },
           {
             "choice": "りよう",
@@ -16819,12 +16819,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "せわ",
             "isCorrect": false,
-            "text": "せわ = อีกเดี๋ยวรถไฟด่วนพิเศษก็จะมาแล้วค่ะ (特急 = ด่วนพิเศษ)"
+            "text": "せわ = การดูแล, เอาใจใส่ (世話)"
           },
           {
             "choice": "ようい",
             "isCorrect": true,
-            "text": "ようい = การเตรียมพร้อม/การจัดเตรียม"
+            "text": "ようい = การเตรียมการ, การจัดเตรียม (用意)"
           }
         ]
       },
@@ -16848,7 +16848,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さんせい",
             "isCorrect": false,
-            "text": "さんせい = คัดค้าน, ตรงกันข้าม"
+            "text": "さんせい = การเห็นด้วย, การยินยอม (賛成)"
           },
           {
             "choice": "あいさつ",
@@ -16858,12 +16858,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "そうだん",
             "isCorrect": true,
-            "text": "そうだん = ปรึกษาหารือ"
+            "text": "そうだん = การปรึกษาหารือ (相談)"
           },
           {
             "choice": "へんじ",
             "isCorrect": false,
-            "text": "へんじ = ทะเลสาบ"
+            "text": "へんじ = การตอบกลับ, คำตอบ (返事)"
           }
         ]
       },
@@ -16887,7 +16887,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はこんで",
             "isCorrect": true,
-            "text": "はこんで = ขนย้าย/ลำเลียง"
+            "text": "はこんで = ขนย้าย, แบกหาม (運んで <- 運ぶ)"
           },
           {
             "choice": "つたえて",
@@ -16931,7 +16931,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きけん",
             "isCorrect": true,
-            "text": "きけん = อันตราย"
+            "text": "きけん = อันตราย, ความเสี่ยง (危険)"
           },
           {
             "choice": "じゆう",
@@ -16975,7 +16975,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "とめないで",
             "isCorrect": true,
-            "text": "とめないで = จอดรถ 「車をとめないでください」 = กรุณาอย่าจอดรถ"
+            "text": "とめないで = อย่าจอด (รถ), อย่าหยุด (止めないで <- 止める)"
           },
           {
             "choice": "きめないで",
@@ -17004,22 +17004,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "バスが とまりました。",
             "isCorrect": false,
-            "text": "バスが とまりました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "バスが とまりました。 = รถบัสหยุดแล้ว (とまる = หยุด/จอด)"
           },
           {
             "choice": "バスが つきました。",
             "isCorrect": false,
-            "text": "バスが つきました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "バスが つきました。 = รถบัสมาถึงแล้ว (つく = มาถึง)"
           },
           {
             "choice": "バスが でました。",
             "isCorrect": true,
-            "text": "バスが でました。 = ออกเดินทาง มีความหมายเดียวกับ 「でる」 (出る / でました = ออกรถ)"
+            "text": "バスが でました。 = รถบัสออกเดินทางแล้ว (ออกรถ ตรงกับ しゅっぱつする / でる)"
           },
           {
             "choice": "バスが まがりました。",
             "isCorrect": false,
-            "text": "バスが まがりました。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "バスが まがりました。 = รถบัสเลี้ยวแล้ว (まがる = เลี้ยว)"
           }
         ]
       },
@@ -17043,22 +17043,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "もっと おおきく かいて ください。",
             "isCorrect": false,
-            "text": "きょうしつを でて ください。 = กรุณาออกจากห้องเรียนไปครับ (でる = ออกไป)"
+            "text": "もっと おおきく かいて ください。 = กรุณาเขียนให้ตัวใหญ่กว่านี้ (おおきい = ใหญ่)"
           },
           {
             "choice": "もっと きれいに かいて ください。",
             "isCorrect": true,
-            "text": "きょうしつに はいって ください。 = กรุณาเข้ามาในห้องเรียนครับ (เข้ามาข้างใน ตรงกับ おはいりください)"
+            "text": "もっと きれいに かいて ください。 = กรุณาเขียนให้สวยงามเรียบร้อยกว่านี้ (ประณีตเรียบร้อย ตรงกับ ていねいに / きれいに)"
           },
           {
             "choice": "もっと ふとく かいて ください。",
             "isCorrect": false,
-            "text": "きょうしつを そうじして ください。 = กรุณาทำความสะอาดห้องเรียนครับ (そうじする = ทำความสะอาด)"
+            "text": "もっと ふとく かいて ください。 = กรุณาเขียนให้เส้นหนากว่านี้ (ふとい = หนา)"
           },
           {
             "choice": "もっと かんたんに かいて ください。",
             "isCorrect": false,
-            "text": "きょうしつを あけて ください。 = กรุณาเปิดห้องเรียนครับ (あける = เปิด)"
+            "text": "もっと かんたんに かいて ください。 = กรุณาเขียนให้เรียบง่ายกว่านี้ (かんたん = ง่าย)"
           }
         ]
       },
@@ -17082,22 +17082,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あには えが じょうずです。",
             "isCorrect": true,
-            "text": "やまださんは きのう 会社を はじめました。 = เมื่อวานคุณยามาดะเริ่มเปิดบริษัท (はじめる = เริ่มต้น)"
+            "text": "あには えが じょうずです。 = พี่ชายวาดรูปเก่งมาก (เก่ง/ชำนาญ ตรงกับ うまい / じょうず)"
           },
           {
             "choice": "あには えが きらいです。",
             "isCorrect": false,
-            "text": "やまださんは きのう 会社に いきました。 = เมื่อวานคุณยามาดะไปทำงานที่บริษัท (いく = ไป)"
+            "text": "あには えが きらいです。 = พี่ชายเกลียดการวาดรูป (きらい = เกลียด)"
           },
           {
             "choice": "あには えが へたです。",
             "isCorrect": false,
-            "text": "やまださんは きのう 会社を やすみました。 = เมื่อวานคุณยามาดะหยุดงานที่บริษัท (หยุดงาน/ไม่มา ตรงกับ こなかった)"
+            "text": "あには えが へたです。 = พี่ชายวาดรูปไม่เก่ง (へた = ไม่เก่ง/ห่วย)"
           },
           {
             "choice": "あには えが すきです。",
             "isCorrect": false,
-            "text": "やまださんは きのう 会社を やめました。 = เมื่อวานคุณยามาดะลาออกจากบริษัท (やめる = ลาออก/เลิก)"
+            "text": "あには えが すきです。 = พี่ชายชอบวาดรูป (すき = ชอบ)"
           }
         ]
       },
@@ -17121,22 +17121,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きのうは ねるのが おそく なって しまいました。",
             "isCorrect": false,
-            "text": "きのうの テストは かんたんでした。 = ข้อสอบเมื่อวานง่ายมาก (かんたん = ง่าย)"
+            "text": "きのうは ねるのが おそく なって しまいました。 = เมื่อวานนี้นอนดึกไปหน่อย (นอนดึก)"
           },
           {
             "choice": "きのうは はやく ねて しまいました。",
             "isCorrect": false,
-            "text": "きのうの テストは つまらなかったです。 = ข้อสอบเมื่อวานน่าเบื่อมาก (つまらない = น่าเบื่อ)"
+            "text": "きのうは はやく ねて しまいました。 = เมื่อวานนี้เข้านอนเร็ว (เข้านอนเร็ว)"
           },
           {
             "choice": "きのうは おきるのが おそく なって しまいました。",
             "isCorrect": true,
-            "text": "きのうの テストは だいじょうぶでした。 = ข้อสอบเมื่อวานไม่เป็นไร/พอไหว (だいじょうぶ = ไม่เป็นไร)"
+            "text": "きのうは おきるのが おそく なって しまいました。 = เมื่อวานนี้ตื่นนอนสายไปหน่อย (ตื่นสาย ตรงกับ ねぼうする / おきるのがおそい)"
           },
           {
             "choice": "きのうは はやく おきて しまいました。",
             "isCorrect": false,
-            "text": "きのうの テストは むずかしかったです。 = ข้อสอบเมื่อวานยากมาก (ลำบาก/ยาก ตรงกับ たいへんでした)"
+            "text": "きのうは はやく おきて しまいました。 = เมื่อวานนี้ตื่นนอนแต่เช้า (ตื่นเช้า)"
           }
         ]
       },
@@ -17160,22 +17160,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "先生は たなかさんに「気をつけてね」と 言いました。",
             "isCorrect": false,
-            "text": "この へやは くらいですね。 = ห้องนี้มืดจังเลยนะ (くらい = มืด)"
+            "text": "先生は たなかさんに「気をつけてね」と 言いました。 = อาจารย์พูดกับคุณทานากะว่า \"ระวังตัวด้วยนะ\""
           },
           {
             "choice": "先生は たなかさんに「とても よかったですよ」と 言いました。",
             "isCorrect": true,
-            "text": "この へやは あかるいですね。 = ห้องนี้สว่างจังเลยนะ (สว่าง ตรงกับ ひかりが たくさん 入って)"
+            "text": "先生は たなかさんに「とても よかったですよ」と 言いました。 = อาจารย์พูดกับคุณทานากะว่า \"ทำได้ยอดเยี่ยมมากเลยนะ\" (ได้รับคำชม ตรงกับ ほめられる)"
           },
           {
             "choice": "先生は たなかさんに「ちょっと 休みましょう」と 言いました。",
             "isCorrect": false,
-            "text": "この へやは せまいですね。 = ห้องนี้แคบจังเลยนะ (せまい = แคบ)"
+            "text": "先生は たなかさんに「ちょっと 休みましょう」と 言いました。 = อาจารย์พูดกับคุณทานากะว่า \"พักสักหน่อยเถอะ\""
           },
           {
             "choice": "先生は たなかさんに「たいへんですね」と 言いました。",
             "isCorrect": false,
-            "text": "この へやは ひろいですね。 = ห้องนี้กว้างจังเลยนะ (ひろい = กว้าง)"
+            "text": "先生は たなかさんに「たいへんですね」と 言いました。 = อาจารย์พูดกับคุณทานากะว่า \"ลำบากแย่เลยนะ\""
           }
         ]
       },
@@ -17199,22 +17199,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さいきん いそがしくて、しごとが るすに なりません。",
             "isCorrect": false,
-            "text": "さいきん いそがしくて、しごとが るすに なりません。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "さいきん いそがしくて、しごとが るすに なりません。 = ช่วงนี้ยุ่งมาก งานเลยไม่เสร็จสักที (งานค้างคา ต้องใช้ 終わらない 不ใช่ るす)"
           },
           {
             "choice": "あの デパートは きょうは るすです。",
             "isCorrect": false,
-            "text": "あの デパートは きょうは るすです。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "あの デパートは きょうは るすです。 = ห้างสรรพสินค้าแห่งนั้นวันนี้ปิดทำการ (ห้างปิดทำการ ต้องใช้ 休み/休業 不ใช่ るす)"
           },
           {
             "choice": "この ひこうきには るすの せきが ありません。",
             "isCorrect": false,
-            "text": "この ひこうきには るすの せきが ありません。 <span class=\"text-rose-500 font-bold\">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>"
+            "text": "この ひこうきには るすの せきが ありません。 = บนเครื่องบินลำนี้ไม่มีที่นั่งว่างเลย (ที่นั่งว่าง ต้องใช้ 空席/あき ไม่ใช่ るす)"
           },
           {
             "choice": "ともだちの いえに 行ったら るすでした。",
             "isCorrect": true,
-            "text": "ともだちの いえに 行ったら るすでした。 = การไม่อยู่บ้าน"
+            "text": "ともだちの いえに 行ったら るすでした。 = พอไปที่บ้านเพื่อน ปรากฏว่าเพื่อนไม่อยู่บ้าน (ไม่อยู่บ้าน ใช้ るす ถูกต้อง)"
           }
         ]
       },
@@ -17238,22 +17238,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "この りょうりは からだに とても しんせつですよ。",
             "isCorrect": false,
-            "text": "雨が やんだので、かさを たたみました。 = ฝนหยุดตกแล้วจึงพับร่มเก็บ (พับร่ม ใช้ たたむ ถูกต้อง)"
+            "text": "この りょうりは からだに とても しんせつですよ。 = อาหารจานนี้ดีต่อสุขภาพมาก (ดีต่อร่างกาย ต้องใช้ 体にいい 不ใช่ しんせつ)"
           },
           {
             "choice": "コンビニは 何でも 買えるので とても しんせつです。",
             "isCorrect": false,
-            "text": "あしたの よていを てちょうに たたみました。 = จดกำหนดการลงสมุดพก (จดบันทึก ต้องใช้ メモしました/書きました)"
+            "text": "コンビニは 何でも 買えるので とても しんせつです。 = ร้านสะดวกซื้อซื้อของได้ทุกอย่างเลยสะดวกมาก (สะดวกสบาย ต้องใช้ 便利/べんり)"
           },
           {
             "choice": "この びょういんの おいしゃさんは とても しんせつですよ。",
             "isCorrect": true,
-            "text": "びょうきに ならないように、体を たたんで います。 = รักษาสุขภาพร่างกายไม่ให้ป่วย (ดูแลร่างกาย ต้องใช้ 気をつけて/休めて)"
+            "text": "この びょういんの おいしゃさんは とても しんせつですよ。 = คุณหมอที่โรงพยาบาลแห่งนี้ใจดีมีน้ำใจมาก (ใจดีมีน้ำใจ ใช้ しんせつ ถูกต้อง)"
           },
           {
             "choice": "わたしの 母は にわの 花に とても しんせつです。",
             "isCorrect": false,
-            "text": "じゅぎょうが おわったので、まどを たたみました。 = คาบเรียนจบแล้วจึงปิดหน้าต่าง (ปิดหน้าต่าง ต้องใช้ まどを閉めました)"
+            "text": "わたしの 母は にわの 花に とても しんせつです。 = คุณแม่ดูแลเอาใจใส่ดอกไม้ในสวนเป็นอย่างดี (ดูแลเอาใจใส่ ต้องใช้ 世話/せわ)"
           }
         ]
       },
@@ -17277,22 +17277,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かぜを ひいたので、こえが にがいです。",
             "isCorrect": false,
-            "text": "まどを あけると、すずしい かぜが 入って きました。 = พอเปิดหน้าต่าง ลมเย็นสบายก็พัดเข้ามา (ลมเย็นสบาย ใช้ すずしい ถูกต้อง)"
+            "text": "かぜを ひいたので、こえが にがいです。 = เป็นหวัดเลยเสียงแหบ (เสียงแหบแห้ง ต้องใช้ かすれている 不ใช่ にがい)"
           },
           {
             "choice": "くらい みちを 一人で あるくのは にがいです。",
             "isCorrect": false,
-            "text": "この コーヒーは すずしくて、とても おいしいです。 = กาแฟนี้เย็นชื่นใจอร่อยมาก (กาแฟเย็น ต้องใช้ つめたい ไม่ใช่ すずしい)"
+            "text": "くらい みちを 一人で あるくのは にがいです。 = เดินคนเดียวบนถนนมืดๆ รู้สึกน่ากลัว (น่ากลัว ต้องใช้ こわい 不ใช่ にがい)"
           },
           {
             "choice": "にもつが おもかったので、うでが にがいです。",
             "isCorrect": false,
-            "text": "きのうの ばんは、すずしい おふろに 入りました。 = เมื่อคืนแช่น้ำอุ่นสบาย (น้ำอุ่น ต้องใช้ ぬるい/あたたかい ไม่ใช่ すずしい)"
+            "text": "にもつが おもかったので、うでが にがいです。 = สัมภาระหนัก แขนเลยล้าปวดเมื่อย (ปวดเมื่อย ต้องใช้ だるい/痛い 不ใช่ にがい)"
           },
           {
             "choice": "この くすりは とても にがいです。",
             "isCorrect": true,
-            "text": "わたしの へやは 日が あたらないので、冬は とても すずしいです。 = ห้องแดดส่องไม่ถึง หน้าหนาวเลยหนาวมาก (หนาว ต้องใช้ さむい 不ใช่ すずしい)"
+            "text": "この くすりは とても にがいです。 = ยานี้ขมมาก (รสชาติขม ใช้ にがい ถูกต้อง)"
           }
         ]
       },
@@ -17316,22 +17316,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おさらを おとして、わって しまいました。",
             "isCorrect": true,
-            "text": "あしたの パーティーには、ぜひ 来て ください。 = งานเลี้ยงวันพรุ่งนี้ ต้องมาให้ได้เลยนะ (ชวนอย่างจริงใจ ใช้ ぜひ ถูกต้อง)"
+            "text": "おさらを おとして、わって しまいました。 = ทำจานหล่นจนแตกกระจาย (ทำภาชนะแตก ใช้ わる ถูกต้อง)"
           },
           {
             "choice": "しんぶんを わって、かばんに 入れました。",
             "isCorrect": false,
-            "text": "あしたの 天気は、ぜひ 雨でしょう。 = อากาศวันพรุ่งนี้ฝนน่าจะตกอย่างแน่นอน (คาดคะเน ต้องใช้ たぶん/きっと 不ใช่ ぜひ)"
+            "text": "しんぶんを わって、かばんに 入れました。 = พับหนังสือพิมพ์ใส่กระเป๋า (พับกระดาษ ต้องใช้ 折る/たたむ 不ใช่ わる)"
           },
           {
             "choice": "ようふくを わって、母に おこられました。",
             "isCorrect": false,
-            "text": "この えいがは、ぜひ おもしろかったです。 = หนังเรื่องนี้สนุกมากๆ (บอกเล่าความรู้สึก ต้องใช้ とても/すごく 不ใช่ ぜひ)"
+            "text": "ようふくを わって、母に おこられました。 = ทำเสื้อผ้าฉีกขาดเลยโดนคุณแม่ดุ (เสื้อผ้าฉีกขาด ต้องใช้ 破る/やぶる 不ใช่ わる)"
           },
           {
             "choice": "この ジャムを 三本の びんに わって ください。",
             "isCorrect": false,
-            "text": "かれは ぜひ テニスが じょうずです。 = เขาเล่นเทนนิสเก่งมากๆ (บอกความสามารถ ต้องใช้ とても/本当に 不ใช่ ぜひ)"
+            "text": "この ジャムを 三本の びんに わって ください。 = แบ่งแยมนี้ใส่ลงในขวด 3 ใบ (แบ่งใส่ ต้องใช้ 分ける/わける 不ใช่ わる)"
           }
         ]
       },
@@ -17355,22 +17355,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あの とけいは ちょっと ちこくして います。",
             "isCorrect": false,
-            "text": "この へやは、だれでも じゆうに 使って いいです。 = ห้องนี้ ใครก็สามารถเข้ามาใช้ได้อย่างอิสระตามสบาย (ใช้อย่างอิสระ ใช้ じゆうに ถูกต้อง)"
+            "text": "あの とけいは ちょっと ちこくして います。 = นาฬิกาเรือนนั้นเดินช้าไปหน่อย (นาฬิกาเดินช้า ต้องใช้ 遅れている 不ใช่ ちこく)"
           },
           {
             "choice": "じゅぎょうに ちこくして すみません。",
             "isCorrect": true,
-            "text": "じかんが じゆうに ありますから、ゆっくり 話しましょう。 = มีเวลาเหลือเฟือ (มีเวลาเหลือ ต้องใช้ たくさん/十分に 不ใช่ じゆうに)"
+            "text": "じゅぎょうに ちこくして すみません。 = ขอโทษด้วยครับที่มาเข้าเรียนสาย (มาสาย ใช้ ちこくする ถูกต้อง)"
           },
           {
             "choice": "10時の でんしゃに ちこくして しまいました。",
             "isCorrect": false,
-            "text": "あしたは じゆうに 晴れるでしょう。 = พรุ่งนี้ท้องฟ้าแจ่มใสแน่นอน (พยากรณ์ ต้องใช้ きっと/たぶん 不ใช่ じゆうに)"
+            "text": "10時の でんしゃに ちこくして しまいました。 = ตกรถไฟรอบ 10 โมง (ตกรถไฟ ต้องใช้ 乗り遅れる 不ใช่ ちこくする)"
           },
           {
             "choice": "れんらくが ちこくして すみません。",
             "isCorrect": false,
-            "text": "この りょうりは じゆうに おいしいです。 = อาหารจานนี้อร่อยมากๆ (บอกความอร่อย ต้องใช้ とても/すごく 不ใช่ じゆうに)"
+            "text": "れんらくが ちこくして すみません。 = ขอโทษด้วยครับที่ติดต่อกลับมาช้า (ติดต่อช้า ต้องใช้ 返事が遅れて 不ใช่ ちこく)"
           }
         ]
       }
@@ -17419,7 +17419,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "たのしかった",
             "isCorrect": true,
-            "text": "たのしかった = สนุก"
+            "text": "たのしかった = สนุกสนานมาก (楽しかった <- 楽しい)"
           }
         ]
       },
@@ -17453,7 +17453,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ならって",
             "isCorrect": true,
-            "text": "ならって = เรียน"
+            "text": "ならって = เรียน, ร่ำเรียน (習って <- 習う)"
           },
           {
             "choice": "のこって",
@@ -17482,7 +17482,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かるい",
             "isCorrect": true,
-            "text": "かるい = เบา"
+            "text": "かるい = เบา (軽い)"
           },
           {
             "choice": "おもい",
@@ -17492,12 +17492,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はやい",
             "isCorrect": false,
-            "text": "はやい = ทะเล"
+            "text": "はやい = เร็ว, เช้าตรู่ (早い/速い)"
           },
           {
             "choice": "おそい",
             "isCorrect": false,
-            "text": "おそい = มาก, เยอะ"
+            "text": "おそい = ช้า, สาย (遅い)"
           }
         ]
       },
@@ -17526,7 +17526,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "しょくりょうひん",
             "isCorrect": true,
-            "text": "しょくりょうひん = สินค้าประเภทอาหาร"
+            "text": "しょくりょうひん = สินค้าประเภทอาหาร (食料品)"
           },
           {
             "choice": "しゅくりょうひん",
@@ -17570,12 +17570,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ふく",
             "isCorrect": false,
-            "text": "ふく = ผลิตภัณฑ์, สินค้า"
+            "text": "ふく = เสื้อผ้า (服)"
           },
           {
             "choice": "かお",
             "isCorrect": true,
-            "text": "かお = ใบหน้า"
+            "text": "かお = ใบหน้า (顔)"
           }
         ]
       },
@@ -17599,7 +17599,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "よほう",
             "isCorrect": true,
-            "text": "よほう = พยากรณ์อากาศ"
+            "text": "よほう = การพยากรณ์, การคาดหมาย (予報)"
           },
           {
             "choice": "ようほう",
@@ -17643,7 +17643,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "うごかないで",
             "isCorrect": true,
-            "text": "うごかないで = อย่าขยับ"
+            "text": "うごかないで = อย่าขยับ (動かないで <- 動く)"
           },
           {
             "choice": "なかないで",
@@ -17682,7 +17682,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "せわ",
             "isCorrect": true,
-            "text": "せわ = การดูแล/ปรนนิบัติ"
+            "text": "せわ = การดูแล, เอาใจใส่ (世話)"
           },
           {
             "choice": "せはなし",
@@ -17726,7 +17726,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "とっきゅう",
             "isCorrect": true,
-            "text": "とっきゅう = ด่วนพิเศษ"
+            "text": "とっきゅう = รถไฟด่วนพิเศษ (特急)"
           },
           {
             "choice": "ときゅ",
@@ -17765,7 +17765,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "映画",
             "isCorrect": true,
-            "text": "映画 = ภาพยนตร์"
+            "text": "映画 (えいが) = ภาพยนตร์, หนัง"
           },
           {
             "choice": "央面",
@@ -17799,7 +17799,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "泳いで",
             "isCorrect": true,
-            "text": "泳いで = ว่ายน้ำ"
+            "text": "泳いで (およいで) = มาจาก 泳ぐ (ว่ายน้ำ)"
           },
           {
             "choice": "港いで",
@@ -17833,7 +17833,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "売り場",
             "isCorrect": true,
-            "text": "売り場 = แผนกขายสินค้า/เคาน์เตอร์ขาย"
+            "text": "売り場 (うりば) = แผนกขาย, จุดขายสินค้า"
           },
           {
             "choice": "売り所",
@@ -17887,7 +17887,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "終わります",
             "isCorrect": true,
-            "text": "終わります = จบ/สิ้นสุด"
+            "text": "終わります (おわります) = มาจาก 終わる (จบ, เสร็จสิ้น)"
           }
         ]
       },
@@ -17921,7 +17921,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "本屋",
             "isCorrect": true,
-            "text": "本屋 = ร้านหนังสือ"
+            "text": "本屋 (ほんや) = ร้านขายหนังสือ"
           },
           {
             "choice": "本家",
@@ -17955,7 +17955,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "係り",
             "isCorrect": true,
-            "text": "係り = เจ้าหน้าที่ผู้รับผิดชอบ"
+            "text": "係り (かかり) = ผู้รับผิดชอบ, เจ้าหน้าที่ประจำจุด"
           },
           {
             "choice": "員り",
@@ -17994,7 +17994,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "のりかえて",
             "isCorrect": true,
-            "text": "のりかえて = ต่อรถ/เปลี่ยนขบวน"
+            "text": "のりかえて = เปลี่ยนสายรถไฟ/ยานพาหนะ (乗り換えて <- 乗り換える)"
           },
           {
             "choice": "ひっこして",
@@ -18028,7 +18028,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "サービス",
             "isCorrect": false,
-            "text": "サービス = บริการ"
+            "text": "サービス = บริการ, เซอร์วิส (Service)"
           },
           {
             "choice": "チップ",
@@ -18038,12 +18038,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "アルバイト",
             "isCorrect": false,
-            "text": "アルバイト = งานพิเศษ, งานพาร์ทไทม์"
+            "text": "アルバイト = งานพิเศษ, งานพาร์ตไทม์ (Arbeit)"
           },
           {
             "choice": "メニュー",
             "isCorrect": true,
-            "text": "メニュー = เมนูอาหาร"
+            "text": "メニュー = เมนูอาหาร (Menu)"
           }
         ]
       },
@@ -18072,17 +18072,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きょういく",
             "isCorrect": false,
-            "text": "きょういく = วัฒนธรรม"
+            "text": "きょういく = การศึกษา (教育)"
           },
           {
             "choice": "けんきゅう",
             "isCorrect": false,
-            "text": "けんきゅう = ตารางเวลา (รถไฟ, รถบัส)"
+            "text": "けんきゅう = การวิจัย, การค้นคว้า (研究)"
           },
           {
             "choice": "そつぎょう",
             "isCorrect": true,
-            "text": "そつぎょう = สำเร็จการศึกษา"
+            "text": "そつぎょう = การสำเร็จการศึกษา, เรียนจบ (卒業)"
           }
         ]
       },
@@ -18106,17 +18106,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こしょう",
             "isCorrect": false,
-            "text": "こしょう = けしき (景色) = ทิวทัศน์/ทัศนียภาพตามธรรมชาติ"
+            "text": "こしょう = การชำรุดเสียหาย, การพัง (故障)"
           },
           {
             "choice": "こうじ",
             "isCorrect": true,
-            "text": "こうじ = การก่อสร้าง"
+            "text": "こうじ = งานก่อสร้าง (工事)"
           },
           {
             "choice": "はんたい",
             "isCorrect": false,
-            "text": "はんたい = ขาว"
+            "text": "はんたい = ตรงกันข้าม, คัดค้าน (反対)"
           },
           {
             "choice": "しっぱい",
@@ -18145,22 +18145,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "タオル",
             "isCorrect": false,
-            "text": "タオル = ผ้าขนหนู"
+            "text": "タオル = ผ้าขนหนู (Towel)"
           },
           {
             "choice": "ふくろ",
             "isCorrect": false,
-            "text": "ふくろ = เอกสาร"
+            "text": "ふくろ = ถุง, ซอง (袋)"
           },
           {
             "choice": "さら",
             "isCorrect": true,
-            "text": "さら = จาน ใช้ลักษณนาม 「まい」 และทำแตกได้"
+            "text": "さら = จาน (皿)"
           },
           {
             "choice": "ポスター",
             "isCorrect": false,
-            "text": "ポスター = โปสเตอร์"
+            "text": "ポスター = โปสเตอร์ (Poster)"
           }
         ]
       },
@@ -18184,17 +18184,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "チェック",
             "isCorrect": true,
-            "text": "チェック = ตรวจสอบ/เช็กดู"
+            "text": "チェック = การตรวจสอบ, เช็ค (Check)"
           },
           {
             "choice": "コピー",
             "isCorrect": false,
-            "text": "コピー = การถ่ายเอกสาร, สำเนา"
+            "text": "コピー = การถ่ายเอกสาร, ก็อปปี้ (Copy)"
           },
           {
             "choice": "スタート",
             "isCorrect": false,
-            "text": "スタート = การเริ่มต้น, การออกตัว"
+            "text": "スタート = การเริ่มต้น, ออกตัว (Start)"
           },
           {
             "choice": "サイン",
@@ -18228,7 +18228,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さんせい",
             "isCorrect": false,
-            "text": "さんせい = คัดค้าน, ตรงกันข้าม"
+            "text": "さんせい = การเห็นด้วย, การยินยอม (賛成)"
           },
           {
             "choice": "しつもん",
@@ -18238,7 +18238,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いけん",
             "isCorrect": true,
-            "text": "いけん = ความคิดเห็น มักใช้ในรูป 「意見を聞く」 (ถาม/รับฟังความคิดเห็น) ประโยคนี้แปลว่า ถามความคิดเห็นของทุกคนในห้องว่าจะไปเที่ยวที่ไหน แล้วจึงตัดสินใจ"
+            "text": "いけん = ความคิดเห็น (意見)"
           }
         ]
       },
@@ -18262,7 +18262,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "むかえ",
             "isCorrect": true,
-            "text": "むかえ = ไปรับ"
+            "text": "むかえ = การไปรับ (คน) (迎え)"
           },
           {
             "choice": "さそい",
@@ -18272,12 +18272,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あんない",
             "isCorrect": false,
-            "text": "あんない = เพื่อนมาสายกว่าเวลานัด แต่กลับไม่ยอมขอโทษทุกคนเลย"
+            "text": "あんない = การนำทาง, การพาเที่ยวชม (案内)"
           },
           {
             "choice": "じゅんび",
             "isCorrect": false,
-            "text": "じゅんび = การเยี่ยมผู้ป่วย"
+            "text": "じゅんび = การเตรียมตัว, การเตรียมพร้อม (準備)"
           }
         ]
       },
@@ -18301,7 +18301,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かんで",
             "isCorrect": true,
-            "text": "かんで = เคี้ยว"
+            "text": "かんで = เคี้ยว, กัด (噛んで <- 噛む)"
           },
           {
             "choice": "こわして",
@@ -18345,12 +18345,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おくりました",
             "isCorrect": false,
-            "text": "おくりました = กาแฟแก้วนี้มีรสชาติแปลกๆ อยู่นะ"
+            "text": "おくりました = ส่งไปแล้ว (送りました <- 送る)"
           },
           {
             "choice": "かざりました",
             "isCorrect": true,
-            "text": "かざりました = ประดับ/ตกแต่ง"
+            "text": "かざりました = ประดับตกแต่งแล้ว (飾りました <- 飾る)"
           },
           {
             "choice": "たてました",
@@ -18379,22 +18379,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "これは とても ゆうめいです。",
             "isCorrect": false,
-            "text": "かれは ひとりで 外国へ 行きました。 = เขาไปต่างประเทศคนเดียว (ひとりで = คนเดียว)"
+            "text": "これは とても ゆうめいです。 = นี่เป็นสิ่งที่มีชื่อเสียงมาก (ゆうめい = มีชื่อเสียง)"
           },
           {
             "choice": "これは とても たいせつです。",
             "isCorrect": true,
-            "text": "かれは 友だちと 外国へ 行きました。 = เขาไปต่างประเทศกับเพื่อน (友だちと = กับเพื่อน)"
+            "text": "これは とても たいせつです。 = นี่เป็นสิ่งที่สำคัญมาก (สำคัญ ตรงกับ だいじ / たいせつ)"
           },
           {
             "choice": "これは とても べんりです。",
             "isCorrect": false,
-            "text": "かれは かぞくと 外国へ 行きました。 = เขาไปต่างประเทศกับครอบครัว (ครอบครัว ตรงกับ りょうしんと = กับพ่อแม่)"
+            "text": "これは とても べんりです。 = นี่เป็นสิ่งที่สะดวกสบายมาก (べんり = สะดวก)"
           },
           {
             "choice": "これは とても じょうぶです。",
             "isCorrect": false,
-            "text": "かれは 会社の人と 外国へ 行きました。 = เขาไปต่างประเทศกับคนที่บริษัท (会社の人と = กับคนที่บริษัท)"
+            "text": "これは とても じょうぶです。 = นี่เป็นสิ่งที่แข็งแรงทนทานมาก (じょうぶ = ทนทาน)"
           }
         ]
       },
@@ -18418,22 +18418,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ここで 右に まがってはいけません。",
             "isCorrect": false,
-            "text": "やまださんは ほっそりして います。 = คุณยามาดะหุ่นผอมเพรียว (ほっそり = ผอมเพรียว)"
+            "text": "ここで 右に まがってはいけません。 = ห้ามเลี้ยวขวาที่ตรงนี้"
           },
           {
             "choice": "ここで しゃしんを とってはいけません。",
             "isCorrect": false,
-            "text": "やまださんは ふとって います。 = คุณยามาดะอ้วนท้วน (ふとる = อ้วน)"
+            "text": "ここで しゃしんを とってはいけません。 = ห้ามถ่ายรูปที่ตรงนี้"
           },
           {
             "choice": "ここで のみものを 飲んではいけません。",
             "isCorrect": false,
-            "text": "やまださんは せが ひくいです。 = คุณยามาดะตัวเตี้ย (ひくい = เตี้ย)"
+            "text": "ここで のみものを 飲んではいけません。 = ห้ามดื่มเครื่องดื่มที่ตรงนี้"
           },
           {
             "choice": "ここで たばこを すってはいけません。",
             "isCorrect": true,
-            "text": "やまださんは やせて います。 = คุณยามาดะผอม/รูปร่างผอม (ผอม ตรงกับ スタイルが ほそい/やせている)"
+            "text": "ここで たばこを すってはいけません。 = ห้ามสูบบุหรี่ที่ตรงนี้ (เขตปลอดบุหรี่ ตรงกับ きんえん / たばこをすってはいけない)"
           }
         ]
       },
@@ -18457,22 +18457,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きのう 父に わらわれました。",
             "isCorrect": false,
-            "text": "たなかさんは うたが 下手です。 = คุณทานากะร้องเพลงไม่เก่ง (下手 = ไม่เก่ง)"
+            "text": "きのう 父に わらわれました。 = เมื่อวานถูกคุณพ่อหัวเราะใส่"
           },
           {
             "choice": "きのう 父に ほめられました。",
             "isCorrect": false,
-            "text": "たなかさんは うたが 上手です。 = คุณทานากะร้องเพลงเก่งมาก (เก่ง ตรงกับ 得意 / うまい)"
+            "text": "きのう 父に ほめられました。 = เมื่อวานได้รับคำชมจากคุณพ่อ"
           },
           {
             "choice": "きのう 父に たのまれました。",
             "isCorrect": false,
-            "text": "たなかさんは うたが すきです。 = คุณทานากะชอบร้องเพลง (すき = ชอบ)"
+            "text": "きのう 父に たのまれました。 = เมื่อวานถูกคุณพ่อไหว้วานขอร้อง"
           },
           {
             "choice": "きのう 父に おこられました。",
             "isCorrect": true,
-            "text": "たなかさんは うたが きらいです。 = คุณทานากะเกลียดการร้องเพลง (きらい = เกลียด)"
+            "text": "きのう 父に おこられました。 = เมื่อวานถูกคุณพ่อดุว่า/โกรธใส่ (โดนดุ ตรงกับ しかられる / おこられる)"
           }
         ]
       },
@@ -18496,22 +18496,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あしたの 9時に そちらに もっていきます。",
             "isCorrect": true,
-            "text": "この まちは しずかですね。 = เมืองนี้เงียบสงบจังนะ (しずか = เงียบสงบ)"
+            "text": "あしたの 9時に そちらに もっていきます。 = วันพรุ่งนี้ 9 โมงจะนำของไปให้ที่นั่น (นำไปส่งให้ ตรงกับ とどける / もっていく)"
           },
           {
             "choice": "あしたの 9時に そちらに かえします。",
             "isCorrect": false,
-            "text": "この まちは にぎやかですね。 = เมืองนี้คึกคักครึกครื้นจังนะ (คึกคัก ตรงกับ 人が たくさん いて)"
+            "text": "あしたの 9時に そちらに かえします。 = วันพรุ่งนี้ 9 โมงจะนำของไปคืนที่นั่น (かえす = คืนของ)"
           },
           {
             "choice": "あしたの 9時に そちらに つきます。",
             "isCorrect": false,
-            "text": "この まちは きれいですね。 = เมืองนี้สวยงามจังนะ (きれい = สวย/สะอาด)"
+            "text": "あしたの 9時に そちらに つきます。 = วันพรุ่งนี้ 9 โมงจะไปถึงที่นั่น (つく = ถึงที่หมาย)"
           },
           {
             "choice": "あしたの 9時に そちらに かえります。",
             "isCorrect": false,
-            "text": "この まちは ふべんですね。 = เมืองนี้ไม่สะดวกสบายเลยนะ (ふべん = ไม่สะดวก)"
+            "text": "あしたの 9時に そちらに かえります。 = วันพรุ่งนี้ 9 โมงจะกลับไปที่นั่น (かえる = กลับ)"
           }
         ]
       },
@@ -18535,22 +18535,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ここは 車をかりる ところです。",
             "isCorrect": false,
-            "text": "コーヒーを おかわりします。 = ขอเติมกาแฟอีกแก้วหนึ่ง (ขอเบิ้ล/เติมอีก ตรงกับ もう一杯)"
+            "text": "ここは 車をかりる ところです。 = ที่นี่เป็นสถานที่สำหรับเช่ารถยนต์ (かりる = เช่า)"
           },
           {
             "choice": "ここは 車をとめる ところです。",
             "isCorrect": false,
-            "text": "コーヒーを ちゅうもんします。 = สั่งกาแฟ (ちゅうもん = สั่งอาหาร/เครื่องดื่ม)"
+            "text": "ここは 車をとめる ところです。 = ที่นี่เป็นสถานที่สำหรับจอดรถยนต์ (とめる = จอดรถ)"
           },
           {
             "choice": "ここは 車をつくる ところです。",
             "isCorrect": true,
-            "text": "コーヒーを こぼしました。 = ทำกาแฟหกเลอะเทอะ (こぼす = ทำหก)"
+            "text": "ここは 車をつくる ところです。 = ที่นี่เป็นสถานที่สำหรับผลิต/ทำรถยนต์ (ผลิต ตรงกับ せいさんする / つくる)"
           },
           {
             "choice": "ここは 車をあらう ところです。",
             "isCorrect": false,
-            "text": "コーヒーを のみおわりました。 = ดื่มกาแฟหมดแล้ว (のみおわる = ดื่มเสร็จ)"
+            "text": "ここは 車をあらう ところです。 = ที่นี่เป็นสถานที่สำหรับล้างรถยนต์ (あらう = ล้าง)"
           }
         ]
       },
@@ -18574,22 +18574,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "この ひこうきは 10時に 日本に つく やくそくです。",
             "isCorrect": false,
-            "text": "テレビが こしょうしたので、修理に 出しました。 = โทรทัศน์เสียจึงส่งซ่อม (ใช้ こしょう กับเครื่องใช้ไฟฟ้า ถูกต้อง)"
+            "text": "この ひこうきは 10時に 日本に つく やくそくです。 = เครื่องบินลำนี้มีกำหนดถึงญี่ปุ่นเวลา 10 โมง (กำหนดการ ต้องใช้ 予定/よてい)"
           },
           {
             "choice": "あしたは、母と かいものに 行く やくそくが あります。",
             "isCorrect": true,
-            "text": "本を 落としたら、こしょうしました。 = ทำหนังสือตกแล้วพัง (หนังสือชำรุดเสียหาย ต้องใช้ 破れた/汚れた)"
+            "text": "あしたは、母と かいものに 行く やくそくが あります。 = วันพรุ่งนี้มีนัดไปซื้อของกับคุณแม่ (นัดหมาย ใช้ やくそく ถูกต้อง)"
           },
           {
             "choice": "電車の きっぷの やくそくは インターネットで できますか。",
             "isCorrect": false,
-            "text": "くつ下が こしょうしたので、新しいのを 買いました。 = ถุงเท้าขาดเลยซื้อใหม่ (ถุงเท้าขาด ต้องใช้ 破れた/穴があいた)"
+            "text": "電車の きっぷの やくそくは インターネットで できますか。 = จองตั๋วรถไฟทางอินเทอร์เน็ตได้ไหม (จองตั๋ว ต้องใช้ 予約/よやく 不ใช่ やくそく)"
           },
           {
             "choice": "今から、きょうの 見学の やくそくを せつめいします。",
             "isCorrect": false,
-            "text": "かぜを ひいて、のどが こしょうしました。 = เป็นหวัดจนเจ็บคอ (เจ็บคอ ต้องใช้ のどが痛い)"
+            "text": "今から、きょうの 見学の やくそくを せつめいします。 = ต่อจากนี้จะอธิบายระเบียบการทัศนศึกษาดูงาน (ระเบียบ/ข้อปฏิบัติ ต้องใช้ 規則/ルール)"
           }
         ]
       },
@@ -18613,22 +18613,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おみやげを もらったので、おれいを 言いました。",
             "isCorrect": true,
-            "text": "わたしは いつも 電車で ざっしを 読みます。 = ฉันมักจะอ่านนิตยสารบนรถไฟเป็นประจำเสมอ (ใช้ いつも ถูกต้อง)"
+            "text": "おみやげを もらったので、おれいを 言いました。 = ได้รับของฝากมา จึงกล่าวขอบคุณ (กล่าวขอบคุณ ใช้ おれいを言う ถูกต้อง)"
           },
           {
             "choice": "にゅういんした とき、友だちが おれいに 来て くれました。",
             "isCorrect": false,
-            "text": "いつも 雨が ふって いますから、出かけません。 = วันนี้ฝนตก (สภาพอากาศปัจจุบัน ต้องใช้ 今/きょう 不ใช่ いつも)"
+            "text": "にゅういんした とき、友だちが おれいに 来て くれました。 = ตอนเข้าโรงพยาบาล เพื่อนมาเยี่ยมไข้ (มาเยี่ยมคนป่วย ต้องใช้ お見舞い/おみまい)"
           },
           {
             "choice": "きょうは 父の たんじょうびの おれいを 買いに 行きます。",
             "isCorrect": false,
-            "text": "いつも この バスに 乗って ください。 = กรุณาขึ้นรถบัสคันนี้ (ชี้เฉพาะคัน ต้องใช้ このバスに)"
+            "text": "きょうは 父の たんじょうびの おれいを 買いに 行きます。 = วันนี้จะไปซื้อของขวัญวันเกิดให้คุณพ่อ (ของขวัญ ต้องใช้ プレゼント)"
           },
           {
             "choice": "「しつれいします」と 言って、おれいを してから へやに 入ります。",
             "isCorrect": false,
-            "text": "いつも ありがとうございました。 = ขอบคุณสำหรับทุกสิ่งเสมอมา (ขอบคุณในโอกาส ต้องใช้ どうも/いつもお世話になり)"
+            "text": "「しつれいします」と 言って、おれいを してから へやに 入ります。 = พูดว่า \"ขออนุญาตครับ\" แล้วโค้งคำนับก่อนเข้าห้อง (โค้งคำนับ ต้องใช้ お辞儀/おじぎ)"
           }
         ]
       },
@@ -18652,22 +18652,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "デパートや ホテルの 人は ていねいな ことばを つかいます。",
             "isCorrect": true,
-            "text": "テストの じゅんびを して います。 = กำลังเตรียมตัวสำหรับการสอบอยู่ (เตรียมตัวอ่านหนังสือสอบ ใช้ じゅんび ถูกต้อง)"
+            "text": "デパートや ホテルの 人は ていねいな ことばを つかいます。 = พนักงานห้างสรรพสินค้าและโรงแรมใช้ถ้อยคำที่สุภาพไพเราะ (ใช้ ていねい กับคำพูดสุภาพ ถูกต้อง)"
           },
           {
             "choice": "父の たんじょうびに ていねいな レストランに 行きました。",
             "isCorrect": false,
-            "text": "へやの じゅんびを して、きれいになりました。 = ทำความสะอาดห้องจนสะอาด (ทำความสะอาด ต้องใช้ そうじ)"
+            "text": "父の たんじょうびに ていねいな レストランに 行きました。 = ไปทานอาหารที่ร้านหรูในวันเกิดคุณพ่อ (ร้านอาหารหรู ต้องใช้ 高級な/こうきゅうな)"
           },
           {
             "choice": "女の人に 年を 聞くのは ていねいではありません。",
             "isCorrect": false,
-            "text": "レポートの じゅんびを 出しました。 = ส่งรายงานให้อาจารย์ (ส่งรายงาน ต้องใช้ レポートを出しました)"
+            "text": "女の人に 年を 聞くのは ていねいではありません。 = การถามอายุของผู้หญิงเป็นการเสียมารยาท (เสียมารยาท ต้องใช้ 失礼/しつれい)"
           },
           {
             "choice": "この おかしは あじが とても ていねいですね。",
             "isCorrect": false,
-            "text": "ごはんの じゅんびを 食べました。 = ทานอาหาร (ทานอาหาร ต้องใช้ ごはんを食べました)"
+            "text": "この おかしは あじが とても ていねいですね。 = ขนมนี้รสชาติประณีตกลมกล่อมมาก (รสชาติอร่อย ต้องใช้ 上品な味/おいしい)"
           }
         ]
       },
@@ -18691,22 +18691,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "チョコレートで 手が ぬれて しまいました。",
             "isCorrect": false,
-            "text": "この みちは 車が 多くて、きけんです。 = ถนนเส้นนี้รถเยอะมาก อันตราย (อันตราย ใช้ きけん ถูกต้อง)"
+            "text": "チョコレートで 手が ぬれて しまいました。 = มือเปื้อนช็อกโกแลตเลอะเทอะ (เปื้อนเลอะ ต้องใช้ 汚れる/よごれる 不ใช่ ぬれる)"
           },
           {
             "choice": "もりの 中の 空気は いつも ぬれて います。",
             "isCorrect": false,
-            "text": "この ナイフは よく きれて、きけんです。 = มีดเล่มนี้คมมาก อันตราย (คมอันตราย ใช้ あぶない/きけん ถูกต้อง)"
+            "text": "もりの 中の 空気は いつも ぬれて います。 = อากาศในป่าสดชื่นบริสุทธิ์เสมอ (อากาศบริสุทธิ์ ต้องใช้ 澄んでいる/新鮮)"
           },
           {
             "choice": "雨で せんたくものが ぬれて しまいました。",
             "isCorrect": true,
-            "text": "この ケーキは あまくて、きけんです。 = เค้กหวานมาก (หวานจัด ต้องใช้ あますぎる)"
+            "text": "雨で せんたくものが ぬれて しまいました。 = เสื้อผ้าที่ซักตากไว้เปียกปอนเพราะฝนตก (เปียกน้ำ ใช้ ぬれる ถูกต้อง)"
           },
           {
             "choice": "この メロンは ぬれて いて、おいしいですね。",
             "isCorrect": false,
-            "text": "この へやは 寒くて、きけんです。 = ห้องหนาวมาก (หนาวจัด ต้องใช้ 寒すぎる)"
+            "text": "この メロンは ぬれて いて、おいしいですね。 = เมลอนผลนี้ฉ่ำน้ำหวานอร่อย (ฉ่ำน้ำ ต้องใช้ みずみずしい 不ใช่ ぬれている)"
           }
         ]
       },
@@ -18730,22 +18730,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はしる前に、少し うんどうを して、からだを わかしました。",
             "isCorrect": false,
-            "text": "かいぎの 日時を メモしました。 = จดบันทึกวันและเวลาการประชุมไว้ (จดบันทึก ใช้ メモする ถูกต้อง)"
+            "text": "はしる前に、少し うんどうを して、からだを わかしました。 = ก่อนวิ่งออกกำลังกายอบอุ่นร่างกายสักหน่อย (อบอุ่นร่างกาย ต้องใช้ 体を温める/あたたまる)"
           },
           {
             "choice": "わかした たまごを 半分にして、サラダに 入れました。",
             "isCorrect": false,
-            "text": "黒板の 字を メモして ください。 = กรุณาจดข้อความบนกระดาน (จดข้อความ ใช้ ノートに書く/メモする)"
+            "text": "わかした たまごを 半分にして、サラダに 入れました。 = ผ่าไข่ต้มออกเป็นสองซีกแล้วใส่ในสลัด (ต้มไข่ ต้องใช้ ゆでた たまご 不ใช่ わかす)"
           },
           {
             "choice": "さむいので、ストーブで へやを わかしましょう。",
             "isCorrect": false,
-            "text": "本を メモして 読みました。 = อ่านหนังสือ (อ่านหนังสือ ต้องใช้ 本を読みました)"
+            "text": "さむいので、ストーブで へやを わかしましょう。 = อากาศหนาว มาเปิดเตาผิงอุ่นห้องกันเถอะ (ทำให้ห้องอุ่น ต้องใช้ へやを暖める)"
           },
           {
             "choice": "おちゃを 入れるから、おゆを わかして ください。",
             "isCorrect": true,
-            "text": "手紙を メモして ポストに 入れました。 = เขียนจดหมายแล้วหยอดตู้ (เขียนจดหมาย ต้องใช้ 手紙を書いて)"
+            "text": "おちゃを 入れるから、おゆを わかして ください。 = จะชงน้ำชา ช่วยต้มน้ำร้อนให้หน่อยนะครับ (ต้มน้ำร้อน ใช้ お湯を沸かす ถูกต้อง)"
           }
         ]
       }
@@ -18779,7 +18779,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はな",
             "isCorrect": false,
-            "text": "はな = สิ่งของ, สัมภาระ"
+            "text": "はな = ดอกไม้ (花) หรือ จมูก (鼻)"
           },
           {
             "choice": "あたま",
@@ -18789,7 +18789,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ゆび",
             "isCorrect": true,
-            "text": "ゆび = นิ้วมือ"
+            "text": "ゆび = นิ้วมือ (指)"
           },
           {
             "choice": "うで",
@@ -18823,7 +18823,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "りょこう",
             "isCorrect": true,
-            "text": "りょこう = ท่องเที่ยว"
+            "text": "りょこう = การท่องเที่ยว (旅行)"
           },
           {
             "choice": "りょうこ",
@@ -18862,7 +18862,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いそがなくても",
             "isCorrect": true,
-            "text": "いそがなくても = รีบ"
+            "text": "いそがなくても = แม้จะไม่รีบ (急がなくても <- 急ぐ)"
           },
           {
             "choice": "およがなくても",
@@ -18901,7 +18901,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おくじょう",
             "isCorrect": false,
-            "text": "おくじょう = ต่างประเทศ"
+            "text": "おくじょう = ดาดฟ้า (屋上)"
           },
           {
             "choice": "こうじょ",
@@ -18911,7 +18911,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こうじょう",
             "isCorrect": true,
-            "text": "こうじょう = โรงงาน"
+            "text": "こうじょう = โรงงาน (工場)"
           }
         ]
       },
@@ -18935,22 +18935,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いもうと",
             "isCorrect": true,
-            "text": "いもうと = น้องสาว"
+            "text": "いもうと = น้องสาว (妹)"
           },
           {
             "choice": "あね",
             "isCorrect": false,
-            "text": "あね = พี่สาว (ของผู้อื่น)"
+            "text": "あね = พี่สาว (姉)"
           },
           {
             "choice": "おとうと",
             "isCorrect": false,
-            "text": "おとうと = น้องชาย (ของผู้อื่น)"
+            "text": "おとうと = น้องชาย (弟)"
           },
           {
             "choice": "あに",
             "isCorrect": false,
-            "text": "あに = พี่ชาย (ของผู้อื่น)"
+            "text": "あに = พี่ชาย (兄)"
           }
         ]
       },
@@ -18974,7 +18974,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "まって",
             "isCorrect": true,
-            "text": "まって = รอ"
+            "text": "まって = มาจาก 待つ (รอ)"
           },
           {
             "choice": "もって",
@@ -19018,12 +19018,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "よわく",
             "isCorrect": false,
-            "text": "よわく = กรุณาบอกที่อยู่ใหม่ด้วยนะคะ (住所 = ที่อยู่)"
+            "text": "よわく = อ่อนลง, เบาลง (弱く <- 弱い)"
           },
           {
             "choice": "つよく",
             "isCorrect": true,
-            "text": "つよく = แรง/แข็งแรง"
+            "text": "つよく = อย่างแข็งแรง, อย่างรุนแรง (強く <- 強い)"
           },
           {
             "choice": "つめたく",
@@ -19062,12 +19062,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "てんいん",
             "isCorrect": false,
-            "text": "てんいん = โรงอาหาร"
+            "text": "てんいん = พนักงานร้าน (店員)"
           },
           {
             "choice": "えきいん",
             "isCorrect": true,
-            "text": "えきいん = เจ้าหน้าที่สถานีรถไฟ"
+            "text": "えきいん = เจ้าหน้าที่สถานีรถไฟ (駅員)"
           }
         ]
       },
@@ -19096,7 +19096,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いしゃ",
             "isCorrect": true,
-            "text": "いしゃ = แพทย์/หมอ"
+            "text": "いしゃ = คุณหมอ, แพทย์ (医者)"
           },
           {
             "choice": "いいじゃ",
@@ -19130,7 +19130,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "反対",
             "isCorrect": true,
-            "text": "反対 = ตรงกันข้าม/คัดค้าน"
+            "text": "反対 (はんたい) = ตรงกันข้าม, คัดค้าน"
           },
           {
             "choice": "半対",
@@ -19184,7 +19184,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "開いて",
             "isCorrect": true,
-            "text": "開いて = เปิด"
+            "text": "開いて (ひらいて) = มาจาก 開く (เปิดหน้าต่าง/เปิดหนังสือ)"
           }
         ]
       },
@@ -19218,7 +19218,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "赤い",
             "isCorrect": true,
-            "text": "赤い = สีแดง"
+            "text": "赤い (あかい) = สีแดง"
           },
           {
             "choice": "白い",
@@ -19252,7 +19252,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "走って",
             "isCorrect": true,
-            "text": "走って = วิ่ง"
+            "text": "走って (はしって) = มาจาก 走る (วิ่ง)"
           },
           {
             "choice": "是って",
@@ -19286,7 +19286,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "暗い",
             "isCorrect": true,
-            "text": "暗い = มืด"
+            "text": "暗い (くらい) = มืด, มืดมิด"
           },
           {
             "choice": "明い",
@@ -19330,7 +19330,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "野菜",
             "isCorrect": true,
-            "text": "野菜 = ผัก"
+            "text": "野菜 (やさい) = ผัก"
           },
           {
             "choice": "理菜",
@@ -19364,7 +19364,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "なれましたか",
             "isCorrect": true,
-            "text": "なれましたか = คุ้นเคย/ชิน 「しごとになれる」 = คุ้นเคยกับงาน"
+            "text": "なれましたか = คุ้นเคยหรือยัง, ชินแล้วหรือยัง (慣れましたか <- 慣れる)"
           },
           {
             "choice": "がんばりましたか",
@@ -19413,7 +19413,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やんで",
             "isCorrect": true,
-            "text": "やんで = ฝนหยุดตกแล้ว อากาศก็แจ่มใสขึ้นมา"
+            "text": "やんで = (ฝน) หยุดตก (止んで <- 止む)"
           },
           {
             "choice": "きえて",
@@ -19442,22 +19442,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かわいい",
             "isCorrect": false,
-            "text": "かわいい = แปลกใหม่, หายาก"
+            "text": "かわいい = น่ารัก (可愛い)"
           },
           {
             "choice": "おとなしい",
             "isCorrect": true,
-            "text": "おとなしい = เงียบเรียบร้อย/ไม่พูดจาโผงผาง"
+            "text": "おとなしい = เรียบร้อย, ว่าง่าย, สงบเสงี่ยม (大人しい)"
           },
           {
             "choice": "わかい",
             "isCorrect": false,
-            "text": "わかい = ยาว"
+            "text": "わかい = หนุ่มสาว, อายุน้อย (若い)"
           },
           {
             "choice": "うつくしい",
             "isCorrect": false,
-            "text": "うつくしい = นำเข้า"
+            "text": "うつくしい = สวยงาม, งดงาม (美しい)"
           }
         ]
       },
@@ -19481,7 +19481,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おみまい",
             "isCorrect": true,
-            "text": "おみまい = การเยี่ยมคนป่วย"
+            "text": "おみまい = การไปเยี่ยมคนป่วย (お見舞い)"
           },
           {
             "choice": "おねがい",
@@ -19520,12 +19520,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けいかく",
             "isCorrect": false,
-            "text": "けいかく = เลี้ยงดู, เพาะปลูก"
+            "text": "けいかく = แผนการ, แผนงาน (計画)"
           },
           {
             "choice": "よやく",
             "isCorrect": true,
-            "text": "よやく = จอง (ตั๋ว/ห้องพัก)"
+            "text": "よやく = การจอง (ตั๋ว/ห้องพัก) (予約)"
           },
           {
             "choice": "うけつけ",
@@ -19535,7 +19535,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やくそく",
             "isCorrect": false,
-            "text": "やくそく = おれい (お礼) = การแสดงความขอบคุณ/คำขอบคุณ"
+            "text": "やくそく = สัญญา, การนัดหมาย (約束)"
           }
         ]
       },
@@ -19569,7 +19569,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "まじめに",
             "isCorrect": true,
-            "text": "まじめに = อย่างเอาจริงเอาจัง/อย่างขยัน"
+            "text": "まじめに = อย่างจริงจัง, อย่างขยันขันแข็ง (真面目に)"
           },
           {
             "choice": "だいじに",
@@ -19613,7 +19613,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おとして",
             "isCorrect": true,
-            "text": "おとして = ทำตก/ทำหล่น"
+            "text": "おとして = ทำตก, ทำหล่น (落として <- 落とす)"
           }
         ]
       },
@@ -19637,22 +19637,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "よてい",
             "isCorrect": false,
-            "text": "よてい = การแจ้งให้ทราบ, ข่าวประกาศ"
+            "text": "よてい = กำหนดการ, แผนการ (予定)"
           },
           {
             "choice": "しゅうかん",
             "isCorrect": true,
-            "text": "しゅうかん = ขนบธรรมเนียม/ประเพณี"
+            "text": "しゅうかん = ประเพณี, กิจวัตร, ธรรมเนียม (習慣)"
           },
           {
             "choice": "けいけん",
             "isCorrect": false,
-            "text": "けいけん = ทำให้ร้อน"
+            "text": "けいけん = ประสบการณ์ (経験)"
           },
           {
             "choice": "きょうみ",
             "isCorrect": false,
-            "text": "きょうみ = ระมัดระวัง"
+            "text": "きょうみ = ความสนใจ (興味)"
           }
         ]
       },
@@ -19676,22 +19676,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "チェック",
             "isCorrect": false,
-            "text": "チェック = ถามความคิดเห็นของทุกคนในห้องว่าจะไปเที่ยวที่ไหน แล้วจึงตัดสินใจ (いけん = ความคิดเห็น)"
+            "text": "チェック = การตรวจสอบ, เช็ค (Check)"
           },
           {
             "choice": "スタート",
             "isCorrect": false,
-            "text": "スタート = การเริ่มต้น, การออกตัว"
+            "text": "スタート = การเริ่มต้น, ออกตัว (Start)"
           },
           {
             "choice": "チャンス",
             "isCorrect": false,
-            "text": "チャンス = โอกาส"
+            "text": "チャンス = โอกาส (Chance)"
           },
           {
             "choice": "スイッチ",
             "isCorrect": true,
-            "text": "スイッチ = สวิตช์ไฟ 「スイッチをおす」 = กดสวิตช์"
+            "text": "スイッチ = สวิตช์ไฟ (Switch)"
           }
         ]
       },
@@ -19715,7 +19715,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きめましょう",
             "isCorrect": true,
-            "text": "きめましょう = กำหนด/ตัดสินใจ"
+            "text": "きめましょう = มาตัดสินใจกันเถอะ (決める)"
           },
           {
             "choice": "はいりましょう",
@@ -19754,22 +19754,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きのうの 話は ほんとうですよ。",
             "isCorrect": false,
-            "text": "この ペンは かきやすいです。 = ปากกาด้ามนี้เขียนง่ายดี (かきやすい = เขียนง่าย)"
+            "text": "きのうの 話は ほんとうですよ。 = เรื่องเมื่อวานนี้เป็นเรื่องจริงนะ (ほんとう = เรื่องจริง)"
           },
           {
             "choice": "きのうの 話は ほんとうじゃありませんよ。",
             "isCorrect": true,
-            "text": "この ペンは かきにくいです。 = ปากกาด้ามนี้เขียนยาก (かきにくい = เขียนยาก)"
+            "text": "きのうの 話は ほんとうじゃありませんよ。 = เรื่องเมื่อวานนี้ไม่ใช่เรื่องจริงนะ (เรื่องโกหก ตรงกับ うそ / ほんとうじゃない)"
           },
           {
             "choice": "きのうの 話は ゆうめいですよ。",
             "isCorrect": false,
-            "text": "この ペンは インクが ありません。 = ปากกาด้ามนี้ไม่มีหมึก (インクがない = ไม่มีหมึก)"
+            "text": "きのうの 話は ゆうめいですよ。 = เรื่องเมื่อวานนี้มีชื่อเสียงมากนะ"
           },
           {
             "choice": "きのうの 話は ゆうめいじゃありませんよ。",
             "isCorrect": false,
-            "text": "この ペンは インクが でません。 = ปากกาด้ามนี้หมึกไม่ออก (เขียนไม่ติด ตรงกับ つかえません)"
+            "text": "きのうの 話は ゆうめいじゃありませんよ。 = เรื่องเมื่อวานนี้ไม่ได้มีชื่อเสียงอะไรนะ"
           }
         ]
       },
@@ -19793,22 +19793,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やまださんは 何時ごろ かえって きますか。",
             "isCorrect": true,
-            "text": "すずきさんは いつも しんせつです。 = คุณซูซูกิมีน้ำใจเสมอ (しんせつ = มีน้ำใจ/ใจดี)"
+            "text": "やまださんは 何時ごろ かえって きますか。 = คุณยามาดะจะกลับมาประมาณกี่โมงครับ (กลับมา ตรงกับ もどる / かえってくる)"
           },
           {
             "choice": "やまださんは 何時ごろ でかけますか。",
             "isCorrect": false,
-            "text": "すずきさんは いつも まじめです。 = คุณซูซูกิขยันตั้งใจจริงจังเสมอ (まじめ = ขยัน/ตั้งใจ)"
+            "text": "やまださんは 何時ごろ でかけますか。 = คุณยามาดะจะออกไปข้างนอกประมาณกี่โมงครับ (でかける = ออกไปข้างนอก)"
           },
           {
             "choice": "やまださんは 何時ごろ ねますか。",
             "isCorrect": false,
-            "text": "すずきさんは いつも あたまが いいです。 = คุณซูซูกิฉลาดหลักแหลมเสมอ (あたまがいい = ฉลาด)"
+            "text": "やまださんは 何時ごろ ねますか。 = คุณยามาดะจะเข้านอนประมาณกี่โมงครับ (ねる = นอน)"
           },
           {
             "choice": "やまださんは 何時ごろ おきますか。",
             "isCorrect": false,
-            "text": "すずきさんは いつも げんきです。 = คุณซูซูกิแข็งแรงร่าเริงเสมอ (ร่าเริงแข็งแรง ตรงกับ 体が じょうぶ)"
+            "text": "やまださんは 何時ごろ おきますか。 = คุณยามาดะจะตื่นนอนประมาณกี่โมงครับ (おきる = ตื่น)"
           }
         ]
       },
@@ -19832,22 +19832,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "この 国は こめを ほかの 国から もらって いますか。",
             "isCorrect": false,
-            "text": "この えいがは おもしろいです。 = หนังเรื่องนี้สนุกสนานมาก (おもしろい = สนุก)"
+            "text": "この 国は こめを ほかの 国から もらって いますか。 = ประเทศนี้ได้รับข้าวมาจากประเทศอื่นหรือเปล่า (もらう = ได้รับ)"
           },
           {
             "choice": "この 国は こめを ほかの 国から かって いますか。",
             "isCorrect": false,
-            "text": "この えいがは こわいです。 = หนังเรื่องนี้น่ากลัวมาก (こわい = น่ากลัว)"
+            "text": "この 国は こめを ほかの 国から かって いますか。 = ประเทศนี้ซื้อข้าวมาจากประเทศอื่นหรือเปล่า (かう = ซื้อ)"
           },
           {
             "choice": "この 国は こめを ほかの 国に あげて いますか。",
             "isCorrect": false,
-            "text": "この えいがは つまらないです。 = หนังเรื่องนี้น่าเบื่อ (つまらない = น่าเบื่อ)"
+            "text": "この 国は こめを ほかの 国に あげて いますか。 = ประเทศนี้มอบข้าวให้ประเทศอื่นหรือเปล่า (あげる = ให้)"
           },
           {
             "choice": "この 国は こめを ほかの 国に うって いますか。",
             "isCorrect": true,
-            "text": "この えいがは かなしいです。 = หนังเรื่องนี้เศร้าซึ้งมาก (เศร้าใจ ตรงกับ なみだが 出る)"
+            "text": "この 国は こめを ほかの 国に うって いますか。 = ประเทศนี้ขายข้าวให้ประเทศอื่นหรือเปล่า (ส่งออก/ขายให้ต่างชาติ ตรงกับ ゆしゅつする / うる)"
           }
         ]
       },
@@ -19871,22 +19871,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "たなかさんは こまって いました。",
             "isCorrect": false,
-            "text": "にもつを はこびました。 = ขนย้ายสัมภาระไปแล้ว (はこぶ = ขนย้าย)"
+            "text": "たなかさんは こまって いました。 = คุณทานากะกำลังลำบากใจอยู่ (こまる = ลำบากใจ)"
           },
           {
             "choice": "たなかさんは やすんで いました。",
             "isCorrect": false,
-            "text": "にもつを あずけました。 = ฝากสัมภาระไว้ (あずける = ฝากของ)"
+            "text": "たなかさんは やすんで いました。 = คุณทานากะกำลังพักผ่อนอยู่ (やすむ = พักผ่อน)"
           },
           {
             "choice": "たなかさんは わらって いました。",
             "isCorrect": true,
-            "text": "にもつを うけとりました。 = รับมอบสัมภาระแล้ว (ได้รับมอบของ ตรงกับ もらいました)"
+            "text": "たなかさんは わらって いました。 = คุณทานากะกำลังยิ้มแย้มอยู่ (ยิ้มแย้ม ตรงกับ にこにこする / わらう)"
           },
           {
             "choice": "たなかさんは あそんで いました。",
             "isCorrect": false,
-            "text": "にもつを おくりました。 = ส่งสัมภาระไปแล้ว (おくる = ส่ง)"
+            "text": "たなかさんは あそんで いました。 = คุณทานากะกำลังเล่นอยู่ (あそぶ = เล่น)"
           }
         ]
       },
@@ -19910,22 +19910,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "新しい かばんや さいふが ほしいです。",
             "isCorrect": false,
-            "text": "じゅぎょうを はじめます。 = เริ่มคาบเรียนแล้ว (はじめる = เริ่มต้น)"
+            "text": "新しい かばんや さいふが ほしいです。 = อยากได้กระเป๋าหรือกระเป๋าสตางค์ใบใหม่"
           },
           {
             "choice": "新しい つくえや ベッドが ほしいです。",
             "isCorrect": true,
-            "text": "じゅぎょうを やすみます。 = หยุดเรียน (やすむ = พัก/หยุด)"
+            "text": "新しい つくえや ベッドが ほしいです。 = อยากได้โต๊ะหรือเตียงนอนใหม่ (เฟอร์นิเจอร์ ตรงกับ かぐ / つくえやベッド)"
           },
           {
             "choice": "新しい カメラや ビデオが ほしいです。",
             "isCorrect": false,
-            "text": "じゅぎょうを おわります。 = คาบเรียนจบลงแล้ว (จบ/เสร็จสิ้น ตรงกับ チャイムが なって 終わり)"
+            "text": "新しい カメラや ビデオが ほしいです。 = อยากได้กล้องถ่ายรูปหรือกล้องวิดีโอใหม่"
           },
           {
             "choice": "新しい ノートや ペンが ほしいです。",
             "isCorrect": false,
-            "text": "じゅぎょうを つづけます。 = เรียนต่ออย่างต่อเนื่อง (つづける = ทำต่อ)"
+            "text": "新しい ノートや ペンが ほしいです。 = อยากได้สมุดโน้ตหรือปากกาด้ามใหม่"
           }
         ]
       },
@@ -19949,22 +19949,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "シャンプーで かみを せんたくしました。",
             "isCorrect": false,
-            "text": "あさは いつも パンと コーヒーを 食べます。 = ตอนเช้าทานขนมปังกับกาแฟเป็นประจำ (เป็นประจำสม่ำเสมอ ใช้ いつも ถูกต้อง)"
+            "text": "シャンプーで かみを せんたくしました。 = สระผมด้วยแชมพู (สระผม ต้องใช้ 髪を洗う/洗髪 ไม่ใช่ せんたく)"
           },
           {
             "choice": "にちようびに へやを せんたくします。",
             "isCorrect": false,
-            "text": "いま いつも 雨が ふって います。 = ตอนนี้ฝนกำลังตก (บอกช่วงเวลานี้ ต้องใช้ ちょうど/今 不ใช่ いつも)"
+            "text": "にちようびに へやを せんたくします。 = ทำความสะอาดห้องในวันอาทิตย์ (ทำความสะอาดห้อง ต้องใช้ 掃除/そうじ)"
           },
           {
             "choice": "しょくじの あとで、はを せんたくします。",
             "isCorrect": false,
-            "text": "あした いつも 映画を 見に 行きます。 = พรุ่งนี้จะไปดูหนัง (กำหนดการ ต้องใช้ 予定/行くつもり 不ใช่ いつも)"
+            "text": "しょくじの あとで、はを せんたくします。 = แปรงฟันหลังมื้ออาหาร (แปรงฟัน ต้องใช้ 歯を磨く/はをみがく)"
           },
           {
             "choice": "シャツと パンツを せんたく しました。",
             "isCorrect": true,
-            "text": "きのう いつも 買い物を しました。 = เมื่อวานไปซื้อของ (อดีต ต้องใช้ きのう買い物をしました)"
+            "text": "シャツと パンツを せんたく しました。 = ซักเสื้อเชิ้ตและกางเกง (ซักเสื้อผ้า ใช้ 洗濯/せんたく ถูกต้อง)"
           }
         ]
       },
@@ -19988,22 +19988,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ごはんを 食べすぎて、おなかが こんで います。",
             "isCorrect": false,
-            "text": "コートを きて いるので、あたたかいです。 = สวมเสื้อโค้ตอยู่จึงอบอุ่น (อบอุ่นร่างกาย ใช้ あたたかい ถูกต้อง)"
+            "text": "ごはんを 食べすぎて、おなかが こんで います。 = ทานข้าวมากไปจนแน่นท้อง (แน่นท้อง ต้องใช้ おなかがいっぱい)"
           },
           {
             "choice": "この じしょは じが こんで いて、読みにくいです。",
             "isCorrect": false,
-            "text": "この おちゃは あたたかくて おいしいです。 = ชานี้อุ่นๆ อร่อยดี (เครื่องดื่มอุ่น ใช้ あたたかい ถูกต้อง)"
+            "text": "この じしょは じが こんで いて、読みにくいです。 = พจนานุกรมเล่มนี้ตัวหนังสือแน่นเอี๊ยดอ่านยาก (ตัวหนังสือแน่น ต้องใช้ びっしり)"
           },
           {
             "choice": "もりさんの スーツケースは ようふくで こんで います。",
             "isCorrect": false,
-            "text": "きょうの てんきは あたたかいですね。 = อากาศวันนี้อบอุ่นสบายดีนะ (สภาพอากาศอบอุ่น ใช้ あたたかい ถูกต้อง)"
+            "text": "もりさんの スーツケースは ようふくで こんで います。 = กระเป๋าเดินทางของคุณโมริอัดแน่นไปด้วยเสื้อผ้า (ของอัดแน่น ต้องใช้ つまっている)"
           },
           {
             "choice": "あさの 電車は こんで いて、すわれません。",
             "isCorrect": true,
-            "text": "この へやは あたたかくて、ねむく なります。 = ห้องนี้อบอุ่นจนชวนง่วงนอน (ใช้ あたたかい ถูกต้อง)"
+            "text": "あさの 電車は こんで いて、すわれません。 = รถไฟรอบเช้าแน่นแออัดมากจนไม่มีที่นั่ง (คนแน่นแออัด ใช้ こむ ถูกต้อง)"
           }
         ]
       },
@@ -20027,22 +20027,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あの きょうだいは かおが よく にあって いますね。",
             "isCorrect": false,
-            "text": "しごとが たくさん あって、いそがしいです。 = งานมีเยอะมาก ยุ่งสุดๆ (ยุ่งเพราะมีงานเยอะ ใช้ いそがしい ถูกต้อง)"
+            "text": "あの きょうだいは かおが よく にあって いますね。 = พี่น้องคู่นั้นหน้าตาเหมือนกันมาก (หน้าตาเหมือนกัน ต้องใช้ 似ている/にている)"
           },
           {
             "choice": "その みどりの ぼうしは よく にあって いますよ。",
             "isCorrect": true,
-            "text": "この まちは いつも 人が いそがしいです。 = เมืองนี้คนขวักไขว่ (คนคึกคัก ต้องใช้ にぎやか 不ใช่ いそがしい)"
+            "text": "その みどりの ぼうしは よく にあって いますよ。 = หมวกสีเขียวใบนั้นเข้ากับคุณดีมากๆ เลยนะ (เสื้อผ้า/เครื่องแต่งกายเข้ากันดี ใช้ にあう ถูกต้อง)"
           },
           {
             "choice": "わたしと たなかさんは しゅみが にあって います。",
             "isCorrect": false,
-            "text": "時間が いそがしいですから、はやく 行きましょう。 = เวลาเร่งรีบ (เวลากระชั้นชิด ต้องใช้ 時間がない 不ใช่ いそがしい)"
+            "text": "わたしと たなかさんは しゅみが にあって います。 = ฉันกับคุณทานากะมีงานอดิเรกตรงกัน (งานอดิเรกตรงกัน ต้องใช้ 趣味が合う)"
           },
           {
             "choice": "この 会社の しごとは わたしに にあって います。",
             "isCorrect": false,
-            "text": "あたまが いそがしくて、つかれました。 = ปวดหัว/มึนหัว (ปวดหัว ต้องใช้ あたまが痛い)"
+            "text": "この 会社の しごとは わたしに にあって います。 = งานของบริษัทนี้เหมาะกับตัวฉัน (งานเหมาะสมกับตัว ต้องใช้ 向いている/合っている)"
           }
         ]
       },
@@ -20066,22 +20066,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "みんなで さくらの 木を たいせつに そだてて います。",
             "isCorrect": true,
-            "text": "友だちと いっしょに しゅくだいを しました。 = ทำการบ้านด้วยกันกับเพื่อน (ทำร่วมกันกับคนอื่น ใช้ いっしょに ถูกต้อง)"
+            "text": "みんなで さくらの 木を たいせつに そだてて います。 = ช่วงดึกคืนนี้น่าจะมีฝนตก (ช่วงดึก ต้องใช้ 夜中/よなか 不ใช่ とちゅう)"
           },
           {
             "choice": "いろいろな しりょうを しらべて、レポートを そだてました。",
             "isCorrect": false,
-            "text": "ひとりで いっしょに ごはんを 食べました。 = ทานข้าวคนเดียว (คนเดียว ขัดแย้งกับ いっしょに ต้องใช้ ひとりで)"
+            "text": "いろいろな しりょうを しらべて、レポートを そだてました。 = วางเค้กไว้ตรงกลางโต๊ะกลม (ตรงกึ่งกลาง ต้องใช้ 真ん中/まんなか)"
           },
           {
             "choice": "先月から ここで 新しい ビルを そだてて います。",
             "isCorrect": false,
-            "text": "あした いっしょに 晴れると いいですね。 = พรุ่งนี้ขอให้อากาศแจ่มใส (อากาศดี ต้องใช้ 晴れるといい)"
+            "text": "先月から ここで 新しい ビルを そだてて います。 = มองเห็นทะเลจากช่องว่างระหว่างตึก (ช่องว่างระหว่างตึก ต้องใช้ 間/あいだ)"
           },
           {
             "choice": "おいしく なるまで、ゆっくりと りょうりを そだてます。",
             "isCorrect": false,
-            "text": "この 本は いっしょに おもしろいです。 = หนังสือเล่มนี้สนุกมาก (สนุกมาก ต้องใช้ とても/すごく)"
+            "text": "おいしく なるまで、ゆっくりと りょうりを そだてます。 = โทรศัพท์ดังขึ้นระหว่างการประชุม (ระหว่างดำเนินกิจกรรม ใช้ とちゅう ถูกต้อง)"
           }
         ]
       },
@@ -20105,22 +20105,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ぜひ いちど 読んで みて ください。",
             "isCorrect": true,
-            "text": "えきで 電車を まって います。 = กำลังรอรถไฟอยู่ที่สถานี (รอคอย ใช้ まつ ถูกต้อง)"
+            "text": "ぜひ いちど 読んで みて ください。 = สัปดาห์นี้งานไม่ค่อยยุ่งสบายๆ (งานเบา ต้องใช้ 楽な/すくない 不ใช่ おとなしい)"
           },
           {
             "choice": "あしたも ぜひ はれるでしょう。",
             "isCorrect": false,
-            "text": "みちを まって あるきました。 = เดินข้ามถนน (ข้ามถนน ต้องใช้ わたって/あるいて)"
+            "text": "あしたも ぜひ はれるでしょう。 = เมื่อวานนี้สภาพอากาศสงบแจ่มใส (อากาศสงบ ต้องใช้ 穏やかな/おだやか)"
           },
           {
             "choice": "あぶないので、ぜひ さわらないで ください。",
             "isCorrect": false,
-            "text": "テレビを まって 見ました。 = นั่งดูทีวี (ดูทีวี ต้องใช้ 見ました)"
+            "text": "あぶないので、ぜひ さわらないで ください。 = สุนัขของคุณทานากะเรียบร้อยว่าง่ายไม่ดุจังเลยนะ (สัตว์เลี้ยงว่าง่ายไม่ดุ ใช้ おとなしい ถูกต้อง)"
           },
           {
             "choice": "かりた お金は ぜひ かえします。",
             "isCorrect": false,
-            "text": "ドアを まって 開けました。 = เปิดประตู (เปิดประตู ต้องใช้ あけました)"
+            "text": "かりた お金は ぜひ かえします。 = ร้านอาหารนี้เงียบสงบดีนะ (ร้านเงียบสงบ ต้องใช้ 静かな/しずか)"
           }
         ]
       }
@@ -20154,22 +20154,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こえ",
             "isCorrect": false,
-            "text": "こえ = คลื่นทะเล"
+            "text": "こえ = เสียง (คนหรือสัตว์) (声)"
           },
           {
             "choice": "あじ",
             "isCorrect": true,
-            "text": "あじ = รสชาติ"
+            "text": "あじ = รสชาติ (味)"
           },
           {
             "choice": "おと",
             "isCorrect": false,
-            "text": "おと = การขนส่ง"
+            "text": "おと = เสียง (音)"
           },
           {
             "choice": "におい",
             "isCorrect": false,
-            "text": "におい = วิทยาศาสตร์"
+            "text": "におい = กลิ่น (匂い)"
           }
         ]
       },
@@ -20208,7 +20208,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "せかい",
             "isCorrect": true,
-            "text": "せかい = โลก"
+            "text": "せかい = โลก (世界)"
           }
         ]
       },
@@ -20237,12 +20237,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こたえて",
             "isCorrect": false,
-            "text": "こたえて = คนคนนั้นจิตใจงดงาม (心 = หัวใจ/จิตใจ)"
+            "text": "こたえて = ตอบ (คำถาม) (答えて <- 答える)"
           },
           {
             "choice": "かんがえて",
             "isCorrect": true,
-            "text": "かんがえて = คิด"
+            "text": "かんがえて = คิด, ไตร่ตรอง (考えて <- 考える)"
           },
           {
             "choice": "つたえて",
@@ -20271,7 +20271,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "たりません",
             "isCorrect": true,
-            "text": "たりません = ไม่พอ"
+            "text": "たりません = ไม่เพียงพอ (足りません <- 足りる)"
           },
           {
             "choice": "あしりません",
@@ -20325,7 +20325,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "からだ",
             "isCorrect": true,
-            "text": "からだ = ร่างกาย"
+            "text": "からだ = ร่างกาย (体)"
           }
         ]
       },
@@ -20354,7 +20354,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こんど",
             "isCorrect": true,
-            "text": "こんど = ครั้งนี้/คราวนี้"
+            "text": "こんど = คราวนี้, คราวหน้า (今度)"
           },
           {
             "choice": "こんと",
@@ -20388,7 +20388,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "じゅぎょう",
             "isCorrect": false,
-            "text": "じゅぎょう = การบรรยายในมหาวิทยาลัย"
+            "text": "じゅぎょう = คาบเรียน, ชั้นเรียน (授業)"
           },
           {
             "choice": "えいきょう",
@@ -20398,7 +20398,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "えいぎょう",
             "isCorrect": true,
-            "text": "えいぎょう = การเปิดให้บริการ/การดำเนินธุรกิจ"
+            "text": "えいぎょう = การดำเนินกิจการ, เวลาทำการ (営業)"
           },
           {
             "choice": "じゅきょう",
@@ -20427,22 +20427,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "くも",
             "isCorrect": true,
-            "text": "くも = เมฆ"
+            "text": "くも = เมฆ (雲) หรือ แมงมุม (蜘蛛)"
           },
           {
             "choice": "ほし",
             "isCorrect": false,
-            "text": "ほし = ลม"
+            "text": "ほし = ดวงดาว (星)"
           },
           {
             "choice": "つき",
             "isCorrect": false,
-            "text": "つき = จริง ๆ"
+            "text": "つき = ดวงจันทร์, พระจันทร์ (月)"
           },
           {
             "choice": "そら",
             "isCorrect": false,
-            "text": "そら = บิน, โบยบิน"
+            "text": "そら = ท้องฟ้า (空)"
           }
         ]
       },
@@ -20466,7 +20466,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きんじょ",
             "isCorrect": true,
-            "text": "きんじょ = แถวบ้าน/ละแวกใกล้เคียง"
+            "text": "きんじょ = ละแวกใกล้เคียง, แถวบ้าน (近所)"
           },
           {
             "choice": "ちかじょ",
@@ -20515,7 +20515,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "薬",
             "isCorrect": true,
-            "text": "薬 = ยา"
+            "text": "薬 (くすり) = ยา, ยารักษาโรค"
           },
           {
             "choice": "栗",
@@ -20554,7 +20554,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "起きました",
             "isCorrect": true,
-            "text": "起きました = ตื่นนอน"
+            "text": "起きました (おきました) = มาจาก 起きる (ตื่นนอน)"
           },
           {
             "choice": "匙きました",
@@ -20593,7 +20593,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "男性",
             "isCorrect": true,
-            "text": "男性 = ผู้ชาย/บุรุษ"
+            "text": "男性 (だんせい) = ผู้ชาย, บุรุษ"
           },
           {
             "choice": "女姓",
@@ -20632,7 +20632,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "押せば",
             "isCorrect": true,
-            "text": "押せば = ถ้ากด"
+            "text": "押せば (おせば) = มาจาก 押す (ถ้ากดปุ่ม/ผลัก)"
           },
           {
             "choice": "坤せば",
@@ -20676,7 +20676,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "送りました",
             "isCorrect": true,
-            "text": "送りました = ส่ง"
+            "text": "送りました (おくりました) = มาจาก 送る (ส่งจดหมาย/พัสดุแล้ว)"
           }
         ]
       },
@@ -20700,7 +20700,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "運転",
             "isCorrect": true,
-            "text": "運転 = การขับขี่"
+            "text": "運転 = การขับรถ (うんてん)"
           },
           {
             "choice": "運軽",
@@ -20739,7 +20739,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ざんねん",
             "isCorrect": true,
-            "text": "ざんねん = น่าเสียดาย"
+            "text": "ざんねん = น่าเสียดาย (残念)"
           },
           {
             "choice": "ふべん",
@@ -20749,12 +20749,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "だめ",
             "isCorrect": false,
-            "text": "だめ = เหมือนกัน, เดียวกัน"
+            "text": "だめ = ไม่ได้, เปล่าประโยชน์ (駄目)"
           },
           {
             "choice": "しんぱい",
             "isCorrect": false,
-            "text": "しんぱい = せまい (狭い) = แคบ (พื้นที่/ถนน/ห้อง)"
+            "text": "しんぱい = เป็นห่วง, กังวล (心配)"
           }
         ]
       },
@@ -20783,7 +20783,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さがした",
             "isCorrect": true,
-            "text": "さがした = ตามหา/ค้นหา"
+            "text": "さがした = หาแล้ว, ค้นหาแล้ว (探した <- 探す)"
           },
           {
             "choice": "みつけた",
@@ -20827,12 +20827,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きもち",
             "isCorrect": true,
-            "text": "きもち = รู้สึกดี/รู้สึกสบายสดชื่น"
+            "text": "きもち = ความรู้สึก, อารมณ์ (気持ち)"
           },
           {
             "choice": "げんき",
             "isCorrect": false,
-            "text": "げんき = ว่าง (มีเวลาว่าง)"
+            "text": "げんき = แข็งแรง, สบายดี, ร่าเริง (元気)"
           }
         ]
       },
@@ -20856,7 +20856,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "けいけん",
             "isCorrect": true,
-            "text": "けいけん = ประสบการณ์ 「けいけんをする」 = ทำประสบการณ์"
+            "text": "けいけん = ประสบการณ์ (経験)"
           },
           {
             "choice": "おもいで",
@@ -20871,7 +20871,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きょうみ",
             "isCorrect": false,
-            "text": "きょうみ = ระมัดระวัง"
+            "text": "きょうみ = ความสนใจ (興味)"
           }
         ]
       },
@@ -20910,7 +20910,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やめました",
             "isCorrect": true,
-            "text": "やめました = ล้มเลิก/หยุด/ยกเลิก"
+            "text": "やめました = ลาออกแล้ว, เลิกแล้ว (辞めました/やめました)"
           }
         ]
       },
@@ -20934,12 +20934,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はこんで",
             "isCorrect": false,
-            "text": "はこんで = เครื่องจักรนี้ถ้าใช้วิธีผิดจะเป็นอันตรายมาก"
+            "text": "はこんで = ขนย้าย, แบกหาม (運んで <- 運ぶ)"
           },
           {
             "choice": "てつだって",
             "isCorrect": true,
-            "text": "てつだって = ช่วยเหลือ 「ひっこしをてつだう」 = ช่วยย้ายบ้าน"
+            "text": "てつだって = ช่วยเหลือ (งาน) (手伝って <- 手伝う)"
           },
           {
             "choice": "かたづけて",
@@ -20949,7 +20949,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "つつんで",
             "isCorrect": false,
-            "text": "つつんで = เรื่องนี้เป็นความลับ"
+            "text": "つつんで = ห่อ (ของขวัญ/พัสดุ) (包んで <- 包む)"
           }
         ]
       },
@@ -20973,17 +20973,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "れんらく",
             "isCorrect": false,
-            "text": "れんらく = むしあつい (蒸し暑い) = ร้อนอบอ้าว (สภาพอากาศ)"
+            "text": "れんらく = การติดต่อ, การแจ้งให้ทราบ (連絡)"
           },
           {
             "choice": "りゆう",
             "isCorrect": true,
-            "text": "りゆう = เหตุผล"
+            "text": "りゆう = เหตุผล (理由)"
           },
           {
             "choice": "いけん",
             "isCorrect": false,
-            "text": "いけん = ตัดสินใจ"
+            "text": "いけん = ความคิดเห็น (意見)"
           },
           {
             "choice": "そうだん",
@@ -21017,7 +21017,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "えんりょ",
             "isCorrect": true,
-            "text": "えんりょ = ไม่ต้องเกรงใจ"
+            "text": "えんりょ = ความเกรงใจ, การปฏิเสธด้วยความเกรงใจ (遠慮)"
           },
           {
             "choice": "ちゅうい",
@@ -21027,7 +21027,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はんたい",
             "isCorrect": false,
-            "text": "はんたい = ขาว"
+            "text": "はんたい = ตรงกันข้าม, คัดค้าน (反対)"
           }
         ]
       },
@@ -21051,7 +21051,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "せわ",
             "isCorrect": true,
-            "text": "せわ = ดูแลเอาใจใส่"
+            "text": "せわ = การดูแล, เอาใจใส่ (世話)"
           },
           {
             "choice": "うんどう",
@@ -21061,12 +21061,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ようい",
             "isCorrect": false,
-            "text": "ようい = ปรึกษา"
+            "text": "ようい = การเตรียมการ, การจัดเตรียม (用意)"
           },
           {
             "choice": "しゅうかん",
             "isCorrect": false,
-            "text": "しゅうかん = ...เดือน (ระยะเวลา)"
+            "text": "しゅうかん = ประเพณี, กิจวัตร, ธรรมเนียม (習慣)"
           }
         ]
       },
@@ -21095,7 +21095,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "よって",
             "isCorrect": true,
-            "text": "よって = แวะ 「びょういんによる」 = แวะโรงพยาบาล"
+            "text": "よって = แวะ (สถานที่), เมาเหล้า (寄って/酔って)"
           },
           {
             "choice": "まがって",
@@ -21144,7 +21144,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おとうとは あそこで はたらいています。",
             "isCorrect": true,
-            "text": "おとうとは あそこで はたらいています。 = น้องชายกำลังทำงานอยู่ที่ตรงโน้น (ทำงาน ตรงกับ しごとを して います)"
+            "text": "おとうとは あそこで はたらいています。 = น้องชายกำลังทำงานอยู่ที่ตรงโน้น (ทำงานพิเศษ ตรงกับ アルバイト / はたらく)"
           }
         ]
       },
@@ -21168,12 +21168,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あの 人は ほんとうに きれいですね。",
             "isCorrect": true,
-            "text": "あの 人は ほんとうに きれいですね。 = คนคนนั้นสวยจริงๆ เลยนะ (สวยงาม ตรงกับ うつくしい)"
+            "text": "あの 人は ほんとうに きれいですね。 = คนคนนั้นสวยจริงๆ เลยนะ (สวยงาม ตรงกับ うつくしい / きれい)"
           },
           {
             "choice": "あの 人は ほんとうに おもしろいですね。",
             "isCorrect": false,
-            "text": "あの 人は ほんとうに おもしろいですね。 = คนคนนั้นตลก/น่าสนใจจริงๆ เลยนะ (おもしろい = ตลก)"
+            "text": "あの 人は ほんとうに おもしろいですね。 = คนคนนั้นน่าสนใจ/ตลกจริงๆ เลยนะ (おもしろい = ตลก)"
           },
           {
             "choice": "あの 人は ほんとうに わかいですね。",
@@ -21212,12 +21212,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あの 店は おきゃくさんが 多いです。",
             "isCorrect": false,
-            "text": "あの 店は おきゃくさんが 多いです。 = ร้านนั้นลูกค้าเยอะมาก (おきゃくさんが多い = ลูกค้าเยอะ/แน่นร้าน)"
+            "text": "あの 店は おきゃくさんが 多いです。 = ร้านนั้นลูกค้าเยอะมาก (おきゃくさんが多い = ลูกค้าเยอะ)"
           },
           {
             "choice": "あの 店は おきゃくさんが 少ないです。",
             "isCorrect": true,
-            "text": "あの 店は おきゃくさんが 少ないです。 = ร้านนั้นลูกค้าน้อยมาก (คนโล่ง/คนน้อย ตรงกับ すいて います)"
+            "text": "あの 店は おきゃくさんが 少ないです。 = ร้านนั้นลูกค้าน้อยมาก (คนโล่ง/คนน้อย ตรงกับ すいている / おきゃくさんがすくない)"
           },
           {
             "choice": "あの 店は しなものが 多いです。",
@@ -21246,22 +21246,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "この シャワーは あつくないです。",
             "isCorrect": true,
-            "text": "この シャワーは あつくないです。 = ฝักบัวนี้ไม่ร้อน (อุ่นๆ/ไม่ร้อน ตรงกับ ぬるい)"
+            "text": "この シャワーは あつくないです。 = ฝักบัวนี้น้ำไม่ร้อน (อุ่นๆ/ไม่ร้อน ตรงกับ ぬるい / あつくない)"
           },
           {
             "choice": "この シャワーは あついです。",
             "isCorrect": false,
-            "text": "この シャワーは あついです。 = ฝักบัวนี้ร้อนมาก (あつい = ร้อน)"
+            "text": "この シャワーは あついです。 = ฝักบัวนี้น้ำร้อนมาก (あつい = ร้อน)"
           },
           {
             "choice": "この シャワーは つよいです。",
             "isCorrect": false,
-            "text": "この シャワーは つよいです。 = ฝักบัวนี้แรงดันน้ำแรงมาก (つよい = แรง)"
+            "text": "この シャワーは つよいです。 = ฝักบัวนี้น้ำไหลแรงมาก (つよい = แรง)"
           },
           {
             "choice": "この シャワーは つよくないです。",
             "isCorrect": false,
-            "text": "この シャワーは つよくないです。 = ฝักบัวนี้แรงดันน้ำไม่แรง (つよくない = ไม่แรง)"
+            "text": "この シャワーは つよくないです。 = ฝักบัวนี้น้ำไหลไม่แรง (つよくない = ไม่แรง)"
           }
         ]
       },
@@ -21300,7 +21300,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "友だちに 日本の りょうりを ならいました。",
             "isCorrect": true,
-            "text": "友だちに 日本の りょうりを ならいました。 = เรียนการทำอาหารญี่ปุ่นจากเพื่อน (เรียนรู้ ตรงกับ おそわりました)"
+            "text": "友だちに 日本の りょうりを ならいました。 = เรียนการทำอาหารญี่ปุ่นจากเพื่อน (เรียนรู้จาก ตรงกับ おそわる / ならう)"
           }
         ]
       },
@@ -21324,22 +21324,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "先週 えきまえに できた 店は、中の けしきが とても あかるいです。",
             "isCorrect": false,
-            "text": "この たてものは、けしきは ふるいですが、中は きれいです。 = อาคารนี้ภายนอกเก่า (ภายนอก ต้องใช้ 見た目/外観 不ใช่ けしき)"
+            "text": "先週 えきまえに できた 店は、中の けしきが とても あかるいです。 = แปลนิยายภาษาต่างประเทศเป็นภาษาญี่ปุ่น (แปลภาษา ต้องใช้ 翻訳する/ほんやくする)"
           },
           {
             "choice": "わたしは かぞくの たのしそうな けしきを いつも ビデオで とっています。",
             "isCorrect": false,
-            "text": "この 店の ケーキは、おいしくて けしきも かわいいです。 = เค้กหน้าตาน่ารัก (หน้าตาเค้ก ต้องใช้ 見た目/かたち 不ใช่ けしき)"
+            "text": "わたしは かぞくの たのしそうな けしきを いつも ビデオで とっています。 = แจ้งกำหนดเวลาการสอบให้นักเรียนทราบ (แจ้งข้อความ/ถ่ายทอดข้อมูล ใช้ つたえる ถูกต้อง)"
           },
           {
             "choice": "この まちは 山も 川も あって、けしきがとても いいです。",
             "isCorrect": true,
-            "text": "この まちは 山も 川も あって、けしきがとても いいです。 = เมืองนี้มีทั้งภูเขาและแม่น้ำ วิวทิวทัศน์สวยงามมาก (ใช้ けしき กับธรรมชาติ ถูกต้อง)"
+            "text": "この まちは 山も 川も あって、けしきがとても いいです。 = ส่งพัสดุที่ไปรษณีย์ (ส่งพัสดุ ต้องใช้ 荷物を送る/出す ไม่ใช่ つたえる)"
           },
           {
             "choice": "子どもの けしきが へんだったので、びょういんに つれて いきました。",
             "isCorrect": false,
-            "text": "子どもの けしきが へんだったので、びょういんに つれて いきました。 = อาการของลูกแปลกไป (อาการเด็ก ต้องใช้ 様子/ようす 不ใช่ けしき)"
+            "text": "子どもの けしきが へんだったので、びょういんに つれて いきました。 = มอบดอกไม้ให้เพื่อนในวันเกิด (มอบให้เป็นของขวัญ ต้องใช้ プレゼントする/あげる)"
           }
         ]
       },
@@ -21363,22 +21363,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "みんなの 前で 話す とき、いつも おどろいて じょうずに 話せません。",
             "isCorrect": false,
-            "text": "みんなの 前で 話す とき、いつも おどろいて じょうずに 話せません。 = ตื่นเต้นต่อหน้าคนเยอะ (ประหม่าตื่นเต้น ต้องใช้ きんちょうして ไม่ใช่ おどろいて)"
+            "text": "みんなの 前で 話す とき、いつも おどろいて じょうずに 話せません。 = เก็บกวาดห้องให้เรียบร้อยเพื่อเตรียมงานปาร์ตี้ (เก็บกวาดให้เรียบร้อย ใช้ かたづける ถูกต้อง)"
           },
           {
             "choice": "やまださんの おにいさんが ゆうめいな かしゅだと 聞いて、おどろきました。",
             "isCorrect": true,
-            "text": "やまださんの おにいさんが ゆうめいな かしゅだと 聞いて、おどろきました。 = ได้ยินว่าพี่ชายคุณยามาดะเป็นนักร้องดังเลยตกใจประหลาดใจมาก (ใช้ おどろく ถูกต้อง)"
+            "text": "やまださんの おにいさんが ゆうめいな かしゅだと 聞いて、おどろきました。 = อาจารย์แบ่งนักเรียนออกเป็น 3 กลุ่ม (แบ่งกลุ่ม ต้องใช้ グループに分ける)"
           },
           {
             "choice": "ねる 前に コーヒーを 飲むと、おどろいて ねむれません。",
             "isCorrect": false,
-            "text": "ねる 前に コーヒーを 飲むと、おどろいて ねむれません。 = ดื่มกาแฟแล้วตาสว่าง (ตาสว่าง ต้องใช้ 目がさえて 不ใช่ おどろいて)"
+            "text": "ねる 前に コーヒーを 飲むと、おどろいて ねむれません。 = บรรจุของขวัญลงกล่องสวยงาม (บรรจุลงกล่อง ต้องใช้ 箱につめる/入れる)"
           },
           {
             "choice": "あしたは はじめての デートなので、いまから おどろいて います。",
             "isCorrect": false,
-            "text": "あしたは はじめての デートなので、いまから おどろいて います。 = พรุ่งนี้เดตแรกตื่นเต้นจัง (ตื่นเต้นดีใจ ต้องใช้ わくわくして 不ใช่ おどろいて)"
+            "text": "あしたは はじめての デートなので、いまから おどろいて います。 = รวบรวมสรุปความคิดเห็นต่างๆ (สรุปความเห็น ต้องใช้ まとめる 不ใช่ かたづける)"
           }
         ]
       },
@@ -21402,22 +21402,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "みちが わからなく なったので、かばんから ちずを ひろいました。",
             "isCorrect": false,
-            "text": "みちが わからなく なったので、かばんから ちずを ひろいました。 = หยิบแผนที่ออกจากกระเป๋า (หยิบออกมา ต้องใช้ 出しました 不ใช่ ひろいました)"
+            "text": "みちが わからなく なったので、かばんから ちずを ひろいました。 = มีคำศัพท์ที่มีความหมายคล้ายกันมากมาย (ความหมายคล้ายกัน ต้องใช้ 意味が似ている)"
           },
           {
             "choice": "すみません、たなの 上の はこを ひろって くれませんか。",
             "isCorrect": false,
-            "text": "すみません、たなの 上の はこを ひろって くれませんか。 = ช่วยหยิบกล่องบนชั้นลงมาให้หน่อย (หยิบของจากที่สูง ต้องใช้ とって 不ใช่ ひろって)"
+            "text": "すみません、たなの 上の はこを ひろって くれませんか。 = คุณยามาดะใส่เสื้อผ้าสีแดงแล้วเข้ากันดีมากเลยนะ (เสื้อผ้าสีเข้ากับคน ใช้ にあう ถูกต้อง)"
           },
           {
             "choice": "木から りんごを ひろって、ふくろに 入れました。",
             "isCorrect": false,
-            "text": "木から りんごを ひろって、ふくろに 入れました。 = เด็ดแอปเปิ้ลจากต้น (เด็ดผลไม้จากต้น ต้องใช้ とって/もいで 不ใช่ ひろって)"
+            "text": "木から りんごを ひろって、ふくろに 入れました。 = เด็กคนนั้นดวงตาเหมือนคุณแม่มาก (หน้าเหมือนแม่ ต้องใช้ 目が似ている)"
           },
           {
             "choice": "小学生が ごみを ひろって、こうえんを そうじして います。",
             "isCorrect": true,
-            "text": "小学生が ごみを ひろって、こうえんを そうじして います。 = เด็กประถมช่วยกันเก็บขยะบนพื้นทำความสะอาดสวน (เก็บของจากพื้น ใช้ ひろう ถูกต้อง)"
+            "text": "小学生が ごみを ひろって、こうえんを そうじして います。 = นับหลายรอบแล้วแต่จำนวนไม่ตรงกัน (จำนวนไม่ตรงกัน ต้องใช้ 数が合わない)"
           }
         ]
       },
@@ -21441,22 +21441,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "119ばんに 電話して、きゅうきゅうしゃを いえに しょうたいしてください。",
             "isCorrect": false,
-            "text": "119ばんに 電話して、きゅうきゅうしゃを いえに しょうたいしてください。 = โทรเรียกรถพยาบาล (เรียกรถพยาบาล ต้องใช้ 呼んで/よんで ไม่ใช่ しょうたい)"
+            "text": "119ばんに 電話して、きゅうきゅうしゃを いえに しょうたいしてください。 = อาคารนี้ภายนอกเก่าแต่ข้างในสวย (ภายนอก ต้องใช้ 見た目/外観 ไม่ใช่ けしき)"
           },
           {
             "choice": "ぶちょうに しょうたいされて、休みの 日に 会社に 行きました。",
             "isCorrect": false,
-            "text": "ぶちょうに しょうたいされて、休みの 日に 会社に 行きました。 = โดนสั่งให้ไปทำงานวันหยุด (ถูกสั่ง/เรียกตัว ต้องใช้ 呼ばれて 不ใช่ しょうたい)"
+            "text": "ぶちょうに しょうたいされて、休みの 日に 会社に 行きました。 = เค้กร้านนี้หน้าตาน่ารัก (หน้าตาเค้ก ต้องใช้ 見た目/かたち 不ใช่ けしき)"
           },
           {
             "choice": "大学の こうはいを けっこんしきに しょうたいする つもりです。",
             "isCorrect": true,
-            "text": "大学の こうはいを けっこんしきに しょうたいする つもりです。 = ตั้งใจจะเชิญรุ่นน้องที่มหาวิทยาลัยมาร่วมงานแต่งงาน (เชิญร่วมงาน ใช้ しょうたいする ถูกต้อง)"
+            "text": "大学の こうはいを けっこんしきに しょうたいする つもりです。 = เมืองนี้มีทั้งภูเขาและแม่น้ำ ทิวทัศน์สวยงามมาก (ใช้ けしき กับธรรมชาติ ถูกต้อง)"
           },
           {
             "choice": "いしゃに しょうたいされて、あしたから にゅういんする ことに なりました。",
             "isCorrect": false,
-            "text": "いしゃに しょうたいされて、あしたから にゅういんする ことに なりました。 = หมอแนะนำให้แอดมิทโรงพยาบาล (หมอสั่ง/แนะนำ ต้องใช้ 言われて/指示されて)"
+            "text": "いしゃに しょうたいされて、あしたから にゅういんする ことに なりました。 = อาการของลูกแปลกไปเลยพาไปโรงพยาบาล (อาการเด็ก ต้องใช้ 様子/ようす 不ใช่ けしき)"
           }
         ]
       },
@@ -21480,22 +21480,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "毎日 にわの 花に 水を わたして います。",
             "isCorrect": false,
-            "text": "毎日 にわの 花に 水を わたして います。 = รดน้ำดอกไม้ในสวน (รดน้ำ ต้องใช้ 水をやる/あげる 不ใช่ わたす)"
+            "text": "毎日 にわの 花に 水を わたして います。 = ตื่นเต้นประหม่าต่อหน้าคนเยอะเลยพูดไม่เก่ง (ประหม่าตื่นเต้น ต้องใช้ 緊張して/きんちょうして)"
           },
           {
             "choice": "この きっぷは、かいさつぐちを 出る とき、えきいんに わたして ください。",
             "isCorrect": true,
-            "text": "この きっぷは、かいさつぐちを 出る とき、えきいんに わたして ください。 = ตั๋วใบนี้ ตอนออกจากช่องตรวจตั๋วกรุณายื่นให้เจ้าหน้าที่สถานี (ยื่นส่งให้ ใช้ わたす ถูกต้อง)"
+            "text": "この きっぷは、かいさつぐちを 出る とき、えきいんに わたして ください。 = ได้ยินว่าพี่ชายคุณยามาดะเป็นนักร้องดังเลยตกใจประหลาดใจมาก (ใช้ おどろく ถูกต้อง)"
           },
           {
             "choice": "この てがみを ポストに わたして きて ください。",
             "isCorrect": false,
-            "text": "この てがみを ポストに わたして きて ください。 = หยอดจดหมายลงตู้ไปรษณีย์ (หยอดตู้ ต้องใช้ ポストに入れて 不ใช่ わたして)"
+            "text": "この てがみを ポストに わたして きて ください。 = ดื่มกาแฟก่อนนอนเลยตาสว่างนอนไม่หลับ (ตาสว่าง ต้องใช้ 目がさえて 不ใช่ おどろいて)"
           },
           {
             "choice": "わたしは いつも こうちゃに さとうと ぎゅうにゅうを わたします。",
             "isCorrect": false,
-            "text": "わたしは いつも こうちゃに さとうと ぎゅうにゅうを わたします。 = ใส่ชานมและน้ำตาล (ใส่ส่วนผสม ต้องใช้ 入れます 不ใช่ わたします)"
+            "text": "わたしは いつも こうちゃに さとうと ぎゅうにゅうを わたします。 = พรุ่งนี้เดตครั้งแรกเลยตื่นเต้นดีใจตั้งแต่ตอนนี้ (ตื่นเต้นกระวนกระวายใจ ต้องใช้ わくわくして)"
           }
         ]
       }
@@ -21534,7 +21534,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "じぶん",
             "isCorrect": true,
-            "text": "じぶん = ตัวเอง"
+            "text": "じぶん = ตัวเอง, ตนเอง (自分)"
           },
           {
             "choice": "じいぶん",
@@ -21578,7 +21578,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "りょかん",
             "isCorrect": true,
-            "text": "りょかん = โรงแรมแบบดั้งเดิมของญี่ปุ่น"
+            "text": "りょかん = โรงแรมแบบญี่ปุ่น (旅館)"
           },
           {
             "choice": "りょがん",
@@ -21607,7 +21607,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さきに",
             "isCorrect": false,
-            "text": "さきに = วางบน, นำขึ้นวาง"
+            "text": "さきに = ก่อน, ล่วงหน้า (先に)"
           },
           {
             "choice": "べつに",
@@ -21622,7 +21622,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "とくに",
             "isCorrect": true,
-            "text": "とくに = โดยเฉพาะ/เป็นพิเศษ"
+            "text": "とくに = โดยเฉพาะ, เป็นพิเศษ (特に)"
           }
         ]
       },
@@ -21651,7 +21651,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きまりました",
             "isCorrect": true,
-            "text": "きまりました = ถูกกำหนด/ตัดสินแล้ว"
+            "text": "きまりました = ตัดสินใจแล้ว, กำหนดแล้ว (決まりました <- 決まる)"
           },
           {
             "choice": "はじまりました",
@@ -21695,12 +21695,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "つつんで",
             "isCorrect": false,
-            "text": "つつんで = เรื่องนี้เป็นความลับ"
+            "text": "つつんで = ห่อ (ของขวัญ/พัสดุ) (包んで <- 包む)"
           },
           {
             "choice": "すすんで",
             "isCorrect": true,
-            "text": "すすんで = ก้าวหน้า"
+            "text": "すすんで = ก้าวหน้า, สมัครใจ (進んで <- 進む)"
           }
         ]
       },
@@ -21724,7 +21724,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "かんで",
             "isCorrect": false,
-            "text": "かんで = วันนี้มีงานปาร์ตี้ จึงประดับดอกไม้ไว้ที่โต๊ะ"
+            "text": "かんで = เคี้ยว, กัด (噛んで <- 噛む)"
           },
           {
             "choice": "ふんで",
@@ -21734,7 +21734,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "はこんで",
             "isCorrect": true,
-            "text": "はこんで = ขน/แบกหาม"
+            "text": "はこんで = ขนย้าย, แบกหาม (運んで <- 運ぶ)"
           },
           {
             "choice": "たのんで",
@@ -21778,7 +21778,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "くうこう",
             "isCorrect": true,
-            "text": "くうこう = สนามบิน"
+            "text": "くうこう = สนามบิน (空港)"
           }
         ]
       },
@@ -21802,17 +21802,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "よわく",
             "isCorrect": true,
-            "text": "よわく = อ่อนลง/เบาลง"
+            "text": "よわく = อ่อนลง, เบาลง (弱く <- 弱い)"
           },
           {
             "choice": "つよく",
             "isCorrect": false,
-            "text": "つよく = ถามทางกับเจ้าหน้าที่สถานีรถไฟ (駅員 = พนักงานสถานี)"
+            "text": "つよく = อย่างแข็งแรง, อย่างรุนแรง (強く <- 強い)"
           },
           {
             "choice": "おそく",
             "isCorrect": false,
-            "text": "おそく = สบายดี, แข็งแรง"
+            "text": "おそく = ช้า, ดึก, สาย (遅く)"
           },
           {
             "choice": "はやく",
@@ -21841,7 +21841,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "じゅうしょ",
             "isCorrect": true,
-            "text": "じゅうしょ = ที่อยู่"
+            "text": "じゅうしょ = ที่อยู่ (住所)"
           },
           {
             "choice": "じゅうしょう",
@@ -21890,7 +21890,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "説明",
             "isCorrect": true,
-            "text": "説明 = การอธิบาย"
+            "text": "説明 (せつめい) = การอธิบาย, คำอธิบาย"
           },
           {
             "choice": "記明",
@@ -21919,7 +21919,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "起きます",
             "isCorrect": true,
-            "text": "起きます = ตื่นนอน"
+            "text": "起きます = ตื่นนอน, เกิดขึ้น (起きる)"
           },
           {
             "choice": "置きます",
@@ -21963,7 +21963,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "遠い",
             "isCorrect": true,
-            "text": "遠い = ไกล"
+            "text": "遠い = ไกล (とおい)"
           },
           {
             "choice": "違い",
@@ -22012,7 +22012,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "野菜",
             "isCorrect": true,
-            "text": "野菜 = ผัก"
+            "text": "野菜 (やさい) = ผัก"
           }
         ]
       },
@@ -22046,7 +22046,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "閉じて",
             "isCorrect": true,
-            "text": "閉じて = หลับตา/ปิด"
+            "text": "閉じて (とじて) = มาจาก 閉じる (ปิดหนังสือ/หลับตา)"
           },
           {
             "choice": "関じて",
@@ -22080,7 +22080,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "営業",
             "isCorrect": true,
-            "text": "営業 = เปิดทำการ/ดำเนินกิจการ"
+            "text": "営業 (えいぎょう) = การดำเนินกิจการ, เปิดทำการ"
           },
           {
             "choice": "宮事",
@@ -22114,7 +22114,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "せんぱい",
             "isCorrect": true,
-            "text": "せんぱい = รุ่นพี่"
+            "text": "せんぱい = รุ่นพี่ (先輩)"
           },
           {
             "choice": "しゃいん",
@@ -22124,12 +22124,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "てんいん",
             "isCorrect": false,
-            "text": "てんいん = โรงอาหาร"
+            "text": "てんいん = พนักงานร้าน (店員)"
           },
           {
             "choice": "しゃちょう",
             "isCorrect": false,
-            "text": "しゃちょう = สัตว์"
+            "text": "しゃちょう = ประธานบริษัท (社長)"
           }
         ]
       },
@@ -22153,7 +22153,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "スタート",
             "isCorrect": false,
-            "text": "スタート = การเริ่มต้น, การออกตัว"
+            "text": "スタート = การเริ่มต้น, ออกตัว (Start)"
           },
           {
             "choice": "オープン",
@@ -22163,12 +22163,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "スイッチ",
             "isCorrect": false,
-            "text": "スイッチ = สวิตช์ไฟ"
+            "text": "スイッチ = สวิตช์ไฟ (Switch)"
           },
           {
             "choice": "チェック",
             "isCorrect": true,
-            "text": "チェック = ตรวจสอบ/ตรวจเช็ก"
+            "text": "チェック = การตรวจสอบ, เช็ค (Check)"
           }
         ]
       },
@@ -22197,17 +22197,17 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あんない",
             "isCorrect": true,
-            "text": "あんない = พานำเที่ยว/นำทาง"
+            "text": "あんない = การนำทาง, การพาเที่ยวชม (案内)"
           },
           {
             "choice": "れんらく",
             "isCorrect": false,
-            "text": "れんらく = むしあつい (蒸し暑い) = ร้อนอบอ้าว (สภาพอากาศ)"
+            "text": "れんらく = การติดต่อ, การแจ้งให้ทราบ (連絡)"
           },
           {
             "choice": "しょうたい",
             "isCorrect": false,
-            "text": "しょうたい = わたす (渡す) = ส่งมอบ/ยื่นให้"
+            "text": "しょうたい = การเชื้อเชิญ, การเทียบเชิญ (招待)"
           }
         ]
       },
@@ -22241,7 +22241,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "あやまりませんでした",
             "isCorrect": true,
-            "text": "あやまりませんでした = ขอโทษ ในรูปปฏิเสธ 「あやまりませんでした」 = ไม่ขอโทษ"
+            "text": "あやまりませんでした = ไม่ได้ขอโทษ (謝りませんでした <- 謝る)"
           },
           {
             "choice": "まにあいませんでした",
@@ -22275,7 +22275,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "ふとって",
             "isCorrect": true,
-            "text": "ふとって = อ้วนขึ้น/ท้วม 「ふとっている」 = อ้วน"
+            "text": "ふとって = อ้วนท้วน (太って <- 太る)"
           },
           {
             "choice": "ふえて",
@@ -22309,12 +22309,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "アイディア",
             "isCorrect": true,
-            "text": "アイディア = ความคิด/ไอเดีย"
+            "text": "アイディア = ความคิด, ไอเดีย (Idea)"
           },
           {
             "choice": "ニュース",
             "isCorrect": false,
-            "text": "ニュース = ข่าว"
+            "text": "ニュース = ข่าว (News)"
           },
           {
             "choice": "クラブ",
@@ -22358,7 +22358,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "おくりました",
             "isCorrect": true,
-            "text": "おくりました = ส่งสิ่งของ/พัสดุ"
+            "text": "おくりました = ส่งไปแล้ว (送りました <- 送る)"
           },
           {
             "choice": "なげました",
@@ -22397,7 +22397,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "しますね",
             "isCorrect": true,
-            "text": "しますね = กาแฟแก้วนี้มีรสชาติแปลกๆ อยู่นะ"
+            "text": "しますね = จะทำนะคะ/ครับ (する)"
           },
           {
             "choice": "いますね",
@@ -22441,7 +22441,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "なおって",
             "isCorrect": true,
-            "text": "なおって = หายป่วย/หายดี"
+            "text": "なおって = หายป่วย, ซ่อมเสร็จ (治って/直って)"
           }
         ]
       },
@@ -22465,7 +22465,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "さして",
             "isCorrect": true,
-            "text": "さして = มีคนกางร่มเดินอยู่ ข้างนอกคงกำลังฝนตกอยู่แน่ๆ"
+            "text": "さして = กาง (ร่ม), ชี้ (指して/差して)"
           },
           {
             "choice": "おして",
@@ -22509,7 +22509,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "わたしは やまださんに「今日から かいものに 行って きます」と 言いました。",
             "isCorrect": false,
-            "text": "わたしは やまださんに「今日から かいものに 行って きます」と 言いました。 = ฉันบอกคุณยามาดะว่า \"ตั้งแต่จะไปซื้อของแล้วนะคะ\""
+            "text": "わたしは やまださんに「今日から かいものに 行って きます」と 言いました。 = ฉันบอกคุณยามาดะว่า \"จะไปซื้อของแล้วนะคะ\""
           },
           {
             "choice": "わたしは やまださんに「かいものに 行って きて ください」と 言いました。",
@@ -22519,7 +22519,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "わたしは やまださんに「いっしょに かいものに いきませんか」と 言いました。",
             "isCorrect": true,
-            "text": "わたしは やまださんに「いっしょに かいものに いきませんか」と 言いました。 = ฉันชวนคุณยามาดะว่า \"ไปซื้อของด้วยกันไหมคะ\" (ชวน ตรงกับ さそいました)"
+            "text": "わたしは やまださんに「いっしょに かいものに いきませんか」と 言いました。 = ฉันชวนคุณยามาดะว่า \"ไปซื้อของด้วยกันไหมคะ\" (ชวน ตรงกับ さそう / いきませんか)"
           }
         ]
       },
@@ -22543,7 +22543,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "デパートで さいふを とられました。",
             "isCorrect": true,
-            "text": "デパートで さいふを とられました。 = กระเป๋าสตางค์ถูกขโมยไปที่ห้าง (โดนขโมยไป ตรงกับ ぬすまれました)"
+            "text": "デパートで さいふを とられました。 = กระเป๋าสตางค์ถูกขโมยไปที่ห้าง (โดนขโมยไป ตรงกับ ぬすまれる / とられる)"
           },
           {
             "choice": "デパートで さいふを みせられました。",
@@ -22582,7 +22582,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "この 車は ヨーロッパで つくられて います。",
             "isCorrect": true,
-            "text": "この 車は ヨーロッパで つくられて います。 = รถคันนี้ผลิตขึ้นที่ยุโรป (ผลิตในยุโรป ตรงกับ ヨーロッパです)"
+            "text": "この 車は ヨーロッパで つくられて います。 = รถคันนี้ผลิตขึ้นที่ยุโรป (ผลิตที่ยุโรป ตรงกับ ヨーロッパです / つくられている)"
           },
           {
             "choice": "この 車は ヨーロッパで のられて います。",
@@ -22631,12 +22631,12 @@ const jlptN4KanjiExamData = {
           {
             "choice": "やまもとさんの じは ちいさいです。",
             "isCorrect": true,
-            "text": "やまもとさんの じは ちいさいです。 = ลายมือของคุณยามาโมโตะตัวเล็กละเอียด (ตัวเล็กละเอียด ตรงกับ こまかい)"
+            "text": "やまもとさんの じは ちいさいです。 = ลายมือของคุณยามาโมโตะตัวเล็กละเอียด (ตัวเล็กละเอียด ตรงกับ こまかい / ちいさい)"
           },
           {
             "choice": "やまもとさんの じは おおきいです。",
             "isCorrect": false,
-            "text": "やまもとさんの じは おおきいです。 = ลายมือของคุณยามาโมโตะตัวใหญ่ (おおきい = ตัวใหญ่)"
+            "text": "やまもとさんの じは おおきいです。 = ลายมือของคุณยามาโมโตะตัวใหญ่ (おおきい = ใหญ่)"
           }
         ]
       },
@@ -22665,7 +22665,7 @@ const jlptN4KanjiExamData = {
           {
             "choice": "きのうの かいぎには たなかさんは 来ませんでしたが、ほかの 人は 来ました。",
             "isCorrect": true,
-            "text": "きのうの かいぎには たなかさんは 来ませんでしたが、ほかの 人は 来ました。 = การประชุมเมื่อวานคุณทานากะไม่ได้มา แต่คนอื่นมากันหมด (ยกเว้นคุณทานากะ ตรงกับ たなかさん以外)"
+            "text": "きのうの かいぎには たなかさんは 来ませんでしたが、ほかの 人は 来ました。 = การประชุมเมื่อวานคุณทานากะไม่ได้มา แต่คนอื่นมากันหมด (ยกเว้นคุณทานากะ ตรงกับ 以外 / 来ませんでしたがほかの人は来た)"
           },
           {
             "choice": "きのうの かいぎには たなかさんが 来る 前に、ほかの 人が 来ました。",
@@ -22699,22 +22699,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "こんやの とちゅう、雨が ふるでしょう。",
             "isCorrect": false,
-            "text": "こんやの とちゅう、雨が ふるでしょう。 = คืนนี้ฝนน่าจะตก (ช่วงดึก ต้องใช้ 夜中/よなか 不ใช่ とちゅう)"
+            "text": "こんやの とちゅう、雨が ふるでしょう。 = หยิบแผนที่ออกจากกระเป๋า (หยิบออกจากกระเป๋า ต้องใช้ 地図を出す ไม่ใช่ ひろう)"
           },
           {
             "choice": "まるい テーブルの とちゅうに ケーキを おきました。",
             "isCorrect": false,
-            "text": "まるい テーブルの とちゅうに ケーキを おきました。 = วางเค้กไว้ตรงกลางโต๊ะกลม (ตรงกลาง ต้องใช้ まんなか 不ใช่ とちゅう)"
+            "text": "まるい テーブルの とちゅうに ケーキを おきました。 = ช่วยหยิบกล่องบนชั้นลงมาให้หน่อย (หยิบของจากที่สูง ต้องใช้ 箱をとる 不ใช่ ひろう)"
           },
           {
             "choice": "ビルと ビルの とちゅうから うみが 見えます。",
             "isCorrect": false,
-            "text": "ビルと ビルの とちゅうから うみが 見えます。 = มองเห็นทะเลจากระหว่างซอกตึก (ช่องว่างระหว่างตึก ต้องใช้ あいだ 不ใช่ とちゅう)"
+            "text": "ビルと ビルの とちゅうから うみが 見えます。 = เด็ดผลแอปเปิ้ลจากต้น (เด็ดผลไม้จากต้น ต้องใช้ りんごをもぐ/とる 不ใช่ ひろう)"
           },
           {
             "choice": "かいぎの とちゅうで 電話が なりました。",
             "isCorrect": true,
-            "text": "かいぎの とちゅうで 電話が なりました。 = โทรศัพท์ดังขึ้นกลางคันระหว่างการประชุม (ระหว่างดำเนินกิจกรรม ใช้ とちゅう ถูกต้อง)"
+            "text": "かいぎの とちゅうで 電話が なりました。 = เด็กประถมช่วยกันเก็บขยะบนพื้นทำความสะอาดสวน (เก็บของจากพื้น ใช้ ひろう ถูกต้อง)"
           }
         ]
       },
@@ -22738,22 +22738,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "今週は しごとの よていが おとなしいです。",
             "isCorrect": false,
-            "text": "今週は しごとの よていが おとなしいです。 = สัปดาห์นี้งานไม่ยุ่ง (งานเบา ต้องใช้ 楽/すくない 不ใช่ おとなしい)"
+            "text": "今週は しごとの よていが おとなしいです。 = โทรเรียกรถพยาบาลมาที่บ้าน (เรียกรถพยาบาล ต้องใช้ 救急車を呼ぶ/よぶ ไม่ใช่ しょうたい)"
           },
           {
             "choice": "きのうは おとなしい 天気でした。",
             "isCorrect": false,
-            "text": "きのうは おとなしい 天気でした。 = เมื่อวานอากาศสงบดี (อากาศดี ต้องใช้ おだやか/いい天気 不ใช่ おとなしい)"
+            "text": "きのうは おとなしい 天気でした。 = โดนหัวหน้าเรียกตัวไปทำงานวันหยุด (ถูกสั่ง/เรียกตัว ต้องใช้ 呼ばれて 不ใช่ しょうたい)"
           },
           {
             "choice": "たなかさんの いぬは おとなしいですね。",
             "isCorrect": true,
-            "text": "たなかさんの いぬは おとなしいですね。 = สุนัขของคุณทานากะเรียบร้อยว่าง่ายไม่ดุจังเลยนะ (สัตว์เลี้ยงว่าง่ายไม่ดุ ใช้ おとなしい ถูกต้อง)"
+            "text": "たなかさんの いぬは おとなしいですね。 = ตั้งใจจะเชิญรุ่นน้องที่มหาวิทยาลัยมาร่วมงานแต่งงาน (เชิญร่วมงาน ใช้ しょうたいする ถูกต้อง)"
           },
           {
             "choice": "ここは とても おとなしい レストランですね。",
             "isCorrect": false,
-            "text": "ここは とても おとなしい レストランですね。 = ร้านอาหารนี้เงียบสงบดีนะ (ร้านเงียบสงบ ต้องใช้ 静かな 不ใช่ おとなしい)"
+            "text": "ここは とても おとなしい レストランですね。 = หมอแนะนำให้เข้าพักรักษาตัวในโรงพยาบาล (หมอแนะนำ/สั่ง ต้องใช้ 指示されて/言われて)"
           }
         ]
       },
@@ -22777,22 +22777,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "外国語の しょうせつを 日本語に つたえました。",
             "isCorrect": false,
-            "text": "外国語の しょうせつを 日本語に つたえました。 = แปลนิยายภาษาต่างประเทศเป็นภาษาญี่ปุ่น (แปลภาษา ต้องใช้ ほんやくしました 不ใช่ つたえました)"
+            "text": "外国語の しょうせつを 日本語に つたえました。 = รดน้ำดอกไม้ในสวนทุกวัน (รดน้ำต้นไม้ ต้องใช้ 水をやる/あげる 不ใช่ わたす)"
           },
           {
             "choice": "学生に しけんの 時間を つたえました。",
             "isCorrect": true,
-            "text": "学生に しけんの 時間を つたえました。 = แจ้งเวลาการสอบให้นักเรียนทราบ (แจ้งข้อความ/ถ่ายทอดข้อมูล ใช้ つたえる ถูกต้อง)"
+            "text": "学生に しけんの 時間を つたえました。 = ตั๋วใบนี้ ตอนออกจากช่องตรวจตั๋วกรุณายื่นส่งให้เจ้าหน้าที่ (ยื่นส่งให้ ใช้ わたす ถูกต้อง)"
           },
           {
             "choice": "ゆうびんきょくで にもつを つたえました。",
             "isCorrect": false,
-            "text": "ゆうびんきょくで にもつを つたえました。 = ส่งพัสดุที่ไปรษณีย์ (ส่งพัสดุ ต้องใช้ 送りました/出しました 不ใช่ つたえました)"
+            "text": "ゆうびんきょくで にもつを つたえました。 = หยอดจดหมายลงตู้ไปรษณีย์ (หยอดตู้ไปรษณีย์ ต้องใช้ ポストに入れる 不ใช่ わたす)"
           },
           {
             "choice": "ともだちの たんじょうびに 花を つたえました。",
             "isCorrect": false,
-            "text": "ともだちの たんじょうびに 花を つたえました。 = มอบดอกไม้ให้เพื่อนในวันเกิด (มอบให้ ต้องใช้ プレゼントしました/あげました)"
+            "text": "ともだちの たんじょうびに 花を つたえました。 = ใส่นมและน้ำตาลลงในชาฝรั่ง (ใส่ส่วนผสม ต้องใช้ 砂糖と牛乳を入れる)"
           }
         ]
       },
@@ -22816,22 +22816,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "へやを かたづけて パーティーの じゅんびを しました。",
             "isCorrect": true,
-            "text": "へやを かたづけて パーティーの じゅんびを しました。 = เก็บกวาดห้องให้เรียบร้อยเพื่อเตรียมงานปาร์ตี้ (เก็บกวาดให้เรียบร้อย ใช้ かたづける ถูกต้อง)"
+            "text": "へやを かたづけて パーティーの じゅんびを しました。 = เครื่องซักผ้านี้เสียอยู่ จึงใช้งานไม่ได้ (ใช้ こしょう กับเครื่องจักร ถูกต้อง)"
           },
           {
             "choice": "せんせいは 学生を 三つの グループに かたづけました。",
             "isCorrect": false,
-            "text": "せんせいは 学生を 三つの グループに かたづけました。 = อาจารย์แบ่งนักเรียนออกเป็น 3 กลุ่ม (แบ่งกลุ่ม ต้องใช้ 分けました 不ใช่ かたづけました)"
+            "text": "せんせいは 学生を 三つの グループに かたづけました。 = แว่นตาตกแล้วพัง (แว่นตาตกแตก ต้องใช้ 壊れる / こわれる 不ใช่ こしょう)"
           },
           {
             "choice": "プレゼントを きれいな はこに かたづけて ともだちに あげます。",
             "isCorrect": false,
-            "text": "プレゼントを きれいな はこに かたづけて ともだちに あげます。 = บรรจุของขวัญลงกล่องสวยงาม (บรรจุ/ห่อ ต้องใช้ つめて/入れて 不ใช่ かたづけて)"
+            "text": "プレゼントを きれいな はこに かたづけて ともだちに あげます。 = เสื้อของลูกพัง (เสื้อผ้าฉีกขาด ต้องใช้ 破れる / やぶれる)"
           },
           {
             "choice": "いろいろな いけんが 出たので、少し かたづけました。",
             "isCorrect": false,
-            "text": "いろいろな いけんが 出たので、少し かたづけました。 = สรุปความคิดเห็นต่างๆ (สรุปความเห็น ต้องใช้ まとめました 不ใช่ かたづけました)"
+            "text": "いろいろな いけんが 出たので、少し かたづけました。 = กินมากไปจนปวดท้อง (ท้องเสีย/ปวดท้อง ต้องใช้ こわす / こわしました)"
           }
         ]
       },
@@ -22855,22 +22855,22 @@ const jlptN4KanjiExamData = {
           {
             "choice": "いみの にあって いる ことばが たくさん あります。",
             "isCorrect": false,
-            "text": "いみの にあって いる ことばが たくさん あります。 = มีคำศัพท์ที่มีความหมายคล้ายกันมากมาย (ความหมายคล้ายกัน ต้องใช้ 似ている 不ใช่ 似合う)"
+            "text": "いみの にあって いる ことばが たくさん あります。 = ชั้นวางหนังสือนี้ทำขึ้นเอง (ประกอบ/ทำเฟอร์นิเจอร์ ต้องใช้ 組み立てる / 作る 不ใช่ そだてる)"
           },
           {
             "choice": "やまださんは あかい ふくが にあいますね。",
             "isCorrect": true,
-            "text": "やまださんは あかい ふくが にあいますね。 = คุณยามาดะใส่เสื้อผ้าสีแดงแล้วเข้ากันดีมากเลยนะ (เสื้อผ้าสีเข้ากับคน ใช้ にあう ถูกต้อง)"
+            "text": "やまださんは あかい ふくが にあいますね。 = วันหยุดมักทำเค้กกับลูก (ทำเค้ก ต้องใช้ ケーキを作る ไม่ใช่ そだてる)"
           },
           {
             "choice": "あの 子は 目が お母さんに にあって いますね。",
             "isCorrect": false,
-            "text": "あの 子は 目が お母さんに にあって いますね。 = เด็กคนนั้นตาเหมือนแม่มาก (หน้าเหมือนแม่ ต้องใช้ 似ている 不ใช่ 似合う)"
+            "text": "あの 子は 目が お母さんに にあって いますね。 = ทำรายงานการบ้านที่ห้องสมุด (เขียนรายงาน ต้องใช้ レポートを書く ไม่ใช่ そだてる)"
           },
           {
             "choice": "なんども かぞえましたが、かずが にあいません。",
             "isCorrect": false,
-            "text": "なんども かぞえましたが、かずが にあいません。 = นับหลายรอบแล้วแต่จำนวนไม่ตรงกัน (จำนวนไม่ตรงกัน ต้องใช้ 合いません 不ใช่ 似合いません)"
+            "text": "なんども かぞえましたが、かずが にあいません。 = ฉันปลูกและดูแลดอกไม้หลากหลายชนิดในสวน (ใช้ そだてる กับการปลูกพืช/เลี้ยงดู ถูกต้อง)"
           }
         ]
       }
