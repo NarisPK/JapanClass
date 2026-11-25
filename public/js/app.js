@@ -2581,6 +2581,7 @@ function loadQuestion() {
         nextBtn.classList.remove('flex');
     }
     if (feedbackText) feedbackText.innerText = "";
+    if (window.kanjiExamHelper) window.kanjiExamHelper.hideResult();
 
     const activeMode = allQuizModes[currentModeKey];
     const currentData = activeMode.questions[currentQuestion];
@@ -3178,6 +3179,15 @@ function selectAnswer(selectedIndex, clickedButton) {
             questionHint.innerHTML = `<span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-lightbulb text-teal-500 animate-bounce" style="animation-duration: 2s"></i> <span><strong class="text-teal-700">ประโยคและคำแปล:</strong> <span class="text-slate-800 dark:text-slate-100 font-bold">${currentData.hint}</span></span></span>`;
             questionHint.classList.remove('hidden');
             questionHint.style.display = 'inline-block';
+        }
+
+        if (window.kanjiExamHelper) {
+            window.kanjiExamHelper.renderResult(selectedIndex === currentData.correct, currentData);
+            if (expBox) expBox.classList.add('hidden');
+            if (questionHint) {
+                questionHint.classList.add('hidden');
+                questionHint.style.display = 'none';
+            }
         }
 
         setTimeout(() => {
