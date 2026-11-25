@@ -1009,6 +1009,7 @@ function renderCategoryTabs() {
 }
 
 function switchCategoryTab(tab) {
+    if (window.listeningManager) window.listeningManager.stopAudio();
     currentCategoryTab = tab;
     renderCategoryTabs();
     renderModesList();
@@ -2661,12 +2662,22 @@ function loadQuestion() {
         if (choicesContainer) choicesContainer.classList.remove('hidden');
     }
 
+    // รีเซ็ตซ่อนการ์ดคำถามของทุกโหมดทั้งหมดไว้ก่อน เพื่อป้องกันไม่ให้การ์ดข้ามโหมดโผล่มาปนกัน
+    if (listeningQuestionCard) listeningQuestionCard.classList.add('hidden');
+    if (readingPassageCard) readingPassageCard.classList.add('hidden');
+    if (grammarSentenceCard) grammarSentenceCard.classList.add('hidden');
+    if (mediaCardContainer) mediaCardContainer.classList.add('hidden');
+    if (grammarExpBox) grammarExpBox.classList.add('hidden');
+    if (grammarTypeContainer) grammarTypeContainer.classList.add('hidden');
+    if (window.kanjiExamHelper) window.kanjiExamHelper.hideResult();
+
+    // หากไม่ได้อยู่ในโหมดการฟัง ให้หยุดเล่นเสียงคลิปข้อสอบฟังทันที
+    if (!activeMode.isListening && window.listeningManager) {
+        window.listeningManager.stopAudio();
+    }
+
     if (activeMode.isListening) {
         // --- โหมดข้อสอบการฟัง JLPT N4 (Listening Mode) ---
-        if (mediaCardContainer) mediaCardContainer.classList.add('hidden');
-        if (grammarSentenceCard) grammarSentenceCard.classList.add('hidden');
-        if (grammarExpBox) grammarExpBox.classList.add('hidden');
-        if (readingPassageCard) readingPassageCard.classList.add('hidden');
         if (listeningQuestionCard) listeningQuestionCard.classList.remove('hidden');
 
         mascotTalk(`ข้อสอบการฟังข้อที่ ${currentQuestion + 1}! กดฟังเสียงแล้วจับใจความให้ถูกต้องนะคะ 🎧✨`, 'idle');
@@ -2885,18 +2896,32 @@ function loadQuestion() {
             choicesContainer.classList.remove('hidden');
 
             if (activeMode.isListening) {
-                // สำหรับโหมดการฟัง: จัด 1 หรือ 2 คอลัมน์ตามความยาวตัวเลือก ไม่สลับตัวเลือก
-                const hasLong = currentData.choices.some(c => c && c.length > 20);
-                choicesContainer.className = hasLong ? "grid grid-cols-1 gap-3 max-w-2xl mx-auto" : "grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto";
-                currentData.choices.forEach((choice, index) => {
-                    const button = document.createElement('button');
-                    button.setAttribute('translate', 'no');
-                    button.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-indigo-100/80 bg-white hover:bg-indigo-50/80 hover:border-indigo-300 text-sm sm:text-base font-bold text-slate-800 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-start gap-3 cursor-pointer";
-                    button.innerHTML = `<span class="bg-indigo-100 text-indigo-700 px-2.5 py-0.5 rounded-lg text-xs font-black font-kawaii shrink-0 mt-0.5">${index + 1}</span> <span class="break-words font-japanese leading-relaxed">${choice}</span>`;
-                    button.setAttribute('data-no-click-sound', 'true');
-                    button.addEventListener('click', () => selectAnswer(index, button));
-                    choicesContainer.appendChild(button);
-                });
+                // สำหรับโหมดการฟัง: ตรวจสอบว่าเป็นตัวเลข 1, 2, 3, 4 ตามข้อสอบจริงหรือไม่ (กรณีไม่มีช้อยส์เป็นข้อความในกระดาษข้อสอบ)
+                const isNumericChoices = currentData.choices.every(c => /^[1-4]$/.test(String(c).trim()));
+                if (isNumericChoices) {
+                    choicesContainer.className = currentData.choices.length === 3 ? "grid grid-cols-3 gap-3 max-w-md mx-auto" : "grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-lg mx-auto";
+                    currentData.choices.forEach((choice, index) => {
+                        const button = document.createElement('button');
+                        button.setAttribute('translate', 'no');
+                        button.className = "w-full text-center py-4 px-4 rounded-2xl border-2 border-indigo-200/90 dark:border-indigo-800 bg-white dark:bg-slate-800 hover:bg-indigo-50/90 dark:hover:bg-slate-700/80 hover:border-indigo-400 text-xl sm:text-2xl font-black text-indigo-900 dark:text-indigo-200 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-center justify-center font-mono cursor-pointer";
+                        button.innerHTML = `<span>${index + 1}</span>`;
+                        button.setAttribute('data-no-click-sound', 'true');
+                        button.addEventListener('click', () => selectAnswer(index, button));
+                        choicesContainer.appendChild(button);
+                    });
+                } else {
+                    const hasLong = currentData.choices.some(c => c && c.length > 20);
+                    choicesContainer.className = hasLong ? "grid grid-cols-1 gap-3 max-w-2xl mx-auto" : "grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto";
+                    currentData.choices.forEach((choice, index) => {
+                        const button = document.createElement('button');
+                        button.setAttribute('translate', 'no');
+                        button.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-indigo-100/80 bg-white hover:bg-indigo-50/80 hover:border-indigo-300 text-sm sm:text-base font-bold text-slate-800 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-start gap-3 cursor-pointer";
+                        button.innerHTML = `<span class="bg-indigo-100 text-indigo-700 px-2.5 py-0.5 rounded-lg text-xs font-black font-kawaii shrink-0 mt-0.5">${index + 1}</span> <span class="break-words font-japanese leading-relaxed">${choice}</span>`;
+                        button.setAttribute('data-no-click-sound', 'true');
+                        button.addEventListener('click', () => selectAnswer(index, button));
+                        choicesContainer.appendChild(button);
+                    });
+                }
             } else if (activeMode.isReading) {
                 // สำหรับโหมดการอ่าน: แสดง 1 คอลัมน์ ไม่สลับตัวเลือก เพื่อรักษาความถูกต้องตามข้อสอบจริง
                 choicesContainer.className = "grid grid-cols-1 gap-3 max-w-2xl mx-auto";
@@ -3005,9 +3030,15 @@ function selectAnswer(selectedIndex, clickedButton) {
             window.listeningManager.recordScore(currentData.mondaiNum || 1, isCorrect);
         }
 
+        const isNumericChoices = currentData.choices.every(c => /^[1-4]$/.test(String(c).trim()));
+
         if (isCorrect) {
             playCorrectSound();
-            if (clickedButton) clickedButton.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-800 font-bold shadow-[0_0_15px_rgba(52,211,153,0.2)] flex items-start gap-3";
+            if (clickedButton) {
+                clickedButton.className = isNumericChoices
+                    ? "w-full text-center py-4 px-4 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-800 text-xl sm:text-2xl font-black font-mono shadow-[0_0_15px_rgba(52,211,153,0.2)] flex items-center justify-center"
+                    : "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-800 font-bold shadow-[0_0_15px_rgba(52,211,153,0.2)] flex items-start gap-3";
+            }
             let bonusExp = 0;
             let speedBonusText = "";
             if (currentPlayStyle === 'timer' && timeLeft >= Math.floor(timerDuration * 0.45)) {
@@ -3029,7 +3060,11 @@ function selectAnswer(selectedIndex, clickedButton) {
         } else {
             recordIncorrectQuestion(currentData);
             playIncorrectSound();
-            if (clickedButton) clickedButton.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-700 font-bold shadow-[0_0_15px_rgba(244,63,94,0.2)] flex items-start gap-3";
+            if (clickedButton) {
+                clickedButton.className = isNumericChoices
+                    ? "w-full text-center py-4 px-4 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-700 text-xl sm:text-2xl font-black font-mono shadow-[0_0_15px_rgba(244,63,94,0.2)] flex items-center justify-center"
+                    : "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-700 font-bold shadow-[0_0_15px_rgba(244,63,94,0.2)] flex items-start gap-3";
+            }
             if (feedbackText) {
                 feedbackText.innerText = "❌ 残念 (คำตอบยังไม่ถูกต้องน้าค๊า)";
                 feedbackText.className = "text-rose-500 text-sm font-black";
@@ -3040,7 +3075,9 @@ function selectAnswer(selectedIndex, clickedButton) {
             // ไฮไลต์เฉลยตัวเลือกที่ถูกต้อง
             allButtons.forEach((btn, idx) => {
                 if (idx === currentData.correct) {
-                    btn.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-800 font-bold shadow-md flex items-start gap-3 animate-pulse";
+                    btn.className = isNumericChoices
+                        ? "w-full text-center py-4 px-4 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-800 text-xl sm:text-2xl font-black font-mono shadow-md flex items-center justify-center animate-pulse"
+                        : "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-800 font-bold shadow-md flex items-start gap-3 animate-pulse";
                 }
             });
 
@@ -3556,6 +3593,9 @@ function showResults() {
 function goHome() {
     stopQuestionTimer();
     stopVoiceRecognition();
+    if (window.listeningManager) window.listeningManager.stopAudio();
+    const listeningCard = document.getElementById('listening-question-card');
+    if (listeningCard) listeningCard.classList.add('hidden');
     if (quizScreen) quizScreen.classList.add('hidden');
     if (resultArea) resultArea.classList.add('hidden');
     if (adminScreen) adminScreen.classList.add('hidden');

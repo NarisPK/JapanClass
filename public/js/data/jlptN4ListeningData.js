@@ -11,10 +11,10 @@ const jlptN4ListeningQuestions = [
     "hint": "ผู้ชายต้องใส่อะไรหลังจากใส่เนื้อ?",
     "image": null,
     "choices": [
-      "<ruby>砂糖<rt>さとう</rt></ruby>",
-      "<ruby>野菜<rt>やさい</rt></ruby>",
-      "<ruby>水<rt>みず</rt></ruby>",
-      "<ruby>醤油<rt>しょうゆ</rt></ruby>"
+      "パン",
+      "やさい",
+      "みず",
+      "しょうゆ"
     ],
     "correct": 0,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -22,7 +22,7 @@ const jlptN4ListeningQuestions = [
     "audioEnd": 261.2,
     "script": "男：最初に何入れるの？\n女：その肉入れて。\n男：その次は野菜？\n女：ああ、ちょっと待って。その前に砂糖を入れて、それから野菜。\n男：うん。\n女：それで次は水を入れて、最後は醤油ね。\n男：うん、分かった。",
     "scriptThai": "ชาย: ตอนแรกต้องใส่อะไรลงไปก่อน?\nหญิง: ใส่เนื้อนั่นลงไป\nชาย: ต่อไปใส่ผักเหรอ?\nหญิง: อ๊ะ เดี๋ยวก่อนนะ ก่อนหน้านั้นให้ใส่น้ำตาลก่อน แล้วค่อยใส่ผัก\nชาย: อืม\nหญิง: จากนั้นก็ใส่น้ำ แล้วสุดท้ายค่อยใส่โชยุนะ\nชาย: อืม เข้าใจแล้ว",
-    "explanation": "ทำไมถึงตอบข้อ 1 (砂糖): ผู้หญิงบอกว่าหลังจากใส่เนื้อแล้ว 'その前に砂糖を入れて、それから野菜' (ให้ใส่น้ำตาลก่อน แล้วค่อยใส่ผัก) ลำดับที่ถูกต้องคือ: เนื้อ ➔ น้ำตาล ➔ ผัก ➔ น้ำ ➔ โชยุ ดังนั้นสิ่งที่ต้องใส่ทันทีหลังใส่เนื้อคือน้ำตาล (砂糖)"
+    "explanation": "ทำไมถึงตอบข้อ 1 (パン): ผู้หญิงบอกว่าหลังจากใส่เนื้อแล้ว 'その前にパンを入れて、それから野菜' (ให้ใส่ขนมปัง/เกล็ดขนมปังก่อน แล้วค่อยใส่ผัก) ลำดับที่ถูกต้องคือ: เนื้อ ➔ ขนมปัง ➔ ผัก ➔ น้ำ ➔ โชยุ ดังนั้นสิ่งที่ต้องใส่ทันทีหลังใส่เนื้อคือขนมปัง (パン)"
   },
   {
     "id": "jlpt_n4_2021_12_m1_q2",
@@ -33,10 +33,10 @@ const jlptN4ListeningQuestions = [
     "hint": "ลูกชายจะซื้อรองเท้าแตะคู่ไหน?",
     "image": "images/jlpt_listening_2021_12/m1_q2_sandals.png",
     "choices": [
-      "<ruby>白<rt>しろ</rt></ruby> M",
-      "<ruby>白<rt>しろ</rt></ruby> L",
-      "<ruby>黒<rt>くろ</rt></ruby> M",
-      "<ruby>黒<rt>くろ</rt></ruby> L"
+      "1",
+      "2",
+      "3",
+      "4"
     ],
     "correct": 3,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -55,10 +55,10 @@ const jlptN4ListeningQuestions = [
     "hint": "ผู้หญิงจะทำอะไร?",
     "image": "images/jlpt_listening_2021_12/m1_q3_tasks.png",
     "choices": [
-      "<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>を<ruby>買<rt>か</rt></ruby>ってくる",
-      "<ruby>掃除<rt>そうじ</rt></ruby>する",
-      "<ruby>料理<rt>りょうり</rt></ruby>する",
-      "<ruby>皿<rt>さら</rt></ruby>を<ruby>洗<rt>あら</rt></ruby>う"
+      "1",
+      "2",
+      "3",
+      "4"
     ],
     "correct": 0,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -77,10 +77,10 @@ const jlptN4ListeningQuestions = [
     "hint": "ผู้หญิงจะทำอะไรเป็นอย่างแรกหลังจากนี้?",
     "image": "images/jlpt_listening_2021_12/m1_q4_ski.png",
     "choices": [
-      "<ruby>服<rt>ふく</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶ・<ruby>着替<rt>きが</rt></ruby>える",
-      "<ruby>道具<rt>どうぐ</rt></ruby>を<ruby>借<rt>か</rt></ruby>りる",
-      "お<ruby>金<rt>かね</rt></ruby>を<ruby>払<rt>はら</rt></ruby>う",
-      "<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>預<rt>あず</rt></ruby>ける"
+      "1",
+      "2",
+      "3",
+      "4"
     ],
     "correct": 0,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -99,10 +99,10 @@ const jlptN4ListeningQuestions = [
     "hint": "นักเรียนชายกำลังจะไปที่ไหน?",
     "image": null,
     "choices": [
-      "<ruby>自分<rt>じぶん</rt></ruby>のうち",
-      "<ruby>図書館<rt>としょかん</rt></ruby>",
-      "<ruby>教室<rt>きょうしつ</rt></ruby>",
-      "<ruby>事務所<rt>じむしょ</rt></ruby>"
+      "じぶんのうち",
+      "としょかん",
+      "きょうしつ",
+      "じむしょ"
     ],
     "correct": 2,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -121,10 +121,10 @@ const jlptN4ListeningQuestions = [
     "hint": "ผู้ชายจะเก็บ/ยกอะไรออกไป?",
     "image": "images/jlpt_listening_2021_12/m1_q6_table.png",
     "choices": [
-      "<ruby>灰皿<rt>はいざら</rt></ruby>",
-      "コップ",
-      "<ruby>花瓶<rt>かびん</rt></ruby>",
-      "パソコン"
+      "1",
+      "2",
+      "3",
+      "4"
     ],
     "correct": 2,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -143,10 +143,10 @@ const jlptN4ListeningQuestions = [
     "hint": "ในวิชานี้ นักเรียนต้องเตรียมสมุดด้วยตนเองกี่เล่ม?",
     "image": null,
     "choices": [
-      "1 <ruby>冊<rt>さつ</rt></ruby>",
-      "2 <ruby>冊<rt>さつ</rt></ruby>",
-      "3 <ruby>冊<rt>さつ</rt></ruby>",
-      "4 <ruby>冊<rt>さつ</rt></ruby>"
+      "1さつ",
+      "2さつ",
+      "3さつ",
+      "4さつ"
     ],
     "correct": 0,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -165,10 +165,10 @@ const jlptN4ListeningQuestions = [
     "hint": "นักเรียนหญิงจะทำงานตั้งแต่กี่โมงถึงกี่โมงในวันพรุ่งนี้?",
     "image": null,
     "choices": [
-      "<ruby>午前<rt>ごぜん</rt></ruby>6<ruby>時<rt>じ</rt></ruby>から <ruby>午前<rt>ごぜん</rt></ruby>10<ruby>時<rt>じ</rt></ruby>まで",
-      "<ruby>午前<rt>ごぜん</rt></ruby>6<ruby>時<rt>じ</rt></ruby>から <ruby>午後<rt>ごご</rt></ruby>1<ruby>時<rt>じ</rt></ruby>まで",
-      "<ruby>午前<rt>ごぜん</rt></ruby>10<ruby>時<rt>じ</rt></ruby>から <ruby>午後<rt>ごご</rt></ruby>1<ruby>時<rt>じ</rt></ruby>まで",
-      "<ruby>午前<rt>ごぜん</rt></ruby>10<ruby>時<rt>じ</rt></ruby>から <ruby>午後<rt>ごご</rt></ruby>5<ruby>時<rt>じ</rt></ruby>まで"
+      "午前6時から 午前10時まで",
+      "午前6時から 午後1時まで",
+      "午前10時から 午後1時まで",
+      "午前10時から 午後5時まで"
     ],
     "correct": 1,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -187,10 +187,10 @@ const jlptN4ListeningQuestions = [
     "hint": "ทำไมผู้ชายถึงไม่ไปคาราโอเกะ?",
     "image": null,
     "choices": [
-      "<ruby>用事<rt>ようじ</rt></ruby>があるから",
-      "カラオケが<ruby>嫌<rt>きら</rt></ruby>いだから",
-      "<ruby>今週<rt>こんしゅう</rt></ruby><ruby>試験<rt>しけん</rt></ruby>があるから",
-      "<ruby>喉<rt>のど</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いから"
+      "ようじがあるから",
+      "カラオケがきらいだから",
+      "今週しけんがあるから",
+      "のどがいたいから"
     ],
     "correct": 3,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -209,10 +209,10 @@ const jlptN4ListeningQuestions = [
     "hint": "ผู้ชายขอร้องให้ช่วยอะไร?",
     "image": null,
     "choices": [
-      "<ruby>会場<rt>かいじょう</rt></ruby>の<ruby>準備<rt>じゅんび</rt></ruby>をすること",
-      "<ruby>試合<rt>しあい</rt></ruby><ruby>前<rt>まえ</rt></ruby>に<ruby>練習<rt>れんしゅう</rt></ruby>をすること",
-      "<ruby>会場<rt>かいじょう</rt></ruby>を<ruby>借<rt>か</rt></ruby>りること",
-      "<ruby>試合<rt>しあい</rt></ruby>を<ruby>見<rt>み</rt></ruby>に<ruby>来<rt>く</rt></ruby>ること"
+      "かいじょうのじゅんびをすること",
+      "しあい前にれんしゅうをすること",
+      "かいじょうをかりること",
+      "しあいを見に来ること"
     ],
     "correct": 0,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -231,9 +231,9 @@ const jlptN4ListeningQuestions = [
     "hint": "ทำไมผู้หญิงถึงไม่ค่อยทานอาหาร?",
     "image": null,
     "choices": [
-      "<ruby>寿司<rt>すし</rt></ruby>が<ruby>好<rt>す</rt></ruby>きじゃないから",
-      "<ruby>具合<rt>ぐあい</rt></ruby>が<ruby>悪<rt>わる</rt></ruby>いから",
-      "<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>が<ruby>遅<rt>おそ</rt></ruby>かったから",
+      "すしがすきじゃないから",
+      "ぐあいがわるいから",
+      "ひるごはんがおそかったから",
       "ダイエットしているから"
     ],
     "correct": 2,
@@ -253,10 +253,10 @@ const jlptN4ListeningQuestions = [
     "hint": "เมื่อวานนักเรียนหญิงเดินทางไปซื้อของอย่างไร?",
     "image": null,
     "choices": [
-      "バスに<ruby>乗<rt>の</rt></ruby>っていった",
-      "<ruby>車<rt>くるま</rt></ruby>を<ruby>運転<rt>うんてん</rt></ruby>していった",
-      "<ruby>歩<rt>ある</rt></ruby>いていった",
-      "<ruby>自転車<rt>じてんしゃ</rt></ruby>でいった"
+      "バスにのって行った",
+      "車をうんてんして行った",
+      "あるいて行った",
+      "じてんしゃで行った"
     ],
     "correct": 1,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -275,12 +275,12 @@ const jlptN4ListeningQuestions = [
     "hint": "หัวหน้าจะอยู่ออฟฟิศวันไหนบ้างในสัปดาห์หน้า?",
     "image": null,
     "choices": [
-      "<ruby>火曜日<rt>かようび</rt></ruby>と<ruby>水曜日<rt>すいようび</rt></ruby>",
-      "<ruby>火曜日<rt>かようび</rt></ruby>と<ruby>金曜日<rt>きんようび</rt></ruby>",
-      "<ruby>水曜日<rt>すいようび</rt></ruby>と<ruby>金曜日<rt>きんようび</rt></ruby>",
-      "<ruby>火曜日<rt>かようび</rt></ruby>と<ruby>水曜日<rt>すいようび</rt></ruby>と<ruby>金曜日<rt>きんようび</rt></ruby>"
+      "火ようびと水ようび",
+      "火ようびと金ようび",
+      "水ようびと金ようび",
+      "火ようびと水ようびと金ようび"
     ],
-    "correct": 0,
+    "correct": 2,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
     "audioStart": 1333.3,
     "audioEnd": 1448.9,
@@ -297,12 +297,12 @@ const jlptN4ListeningQuestions = [
     "hint": "พยากรณ์อากาศบอกว่าพรุ่งนี้สภาพอากาศจะเป็นอย่างไร?",
     "image": null,
     "choices": [
-      "<ruby>一日中<rt>いちにちじゅう</rt></ruby><ruby>雨<rt>あめ</rt></ruby>",
-      "<ruby>一日中<rt>いちにちじゅう</rt></ruby><ruby>晴<rt>は</rt></ruby>れ",
-      "<ruby>午前<rt>ごぜん</rt></ruby>は<ruby>晴<rt>は</rt></ruby>れ、<ruby>午後<rt>ごご</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>",
-      "<ruby>午前<rt>ごぜん</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>、<ruby>午後<rt>ごご</rt></ruby>は<ruby>晴<rt>は</rt></ruby>れ"
+      "一日中雨",
+      "一日中はれ",
+      "午前ははれ、午後は雨",
+      "午前は雨、午後ははれ"
     ],
-    "correct": 1,
+    "correct": 2,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
     "audioStart": 1448.9,
     "audioEnd": 1542.9,
@@ -319,12 +319,12 @@ const jlptN4ListeningQuestions = [
     "hint": "ผู้หญิงเริ่มเรียนภาษาญี่ปุ่นเมื่อไหร่?",
     "image": null,
     "choices": [
-      "<ruby>小学生<rt>しょうがくせい</rt></ruby>のとき",
-      "<ruby>中学生<rt>ちゅうがくせい</rt></ruby>のとき",
-      "<ruby>高校生<rt>こうこうせい</rt></ruby>のとき",
-      "<ruby>大学生<rt>だいがくせい</rt></ruby>のとき"
+      "小学生のとき",
+      "中学生のとき",
+      "高校生のとき",
+      "大学生のとき"
     ],
-    "correct": 3,
+    "correct": 1,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
     "audioStart": 1542.9,
     "audioEnd": 1650.2,
@@ -341,9 +341,9 @@ const jlptN4ListeningQuestions = [
     "hint": "ทำอาหารเสร็จแล้ว อยากถามเพื่อนว่าอร่อยไหม/ให้เพื่อนลองทานดู พูดว่าอย่างไร?",
     "image": "images/jlpt_listening_2021_12/m3_q1_cooking.png",
     "choices": [
-      "これを<ruby>食<rt>た</rt></ruby>べるつもり？",
-      "ちょっと<ruby>食<rt>た</rt></ruby>べてみて。",
-      "<ruby>是非<rt>ぜひ</rt></ruby><ruby>見<rt>み</rt></ruby>たいんだよ。"
+      "1",
+      "2",
+      "3"
     ],
     "correct": 1,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -362,9 +362,9 @@ const jlptN4ListeningQuestions = [
     "hint": "โทรผิดเบอร์ ต้องพูดว่าอย่างไร?",
     "image": "images/jlpt_listening_2021_12/m3_q2_phone.png",
     "choices": [
-      "すみません。<ruby>違<rt>ちが</rt></ruby>いますよ。",
-      "すみません。もう 1 <ruby>度<rt>ど</rt></ruby>かけてください。",
-      "すみません。<ruby>間違<rt>まちが</rt></ruby>えました。"
+      "1",
+      "2",
+      "3"
     ],
     "correct": 2,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -383,9 +383,9 @@ const jlptN4ListeningQuestions = [
     "hint": "เพื่อนพูดอยู่หน้าห้องเรียน เสียงเบาฟังไม่ได้ยิน ต้องพูดว่าอย่างไร?",
     "image": "images/jlpt_listening_2021_12/m3_q3_classroom.png",
     "choices": [
-      "もう<ruby>少<rt>すこ</rt></ruby>し<ruby>大<rt>おお</rt></ruby>きい<ruby>声<rt>こえ</rt></ruby>で<ruby>話<rt>はな</rt></ruby>してもらえませんか？",
-      "すみません。<ruby>声<rt>こえ</rt></ruby>が<ruby>少<rt>すこ</rt></ruby>し<ruby>大<rt>おお</rt></ruby>きいと<ruby>思<rt>おも</rt></ruby>います。",
-      "<ruby>声<rt>こえ</rt></ruby>が<ruby>聞<rt>き</rt></ruby>こえますか？"
+      "1",
+      "2",
+      "3"
     ],
     "correct": 0,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -404,9 +404,9 @@ const jlptN4ListeningQuestions = [
     "hint": "เห็นคนเดินข้างหน้าทำถุงมือตก ต้องพูดว่าอย่างไร?",
     "image": "images/jlpt_listening_2021_12/m3_q4_gloves.png",
     "choices": [
-      "<ruby>手袋<rt>てぶくろ</rt></ruby>を<ruby>落<rt>お</rt></ruby>としましたよ。",
-      "<ruby>手袋<rt>てぶくろ</rt></ruby><ruby>拾<rt>ひろ</rt></ruby>いましょうか？",
-      "<ruby>手袋<rt>てぶくろ</rt></ruby><ruby>忘<rt>わす</rt></ruby>れてしまったんですか？"
+      "1",
+      "2",
+      "3"
     ],
     "correct": 0,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -425,9 +425,9 @@ const jlptN4ListeningQuestions = [
     "hint": "อยู่ในร้านกาแฟ อยากขอย้ายไปนั่งโต๊ะกว้างๆ ที่ว่างอยู่ ต้องบอกพนักงานอย่างไร?",
     "image": "images/jlpt_listening_2021_12/m3_q5_cafe.png",
     "choices": [
-      "あの、<ruby>向<rt>む</rt></ruby>こうに<ruby>行<rt>い</rt></ruby>きませんか？",
-      "あの、あちらの<ruby>席<rt>せき</rt></ruby>に<ruby>座<rt>すわ</rt></ruby>ってください。",
-      "あの、あっちに<ruby>移<rt>うつ</rt></ruby>りたいんですが..."
+      "1",
+      "2",
+      "3"
     ],
     "correct": 2,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -446,9 +446,9 @@ const jlptN4ListeningQuestions = [
     "hint": "ดึกแล้ว วันนี้ขอตัวกลับก่อนนะครับ/ค่ะ",
     "image": null,
     "choices": [
-      "<ruby>是非<rt>ぜひ</rt></ruby>また<ruby>来<rt>き</rt></ruby>てくださいね。",
-      "お<ruby>邪魔<rt>じゃま</rt></ruby>します。",
-      "あ、いらっしゃい。"
+      "1",
+      "2",
+      "3"
     ],
     "correct": 0,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -467,9 +467,9 @@ const jlptN4ListeningQuestions = [
     "hint": "หนังสือที่ยืมคุณครูมาเมื่อสัปดาห์ก่อนสนุกไหม?",
     "image": null,
     "choices": [
-      "<ruby>面白<rt>おもしろ</rt></ruby>い<ruby>先生<rt>せんせい</rt></ruby>だったよ。",
-      "まだ<ruby>全部<rt>ぜんぶ</rt></ruby><ruby>読<rt>よ</rt></ruby>んでいないんだ。",
-      "あまり<ruby>白<rt>しろ</rt></ruby>くなかった。"
+      "1",
+      "2",
+      "3"
     ],
     "correct": 1,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -488,9 +488,9 @@ const jlptN4ListeningQuestions = [
     "hint": "เคยมาร้านอาหารนี้มาก่อนไหม?",
     "image": null,
     "choices": [
-      "レストランの<ruby>前<rt>まえ</rt></ruby>にありました。",
-      "<ruby>今<rt>いま</rt></ruby><ruby>来<rt>き</rt></ruby>たところです。",
-      "いえ、<ruby>初<rt>はじ</rt></ruby>めてです。"
+      "1",
+      "2",
+      "3"
     ],
     "correct": 2,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -509,9 +509,9 @@ const jlptN4ListeningQuestions = [
     "hint": "คุณริน มีปัญหาอะไรบอกได้ตลอดเลยนะ",
     "image": null,
     "choices": [
-      "<ruby>大変<rt>たいへん</rt></ruby>だったね。",
-      "うん。<ruby>相談<rt>そうだん</rt></ruby>するね。",
-      "あんまり<ruby>言<rt>い</rt></ruby>わない<ruby>方<rt>ほう</rt></ruby>がいい。"
+      "1",
+      "2",
+      "3"
     ],
     "correct": 1,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -530,9 +530,9 @@ const jlptN4ListeningQuestions = [
     "hint": "ห้องนี้หนาวนิดหน่อย ขอเพิ่มอุณหภูมิแอร์ได้ไหม?",
     "image": null,
     "choices": [
-      "まだ<ruby>上<rt>あ</rt></ruby>げていませんよ。",
-      "すみませんが<ruby>消<rt>け</rt></ruby>さないでください。",
-      "お<ruby>願<rt>ねが</rt></ruby>いします。<ruby>私<rt>わたし</rt></ruby>も<ruby>寒<rt>さむ</rt></ruby>いです。"
+      "1",
+      "2",
+      "3"
     ],
     "correct": 2,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -551,9 +551,9 @@ const jlptN4ListeningQuestions = [
     "hint": "รู้ไหมว่าสอบภาษาญี่ปุ่นเปลี่ยนเป็นวันไหน?",
     "image": null,
     "choices": [
-      "<ruby>分<rt>ふん</rt></ruby>になったよ。",
-      "<ruby>水曜日<rt>すいようび</rt></ruby>だよ。",
-      "<ruby>試験<rt>しけん</rt></ruby>があるよ。"
+      "1",
+      "2",
+      "3"
     ],
     "correct": 1,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -572,9 +572,9 @@ const jlptN4ListeningQuestions = [
     "hint": "คุณทานากะถือของเยอะจัง ให้ช่วยถือสักชิ้นไหม?",
     "image": null,
     "choices": [
-      "1<ruby>人<rt>ひとり</rt></ruby>で<ruby>持<rt>も</rt></ruby>てるので<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>です。",
-      "じゃあ1つ<ruby>持<rt>も</rt></ruby>ちましょう。",
-      "<ruby>持<rt>も</rt></ruby>ってもらえないんですか？"
+      "1",
+      "2",
+      "3"
     ],
     "correct": 0,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
@@ -593,9 +593,9 @@ const jlptN4ListeningQuestions = [
     "hint": "คอมพิวเตอร์เสียตั้งแต่เมื่อวานแล้วครับ/ค่ะ",
     "image": null,
     "choices": [
-      "でもまだインターネットは<ruby>使<rt>つか</rt></ruby>えませんよ。",
-      "<ruby>早<rt>はや</rt></ruby>く<ruby>治<rt>なお</rt></ruby>って<ruby>良<rt>よ</rt></ruby>かったですね。",
-      "<ruby>私<rt>わたし</rt></ruby>の<ruby>古<rt>ふる</rt></ruby>いのを<ruby>使<rt>つか</rt></ruby>いますか？"
+      "1",
+      "2",
+      "3"
     ],
     "correct": 2,
     "audioSrc": "audio/jlpt_n4_listening_2021_12.mp3",
