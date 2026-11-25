@@ -480,3 +480,10 @@ if (typeof jlptN4ReadingData !== 'undefined') {
         defaultQuizModes[k] = jlptN4ReadingData[k];
     });
 }
+
+// ผนวกข้อมูลข้อสอบพาร์ทการฟัง JLPT N4 (聴解) จากข้อสอบจริง
+if (typeof jlptN4ListeningData !== 'undefined') {
+    Object.keys(jlptN4ListeningData).forEach(k => {
+        defaultQuizModes[k] = jlptN4ListeningData[k];
+    });
+}

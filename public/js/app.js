@@ -963,7 +963,7 @@ function renderCategoryTabs() {
             { id: 'kanji_exam', label: '📝 พาร์ทคันจิ', count: '292 ข้อ' },
             { id: 'grammar', label: '⛩️ ไวยากรณ์', count: '118 ข้อ' },
             { id: 'reading', label: '📖 การอ่าน', count: '44 ข้อ' },
-            { id: 'listening', label: '🎧 การฟัง', count: 'เตรียมพร้อม 🌸' }
+            { id: 'listening', label: '🎧 การฟัง', count: '28 ข้อ' }
         ];
         container.innerHTML = tabs.map(t => {
             const isActive = currentCategoryTab === t.id;
@@ -1060,6 +1060,23 @@ function renderModesList() {
     const isKanjiExamTab = currentCategoryTab === 'kanji_exam';
     const isGrammarTab = currentCategoryTab === 'grammar';
     const isReadingTab = currentCategoryTab === 'reading';
+    const isListeningTab = currentCategoryTab === 'listening';
+
+    // ถ้าเปิดแท็บพาร์ทการฟัง แต่ไม่ได้อยู่ที่เล่ม 5 (JLPT N4) ให้แสดงการ์ดแนะนำให้ไปเล่ม 5
+    if (isListeningTab && currentBook !== 5) {
+        const notice = document.createElement('div');
+        notice.className = "w-full p-6 bg-white/85 dark:bg-slate-800 rounded-3xl border-2 border-indigo-200 dark:border-indigo-800 text-center space-y-3 shadow-sm";
+        notice.innerHTML = `
+            <div class="text-4xl">🎧</div>
+            <div class="font-extrabold text-slate-800 dark:text-slate-100 text-sm md:text-base">คลังข้อสอบพาร์ทการฟัง (聴解) พร้อมใช้งานแล้วในระดับ JLPT N4 (เล่ม 5)</div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">ครบทั้ง 4 ส่วน もんだい 1-4 รวม 28 ข้อ พร้อมไฟล์เสียงจริง สคริปต์ แปลไทย และคำอธิบายเฉลยละเอียด</p>
+            <button onclick="switchBook(5); switchCategoryTab('listening');" class="px-5 py-2.5 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-xl font-black text-xs shadow-md hover:scale-105 transition-all">
+                🚀 ไปฝึกพาร์ทการฟัง JLPT N4 เล่ม 5 ทันที!
+            </button>
+        `;
+        container.appendChild(notice);
+        return;
+    }
 
     // ถ้าเปิดแท็บพาร์ทคันจิ แต่ไม่ได้อยู่ที่เล่ม 5 (JLPT N4) ให้แสดงการ์ดแนะนำให้ไปเล่ม 5
     if (isKanjiExamTab && currentBook !== 5) {
@@ -1098,86 +1115,61 @@ function renderModesList() {
         const modeBook = mode.book || 1;
         if (modeBook !== currentBook) return false;
 
-        if (isReadingTab) {
+        if (isListeningTab) {
+            return !!mode.isListening;
+        } else if (isReadingTab) {
             return !!mode.isReading;
         } else if (isKanjiExamTab) {
             return !!mode.isKanjiExam;
         } else if (isGrammarTab) {
-            return !!mode.isGrammar && !mode.isReading && !mode.isKanjiExam;
+            return !!mode.isGrammar && !mode.isReading && !mode.isKanjiExam && !mode.isListening;
         } else {
-            return !mode.isGrammar && !mode.isReading && !mode.isKanjiExam;
+            return !mode.isGrammar && !mode.isReading && !mode.isKanjiExam && !mode.isListening;
         }
     });
 
     // พาร์ทการฟัง (聴解) สำหรับ JLPT N4 (Book 5)
     if (currentBook === 5 && currentCategoryTab === 'listening') {
-        const listeningSections = [
-            {
-                title: "課題理解 (かだいりかい) การเข้าใจงาน",
-                sub: "ฟังบทสนทนาแล้วจับใจความว่าต้องทำอะไรต่อไป",
-                emoji: "📋",
-                badge: "เตรียมพร้อม 🎧",
-                badgeClass: "bg-indigo-100 text-indigo-700 border-indigo-200",
-                desc: "ฟังบทสนทนาระหว่างบุคคล 2 คน แล้วเลือกคำตอบว่าหลังจากนี้ตัวละครจะต้องทำอะไรเป็นลำดับแรก"
-            },
-            {
-                title: "ポイント理解 (ポイントりかい) จับประเด็นสำคัญ",
-                sub: "ฟังข้อมูลเพื่อค้นหาเหตุผล จุดมุ่งหมาย หรือเงื่อนไข",
-                emoji: "🎯",
-                badge: "เตรียมพร้อม 🎧",
-                badgeClass: "bg-rose-100 text-rose-700 border-rose-200",
-                desc: "มีเวลาให้อ่านตัวเลือกก่อนฟัง จากนั้นฟังเนื้อหาเพื่อจับประเด็นสำคัญตามคำถาม"
-            },
-            {
-                title: "発話表現 (はつわひょうげん) การเลือกสำนวนพูด",
-                sub: "ดูภาพลูกศรชี้ แล้วเลือกประโยคที่ควรพูดให้เหมาะสม",
-                emoji: "💬",
-                badge: "เตรียมพร้อม 🎧",
-                badgeClass: "bg-amber-100 text-amber-700 border-amber-200",
-                desc: "ดูภาพสถานการณ์พร้อมลูกศรชี้ที่ตัวละคร แล้วเลือกสำนวนภาษาญี่ปุ่นที่ถูกต้องเหมาะสมกับสถานการณ์"
-            },
-            {
-                title: "即時応答 (そくじおうとう) การตอบสนองทันที",
-                sub: "ฟังประโยคสั้นๆ แล้วเลือกคำตอบโต้ตอบกลับทันที",
-                emoji: "⚡",
-                badge: "เตรียมพร้อม 🎧",
-                badgeClass: "bg-teal-100 text-teal-700 border-teal-200",
-                desc: "ฟังประโยคคำถามหรือประโยคทักทายสั้นๆ แล้วเลือกคำตอบที่ตอบกลับได้อย่างถูกต้องและเป็นธรรมชาติ"
-            },
-            {
-                title: "🎲 สุ่มรวมข้อสอบการฟัง N4 ครบทุกพาร์ท",
-                sub: "จำลองห้องสอบการฟัง JLPT N4 เสมือนจริง",
-                emoji: "🏆",
-                badge: "เร็วๆ นี้ ✨",
-                badgeClass: "bg-purple-100 text-purple-700 border-purple-200",
-                desc: "จำลองการสอบการฟัง JLPT N4 ครบทุกรูปแบบพร้อมจับเวลาและนับคะแนนเสมือนจริง"
-            }
+        const listeningOrder = [
+            'jlpt_n4_listening_2021_12',
+            'jlpt_n4_listening_2021_12_m1',
+            'jlpt_n4_listening_2021_12_m2',
+            'jlpt_n4_listening_2021_12_m3',
+            'jlpt_n4_listening_2021_12_m4'
         ];
+        
+        listeningOrder.forEach(key => {
+            const mode = allQuizModes[key];
+            if (!mode) return;
 
-        listeningSections.forEach(sec => {
-            const card = document.createElement('div');
-            card.className = "w-full p-4 bg-gradient-to-r from-purple-50 to-indigo-50/70 border-2 border-purple-200/80 rounded-2xl text-left transition-all duration-300 shadow-sm relative overflow-hidden group hover:border-purple-300";
-            card.innerHTML = `
-                <div class="absolute -right-4 -bottom-4 text-5xl opacity-10 group-hover:opacity-20 group-hover:scale-125 transition-all duration-300">${sec.emoji}</div>
+            const button = document.createElement('div');
+            button.className = "w-full p-4 bg-gradient-to-r from-indigo-50/90 via-purple-50/80 to-pink-50/70 border-2 border-indigo-200/90 rounded-2xl text-left transition-all duration-300 shadow-sm relative overflow-hidden group hover:border-indigo-400 hover:shadow-md cursor-pointer";
+            button.onclick = () => selectMode(key);
+
+            const isAll = key === 'jlpt_n4_listening_2021_12';
+            const badgeBg = isAll ? "bg-purple-600 text-white" : "bg-indigo-100 text-indigo-700 border border-indigo-200";
+            const badgeText = isAll ? "🎧 สอบรวม 28 ข้อ" : `${mode.questions.length} ข้อ`;
+
+            button.innerHTML = `
+                <div class="absolute -right-4 -bottom-4 text-5xl opacity-10 group-hover:opacity-25 group-hover:scale-125 transition-all duration-300">🎧</div>
                 <div class="flex items-start justify-between gap-3 relative z-10 mb-2">
                     <div class="flex items-center gap-3">
-                        <span class="text-2xl bg-white p-2 rounded-xl border border-purple-100 shadow-inner">${sec.emoji}</span>
+                        <span class="text-2xl bg-white p-2 rounded-xl border border-indigo-100 shadow-sm">${isAll ? '🏆' : '🎧'}</span>
                         <div>
-                            <span class="font-extrabold text-purple-950 text-xs md:text-sm block tracking-wide">${sec.title}</span>
-                            <span class="text-[9.5px] text-purple-700/80 font-bold block mt-0.5">${sec.sub}</span>
+                            <span class="font-black text-indigo-950 text-xs md:text-sm block tracking-wide">${mode.title}</span>
+                            <span class="text-[9.5px] text-indigo-600 font-bold block mt-0.5">${mode.description}</span>
                         </div>
                     </div>
-                    <span class="text-[9px] font-black px-2 py-0.5 rounded-full border ${sec.badgeClass} shrink-0">${sec.badge}</span>
+                    <span class="text-[9px] font-black px-2.5 py-1 rounded-full ${badgeBg} shrink-0 shadow-xs">${badgeText}</span>
                 </div>
-                <p class="text-[10px] text-slate-600 font-medium pl-1 relative z-10">${sec.desc}</p>
-                <div class="mt-3 pt-2.5 border-t border-purple-100/60 flex items-center justify-between text-[10px] text-purple-600 font-bold">
-                    <span class="flex items-center gap-1"><i class="fa-solid fa-headphones"></i> ไฟล์เสียงข้อสอบจริง JLPT N4</span>
-                    <button onclick="showComingSoonNotice('การฟัง (聴解)', '${sec.title}')" class="px-2.5 py-1 bg-white hover:bg-purple-100 text-purple-700 rounded-lg border border-purple-200 transition text-[9.5px] font-extrabold">
-                        ดูรายละเอียด 🎧
+                <div class="mt-3 pt-2.5 border-t border-indigo-100/70 flex items-center justify-between text-[10px] text-indigo-700 font-bold">
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-volume-high text-indigo-500 animate-pulse"></i> ไฟล์เสียงแท้ JLPT 2021/12</span>
+                    <button class="px-3 py-1.5 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white rounded-lg shadow-sm font-extrabold text-[10px] transition-transform active:scale-95 flex items-center gap-1">
+                        เริ่มทำแบบทดสอบ <i class="fa-solid fa-arrow-right text-[8px]"></i>
                     </button>
                 </div>
             `;
-            container.appendChild(card);
+            container.appendChild(button);
         });
         return;
     }
@@ -2157,6 +2149,9 @@ window.playCurrentQuestionAudio = playCurrentQuestionAudio;
 function advanceToNextQuestion() {
     stopQuestionTimer();
     stopVoiceRecognition();
+    if (window.listeningManager) {
+        window.listeningManager.stopAudio();
+    }
     currentQuestion++;
     const activeMode = allQuizModes[currentModeKey];
     if (activeMode && currentQuestion < activeMode.questions.length) {
@@ -2198,13 +2193,17 @@ function selectMode(modeKey, isRetry = false) {
 
     currentModeKey = modeKey;
 
-    // สุ่มสลับคำถามก่อนเริ่มเล่นทุกครั้ง (ยกเว้นโหมดการอ่าน เพื่อรักษาลำดับบทความและข้อคำถาม)
+    // สุ่มสลับคำถามก่อนเริ่มเล่นทุกครั้ง (ยกเว้นโหมดการอ่านและการฟัง เพื่อรักษาลำดับบทความและข้อคำถามตามไฟล์เสียงจริง)
     const questions = allQuizModes[modeKey].questions;
-    if (!selectedMode.isReading) {
+    if (!selectedMode.isReading && !selectedMode.isListening) {
         for (let i = questions.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [questions[i], questions[j]] = [questions[j], questions[i]];
         }
+    }
+
+    if (window.listeningManager) {
+        window.listeningManager.resetScores();
     }
 
     currentQuestion = 0;
@@ -2606,6 +2605,7 @@ function loadQuestion() {
     const readingPassageTitle = document.getElementById('reading-passage-title');
     const readingPassageBody = document.getElementById('reading-passage-body');
     const readingQuestionText = document.getElementById('reading-question-text');
+    const listeningQuestionCard = document.getElementById('listening-question-card');
 
     const timerContainer = document.getElementById('quiz-timer-container');
     const writingContainer = document.getElementById('writing-mode-container');
@@ -2668,7 +2668,74 @@ function loadQuestion() {
         if (choicesContainer) choicesContainer.classList.remove('hidden');
     }
 
-    if (activeMode.isReading) {
+    if (activeMode.isListening) {
+        // --- โหมดข้อสอบการฟัง JLPT N4 (Listening Mode) ---
+        if (mediaCardContainer) mediaCardContainer.classList.add('hidden');
+        if (grammarSentenceCard) grammarSentenceCard.classList.add('hidden');
+        if (grammarExpBox) grammarExpBox.classList.add('hidden');
+        if (readingPassageCard) readingPassageCard.classList.add('hidden');
+        if (listeningQuestionCard) listeningQuestionCard.classList.remove('hidden');
+
+        mascotTalk(`ข้อสอบการฟังข้อที่ ${currentQuestion + 1}! กดฟังเสียงแล้วจับใจความให้ถูกต้องนะคะ 🎧✨`, 'idle');
+
+        const listeningBadgeText = document.getElementById('listening-badge-text');
+        const listeningQuestionNum = document.getElementById('listening-question-num');
+        const listeningQuestionText = document.getElementById('listening-question-text');
+        const listeningQuestionHint = document.getElementById('listening-question-hint');
+        const listeningImageContainer = document.getElementById('listening-image-container');
+        const listeningImage = document.getElementById('listening-image');
+        const scriptBox = document.getElementById('listening-script-box');
+        const toggleScriptIcon = document.getElementById('toggle-script-icon');
+        const toggleScriptText = document.getElementById('toggle-script-text');
+        const scriptJp = document.getElementById('listening-script-jp');
+        const scriptTh = document.getElementById('listening-script-th');
+
+        if (listeningBadgeText) listeningBadgeText.innerText = currentData.mondai || '聴解';
+        if (listeningQuestionNum) listeningQuestionNum.innerText = `ข้อ ${currentData.examQNum || (currentQuestion + 1)}`;
+        if (listeningQuestionText) listeningQuestionText.innerText = currentData.character || '';
+        if (listeningQuestionHint) {
+            listeningQuestionHint.innerText = currentData.hint ? `แปล: ${currentData.hint}` : '';
+            listeningQuestionHint.classList.add('hidden'); // ซ่อนไว้ก่อนตอบ
+        }
+
+        if (currentData.image) {
+            if (listeningImageContainer) listeningImageContainer.classList.remove('hidden');
+            if (listeningImage) listeningImage.src = currentData.image;
+        } else {
+            if (listeningImageContainer) listeningImageContainer.classList.add('hidden');
+        }
+
+        // รีเซ็ตกล่องสคริปต์
+        if (scriptBox) scriptBox.classList.add('hidden');
+        if (toggleScriptIcon) toggleScriptIcon.className = "fa-solid fa-chevron-down";
+        if (toggleScriptText) toggleScriptText.innerText = "ดูบทสนทนา (Script) & คำแปลภาษาไทย";
+        if (scriptJp) scriptJp.innerText = currentData.script || '(ไม่มีบทสนทนายาว)';
+        if (scriptTh) scriptTh.innerText = currentData.scriptThai || '(ไม่มีคำแปล)';
+
+        // รีเซ็ต Progress bar เสียง
+        const progressBar = document.getElementById('listening-progress-bar');
+        if (progressBar) progressBar.style.width = '0%';
+        const timeDisplay = document.getElementById('listening-time-display');
+        const duration = (currentData.audioEnd || 0) - (currentData.audioStart || 0);
+        const m = Math.floor(duration / 60);
+        const s = Math.floor(duration % 60);
+        if (timeDisplay) timeDisplay.innerText = `00:00 / ${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        const playIcon = document.getElementById('listening-play-icon');
+        if (playIcon) playIcon.className = "fa-solid fa-play ml-0.5 text-indigo-600";
+
+        // ซ่อนคำแปล/คำใบ้ทั่วไป
+        if (questionHint) {
+            questionHint.classList.add('hidden');
+            questionHint.style.display = 'none';
+            questionHint.innerHTML = '';
+        }
+
+        // เริ่มเล่นเสียงให้อัตโนมัติเมื่อเข้าสู่ข้อ
+        if (window.listeningManager) {
+            window.listeningManager.replayAudio();
+        }
+    } else if (activeMode.isReading) {
+        if (listeningQuestionCard) listeningQuestionCard.classList.add('hidden');
         // --- โหมดการอ่านข้อสอบจริง JLPT N4 (Reading Comprehension Mode) ---
         if (mediaCardContainer) mediaCardContainer.classList.add('hidden');
         if (grammarSentenceCard) grammarSentenceCard.classList.add('hidden');
@@ -2690,6 +2757,7 @@ function loadQuestion() {
         }
     } else if (activeMode.isKanjiExam) {
         // --- โหมดข้อสอบพาร์ทคันจิ JLPT N4 (Kanji Exam Part Mode) ---
+        if (listeningQuestionCard) listeningQuestionCard.classList.add('hidden');
         if (readingPassageCard) readingPassageCard.classList.add('hidden');
         if (mediaCardContainer) mediaCardContainer.classList.add('hidden');
         if (grammarSentenceCard) grammarSentenceCard.classList.remove('hidden');
@@ -2824,7 +2892,20 @@ function loadQuestion() {
         if (currentPlayStyle !== 'writing' && currentPlayStyle !== 'speaking') {
             choicesContainer.classList.remove('hidden');
 
-            if (activeMode.isReading) {
+            if (activeMode.isListening) {
+                // สำหรับโหมดการฟัง: จัด 1 หรือ 2 คอลัมน์ตามความยาวตัวเลือก ไม่สลับตัวเลือก
+                const hasLong = currentData.choices.some(c => c && c.length > 20);
+                choicesContainer.className = hasLong ? "grid grid-cols-1 gap-3 max-w-2xl mx-auto" : "grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto";
+                currentData.choices.forEach((choice, index) => {
+                    const button = document.createElement('button');
+                    button.setAttribute('translate', 'no');
+                    button.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-indigo-100/80 bg-white hover:bg-indigo-50/80 hover:border-indigo-300 text-sm sm:text-base font-bold text-slate-800 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-95 arcade-btn-glow notranslate flex items-start gap-3 cursor-pointer";
+                    button.innerHTML = `<span class="bg-indigo-100 text-indigo-700 px-2.5 py-0.5 rounded-lg text-xs font-black font-kawaii shrink-0 mt-0.5">${index + 1}</span> <span class="break-words font-japanese leading-relaxed">${choice}</span>`;
+                    button.setAttribute('data-no-click-sound', 'true');
+                    button.addEventListener('click', () => selectAnswer(index, button));
+                    choicesContainer.appendChild(button);
+                });
+            } else if (activeMode.isReading) {
                 // สำหรับโหมดการอ่าน: แสดง 1 คอลัมน์ ไม่สลับตัวเลือก เพื่อรักษาความถูกต้องตามข้อสอบจริง
                 choicesContainer.className = "grid grid-cols-1 gap-3 max-w-2xl mx-auto";
                 currentData.choices.forEach((choice, index) => {
@@ -2913,7 +2994,85 @@ function selectAnswer(selectedIndex, clickedButton) {
 
     const allButtons = choicesContainer.querySelectorAll('button');
 
-    if (activeMode.isReading) {
+    if (activeMode.isListening) {
+        // --- ประมวลผลผลลัพธ์โหมดการฟัง (Listening Comprehension Mode) ---
+        const expBox = document.getElementById('grammar-explanation-box');
+        const listeningQuestionHint = document.getElementById('listening-question-hint');
+        const scriptBox = document.getElementById('listening-script-box');
+        const toggleScriptIcon = document.getElementById('toggle-script-icon');
+        const toggleScriptText = document.getElementById('toggle-script-text');
+
+        // แสดงคำแปลคำถามทันทีหลังตอบ
+        if (listeningQuestionHint) listeningQuestionHint.classList.remove('hidden');
+
+        // แสดงสคริปต์บทสนทนาอัตโนมัติเพื่อให้ผู้เรียนอ่านทบทวนได้ทันที
+        if (scriptBox) {
+            scriptBox.classList.remove('hidden');
+            if (toggleScriptIcon) toggleScriptIcon.className = "fa-solid fa-chevron-up";
+            if (toggleScriptText) toggleScriptText.innerText = "ซ่อนบทสนทนา (Script)";
+        }
+
+        const isCorrect = (selectedIndex === currentData.correct);
+        if (window.listeningManager) {
+            window.listeningManager.recordScore(currentData.mondaiNum || 1, isCorrect);
+        }
+
+        if (isCorrect) {
+            playCorrectSound();
+            if (clickedButton) clickedButton.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-800 font-bold shadow-[0_0_15px_rgba(52,211,153,0.2)] flex items-start gap-3";
+            let bonusExp = 0;
+            let speedBonusText = "";
+            if (currentPlayStyle === 'timer' && timeLeft >= Math.floor(timerDuration * 0.45)) {
+                bonusExp = 15;
+                speedBonusText = " ⚡ Speed Bonus +15 EXP!";
+            }
+            if (feedbackText) {
+                feedbackText.innerText = "🌸 正解 (ฟังจับใจความถูกต้องยอดเยี่ยมค๊า!)" + speedBonusText;
+                feedbackText.className = "text-emerald-500 text-sm font-black animate-pulse";
+            }
+            score++;
+            if (scoreDisplay) scoreDisplay.innerText = score;
+            comboStreak++;
+            playerEXP += 30 + (comboStreak * 5) + bonusExp;
+            calculateRPGBond();
+            updateComboUI();
+
+            mascotTalk(`เก่งมากๆ เลยค๊าาา! ฟังจับใจความได้ถูกต้องยอดเยี่ยม! คอมโบสะสม x${comboStreak} แล้วน้า! 🎉`, 'happy');
+        } else {
+            recordIncorrectQuestion(currentData);
+            playIncorrectSound();
+            if (clickedButton) clickedButton.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-700 font-bold shadow-[0_0_15px_rgba(244,63,94,0.2)] flex items-start gap-3";
+            if (feedbackText) {
+                feedbackText.innerText = "❌ 残念 (คำตอบยังไม่ถูกต้องน้าค๊า)";
+                feedbackText.className = "text-rose-500 text-sm font-black";
+            }
+            comboStreak = 0;
+            updateComboUI();
+
+            // ไฮไลต์เฉลยตัวเลือกที่ถูกต้อง
+            allButtons.forEach((btn, idx) => {
+                if (idx === currentData.correct) {
+                    btn.className = "w-full text-left py-3.5 px-5 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-800 font-bold shadow-md flex items-start gap-3 animate-pulse";
+                }
+            });
+
+            mascotTalk("ไม่เป็นไรนะคะ ลองอ่านสคริปต์บทสนทนาและคำอธิบายเฉลยด้านล่างเพื่อทำความเข้าใจนะค๊า! 🌸", 'sad');
+        }
+
+        // แสดงคำอธิบายเฉลยละเอียด (ทำไมถึงตอบข้อนี้)
+        if (expBox && currentData.explanation) {
+            expBox.innerHTML = `<span class="font-black text-indigo-700 block mb-1">💡 ทำไมถึงตอบข้อนี้ (解説):</span>${currentData.explanation}`;
+            expBox.classList.remove('hidden');
+        }
+
+        allButtons.forEach(btn => btn.disabled = true);
+        if (nextBtn) {
+            nextBtn.classList.remove('hidden');
+            nextBtn.classList.add('flex');
+            nextBtn.focus();
+        }
+        return;
+    } else if (activeMode.isReading) {
         // --- ประมวลผลผลลัพธ์โหมดการอ่าน (Reading Comprehension Mode) ---
         const expBox = document.getElementById('grammar-explanation-box');
 
@@ -3311,6 +3470,50 @@ function showResults() {
         currentTotalScoreEl.innerText = ` / ${totalQs} เควสต์`;
     }
 
+    // หยุดเสียงการฟังเมื่อจบเกม
+    if (window.listeningManager) {
+        window.listeningManager.stopAudio();
+    }
+
+    // แสดงคะแนนแยกตาม もんだい สำหรับโหมดการฟัง
+    const activeMode = allQuizModes[currentModeKey];
+    const listeningBreakdownCard = document.getElementById('listening-breakdown-card');
+    const listeningBreakdownList = document.getElementById('listening-breakdown-list');
+
+    if (activeMode && activeMode.isListening && listeningBreakdownCard && listeningBreakdownList) {
+        listeningBreakdownCard.classList.remove('hidden');
+        const scores = window.listeningManager ? window.listeningManager.getScores() : {};
+        const mondaiNames = {
+            1: "もんだい 1 (課題理解)",
+            2: "もんだい 2 (ポイント理解)",
+            3: "もんだい 3 (発話表現)",
+            4: "もんだい 4 (即時応答)"
+        };
+
+        let breakdownHtml = "";
+        for (let m = 1; m <= 4; m++) {
+            const data = scores[m] || { correct: 0, total: 0 };
+            if (data.total > 0) {
+                const pct = Math.round((data.correct / data.total) * 100);
+                const barColor = pct >= 80 ? 'bg-emerald-500' : (pct >= 50 ? 'bg-amber-500' : 'bg-rose-500');
+                breakdownHtml += `
+                    <div class="p-2.5 bg-white rounded-xl border border-indigo-100 shadow-xs">
+                        <div class="flex items-center justify-between font-bold mb-1">
+                            <span class="text-indigo-950">${mondaiNames[m]}</span>
+                            <span class="text-indigo-600 font-mono font-black">${data.correct} / ${data.total} (${pct}%)</span>
+                        </div>
+                        <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                            <div class="${barColor} h-full rounded-full transition-all duration-500" style="width: ${pct}%"></div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+        listeningBreakdownList.innerHTML = breakdownHtml;
+    } else if (listeningBreakdownCard) {
+        listeningBreakdownCard.classList.add('hidden');
+    }
+
     // แสดง/ซ่อนปุ่มทำอีกครั้งเฉพาะข้อที่ตอบผิด
     const retryBtn = document.getElementById('retry-incorrect-btn');
     const retryBtnText = document.getElementById('retry-incorrect-btn-text');
@@ -3397,6 +3600,9 @@ function goHome() {
         gameTerminalCol.classList.add('md:col-span-9');
     }
 
+    if (window.listeningManager) {
+        window.listeningManager.stopAudio();
+    }
     if (modeSelectionScreen) modeSelectionScreen.classList.remove('hidden');
     window.speechSynthesis.cancel();
     initHomepage();
@@ -3467,6 +3673,9 @@ function openPasswordGate() {
 function closePasswordGate() {
     const passwordModal = document.getElementById('password-gate-modal');
     if (passwordModal) passwordModal.classList.add('hidden');
+    if (window.listeningManager) {
+        window.listeningManager.stopAudio();
+    }
     if (modeSelectionScreen) modeSelectionScreen.classList.remove('hidden');
     initHomepage();
 }
@@ -3541,6 +3750,9 @@ async function enterAdmin() {
 
 function exitAdmin() {
     if (adminScreen) adminScreen.classList.add('hidden');
+    if (window.listeningManager) {
+        window.listeningManager.stopAudio();
+    }
     if (modeSelectionScreen) modeSelectionScreen.classList.remove('hidden');
     initHomepage();
 }
