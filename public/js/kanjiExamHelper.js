@@ -1851,17 +1851,11 @@
                     isCorrect: false,
                     text: `${choiceClean} <span class="text-rose-500 font-bold">ไม่มีคำนี้ในภาษาญี่ปุ่น</span>`
                 };
-            } else if (questionType.includes('もんだい4') || questionType.includes('類義')) {
-                return {
-                    choice: choiceClean,
-                    isCorrect: false,
-                    text: `${choiceClean} <span class="text-slate-400 font-normal">(ความหมายไม่ใกล้เคียงกับโจทย์)</span>`
-                };
             } else {
                 return {
                     choice: choiceClean,
                     isCorrect: false,
-                    text: `${choiceClean} <span class="text-slate-400 font-normal">(ความหมายไม่เข้ากับบริบทประโยค)</span>`
+                    text: `${choiceClean}`
                 };
             }
         });
