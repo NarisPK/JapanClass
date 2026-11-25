@@ -531,15 +531,17 @@
                                 </div>
                             </div>
 
-                            <!-- ปุ่มเปิด/ปิด สคริปต์บทสนทนาและคำแปล (เปิดดูได้เพื่อทบทวน) -->
-                            <div class="pt-1">
-                                <button type="button" id="toggle-script-btn" onclick="toggleListeningScript()"
-                                    class="w-full py-2 px-3 bg-indigo-50 dark:bg-slate-700/70 hover:bg-indigo-100/80 dark:hover:bg-slate-700 text-indigo-700 dark:text-indigo-300 rounded-xl border border-indigo-200 dark:border-slate-600 text-xs font-black flex items-center justify-center gap-2 transition cursor-pointer">
-                                    <i id="toggle-script-icon" class="fa-solid fa-chevron-down"></i>
-                                    <span id="toggle-script-text">ดูบทสนทนา (Script) & คำแปลภาษาไทย</span>
-                                </button>
-                                <!-- กล่องสคริปต์ (ซ่อน/แสดง) -->
-                                <div id="listening-script-box" class="hidden mt-2 p-3.5 bg-slate-50 dark:bg-slate-900/80 rounded-2xl border border-indigo-100 dark:border-slate-700 space-y-2.5 text-left text-xs leading-relaxed">
+                            <!-- กล่องสคริปต์บทสนทนา (จะแสดงขึ้นมาหลังจากกดตอบคำถามแล้ว) -->
+                            <div id="listening-script-wrapper" class="hidden pt-2 border-t border-indigo-100 dark:border-slate-700 animate-fade-in">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xs font-black text-indigo-900 dark:text-indigo-200 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-scroll text-indigo-500"></i> สคริปต์บทสนทนา & คำแปลไทย (Script)
+                                    </span>
+                                    <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                                        ✓ แสดงหลังตอบ
+                                    </span>
+                                </div>
+                                <div id="listening-script-box" class="p-3.5 bg-slate-50 dark:bg-slate-900/80 rounded-2xl border border-indigo-100 dark:border-slate-700 space-y-2.5 text-left text-xs leading-relaxed">
                                     <div>
                                         <span class="font-black text-indigo-800 dark:text-indigo-300 block mb-1">【 日本語スクリプト / สคริปต์ภาษาญี่ปุ่น 】</span>
                                         <p id="listening-script-jp" class="font-japanese text-slate-800 dark:text-slate-200 whitespace-pre-line notranslate bg-white dark:bg-slate-800 p-2.5 rounded-xl border border-slate-200 dark:border-slate-700"></p>

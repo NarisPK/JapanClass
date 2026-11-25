@@ -1131,11 +1131,7 @@ function renderModesList() {
     // พาร์ทการฟัง (聴解) สำหรับ JLPT N4 (Book 5)
     if (currentBook === 5 && currentCategoryTab === 'listening') {
         const listeningOrder = [
-            'jlpt_n4_listening_2021_12',
-            'jlpt_n4_listening_2021_12_m1',
-            'jlpt_n4_listening_2021_12_m2',
-            'jlpt_n4_listening_2021_12_m3',
-            'jlpt_n4_listening_2021_12_m4'
+            'jlpt_n4_listening_2021_12'
         ];
         
         listeningOrder.forEach(key => {
@@ -1146,24 +1142,20 @@ function renderModesList() {
             button.className = "w-full p-4 bg-gradient-to-r from-indigo-50/90 via-purple-50/80 to-pink-50/70 border-2 border-indigo-200/90 rounded-2xl text-left transition-all duration-300 shadow-sm relative overflow-hidden group hover:border-indigo-400 hover:shadow-md cursor-pointer";
             button.onclick = () => selectMode(key);
 
-            const isAll = key === 'jlpt_n4_listening_2021_12';
-            const badgeBg = isAll ? "bg-purple-600 text-white" : "bg-indigo-100 text-indigo-700 border border-indigo-200";
-            const badgeText = isAll ? "🎧 สอบรวม 28 ข้อ" : `${mode.questions.length} ข้อ`;
-
             button.innerHTML = `
                 <div class="absolute -right-4 -bottom-4 text-5xl opacity-10 group-hover:opacity-25 group-hover:scale-125 transition-all duration-300">🎧</div>
                 <div class="flex items-start justify-between gap-3 relative z-10 mb-2">
                     <div class="flex items-center gap-3">
-                        <span class="text-2xl bg-white p-2 rounded-xl border border-indigo-100 shadow-sm">${isAll ? '🏆' : '🎧'}</span>
+                        <span class="text-2xl bg-white p-2 rounded-xl border border-indigo-100 shadow-sm">🏆</span>
                         <div>
                             <span class="font-black text-indigo-950 text-xs md:text-sm block tracking-wide">${mode.title}</span>
                             <span class="text-[9.5px] text-indigo-600 font-bold block mt-0.5">${mode.description}</span>
                         </div>
                     </div>
-                    <span class="text-[9px] font-black px-2.5 py-1 rounded-full ${badgeBg} shrink-0 shadow-xs">${badgeText}</span>
+                    <span class="text-[9px] font-black px-2.5 py-1 rounded-full bg-purple-600 text-white shrink-0 shadow-xs">🎧 รวมครบ 28 ข้อ</span>
                 </div>
                 <div class="mt-3 pt-2.5 border-t border-indigo-100/70 flex items-center justify-between text-[10px] text-indigo-700 font-bold">
-                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-volume-high text-indigo-500 animate-pulse"></i> ไฟล์เสียงแท้ JLPT 2021/12</span>
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-volume-high text-indigo-500 animate-pulse"></i> ไฟล์เสียงแท้ JLPT 2021/12 (もんだい 1-4)</span>
                     <button class="px-3 py-1.5 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white rounded-lg shadow-sm font-extrabold text-[10px] transition-transform active:scale-95 flex items-center gap-1">
                         เริ่มทำแบบทดสอบ <i class="fa-solid fa-arrow-right text-[8px]"></i>
                     </button>
@@ -2705,10 +2697,9 @@ function loadQuestion() {
             if (listeningImageContainer) listeningImageContainer.classList.add('hidden');
         }
 
-        // รีเซ็ตกล่องสคริปต์
-        if (scriptBox) scriptBox.classList.add('hidden');
-        if (toggleScriptIcon) toggleScriptIcon.className = "fa-solid fa-chevron-down";
-        if (toggleScriptText) toggleScriptText.innerText = "ดูบทสนทนา (Script) & คำแปลภาษาไทย";
+        // รีเซ็ตกล่องสคริปต์ (ซ่อนไว้เสมอ จะโผล่มาหลังจากกดตอบคำถามแล้ว)
+        const scriptWrapper = document.getElementById('listening-script-wrapper');
+        if (scriptWrapper) scriptWrapper.classList.add('hidden');
         if (scriptJp) scriptJp.innerText = currentData.script || '(ไม่มีบทสนทนายาว)';
         if (scriptTh) scriptTh.innerText = currentData.scriptThai || '(ไม่มีคำแปล)';
 
@@ -2998,18 +2989,14 @@ function selectAnswer(selectedIndex, clickedButton) {
         // --- ประมวลผลผลลัพธ์โหมดการฟัง (Listening Comprehension Mode) ---
         const expBox = document.getElementById('grammar-explanation-box');
         const listeningQuestionHint = document.getElementById('listening-question-hint');
-        const scriptBox = document.getElementById('listening-script-box');
-        const toggleScriptIcon = document.getElementById('toggle-script-icon');
-        const toggleScriptText = document.getElementById('toggle-script-text');
+        const scriptWrapper = document.getElementById('listening-script-wrapper');
 
         // แสดงคำแปลคำถามทันทีหลังตอบ
         if (listeningQuestionHint) listeningQuestionHint.classList.remove('hidden');
 
-        // แสดงสคริปต์บทสนทนาอัตโนมัติเพื่อให้ผู้เรียนอ่านทบทวนได้ทันที
-        if (scriptBox) {
-            scriptBox.classList.remove('hidden');
-            if (toggleScriptIcon) toggleScriptIcon.className = "fa-solid fa-chevron-up";
-            if (toggleScriptText) toggleScriptText.innerText = "ซ่อนบทสนทนา (Script)";
+        // แสดงสคริปต์บทสนทนาภาษาญี่ปุ่นพร้อมคำแปลภาษาไทยทันทีหลังกดตอบ
+        if (scriptWrapper) {
+            scriptWrapper.classList.remove('hidden');
         }
 
         const isCorrect = (selectedIndex === currentData.correct);
